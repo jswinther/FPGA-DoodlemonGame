@@ -85,6 +85,7 @@ const ivt_t ivt[] = {
 /* ------------------------------------------------------------ */
 
 
+
 int main(void)
 {
 	DemoInitialize();
@@ -110,14 +111,13 @@ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
 	block->anchor = anchor;
 	int i, j, cor;
 	cor = anchor;
-	for(i=0;i<block->height;i++) {
-		for(j = 0; j < block->width*3; j+=3) {
+	for(i=0;i<block->width;i+=3) {
+		for(j=0;j<block->height;j++) {
 			frame[cor + j] = color;
 			frame[cor + j + 1] = color;
 			frame[cor + j + 2] = color;
 		}
-		cor+=DEMO_STRIDE-(block->width);
-
+		cor = cor + DEMO_STRIDE;
 	}
 }
 
@@ -156,9 +156,9 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 	 */
 	struct Block playerBlock = {0, 200, 200, 0, 0};
 	struct Block *player = &playerBlock;
-	int playerStart = 0;
+	int playerStart = DEMO_STRIDE*539+DEMO_STRIDE-(playerBlock.width/2);
 	playerBlock.anchor = playerStart;
-	playerBlock.floor = 1080 - playerBlock.anchor + playerBlock.height;
+	playerBlock.floor = DEMO_STRIDE - playerBlock.anchor + playerBlock.height;
 
 	/**
 	 * Player Velocity FSM.
@@ -176,11 +176,11 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 	struct Block *platform[numberofplatforms];
 	int i, j;
 	for(i = 0; i < numberofplatforms; i++) {
-		random_x = rand() % 5760 + 0;
-		random_y = rand() % 1080 + 0;
-		platformBlock[i].anchor = random_x+(random_y*DEMO_STRIDE);
-		platformBlock[i].width = 500;
-		platformBlock[i].height = 15;
+		random_x = rand() % 990 + 0;
+		random_y = rand() % 5760 + 0;
+		platformBlock[i].anchor = DEMO_STRIDE*random_x+random_y;
+		platformBlock[i].height = 500;
+		platformBlock[i].width = 15;
 		platformBlock[i].floor = random_y;
 		platform[i] = &platformBlock[i];
 	}
@@ -323,6 +323,7 @@ void DemoInitialize()
 }
 
 void DemoRun() {
+	int playerStart = 3101000;
 	while (XUartPs_IsReceiveData(UART_BASEADDR)) {
 			XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
 	}

@@ -111,7 +111,7 @@ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
 	int i, j, cor;
 	cor = anchor;
 	for(i=0;i<block->height;i++) {
-		for(j = 0; j < block->width*3; j+=3) {
+		for(j=0;j<block->width*3;j+=3) {
 			frame[cor + j] = color;
 			frame[cor + j + 1] = color;
 			frame[cor + j + 2] = color;

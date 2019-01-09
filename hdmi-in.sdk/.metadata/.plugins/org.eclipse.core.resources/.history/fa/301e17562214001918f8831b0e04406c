@@ -111,13 +111,12 @@ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
 	int i, j, cor;
 	cor = anchor;
 	for(i=0;i<block->height;i++) {
-		for(j = 0; j < block->width*3; j+=3) {
+		for(j=0;j<block->width*3;j+=3) {
 			frame[cor + j] = color;
 			frame[cor + j + 1] = color;
 			frame[cor + j + 2] = color;
 		}
-		cor+=DEMO_STRIDE-(block->width);
-
+		cor+=DEMO_STRIDE-block->width;
 	}
 }
 
@@ -156,9 +155,9 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 	 */
 	struct Block playerBlock = {0, 200, 200, 0, 0};
 	struct Block *player = &playerBlock;
-	int playerStart = 0;
+	int playerStart = DEMO_STRIDE*(1080-playerBlock.height)+2800+(playerBlock.width/2);
 	playerBlock.anchor = playerStart;
-	playerBlock.floor = 1080 - playerBlock.anchor + playerBlock.height;
+	playerBlock.floor = DEMO_STRIDE - playerBlock.anchor + playerBlock.height;
 
 	/**
 	 * Player Velocity FSM.
@@ -178,7 +177,7 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 	for(i = 0; i < numberofplatforms; i++) {
 		random_x = rand() % 5760 + 0;
 		random_y = rand() % 1080 + 0;
-		platformBlock[i].anchor = random_x+(random_y*DEMO_STRIDE);
+		platformBlock[i].anchor = DEMO_STRIDE*random_x+random_y;
 		platformBlock[i].width = 500;
 		platformBlock[i].height = 15;
 		platformBlock[i].floor = random_y;

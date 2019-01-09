@@ -34,9 +34,12 @@
 /*					Miscellaneous Declarations					*/
 /* ------------------------------------------------------------ */
 
+#define DEMO_PATTERN_0 0
+#define DEMO_PATTERN_1 1
+#define DEMO_PATTERN_2 2
+#define DEMO_PATTERN_3 3
 #define DEMO_MAX_FRAME (1920*1080*3)
-#define DEMO_STRIDE (1920*3)
-#define PLAYERGRAVITY 2
+#define DEMO_STRIDE (1920 * 3)
 
 /*
  * Configure the Video capture driver to start streaming on signal
@@ -53,6 +56,12 @@ struct Block {
 	u16 height;
 	u16 floor;
 	u32 velocity;
+};
+
+enum Speed {
+	EQUILIBRIUM = 0,
+	VEL2 = 4,
+	VEL3 = 5
 };
 
 enum Velocity {
