@@ -179,13 +179,11 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 	while(1) {
 
 		for(j = 0; j < numberofplatforms; j++) {
-
 			DemoPrintBlock(frame, platform[j], platform[j]->anchor, 255);
-			if((platform[j]->anchor)%5760==0) {
-							platform[j]->anchor=rand() % 990 + 0;
-						}
 			platform[j]->anchor+=hast;
-
+			if((platform[j]->anchor)%5760==0) {
+				platform[j]->anchor=rand() % 990 + 0;
+			}
 		}
 
 		DemoPrintBlock(frame, player, playerBlock.anchor, 255);

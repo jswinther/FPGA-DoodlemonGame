@@ -155,18 +155,16 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 	 * Generate Platforms.
 	 */
 	int numberofplatforms = 10;
-	int random_x;
-	int random_y;
-	int hast = 5;
+	int random_number;
+	int hast = 1;
 	int c = 0;
 	struct Block platformBlock[numberofplatforms];
 	struct Block *platform[numberofplatforms];
 	int i, j;
 	for(i = 0; i < numberofplatforms; i++) {
-		random_x = rand() % 990 + 0;
-		random_y = rand() % 5760 + 0;
-		platformBlock[i].anchor = DEMO_STRIDE*random_x+random_y;
-		platformBlock[i].height = 25;
+		random_number = rand() % 900 + 0;
+		platformBlock[i].anchor = DEMO_STRIDE*random_number;
+		platformBlock[i].height = 100;
 		platformBlock[i].width = 500;
 		platform[i] = &platformBlock[i];
 	}
@@ -177,15 +175,12 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 	 */
 	int counter = 0;
 	while(1) {
-
 		for(j = 0; j < numberofplatforms; j++) {
-
 			DemoPrintBlock(frame, platform[j], platform[j]->anchor, 255);
-			if((platform[j]->anchor)%5760==0) {
-							platform[j]->anchor=rand() % 990 + 0;
-						}
 			platform[j]->anchor+=hast;
-
+			c++;
+			if(c <= 9)
+			hast++;
 		}
 
 		DemoPrintBlock(frame, player, playerBlock.anchor, 255);
