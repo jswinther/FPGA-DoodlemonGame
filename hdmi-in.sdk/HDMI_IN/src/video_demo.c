@@ -62,6 +62,8 @@
 DisplayCtrl dispCtrl;
 XAxiVdma vdma;
 VideoCapture videoCapt;
+
+int flag;
 INTC intc;
 char fRefresh; //flag used to trigger a refresh of the Menu on video detect
 
@@ -83,15 +85,170 @@ const ivt_t ivt[] = {
 /*				Procedure Definitions							*/
 /* ------------------------------------------------------------ */
 
+
+
 int main(void)
 {
 	DemoInitialize();
-
 	DemoRun();
-
 	return 0;
 }
 
+void DemoPrintBackground(u8 *frame, int width, int height) {
+	int x, y, iPixelAddr;
+	for(x = 0; x < (width*3); x+=3) {
+
+					iPixelAddr = x;
+
+					for(y = 0; y < height; y++)
+					{
+						frame[iPixelAddr] = 255;
+						frame[iPixelAddr + 1] = 255;
+						frame[iPixelAddr + 2] = 255;
+						/*
+						 * This pattern is printed one vertical line at a time, so the address must be incremented
+						 * by the stride instead of just 1.
+						 */
+						iPixelAddr += DEMO_STRIDE;
+					}
+				}
+	Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
+}
+
+void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
+	block->anchor = anchor;
+	int i, j, cor;
+	cor = anchor;
+	for(i=0;i<block->width;i+=3) {
+		for(j=0;j<block->height;j++) {
+			frame[cor + j] = color;
+			frame[cor + j + 1] = color;
+			frame[cor + j + 2] = color;
+		}
+		cor = cor + DEMO_STRIDE;
+	}
+
+}
+
+void platformGenerator() {
+
+}
+
+void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
+	/**
+	 * Generate Sprite.
+	 */
+	struct Block playerBlock = {3000000, 300, 300};
+	struct Block *player = &playerBlock;
+
+	/**
+	 * Print game background.
+	 */
+	DemoPrintBackground(frame, gameWidth, gameHeight);
+	/**
+	 * playerMovement FSM.
+	 */
+	enum Velocity playerVelocity = HIT;
+	enum Speed playerSpeed = EQUILIBRIUM;
+
+	/**
+	 * Generate Platforms.
+	 */
+	int numberofplatforms = 10;
+	int random_number;
+	int hast = 1;
+	struct Block platformBlock[numberofplatforms];
+	struct Block *platform[numberofplatforms];
+	int i, j;
+	for(i = 0; i < numberofplatforms; i++) {
+		random_number = rand() % 500 + 0;
+		platformBlock[i].anchor = DEMO_STRIDE*random_number;
+		platformBlock[i].height = 100;
+		platformBlock[i].width = 500;
+		platform[i] = &platformBlock[i];
+	}
+
+
+	/**
+	 * Jumping doodlemon.
+	 */
+	int counter = 0;
+	while(1) {
+		for(j = 0; j < numberofplatforms; j++) {
+			DemoPrintBlock(frame, platform[j], platform[j]->anchor, 255);
+			platform[j]->anchor+=hast;
+			hast++;
+		}
+
+		DemoPrintBlock(frame, player, playerBlock.anchor, 255);
+
+		switch(playerVelocity) {
+		case HIT:
+			counter = 0;
+			playerVelocity = R1;
+			break;
+		case R1:
+			playerBlock.anchor -= VEL3;
+			counter++;
+			if(counter==50)
+				playerVelocity = R2;
+			break;
+		case R2:
+			playerBlock.anchor -= VEL3;
+
+			counter++;
+			if(counter==120)
+				playerVelocity = R3;
+			break;
+		case R3:
+			playerBlock.anchor -= VEL2;
+
+			counter++;
+			if(counter==180)
+				playerVelocity = TOP;
+			break;
+		case TOP:
+			counter++;
+			if(counter==182)
+				playerVelocity = F3;
+
+			break;
+		case F3:
+			playerBlock.anchor += VEL2;
+
+			counter++;
+			if(counter==242)
+				playerVelocity = F2;
+			break;
+		case F2:
+			playerBlock.anchor += VEL3;
+
+			counter++;
+			if(counter==302)
+				playerVelocity = F1;
+			break;
+		case F1:
+			playerBlock.anchor += VEL3;
+			counter++;
+			if(counter==362)
+				playerVelocity = HIT;
+			break;
+		default:
+			break;
+	}
+
+		for(j = 0; j < numberofplatforms; j++) {
+					DemoPrintBlock(frame, platform[j], platform[j]->anchor, 128);
+				}
+		DemoPrintBlock(frame, player, playerBlock.anchor, 0);
+		Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
+	}
+}
+
+void GameOptions() {
+	xil_printf("a - Move Left\n\r");
+	xil_printf("d - Move Right\n\r");
+}
 
 void DemoInitialize()
 {
@@ -127,6 +284,8 @@ void DemoInitialize()
 		xil_printf("VDMA Configuration Initialization failed %d\r\n", Status);
 		return;
 	}
+//dhsjdhsjd
+
 
 	/*
 	 * Initialize the Display controller and start it
@@ -169,27 +328,22 @@ void DemoInitialize()
 	 */
 	VideoSetCallback(&videoCapt, DemoISR, &fRefresh);
 
-	DemoPrintTest(dispCtrl.framePtr[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, dispCtrl.stride, DEMO_PATTERN_1);
+	DemoPrintBackground(dispCtrl.framePtr[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height);
 
 	return;
 }
 
-void DemoRun()
-{
+void DemoRun() {
+	int playerStart = 3101000;
+	while (XUartPs_IsReceiveData(UART_BASEADDR)) {
+			XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
+	}
 	int nextFrame = 0;
 	char userInput = 0;
-
 	/* Flush UART FIFO */
-	while (XUartPs_IsReceiveData(UART_BASEADDR))
-	{
-		XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
-	}
-
-	while (userInput != 'q')
-	{
+	while (userInput != 'q') {
 		fRefresh = 0;
 		DemoPrintMenu();
-
 		/* Wait for data on UART */
 		while (!XUartPs_IsReceiveData(UART_BASEADDR) && !fRefresh)
 		{}
@@ -204,7 +358,6 @@ void DemoRun()
 		{
 			userInput = 'r';
 		}
-
 		switch (userInput)
 		{
 		case '1':
@@ -219,18 +372,12 @@ void DemoRun()
 			DisplayChangeFrame(&dispCtrl, nextFrame);
 			break;
 		case '3':
-			DemoPrintTest(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, DEMO_PATTERN_0);
-			break;
-		case '4':
-			DemoPrintTest(pFrames[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE, DEMO_PATTERN_1);
-			break;
-		case '5':
 			if (videoCapt.state == VIDEO_STREAMING)
 				VideoStop(&videoCapt);
 			else
 				VideoStart(&videoCapt);
 			break;
-		case '6':
+		case '4':
 			nextFrame = videoCapt.curFrame + 1;
 			if (nextFrame >= DISPLAY_NUM_FRAMES)
 			{
@@ -238,7 +385,7 @@ void DemoRun()
 			}
 			VideoChangeFrame(&videoCapt, nextFrame);
 			break;
-		case '7':
+		case '5':
 			nextFrame = videoCapt.curFrame + 1;
 			if (nextFrame >= DISPLAY_NUM_FRAMES)
 			{
@@ -249,7 +396,7 @@ void DemoRun()
 			VideoStart(&videoCapt);
 			DisplayChangeFrame(&dispCtrl, nextFrame);
 			break;
-		case '8':
+		case '6':
 			nextFrame = videoCapt.curFrame + 1;
 			if (nextFrame >= DISPLAY_NUM_FRAMES)
 			{
@@ -259,6 +406,9 @@ void DemoRun()
 			DemoScaleFrame(pFrames[videoCapt.curFrame], pFrames[nextFrame], videoCapt.timing.HActiveVideo, videoCapt.timing.VActiveVideo, dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE);
 			VideoStart(&videoCapt);
 			DisplayChangeFrame(&dispCtrl, nextFrame);
+			break;
+		case '7':
+			DemoStartGame(dispCtrl.framePtr[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height);
 			break;
 		case 'q':
 			break;
@@ -290,12 +440,12 @@ void DemoPrintMenu()
 	xil_printf("\n\r");
 	xil_printf("1 - Change Display Resolution\n\r");
 	xil_printf("2 - Change Display Framebuffer Index\n\r");
-	xil_printf("3 - Print Blended Test Pattern to Display Framebuffer\n\r");
-	xil_printf("4 - Print Color Bar Test Pattern to Display Framebuffer\n\r");
-	xil_printf("5 - Start/Stop Video stream into Video Framebuffer\n\r");
-	xil_printf("6 - Change Video Framebuffer Index\n\r");
-	xil_printf("7 - Grab Video Frame and invert colors\n\r");
-	xil_printf("8 - Grab Video Frame and scale to Display resolution\n\r");
+	xil_printf("3 - Start/Stop Video stream into Video Framebuffer\n\r");
+	xil_printf("4 - Change Video Framebuffer Index\n\r");
+	xil_printf("5 - Grab Video Frame and invert colors\n\r");
+	xil_printf("6 - Grab Video Frame and scale to Display resolution\n\r");
+	xil_printf("7 - Start Game\n\r");
+	xil_printf("p - Print Square\n\r");
 	xil_printf("q - Quit\n\r");
 	xil_printf("\n\r");
 	xil_printf("\n\r");
@@ -372,6 +522,27 @@ void DemoChangeRes()
 	}
 }
 
+
+
+/*
+void DemoPrintArray(u8 *frame, int *array, u32 anchor, int imgW, int imgH) {
+	int i, counter;
+	counter = 1;
+	for(i=0;i<imgH*imgW;i++) {
+		if(counter == imgW*3) {
+			counter = 1;
+			anchor+=DEMO_STRIDE;
+		}
+			frame[anchor + i] = array[i + 1];
+			frame[anchor + i + 1] = array[i + 2];
+			frame[anchor + i + 2] = array[i];
+
+
+			counter++;
+
+	}
+}*/
+
 void DemoCRMenu()
 {
 	xil_printf("\x1B[H"); //Set cursor to top left of terminal
@@ -413,7 +584,6 @@ void DemoInvertFrame(u8 *srcFrame, u8 *destFrame, u32 width, u32 height, u32 str
 	 */
 	Xil_DCacheFlushRange((unsigned int) destFrame, DEMO_MAX_FRAME);
 }
-
 
 /*
  * Bilinear interpolation algorithm. Assumes both frames have the same stride.
@@ -485,162 +655,6 @@ void DemoScaleFrame(u8 *srcFrame, u8 *destFrame, u32 srcWidth, u32 srcHeight, u3
 	Xil_DCacheFlushRange((unsigned int) destFrame, DEMO_MAX_FRAME);
 
 	return;
-}
-
-void DemoPrintTest(u8 *frame, u32 width, u32 height, u32 stride, int pattern)
-{
-	u32 xcoi, ycoi;
-	u32 iPixelAddr;
-	u8 wRed, wBlue, wGreen;
-	u32 wCurrentInt;
-	double fRed, fBlue, fGreen, fColor;
-	u32 xLeft, xMid, xRight, xInt;
-	u32 yMid, yInt;
-	double xInc, yInc;
-
-
-	switch (pattern)
-	{
-	case DEMO_PATTERN_0:
-
-		xInt = width / 4; //Four intervals, each with width/4 pixels
-		xLeft = xInt * 3;
-		xMid = xInt * 2 * 3;
-		xRight = xInt * 3 * 3;
-		xInc = 256.0 / ((double) xInt); //256 color intensities are cycled through per interval (overflow must be caught when color=256.0)
-
-		yInt = height / 2; //Two intervals, each with width/2 lines
-		yMid = yInt;
-		yInc = 256.0 / ((double) yInt); //256 color intensities are cycled through per interval (overflow must be caught when color=256.0)
-
-		fBlue = 0.0;
-		fRed = 256.0;
-		for(xcoi = 0; xcoi < (width*3); xcoi+=3)
-		{
-			/*
-			 * Convert color intensities to integers < 256, and trim values >=256
-			 */
-			wRed = (fRed >= 256.0) ? 255 : ((u8) fRed);
-			wBlue = (fBlue >= 256.0) ? 255 : ((u8) fBlue);
-			iPixelAddr = xcoi;
-			fGreen = 0.0;
-			for(ycoi = 0; ycoi < height; ycoi++)
-			{
-
-				wGreen = (fGreen >= 256.0) ? 255 : ((u8) fGreen);
-				frame[iPixelAddr] = wRed;
-				frame[iPixelAddr + 1] = wBlue;
-				frame[iPixelAddr + 2] = wGreen;
-				if (ycoi < yMid)
-				{
-					fGreen += yInc;
-				}
-				else
-				{
-					fGreen -= yInc;
-				}
-
-				/*
-				 * This pattern is printed one vertical line at a time, so the address must be incremented
-				 * by the stride instead of just 1.
-				 */
-				iPixelAddr += stride;
-			}
-
-			if (xcoi < xLeft)
-			{
-				fBlue = 0.0;
-				fRed -= xInc;
-			}
-			else if (xcoi < xMid)
-			{
-				fBlue += xInc;
-				fRed += xInc;
-			}
-			else if (xcoi < xRight)
-			{
-				fBlue -= xInc;
-				fRed -= xInc;
-			}
-			else
-			{
-				fBlue += xInc;
-				fRed = 0;
-			}
-		}
-		/*
-		 * Flush the framebuffer memory range to ensure changes are written to the
-		 * actual memory, and therefore accessible by the VDMA.
-		 */
-		Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
-		break;
-	case DEMO_PATTERN_1:
-
-		xInt = width / 7; //Seven intervals, each with width/7 pixels
-		xInc = 256.0 / ((double) xInt); //256 color intensities per interval. Notice that overflow is handled for this pattern.
-
-		fColor = 0.0;
-		wCurrentInt = 1;
-		for(xcoi = 0; xcoi < (width*3); xcoi+=3)
-		{
-
-			/*
-			 * Just draw white in the last partial interval (when width is not divisible by 7)
-			 */
-			if (wCurrentInt > 7)
-			{
-				wRed = 255;
-				wBlue = 255;
-				wGreen = 255;
-			}
-			else
-			{
-				if (wCurrentInt & 0b001)
-					wRed = (u8) fColor;
-				else
-					wRed = 0;
-
-				if (wCurrentInt & 0b010)
-					wBlue = (u8) fColor;
-				else
-					wBlue = 0;
-
-				if (wCurrentInt & 0b100)
-					wGreen = (u8) fColor;
-				else
-					wGreen = 0;
-			}
-
-			iPixelAddr = xcoi;
-
-			for(ycoi = 0; ycoi < height; ycoi++)
-			{
-				frame[iPixelAddr] = wRed;
-				frame[iPixelAddr + 1] = wBlue;
-				frame[iPixelAddr + 2] = wGreen;
-				/*
-				 * This pattern is printed one vertical line at a time, so the address must be incremented
-				 * by the stride instead of just 1.
-				 */
-				iPixelAddr += stride;
-			}
-
-			fColor += xInc;
-			if (fColor >= 256.0)
-			{
-				fColor = 0.0;
-				wCurrentInt++;
-			}
-		}
-		/*
-		 * Flush the framebuffer memory range to ensure changes are written to the
-		 * actual memory, and therefore accessible by the VDMA.
-		 */
-		Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
-		break;
-	default :
-		xil_printf("Error: invalid pattern passed to DemoPrintTest");
-	}
 }
 
 void DemoISR(void *callBackRef, void *pVideo)

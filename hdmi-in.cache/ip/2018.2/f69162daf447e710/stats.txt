@@ -1,4 +1,0 @@
-NumberHits:0
-Timestamp: Wed Jan 09 08:18:47 UTC 2019
-VLNV: digilentinc.com:ip:axi_dynclk:1.0
-SynthRuntime: 215
