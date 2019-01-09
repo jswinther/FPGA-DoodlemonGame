@@ -1,10 +1,10 @@
-// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-// Date        : Fri Dec 29 14:16:51 2017
-// Host        : DESKTOP-3SP9FPP running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               C:/Programming/E17_02321/3w/vivado/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_rgb2vga_0_0/hdmi_in_rgb2vga_0_0_sim_netlist.v
+// Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+// Date        : Wed Jan  9 09:18:30 2019
+// Host        : NicoLenovo running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim {C:/Users/bruger/OneDrive - Danmarks Tekniske
+//               Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_rgb2vga_0_0/hdmi_in_rgb2vga_0_0_sim_netlist.v}
 // Design      : hdmi_in_rgb2vga_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "hdmi_in_rgb2vga_0_0,rgb2vga,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "rgb2vga,Vivado 2017.2" *) 
+(* CHECK_LICENSE_TYPE = "hdmi_in_rgb2vga_0_0,rgb2vga,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "rgb2vga,Vivado 2018.2" *) 
 (* NotValidForBitStream *)
 module hdmi_in_rgb2vga_0_0
    (rgb_pData,
@@ -29,7 +29,7 @@ module hdmi_in_rgb2vga_0_0
   (* x_interface_info = "xilinx.com:interface:vid_io:1.0 vid_in ACTIVE_VIDEO" *) input rgb_pVDE;
   (* x_interface_info = "xilinx.com:interface:vid_io:1.0 vid_in HSYNC" *) input rgb_pHSync;
   (* x_interface_info = "xilinx.com:interface:vid_io:1.0 vid_in VSYNC" *) input rgb_pVSync;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 signal_clock CLK" *) input PixelClk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 signal_clock CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME signal_clock, ASSOCIATED_BUSIF vid_in, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN hdmi_in_axi_dynclk_0_0_PXL_CLK_O" *) input PixelClk;
   output [4:0]vga_pRed;
   output [5:0]vga_pGreen;
   output [4:0]vga_pBlue;

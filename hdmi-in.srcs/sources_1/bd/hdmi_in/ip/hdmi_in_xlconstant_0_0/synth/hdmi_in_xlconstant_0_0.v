@@ -1,4 +1,4 @@
-// (c) Copyright 1995-2017 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2019 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:ip:xlconstant:1.1
-// IP Revision: 3
+// IP Revision: 5
 
-(* X_CORE_INFO = "xlconstant_v1_1_3_xlconstant,Vivado 2017.2" *)
-(* CHECK_LICENSE_TYPE = "hdmi_in_xlconstant_0_0,xlconstant_v1_1_3_xlconstant,{}" *)
-(* CORE_GENERATION_INFO = "hdmi_in_xlconstant_0_0,xlconstant_v1_1_3_xlconstant,{x_ipProduct=Vivado 2017.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xlconstant,x_ipVersion=1.1,x_ipCoreRevision=3,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,CONST_WIDTH=1,CONST_VAL=0x0}" *)
+(* X_CORE_INFO = "xlconstant_v1_1_5_xlconstant,Vivado 2018.2" *)
+(* CHECK_LICENSE_TYPE = "hdmi_in_xlconstant_0_0,xlconstant_v1_1_5_xlconstant,{}" *)
+(* CORE_GENERATION_INFO = "hdmi_in_xlconstant_0_0,xlconstant_v1_1_5_xlconstant,{x_ipProduct=Vivado 2018.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=xlconstant,x_ipVersion=1.1,x_ipCoreRevision=5,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,CONST_WIDTH=1,CONST_VAL=0x0}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module hdmi_in_xlconstant_0_0 (
   dout
@@ -60,7 +60,7 @@ module hdmi_in_xlconstant_0_0 (
 
 output wire [0 : 0] dout;
 
-  xlconstant_v1_1_3_xlconstant #(
+  xlconstant_v1_1_5_xlconstant #(
     .CONST_WIDTH(1),
     .CONST_VAL('H0)
   ) inst (

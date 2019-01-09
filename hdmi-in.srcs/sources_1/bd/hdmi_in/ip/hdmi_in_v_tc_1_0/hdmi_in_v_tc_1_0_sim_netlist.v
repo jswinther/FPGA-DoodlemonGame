@@ -1,10 +1,10 @@
-// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-// Date        : Fri Dec 29 14:17:24 2017
-// Host        : DESKTOP-3SP9FPP running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               C:/Programming/E17_02321/3w/vivado/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_1_0/hdmi_in_v_tc_1_0_sim_netlist.v
+// Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+// Date        : Wed Jan  9 09:25:01 2019
+// Host        : NicoLenovo running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim {C:/Users/bruger/OneDrive - Danmarks Tekniske
+//               Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_1_0/hdmi_in_v_tc_1_0_sim_netlist.v}
 // Design      : hdmi_in_v_tc_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "hdmi_in_v_tc_1_0,v_tc,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "v_tc,Vivado 2017.2" *) 
+(* CHECK_LICENSE_TYPE = "hdmi_in_v_tc_1_0,v_tc,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "v_tc,Vivado 2018.2" *) 
 (* NotValidForBitStream *)
 module hdmi_in_v_tc_1_0
    (clk,
@@ -44,18 +44,18 @@ module hdmi_in_v_tc_1_0
     s_axi_rvalid,
     s_axi_rready,
     irq);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk_intf CLK" *) input clk;
-  (* x_interface_info = "xilinx.com:signal:clockenable:1.0 clken_intf CE" *) input clken;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 s_axi_aclk_intf CLK" *) input s_axi_aclk;
-  (* x_interface_info = "xilinx.com:signal:clockenable:1.0 s_axi_aclken_intf CE" *) input s_axi_aclken;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk_intf CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk_intf, ASSOCIATED_BUSIF vtiming_in:vtiming_out, ASSOCIATED_RESET resetn, ASSOCIATED_CLKEN clken, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN hdmi_in_dvi2rgb_0_0_PixelClk" *) input clk;
+  (* x_interface_info = "xilinx.com:signal:clockenable:1.0 clken_intf CE" *) (* x_interface_parameter = "XIL_INTERFACENAME clken_intf, POLARITY ACTIVE_LOW" *) input clken;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 s_axi_aclk_intf CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME s_axi_aclk_intf, ASSOCIATED_BUSIF ctrl, ASSOCIATED_RESET s_axi_aresetn, ASSOCIATED_CLKEN s_axi_aclken, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN hdmi_in_processing_system7_0_0_FCLK_CLK0" *) input s_axi_aclk;
+  (* x_interface_info = "xilinx.com:signal:clockenable:1.0 s_axi_aclken_intf CE" *) (* x_interface_parameter = "XIL_INTERFACENAME s_axi_aclken_intf, POLARITY ACTIVE_LOW" *) input s_axi_aclken;
   input det_clken;
   output [31:0]intc_if;
   (* x_interface_info = "xilinx.com:interface:video_timing:2.0 vtiming_in HSYNC" *) input hsync_in;
   (* x_interface_info = "xilinx.com:interface:video_timing:2.0 vtiming_in VSYNC" *) input vsync_in;
   (* x_interface_info = "xilinx.com:interface:video_timing:2.0 vtiming_in ACTIVE_VIDEO" *) input active_video_in;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 resetn_intf RST" *) input resetn;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 s_axi_aresetn_intf RST" *) input s_axi_aresetn;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 ctrl AWADDR" *) input [8:0]s_axi_awaddr;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 resetn_intf RST" *) (* x_interface_parameter = "XIL_INTERFACENAME resetn_intf, POLARITY ACTIVE_LOW" *) input resetn;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 s_axi_aresetn_intf RST" *) (* x_interface_parameter = "XIL_INTERFACENAME s_axi_aresetn_intf, POLARITY ACTIVE_LOW" *) input s_axi_aresetn;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 ctrl AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME ctrl, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN hdmi_in_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0" *) input [8:0]s_axi_awaddr;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 ctrl AWVALID" *) input s_axi_awvalid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 ctrl AWREADY" *) output s_axi_awready;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 ctrl WDATA" *) input [31:0]s_axi_wdata;
@@ -72,7 +72,7 @@ module hdmi_in_v_tc_1_0
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 ctrl RRESP" *) output [1:0]s_axi_rresp;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 ctrl RVALID" *) output s_axi_rvalid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 ctrl RREADY" *) input s_axi_rready;
-  (* x_interface_info = "xilinx.com:signal:interrupt:1.0 IRQ INTERRUPT" *) output irq;
+  (* x_interface_info = "xilinx.com:signal:interrupt:1.0 IRQ INTERRUPT" *) (* x_interface_parameter = "XIL_INTERFACENAME IRQ, SENSITIVITY LEVEL_HIGH, PortWidth 1" *) output irq;
 
   wire active_video_in;
   wire clk;
@@ -254,27 +254,27 @@ endmodule
 
 (* ORIG_REF_NAME = "address_decoder" *) 
 module hdmi_in_v_tc_1_0_address_decoder
-   (D,
+   (p_150_out,
     s_axi_arready,
     s_axi_awready,
     aclk,
     aresetn,
     Q,
-    \bus2ip_addr_i_reg[8] ,
+    D,
     ipif_RdAck,
-    is_read,
+    is_read_reg,
     ipif_WrAck,
     is_write_reg,
     \INCLUDE_DPHASE_TIMER.dpto_cnt_reg[9] );
-  output [1:0]D;
+  output [1:0]p_150_out;
   output s_axi_arready;
   output s_axi_awready;
   input aclk;
   input aresetn;
   input Q;
-  input [1:0]\bus2ip_addr_i_reg[8] ;
+  input [1:0]D;
   input ipif_RdAck;
-  input is_read;
+  input is_read_reg;
   input ipif_WrAck;
   input is_write_reg;
   input [9:0]\INCLUDE_DPHASE_TIMER.dpto_cnt_reg[9] ;
@@ -287,11 +287,11 @@ module hdmi_in_v_tc_1_0_address_decoder
   wire Q;
   wire aclk;
   wire aresetn;
-  wire [1:0]\bus2ip_addr_i_reg[8] ;
   wire ipif_RdAck;
   wire ipif_WrAck;
-  wire is_read;
+  wire is_read_reg;
   wire is_write_reg;
+  wire [1:0]p_150_out;
   wire s_axi_arready;
   wire s_axi_awready;
   wire s_axi_wready_INST_0_i_1_n_0;
@@ -308,23 +308,23 @@ module hdmi_in_v_tc_1_0_address_decoder
   LUT4 #(
     .INIT(16'h2F20)) 
     \MEM_DECODE_GEN[0].cs_out_i[0]_i_2 
-       (.I0(\bus2ip_addr_i_reg[8] [1]),
-        .I1(\bus2ip_addr_i_reg[8] [0]),
+       (.I0(D[1]),
+        .I1(D[0]),
         .I2(Q),
-        .I3(D[1]),
+        .I3(p_150_out[1]),
         .O(\MEM_DECODE_GEN[0].cs_out_i[0]_i_2_n_0 ));
   FDRE \MEM_DECODE_GEN[0].cs_out_i_reg[0] 
        (.C(aclk),
         .CE(1'b1),
         .D(\MEM_DECODE_GEN[0].cs_out_i[0]_i_1_n_0 ),
-        .Q(D[1]),
+        .Q(p_150_out[1]),
         .R(1'b0));
   LUT6 #(
     .INIT(64'h0000000000002E00)) 
     \MEM_DECODE_GEN[1].cs_out_i[1]_i_1 
-       (.I0(D[0]),
+       (.I0(p_150_out[0]),
         .I1(Q),
-        .I2(\bus2ip_addr_i_reg[8] [1]),
+        .I2(D[1]),
         .I3(aresetn),
         .I4(s_axi_arready),
         .I5(s_axi_awready),
@@ -333,13 +333,13 @@ module hdmi_in_v_tc_1_0_address_decoder
        (.C(aclk),
         .CE(1'b1),
         .D(\MEM_DECODE_GEN[1].cs_out_i[1]_i_1_n_0 ),
-        .Q(D[0]),
+        .Q(p_150_out[0]),
         .R(1'b0));
   LUT4 #(
     .INIT(16'hAAEA)) 
     s_axi_arready_INST_0
        (.I0(ipif_RdAck),
-        .I1(is_read),
+        .I1(is_read_reg),
         .I2(s_axi_wready_INST_0_i_1_n_0),
         .I3(s_axi_wready_INST_0_i_2_n_0),
         .O(s_axi_arready));
@@ -376,6 +376,7 @@ module hdmi_in_v_tc_1_0_axi_lite_ipif
    (rst_reg,
     s_axi_rresp,
     D,
+    p_150_out,
     s_axi_rvalid,
     s_axi_bvalid,
     s_axi_bresp,
@@ -384,20 +385,21 @@ module hdmi_in_v_tc_1_0_axi_lite_ipif
     s_axi_rdata,
     aclk,
     ipif_Error,
+    s_axi_arvalid,
     s_axi_rready,
     s_axi_bready,
     aresetn,
-    s_axi_arvalid,
     s_axi_awvalid,
     s_axi_wvalid,
     out_data,
-    s_axi_araddr,
-    s_axi_awaddr,
     ipif_RdAck,
-    ipif_WrAck);
+    ipif_WrAck,
+    s_axi_araddr,
+    s_axi_awaddr);
   output rst_reg;
   output [0:0]s_axi_rresp;
-  output [11:0]D;
+  output [9:0]D;
+  output [1:0]p_150_out;
   output s_axi_rvalid;
   output s_axi_bvalid;
   output [0:0]s_axi_bresp;
@@ -406,25 +408,26 @@ module hdmi_in_v_tc_1_0_axi_lite_ipif
   output [31:0]s_axi_rdata;
   input aclk;
   input ipif_Error;
+  input s_axi_arvalid;
   input s_axi_rready;
   input s_axi_bready;
   input aresetn;
-  input s_axi_arvalid;
   input s_axi_awvalid;
   input s_axi_wvalid;
   input [31:0]out_data;
-  input [8:0]s_axi_araddr;
-  input [8:0]s_axi_awaddr;
   input ipif_RdAck;
   input ipif_WrAck;
+  input [8:0]s_axi_araddr;
+  input [8:0]s_axi_awaddr;
 
-  wire [11:0]D;
+  wire [9:0]D;
   wire aclk;
   wire aresetn;
   wire ipif_Error;
   wire ipif_RdAck;
   wire ipif_WrAck;
   wire [31:0]out_data;
+  wire [1:0]p_150_out;
   wire rst_reg;
   wire [8:0]s_axi_araddr;
   wire s_axi_arready;
@@ -449,6 +452,7 @@ module hdmi_in_v_tc_1_0_axi_lite_ipif
         .ipif_RdAck(ipif_RdAck),
         .ipif_WrAck(ipif_WrAck),
         .out_data(out_data),
+        .p_150_out(p_150_out),
         .rst_reg_0(rst_reg),
         .s_axi_araddr(s_axi_araddr),
         .s_axi_arready(s_axi_arready),
@@ -471,6 +475,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
    (rst_reg_0,
     s_axi_rresp,
     D,
+    p_150_out,
     s_axi_rvalid,
     s_axi_bvalid,
     s_axi_bresp,
@@ -479,20 +484,21 @@ module hdmi_in_v_tc_1_0_slave_attachment
     s_axi_rdata,
     aclk,
     ipif_Error,
+    s_axi_arvalid,
     s_axi_rready,
     s_axi_bready,
     aresetn,
-    s_axi_arvalid,
     s_axi_awvalid,
     s_axi_wvalid,
     out_data,
-    s_axi_araddr,
-    s_axi_awaddr,
     ipif_RdAck,
-    ipif_WrAck);
+    ipif_WrAck,
+    s_axi_araddr,
+    s_axi_awaddr);
   output rst_reg_0;
   output [0:0]s_axi_rresp;
-  output [11:0]D;
+  output [9:0]D;
+  output [1:0]p_150_out;
   output s_axi_rvalid;
   output s_axi_bvalid;
   output [0:0]s_axi_bresp;
@@ -501,45 +507,44 @@ module hdmi_in_v_tc_1_0_slave_attachment
   output [31:0]s_axi_rdata;
   input aclk;
   input ipif_Error;
+  input s_axi_arvalid;
   input s_axi_rready;
   input s_axi_bready;
   input aresetn;
-  input s_axi_arvalid;
   input s_axi_awvalid;
   input s_axi_wvalid;
   input [31:0]out_data;
-  input [8:0]s_axi_araddr;
-  input [8:0]s_axi_awaddr;
   input ipif_RdAck;
   input ipif_WrAck;
+  input [8:0]s_axi_araddr;
+  input [8:0]s_axi_awaddr;
 
-  wire [11:0]D;
+  wire [9:0]D;
+  wire \FSM_onehot_state[0]_i_1_n_0 ;
+  wire \FSM_onehot_state[1]_i_1_n_0 ;
+  wire \FSM_onehot_state[2]_i_1_n_0 ;
+  wire \FSM_onehot_state[3]_i_1_n_0 ;
+  (* RTL_KEEP = "yes" *) wire \FSM_onehot_state_reg_n_0_[0] ;
+  (* RTL_KEEP = "yes" *) wire \FSM_onehot_state_reg_n_0_[3] ;
   wire \INCLUDE_DPHASE_TIMER.dpto_cnt[9]_i_3_n_0 ;
   wire [9:0]\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 ;
   wire aclk;
   wire aresetn;
-  wire \bus2ip_addr_i[0]_i_1_n_0 ;
-  wire \bus2ip_addr_i[1]_i_1_n_0 ;
-  wire \bus2ip_addr_i[2]_i_1_n_0 ;
-  wire \bus2ip_addr_i[3]_i_1_n_0 ;
-  wire \bus2ip_addr_i[4]_i_1_n_0 ;
-  wire \bus2ip_addr_i[5]_i_1_n_0 ;
-  wire \bus2ip_addr_i[6]_i_1_n_0 ;
-  wire \bus2ip_addr_i[7]_i_1_n_0 ;
   wire \bus2ip_addr_i[8]_i_1_n_0 ;
-  wire \bus2ip_addr_i[8]_i_2_n_0 ;
-  wire bus2ip_rnw_i06_out;
   wire clear;
   wire ipif_Error;
   wire ipif_RdAck;
   wire ipif_WrAck;
-  wire is_read;
   wire is_read_i_1_n_0;
-  wire is_write;
+  wire is_read_reg_n_0;
   wire is_write_i_1_n_0;
+  wire is_write_i_2_n_0;
   wire is_write_reg_n_0;
   wire [31:0]out_data;
   wire [1:0]p_0_out;
+  wire [1:0]p_150_out;
+  wire [8:0]p_1_in;
+  wire p_5_in;
   wire [9:0]plusOp;
   wire rst;
   wire rst_reg_0;
@@ -551,13 +556,14 @@ module hdmi_in_v_tc_1_0_slave_attachment
   wire s_axi_awvalid;
   wire s_axi_bready;
   wire [0:0]s_axi_bresp;
+  (* RTL_KEEP = "yes" *) wire s_axi_bresp_i;
   wire \s_axi_bresp_i[1]_i_1_n_0 ;
   wire s_axi_bvalid;
   wire s_axi_bvalid_i_i_1_n_0;
   wire [31:0]s_axi_rdata;
-  wire \s_axi_rdata_i[31]_i_1_n_0 ;
   wire s_axi_rready;
   wire [0:0]s_axi_rresp;
+  (* RTL_KEEP = "yes" *) wire s_axi_rresp_i;
   wire s_axi_rvalid;
   wire s_axi_rvalid_i_i_1_n_0;
   wire s_axi_wvalid;
@@ -565,21 +571,106 @@ module hdmi_in_v_tc_1_0_slave_attachment
   wire start2_i_1_n_0;
   wire [1:0]state;
   wire state1__2;
-  wire \state[1]_i_3_n_0 ;
 
+  LUT6 #(
+    .INIT(64'hFFFF150015001500)) 
+    \FSM_onehot_state[0]_i_1 
+       (.I0(s_axi_arvalid),
+        .I1(s_axi_wvalid),
+        .I2(s_axi_awvalid),
+        .I3(\FSM_onehot_state_reg_n_0_[0] ),
+        .I4(state1__2),
+        .I5(\FSM_onehot_state_reg_n_0_[3] ),
+        .O(\FSM_onehot_state[0]_i_1_n_0 ));
+  LUT4 #(
+    .INIT(16'h8F88)) 
+    \FSM_onehot_state[1]_i_1 
+       (.I0(s_axi_arvalid),
+        .I1(\FSM_onehot_state_reg_n_0_[0] ),
+        .I2(s_axi_arready),
+        .I3(s_axi_rresp_i),
+        .O(\FSM_onehot_state[1]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h0800FFFF08000800)) 
+    \FSM_onehot_state[2]_i_1 
+       (.I0(s_axi_wvalid),
+        .I1(s_axi_awvalid),
+        .I2(s_axi_arvalid),
+        .I3(\FSM_onehot_state_reg_n_0_[0] ),
+        .I4(s_axi_awready),
+        .I5(s_axi_bresp_i),
+        .O(\FSM_onehot_state[2]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hF888F888FFFFF888)) 
+    \FSM_onehot_state[3]_i_1 
+       (.I0(s_axi_awready),
+        .I1(s_axi_bresp_i),
+        .I2(s_axi_rresp_i),
+        .I3(s_axi_arready),
+        .I4(\FSM_onehot_state_reg_n_0_[3] ),
+        .I5(state1__2),
+        .O(\FSM_onehot_state[3]_i_1_n_0 ));
+  LUT4 #(
+    .INIT(16'hF888)) 
+    \FSM_onehot_state[3]_i_2 
+       (.I0(s_axi_bready),
+        .I1(s_axi_bvalid),
+        .I2(s_axi_rready),
+        .I3(s_axi_rvalid),
+        .O(state1__2));
+  (* FSM_ENCODED_STATES = "iSTATE:0010,iSTATE0:0100,iSTATE1:1000,iSTATE2:0001" *) 
+  (* KEEP = "yes" *) 
+  FDSE #(
+    .INIT(1'b1)) 
+    \FSM_onehot_state_reg[0] 
+       (.C(aclk),
+        .CE(1'b1),
+        .D(\FSM_onehot_state[0]_i_1_n_0 ),
+        .Q(\FSM_onehot_state_reg_n_0_[0] ),
+        .S(rst));
+  (* FSM_ENCODED_STATES = "iSTATE:0010,iSTATE0:0100,iSTATE1:1000,iSTATE2:0001" *) 
+  (* KEEP = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \FSM_onehot_state_reg[1] 
+       (.C(aclk),
+        .CE(1'b1),
+        .D(\FSM_onehot_state[1]_i_1_n_0 ),
+        .Q(s_axi_rresp_i),
+        .R(rst));
+  (* FSM_ENCODED_STATES = "iSTATE:0010,iSTATE0:0100,iSTATE1:1000,iSTATE2:0001" *) 
+  (* KEEP = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \FSM_onehot_state_reg[2] 
+       (.C(aclk),
+        .CE(1'b1),
+        .D(\FSM_onehot_state[2]_i_1_n_0 ),
+        .Q(s_axi_bresp_i),
+        .R(rst));
+  (* FSM_ENCODED_STATES = "iSTATE:0010,iSTATE0:0100,iSTATE1:1000,iSTATE2:0001" *) 
+  (* KEEP = "yes" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \FSM_onehot_state_reg[3] 
+       (.C(aclk),
+        .CE(1'b1),
+        .D(\FSM_onehot_state[3]_i_1_n_0 ),
+        .Q(\FSM_onehot_state_reg_n_0_[3] ),
+        .R(rst));
   LUT1 #(
     .INIT(2'h1)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[0]_i_1 
        (.I0(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [0]),
         .O(plusOp[0]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[1]_i_1 
        (.I0(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [0]),
         .I1(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [1]),
         .O(plusOp[1]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[2]_i_1 
@@ -587,7 +678,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
         .I1(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [1]),
         .I2(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [2]),
         .O(plusOp[2]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[3]_i_1 
@@ -596,7 +687,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
         .I2(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [2]),
         .I3(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [3]),
         .O(plusOp[3]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[4]_i_1 
@@ -616,14 +707,14 @@ module hdmi_in_v_tc_1_0_slave_attachment
         .I4(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [4]),
         .I5(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [5]),
         .O(plusOp[5]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[6]_i_1 
        (.I0(\INCLUDE_DPHASE_TIMER.dpto_cnt[9]_i_3_n_0 ),
         .I1(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [6]),
         .O(plusOp[6]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[7]_i_1 
@@ -727,91 +818,81 @@ module hdmi_in_v_tc_1_0_slave_attachment
         .Q(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [9]),
         .R(clear));
   hdmi_in_v_tc_1_0_address_decoder I_DECODER
-       (.D(D[10:9]),
+       (.D(D[8:7]),
         .\INCLUDE_DPHASE_TIMER.dpto_cnt_reg[9] (\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 ),
         .Q(start2),
         .aclk(aclk),
         .aresetn(aresetn),
-        .\bus2ip_addr_i_reg[8] (D[8:7]),
         .ipif_RdAck(ipif_RdAck),
         .ipif_WrAck(ipif_WrAck),
-        .is_read(is_read),
+        .is_read_reg(is_read_reg_n_0),
         .is_write_reg(is_write_reg_n_0),
+        .p_150_out(p_150_out),
         .s_axi_arready(s_axi_arready),
         .s_axi_awready(s_axi_awready));
-  LUT5 #(
-    .INIT(32'hCCCACCCC)) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
     \bus2ip_addr_i[0]_i_1 
        (.I0(s_axi_araddr[0]),
         .I1(s_axi_awaddr[0]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axi_arvalid),
-        .O(\bus2ip_addr_i[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT5 #(
-    .INIT(32'hCCCACCCC)) 
+        .I2(s_axi_arvalid),
+        .O(p_1_in[0]));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
     \bus2ip_addr_i[1]_i_1 
        (.I0(s_axi_araddr[1]),
         .I1(s_axi_awaddr[1]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axi_arvalid),
-        .O(\bus2ip_addr_i[1]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hCCCACCCC)) 
+        .I2(s_axi_arvalid),
+        .O(p_1_in[1]));
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
     \bus2ip_addr_i[2]_i_1 
        (.I0(s_axi_araddr[2]),
         .I1(s_axi_awaddr[2]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axi_arvalid),
-        .O(\bus2ip_addr_i[2]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hCCCACCCC)) 
+        .I2(s_axi_arvalid),
+        .O(p_1_in[2]));
+  LUT3 #(
+    .INIT(8'hAC)) 
     \bus2ip_addr_i[3]_i_1 
        (.I0(s_axi_araddr[3]),
         .I1(s_axi_awaddr[3]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axi_arvalid),
-        .O(\bus2ip_addr_i[3]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hCCCACCCC)) 
+        .I2(s_axi_arvalid),
+        .O(p_1_in[3]));
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
     \bus2ip_addr_i[4]_i_1 
        (.I0(s_axi_araddr[4]),
         .I1(s_axi_awaddr[4]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axi_arvalid),
-        .O(\bus2ip_addr_i[4]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hCCCACCCC)) 
+        .I2(s_axi_arvalid),
+        .O(p_1_in[4]));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
     \bus2ip_addr_i[5]_i_1 
        (.I0(s_axi_araddr[5]),
         .I1(s_axi_awaddr[5]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axi_arvalid),
-        .O(\bus2ip_addr_i[5]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hCCCACCCC)) 
+        .I2(s_axi_arvalid),
+        .O(p_1_in[5]));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
     \bus2ip_addr_i[6]_i_1 
        (.I0(s_axi_araddr[6]),
         .I1(s_axi_awaddr[6]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axi_arvalid),
-        .O(\bus2ip_addr_i[6]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hCCCACCCC)) 
+        .I2(s_axi_arvalid),
+        .O(p_1_in[6]));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
     \bus2ip_addr_i[7]_i_1 
        (.I0(s_axi_araddr[7]),
         .I1(s_axi_awaddr[7]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axi_arvalid),
-        .O(\bus2ip_addr_i[7]_i_1_n_0 ));
+        .I2(s_axi_arvalid),
+        .O(p_1_in[7]));
   LUT5 #(
     .INIT(32'h000000EA)) 
     \bus2ip_addr_i[8]_i_1 
@@ -821,118 +902,109 @@ module hdmi_in_v_tc_1_0_slave_attachment
         .I3(state[1]),
         .I4(state[0]),
         .O(\bus2ip_addr_i[8]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hCCCACCCC)) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT3 #(
+    .INIT(8'hAC)) 
     \bus2ip_addr_i[8]_i_2 
        (.I0(s_axi_araddr[8]),
         .I1(s_axi_awaddr[8]),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(s_axi_arvalid),
-        .O(\bus2ip_addr_i[8]_i_2_n_0 ));
+        .I2(s_axi_arvalid),
+        .O(p_1_in[8]));
   FDRE \bus2ip_addr_i_reg[0] 
        (.C(aclk),
         .CE(\bus2ip_addr_i[8]_i_1_n_0 ),
-        .D(\bus2ip_addr_i[0]_i_1_n_0 ),
+        .D(p_1_in[0]),
         .Q(D[0]),
         .R(rst));
   FDRE \bus2ip_addr_i_reg[1] 
        (.C(aclk),
         .CE(\bus2ip_addr_i[8]_i_1_n_0 ),
-        .D(\bus2ip_addr_i[1]_i_1_n_0 ),
+        .D(p_1_in[1]),
         .Q(D[1]),
         .R(rst));
   FDRE \bus2ip_addr_i_reg[2] 
        (.C(aclk),
         .CE(\bus2ip_addr_i[8]_i_1_n_0 ),
-        .D(\bus2ip_addr_i[2]_i_1_n_0 ),
+        .D(p_1_in[2]),
         .Q(D[2]),
         .R(rst));
   FDRE \bus2ip_addr_i_reg[3] 
        (.C(aclk),
         .CE(\bus2ip_addr_i[8]_i_1_n_0 ),
-        .D(\bus2ip_addr_i[3]_i_1_n_0 ),
+        .D(p_1_in[3]),
         .Q(D[3]),
         .R(rst));
   FDRE \bus2ip_addr_i_reg[4] 
        (.C(aclk),
         .CE(\bus2ip_addr_i[8]_i_1_n_0 ),
-        .D(\bus2ip_addr_i[4]_i_1_n_0 ),
+        .D(p_1_in[4]),
         .Q(D[4]),
         .R(rst));
   FDRE \bus2ip_addr_i_reg[5] 
        (.C(aclk),
         .CE(\bus2ip_addr_i[8]_i_1_n_0 ),
-        .D(\bus2ip_addr_i[5]_i_1_n_0 ),
+        .D(p_1_in[5]),
         .Q(D[5]),
         .R(rst));
   FDRE \bus2ip_addr_i_reg[6] 
        (.C(aclk),
         .CE(\bus2ip_addr_i[8]_i_1_n_0 ),
-        .D(\bus2ip_addr_i[6]_i_1_n_0 ),
+        .D(p_1_in[6]),
         .Q(D[6]),
         .R(rst));
   FDRE \bus2ip_addr_i_reg[7] 
        (.C(aclk),
         .CE(\bus2ip_addr_i[8]_i_1_n_0 ),
-        .D(\bus2ip_addr_i[7]_i_1_n_0 ),
+        .D(p_1_in[7]),
         .Q(D[7]),
         .R(rst));
   FDRE \bus2ip_addr_i_reg[8] 
        (.C(aclk),
         .CE(\bus2ip_addr_i[8]_i_1_n_0 ),
-        .D(\bus2ip_addr_i[8]_i_2_n_0 ),
+        .D(p_1_in[8]),
         .Q(D[8]),
         .R(rst));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT3 #(
-    .INIT(8'h10)) 
-    bus2ip_rnw_i_i_1
-       (.I0(state[0]),
-        .I1(state[1]),
-        .I2(s_axi_arvalid),
-        .O(bus2ip_rnw_i06_out));
   FDRE bus2ip_rnw_i_reg
        (.C(aclk),
         .CE(\bus2ip_addr_i[8]_i_1_n_0 ),
-        .D(bus2ip_rnw_i06_out),
-        .Q(D[11]),
+        .D(s_axi_arvalid),
+        .Q(D[9]),
         .R(rst));
   LUT5 #(
-    .INIT(32'h3FFA000A)) 
+    .INIT(32'h8BBB8888)) 
     is_read_i_1
        (.I0(s_axi_arvalid),
-        .I1(state1__2),
-        .I2(state[0]),
-        .I3(state[1]),
-        .I4(is_read),
+        .I1(\FSM_onehot_state_reg_n_0_[0] ),
+        .I2(state1__2),
+        .I3(\FSM_onehot_state_reg_n_0_[3] ),
+        .I4(is_read_reg_n_0),
         .O(is_read_i_1_n_0));
   FDRE is_read_reg
        (.C(aclk),
         .CE(1'b1),
         .D(is_read_i_1_n_0),
-        .Q(is_read),
+        .Q(is_read_reg_n_0),
         .R(rst));
   LUT6 #(
-    .INIT(64'h0040FFFF00400000)) 
+    .INIT(64'h2000FFFF20000000)) 
     is_write_i_1
-       (.I0(s_axi_arvalid),
-        .I1(s_axi_awvalid),
-        .I2(s_axi_wvalid),
-        .I3(state[1]),
-        .I4(is_write),
+       (.I0(\FSM_onehot_state_reg_n_0_[0] ),
+        .I1(s_axi_arvalid),
+        .I2(s_axi_awvalid),
+        .I3(s_axi_wvalid),
+        .I4(is_write_i_2_n_0),
         .I5(is_write_reg_n_0),
         .O(is_write_i_1_n_0));
   LUT6 #(
-    .INIT(64'hF88800000000FFFF)) 
+    .INIT(64'hFFEAEAEAAAAAAAAA)) 
     is_write_i_2
-       (.I0(s_axi_rvalid),
-        .I1(s_axi_rready),
+       (.I0(\FSM_onehot_state_reg_n_0_[0] ),
+        .I1(s_axi_bready),
         .I2(s_axi_bvalid),
-        .I3(s_axi_bready),
-        .I4(state[0]),
-        .I5(state[1]),
-        .O(is_write));
+        .I3(s_axi_rready),
+        .I4(s_axi_rvalid),
+        .I5(\FSM_onehot_state_reg_n_0_[3] ),
+        .O(is_write_i_2_n_0));
   FDRE is_write_reg
        (.C(aclk),
         .CE(1'b1),
@@ -951,12 +1023,12 @@ module hdmi_in_v_tc_1_0_slave_attachment
         .Q(rst),
         .R(1'b0));
   LUT4 #(
-    .INIT(16'hFB08)) 
+    .INIT(16'h00E2)) 
     \s_axi_bresp_i[1]_i_1 
-       (.I0(ipif_Error),
-        .I1(state[1]),
-        .I2(state[0]),
-        .I3(s_axi_bresp),
+       (.I0(s_axi_bresp),
+        .I1(s_axi_bresp_i),
+        .I2(ipif_Error),
+        .I3(rst),
         .O(\s_axi_bresp_i[1]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -965,7 +1037,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
         .CE(1'b1),
         .D(\s_axi_bresp_i[1]_i_1_n_0 ),
         .Q(s_axi_bresp),
-        .R(rst));
+        .R(1'b0));
   LUT5 #(
     .INIT(32'h08FF0808)) 
     s_axi_bvalid_i_i_1
@@ -983,17 +1055,11 @@ module hdmi_in_v_tc_1_0_slave_attachment
         .D(s_axi_bvalid_i_i_1_n_0),
         .Q(s_axi_bvalid),
         .R(rst));
-  LUT2 #(
-    .INIT(4'h2)) 
-    \s_axi_rdata_i[31]_i_1 
-       (.I0(state[0]),
-        .I1(state[1]),
-        .O(\s_axi_rdata_i[31]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[0] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[0]),
         .Q(s_axi_rdata[0]),
         .R(rst));
@@ -1001,7 +1067,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[10] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[10]),
         .Q(s_axi_rdata[10]),
         .R(rst));
@@ -1009,7 +1075,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[11] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[11]),
         .Q(s_axi_rdata[11]),
         .R(rst));
@@ -1017,7 +1083,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[12] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[12]),
         .Q(s_axi_rdata[12]),
         .R(rst));
@@ -1025,7 +1091,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[13] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[13]),
         .Q(s_axi_rdata[13]),
         .R(rst));
@@ -1033,7 +1099,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[14] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[14]),
         .Q(s_axi_rdata[14]),
         .R(rst));
@@ -1041,7 +1107,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[15] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[15]),
         .Q(s_axi_rdata[15]),
         .R(rst));
@@ -1049,7 +1115,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[16] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[16]),
         .Q(s_axi_rdata[16]),
         .R(rst));
@@ -1057,7 +1123,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[17] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[17]),
         .Q(s_axi_rdata[17]),
         .R(rst));
@@ -1065,7 +1131,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[18] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[18]),
         .Q(s_axi_rdata[18]),
         .R(rst));
@@ -1073,7 +1139,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[19] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[19]),
         .Q(s_axi_rdata[19]),
         .R(rst));
@@ -1081,7 +1147,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[1] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[1]),
         .Q(s_axi_rdata[1]),
         .R(rst));
@@ -1089,7 +1155,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[20] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[20]),
         .Q(s_axi_rdata[20]),
         .R(rst));
@@ -1097,7 +1163,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[21] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[21]),
         .Q(s_axi_rdata[21]),
         .R(rst));
@@ -1105,7 +1171,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[22] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[22]),
         .Q(s_axi_rdata[22]),
         .R(rst));
@@ -1113,7 +1179,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[23] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[23]),
         .Q(s_axi_rdata[23]),
         .R(rst));
@@ -1121,7 +1187,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[24] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[24]),
         .Q(s_axi_rdata[24]),
         .R(rst));
@@ -1129,7 +1195,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[25] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[25]),
         .Q(s_axi_rdata[25]),
         .R(rst));
@@ -1137,7 +1203,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[26] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[26]),
         .Q(s_axi_rdata[26]),
         .R(rst));
@@ -1145,7 +1211,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[27] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[27]),
         .Q(s_axi_rdata[27]),
         .R(rst));
@@ -1153,7 +1219,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[28] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[28]),
         .Q(s_axi_rdata[28]),
         .R(rst));
@@ -1161,7 +1227,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[29] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[29]),
         .Q(s_axi_rdata[29]),
         .R(rst));
@@ -1169,7 +1235,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[2] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[2]),
         .Q(s_axi_rdata[2]),
         .R(rst));
@@ -1177,7 +1243,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[30] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[30]),
         .Q(s_axi_rdata[30]),
         .R(rst));
@@ -1185,7 +1251,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[31] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[31]),
         .Q(s_axi_rdata[31]),
         .R(rst));
@@ -1193,7 +1259,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[3] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[3]),
         .Q(s_axi_rdata[3]),
         .R(rst));
@@ -1201,7 +1267,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[4] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[4]),
         .Q(s_axi_rdata[4]),
         .R(rst));
@@ -1209,7 +1275,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[5] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[5]),
         .Q(s_axi_rdata[5]),
         .R(rst));
@@ -1217,7 +1283,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[6] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[6]),
         .Q(s_axi_rdata[6]),
         .R(rst));
@@ -1225,7 +1291,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[7] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[7]),
         .Q(s_axi_rdata[7]),
         .R(rst));
@@ -1233,7 +1299,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[8] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[8]),
         .Q(s_axi_rdata[8]),
         .R(rst));
@@ -1241,7 +1307,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rdata_i_reg[9] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(out_data[9]),
         .Q(s_axi_rdata[9]),
         .R(rst));
@@ -1249,7 +1315,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
     .INIT(1'b0)) 
     \s_axi_rresp_i_reg[1] 
        (.C(aclk),
-        .CE(\s_axi_rdata_i[31]_i_1_n_0 ),
+        .CE(s_axi_rresp_i),
         .D(ipif_Error),
         .Q(s_axi_rresp),
         .R(rst));
@@ -1295,31 +1361,23 @@ module hdmi_in_v_tc_1_0_slave_attachment
         .I3(state[1]),
         .I4(s_axi_awready),
         .O(p_0_out[0]));
-  LUT5 #(
-    .INIT(32'h5FFC50FC)) 
+  LUT6 #(
+    .INIT(64'h55FFFF0C5500FF0C)) 
     \state[1]_i_1 
        (.I0(state1__2),
-        .I1(\state[1]_i_3_n_0 ),
-        .I2(state[1]),
-        .I3(state[0]),
-        .I4(s_axi_arready),
-        .O(p_0_out[1]));
-  LUT4 #(
-    .INIT(16'hF888)) 
-    \state[1]_i_2 
-       (.I0(s_axi_bready),
-        .I1(s_axi_bvalid),
-        .I2(s_axi_rready),
-        .I3(s_axi_rvalid),
-        .O(state1__2));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT3 #(
-    .INIT(8'h08)) 
-    \state[1]_i_3 
-       (.I0(s_axi_wvalid),
-        .I1(s_axi_awvalid),
+        .I1(p_5_in),
         .I2(s_axi_arvalid),
-        .O(\state[1]_i_3_n_0 ));
+        .I3(state[1]),
+        .I4(state[0]),
+        .I5(s_axi_arready),
+        .O(p_0_out[1]));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \state[1]_i_2 
+       (.I0(s_axi_awvalid),
+        .I1(s_axi_wvalid),
+        .O(p_5_in));
   FDRE \state_reg[0] 
        (.C(aclk),
         .CE(1'b1),
@@ -1337,38 +1395,6 @@ endmodule
 (* ORIG_REF_NAME = "mux_tree" *) 
 module hdmi_in_v_tc_1_0_mux_tree
    (\AXI4_LITE_INTERFACE.ipif_RdData_reg[31] ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[31]_0 ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[30] ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[29] ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[28] ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[27] ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[26] ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[25] ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[24] ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[23] ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[22] ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[21] ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[20] ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[19] ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[18] ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[17] ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[16] ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[15] ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[14] ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[13] ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[12] ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[11] ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[10] ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[9] ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[8] ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[7] ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[6] ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[5] ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[4] ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[3] ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[2] ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[1] ,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[0] ,
     \GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][0]_0 ,
     \GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][31]_0 ,
     \GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][30]_0 ,
@@ -1434,6 +1460,38 @@ module hdmi_in_v_tc_1_0_mux_tree
     \GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][2]_0 ,
     \GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][1]_0 ,
     \GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][0]_0 ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[31]_0 ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[30] ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[29] ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[28] ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[27] ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[26] ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[25] ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[24] ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[23] ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[22] ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[21] ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[20] ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[19] ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[18] ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[17] ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[16] ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[15] ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[14] ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[13] ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[12] ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[11] ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[10] ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[9] ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[8] ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[7] ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[6] ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[5] ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[4] ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[3] ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[2] ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[1] ,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[0] ,
     \data_sync_reg[2][34] ,
     vid_aclk,
     ipif_Addr,
@@ -1988,38 +2046,6 @@ module hdmi_in_v_tc_1_0_mux_tree
     \GEN_HAS_IRQ.intr_stat_reg[0] ,
     \genr_control_regs[0] );
   output \AXI4_LITE_INTERFACE.ipif_RdData_reg[31] ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[31]_0 ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[30] ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[29] ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[28] ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[27] ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[26] ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[25] ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[24] ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[23] ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[22] ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[21] ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[20] ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[19] ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[18] ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[17] ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[16] ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[15] ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[14] ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[13] ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[12] ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[11] ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[10] ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[9] ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[8] ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[7] ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[6] ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[5] ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[4] ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[3] ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[2] ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[1] ;
-  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[0] ;
   output \GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][0]_0 ;
   output \GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][31]_0 ;
   output \GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][30]_0 ;
@@ -2085,6 +2111,38 @@ module hdmi_in_v_tc_1_0_mux_tree
   output \GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][2]_0 ;
   output \GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][1]_0 ;
   output \GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][0]_0 ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[31]_0 ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[30] ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[29] ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[28] ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[27] ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[26] ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[25] ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[24] ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[23] ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[22] ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[21] ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[20] ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[19] ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[18] ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[17] ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[16] ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[15] ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[14] ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[13] ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[12] ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[11] ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[10] ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[9] ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[8] ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[7] ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[6] ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[5] ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[4] ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[3] ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[2] ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[1] ;
+  output \AXI4_LITE_INTERFACE.ipif_RdData_reg[0] ;
   input \data_sync_reg[2][34] ;
   input vid_aclk;
   input [4:0]ipif_Addr;
@@ -10537,7 +10595,7 @@ module hdmi_in_v_tc_1_0_mux_tree
         .I1(core_regs[234]),
         .I2(\GEN_SEL_DELAY[1].sel_int_reg_n_0_[1][0] ),
         .I3(core_regs[212]),
-        .I4(\data_sync_reg[2][34]_1 ),
+        .I4(\data_sync_reg[2][34]_0 ),
         .I5(core_regs[190]),
         .O(\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg[4][19]_i_2__0_n_0 ));
   LUT6 #(
@@ -10617,7 +10675,7 @@ module hdmi_in_v_tc_1_0_mux_tree
         .I1(core_regs[235]),
         .I2(\GEN_SEL_DELAY[1].sel_int_reg_n_0_[1][0] ),
         .I3(core_regs[213]),
-        .I4(\data_sync_reg[2][34]_1 ),
+        .I4(\data_sync_reg[2][34]_0 ),
         .I5(core_regs[191]),
         .O(\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg[4][20]_i_2__0_n_0 ));
   LUT6 #(
@@ -10637,7 +10695,7 @@ module hdmi_in_v_tc_1_0_mux_tree
         .I1(core_regs[323]),
         .I2(\GEN_SEL_DELAY[1].sel_int_reg_n_0_[1][0] ),
         .I3(core_regs[301]),
-        .I4(\data_sync_reg[2][34]_1 ),
+        .I4(\data_sync_reg[2][34]_0 ),
         .I5(core_regs[279]),
         .O(\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg[4][20]_i_3__0_n_0 ));
   LUT6 #(
@@ -10657,7 +10715,7 @@ module hdmi_in_v_tc_1_0_mux_tree
         .I1(core_regs[236]),
         .I2(\GEN_SEL_DELAY[1].sel_int_reg_n_0_[1][0] ),
         .I3(core_regs[214]),
-        .I4(\data_sync_reg[2][34]_1 ),
+        .I4(\data_sync_reg[2][34]_0 ),
         .I5(core_regs[192]),
         .O(\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg[4][21]_i_2__0_n_0 ));
   LUT6 #(
@@ -10677,7 +10735,7 @@ module hdmi_in_v_tc_1_0_mux_tree
         .I1(core_regs[324]),
         .I2(\GEN_SEL_DELAY[1].sel_int_reg_n_0_[1][0] ),
         .I3(core_regs[302]),
-        .I4(\data_sync_reg[2][34]_1 ),
+        .I4(\data_sync_reg[2][34]_0 ),
         .I5(core_regs[280]),
         .O(\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg[4][21]_i_3__0_n_0 ));
   LUT6 #(
@@ -10717,7 +10775,7 @@ module hdmi_in_v_tc_1_0_mux_tree
         .I1(core_regs[325]),
         .I2(\GEN_SEL_DELAY[1].sel_int_reg_n_0_[1][0] ),
         .I3(core_regs[303]),
-        .I4(\data_sync_reg[2][34]_1 ),
+        .I4(\data_sync_reg[2][34]_0 ),
         .I5(core_regs[281]),
         .O(\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg[4][22]_i_3__0_n_0 ));
   LUT6 #(
@@ -11977,14 +12035,14 @@ module hdmi_in_v_tc_1_0_mux_tree
         .O(\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][9]_0 ),
         .S(\GEN_SEL_DELAY[2].sel_int_reg_n_0_[2][0] ));
   LUT6 #(
-    .INIT(64'h03030B0800000B08)) 
+    .INIT(64'h000A0F0C000A000C)) 
     \GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg[5][0]_i_1 
-       (.I0(\GEN_TREE.GEN_BRANCH[49].GEN_MUX_REG.data_out_reg_reg[49]_2 [0]),
-        .I1(\GEN_SEL_DELAY[2].sel_int_reg[2][0]_rep_n_0 ),
+       (.I0(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48]_3 [0]),
+        .I1(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47]_4 [0]),
         .I2(\GEN_SEL_DELAY[3].sel_int_reg[3][0] ),
-        .I3(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47]_4 [0]),
+        .I3(\GEN_SEL_DELAY[2].sel_int_reg[2][0]_rep_n_0 ),
         .I4(\GEN_SEL_DELAY[1].sel_int_reg[1][0]_rep_n_0 ),
-        .I5(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48]_3 [0]),
+        .I5(\GEN_TREE.GEN_BRANCH[49].GEN_MUX_REG.data_out_reg_reg[49]_2 [0]),
         .O(\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg[5][0]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h03030B0800000B08)) 
@@ -12037,24 +12095,24 @@ module hdmi_in_v_tc_1_0_mux_tree
         .I5(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48]_3 [14]),
         .O(\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg[5][14]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h03030B0800000B08)) 
+    .INIT(64'h000A0F0C000A000C)) 
     \GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg[5][15]_i_1 
-       (.I0(\GEN_TREE.GEN_BRANCH[49].GEN_MUX_REG.data_out_reg_reg[49]_2 [15]),
-        .I1(\GEN_SEL_DELAY[2].sel_int_reg[2][0]_rep_n_0 ),
+       (.I0(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48]_3 [15]),
+        .I1(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47]_4 [15]),
         .I2(\GEN_SEL_DELAY[3].sel_int_reg[3][0] ),
-        .I3(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47]_4 [15]),
+        .I3(\GEN_SEL_DELAY[2].sel_int_reg[2][0]_rep_n_0 ),
         .I4(\GEN_SEL_DELAY[1].sel_int_reg[1][0]_rep_n_0 ),
-        .I5(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48]_3 [15]),
+        .I5(\GEN_TREE.GEN_BRANCH[49].GEN_MUX_REG.data_out_reg_reg[49]_2 [15]),
         .O(\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg[5][15]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h03030B0800000B08)) 
+    .INIT(64'h000A0F0C000A000C)) 
     \GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg[5][16]_i_1 
-       (.I0(\GEN_TREE.GEN_BRANCH[49].GEN_MUX_REG.data_out_reg_reg[49]_2 [16]),
-        .I1(\GEN_SEL_DELAY[2].sel_int_reg[2][0]_rep_n_0 ),
+       (.I0(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48]_3 [16]),
+        .I1(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47]_4 [16]),
         .I2(\GEN_SEL_DELAY[3].sel_int_reg[3][0] ),
-        .I3(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47]_4 [16]),
+        .I3(\GEN_SEL_DELAY[2].sel_int_reg[2][0]_rep_n_0 ),
         .I4(\GEN_SEL_DELAY[1].sel_int_reg[1][0]_rep_n_0 ),
-        .I5(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48]_3 [16]),
+        .I5(\GEN_TREE.GEN_BRANCH[49].GEN_MUX_REG.data_out_reg_reg[49]_2 [16]),
         .O(\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg[5][16]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h03030B0800000B08)) 
@@ -12097,24 +12155,24 @@ module hdmi_in_v_tc_1_0_mux_tree
         .I5(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48]_3 [1]),
         .O(\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg[5][1]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h00000FAC000000AC)) 
+    .INIT(64'h03030B0800000B08)) 
     \GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg[5][20]_i_1 
-       (.I0(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48]_3 [20]),
-        .I1(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47]_4 [20]),
-        .I2(\GEN_SEL_DELAY[1].sel_int_reg[1][0]_rep_n_0 ),
-        .I3(\GEN_SEL_DELAY[2].sel_int_reg[2][0]_rep_n_0 ),
-        .I4(\GEN_SEL_DELAY[3].sel_int_reg[3][0] ),
-        .I5(\GEN_TREE.GEN_BRANCH[49].GEN_MUX_REG.data_out_reg_reg[49]_2 [20]),
+       (.I0(\GEN_TREE.GEN_BRANCH[49].GEN_MUX_REG.data_out_reg_reg[49]_2 [20]),
+        .I1(\GEN_SEL_DELAY[2].sel_int_reg[2][0]_rep_n_0 ),
+        .I2(\GEN_SEL_DELAY[3].sel_int_reg[3][0] ),
+        .I3(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47]_4 [20]),
+        .I4(\GEN_SEL_DELAY[1].sel_int_reg[1][0]_rep_n_0 ),
+        .I5(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48]_3 [20]),
         .O(\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg[5][20]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h00000FAC000000AC)) 
+    .INIT(64'h03030B0800000B08)) 
     \GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg[5][21]_i_1 
-       (.I0(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48]_3 [21]),
-        .I1(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47]_4 [21]),
-        .I2(\GEN_SEL_DELAY[1].sel_int_reg[1][0]_rep_n_0 ),
-        .I3(\GEN_SEL_DELAY[2].sel_int_reg[2][0]_rep_n_0 ),
-        .I4(\GEN_SEL_DELAY[3].sel_int_reg[3][0] ),
-        .I5(\GEN_TREE.GEN_BRANCH[49].GEN_MUX_REG.data_out_reg_reg[49]_2 [21]),
+       (.I0(\GEN_TREE.GEN_BRANCH[49].GEN_MUX_REG.data_out_reg_reg[49]_2 [21]),
+        .I1(\GEN_SEL_DELAY[2].sel_int_reg[2][0]_rep_n_0 ),
+        .I2(\GEN_SEL_DELAY[3].sel_int_reg[3][0] ),
+        .I3(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47]_4 [21]),
+        .I4(\GEN_SEL_DELAY[1].sel_int_reg[1][0]_rep_n_0 ),
+        .I5(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48]_3 [21]),
         .O(\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg[5][21]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h03030B0800000B08)) 
@@ -12217,21 +12275,21 @@ module hdmi_in_v_tc_1_0_mux_tree
         .I5(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48]_3 [30]),
         .O(\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg[5][30]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h00000AFC00000A0C)) 
+    .INIT(64'h000A0F0C000A000C)) 
     \GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg[5][31]_i_1 
-       (.I0(\GEN_TREE.GEN_BRANCH[49].GEN_MUX_REG.data_out_reg_reg[49]_2 [31]),
+       (.I0(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48]_3 [31]),
         .I1(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47]_4 [31]),
-        .I2(\GEN_SEL_DELAY[1].sel_int_reg[1][0]_rep__0_n_0 ),
+        .I2(\GEN_SEL_DELAY[3].sel_int_reg[3][0] ),
         .I3(\GEN_SEL_DELAY[2].sel_int_reg[2][0]_rep__0_n_0 ),
-        .I4(\GEN_SEL_DELAY[3].sel_int_reg[3][0] ),
-        .I5(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48]_3 [31]),
+        .I4(\GEN_SEL_DELAY[1].sel_int_reg[1][0]_rep__0_n_0 ),
+        .I5(\GEN_TREE.GEN_BRANCH[49].GEN_MUX_REG.data_out_reg_reg[49]_2 [31]),
         .O(\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg[5][31]_i_1_n_0 ));
   LUT3 #(
     .INIT(8'hFE)) 
     \GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg[5][31]_i_1__0 
-       (.I0(\GEN_SEL_DELAY[2].sel_int_reg_n_0_[2][0] ),
-        .I1(\GEN_SEL_DELAY[1].sel_int_reg_n_0_[1][0] ),
-        .I2(\data_sync_reg[2][34]_0 ),
+       (.I0(\data_sync_reg[2][34]_0 ),
+        .I1(\GEN_SEL_DELAY[2].sel_int_reg_n_0_[2][0] ),
+        .I2(\GEN_SEL_DELAY[1].sel_int_reg_n_0_[1][0] ),
         .O(\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][0]_0 ));
   LUT6 #(
     .INIT(64'h03030B0800000B08)) 
@@ -12244,24 +12302,24 @@ module hdmi_in_v_tc_1_0_mux_tree
         .I5(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48]_3 [3]),
         .O(\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg[5][3]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h00000FAC000000AC)) 
+    .INIT(64'h03030B0800000B08)) 
     \GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg[5][4]_i_1 
-       (.I0(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48]_3 [4]),
-        .I1(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47]_4 [4]),
-        .I2(\GEN_SEL_DELAY[1].sel_int_reg[1][0]_rep_n_0 ),
-        .I3(\GEN_SEL_DELAY[2].sel_int_reg[2][0]_rep_n_0 ),
-        .I4(\GEN_SEL_DELAY[3].sel_int_reg[3][0] ),
-        .I5(\GEN_TREE.GEN_BRANCH[49].GEN_MUX_REG.data_out_reg_reg[49]_2 [4]),
+       (.I0(\GEN_TREE.GEN_BRANCH[49].GEN_MUX_REG.data_out_reg_reg[49]_2 [4]),
+        .I1(\GEN_SEL_DELAY[2].sel_int_reg[2][0]_rep_n_0 ),
+        .I2(\GEN_SEL_DELAY[3].sel_int_reg[3][0] ),
+        .I3(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47]_4 [4]),
+        .I4(\GEN_SEL_DELAY[1].sel_int_reg[1][0]_rep_n_0 ),
+        .I5(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48]_3 [4]),
         .O(\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg[5][4]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h00000FAC000000AC)) 
+    .INIT(64'h03030B0800000B08)) 
     \GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg[5][5]_i_1 
-       (.I0(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48]_3 [5]),
-        .I1(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47]_4 [5]),
-        .I2(\GEN_SEL_DELAY[1].sel_int_reg[1][0]_rep_n_0 ),
-        .I3(\GEN_SEL_DELAY[2].sel_int_reg[2][0]_rep_n_0 ),
-        .I4(\GEN_SEL_DELAY[3].sel_int_reg[3][0] ),
-        .I5(\GEN_TREE.GEN_BRANCH[49].GEN_MUX_REG.data_out_reg_reg[49]_2 [5]),
+       (.I0(\GEN_TREE.GEN_BRANCH[49].GEN_MUX_REG.data_out_reg_reg[49]_2 [5]),
+        .I1(\GEN_SEL_DELAY[2].sel_int_reg[2][0]_rep_n_0 ),
+        .I2(\GEN_SEL_DELAY[3].sel_int_reg[3][0] ),
+        .I3(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47]_4 [5]),
+        .I4(\GEN_SEL_DELAY[1].sel_int_reg[1][0]_rep_n_0 ),
+        .I5(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48]_3 [5]),
         .O(\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg[5][5]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h03030B0800000B08)) 
@@ -13968,27 +14026,28 @@ module hdmi_in_v_tc_1_0_tc_detector
     active_video_lock_int,
     reset,
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][11] ,
-    intr_status_int17_out,
+    D,
     \time_status_regs_int_reg[0] ,
     \intr_status_int_reg[11] ,
+    \intr_status_int_reg[11]_0 ,
     all_lock_reg,
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][10] ,
     \time_status_regs[8] ,
     \time_status_regs[7] ,
     \time_status_regs[9] ,
     clk,
+    lost_lock,
     hsync_in,
+    resetn_out,
+    core_d_out,
+    \genr_control_regs[0] ,
     active_video_in,
     clken,
     det_clken,
-    lost_lock,
-    resetn_out,
-    \genr_control_regs[0] ,
-    core_d_out,
+    p_0_in,
     det_vblank_d,
-    det_active_video_d,
-    intc_if,
     vblank_in,
+    det_active_video_d,
     all_lock,
     all_lock_d0,
     vsync_in);
@@ -14001,45 +14060,37 @@ module hdmi_in_v_tc_1_0_tc_detector
   output active_video_lock_int;
   output reset;
   output [11:0]\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][11] ;
-  output intr_status_int17_out;
+  output [1:0]D;
   output [10:0]\time_status_regs_int_reg[0] ;
   output \intr_status_int_reg[11] ;
+  output \intr_status_int_reg[11]_0 ;
   output all_lock_reg;
   output [10:0]\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][10] ;
   output [21:0]\time_status_regs[8] ;
   output [23:0]\time_status_regs[7] ;
   output [23:0]\time_status_regs[9] ;
   input clk;
+  input lost_lock;
   input hsync_in;
+  input resetn_out;
+  input core_d_out;
+  input [1:0]\genr_control_regs[0] ;
   input active_video_in;
   input clken;
   input det_clken;
-  input lost_lock;
-  input resetn_out;
-  input [1:0]\genr_control_regs[0] ;
-  input core_d_out;
+  input p_0_in;
   input det_vblank_d;
-  input det_active_video_d;
-  input [0:0]intc_if;
   input vblank_in;
+  input det_active_video_d;
   input all_lock;
   input all_lock_d0;
   input vsync_in;
 
+  wire [1:0]D;
   wire \DET_HACTIVE.DET_AVIDEO_LOCK.det_active_video_lock_int_i_1_n_0 ;
+  wire \DET_HACTIVE.DET_AVIDEO_LOCK.det_active_video_lock_int_i_2_n_0 ;
   wire \DET_HACTIVE.active_video_count[0]_i_1_n_0 ;
   wire \DET_HACTIVE.active_video_count[0]_i_4_n_0 ;
-  wire \DET_HACTIVE.active_video_count[0]_i_5_n_0 ;
-  wire \DET_HACTIVE.active_video_count[0]_i_6_n_0 ;
-  wire \DET_HACTIVE.active_video_count[0]_i_7_n_0 ;
-  wire \DET_HACTIVE.active_video_count[4]_i_2_n_0 ;
-  wire \DET_HACTIVE.active_video_count[4]_i_3_n_0 ;
-  wire \DET_HACTIVE.active_video_count[4]_i_4_n_0 ;
-  wire \DET_HACTIVE.active_video_count[4]_i_5_n_0 ;
-  wire \DET_HACTIVE.active_video_count[8]_i_2_n_0 ;
-  wire \DET_HACTIVE.active_video_count[8]_i_3_n_0 ;
-  wire \DET_HACTIVE.active_video_count[8]_i_4_n_0 ;
-  wire \DET_HACTIVE.active_video_count[8]_i_5_n_0 ;
   wire [11:0]\DET_HACTIVE.active_video_count_reg ;
   wire \DET_HACTIVE.active_video_count_reg[0]_i_3_n_0 ;
   wire \DET_HACTIVE.active_video_count_reg[0]_i_3_n_1 ;
@@ -14064,27 +14115,15 @@ module hdmi_in_v_tc_1_0_tc_detector
   wire \DET_HACTIVE.active_video_count_reg[8]_i_1_n_5 ;
   wire \DET_HACTIVE.active_video_count_reg[8]_i_1_n_6 ;
   wire \DET_HACTIVE.active_video_count_reg[8]_i_1_n_7 ;
-  wire \DET_HACTIVE.active_video_d2_i_2_n_0 ;
-  wire \DET_HACTIVE.active_video_d_i_1_n_0 ;
+  wire \DET_HACTIVE.active_video_d2_i_1_n_0 ;
+  wire \DET_HACTIVE.active_video_d_i_2_n_0 ;
   wire \DET_HACTIVE.active_video_rose_i_1_n_0 ;
   wire \DET_HACTIVE.active_video_toggled_i_1_n_0 ;
   wire \DET_HACTIVE.det_active_video_pol_int_i_1_n_0 ;
   wire \DET_HSYNC.GEN_DET_HSYNC_LOCK.det_hsync_lock_int_i_1_n_0 ;
   wire \DET_HSYNC.det_hsync_pol_int_i_1_n_0 ;
   wire \DET_HSYNC.hsync_count[0]_i_1_n_0 ;
-  wire \DET_HSYNC.hsync_count[0]_i_2_n_0 ;
   wire \DET_HSYNC.hsync_count[0]_i_4_n_0 ;
-  wire \DET_HSYNC.hsync_count[0]_i_5_n_0 ;
-  wire \DET_HSYNC.hsync_count[0]_i_6_n_0 ;
-  wire \DET_HSYNC.hsync_count[0]_i_7_n_0 ;
-  wire \DET_HSYNC.hsync_count[4]_i_2_n_0 ;
-  wire \DET_HSYNC.hsync_count[4]_i_3_n_0 ;
-  wire \DET_HSYNC.hsync_count[4]_i_4_n_0 ;
-  wire \DET_HSYNC.hsync_count[4]_i_5_n_0 ;
-  wire \DET_HSYNC.hsync_count[8]_i_2_n_0 ;
-  wire \DET_HSYNC.hsync_count[8]_i_3_n_0 ;
-  wire \DET_HSYNC.hsync_count[8]_i_4_n_0 ;
-  wire \DET_HSYNC.hsync_count[8]_i_5_n_0 ;
   wire [11:0]\DET_HSYNC.hsync_count_reg ;
   wire \DET_HSYNC.hsync_count_reg[0]_i_3_n_0 ;
   wire \DET_HSYNC.hsync_count_reg[0]_i_3_n_1 ;
@@ -14109,9 +14148,9 @@ module hdmi_in_v_tc_1_0_tc_detector
   wire \DET_HSYNC.hsync_count_reg[8]_i_1_n_5 ;
   wire \DET_HSYNC.hsync_count_reg[8]_i_1_n_6 ;
   wire \DET_HSYNC.hsync_count_reg[8]_i_1_n_7 ;
-  wire \DET_VACTIVE.active_line_d_i_1_n_0 ;
   wire \DET_VACTIVE.active_line_i_1_n_0 ;
   wire \DET_VSYNC.GEN_DET_VSYNC_LOCK.det_v0_vsync_lock_i_1_n_0 ;
+  wire \DET_VSYNC.GEN_DET_VSYNC_LOCK.det_v0_vsync_lock_i_2_n_0 ;
   wire \DET_VSYNC.GEN_DET_VSYNC_LOCK.det_v0sync_start_last[10]_i_1_n_0 ;
   wire \DET_VSYNC.GEN_DET_VSYNC_LOCK.det_vsync_lock_i_1_n_0 ;
   wire \DET_VSYNC.GEN_DET_VSYNC_LOCK.vsync_delay[0]_i_1_n_0 ;
@@ -14209,7 +14248,7 @@ module hdmi_in_v_tc_1_0_tc_detector
   wire det_ce;
   wire det_clken;
   wire [11:0]det_hactive_start_int;
-  wire det_hactive_start_int_3;
+  wire det_hactive_start_int_4;
   wire [11:0]det_hbp_start_int;
   wire det_hbp_start_int_9;
   wire [11:0]det_hbp_start_last;
@@ -14220,17 +14259,6 @@ module hdmi_in_v_tc_1_0_tc_detector
   wire det_hsync_start_int_2;
   wire [11:0]det_hsync_start_last;
   wire [11:0]det_htotal_int;
-  wire \det_htotal_int2[11]_i_2_n_0 ;
-  wire \det_htotal_int2[11]_i_3_n_0 ;
-  wire \det_htotal_int2[11]_i_4_n_0 ;
-  wire \det_htotal_int2[4]_i_2_n_0 ;
-  wire \det_htotal_int2[4]_i_3_n_0 ;
-  wire \det_htotal_int2[4]_i_4_n_0 ;
-  wire \det_htotal_int2[4]_i_5_n_0 ;
-  wire \det_htotal_int2[8]_i_2_n_0 ;
-  wire \det_htotal_int2[8]_i_3_n_0 ;
-  wire \det_htotal_int2[8]_i_4_n_0 ;
-  wire \det_htotal_int2[8]_i_5_n_0 ;
   wire \det_htotal_int2_reg[11]_i_1_n_2 ;
   wire \det_htotal_int2_reg[11]_i_1_n_3 ;
   wire \det_htotal_int2_reg[4]_i_1_n_0 ;
@@ -14241,9 +14269,7 @@ module hdmi_in_v_tc_1_0_tc_detector
   wire \det_htotal_int2_reg[8]_i_1_n_1 ;
   wire \det_htotal_int2_reg[8]_i_1_n_2 ;
   wire \det_htotal_int2_reg[8]_i_1_n_3 ;
-  wire \det_htotal_int[11]_i_1_n_0 ;
   wire det_v0_vsync_lock;
-  wire det_v0_vsync_lock__0;
   wire [11:1]det_v0active_start_hori_int2;
   wire \det_v0active_start_hori_int2[0]_i_10_n_0 ;
   wire \det_v0active_start_hori_int2[0]_i_11_n_0 ;
@@ -14296,7 +14322,7 @@ module hdmi_in_v_tc_1_0_tc_detector
   wire \det_v0active_start_hori_int2_reg[7]_i_1_n_2 ;
   wire \det_v0active_start_hori_int2_reg[7]_i_1_n_3 ;
   wire [10:0]det_v0active_start_int;
-  wire det_v0active_start_int_6;
+  wire det_v0active_start_int_3;
   wire [11:0]det_v0bp_start_hori_int;
   wire [11:0]det_v0bp_start_hori_int2;
   wire [11:0]det_v0bp_start_hori_last;
@@ -14404,7 +14430,7 @@ module hdmi_in_v_tc_1_0_tc_detector
   wire \det_v0sync_start_int2_reg[7]_i_1_n_1 ;
   wire \det_v0sync_start_int2_reg[7]_i_1_n_2 ;
   wire \det_v0sync_start_int2_reg[7]_i_1_n_3 ;
-  wire det_v0sync_start_int_4;
+  wire det_v0sync_start_int_5;
   wire [10:0]det_v0sync_start_last;
   wire \det_v0total[0]_i_1_n_0 ;
   wire \det_v0total[10]_i_1_n_0 ;
@@ -14430,9 +14456,10 @@ module hdmi_in_v_tc_1_0_tc_detector
   wire \det_v0total_int[7]_i_1_n_0 ;
   wire \det_v0total_int[8]_i_1_n_0 ;
   wire \det_v0total_int[9]_i_1_n_0 ;
-  wire det_v0total_int_5;
+  wire det_v0total_int_6;
   wire det_vblank_d;
   wire det_vsync_pol_change;
+  wire found_eof;
   wire found_eof_i_1_n_0;
   wire found_eof_reg_n_0;
   wire frame_end;
@@ -14472,23 +14499,11 @@ module hdmi_in_v_tc_1_0_tc_detector
   wire \gtOp_inferred__2/i__carry_n_2 ;
   wire \gtOp_inferred__2/i__carry_n_3 ;
   wire h_count;
-  wire h_count0__0;
   wire h_count1;
   wire \h_count[0]_i_1_n_0 ;
   wire \h_count[0]_i_4_n_0 ;
   wire \h_count[0]_i_5_n_0 ;
   wire \h_count[0]_i_6_n_0 ;
-  wire \h_count[0]_i_7_n_0 ;
-  wire \h_count[0]_i_8_n_0 ;
-  wire \h_count[0]_i_9_n_0 ;
-  wire \h_count[4]_i_2_n_0 ;
-  wire \h_count[4]_i_3_n_0 ;
-  wire \h_count[4]_i_4_n_0 ;
-  wire \h_count[4]_i_5_n_0 ;
-  wire \h_count[8]_i_2_n_0 ;
-  wire \h_count[8]_i_3_n_0 ;
-  wire \h_count[8]_i_4_n_0 ;
-  wire \h_count[8]_i_5_n_0 ;
   wire \h_count_reg[0]_i_3_n_0 ;
   wire \h_count_reg[0]_i_3_n_1 ;
   wire \h_count_reg[0]_i_3_n_2 ;
@@ -14512,6 +14527,7 @@ module hdmi_in_v_tc_1_0_tc_detector
   wire \h_count_reg[8]_i_1_n_5 ;
   wire \h_count_reg[8]_i_1_n_6 ;
   wire \h_count_reg[8]_i_1_n_7 ;
+  wire hsync_count;
   wire hsync_d;
   wire hsync_d2;
   wire hsync_in;
@@ -14640,9 +14656,8 @@ module hdmi_in_v_tc_1_0_tc_detector
   wire i__carry_i_8__1_n_0;
   wire i__carry_i_8__2_n_0;
   wire i__carry_i_8_n_0;
-  wire [0:0]intc_if;
-  wire intr_status_int17_out;
   wire \intr_status_int_reg[11] ;
+  wire \intr_status_int_reg[11]_0 ;
   wire last_chroma;
   wire leqOp;
   wire leqOp_1;
@@ -14766,7 +14781,7 @@ module hdmi_in_v_tc_1_0_tc_detector
   wire \neqOp_inferred__5/i__carry_n_1 ;
   wire \neqOp_inferred__5/i__carry_n_2 ;
   wire \neqOp_inferred__5/i__carry_n_3 ;
-  wire p_0_in16_in;
+  wire p_0_in;
   wire p_1_in;
   wire p_30_out;
   wire p_5_out;
@@ -14805,10 +14820,12 @@ module hdmi_in_v_tc_1_0_tc_detector
   wire [21:0]\time_status_regs[8] ;
   wire [23:0]\time_status_regs[9] ;
   wire [10:0]\time_status_regs_int_reg[0] ;
-  wire top_of_frame141_out;
   wire top_of_frame_i_1_n_0;
+  wire top_of_frame_i_2_n_0;
   wire top_of_frame_reg_n_0;
   wire \v_count[10]_i_1_n_0 ;
+  wire \v_count[10]_i_3_n_0 ;
+  wire \v_count[10]_i_4_n_0 ;
   wire \v_count[10]_i_5_n_0 ;
   wire [10:0]v_count_last;
   wire [10:0]v_count_reg__0;
@@ -14872,11 +14889,11 @@ module hdmi_in_v_tc_1_0_tc_detector
   wire [3:3]\NLW_plusOp_inferred__2/i__carry__1_CO_UNCONNECTED ;
 
   LUT3 #(
-    .INIT(8'h40)) 
+    .INIT(8'h20)) 
     \DET_HACTIVE.DET_AVIDEO_LOCK.active_video_count_last[11]_i_1 
-       (.I0(active_video_d2),
-        .I1(active_video_d),
-        .I2(det_ce),
+       (.I0(det_ce),
+        .I1(active_video_d2),
+        .I2(active_video_d),
         .O(last_chroma));
   FDSE #(
     .INIT(1'b0)) 
@@ -14975,15 +14992,23 @@ module hdmi_in_v_tc_1_0_tc_detector
         .Q(active_video_count_last[9]),
         .S(p_5_out));
   LUT6 #(
-    .INIT(64'h0000000A0003000A)) 
+    .INIT(64'h1010101000000011)) 
     \DET_HACTIVE.DET_AVIDEO_LOCK.det_active_video_lock_int_i_1 
-       (.I0(active_video_lock_int),
-        .I1(det_active_video_pol_change),
-        .I2(h_count1),
-        .I3(lost_lock),
-        .I4(last_chroma),
-        .I5(neqOp1_out),
+       (.I0(lost_lock),
+        .I1(h_count1),
+        .I2(active_video_lock_int),
+        .I3(det_active_video_pol_change),
+        .I4(neqOp1_out),
+        .I5(\DET_HACTIVE.DET_AVIDEO_LOCK.det_active_video_lock_int_i_2_n_0 ),
         .O(\DET_HACTIVE.DET_AVIDEO_LOCK.det_active_video_lock_int_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair285" *) 
+  LUT3 #(
+    .INIT(8'hDF)) 
+    \DET_HACTIVE.DET_AVIDEO_LOCK.det_active_video_lock_int_i_2 
+       (.I0(active_video_d),
+        .I1(active_video_d2),
+        .I2(det_ce),
+        .O(\DET_HACTIVE.DET_AVIDEO_LOCK.det_active_video_lock_int_i_2_n_0 ));
   FDRE \DET_HACTIVE.DET_AVIDEO_LOCK.det_active_video_lock_int_reg 
        (.C(clk),
         .CE(1'b1),
@@ -14991,12 +15016,12 @@ module hdmi_in_v_tc_1_0_tc_detector
         .Q(active_video_lock_int),
         .R(1'b0));
   LUT4 #(
-    .INIT(16'hFF08)) 
+    .INIT(16'hAEAA)) 
     \DET_HACTIVE.active_video_count[0]_i_1 
-       (.I0(det_ce),
-        .I1(active_video_d),
+       (.I0(h_count1),
+        .I1(det_ce),
         .I2(active_video_d2),
-        .I3(h_count1),
+        .I3(active_video_d),
         .O(\DET_HACTIVE.active_video_count[0]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h8)) 
@@ -15005,65 +15030,10 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(active_video_d),
         .O(active_video_count));
   LUT1 #(
-    .INIT(2'h2)) 
-    \DET_HACTIVE.active_video_count[0]_i_4 
-       (.I0(\DET_HACTIVE.active_video_count_reg [3]),
-        .O(\DET_HACTIVE.active_video_count[0]_i_4_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \DET_HACTIVE.active_video_count[0]_i_5 
-       (.I0(\DET_HACTIVE.active_video_count_reg [2]),
-        .O(\DET_HACTIVE.active_video_count[0]_i_5_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \DET_HACTIVE.active_video_count[0]_i_6 
-       (.I0(\DET_HACTIVE.active_video_count_reg [1]),
-        .O(\DET_HACTIVE.active_video_count[0]_i_6_n_0 ));
-  LUT1 #(
     .INIT(2'h1)) 
-    \DET_HACTIVE.active_video_count[0]_i_7 
+    \DET_HACTIVE.active_video_count[0]_i_4 
        (.I0(\DET_HACTIVE.active_video_count_reg [0]),
-        .O(\DET_HACTIVE.active_video_count[0]_i_7_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \DET_HACTIVE.active_video_count[4]_i_2 
-       (.I0(\DET_HACTIVE.active_video_count_reg [7]),
-        .O(\DET_HACTIVE.active_video_count[4]_i_2_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \DET_HACTIVE.active_video_count[4]_i_3 
-       (.I0(\DET_HACTIVE.active_video_count_reg [6]),
-        .O(\DET_HACTIVE.active_video_count[4]_i_3_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \DET_HACTIVE.active_video_count[4]_i_4 
-       (.I0(\DET_HACTIVE.active_video_count_reg [5]),
-        .O(\DET_HACTIVE.active_video_count[4]_i_4_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \DET_HACTIVE.active_video_count[4]_i_5 
-       (.I0(\DET_HACTIVE.active_video_count_reg [4]),
-        .O(\DET_HACTIVE.active_video_count[4]_i_5_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \DET_HACTIVE.active_video_count[8]_i_2 
-       (.I0(\DET_HACTIVE.active_video_count_reg [11]),
-        .O(\DET_HACTIVE.active_video_count[8]_i_2_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \DET_HACTIVE.active_video_count[8]_i_3 
-       (.I0(\DET_HACTIVE.active_video_count_reg [10]),
-        .O(\DET_HACTIVE.active_video_count[8]_i_3_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \DET_HACTIVE.active_video_count[8]_i_4 
-       (.I0(\DET_HACTIVE.active_video_count_reg [9]),
-        .O(\DET_HACTIVE.active_video_count[8]_i_4_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \DET_HACTIVE.active_video_count[8]_i_5 
-       (.I0(\DET_HACTIVE.active_video_count_reg [8]),
-        .O(\DET_HACTIVE.active_video_count[8]_i_5_n_0 ));
+        .O(\DET_HACTIVE.active_video_count[0]_i_4_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \DET_HACTIVE.active_video_count_reg[0] 
@@ -15078,7 +15048,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b1}),
         .O({\DET_HACTIVE.active_video_count_reg[0]_i_3_n_4 ,\DET_HACTIVE.active_video_count_reg[0]_i_3_n_5 ,\DET_HACTIVE.active_video_count_reg[0]_i_3_n_6 ,\DET_HACTIVE.active_video_count_reg[0]_i_3_n_7 }),
-        .S({\DET_HACTIVE.active_video_count[0]_i_4_n_0 ,\DET_HACTIVE.active_video_count[0]_i_5_n_0 ,\DET_HACTIVE.active_video_count[0]_i_6_n_0 ,\DET_HACTIVE.active_video_count[0]_i_7_n_0 }));
+        .S({\DET_HACTIVE.active_video_count_reg [3:1],\DET_HACTIVE.active_video_count[0]_i_4_n_0 }));
   FDRE #(
     .INIT(1'b0)) 
     \DET_HACTIVE.active_video_count_reg[10] 
@@ -15133,7 +15103,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O({\DET_HACTIVE.active_video_count_reg[4]_i_1_n_4 ,\DET_HACTIVE.active_video_count_reg[4]_i_1_n_5 ,\DET_HACTIVE.active_video_count_reg[4]_i_1_n_6 ,\DET_HACTIVE.active_video_count_reg[4]_i_1_n_7 }),
-        .S({\DET_HACTIVE.active_video_count[4]_i_2_n_0 ,\DET_HACTIVE.active_video_count[4]_i_3_n_0 ,\DET_HACTIVE.active_video_count[4]_i_4_n_0 ,\DET_HACTIVE.active_video_count[4]_i_5_n_0 }));
+        .S(\DET_HACTIVE.active_video_count_reg [7:4]));
   FDRE #(
     .INIT(1'b0)) 
     \DET_HACTIVE.active_video_count_reg[5] 
@@ -15172,7 +15142,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O({\DET_HACTIVE.active_video_count_reg[8]_i_1_n_4 ,\DET_HACTIVE.active_video_count_reg[8]_i_1_n_5 ,\DET_HACTIVE.active_video_count_reg[8]_i_1_n_6 ,\DET_HACTIVE.active_video_count_reg[8]_i_1_n_7 }),
-        .S({\DET_HACTIVE.active_video_count[8]_i_2_n_0 ,\DET_HACTIVE.active_video_count[8]_i_3_n_0 ,\DET_HACTIVE.active_video_count[8]_i_4_n_0 ,\DET_HACTIVE.active_video_count[8]_i_5_n_0 }));
+        .S(\DET_HACTIVE.active_video_count_reg [11:8]));
   FDRE #(
     .INIT(1'b0)) 
     \DET_HACTIVE.active_video_count_reg[9] 
@@ -15182,84 +15152,84 @@ module hdmi_in_v_tc_1_0_tc_detector
         .Q(\DET_HACTIVE.active_video_count_reg [9]),
         .R(\DET_HACTIVE.active_video_count[0]_i_1_n_0 ));
   LUT3 #(
-    .INIT(8'hF4)) 
+    .INIT(8'hB8)) 
     \DET_HACTIVE.active_video_d2_i_1 
+       (.I0(active_video_d),
+        .I1(det_ce),
+        .I2(active_video_d2),
+        .O(\DET_HACTIVE.active_video_d2_i_1_n_0 ));
+  FDRE \DET_HACTIVE.active_video_d2_reg 
+       (.C(clk),
+        .CE(1'b1),
+        .D(\DET_HACTIVE.active_video_d2_i_1_n_0 ),
+        .Q(active_video_d2),
+        .R(p_7_out));
+  LUT3 #(
+    .INIT(8'hF4)) 
+    \DET_HACTIVE.active_video_d_i_1 
        (.I0(\DET_VSYNC.vsync_d2_reg_n_0 ),
         .I1(\DET_VSYNC.vsync_d_reg_n_0 ),
         .I2(h_count1),
         .O(p_7_out));
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \DET_HACTIVE.active_video_d2_i_2 
-       (.I0(active_video_d),
-        .I1(det_ce),
-        .I2(active_video_d2),
-        .O(\DET_HACTIVE.active_video_d2_i_2_n_0 ));
-  FDRE \DET_HACTIVE.active_video_d2_reg 
-       (.C(clk),
-        .CE(1'b1),
-        .D(\DET_HACTIVE.active_video_d2_i_2_n_0 ),
-        .Q(active_video_d2),
-        .R(p_7_out));
-  LUT5 #(
-    .INIT(32'h0000E22E)) 
-    \DET_HACTIVE.active_video_d_i_1 
-       (.I0(active_video_d),
-        .I1(det_ce),
-        .I2(\time_status_regs[3] [2]),
-        .I3(active_video_in),
-        .I4(p_7_out),
-        .O(\DET_HACTIVE.active_video_d_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair294" *) 
+  LUT4 #(
+    .INIT(16'h9F90)) 
+    \DET_HACTIVE.active_video_d_i_2 
+       (.I0(active_video_in),
+        .I1(\time_status_regs[3] [2]),
+        .I2(det_ce),
+        .I3(active_video_d),
+        .O(\DET_HACTIVE.active_video_d_i_2_n_0 ));
   FDRE \DET_HACTIVE.active_video_d_reg 
        (.C(clk),
         .CE(1'b1),
-        .D(\DET_HACTIVE.active_video_d_i_1_n_0 ),
+        .D(\DET_HACTIVE.active_video_d_i_2_n_0 ),
         .Q(active_video_d),
-        .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair275" *) 
-  LUT5 #(
-    .INIT(32'h0000BAAA)) 
+        .R(p_7_out));
+  (* SOFT_HLUTNM = "soft_lutpair282" *) 
+  LUT4 #(
+    .INIT(16'hFF08)) 
     \DET_HACTIVE.active_video_rose_i_1 
-       (.I0(active_video_rose),
-        .I1(active_video_d),
-        .I2(active_video_d2),
-        .I3(det_ce),
-        .I4(p_7_out),
+       (.I0(det_ce),
+        .I1(active_video_d2),
+        .I2(active_video_d),
+        .I3(active_video_rose),
         .O(\DET_HACTIVE.active_video_rose_i_1_n_0 ));
   FDRE \DET_HACTIVE.active_video_rose_reg 
        (.C(clk),
         .CE(1'b1),
         .D(\DET_HACTIVE.active_video_rose_i_1_n_0 ),
         .Q(active_video_rose),
-        .R(1'b0));
-  LUT6 #(
-    .INIT(64'h00E200E2000000E2)) 
+        .R(p_7_out));
+  (* SOFT_HLUTNM = "soft_lutpair282" *) 
+  LUT5 #(
+    .INIT(32'hFBFF0800)) 
     \DET_HACTIVE.active_video_toggled_i_1 
-       (.I0(active_video_toggled),
-        .I1(last_chroma),
-        .I2(active_video_rose),
-        .I3(h_count1),
-        .I4(\DET_VSYNC.vsync_d_reg_n_0 ),
-        .I5(\DET_VSYNC.vsync_d2_reg_n_0 ),
+       (.I0(active_video_rose),
+        .I1(det_ce),
+        .I2(active_video_d2),
+        .I3(active_video_d),
+        .I4(active_video_toggled),
         .O(\DET_HACTIVE.active_video_toggled_i_1_n_0 ));
   FDRE \DET_HACTIVE.active_video_toggled_reg 
        (.C(clk),
         .CE(1'b1),
         .D(\DET_HACTIVE.active_video_toggled_i_1_n_0 ),
         .Q(active_video_toggled),
-        .R(1'b0));
+        .R(p_7_out));
   FDRE \DET_HACTIVE.det_active_video_pol_change_reg 
        (.C(clk),
         .CE(det_ce),
         .D(leqOp),
         .Q(det_active_video_pol_change),
         .R(h_count1));
+  (* SOFT_HLUTNM = "soft_lutpair291" *) 
   LUT5 #(
     .INIT(32'hDFFF2000)) 
     \DET_HACTIVE.det_active_video_pol_int_i_1 
-       (.I0(active_video_d2),
+       (.I0(det_ce),
         .I1(active_video_d),
-        .I2(det_ce),
+        .I2(active_video_d2),
         .I3(det_active_video_pol_change),
         .I4(\time_status_regs[3] [2]),
         .O(\DET_HACTIVE.det_active_video_pol_int_i_1_n_0 ));
@@ -15274,8 +15244,8 @@ module hdmi_in_v_tc_1_0_tc_detector
   LUT2 #(
     .INIT(4'hE)) 
     \DET_HSYNC.GEN_DET_HSYNC_LOCK.det_hbp_start_last[11]_i_1 
-       (.I0(h_count1),
-        .I1(lost_lock),
+       (.I0(lost_lock),
+        .I1(h_count1),
         .O(p_5_out));
   FDSE \DET_HSYNC.GEN_DET_HSYNC_LOCK.det_hbp_start_last_reg[0] 
        (.C(clk),
@@ -15350,13 +15320,13 @@ module hdmi_in_v_tc_1_0_tc_detector
         .Q(det_hbp_start_last[9]),
         .S(p_5_out));
   LUT6 #(
-    .INIT(64'h000000000A0A0A3A)) 
+    .INIT(64'h0000000030303074)) 
     \DET_HSYNC.GEN_DET_HSYNC_LOCK.det_hsync_lock_int_i_1 
-       (.I0(hsync_lock_int),
-        .I1(det_hsync_pol_change),
-        .I2(det_ce),
-        .I3(neqOp2_out),
-        .I4(neqOp3_out),
+       (.I0(det_hsync_pol_change),
+        .I1(det_ce),
+        .I2(hsync_lock_int),
+        .I3(neqOp3_out),
+        .I4(neqOp2_out),
         .I5(p_5_out),
         .O(\DET_HSYNC.GEN_DET_HSYNC_LOCK.det_hsync_lock_int_i_1_n_0 ));
   FDRE \DET_HSYNC.GEN_DET_HSYNC_LOCK.det_hsync_lock_int_reg 
@@ -15523,11 +15493,11 @@ module hdmi_in_v_tc_1_0_tc_detector
         .Q(det_hsync_pol_change),
         .R(h_count1));
   LUT5 #(
-    .INIT(32'hBFFF4000)) 
+    .INIT(32'hDFFF2000)) 
     \DET_HSYNC.det_hsync_pol_int_i_1 
-       (.I0(hsync_d),
-        .I1(hsync_d2),
-        .I2(det_ce),
+       (.I0(det_ce),
+        .I1(hsync_d),
+        .I2(hsync_d2),
         .I3(det_hsync_pol_change),
         .I4(\time_status_regs[3] [1]),
         .O(\DET_HSYNC.det_hsync_pol_int_i_1_n_0 ));
@@ -15619,84 +15589,29 @@ module hdmi_in_v_tc_1_0_tc_detector
         .Q(det_hsync_start_int[9]),
         .R(h_count1));
   LUT4 #(
-    .INIT(16'hAAEA)) 
+    .INIT(16'hFF08)) 
     \DET_HSYNC.hsync_count[0]_i_1 
-       (.I0(h_count1),
-        .I1(det_ce),
-        .I2(hsync_d),
-        .I3(hsync_d2),
+       (.I0(det_ce),
+        .I1(hsync_d),
+        .I2(hsync_d2),
+        .I3(h_count1),
         .O(\DET_HSYNC.hsync_count[0]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'h8)) 
     \DET_HSYNC.hsync_count[0]_i_2 
        (.I0(det_ce),
         .I1(hsync_d),
-        .O(\DET_HSYNC.hsync_count[0]_i_2_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \DET_HSYNC.hsync_count[0]_i_4 
-       (.I0(\DET_HSYNC.hsync_count_reg [3]),
-        .O(\DET_HSYNC.hsync_count[0]_i_4_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \DET_HSYNC.hsync_count[0]_i_5 
-       (.I0(\DET_HSYNC.hsync_count_reg [2]),
-        .O(\DET_HSYNC.hsync_count[0]_i_5_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \DET_HSYNC.hsync_count[0]_i_6 
-       (.I0(\DET_HSYNC.hsync_count_reg [1]),
-        .O(\DET_HSYNC.hsync_count[0]_i_6_n_0 ));
+        .O(hsync_count));
   LUT1 #(
     .INIT(2'h1)) 
-    \DET_HSYNC.hsync_count[0]_i_7 
+    \DET_HSYNC.hsync_count[0]_i_4 
        (.I0(\DET_HSYNC.hsync_count_reg [0]),
-        .O(\DET_HSYNC.hsync_count[0]_i_7_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \DET_HSYNC.hsync_count[4]_i_2 
-       (.I0(\DET_HSYNC.hsync_count_reg [7]),
-        .O(\DET_HSYNC.hsync_count[4]_i_2_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \DET_HSYNC.hsync_count[4]_i_3 
-       (.I0(\DET_HSYNC.hsync_count_reg [6]),
-        .O(\DET_HSYNC.hsync_count[4]_i_3_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \DET_HSYNC.hsync_count[4]_i_4 
-       (.I0(\DET_HSYNC.hsync_count_reg [5]),
-        .O(\DET_HSYNC.hsync_count[4]_i_4_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \DET_HSYNC.hsync_count[4]_i_5 
-       (.I0(\DET_HSYNC.hsync_count_reg [4]),
-        .O(\DET_HSYNC.hsync_count[4]_i_5_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \DET_HSYNC.hsync_count[8]_i_2 
-       (.I0(\DET_HSYNC.hsync_count_reg [11]),
-        .O(\DET_HSYNC.hsync_count[8]_i_2_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \DET_HSYNC.hsync_count[8]_i_3 
-       (.I0(\DET_HSYNC.hsync_count_reg [10]),
-        .O(\DET_HSYNC.hsync_count[8]_i_3_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \DET_HSYNC.hsync_count[8]_i_4 
-       (.I0(\DET_HSYNC.hsync_count_reg [9]),
-        .O(\DET_HSYNC.hsync_count[8]_i_4_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \DET_HSYNC.hsync_count[8]_i_5 
-       (.I0(\DET_HSYNC.hsync_count_reg [8]),
-        .O(\DET_HSYNC.hsync_count[8]_i_5_n_0 ));
+        .O(\DET_HSYNC.hsync_count[0]_i_4_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \DET_HSYNC.hsync_count_reg[0] 
        (.C(clk),
-        .CE(\DET_HSYNC.hsync_count[0]_i_2_n_0 ),
+        .CE(hsync_count),
         .D(\DET_HSYNC.hsync_count_reg[0]_i_3_n_7 ),
         .Q(\DET_HSYNC.hsync_count_reg [0]),
         .R(\DET_HSYNC.hsync_count[0]_i_1_n_0 ));
@@ -15706,12 +15621,12 @@ module hdmi_in_v_tc_1_0_tc_detector
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b1}),
         .O({\DET_HSYNC.hsync_count_reg[0]_i_3_n_4 ,\DET_HSYNC.hsync_count_reg[0]_i_3_n_5 ,\DET_HSYNC.hsync_count_reg[0]_i_3_n_6 ,\DET_HSYNC.hsync_count_reg[0]_i_3_n_7 }),
-        .S({\DET_HSYNC.hsync_count[0]_i_4_n_0 ,\DET_HSYNC.hsync_count[0]_i_5_n_0 ,\DET_HSYNC.hsync_count[0]_i_6_n_0 ,\DET_HSYNC.hsync_count[0]_i_7_n_0 }));
+        .S({\DET_HSYNC.hsync_count_reg [3:1],\DET_HSYNC.hsync_count[0]_i_4_n_0 }));
   FDRE #(
     .INIT(1'b0)) 
     \DET_HSYNC.hsync_count_reg[10] 
        (.C(clk),
-        .CE(\DET_HSYNC.hsync_count[0]_i_2_n_0 ),
+        .CE(hsync_count),
         .D(\DET_HSYNC.hsync_count_reg[8]_i_1_n_5 ),
         .Q(\DET_HSYNC.hsync_count_reg [10]),
         .R(\DET_HSYNC.hsync_count[0]_i_1_n_0 ));
@@ -15719,7 +15634,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \DET_HSYNC.hsync_count_reg[11] 
        (.C(clk),
-        .CE(\DET_HSYNC.hsync_count[0]_i_2_n_0 ),
+        .CE(hsync_count),
         .D(\DET_HSYNC.hsync_count_reg[8]_i_1_n_4 ),
         .Q(\DET_HSYNC.hsync_count_reg [11]),
         .R(\DET_HSYNC.hsync_count[0]_i_1_n_0 ));
@@ -15727,7 +15642,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \DET_HSYNC.hsync_count_reg[1] 
        (.C(clk),
-        .CE(\DET_HSYNC.hsync_count[0]_i_2_n_0 ),
+        .CE(hsync_count),
         .D(\DET_HSYNC.hsync_count_reg[0]_i_3_n_6 ),
         .Q(\DET_HSYNC.hsync_count_reg [1]),
         .R(\DET_HSYNC.hsync_count[0]_i_1_n_0 ));
@@ -15735,7 +15650,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \DET_HSYNC.hsync_count_reg[2] 
        (.C(clk),
-        .CE(\DET_HSYNC.hsync_count[0]_i_2_n_0 ),
+        .CE(hsync_count),
         .D(\DET_HSYNC.hsync_count_reg[0]_i_3_n_5 ),
         .Q(\DET_HSYNC.hsync_count_reg [2]),
         .R(\DET_HSYNC.hsync_count[0]_i_1_n_0 ));
@@ -15743,7 +15658,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \DET_HSYNC.hsync_count_reg[3] 
        (.C(clk),
-        .CE(\DET_HSYNC.hsync_count[0]_i_2_n_0 ),
+        .CE(hsync_count),
         .D(\DET_HSYNC.hsync_count_reg[0]_i_3_n_4 ),
         .Q(\DET_HSYNC.hsync_count_reg [3]),
         .R(\DET_HSYNC.hsync_count[0]_i_1_n_0 ));
@@ -15751,7 +15666,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \DET_HSYNC.hsync_count_reg[4] 
        (.C(clk),
-        .CE(\DET_HSYNC.hsync_count[0]_i_2_n_0 ),
+        .CE(hsync_count),
         .D(\DET_HSYNC.hsync_count_reg[4]_i_1_n_7 ),
         .Q(\DET_HSYNC.hsync_count_reg [4]),
         .R(\DET_HSYNC.hsync_count[0]_i_1_n_0 ));
@@ -15761,12 +15676,12 @@ module hdmi_in_v_tc_1_0_tc_detector
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O({\DET_HSYNC.hsync_count_reg[4]_i_1_n_4 ,\DET_HSYNC.hsync_count_reg[4]_i_1_n_5 ,\DET_HSYNC.hsync_count_reg[4]_i_1_n_6 ,\DET_HSYNC.hsync_count_reg[4]_i_1_n_7 }),
-        .S({\DET_HSYNC.hsync_count[4]_i_2_n_0 ,\DET_HSYNC.hsync_count[4]_i_3_n_0 ,\DET_HSYNC.hsync_count[4]_i_4_n_0 ,\DET_HSYNC.hsync_count[4]_i_5_n_0 }));
+        .S(\DET_HSYNC.hsync_count_reg [7:4]));
   FDRE #(
     .INIT(1'b0)) 
     \DET_HSYNC.hsync_count_reg[5] 
        (.C(clk),
-        .CE(\DET_HSYNC.hsync_count[0]_i_2_n_0 ),
+        .CE(hsync_count),
         .D(\DET_HSYNC.hsync_count_reg[4]_i_1_n_6 ),
         .Q(\DET_HSYNC.hsync_count_reg [5]),
         .R(\DET_HSYNC.hsync_count[0]_i_1_n_0 ));
@@ -15774,7 +15689,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \DET_HSYNC.hsync_count_reg[6] 
        (.C(clk),
-        .CE(\DET_HSYNC.hsync_count[0]_i_2_n_0 ),
+        .CE(hsync_count),
         .D(\DET_HSYNC.hsync_count_reg[4]_i_1_n_5 ),
         .Q(\DET_HSYNC.hsync_count_reg [6]),
         .R(\DET_HSYNC.hsync_count[0]_i_1_n_0 ));
@@ -15782,7 +15697,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \DET_HSYNC.hsync_count_reg[7] 
        (.C(clk),
-        .CE(\DET_HSYNC.hsync_count[0]_i_2_n_0 ),
+        .CE(hsync_count),
         .D(\DET_HSYNC.hsync_count_reg[4]_i_1_n_4 ),
         .Q(\DET_HSYNC.hsync_count_reg [7]),
         .R(\DET_HSYNC.hsync_count[0]_i_1_n_0 ));
@@ -15790,7 +15705,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \DET_HSYNC.hsync_count_reg[8] 
        (.C(clk),
-        .CE(\DET_HSYNC.hsync_count[0]_i_2_n_0 ),
+        .CE(hsync_count),
         .D(\DET_HSYNC.hsync_count_reg[8]_i_1_n_7 ),
         .Q(\DET_HSYNC.hsync_count_reg [8]),
         .R(\DET_HSYNC.hsync_count[0]_i_1_n_0 ));
@@ -15800,12 +15715,12 @@ module hdmi_in_v_tc_1_0_tc_detector
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O({\DET_HSYNC.hsync_count_reg[8]_i_1_n_4 ,\DET_HSYNC.hsync_count_reg[8]_i_1_n_5 ,\DET_HSYNC.hsync_count_reg[8]_i_1_n_6 ,\DET_HSYNC.hsync_count_reg[8]_i_1_n_7 }),
-        .S({\DET_HSYNC.hsync_count[8]_i_2_n_0 ,\DET_HSYNC.hsync_count[8]_i_3_n_0 ,\DET_HSYNC.hsync_count[8]_i_4_n_0 ,\DET_HSYNC.hsync_count[8]_i_5_n_0 }));
+        .S(\DET_HSYNC.hsync_count_reg [11:8]));
   FDRE #(
     .INIT(1'b0)) 
     \DET_HSYNC.hsync_count_reg[9] 
        (.C(clk),
-        .CE(\DET_HSYNC.hsync_count[0]_i_2_n_0 ),
+        .CE(hsync_count),
         .D(\DET_HSYNC.hsync_count_reg[8]_i_1_n_6 ),
         .Q(\DET_HSYNC.hsync_count_reg [9]),
         .R(\DET_HSYNC.hsync_count[0]_i_1_n_0 ));
@@ -15816,11 +15731,11 @@ module hdmi_in_v_tc_1_0_tc_detector
         .Q(hsync_d2),
         .R(h_count1));
   LUT4 #(
-    .INIT(16'hF5F7)) 
+    .INIT(16'hDDDF)) 
     \DET_HSYNC.hsync_d_i_1 
        (.I0(resetn_out),
-        .I1(\genr_control_regs[0] [1]),
-        .I2(core_d_out),
+        .I1(core_d_out),
+        .I2(\genr_control_regs[0] [1]),
         .I3(\genr_control_regs[0] [0]),
         .O(h_count1));
   LUT2 #(
@@ -15829,7 +15744,7 @@ module hdmi_in_v_tc_1_0_tc_detector
        (.I0(clken),
         .I1(det_clken),
         .O(det_ce));
-  (* SOFT_HLUTNM = "soft_lutpair296" *) 
+  (* SOFT_HLUTNM = "soft_lutpair292" *) 
   LUT2 #(
     .INIT(4'h9)) 
     \DET_HSYNC.hsync_d_i_3 
@@ -15842,29 +15757,20 @@ module hdmi_in_v_tc_1_0_tc_detector
         .D(line_end),
         .Q(hsync_d),
         .R(h_count1));
-  LUT6 #(
-    .INIT(64'hEFFEFFFF20020000)) 
-    \DET_VACTIVE.active_line_d_i_1 
-       (.I0(active_line),
-        .I1(line_end_d_reg_n_0),
-        .I2(hsync_in),
-        .I3(\time_status_regs[3] [1]),
-        .I4(det_ce),
-        .I5(active_line_d),
-        .O(\DET_VACTIVE.active_line_d_i_1_n_0 ));
   FDRE \DET_VACTIVE.active_line_d_reg 
        (.C(clk),
-        .CE(1'b1),
-        .D(\DET_VACTIVE.active_line_d_i_1_n_0 ),
+        .CE(found_eof),
+        .D(active_line),
         .Q(active_line_d),
         .R(h_count1));
+  (* SOFT_HLUTNM = "soft_lutpair285" *) 
   LUT5 #(
-    .INIT(32'h77F700C0)) 
+    .INIT(32'h7F770C00)) 
     \DET_VACTIVE.active_line_i_1 
        (.I0(line_end_d_reg_n_0),
         .I1(det_ce),
-        .I2(active_video_d),
-        .I3(active_video_d2),
+        .I2(active_video_d2),
+        .I3(active_video_d),
         .I4(active_line),
         .O(\DET_VACTIVE.active_line_i_1_n_0 ));
   FDRE \DET_VACTIVE.active_line_reg 
@@ -15874,23 +15780,23 @@ module hdmi_in_v_tc_1_0_tc_detector
         .Q(active_line),
         .R(h_count1));
   LUT6 #(
-    .INIT(64'h0000000C000A000A)) 
+    .INIT(64'h1010110000001100)) 
     \DET_VSYNC.GEN_DET_VSYNC_LOCK.det_v0_vsync_lock_i_1 
-       (.I0(det_v0_vsync_lock),
-        .I1(p_1_in),
-        .I2(h_count1),
-        .I3(lost_lock),
-        .I4(det_v0_vsync_lock__0),
-        .I5(det_ce),
+       (.I0(lost_lock),
+        .I1(h_count1),
+        .I2(p_1_in),
+        .I3(det_v0_vsync_lock),
+        .I4(det_ce),
+        .I5(\DET_VSYNC.GEN_DET_VSYNC_LOCK.det_v0_vsync_lock_i_2_n_0 ),
         .O(\DET_VSYNC.GEN_DET_VSYNC_LOCK.det_v0_vsync_lock_i_1_n_0 ));
   LUT4 #(
-    .INIT(16'hFFFE)) 
+    .INIT(16'h0001)) 
     \DET_VSYNC.GEN_DET_VSYNC_LOCK.det_v0_vsync_lock_i_2 
        (.I0(\neqOp_inferred__3/i__carry_n_0 ),
         .I1(neqOp0_out),
         .I2(\neqOp_inferred__1/i__carry_n_0 ),
         .I3(neqOp),
-        .O(det_v0_vsync_lock__0));
+        .O(\DET_VSYNC.GEN_DET_VSYNC_LOCK.det_v0_vsync_lock_i_2_n_0 ));
   FDRE \DET_VSYNC.GEN_DET_VSYNC_LOCK.det_v0_vsync_lock_reg 
        (.C(clk),
         .CE(1'b1),
@@ -16186,8 +16092,8 @@ module hdmi_in_v_tc_1_0_tc_detector
        (.I0(vsync_lock_int),
         .I1(det_ce),
         .I2(det_v0_vsync_lock),
-        .I3(lost_lock),
-        .I4(h_count1),
+        .I3(h_count1),
+        .I4(lost_lock),
         .O(\DET_VSYNC.GEN_DET_VSYNC_LOCK.det_vsync_lock_i_1_n_0 ));
   FDRE \DET_VSYNC.GEN_DET_VSYNC_LOCK.det_vsync_lock_reg 
        (.C(clk),
@@ -16195,7 +16101,6 @@ module hdmi_in_v_tc_1_0_tc_detector
         .D(\DET_VSYNC.GEN_DET_VSYNC_LOCK.det_vsync_lock_i_1_n_0 ),
         .Q(vsync_lock_int),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair292" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \DET_VSYNC.GEN_DET_VSYNC_LOCK.vsync_delay[0]_i_1 
@@ -16301,7 +16206,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .D(\DET_VSYNC.det_v0sync_start_hori_int[9]_i_1_n_0 ),
         .Q(det_v0bp_start_hori_int[9]),
         .R(h_count1));
-  (* SOFT_HLUTNM = "soft_lutpair302" *) 
+  (* SOFT_HLUTNM = "soft_lutpair311" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0bp_start_int[0]_i_1 
@@ -16309,7 +16214,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(det_v0active_start_int[0]),
         .O(\DET_VSYNC.det_v0bp_start_int[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair310" *) 
+  (* SOFT_HLUTNM = "soft_lutpair319" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0bp_start_int[10]_i_1 
@@ -16317,7 +16222,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(det_v0active_start_int[10]),
         .O(\DET_VSYNC.det_v0bp_start_int[10]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair314" *) 
+  (* SOFT_HLUTNM = "soft_lutpair312" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0bp_start_int[1]_i_1 
@@ -16325,7 +16230,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(det_v0active_start_int[1]),
         .O(\DET_VSYNC.det_v0bp_start_int[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair314" *) 
+  (* SOFT_HLUTNM = "soft_lutpair313" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0bp_start_int[2]_i_1 
@@ -16333,7 +16238,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(det_v0active_start_int[2]),
         .O(\DET_VSYNC.det_v0bp_start_int[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair306" *) 
+  (* SOFT_HLUTNM = "soft_lutpair314" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0bp_start_int[3]_i_1 
@@ -16341,7 +16246,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(det_v0active_start_int[3]),
         .O(\DET_VSYNC.det_v0bp_start_int[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair307" *) 
+  (* SOFT_HLUTNM = "soft_lutpair315" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0bp_start_int[4]_i_1 
@@ -16349,7 +16254,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(det_v0active_start_int[4]),
         .O(\DET_VSYNC.det_v0bp_start_int[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair308" *) 
+  (* SOFT_HLUTNM = "soft_lutpair317" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0bp_start_int[5]_i_1 
@@ -16357,7 +16262,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(det_v0active_start_int[5]),
         .O(\DET_VSYNC.det_v0bp_start_int[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair309" *) 
+  (* SOFT_HLUTNM = "soft_lutpair318" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0bp_start_int[6]_i_1 
@@ -16365,7 +16270,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(det_v0active_start_int[6]),
         .O(\DET_VSYNC.det_v0bp_start_int[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair310" *) 
+  (* SOFT_HLUTNM = "soft_lutpair319" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0bp_start_int[7]_i_1 
@@ -16373,7 +16278,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(det_v0active_start_int[7]),
         .O(\DET_VSYNC.det_v0bp_start_int[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair311" *) 
+  (* SOFT_HLUTNM = "soft_lutpair320" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0bp_start_int[8]_i_1 
@@ -16381,7 +16286,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(det_v0active_start_int[8]),
         .O(\DET_VSYNC.det_v0bp_start_int[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair311" *) 
+  (* SOFT_HLUTNM = "soft_lutpair320" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0bp_start_int[9]_i_1 
@@ -16455,14 +16360,14 @@ module hdmi_in_v_tc_1_0_tc_detector
         .D(\DET_VSYNC.det_v0bp_start_int[9]_i_1_n_0 ),
         .Q(det_v0bp_start_int[9]),
         .R(h_count1));
-  (* SOFT_HLUTNM = "soft_lutpair309" *) 
+  (* SOFT_HLUTNM = "soft_lutpair318" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \DET_VSYNC.det_v0sync_start_hori_int[0]_i_1 
        (.I0(L[11]),
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .O(\DET_VSYNC.det_v0sync_start_hori_int[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair300" *) 
+  (* SOFT_HLUTNM = "soft_lutpair305" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \DET_VSYNC.det_v0sync_start_hori_int[10]_i_1 
@@ -16476,71 +16381,71 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(det_ce),
         .I2(\DET_VSYNC.vsync_d_reg_n_0 ),
         .I3(\DET_VSYNC.vsync_d2_reg_n_0 ),
-        .O(det_v0sync_start_int_4));
-  (* SOFT_HLUTNM = "soft_lutpair299" *) 
+        .O(det_v0sync_start_int_5));
+  (* SOFT_HLUTNM = "soft_lutpair304" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \DET_VSYNC.det_v0sync_start_hori_int[11]_i_2 
        (.I0(L[0]),
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .O(\DET_VSYNC.det_v0sync_start_hori_int[11]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair308" *) 
+  (* SOFT_HLUTNM = "soft_lutpair317" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \DET_VSYNC.det_v0sync_start_hori_int[1]_i_1 
        (.I0(L[10]),
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .O(\DET_VSYNC.det_v0sync_start_hori_int[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair307" *) 
+  (* SOFT_HLUTNM = "soft_lutpair316" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \DET_VSYNC.det_v0sync_start_hori_int[2]_i_1 
        (.I0(L[9]),
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .O(\DET_VSYNC.det_v0sync_start_hori_int[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair306" *) 
+  (* SOFT_HLUTNM = "soft_lutpair315" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \DET_VSYNC.det_v0sync_start_hori_int[3]_i_1 
        (.I0(L[8]),
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .O(\DET_VSYNC.det_v0sync_start_hori_int[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair305" *) 
+  (* SOFT_HLUTNM = "soft_lutpair314" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \DET_VSYNC.det_v0sync_start_hori_int[4]_i_1 
        (.I0(L[7]),
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .O(\DET_VSYNC.det_v0sync_start_hori_int[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair304" *) 
+  (* SOFT_HLUTNM = "soft_lutpair313" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \DET_VSYNC.det_v0sync_start_hori_int[5]_i_1 
        (.I0(L[6]),
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .O(\DET_VSYNC.det_v0sync_start_hori_int[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair303" *) 
+  (* SOFT_HLUTNM = "soft_lutpair312" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \DET_VSYNC.det_v0sync_start_hori_int[6]_i_1 
        (.I0(L[5]),
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .O(\DET_VSYNC.det_v0sync_start_hori_int[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair302" *) 
+  (* SOFT_HLUTNM = "soft_lutpair311" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \DET_VSYNC.det_v0sync_start_hori_int[7]_i_1 
        (.I0(L[4]),
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .O(\DET_VSYNC.det_v0sync_start_hori_int[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair283" *) 
+  (* SOFT_HLUTNM = "soft_lutpair310" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \DET_VSYNC.det_v0sync_start_hori_int[8]_i_1 
        (.I0(L[3]),
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .O(\DET_VSYNC.det_v0sync_start_hori_int[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair301" *) 
+  (* SOFT_HLUTNM = "soft_lutpair306" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \DET_VSYNC.det_v0sync_start_hori_int[9]_i_1 
@@ -16549,77 +16454,77 @@ module hdmi_in_v_tc_1_0_tc_detector
         .O(\DET_VSYNC.det_v0sync_start_hori_int[9]_i_1_n_0 ));
   FDRE \DET_VSYNC.det_v0sync_start_hori_int_reg[0] 
        (.C(clk),
-        .CE(det_v0sync_start_int_4),
+        .CE(det_v0sync_start_int_5),
         .D(\DET_VSYNC.det_v0sync_start_hori_int[0]_i_1_n_0 ),
         .Q(det_v0sync_start_hori_int[0]),
         .R(h_count1));
   FDRE \DET_VSYNC.det_v0sync_start_hori_int_reg[10] 
        (.C(clk),
-        .CE(det_v0sync_start_int_4),
+        .CE(det_v0sync_start_int_5),
         .D(\DET_VSYNC.det_v0sync_start_hori_int[10]_i_1_n_0 ),
         .Q(det_v0sync_start_hori_int[10]),
         .R(h_count1));
   FDRE \DET_VSYNC.det_v0sync_start_hori_int_reg[11] 
        (.C(clk),
-        .CE(det_v0sync_start_int_4),
+        .CE(det_v0sync_start_int_5),
         .D(\DET_VSYNC.det_v0sync_start_hori_int[11]_i_2_n_0 ),
         .Q(det_v0sync_start_hori_int[11]),
         .R(h_count1));
   FDRE \DET_VSYNC.det_v0sync_start_hori_int_reg[1] 
        (.C(clk),
-        .CE(det_v0sync_start_int_4),
+        .CE(det_v0sync_start_int_5),
         .D(\DET_VSYNC.det_v0sync_start_hori_int[1]_i_1_n_0 ),
         .Q(det_v0sync_start_hori_int[1]),
         .R(h_count1));
   FDRE \DET_VSYNC.det_v0sync_start_hori_int_reg[2] 
        (.C(clk),
-        .CE(det_v0sync_start_int_4),
+        .CE(det_v0sync_start_int_5),
         .D(\DET_VSYNC.det_v0sync_start_hori_int[2]_i_1_n_0 ),
         .Q(det_v0sync_start_hori_int[2]),
         .R(h_count1));
   FDRE \DET_VSYNC.det_v0sync_start_hori_int_reg[3] 
        (.C(clk),
-        .CE(det_v0sync_start_int_4),
+        .CE(det_v0sync_start_int_5),
         .D(\DET_VSYNC.det_v0sync_start_hori_int[3]_i_1_n_0 ),
         .Q(det_v0sync_start_hori_int[3]),
         .R(h_count1));
   FDRE \DET_VSYNC.det_v0sync_start_hori_int_reg[4] 
        (.C(clk),
-        .CE(det_v0sync_start_int_4),
+        .CE(det_v0sync_start_int_5),
         .D(\DET_VSYNC.det_v0sync_start_hori_int[4]_i_1_n_0 ),
         .Q(det_v0sync_start_hori_int[4]),
         .R(h_count1));
   FDRE \DET_VSYNC.det_v0sync_start_hori_int_reg[5] 
        (.C(clk),
-        .CE(det_v0sync_start_int_4),
+        .CE(det_v0sync_start_int_5),
         .D(\DET_VSYNC.det_v0sync_start_hori_int[5]_i_1_n_0 ),
         .Q(det_v0sync_start_hori_int[5]),
         .R(h_count1));
   FDRE \DET_VSYNC.det_v0sync_start_hori_int_reg[6] 
        (.C(clk),
-        .CE(det_v0sync_start_int_4),
+        .CE(det_v0sync_start_int_5),
         .D(\DET_VSYNC.det_v0sync_start_hori_int[6]_i_1_n_0 ),
         .Q(det_v0sync_start_hori_int[6]),
         .R(h_count1));
   FDRE \DET_VSYNC.det_v0sync_start_hori_int_reg[7] 
        (.C(clk),
-        .CE(det_v0sync_start_int_4),
+        .CE(det_v0sync_start_int_5),
         .D(\DET_VSYNC.det_v0sync_start_hori_int[7]_i_1_n_0 ),
         .Q(det_v0sync_start_hori_int[7]),
         .R(h_count1));
   FDRE \DET_VSYNC.det_v0sync_start_hori_int_reg[8] 
        (.C(clk),
-        .CE(det_v0sync_start_int_4),
+        .CE(det_v0sync_start_int_5),
         .D(\DET_VSYNC.det_v0sync_start_hori_int[8]_i_1_n_0 ),
         .Q(det_v0sync_start_hori_int[8]),
         .R(h_count1));
   FDRE \DET_VSYNC.det_v0sync_start_hori_int_reg[9] 
        (.C(clk),
-        .CE(det_v0sync_start_int_4),
+        .CE(det_v0sync_start_int_5),
         .D(\DET_VSYNC.det_v0sync_start_hori_int[9]_i_1_n_0 ),
         .Q(det_v0sync_start_hori_int[9]),
         .R(h_count1));
-  (* SOFT_HLUTNM = "soft_lutpair312" *) 
+  (* SOFT_HLUTNM = "soft_lutpair322" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0sync_start_int[0]_i_1 
@@ -16627,7 +16532,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(\time_status_regs_int_reg[0] [0]),
         .O(\DET_VSYNC.det_v0sync_start_int[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair312" *) 
+  (* SOFT_HLUTNM = "soft_lutpair304" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0sync_start_int[10]_i_1 
@@ -16635,7 +16540,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(\time_status_regs_int_reg[0] [10]),
         .O(\DET_VSYNC.det_v0sync_start_int[10]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair313" *) 
+  (* SOFT_HLUTNM = "soft_lutpair323" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0sync_start_int[1]_i_1 
@@ -16643,6 +16548,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(\time_status_regs_int_reg[0] [1]),
         .O(\DET_VSYNC.det_v0sync_start_int[1]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair323" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0sync_start_int[2]_i_1 
@@ -16650,7 +16556,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(\time_status_regs_int_reg[0] [2]),
         .O(\DET_VSYNC.det_v0sync_start_int[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair300" *) 
+  (* SOFT_HLUTNM = "soft_lutpair322" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0sync_start_int[3]_i_1 
@@ -16658,7 +16564,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(\time_status_regs_int_reg[0] [3]),
         .O(\DET_VSYNC.det_v0sync_start_int[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair299" *) 
+  (* SOFT_HLUTNM = "soft_lutpair321" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0sync_start_int[4]_i_1 
@@ -16666,7 +16572,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(\time_status_regs_int_reg[0] [4]),
         .O(\DET_VSYNC.det_v0sync_start_int[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair313" *) 
+  (* SOFT_HLUTNM = "soft_lutpair316" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0sync_start_int[5]_i_1 
@@ -16674,7 +16580,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(\time_status_regs_int_reg[0] [5]),
         .O(\DET_VSYNC.det_v0sync_start_int[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair305" *) 
+  (* SOFT_HLUTNM = "soft_lutpair310" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0sync_start_int[6]_i_1 
@@ -16682,7 +16588,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(\time_status_regs_int_reg[0] [6]),
         .O(\DET_VSYNC.det_v0sync_start_int[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair304" *) 
+  (* SOFT_HLUTNM = "soft_lutpair321" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0sync_start_int[7]_i_1 
@@ -16690,7 +16596,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(\time_status_regs_int_reg[0] [7]),
         .O(\DET_VSYNC.det_v0sync_start_int[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair303" *) 
+  (* SOFT_HLUTNM = "soft_lutpair306" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0sync_start_int[8]_i_1 
@@ -16698,7 +16604,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(\time_status_regs_int_reg[0] [8]),
         .O(\DET_VSYNC.det_v0sync_start_int[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair301" *) 
+  (* SOFT_HLUTNM = "soft_lutpair305" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0sync_start_int[9]_i_1 
@@ -16708,96 +16614,98 @@ module hdmi_in_v_tc_1_0_tc_detector
         .O(\DET_VSYNC.det_v0sync_start_int[9]_i_1_n_0 ));
   FDRE \DET_VSYNC.det_v0sync_start_int_reg[0] 
        (.C(clk),
-        .CE(det_v0sync_start_int_4),
+        .CE(det_v0sync_start_int_5),
         .D(\DET_VSYNC.det_v0sync_start_int[0]_i_1_n_0 ),
         .Q(det_v0sync_start_int[0]),
         .R(h_count1));
   FDRE \DET_VSYNC.det_v0sync_start_int_reg[10] 
        (.C(clk),
-        .CE(det_v0sync_start_int_4),
+        .CE(det_v0sync_start_int_5),
         .D(\DET_VSYNC.det_v0sync_start_int[10]_i_1_n_0 ),
         .Q(det_v0sync_start_int[10]),
         .R(h_count1));
   FDRE \DET_VSYNC.det_v0sync_start_int_reg[1] 
        (.C(clk),
-        .CE(det_v0sync_start_int_4),
+        .CE(det_v0sync_start_int_5),
         .D(\DET_VSYNC.det_v0sync_start_int[1]_i_1_n_0 ),
         .Q(det_v0sync_start_int[1]),
         .R(h_count1));
   FDRE \DET_VSYNC.det_v0sync_start_int_reg[2] 
        (.C(clk),
-        .CE(det_v0sync_start_int_4),
+        .CE(det_v0sync_start_int_5),
         .D(\DET_VSYNC.det_v0sync_start_int[2]_i_1_n_0 ),
         .Q(det_v0sync_start_int[2]),
         .R(h_count1));
   FDRE \DET_VSYNC.det_v0sync_start_int_reg[3] 
        (.C(clk),
-        .CE(det_v0sync_start_int_4),
+        .CE(det_v0sync_start_int_5),
         .D(\DET_VSYNC.det_v0sync_start_int[3]_i_1_n_0 ),
         .Q(det_v0sync_start_int[3]),
         .R(h_count1));
   FDRE \DET_VSYNC.det_v0sync_start_int_reg[4] 
        (.C(clk),
-        .CE(det_v0sync_start_int_4),
+        .CE(det_v0sync_start_int_5),
         .D(\DET_VSYNC.det_v0sync_start_int[4]_i_1_n_0 ),
         .Q(det_v0sync_start_int[4]),
         .R(h_count1));
   FDRE \DET_VSYNC.det_v0sync_start_int_reg[5] 
        (.C(clk),
-        .CE(det_v0sync_start_int_4),
+        .CE(det_v0sync_start_int_5),
         .D(\DET_VSYNC.det_v0sync_start_int[5]_i_1_n_0 ),
         .Q(det_v0sync_start_int[5]),
         .R(h_count1));
   FDRE \DET_VSYNC.det_v0sync_start_int_reg[6] 
        (.C(clk),
-        .CE(det_v0sync_start_int_4),
+        .CE(det_v0sync_start_int_5),
         .D(\DET_VSYNC.det_v0sync_start_int[6]_i_1_n_0 ),
         .Q(det_v0sync_start_int[6]),
         .R(h_count1));
   FDRE \DET_VSYNC.det_v0sync_start_int_reg[7] 
        (.C(clk),
-        .CE(det_v0sync_start_int_4),
+        .CE(det_v0sync_start_int_5),
         .D(\DET_VSYNC.det_v0sync_start_int[7]_i_1_n_0 ),
         .Q(det_v0sync_start_int[7]),
         .R(h_count1));
   FDRE \DET_VSYNC.det_v0sync_start_int_reg[8] 
        (.C(clk),
-        .CE(det_v0sync_start_int_4),
+        .CE(det_v0sync_start_int_5),
         .D(\DET_VSYNC.det_v0sync_start_int[8]_i_1_n_0 ),
         .Q(det_v0sync_start_int[8]),
         .R(h_count1));
   FDRE \DET_VSYNC.det_v0sync_start_int_reg[9] 
        (.C(clk),
-        .CE(det_v0sync_start_int_4),
+        .CE(det_v0sync_start_int_5),
         .D(\DET_VSYNC.det_v0sync_start_int[9]_i_1_n_0 ),
         .Q(det_v0sync_start_int[9]),
         .R(h_count1));
-  LUT3 #(
-    .INIT(8'hE0)) 
+  LUT5 #(
+    .INIT(32'hFFFFFFE0)) 
     \DET_VSYNC.det_vsync_pol_change_i_1 
-       (.I0(\DET_VSYNC.det_vsync_pol_change_i_2_n_0 ),
-        .I1(det_v0total_int[10]),
+       (.I0(det_v0total_int[10]),
+        .I1(det_v0total_int[7]),
         .I2(gtOp29_in),
+        .I3(\DET_VSYNC.det_vsync_pol_change_i_2_n_0 ),
+        .I4(\DET_VSYNC.det_vsync_pol_change_i_3_n_0 ),
         .O(p_30_out));
   LUT6 #(
-    .INIT(64'hFFFFFFFEFFFEFFFE)) 
+    .INIT(64'hFF00FF00FF00A800)) 
     \DET_VSYNC.det_vsync_pol_change_i_2 
-       (.I0(\DET_VSYNC.det_vsync_pol_change_i_3_n_0 ),
-        .I1(det_v0total_int[8]),
-        .I2(det_v0total_int[7]),
-        .I3(det_v0total_int[9]),
-        .I4(det_v0total_int[6]),
-        .I5(det_v0total_int[5]),
+       (.I0(det_v0total_int[6]),
+        .I1(det_v0total_int[0]),
+        .I2(det_v0total_int[1]),
+        .I3(gtOp29_in),
+        .I4(det_v0total_int[9]),
+        .I5(det_v0total_int[8]),
         .O(\DET_VSYNC.det_vsync_pol_change_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hAAAAAAAAAAAAAAA8)) 
+    .INIT(64'hF000F000F000E000)) 
     \DET_VSYNC.det_vsync_pol_change_i_3 
-       (.I0(det_v0total_int[6]),
-        .I1(det_v0total_int[3]),
-        .I2(det_v0total_int[2]),
-        .I3(det_v0total_int[1]),
-        .I4(det_v0total_int[0]),
-        .I5(det_v0total_int[4]),
+       (.I0(det_v0total_int[5]),
+        .I1(det_v0total_int[4]),
+        .I2(gtOp29_in),
+        .I3(det_v0total_int[6]),
+        .I4(det_v0total_int[3]),
+        .I5(det_v0total_int[2]),
         .O(\DET_VSYNC.det_vsync_pol_change_i_3_n_0 ));
   FDRE \DET_VSYNC.det_vsync_pol_change_reg 
        (.C(clk),
@@ -16836,42 +16744,42 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I3(h_count1),
         .O(\DET_VSYNC.vsync_count[10]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'h00820000)) 
+    .INIT(32'h00008008)) 
     \DET_VSYNC.vsync_count[10]_i_2 
        (.I0(\DET_VSYNC.vsync_d_reg_n_0 ),
-        .I1(\time_status_regs[3] [1]),
-        .I2(hsync_in),
-        .I3(line_end_d_reg_n_0),
-        .I4(det_ce),
+        .I1(det_ce),
+        .I2(\time_status_regs[3] [1]),
+        .I3(hsync_in),
+        .I4(line_end_d_reg_n_0),
         .O(vsync_count));
   LUT6 #(
-    .INIT(64'h7FFFFFFF80000000)) 
+    .INIT(64'hF7FFFFFF08000000)) 
     \DET_VSYNC.vsync_count[10]_i_3 
-       (.I0(\DET_VSYNC.vsync_count_reg__0 [8]),
+       (.I0(\DET_VSYNC.vsync_count_reg__0 [9]),
         .I1(\DET_VSYNC.vsync_count_reg__0 [6]),
         .I2(\DET_VSYNC.vsync_count[10]_i_4_n_0 ),
         .I3(\DET_VSYNC.vsync_count_reg__0 [7]),
-        .I4(\DET_VSYNC.vsync_count_reg__0 [9]),
+        .I4(\DET_VSYNC.vsync_count_reg__0 [8]),
         .I5(\DET_VSYNC.vsync_count_reg__0 [10]),
         .O(plusOp__1[10]));
   LUT6 #(
-    .INIT(64'h8000000000000000)) 
+    .INIT(64'h7FFFFFFFFFFFFFFF)) 
     \DET_VSYNC.vsync_count[10]_i_4 
        (.I0(\DET_VSYNC.vsync_count_reg__0 [5]),
-        .I1(\DET_VSYNC.vsync_count_reg__0 [3]),
+        .I1(\DET_VSYNC.vsync_count_reg__0 [2]),
         .I2(\DET_VSYNC.vsync_count_reg__0 [1]),
         .I3(\DET_VSYNC.vsync_count_reg__0 [0]),
-        .I4(\DET_VSYNC.vsync_count_reg__0 [2]),
+        .I4(\DET_VSYNC.vsync_count_reg__0 [3]),
         .I5(\DET_VSYNC.vsync_count_reg__0 [4]),
         .O(\DET_VSYNC.vsync_count[10]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair295" *) 
+  (* SOFT_HLUTNM = "soft_lutpair303" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \DET_VSYNC.vsync_count[1]_i_1 
        (.I0(\DET_VSYNC.vsync_count_reg__0 [0]),
         .I1(\DET_VSYNC.vsync_count_reg__0 [1]),
         .O(plusOp__1[1]));
-  (* SOFT_HLUTNM = "soft_lutpair295" *) 
+  (* SOFT_HLUTNM = "soft_lutpair303" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \DET_VSYNC.vsync_count[2]_i_1 
@@ -16879,67 +16787,67 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_count_reg__0 [1]),
         .I2(\DET_VSYNC.vsync_count_reg__0 [2]),
         .O(plusOp__1[2]));
-  (* SOFT_HLUTNM = "soft_lutpair278" *) 
+  (* SOFT_HLUTNM = "soft_lutpair290" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \DET_VSYNC.vsync_count[3]_i_1 
-       (.I0(\DET_VSYNC.vsync_count_reg__0 [1]),
-        .I1(\DET_VSYNC.vsync_count_reg__0 [0]),
-        .I2(\DET_VSYNC.vsync_count_reg__0 [2]),
+       (.I0(\DET_VSYNC.vsync_count_reg__0 [2]),
+        .I1(\DET_VSYNC.vsync_count_reg__0 [1]),
+        .I2(\DET_VSYNC.vsync_count_reg__0 [0]),
         .I3(\DET_VSYNC.vsync_count_reg__0 [3]),
         .O(plusOp__1[3]));
-  (* SOFT_HLUTNM = "soft_lutpair278" *) 
+  (* SOFT_HLUTNM = "soft_lutpair290" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \DET_VSYNC.vsync_count[4]_i_1 
-       (.I0(\DET_VSYNC.vsync_count_reg__0 [2]),
+       (.I0(\DET_VSYNC.vsync_count_reg__0 [3]),
         .I1(\DET_VSYNC.vsync_count_reg__0 [0]),
         .I2(\DET_VSYNC.vsync_count_reg__0 [1]),
-        .I3(\DET_VSYNC.vsync_count_reg__0 [3]),
+        .I3(\DET_VSYNC.vsync_count_reg__0 [2]),
         .I4(\DET_VSYNC.vsync_count_reg__0 [4]),
         .O(plusOp__1[4]));
   LUT6 #(
     .INIT(64'h7FFFFFFF80000000)) 
     \DET_VSYNC.vsync_count[5]_i_1 
-       (.I0(\DET_VSYNC.vsync_count_reg__0 [3]),
+       (.I0(\DET_VSYNC.vsync_count_reg__0 [2]),
         .I1(\DET_VSYNC.vsync_count_reg__0 [1]),
         .I2(\DET_VSYNC.vsync_count_reg__0 [0]),
-        .I3(\DET_VSYNC.vsync_count_reg__0 [2]),
+        .I3(\DET_VSYNC.vsync_count_reg__0 [3]),
         .I4(\DET_VSYNC.vsync_count_reg__0 [4]),
         .I5(\DET_VSYNC.vsync_count_reg__0 [5]),
         .O(plusOp__1[5]));
-  (* SOFT_HLUTNM = "soft_lutpair285" *) 
+  (* SOFT_HLUTNM = "soft_lutpair301" *) 
   LUT2 #(
-    .INIT(4'h6)) 
+    .INIT(4'h9)) 
     \DET_VSYNC.vsync_count[6]_i_1 
        (.I0(\DET_VSYNC.vsync_count[10]_i_4_n_0 ),
         .I1(\DET_VSYNC.vsync_count_reg__0 [6]),
         .O(plusOp__1[6]));
-  (* SOFT_HLUTNM = "soft_lutpair285" *) 
+  (* SOFT_HLUTNM = "soft_lutpair301" *) 
   LUT3 #(
-    .INIT(8'h78)) 
+    .INIT(8'hB4)) 
     \DET_VSYNC.vsync_count[7]_i_1 
        (.I0(\DET_VSYNC.vsync_count[10]_i_4_n_0 ),
         .I1(\DET_VSYNC.vsync_count_reg__0 [6]),
         .I2(\DET_VSYNC.vsync_count_reg__0 [7]),
         .O(plusOp__1[7]));
-  (* SOFT_HLUTNM = "soft_lutpair280" *) 
+  (* SOFT_HLUTNM = "soft_lutpair289" *) 
   LUT4 #(
-    .INIT(16'h7F80)) 
+    .INIT(16'hDF20)) 
     \DET_VSYNC.vsync_count[8]_i_1 
        (.I0(\DET_VSYNC.vsync_count_reg__0 [6]),
         .I1(\DET_VSYNC.vsync_count[10]_i_4_n_0 ),
         .I2(\DET_VSYNC.vsync_count_reg__0 [7]),
         .I3(\DET_VSYNC.vsync_count_reg__0 [8]),
         .O(plusOp__1[8]));
-  (* SOFT_HLUTNM = "soft_lutpair280" *) 
+  (* SOFT_HLUTNM = "soft_lutpair289" *) 
   LUT5 #(
-    .INIT(32'h7FFF8000)) 
+    .INIT(32'hF7FF0800)) 
     \DET_VSYNC.vsync_count[9]_i_1 
-       (.I0(\DET_VSYNC.vsync_count_reg__0 [7]),
-        .I1(\DET_VSYNC.vsync_count[10]_i_4_n_0 ),
-        .I2(\DET_VSYNC.vsync_count_reg__0 [6]),
-        .I3(\DET_VSYNC.vsync_count_reg__0 [8]),
+       (.I0(\DET_VSYNC.vsync_count_reg__0 [8]),
+        .I1(\DET_VSYNC.vsync_count_reg__0 [7]),
+        .I2(\DET_VSYNC.vsync_count[10]_i_4_n_0 ),
+        .I3(\DET_VSYNC.vsync_count_reg__0 [6]),
         .I4(\DET_VSYNC.vsync_count_reg__0 [9]),
         .O(plusOp__1[9]));
   FDRE #(
@@ -17039,8 +16947,8 @@ module hdmi_in_v_tc_1_0_tc_detector
   LUT2 #(
     .INIT(4'h9)) 
     \DET_VSYNC.vsync_d_i_1 
-       (.I0(vsync_in),
-        .I1(\time_status_regs[3] [0]),
+       (.I0(\time_status_regs[3] [0]),
+        .I1(vsync_in),
         .O(\DET_VSYNC.vsync_d_i_1_n_0 ));
   FDRE \DET_VSYNC.vsync_d_reg 
        (.C(clk),
@@ -17048,7 +16956,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .D(\DET_VSYNC.vsync_d_i_1_n_0 ),
         .Q(\DET_VSYNC.vsync_d_reg_n_0 ),
         .R(h_count1));
-  (* SOFT_HLUTNM = "soft_lutpair282" *) 
+  (* SOFT_HLUTNM = "soft_lutpair281" *) 
   LUT4 #(
     .INIT(16'hFF08)) 
     \DET_VSYNC.vsync_rose_i_1 
@@ -17063,7 +16971,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .D(\DET_VSYNC.vsync_rose_i_1_n_0 ),
         .Q(vsync_rose),
         .R(h_count1));
-  (* SOFT_HLUTNM = "soft_lutpair282" *) 
+  (* SOFT_HLUTNM = "soft_lutpair281" *) 
   LUT5 #(
     .INIT(32'hEFFF2000)) 
     \DET_VSYNC.vsync_toggled_i_1 
@@ -17102,7 +17010,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .CYINIT(1'b0),
         .DI({1'b0,det_v0bp_start_hori_int[10:8]}),
         .O(det_v0bp_start_hori_int2[11:8]),
-        .S({i__carry__1_i_1__2_n_0,i__carry__1_i_2__1_n_0,i__carry__1_i_3__1_n_0,i__carry__1_i_4__1_n_0}));
+        .S({i__carry__1_i_1__0_n_0,i__carry__1_i_2__1_n_0,i__carry__1_i_3__1_n_0,i__carry__1_i_4__1_n_0}));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 \_inferred__8/i__carry 
        (.CI(1'b0),
@@ -17126,94 +17034,94 @@ module hdmi_in_v_tc_1_0_tc_detector
         .CYINIT(1'b0),
         .DI({1'b0,det_v0sync_start_hori_int[10:8]}),
         .O(det_v0sync_start_hori_int2[11:8]),
-        .S({i__carry__1_i_1__1_n_0,i__carry__1_i_2__0_n_0,i__carry__1_i_3__0_n_0,i__carry__1_i_4__0_n_0}));
+        .S({i__carry__1_i_1_n_0,i__carry__1_i_2__0_n_0,i__carry__1_i_3__0_n_0,i__carry__1_i_4__0_n_0}));
   LUT6 #(
     .INIT(64'h00000000E2222222)) 
     all_lock_i_1
        (.I0(all_lock),
         .I1(det_ce),
-        .I2(vsync_lock_int),
+        .I2(active_video_lock_int),
         .I3(hsync_lock_int),
-        .I4(active_video_lock_int),
+        .I4(vsync_lock_int),
         .I5(all_lock_d0),
         .O(all_lock_reg));
   LUT4 #(
     .INIT(16'h0800)) 
     \det_hactive_start_int[11]_i_1 
-       (.I0(det_ce),
-        .I1(active_video_d),
+       (.I0(active_video_toggled),
+        .I1(det_ce),
         .I2(active_video_d2),
-        .I3(active_video_toggled),
-        .O(det_hactive_start_int_3));
+        .I3(active_video_d),
+        .O(det_hactive_start_int_4));
   FDRE \det_hactive_start_int_reg[0] 
        (.C(clk),
-        .CE(det_hactive_start_int_3),
+        .CE(det_hactive_start_int_4),
         .D(L[11]),
         .Q(det_hactive_start_int[0]),
         .R(h_count1));
   FDRE \det_hactive_start_int_reg[10] 
        (.C(clk),
-        .CE(det_hactive_start_int_3),
+        .CE(det_hactive_start_int_4),
         .D(L[1]),
         .Q(det_hactive_start_int[10]),
         .R(h_count1));
   FDRE \det_hactive_start_int_reg[11] 
        (.C(clk),
-        .CE(det_hactive_start_int_3),
+        .CE(det_hactive_start_int_4),
         .D(L[0]),
         .Q(det_hactive_start_int[11]),
         .R(h_count1));
   FDRE \det_hactive_start_int_reg[1] 
        (.C(clk),
-        .CE(det_hactive_start_int_3),
+        .CE(det_hactive_start_int_4),
         .D(L[10]),
         .Q(det_hactive_start_int[1]),
         .R(h_count1));
   FDRE \det_hactive_start_int_reg[2] 
        (.C(clk),
-        .CE(det_hactive_start_int_3),
+        .CE(det_hactive_start_int_4),
         .D(L[9]),
         .Q(det_hactive_start_int[2]),
         .R(h_count1));
   FDRE \det_hactive_start_int_reg[3] 
        (.C(clk),
-        .CE(det_hactive_start_int_3),
+        .CE(det_hactive_start_int_4),
         .D(L[8]),
         .Q(det_hactive_start_int[3]),
         .R(h_count1));
   FDRE \det_hactive_start_int_reg[4] 
        (.C(clk),
-        .CE(det_hactive_start_int_3),
+        .CE(det_hactive_start_int_4),
         .D(L[7]),
         .Q(det_hactive_start_int[4]),
         .R(h_count1));
   FDRE \det_hactive_start_int_reg[5] 
        (.C(clk),
-        .CE(det_hactive_start_int_3),
+        .CE(det_hactive_start_int_4),
         .D(L[6]),
         .Q(det_hactive_start_int[5]),
         .R(h_count1));
   FDRE \det_hactive_start_int_reg[6] 
        (.C(clk),
-        .CE(det_hactive_start_int_3),
+        .CE(det_hactive_start_int_4),
         .D(L[5]),
         .Q(det_hactive_start_int[6]),
         .R(h_count1));
   FDRE \det_hactive_start_int_reg[7] 
        (.C(clk),
-        .CE(det_hactive_start_int_3),
+        .CE(det_hactive_start_int_4),
         .D(L[4]),
         .Q(det_hactive_start_int[7]),
         .R(h_count1));
   FDRE \det_hactive_start_int_reg[8] 
        (.C(clk),
-        .CE(det_hactive_start_int_3),
+        .CE(det_hactive_start_int_4),
         .D(L[3]),
         .Q(det_hactive_start_int[8]),
         .R(h_count1));
   FDRE \det_hactive_start_int_reg[9] 
        (.C(clk),
-        .CE(det_hactive_start_int_3),
+        .CE(det_hactive_start_int_4),
         .D(L[2]),
         .Q(det_hactive_start_int[9]),
         .R(h_count1));
@@ -17365,9 +17273,9 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(16'h0800)) 
     \det_hfp_start_int[11]_i_1 
        (.I0(active_video_toggled),
-        .I1(det_ce),
+        .I1(active_video_d2),
         .I2(active_video_d),
-        .I3(active_video_d2),
+        .I3(det_ce),
         .O(det_hfp_start_int_8));
   FDRE \det_hfp_start_int_reg[0] 
        (.C(clk),
@@ -17518,61 +17426,6 @@ module hdmi_in_v_tc_1_0_tc_detector
     \det_htotal_int2[0]_i_1 
        (.I0(det_htotal_int[0]),
         .O(plusOp[0]));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \det_htotal_int2[11]_i_2 
-       (.I0(det_htotal_int[11]),
-        .O(\det_htotal_int2[11]_i_2_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \det_htotal_int2[11]_i_3 
-       (.I0(det_htotal_int[10]),
-        .O(\det_htotal_int2[11]_i_3_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \det_htotal_int2[11]_i_4 
-       (.I0(det_htotal_int[9]),
-        .O(\det_htotal_int2[11]_i_4_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \det_htotal_int2[4]_i_2 
-       (.I0(det_htotal_int[4]),
-        .O(\det_htotal_int2[4]_i_2_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \det_htotal_int2[4]_i_3 
-       (.I0(det_htotal_int[3]),
-        .O(\det_htotal_int2[4]_i_3_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \det_htotal_int2[4]_i_4 
-       (.I0(det_htotal_int[2]),
-        .O(\det_htotal_int2[4]_i_4_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \det_htotal_int2[4]_i_5 
-       (.I0(det_htotal_int[1]),
-        .O(\det_htotal_int2[4]_i_5_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \det_htotal_int2[8]_i_2 
-       (.I0(det_htotal_int[8]),
-        .O(\det_htotal_int2[8]_i_2_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \det_htotal_int2[8]_i_3 
-       (.I0(det_htotal_int[7]),
-        .O(\det_htotal_int2[8]_i_3_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \det_htotal_int2[8]_i_4 
-       (.I0(det_htotal_int[6]),
-        .O(\det_htotal_int2[8]_i_4_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \det_htotal_int2[8]_i_5 
-       (.I0(det_htotal_int[5]),
-        .O(\det_htotal_int2[8]_i_5_n_0 ));
   FDRE \det_htotal_int2_reg[0] 
        (.C(clk),
         .CE(det_ce),
@@ -17597,7 +17450,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O({\NLW_det_htotal_int2_reg[11]_i_1_O_UNCONNECTED [3],plusOp[11:9]}),
-        .S({1'b0,\det_htotal_int2[11]_i_2_n_0 ,\det_htotal_int2[11]_i_3_n_0 ,\det_htotal_int2[11]_i_4_n_0 }));
+        .S({1'b0,det_htotal_int[11:9]}));
   FDRE \det_htotal_int2_reg[1] 
        (.C(clk),
         .CE(det_ce),
@@ -17628,7 +17481,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .CYINIT(det_htotal_int[0]),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O(plusOp[4:1]),
-        .S({\det_htotal_int2[4]_i_2_n_0 ,\det_htotal_int2[4]_i_3_n_0 ,\det_htotal_int2[4]_i_4_n_0 ,\det_htotal_int2[4]_i_5_n_0 }));
+        .S(det_htotal_int[4:1]));
   FDRE \det_htotal_int2_reg[5] 
        (.C(clk),
         .CE(det_ce),
@@ -17659,7 +17512,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O(plusOp[8:5]),
-        .S({\det_htotal_int2[8]_i_2_n_0 ,\det_htotal_int2[8]_i_3_n_0 ,\det_htotal_int2[8]_i_4_n_0 ,\det_htotal_int2[8]_i_5_n_0 }));
+        .S(det_htotal_int[8:5]));
   FDRE \det_htotal_int2_reg[9] 
        (.C(clk),
         .CE(det_ce),
@@ -17667,86 +17520,86 @@ module hdmi_in_v_tc_1_0_tc_detector
         .Q(Q[9]),
         .R(reset));
   LUT4 #(
-    .INIT(16'h2002)) 
+    .INIT(16'h0082)) 
     \det_htotal_int[11]_i_1 
        (.I0(det_ce),
-        .I1(line_end_d_reg_n_0),
+        .I1(\time_status_regs[3] [1]),
         .I2(hsync_in),
-        .I3(\time_status_regs[3] [1]),
-        .O(\det_htotal_int[11]_i_1_n_0 ));
+        .I3(line_end_d_reg_n_0),
+        .O(found_eof));
   FDRE \det_htotal_int_reg[0] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(L[11]),
         .Q(det_htotal_int[0]),
         .R(h_count1));
   FDRE \det_htotal_int_reg[10] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(L[1]),
         .Q(det_htotal_int[10]),
         .R(h_count1));
   FDRE \det_htotal_int_reg[11] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(L[0]),
         .Q(det_htotal_int[11]),
         .R(h_count1));
   FDRE \det_htotal_int_reg[1] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(L[10]),
         .Q(det_htotal_int[1]),
         .R(h_count1));
   FDRE \det_htotal_int_reg[2] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(L[9]),
         .Q(det_htotal_int[2]),
         .R(h_count1));
   FDRE \det_htotal_int_reg[3] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(L[8]),
         .Q(det_htotal_int[3]),
         .R(h_count1));
   FDRE \det_htotal_int_reg[4] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(L[7]),
         .Q(det_htotal_int[4]),
         .R(h_count1));
   FDRE \det_htotal_int_reg[5] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(L[6]),
         .Q(det_htotal_int[5]),
         .R(h_count1));
   FDRE \det_htotal_int_reg[6] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(L[5]),
         .Q(det_htotal_int[6]),
         .R(h_count1));
   FDRE \det_htotal_int_reg[7] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(L[4]),
         .Q(det_htotal_int[7]),
         .R(h_count1));
   FDRE \det_htotal_int_reg[8] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(L[3]),
         .Q(det_htotal_int[8]),
         .R(h_count1));
   FDRE \det_htotal_int_reg[9] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(L[2]),
         .Q(det_htotal_int[9]),
         .R(h_count1));
-  (* SOFT_HLUTNM = "soft_lutpair297" *) 
+  (* SOFT_HLUTNM = "soft_lutpair309" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \det_v0active_start_hori_int2[0]_i_1 
@@ -18094,70 +17947,70 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I3(\time_status_regs[3] [1]),
         .I4(hsync_in),
         .I5(line_end_d_reg_n_0),
-        .O(det_v0active_start_int_6));
+        .O(det_v0active_start_int_3));
   FDRE \det_v0active_start_int_reg[0] 
        (.C(clk),
-        .CE(det_v0active_start_int_6),
+        .CE(det_v0active_start_int_3),
         .D(v_count_reg__0[0]),
         .Q(det_v0active_start_int[0]),
         .R(h_count1));
   FDRE \det_v0active_start_int_reg[10] 
        (.C(clk),
-        .CE(det_v0active_start_int_6),
+        .CE(det_v0active_start_int_3),
         .D(v_count_reg__0[10]),
         .Q(det_v0active_start_int[10]),
         .R(h_count1));
   FDRE \det_v0active_start_int_reg[1] 
        (.C(clk),
-        .CE(det_v0active_start_int_6),
+        .CE(det_v0active_start_int_3),
         .D(v_count_reg__0[1]),
         .Q(det_v0active_start_int[1]),
         .R(h_count1));
   FDRE \det_v0active_start_int_reg[2] 
        (.C(clk),
-        .CE(det_v0active_start_int_6),
+        .CE(det_v0active_start_int_3),
         .D(v_count_reg__0[2]),
         .Q(det_v0active_start_int[2]),
         .R(h_count1));
   FDRE \det_v0active_start_int_reg[3] 
        (.C(clk),
-        .CE(det_v0active_start_int_6),
+        .CE(det_v0active_start_int_3),
         .D(v_count_reg__0[3]),
         .Q(det_v0active_start_int[3]),
         .R(h_count1));
   FDRE \det_v0active_start_int_reg[4] 
        (.C(clk),
-        .CE(det_v0active_start_int_6),
+        .CE(det_v0active_start_int_3),
         .D(v_count_reg__0[4]),
         .Q(det_v0active_start_int[4]),
         .R(h_count1));
   FDRE \det_v0active_start_int_reg[5] 
        (.C(clk),
-        .CE(det_v0active_start_int_6),
+        .CE(det_v0active_start_int_3),
         .D(v_count_reg__0[5]),
         .Q(det_v0active_start_int[5]),
         .R(h_count1));
   FDRE \det_v0active_start_int_reg[6] 
        (.C(clk),
-        .CE(det_v0active_start_int_6),
+        .CE(det_v0active_start_int_3),
         .D(v_count_reg__0[6]),
         .Q(det_v0active_start_int[6]),
         .R(h_count1));
   FDRE \det_v0active_start_int_reg[7] 
        (.C(clk),
-        .CE(det_v0active_start_int_6),
+        .CE(det_v0active_start_int_3),
         .D(v_count_reg__0[7]),
         .Q(det_v0active_start_int[7]),
         .R(h_count1));
   FDRE \det_v0active_start_int_reg[8] 
        (.C(clk),
-        .CE(det_v0active_start_int_6),
+        .CE(det_v0active_start_int_3),
         .D(v_count_reg__0[8]),
         .Q(det_v0active_start_int[8]),
         .R(h_count1));
   FDRE \det_v0active_start_int_reg[9] 
        (.C(clk),
-        .CE(det_v0active_start_int_6),
+        .CE(det_v0active_start_int_3),
         .D(v_count_reg__0[9]),
         .Q(det_v0active_start_int[9]),
         .R(h_count1));
@@ -18376,7 +18229,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .D(det_v0bp_start_int2[9]),
         .Q(\time_status_regs[8] [20]),
         .R(reset));
-  (* SOFT_HLUTNM = "soft_lutpair297" *) 
+  (* SOFT_HLUTNM = "soft_lutpair309" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \det_v0fp_start_hori_int2[0]_i_1 
@@ -18720,14 +18573,14 @@ module hdmi_in_v_tc_1_0_tc_detector
         .Q(\time_status_regs[7] [9]),
         .R(reset));
   LUT6 #(
-    .INIT(64'h0008000000000008)) 
+    .INIT(64'h0000000040000040)) 
     \det_v0fp_start_int[10]_i_1 
-       (.I0(det_ce),
+       (.I0(active_line),
         .I1(active_line_d),
-        .I2(active_line),
-        .I3(line_end_d_reg_n_0),
+        .I2(det_ce),
+        .I3(\time_status_regs[3] [1]),
         .I4(hsync_in),
-        .I5(\time_status_regs[3] [1]),
+        .I5(line_end_d_reg_n_0),
         .O(det_v0fp_start_int));
   FDRE \det_v0fp_start_int_reg[0] 
        (.C(clk),
@@ -19016,103 +18869,104 @@ module hdmi_in_v_tc_1_0_tc_detector
        (.I0(det_v0total_int[0]),
         .O(\det_v0total[0]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h7FFFFFFF80000000)) 
+    .INIT(64'hFF7FFFFF00800000)) 
     \det_v0total[10]_i_1 
-       (.I0(det_v0total_int[8]),
-        .I1(det_v0total_int[6]),
-        .I2(\det_v0total[10]_i_2_n_0 ),
-        .I3(det_v0total_int[7]),
-        .I4(det_v0total_int[9]),
+       (.I0(det_v0total_int[9]),
+        .I1(det_v0total_int[7]),
+        .I2(det_v0total_int[6]),
+        .I3(\det_v0total[10]_i_2_n_0 ),
+        .I4(det_v0total_int[8]),
         .I5(det_v0total_int[10]),
         .O(\det_v0total[10]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h8000000000000000)) 
+    .INIT(64'h7FFFFFFFFFFFFFFF)) 
     \det_v0total[10]_i_2 
-       (.I0(det_v0total_int[5]),
-        .I1(det_v0total_int[3]),
+       (.I0(det_v0total_int[2]),
+        .I1(det_v0total_int[0]),
         .I2(det_v0total_int[1]),
-        .I3(det_v0total_int[0]),
-        .I4(det_v0total_int[2]),
-        .I5(det_v0total_int[4]),
+        .I3(det_v0total_int[3]),
+        .I4(det_v0total_int[4]),
+        .I5(det_v0total_int[5]),
         .O(\det_v0total[10]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair298" *) 
+  (* SOFT_HLUTNM = "soft_lutpair307" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \det_v0total[1]_i_1 
        (.I0(det_v0total_int[0]),
         .I1(det_v0total_int[1]),
         .O(\det_v0total[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair298" *) 
+  (* SOFT_HLUTNM = "soft_lutpair307" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \det_v0total[2]_i_1 
-       (.I0(det_v0total_int[0]),
-        .I1(det_v0total_int[1]),
-        .I2(det_v0total_int[2]),
-        .O(\det_v0total[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair279" *) 
-  LUT4 #(
-    .INIT(16'h7F80)) 
-    \det_v0total[3]_i_1 
        (.I0(det_v0total_int[1]),
         .I1(det_v0total_int[0]),
         .I2(det_v0total_int[2]),
-        .I3(det_v0total_int[3]),
-        .O(\det_v0total[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair279" *) 
-  LUT5 #(
-    .INIT(32'h7FFF8000)) 
-    \det_v0total[4]_i_1 
+        .O(\det_v0total[2]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair283" *) 
+  LUT4 #(
+    .INIT(16'h7F80)) 
+    \det_v0total[3]_i_1 
        (.I0(det_v0total_int[2]),
         .I1(det_v0total_int[0]),
         .I2(det_v0total_int[1]),
         .I3(det_v0total_int[3]),
-        .I4(det_v0total_int[4]),
-        .O(\det_v0total[4]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h7FFFFFFF80000000)) 
-    \det_v0total[5]_i_1 
+        .O(\det_v0total[3]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair283" *) 
+  LUT5 #(
+    .INIT(32'h7FFF8000)) 
+    \det_v0total[4]_i_1 
        (.I0(det_v0total_int[3]),
         .I1(det_v0total_int[1]),
         .I2(det_v0total_int[0]),
         .I3(det_v0total_int[2]),
         .I4(det_v0total_int[4]),
+        .O(\det_v0total[4]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h7FFFFFFF80000000)) 
+    \det_v0total[5]_i_1 
+       (.I0(det_v0total_int[2]),
+        .I1(det_v0total_int[0]),
+        .I2(det_v0total_int[1]),
+        .I3(det_v0total_int[3]),
+        .I4(det_v0total_int[4]),
         .I5(det_v0total_int[5]),
         .O(\det_v0total[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair286" *) 
+  (* SOFT_HLUTNM = "soft_lutpair298" *) 
   LUT2 #(
-    .INIT(4'h6)) 
+    .INIT(4'h9)) 
     \det_v0total[6]_i_1 
        (.I0(\det_v0total[10]_i_2_n_0 ),
         .I1(det_v0total_int[6]),
         .O(\det_v0total[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair286" *) 
+  (* SOFT_HLUTNM = "soft_lutpair298" *) 
   LUT3 #(
-    .INIT(8'h78)) 
+    .INIT(8'hB4)) 
     \det_v0total[7]_i_1 
        (.I0(\det_v0total[10]_i_2_n_0 ),
         .I1(det_v0total_int[6]),
         .I2(det_v0total_int[7]),
         .O(\det_v0total[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair277" *) 
+  (* SOFT_HLUTNM = "soft_lutpair284" *) 
   LUT4 #(
-    .INIT(16'h7F80)) 
+    .INIT(16'hF708)) 
     \det_v0total[8]_i_1 
-       (.I0(det_v0total_int[6]),
-        .I1(\det_v0total[10]_i_2_n_0 ),
-        .I2(det_v0total_int[7]),
+       (.I0(det_v0total_int[7]),
+        .I1(det_v0total_int[6]),
+        .I2(\det_v0total[10]_i_2_n_0 ),
         .I3(det_v0total_int[8]),
         .O(\det_v0total[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair277" *) 
+  (* SOFT_HLUTNM = "soft_lutpair284" *) 
   LUT5 #(
-    .INIT(32'h7FFF8000)) 
+    .INIT(32'hDFFF2000)) 
     \det_v0total[9]_i_1 
-       (.I0(det_v0total_int[7]),
+       (.I0(det_v0total_int[8]),
         .I1(\det_v0total[10]_i_2_n_0 ),
         .I2(det_v0total_int[6]),
-        .I3(det_v0total_int[8]),
+        .I3(det_v0total_int[7]),
         .I4(det_v0total_int[9]),
         .O(\det_v0total[9]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair302" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \det_v0total_int[0]_i_1 
@@ -19121,15 +18975,15 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I2(v_count_last[0]),
         .O(\det_v0total_int[0]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'h00008200)) 
+    .INIT(32'h40040000)) 
     \det_v0total_int[10]_i_1 
-       (.I0(det_ce),
-        .I1(active_video_in),
+       (.I0(frame_end_d),
+        .I1(top_of_frame_reg_n_0),
         .I2(\time_status_regs[3] [2]),
-        .I3(top_of_frame_reg_n_0),
-        .I4(frame_end_d),
-        .O(det_v0total_int_5));
-  (* SOFT_HLUTNM = "soft_lutpair287" *) 
+        .I3(active_video_in),
+        .I4(det_ce),
+        .O(det_v0total_int_6));
+  (* SOFT_HLUTNM = "soft_lutpair295" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \det_v0total_int[10]_i_2 
@@ -19137,7 +18991,6 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(gtOp_0),
         .I2(v_count_last[10]),
         .O(\det_v0total_int[10]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair287" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \det_v0total_int[1]_i_1 
@@ -19145,7 +18998,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(gtOp_0),
         .I2(v_count_last[1]),
         .O(\det_v0total_int[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair291" *) 
+  (* SOFT_HLUTNM = "soft_lutpair302" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \det_v0total_int[2]_i_1 
@@ -19153,7 +19006,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(gtOp_0),
         .I2(v_count_last[2]),
         .O(\det_v0total_int[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair291" *) 
+  (* SOFT_HLUTNM = "soft_lutpair299" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \det_v0total_int[3]_i_1 
@@ -19161,7 +19014,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(gtOp_0),
         .I2(v_count_last[3]),
         .O(\det_v0total_int[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair288" *) 
+  (* SOFT_HLUTNM = "soft_lutpair299" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \det_v0total_int[4]_i_1 
@@ -19169,7 +19022,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(gtOp_0),
         .I2(v_count_last[4]),
         .O(\det_v0total_int[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair290" *) 
+  (* SOFT_HLUTNM = "soft_lutpair297" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \det_v0total_int[5]_i_1 
@@ -19177,7 +19030,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(gtOp_0),
         .I2(v_count_last[5]),
         .O(\det_v0total_int[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair289" *) 
+  (* SOFT_HLUTNM = "soft_lutpair295" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \det_v0total_int[6]_i_1 
@@ -19185,7 +19038,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(gtOp_0),
         .I2(v_count_last[6]),
         .O(\det_v0total_int[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair290" *) 
+  (* SOFT_HLUTNM = "soft_lutpair296" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \det_v0total_int[7]_i_1 
@@ -19193,7 +19046,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(gtOp_0),
         .I2(v_count_last[7]),
         .O(\det_v0total_int[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair289" *) 
+  (* SOFT_HLUTNM = "soft_lutpair297" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \det_v0total_int[8]_i_1 
@@ -19201,7 +19054,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(gtOp_0),
         .I2(v_count_last[8]),
         .O(\det_v0total_int[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair288" *) 
+  (* SOFT_HLUTNM = "soft_lutpair296" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \det_v0total_int[9]_i_1 
@@ -19213,7 +19066,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \det_v0total_int_reg[0] 
        (.C(clk),
-        .CE(det_v0total_int_5),
+        .CE(det_v0total_int_6),
         .D(\det_v0total_int[0]_i_1_n_0 ),
         .Q(det_v0total_int[0]),
         .R(h_count1));
@@ -19221,7 +19074,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \det_v0total_int_reg[10] 
        (.C(clk),
-        .CE(det_v0total_int_5),
+        .CE(det_v0total_int_6),
         .D(\det_v0total_int[10]_i_2_n_0 ),
         .Q(det_v0total_int[10]),
         .R(h_count1));
@@ -19229,7 +19082,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \det_v0total_int_reg[1] 
        (.C(clk),
-        .CE(det_v0total_int_5),
+        .CE(det_v0total_int_6),
         .D(\det_v0total_int[1]_i_1_n_0 ),
         .Q(det_v0total_int[1]),
         .R(h_count1));
@@ -19237,7 +19090,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \det_v0total_int_reg[2] 
        (.C(clk),
-        .CE(det_v0total_int_5),
+        .CE(det_v0total_int_6),
         .D(\det_v0total_int[2]_i_1_n_0 ),
         .Q(det_v0total_int[2]),
         .R(h_count1));
@@ -19245,7 +19098,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \det_v0total_int_reg[3] 
        (.C(clk),
-        .CE(det_v0total_int_5),
+        .CE(det_v0total_int_6),
         .D(\det_v0total_int[3]_i_1_n_0 ),
         .Q(det_v0total_int[3]),
         .R(h_count1));
@@ -19253,7 +19106,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \det_v0total_int_reg[4] 
        (.C(clk),
-        .CE(det_v0total_int_5),
+        .CE(det_v0total_int_6),
         .D(\det_v0total_int[4]_i_1_n_0 ),
         .Q(det_v0total_int[4]),
         .R(h_count1));
@@ -19261,7 +19114,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \det_v0total_int_reg[5] 
        (.C(clk),
-        .CE(det_v0total_int_5),
+        .CE(det_v0total_int_6),
         .D(\det_v0total_int[5]_i_1_n_0 ),
         .Q(det_v0total_int[5]),
         .R(h_count1));
@@ -19269,7 +19122,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \det_v0total_int_reg[6] 
        (.C(clk),
-        .CE(det_v0total_int_5),
+        .CE(det_v0total_int_6),
         .D(\det_v0total_int[6]_i_1_n_0 ),
         .Q(det_v0total_int[6]),
         .R(h_count1));
@@ -19277,7 +19130,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \det_v0total_int_reg[7] 
        (.C(clk),
-        .CE(det_v0total_int_5),
+        .CE(det_v0total_int_6),
         .D(\det_v0total_int[7]_i_1_n_0 ),
         .Q(det_v0total_int[7]),
         .R(h_count1));
@@ -19285,7 +19138,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \det_v0total_int_reg[8] 
        (.C(clk),
-        .CE(det_v0total_int_5),
+        .CE(det_v0total_int_6),
         .D(\det_v0total_int[8]_i_1_n_0 ),
         .Q(det_v0total_int[8]),
         .R(h_count1));
@@ -19293,7 +19146,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \det_v0total_int_reg[9] 
        (.C(clk),
-        .CE(det_v0total_int_5),
+        .CE(det_v0total_int_6),
         .D(\det_v0total_int[9]_i_1_n_0 ),
         .Q(det_v0total_int[9]),
         .R(h_count1));
@@ -19364,14 +19217,14 @@ module hdmi_in_v_tc_1_0_tc_detector
         .Q(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][10] [9]),
         .R(reset));
   LUT6 #(
-    .INIT(64'h0000000000EAAAAA)) 
+    .INIT(64'h5555400000000000)) 
     found_eof_i_1
-       (.I0(found_eof_reg_n_0),
-        .I1(gtOp_0),
-        .I2(p_0_in16_in),
-        .I3(h_count0__0),
-        .I4(det_ce),
-        .I5(h_count1),
+       (.I0(h_count1),
+        .I1(\v_count[10]_i_3_n_0 ),
+        .I2(det_ce),
+        .I3(gtOp_0),
+        .I4(found_eof_reg_n_0),
+        .I5(\v_count[10]_i_4_n_0 ),
         .O(found_eof_i_1_n_0));
   FDRE found_eof_reg
        (.C(clk),
@@ -19379,13 +19232,13 @@ module hdmi_in_v_tc_1_0_tc_detector
         .D(found_eof_i_1_n_0),
         .Q(found_eof_reg_n_0),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair284" *) 
+  (* SOFT_HLUTNM = "soft_lutpair293" *) 
   LUT3 #(
-    .INIT(8'h90)) 
+    .INIT(8'h82)) 
     frame_end_d_i_1
-       (.I0(\time_status_regs[3] [2]),
-        .I1(active_video_in),
-        .I2(top_of_frame_reg_n_0),
+       (.I0(top_of_frame_reg_n_0),
+        .I1(\time_status_regs[3] [2]),
+        .I2(active_video_in),
         .O(frame_end));
   FDRE frame_end_d_reg
        (.C(clk),
@@ -19408,20 +19261,20 @@ module hdmi_in_v_tc_1_0_tc_detector
         .O(NLW_gtOp_carry__0_O_UNCONNECTED[3:0]),
         .S({1'b0,gtOp_carry__0_i_3_n_0,gtOp_carry__0_i_4_n_0,gtOp_carry__0_i_5_n_0}));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
     gtOp_carry__0_i_1
-       (.I0(\DET_HSYNC.hsync_count_reg [9]),
-        .I1(det_htotal_int[10]),
-        .I2(det_htotal_int[11]),
-        .I3(\DET_HSYNC.hsync_count_reg [10]),
+       (.I0(\DET_HSYNC.hsync_count_reg [10]),
+        .I1(det_htotal_int[11]),
+        .I2(\DET_HSYNC.hsync_count_reg [9]),
+        .I3(det_htotal_int[10]),
         .O(gtOp_carry__0_i_1_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
     gtOp_carry__0_i_2
-       (.I0(\DET_HSYNC.hsync_count_reg [7]),
-        .I1(det_htotal_int[8]),
-        .I2(det_htotal_int[9]),
-        .I3(\DET_HSYNC.hsync_count_reg [8]),
+       (.I0(\DET_HSYNC.hsync_count_reg [8]),
+        .I1(det_htotal_int[9]),
+        .I2(\DET_HSYNC.hsync_count_reg [7]),
+        .I3(det_htotal_int[8]),
         .O(gtOp_carry__0_i_2_n_0));
   LUT1 #(
     .INIT(2'h1)) 
@@ -19445,28 +19298,28 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I3(\DET_HSYNC.hsync_count_reg [7]),
         .O(gtOp_carry__0_i_5_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
     gtOp_carry_i_1
-       (.I0(\DET_HSYNC.hsync_count_reg [5]),
-        .I1(det_htotal_int[6]),
-        .I2(det_htotal_int[7]),
-        .I3(\DET_HSYNC.hsync_count_reg [6]),
+       (.I0(\DET_HSYNC.hsync_count_reg [6]),
+        .I1(det_htotal_int[7]),
+        .I2(\DET_HSYNC.hsync_count_reg [5]),
+        .I3(det_htotal_int[6]),
         .O(gtOp_carry_i_1_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
     gtOp_carry_i_2
-       (.I0(\DET_HSYNC.hsync_count_reg [3]),
-        .I1(det_htotal_int[4]),
-        .I2(det_htotal_int[5]),
-        .I3(\DET_HSYNC.hsync_count_reg [4]),
+       (.I0(\DET_HSYNC.hsync_count_reg [4]),
+        .I1(det_htotal_int[5]),
+        .I2(\DET_HSYNC.hsync_count_reg [3]),
+        .I3(det_htotal_int[4]),
         .O(gtOp_carry_i_2_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
     gtOp_carry_i_3
-       (.I0(\DET_HSYNC.hsync_count_reg [1]),
-        .I1(det_htotal_int[2]),
-        .I2(det_htotal_int[3]),
-        .I3(\DET_HSYNC.hsync_count_reg [2]),
+       (.I0(\DET_HSYNC.hsync_count_reg [2]),
+        .I1(det_htotal_int[3]),
+        .I2(\DET_HSYNC.hsync_count_reg [1]),
+        .I3(det_htotal_int[2]),
         .O(gtOp_carry_i_3_n_0));
   LUT2 #(
     .INIT(4'h2)) 
@@ -19499,137 +19352,83 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I3(\DET_HSYNC.hsync_count_reg [1]),
         .O(gtOp_carry_i_7_n_0));
   LUT3 #(
-    .INIT(8'h41)) 
+    .INIT(8'h21)) 
     gtOp_carry_i_8
-       (.I0(det_htotal_int[0]),
-        .I1(det_htotal_int[1]),
-        .I2(\DET_HSYNC.hsync_count_reg [0]),
+       (.I0(\DET_HSYNC.hsync_count_reg [0]),
+        .I1(det_htotal_int[0]),
+        .I2(det_htotal_int[1]),
         .O(gtOp_carry_i_8_n_0));
   CARRY4 \gtOp_inferred__0/i__carry 
        (.CI(1'b0),
         .CO({\gtOp_inferred__0/i__carry_n_0 ,\gtOp_inferred__0/i__carry_n_1 ,\gtOp_inferred__0/i__carry_n_2 ,\gtOp_inferred__0/i__carry_n_3 }),
         .CYINIT(1'b0),
-        .DI({i__carry_i_1_n_0,i__carry_i_2_n_0,i__carry_i_3_n_0,i__carry_i_4_n_0}),
+        .DI({i__carry_i_1__0_n_0,i__carry_i_2__1_n_0,i__carry_i_3__1_n_0,i__carry_i_4__0_n_0}),
         .O(\NLW_gtOp_inferred__0/i__carry_O_UNCONNECTED [3:0]),
         .S({i__carry_i_5__2_n_0,i__carry_i_6__2_n_0,i__carry_i_7__2_n_0,i__carry_i_8__2_n_0}));
   CARRY4 \gtOp_inferred__0/i__carry__0 
        (.CI(\gtOp_inferred__0/i__carry_n_0 ),
         .CO({\NLW_gtOp_inferred__0/i__carry__0_CO_UNCONNECTED [3],gtOp_0,\gtOp_inferred__0/i__carry__0_n_2 ,\gtOp_inferred__0/i__carry__0_n_3 }),
         .CYINIT(1'b0),
-        .DI({1'b0,L[0],i__carry__0_i_1_n_0,i__carry__0_i_2_n_0}),
+        .DI({1'b0,L[0],i__carry__0_i_1__0_n_0,i__carry__0_i_2__1_n_0}),
         .O(\NLW_gtOp_inferred__0/i__carry__0_O_UNCONNECTED [3:0]),
         .S({1'b0,i__carry__0_i_3__2_n_0,i__carry__0_i_4__2_n_0,i__carry__0_i_5__0_n_0}));
   CARRY4 \gtOp_inferred__2/i__carry 
        (.CI(1'b0),
         .CO({\gtOp_inferred__2/i__carry_n_0 ,\gtOp_inferred__2/i__carry_n_1 ,\gtOp_inferred__2/i__carry_n_2 ,\gtOp_inferred__2/i__carry_n_3 }),
         .CYINIT(1'b0),
-        .DI({i__carry_i_1__1_n_0,i__carry_i_2__1_n_0,i__carry_i_3__1_n_0,i__carry_i_4__1_n_0}),
+        .DI({i__carry_i_1__1_n_0,i__carry_i_2_n_0,i__carry_i_3_n_0,i__carry_i_4__1_n_0}),
         .O(\NLW_gtOp_inferred__2/i__carry_O_UNCONNECTED [3:0]),
-        .S({i__carry_i_5__0_n_0,i__carry_i_6__0_n_0,i__carry_i_7__0_n_0,i__carry_i_8__0_n_0}));
+        .S({i__carry_i_5__0_n_0,i__carry_i_6__0_n_0,i__carry_i_7__0_n_0,i__carry_i_8_n_0}));
   CARRY4 \gtOp_inferred__2/i__carry__0 
        (.CI(\gtOp_inferred__2/i__carry_n_0 ),
         .CO({\NLW_gtOp_inferred__2/i__carry__0_CO_UNCONNECTED [3:2],gtOp29_in,\gtOp_inferred__2/i__carry__0_n_3 }),
         .CYINIT(1'b0),
-        .DI({1'b0,1'b0,i__carry__0_i_1__1_n_0,i__carry__0_i_2__1_n_0}),
+        .DI({1'b0,1'b0,i__carry__0_i_1__1_n_0,i__carry__0_i_2_n_0}),
         .O(\NLW_gtOp_inferred__2/i__carry__0_O_UNCONNECTED [3:0]),
         .S({1'b0,1'b0,i__carry__0_i_3_n_0,i__carry__0_i_4__0_n_0}));
   LUT5 #(
-    .INIT(32'hAAEBAAAA)) 
+    .INIT(32'hAAAAEAAE)) 
     \h_count[0]_i_1 
        (.I0(h_count1),
-        .I1(\time_status_regs[3] [1]),
-        .I2(hsync_in),
-        .I3(line_end_d_reg_n_0),
-        .I4(det_ce),
+        .I1(det_ce),
+        .I2(\time_status_regs[3] [1]),
+        .I3(hsync_in),
+        .I4(line_end_d_reg_n_0),
         .O(\h_count[0]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hAAAAAAAA2AAAAAAA)) 
+    .INIT(64'hBFAAFFAAFFAAFFAA)) 
     \h_count[0]_i_2 
-       (.I0(det_ce),
-        .I1(L[11]),
-        .I2(L[10]),
-        .I3(L[9]),
-        .I4(L[8]),
-        .I5(\h_count[0]_i_4_n_0 ),
+       (.I0(\h_count[0]_i_4_n_0 ),
+        .I1(L[8]),
+        .I2(L[9]),
+        .I3(det_ce),
+        .I4(L[10]),
+        .I5(L[11]),
         .O(h_count));
-  LUT5 #(
-    .INIT(32'hFFFF7FFF)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFF70F0F0F0)) 
     \h_count[0]_i_4 
        (.I0(L[4]),
         .I1(L[5]),
-        .I2(L[6]),
-        .I3(L[7]),
-        .I4(\h_count[0]_i_9_n_0 ),
+        .I2(det_ce),
+        .I3(L[6]),
+        .I4(L[7]),
+        .I5(\h_count[0]_i_6_n_0 ),
         .O(\h_count[0]_i_4_n_0 ));
   LUT1 #(
-    .INIT(2'h2)) 
-    \h_count[0]_i_5 
-       (.I0(L[8]),
-        .O(\h_count[0]_i_5_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \h_count[0]_i_6 
-       (.I0(L[9]),
-        .O(\h_count[0]_i_6_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \h_count[0]_i_7 
-       (.I0(L[10]),
-        .O(\h_count[0]_i_7_n_0 ));
-  LUT1 #(
     .INIT(2'h1)) 
-    \h_count[0]_i_8 
+    \h_count[0]_i_5 
        (.I0(L[11]),
-        .O(\h_count[0]_i_8_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair283" *) 
-  LUT4 #(
-    .INIT(16'h7FFF)) 
-    \h_count[0]_i_9 
+        .O(\h_count[0]_i_5_n_0 ));
+  LUT5 #(
+    .INIT(32'h70F0F0F0)) 
+    \h_count[0]_i_6 
        (.I0(L[3]),
         .I1(L[2]),
-        .I2(L[0]),
-        .I3(L[1]),
-        .O(\h_count[0]_i_9_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \h_count[4]_i_2 
-       (.I0(L[4]),
-        .O(\h_count[4]_i_2_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \h_count[4]_i_3 
-       (.I0(L[5]),
-        .O(\h_count[4]_i_3_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \h_count[4]_i_4 
-       (.I0(L[6]),
-        .O(\h_count[4]_i_4_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \h_count[4]_i_5 
-       (.I0(L[7]),
-        .O(\h_count[4]_i_5_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \h_count[8]_i_2 
-       (.I0(L[0]),
-        .O(\h_count[8]_i_2_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \h_count[8]_i_3 
-       (.I0(L[1]),
-        .O(\h_count[8]_i_3_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \h_count[8]_i_4 
-       (.I0(L[2]),
-        .O(\h_count[8]_i_4_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \h_count[8]_i_5 
-       (.I0(L[3]),
-        .O(\h_count[8]_i_5_n_0 ));
+        .I2(det_ce),
+        .I3(L[0]),
+        .I4(L[1]),
+        .O(\h_count[0]_i_6_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \h_count_reg[0] 
@@ -19644,7 +19443,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b1}),
         .O({\h_count_reg[0]_i_3_n_4 ,\h_count_reg[0]_i_3_n_5 ,\h_count_reg[0]_i_3_n_6 ,\h_count_reg[0]_i_3_n_7 }),
-        .S({\h_count[0]_i_5_n_0 ,\h_count[0]_i_6_n_0 ,\h_count[0]_i_7_n_0 ,\h_count[0]_i_8_n_0 }));
+        .S({L[8],L[9],L[10],\h_count[0]_i_5_n_0 }));
   FDRE #(
     .INIT(1'b0)) 
     \h_count_reg[10] 
@@ -19699,7 +19498,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O({\h_count_reg[4]_i_1_n_4 ,\h_count_reg[4]_i_1_n_5 ,\h_count_reg[4]_i_1_n_6 ,\h_count_reg[4]_i_1_n_7 }),
-        .S({\h_count[4]_i_2_n_0 ,\h_count[4]_i_3_n_0 ,\h_count[4]_i_4_n_0 ,\h_count[4]_i_5_n_0 }));
+        .S({L[4],L[5],L[6],L[7]}));
   FDRE #(
     .INIT(1'b0)) 
     \h_count_reg[5] 
@@ -19738,7 +19537,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O({\h_count_reg[8]_i_1_n_4 ,\h_count_reg[8]_i_1_n_5 ,\h_count_reg[8]_i_1_n_6 ,\h_count_reg[8]_i_1_n_7 }),
-        .S({\h_count[8]_i_2_n_0 ,\h_count[8]_i_3_n_0 ,\h_count[8]_i_4_n_0 ,\h_count[8]_i_5_n_0 }));
+        .S({L[0],L[1],L[2],L[3]}));
   FDRE #(
     .INIT(1'b0)) 
     \h_count_reg[9] 
@@ -19748,18 +19547,18 @@ module hdmi_in_v_tc_1_0_tc_detector
         .Q(L[2]),
         .R(\h_count[0]_i_1_n_0 ));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h20F2)) 
     i__carry__0_i_1
-       (.I0(L[2]),
-        .I1(det_htotal_int[10]),
+       (.I0(det_htotal_int[10]),
+        .I1(L[2]),
         .I2(det_htotal_int[11]),
         .I3(L[1]),
         .O(i__carry__0_i_1_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h20F2)) 
     i__carry__0_i_1__0
-       (.I0(det_htotal_int[10]),
-        .I1(L[2]),
+       (.I0(L[2]),
+        .I1(det_htotal_int[10]),
         .I2(L[1]),
         .I3(det_htotal_int[11]),
         .O(i__carry__0_i_1__0_n_0));
@@ -19771,12 +19570,12 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I2(\DET_VSYNC.vsync_count_reg__0 [10]),
         .O(i__carry__0_i_1__1_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
     i__carry__0_i_1__2
-       (.I0(det_hactive_start_int[10]),
-        .I1(det_v0bp_start_hori_int[10]),
-        .I2(det_v0bp_start_hori_int[11]),
-        .I3(det_hactive_start_int[11]),
+       (.I0(det_hactive_start_int[11]),
+        .I1(det_v0bp_start_hori_int[11]),
+        .I2(det_hactive_start_int[10]),
+        .I3(det_v0bp_start_hori_int[10]),
         .O(i__carry__0_i_1__2_n_0));
   LUT2 #(
     .INIT(4'h6)) 
@@ -19807,36 +19606,36 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(det_hactive_start_int[7]),
         .O(i__carry__0_i_1__6_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h50D4)) 
     i__carry__0_i_2
-       (.I0(L[4]),
-        .I1(det_htotal_int[8]),
-        .I2(det_htotal_int[9]),
-        .I3(L[3]),
+       (.I0(det_v0total_int[9]),
+        .I1(\DET_VSYNC.vsync_count_reg__0 [7]),
+        .I2(\DET_VSYNC.vsync_count_reg__0 [8]),
+        .I3(det_v0total_int[8]),
         .O(i__carry__0_i_2_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h20F2)) 
     i__carry__0_i_2__0
        (.I0(det_htotal_int[8]),
         .I1(L[4]),
-        .I2(L[3]),
-        .I3(det_htotal_int[9]),
+        .I2(det_htotal_int[9]),
+        .I3(L[3]),
         .O(i__carry__0_i_2__0_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h20F2)) 
     i__carry__0_i_2__1
-       (.I0(\DET_VSYNC.vsync_count_reg__0 [7]),
-        .I1(det_v0total_int[8]),
-        .I2(det_v0total_int[9]),
-        .I3(\DET_VSYNC.vsync_count_reg__0 [8]),
+       (.I0(L[4]),
+        .I1(det_htotal_int[8]),
+        .I2(L[3]),
+        .I3(det_htotal_int[9]),
         .O(i__carry__0_i_2__1_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
     i__carry__0_i_2__2
-       (.I0(det_hactive_start_int[8]),
-        .I1(det_v0bp_start_hori_int[8]),
-        .I2(det_v0bp_start_hori_int[9]),
-        .I3(det_hactive_start_int[9]),
+       (.I0(det_hactive_start_int[9]),
+        .I1(det_v0bp_start_hori_int[9]),
+        .I2(det_hactive_start_int[8]),
+        .I3(det_v0bp_start_hori_int[8]),
         .O(i__carry__0_i_2__2_n_0));
   LUT2 #(
     .INIT(4'h6)) 
@@ -19930,10 +19729,10 @@ module hdmi_in_v_tc_1_0_tc_detector
   LUT4 #(
     .INIT(16'h9009)) 
     i__carry__0_i_4__0
-       (.I0(det_v0total_int[9]),
-        .I1(\DET_VSYNC.vsync_count_reg__0 [8]),
-        .I2(det_v0total_int[8]),
-        .I3(\DET_VSYNC.vsync_count_reg__0 [7]),
+       (.I0(\DET_VSYNC.vsync_count_reg__0 [7]),
+        .I1(det_v0total_int[8]),
+        .I2(det_v0total_int[9]),
+        .I3(\DET_VSYNC.vsync_count_reg__0 [8]),
         .O(i__carry__0_i_4__0_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
@@ -19995,33 +19794,33 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I2(det_htotal_int[9]),
         .I3(L[3]),
         .O(i__carry__0_i_5__0_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    i__carry__1_i_1
-       (.I0(Q[11]),
-        .I1(det_hactive_start_int[11]),
-        .O(i__carry__1_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_1__0
-       (.I0(\time_status_regs[6] [11]),
-        .I1(det_hbp_start_int[11]),
-        .O(i__carry__1_i_1__0_n_0));
   LUT4 #(
     .INIT(16'h2ED1)) 
-    i__carry__1_i_1__1
+    i__carry__1_i_1
        (.I0(det_hactive_start_int[11]),
         .I1(ltOp),
         .I2(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][11] [11]),
         .I3(det_v0sync_start_hori_int[11]),
-        .O(i__carry__1_i_1__1_n_0));
+        .O(i__carry__1_i_1_n_0));
   LUT4 #(
     .INIT(16'h2ED1)) 
-    i__carry__1_i_1__2
+    i__carry__1_i_1__0
        (.I0(det_hactive_start_int[11]),
         .I1(\ltOp_inferred__0/i__carry__0_n_2 ),
         .I2(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][11] [11]),
         .I3(det_v0bp_start_hori_int[11]),
+        .O(i__carry__1_i_1__0_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    i__carry__1_i_1__1
+       (.I0(Q[11]),
+        .I1(det_hactive_start_int[11]),
+        .O(i__carry__1_i_1__1_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    i__carry__1_i_1__2
+       (.I0(\time_status_regs[6] [11]),
+        .I1(det_hbp_start_int[11]),
         .O(i__carry__1_i_1__2_n_0));
   LUT2 #(
     .INIT(4'h6)) 
@@ -20108,36 +19907,36 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(det_hactive_start_int[8]),
         .O(i__carry__1_i_4__2_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h20F2)) 
     i__carry_i_1
-       (.I0(L[6]),
-        .I1(det_htotal_int[6]),
+       (.I0(det_htotal_int[6]),
+        .I1(L[6]),
         .I2(det_htotal_int[7]),
         .I3(L[5]),
         .O(i__carry_i_1_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h20F2)) 
     i__carry_i_1__0
-       (.I0(det_htotal_int[6]),
-        .I1(L[6]),
+       (.I0(L[6]),
+        .I1(det_htotal_int[6]),
         .I2(L[5]),
         .I3(det_htotal_int[7]),
         .O(i__carry_i_1__0_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
     i__carry_i_1__1
-       (.I0(\DET_VSYNC.vsync_count_reg__0 [5]),
-        .I1(det_v0total_int[6]),
-        .I2(det_v0total_int[7]),
-        .I3(\DET_VSYNC.vsync_count_reg__0 [6]),
+       (.I0(\DET_VSYNC.vsync_count_reg__0 [6]),
+        .I1(det_v0total_int[7]),
+        .I2(\DET_VSYNC.vsync_count_reg__0 [5]),
+        .I3(det_v0total_int[6]),
         .O(i__carry_i_1__1_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     i__carry_i_1__10
-       (.I0(active_video_count_last[10]),
-        .I1(\DET_HACTIVE.active_video_count_reg [10]),
-        .I2(active_video_count_last[9]),
-        .I3(\DET_HACTIVE.active_video_count_reg [9]),
+       (.I0(active_video_count_last[9]),
+        .I1(\DET_HACTIVE.active_video_count_reg [9]),
+        .I2(active_video_count_last[10]),
+        .I3(\DET_HACTIVE.active_video_count_reg [10]),
         .I4(\DET_HACTIVE.active_video_count_reg [11]),
         .I5(active_video_count_last[11]),
         .O(i__carry_i_1__10_n_0));
@@ -20154,12 +19953,12 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(det_hactive_start_int[3]),
         .O(i__carry_i_1__12_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
     i__carry_i_1__2
-       (.I0(det_hactive_start_int[6]),
-        .I1(det_v0bp_start_hori_int[6]),
-        .I2(det_v0bp_start_hori_int[7]),
-        .I3(det_hactive_start_int[7]),
+       (.I0(det_hactive_start_int[7]),
+        .I1(det_v0bp_start_hori_int[7]),
+        .I2(det_hactive_start_int[6]),
+        .I3(det_v0bp_start_hori_int[6]),
         .O(i__carry_i_1__2_n_0));
   LUT1 #(
     .INIT(2'h1)) 
@@ -20174,10 +19973,10 @@ module hdmi_in_v_tc_1_0_tc_detector
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     i__carry_i_1__5
-       (.I0(det_hsync_start_last[10]),
-        .I1(det_hsync_start_int[10]),
-        .I2(det_hsync_start_last[9]),
-        .I3(det_hsync_start_int[9]),
+       (.I0(det_hsync_start_last[9]),
+        .I1(det_hsync_start_int[9]),
+        .I2(det_hsync_start_last[10]),
+        .I3(det_hsync_start_int[10]),
         .I4(det_hsync_start_int[11]),
         .I5(det_hsync_start_last[11]),
         .O(i__carry_i_1__5_n_0));
@@ -20192,12 +19991,12 @@ module hdmi_in_v_tc_1_0_tc_detector
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     i__carry_i_1__7
-       (.I0(det_v0bp_start_hori_last[10]),
-        .I1(det_v0bp_start_hori_int[10]),
-        .I2(det_v0bp_start_hori_last[9]),
-        .I3(det_v0bp_start_hori_int[9]),
-        .I4(det_v0bp_start_hori_int[11]),
-        .I5(det_v0bp_start_hori_last[11]),
+       (.I0(det_v0bp_start_hori_last[9]),
+        .I1(det_v0bp_start_hori_int[9]),
+        .I2(det_v0bp_start_hori_last[11]),
+        .I3(det_v0bp_start_hori_int[11]),
+        .I4(det_v0bp_start_hori_int[10]),
+        .I5(det_v0bp_start_hori_last[10]),
         .O(i__carry_i_1__7_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
@@ -20210,36 +20009,36 @@ module hdmi_in_v_tc_1_0_tc_detector
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     i__carry_i_1__9
-       (.I0(det_v0sync_start_hori_last[10]),
-        .I1(det_v0sync_start_hori_int[10]),
-        .I2(det_v0sync_start_hori_last[9]),
-        .I3(det_v0sync_start_hori_int[9]),
-        .I4(det_v0sync_start_hori_int[11]),
-        .I5(det_v0sync_start_hori_last[11]),
+       (.I0(det_v0sync_start_hori_last[9]),
+        .I1(det_v0sync_start_hori_int[9]),
+        .I2(det_v0sync_start_hori_last[11]),
+        .I3(det_v0sync_start_hori_int[11]),
+        .I4(det_v0sync_start_hori_int[10]),
+        .I5(det_v0sync_start_hori_last[10]),
         .O(i__carry_i_1__9_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h50D4)) 
     i__carry_i_2
-       (.I0(L[8]),
-        .I1(det_htotal_int[4]),
-        .I2(det_htotal_int[5]),
-        .I3(L[7]),
+       (.I0(det_v0total_int[5]),
+        .I1(\DET_VSYNC.vsync_count_reg__0 [3]),
+        .I2(\DET_VSYNC.vsync_count_reg__0 [4]),
+        .I3(det_v0total_int[4]),
         .O(i__carry_i_2_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h20F2)) 
     i__carry_i_2__0
        (.I0(det_htotal_int[4]),
         .I1(L[8]),
-        .I2(L[7]),
-        .I3(det_htotal_int[5]),
+        .I2(det_htotal_int[5]),
+        .I3(L[7]),
         .O(i__carry_i_2__0_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h20F2)) 
     i__carry_i_2__1
-       (.I0(\DET_VSYNC.vsync_count_reg__0 [3]),
-        .I1(det_v0total_int[4]),
-        .I2(det_v0total_int[5]),
-        .I3(\DET_VSYNC.vsync_count_reg__0 [4]),
+       (.I0(L[8]),
+        .I1(det_htotal_int[4]),
+        .I2(L[7]),
+        .I3(det_htotal_int[5]),
         .O(i__carry_i_2__1_n_0));
   LUT4 #(
     .INIT(16'h2ED1)) 
@@ -20264,72 +20063,72 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(det_hactive_start_int[2]),
         .O(i__carry_i_2__12_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
     i__carry_i_2__2
-       (.I0(det_hactive_start_int[4]),
-        .I1(det_v0bp_start_hori_int[4]),
-        .I2(det_v0bp_start_hori_int[5]),
-        .I3(det_hactive_start_int[5]),
+       (.I0(det_hactive_start_int[5]),
+        .I1(det_v0bp_start_hori_int[5]),
+        .I2(det_hactive_start_int[4]),
+        .I3(det_v0bp_start_hori_int[4]),
         .O(i__carry_i_2__2_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     i__carry_i_2__3
-       (.I0(det_hsync_start_last[7]),
-        .I1(det_hsync_start_int[7]),
-        .I2(det_hsync_start_last[6]),
-        .I3(det_hsync_start_int[6]),
+       (.I0(det_hsync_start_last[6]),
+        .I1(det_hsync_start_int[6]),
+        .I2(det_hsync_start_last[7]),
+        .I3(det_hsync_start_int[7]),
         .I4(det_hsync_start_int[8]),
         .I5(det_hsync_start_last[8]),
         .O(i__carry_i_2__3_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     i__carry_i_2__4
-       (.I0(det_v0bp_start_last[7]),
-        .I1(det_v0bp_start_int[7]),
-        .I2(det_v0bp_start_last[6]),
-        .I3(det_v0bp_start_int[6]),
+       (.I0(det_v0bp_start_last[6]),
+        .I1(det_v0bp_start_int[6]),
+        .I2(det_v0bp_start_last[7]),
+        .I3(det_v0bp_start_int[7]),
         .I4(det_v0bp_start_int[8]),
         .I5(det_v0bp_start_last[8]),
         .O(i__carry_i_2__4_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     i__carry_i_2__5
-       (.I0(det_v0bp_start_hori_last[7]),
-        .I1(det_v0bp_start_hori_int[7]),
-        .I2(det_v0bp_start_hori_last[6]),
-        .I3(det_v0bp_start_hori_int[6]),
+       (.I0(det_v0bp_start_hori_last[6]),
+        .I1(det_v0bp_start_hori_int[6]),
+        .I2(det_v0bp_start_hori_last[7]),
+        .I3(det_v0bp_start_hori_int[7]),
         .I4(det_v0bp_start_hori_int[8]),
         .I5(det_v0bp_start_hori_last[8]),
         .O(i__carry_i_2__5_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     i__carry_i_2__6
-       (.I0(det_v0sync_start_last[7]),
-        .I1(det_v0sync_start_int[7]),
-        .I2(det_v0sync_start_last[6]),
-        .I3(det_v0sync_start_int[6]),
+       (.I0(det_v0sync_start_last[6]),
+        .I1(det_v0sync_start_int[6]),
+        .I2(det_v0sync_start_last[7]),
+        .I3(det_v0sync_start_int[7]),
         .I4(det_v0sync_start_int[8]),
         .I5(det_v0sync_start_last[8]),
         .O(i__carry_i_2__6_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     i__carry_i_2__7
-       (.I0(det_v0sync_start_hori_last[7]),
-        .I1(det_v0sync_start_hori_int[7]),
-        .I2(det_v0sync_start_hori_last[6]),
-        .I3(det_v0sync_start_hori_int[6]),
+       (.I0(det_v0sync_start_hori_last[6]),
+        .I1(det_v0sync_start_hori_int[6]),
+        .I2(det_v0sync_start_hori_last[7]),
+        .I3(det_v0sync_start_hori_int[7]),
         .I4(det_v0sync_start_hori_int[8]),
         .I5(det_v0sync_start_hori_last[8]),
         .O(i__carry_i_2__7_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     i__carry_i_2__8
-       (.I0(active_video_count_last[7]),
-        .I1(\DET_HACTIVE.active_video_count_reg [7]),
-        .I2(active_video_count_last[6]),
-        .I3(\DET_HACTIVE.active_video_count_reg [6]),
-        .I4(\DET_HACTIVE.active_video_count_reg [8]),
-        .I5(active_video_count_last[8]),
+       (.I0(active_video_count_last[6]),
+        .I1(\DET_HACTIVE.active_video_count_reg [6]),
+        .I2(active_video_count_last[8]),
+        .I3(\DET_HACTIVE.active_video_count_reg [8]),
+        .I4(\DET_HACTIVE.active_video_count_reg [7]),
+        .I5(active_video_count_last[7]),
         .O(i__carry_i_2__8_n_0));
   LUT2 #(
     .INIT(4'h6)) 
@@ -20338,28 +20137,28 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(det_hbp_start_int[2]),
         .O(i__carry_i_2__9_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h50D4)) 
     i__carry_i_3
-       (.I0(L[10]),
-        .I1(det_htotal_int[2]),
-        .I2(det_htotal_int[3]),
-        .I3(L[9]),
+       (.I0(det_v0total_int[3]),
+        .I1(\DET_VSYNC.vsync_count_reg__0 [1]),
+        .I2(\DET_VSYNC.vsync_count_reg__0 [2]),
+        .I3(det_v0total_int[2]),
         .O(i__carry_i_3_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h20F2)) 
     i__carry_i_3__0
        (.I0(det_htotal_int[2]),
         .I1(L[10]),
-        .I2(L[9]),
-        .I3(det_htotal_int[3]),
+        .I2(det_htotal_int[3]),
+        .I3(L[9]),
         .O(i__carry_i_3__0_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h20F2)) 
     i__carry_i_3__1
-       (.I0(\DET_VSYNC.vsync_count_reg__0 [1]),
-        .I1(det_v0total_int[2]),
-        .I2(det_v0total_int[3]),
-        .I3(\DET_VSYNC.vsync_count_reg__0 [2]),
+       (.I0(L[10]),
+        .I1(det_htotal_int[2]),
+        .I2(L[9]),
+        .I3(det_htotal_int[3]),
         .O(i__carry_i_3__1_n_0));
   LUT4 #(
     .INIT(16'h2ED1)) 
@@ -20384,70 +20183,70 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(det_hactive_start_int[1]),
         .O(i__carry_i_3__12_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
     i__carry_i_3__2
-       (.I0(det_hactive_start_int[2]),
-        .I1(det_v0bp_start_hori_int[2]),
-        .I2(det_v0bp_start_hori_int[3]),
-        .I3(det_hactive_start_int[3]),
+       (.I0(det_hactive_start_int[3]),
+        .I1(det_v0bp_start_hori_int[3]),
+        .I2(det_hactive_start_int[2]),
+        .I3(det_v0bp_start_hori_int[2]),
         .O(i__carry_i_3__2_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     i__carry_i_3__3
-       (.I0(det_hsync_start_last[4]),
-        .I1(det_hsync_start_int[4]),
-        .I2(det_hsync_start_last[3]),
-        .I3(det_hsync_start_int[3]),
+       (.I0(det_hsync_start_last[3]),
+        .I1(det_hsync_start_int[3]),
+        .I2(det_hsync_start_last[4]),
+        .I3(det_hsync_start_int[4]),
         .I4(det_hsync_start_int[5]),
         .I5(det_hsync_start_last[5]),
         .O(i__carry_i_3__3_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     i__carry_i_3__4
-       (.I0(det_v0bp_start_last[4]),
-        .I1(det_v0bp_start_int[4]),
-        .I2(det_v0bp_start_last[3]),
-        .I3(det_v0bp_start_int[3]),
+       (.I0(det_v0bp_start_last[3]),
+        .I1(det_v0bp_start_int[3]),
+        .I2(det_v0bp_start_last[4]),
+        .I3(det_v0bp_start_int[4]),
         .I4(det_v0bp_start_int[5]),
         .I5(det_v0bp_start_last[5]),
         .O(i__carry_i_3__4_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     i__carry_i_3__5
-       (.I0(det_v0bp_start_hori_last[4]),
-        .I1(det_v0bp_start_hori_int[4]),
-        .I2(det_v0bp_start_hori_last[3]),
-        .I3(det_v0bp_start_hori_int[3]),
-        .I4(det_v0bp_start_hori_int[5]),
-        .I5(det_v0bp_start_hori_last[5]),
+       (.I0(det_v0bp_start_hori_last[3]),
+        .I1(det_v0bp_start_hori_int[3]),
+        .I2(det_v0bp_start_hori_last[5]),
+        .I3(det_v0bp_start_hori_int[5]),
+        .I4(det_v0bp_start_hori_int[4]),
+        .I5(det_v0bp_start_hori_last[4]),
         .O(i__carry_i_3__5_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     i__carry_i_3__6
-       (.I0(det_v0sync_start_last[4]),
-        .I1(det_v0sync_start_int[4]),
-        .I2(det_v0sync_start_last[3]),
-        .I3(det_v0sync_start_int[3]),
+       (.I0(det_v0sync_start_last[3]),
+        .I1(det_v0sync_start_int[3]),
+        .I2(det_v0sync_start_last[4]),
+        .I3(det_v0sync_start_int[4]),
         .I4(det_v0sync_start_int[5]),
         .I5(det_v0sync_start_last[5]),
         .O(i__carry_i_3__6_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     i__carry_i_3__7
-       (.I0(det_v0sync_start_hori_last[4]),
-        .I1(det_v0sync_start_hori_int[4]),
-        .I2(det_v0sync_start_hori_last[3]),
-        .I3(det_v0sync_start_hori_int[3]),
-        .I4(det_v0sync_start_hori_int[5]),
-        .I5(det_v0sync_start_hori_last[5]),
+       (.I0(det_v0sync_start_hori_last[3]),
+        .I1(det_v0sync_start_hori_int[3]),
+        .I2(det_v0sync_start_hori_last[5]),
+        .I3(det_v0sync_start_hori_int[5]),
+        .I4(det_v0sync_start_hori_int[4]),
+        .I5(det_v0sync_start_hori_last[4]),
         .O(i__carry_i_3__7_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     i__carry_i_3__8
-       (.I0(active_video_count_last[4]),
-        .I1(\DET_HACTIVE.active_video_count_reg [4]),
-        .I2(active_video_count_last[3]),
-        .I3(\DET_HACTIVE.active_video_count_reg [3]),
+       (.I0(active_video_count_last[3]),
+        .I1(\DET_HACTIVE.active_video_count_reg [3]),
+        .I2(active_video_count_last[4]),
+        .I3(\DET_HACTIVE.active_video_count_reg [4]),
         .I4(\DET_HACTIVE.active_video_count_reg [5]),
         .I5(active_video_count_last[5]),
         .O(i__carry_i_3__8_n_0));
@@ -20457,18 +20256,18 @@ module hdmi_in_v_tc_1_0_tc_detector
        (.I0(\time_status_regs[6] [1]),
         .I1(det_hbp_start_int[1]),
         .O(i__carry_i_3__9_n_0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    i__carry_i_4
-       (.I0(L[11]),
-        .I1(det_htotal_int[1]),
-        .O(i__carry_i_4_n_0));
   LUT3 #(
     .INIT(8'hD4)) 
+    i__carry_i_4
+       (.I0(L[11]),
+        .I1(det_htotal_int[0]),
+        .I2(det_htotal_int[1]),
+        .O(i__carry_i_4_n_0));
+  LUT2 #(
+    .INIT(4'h2)) 
     i__carry_i_4__0
        (.I0(L[11]),
         .I1(det_htotal_int[1]),
-        .I2(det_htotal_int[0]),
         .O(i__carry_i_4__0_n_0));
   LUT2 #(
     .INIT(4'h2)) 
@@ -20499,72 +20298,72 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(det_hactive_start_int[0]),
         .O(i__carry_i_4__12_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
     i__carry_i_4__2
-       (.I0(det_hactive_start_int[0]),
-        .I1(det_v0bp_start_hori_int[0]),
-        .I2(det_v0bp_start_hori_int[1]),
-        .I3(det_hactive_start_int[1]),
+       (.I0(det_hactive_start_int[1]),
+        .I1(det_v0bp_start_hori_int[1]),
+        .I2(det_hactive_start_int[0]),
+        .I3(det_v0bp_start_hori_int[0]),
         .O(i__carry_i_4__2_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     i__carry_i_4__3
-       (.I0(det_hsync_start_last[1]),
-        .I1(det_hsync_start_int[1]),
-        .I2(det_hsync_start_last[0]),
-        .I3(det_hsync_start_int[0]),
+       (.I0(det_hsync_start_last[0]),
+        .I1(det_hsync_start_int[0]),
+        .I2(det_hsync_start_last[1]),
+        .I3(det_hsync_start_int[1]),
         .I4(det_hsync_start_int[2]),
         .I5(det_hsync_start_last[2]),
         .O(i__carry_i_4__3_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     i__carry_i_4__4
-       (.I0(det_v0bp_start_last[1]),
-        .I1(det_v0bp_start_int[1]),
-        .I2(det_v0bp_start_last[0]),
-        .I3(det_v0bp_start_int[0]),
+       (.I0(det_v0bp_start_last[0]),
+        .I1(det_v0bp_start_int[0]),
+        .I2(det_v0bp_start_last[1]),
+        .I3(det_v0bp_start_int[1]),
         .I4(det_v0bp_start_int[2]),
         .I5(det_v0bp_start_last[2]),
         .O(i__carry_i_4__4_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     i__carry_i_4__5
-       (.I0(det_v0bp_start_hori_last[1]),
-        .I1(det_v0bp_start_hori_int[1]),
-        .I2(det_v0bp_start_hori_last[0]),
-        .I3(det_v0bp_start_hori_int[0]),
+       (.I0(det_v0bp_start_hori_last[0]),
+        .I1(det_v0bp_start_hori_int[0]),
+        .I2(det_v0bp_start_hori_last[1]),
+        .I3(det_v0bp_start_hori_int[1]),
         .I4(det_v0bp_start_hori_int[2]),
         .I5(det_v0bp_start_hori_last[2]),
         .O(i__carry_i_4__5_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     i__carry_i_4__6
-       (.I0(det_v0sync_start_last[1]),
-        .I1(det_v0sync_start_int[1]),
-        .I2(det_v0sync_start_last[0]),
-        .I3(det_v0sync_start_int[0]),
+       (.I0(det_v0sync_start_last[0]),
+        .I1(det_v0sync_start_int[0]),
+        .I2(det_v0sync_start_last[1]),
+        .I3(det_v0sync_start_int[1]),
         .I4(det_v0sync_start_int[2]),
         .I5(det_v0sync_start_last[2]),
         .O(i__carry_i_4__6_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     i__carry_i_4__7
-       (.I0(det_v0sync_start_hori_last[1]),
-        .I1(det_v0sync_start_hori_int[1]),
-        .I2(det_v0sync_start_hori_last[0]),
-        .I3(det_v0sync_start_hori_int[0]),
+       (.I0(det_v0sync_start_hori_last[0]),
+        .I1(det_v0sync_start_hori_int[0]),
+        .I2(det_v0sync_start_hori_last[1]),
+        .I3(det_v0sync_start_hori_int[1]),
         .I4(det_v0sync_start_hori_int[2]),
         .I5(det_v0sync_start_hori_last[2]),
         .O(i__carry_i_4__7_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     i__carry_i_4__8
-       (.I0(active_video_count_last[1]),
-        .I1(\DET_HACTIVE.active_video_count_reg [1]),
-        .I2(active_video_count_last[0]),
-        .I3(\DET_HACTIVE.active_video_count_reg [0]),
-        .I4(\DET_HACTIVE.active_video_count_reg [2]),
-        .I5(active_video_count_last[2]),
+       (.I0(active_video_count_last[0]),
+        .I1(\DET_HACTIVE.active_video_count_reg [0]),
+        .I2(active_video_count_last[2]),
+        .I3(\DET_HACTIVE.active_video_count_reg [2]),
+        .I4(\DET_HACTIVE.active_video_count_reg [1]),
+        .I5(active_video_count_last[1]),
         .O(i__carry_i_4__8_n_0));
   LUT2 #(
     .INIT(4'h6)) 
@@ -20583,10 +20382,10 @@ module hdmi_in_v_tc_1_0_tc_detector
   LUT4 #(
     .INIT(16'h9009)) 
     i__carry_i_5__0
-       (.I0(det_v0total_int[7]),
-        .I1(\DET_VSYNC.vsync_count_reg__0 [6]),
-        .I2(det_v0total_int[6]),
-        .I3(\DET_VSYNC.vsync_count_reg__0 [5]),
+       (.I0(\DET_VSYNC.vsync_count_reg__0 [5]),
+        .I1(det_v0total_int[6]),
+        .I2(det_v0total_int[7]),
+        .I3(\DET_VSYNC.vsync_count_reg__0 [6]),
         .O(i__carry_i_5__0_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
@@ -20629,10 +20428,10 @@ module hdmi_in_v_tc_1_0_tc_detector
   LUT4 #(
     .INIT(16'h9009)) 
     i__carry_i_6__0
-       (.I0(det_v0total_int[5]),
-        .I1(\DET_VSYNC.vsync_count_reg__0 [4]),
-        .I2(det_v0total_int[4]),
-        .I3(\DET_VSYNC.vsync_count_reg__0 [3]),
+       (.I0(\DET_VSYNC.vsync_count_reg__0 [3]),
+        .I1(det_v0total_int[4]),
+        .I2(det_v0total_int[5]),
+        .I3(\DET_VSYNC.vsync_count_reg__0 [4]),
         .O(i__carry_i_6__0_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
@@ -20661,10 +20460,10 @@ module hdmi_in_v_tc_1_0_tc_detector
   LUT4 #(
     .INIT(16'h9009)) 
     i__carry_i_7__0
-       (.I0(det_v0total_int[3]),
-        .I1(\DET_VSYNC.vsync_count_reg__0 [2]),
-        .I2(det_v0total_int[2]),
-        .I3(\DET_VSYNC.vsync_count_reg__0 [1]),
+       (.I0(\DET_VSYNC.vsync_count_reg__0 [1]),
+        .I1(det_v0total_int[2]),
+        .I2(det_v0total_int[3]),
+        .I3(\DET_VSYNC.vsync_count_reg__0 [2]),
         .O(i__carry_i_7__0_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
@@ -20683,18 +20482,18 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I3(L[9]),
         .O(i__carry_i_7__2_n_0));
   LUT3 #(
-    .INIT(8'h09)) 
+    .INIT(8'h21)) 
     i__carry_i_8
-       (.I0(det_htotal_int[1]),
-        .I1(L[11]),
-        .I2(det_htotal_int[0]),
+       (.I0(\DET_VSYNC.vsync_count_reg__0 [0]),
+        .I1(det_v0total_int[0]),
+        .I2(det_v0total_int[1]),
         .O(i__carry_i_8_n_0));
   LUT3 #(
-    .INIT(8'h41)) 
+    .INIT(8'h21)) 
     i__carry_i_8__0
-       (.I0(det_v0total_int[0]),
-        .I1(det_v0total_int[1]),
-        .I2(\DET_VSYNC.vsync_count_reg__0 [0]),
+       (.I0(L[11]),
+        .I1(det_htotal_int[0]),
+        .I2(det_htotal_int[1]),
         .O(i__carry_i_8__0_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
@@ -20705,35 +20504,54 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I3(det_hactive_start_int[0]),
         .O(i__carry_i_8__1_n_0));
   LUT3 #(
-    .INIT(8'h09)) 
+    .INIT(8'h21)) 
     i__carry_i_8__2
-       (.I0(det_htotal_int[1]),
-        .I1(L[11]),
-        .I2(det_htotal_int[0]),
+       (.I0(L[11]),
+        .I1(det_htotal_int[0]),
+        .I2(det_htotal_int[1]),
         .O(i__carry_i_8__2_n_0));
   LUT1 #(
     .INIT(2'h1)) 
     \intr_error_int[6]_i_1 
        (.I0(resetn_out),
         .O(reset));
-  LUT6 #(
-    .INIT(64'hFFFF03C057D503C0)) 
-    \intr_status_int[11]_i_2 
-       (.I0(det_vblank_d),
-        .I1(active_video_in),
-        .I2(\time_status_regs[3] [2]),
-        .I3(det_active_video_d),
-        .I4(intc_if),
-        .I5(vblank_in),
-        .O(\intr_status_int_reg[11] ));
-  (* SOFT_HLUTNM = "soft_lutpair292" *) 
+  (* SOFT_HLUTNM = "soft_lutpair294" *) 
   LUT3 #(
-    .INIT(8'h80)) 
-    \intr_status_int[9]_i_2 
+    .INIT(8'h42)) 
+    \intr_status_int[11]_i_2 
+       (.I0(det_active_video_d),
+        .I1(\time_status_regs[3] [2]),
+        .I2(active_video_in),
+        .O(\intr_status_int_reg[11]_0 ));
+  LUT5 #(
+    .INIT(32'h80808880)) 
+    \intr_status_int[11]_i_3 
        (.I0(active_video_lock_int),
-        .I1(hsync_lock_int),
+        .I1(clken),
+        .I2(\intr_status_int_reg[11]_0 ),
+        .I3(det_vblank_d),
+        .I4(vblank_in),
+        .O(\intr_status_int_reg[11] ));
+  (* SOFT_HLUTNM = "soft_lutpair286" *) 
+  LUT5 #(
+    .INIT(32'h80000000)) 
+    \intr_status_int[8]_i_1 
+       (.I0(resetn_out),
+        .I1(p_0_in),
         .I2(vsync_lock_int),
-        .O(intr_status_int17_out));
+        .I3(hsync_lock_int),
+        .I4(active_video_lock_int),
+        .O(D[0]));
+  (* SOFT_HLUTNM = "soft_lutpair286" *) 
+  LUT5 #(
+    .INIT(32'h7F000000)) 
+    \intr_status_int[9]_i_1 
+       (.I0(vsync_lock_int),
+        .I1(hsync_lock_int),
+        .I2(active_video_lock_int),
+        .I3(resetn_out),
+        .I4(p_0_in),
+        .O(D[1]));
   CARRY4 leqOp_carry
        (.CI(1'b0),
         .CO({leqOp_carry_n_0,leqOp_carry_n_1,leqOp_carry_n_2,leqOp_carry_n_3}),
@@ -20749,20 +20567,20 @@ module hdmi_in_v_tc_1_0_tc_detector
         .O(NLW_leqOp_carry__0_O_UNCONNECTED[3:0]),
         .S({1'b0,leqOp_carry__0_i_3_n_0,leqOp_carry__0_i_4_n_0,leqOp_carry__0_i_5_n_0}));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
     leqOp_carry__0_i_1
-       (.I0(det_htotal_int[10]),
-        .I1(\DET_HACTIVE.active_video_count_reg [9]),
-        .I2(\DET_HACTIVE.active_video_count_reg [10]),
-        .I3(det_htotal_int[11]),
+       (.I0(det_htotal_int[11]),
+        .I1(\DET_HACTIVE.active_video_count_reg [10]),
+        .I2(det_htotal_int[10]),
+        .I3(\DET_HACTIVE.active_video_count_reg [9]),
         .O(leqOp_carry__0_i_1_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
     leqOp_carry__0_i_2
-       (.I0(det_htotal_int[8]),
-        .I1(\DET_HACTIVE.active_video_count_reg [7]),
-        .I2(\DET_HACTIVE.active_video_count_reg [8]),
-        .I3(det_htotal_int[9]),
+       (.I0(det_htotal_int[9]),
+        .I1(\DET_HACTIVE.active_video_count_reg [8]),
+        .I2(det_htotal_int[8]),
+        .I3(\DET_HACTIVE.active_video_count_reg [7]),
         .O(leqOp_carry__0_i_2_n_0));
   LUT1 #(
     .INIT(2'h1)) 
@@ -20786,35 +20604,35 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I3(det_htotal_int[8]),
         .O(leqOp_carry__0_i_5_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
     leqOp_carry_i_1
-       (.I0(det_htotal_int[6]),
-        .I1(\DET_HACTIVE.active_video_count_reg [5]),
-        .I2(\DET_HACTIVE.active_video_count_reg [6]),
-        .I3(det_htotal_int[7]),
+       (.I0(det_htotal_int[7]),
+        .I1(\DET_HACTIVE.active_video_count_reg [6]),
+        .I2(det_htotal_int[6]),
+        .I3(\DET_HACTIVE.active_video_count_reg [5]),
         .O(leqOp_carry_i_1_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
     leqOp_carry_i_2
-       (.I0(det_htotal_int[4]),
-        .I1(\DET_HACTIVE.active_video_count_reg [3]),
-        .I2(\DET_HACTIVE.active_video_count_reg [4]),
-        .I3(det_htotal_int[5]),
+       (.I0(det_htotal_int[5]),
+        .I1(\DET_HACTIVE.active_video_count_reg [4]),
+        .I2(det_htotal_int[4]),
+        .I3(\DET_HACTIVE.active_video_count_reg [3]),
         .O(leqOp_carry_i_2_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
     leqOp_carry_i_3
-       (.I0(det_htotal_int[2]),
-        .I1(\DET_HACTIVE.active_video_count_reg [1]),
-        .I2(\DET_HACTIVE.active_video_count_reg [2]),
-        .I3(det_htotal_int[3]),
+       (.I0(det_htotal_int[3]),
+        .I1(\DET_HACTIVE.active_video_count_reg [2]),
+        .I2(det_htotal_int[2]),
+        .I3(\DET_HACTIVE.active_video_count_reg [1]),
         .O(leqOp_carry_i_3_n_0));
   LUT3 #(
     .INIT(8'hD4)) 
     leqOp_carry_i_4
        (.I0(\DET_HACTIVE.active_video_count_reg [0]),
-        .I1(det_htotal_int[1]),
-        .I2(det_htotal_int[0]),
+        .I1(det_htotal_int[0]),
+        .I2(det_htotal_int[1]),
         .O(leqOp_carry_i_4_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
@@ -20841,24 +20659,24 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I3(det_htotal_int[2]),
         .O(leqOp_carry_i_7_n_0));
   LUT3 #(
-    .INIT(8'h09)) 
+    .INIT(8'h21)) 
     leqOp_carry_i_8
-       (.I0(det_htotal_int[1]),
-        .I1(\DET_HACTIVE.active_video_count_reg [0]),
-        .I2(det_htotal_int[0]),
+       (.I0(\DET_HACTIVE.active_video_count_reg [0]),
+        .I1(det_htotal_int[0]),
+        .I2(det_htotal_int[1]),
         .O(leqOp_carry_i_8_n_0));
   CARRY4 \leqOp_inferred__0/i__carry 
        (.CI(1'b0),
         .CO({\leqOp_inferred__0/i__carry_n_0 ,\leqOp_inferred__0/i__carry_n_1 ,\leqOp_inferred__0/i__carry_n_2 ,\leqOp_inferred__0/i__carry_n_3 }),
         .CYINIT(1'b1),
-        .DI({i__carry_i_1__0_n_0,i__carry_i_2__0_n_0,i__carry_i_3__0_n_0,i__carry_i_4__0_n_0}),
+        .DI({i__carry_i_1_n_0,i__carry_i_2__0_n_0,i__carry_i_3__0_n_0,i__carry_i_4_n_0}),
         .O(\NLW_leqOp_inferred__0/i__carry_O_UNCONNECTED [3:0]),
-        .S({i__carry_i_5_n_0,i__carry_i_6_n_0,i__carry_i_7_n_0,i__carry_i_8_n_0}));
+        .S({i__carry_i_5_n_0,i__carry_i_6_n_0,i__carry_i_7_n_0,i__carry_i_8__0_n_0}));
   CARRY4 \leqOp_inferred__0/i__carry__0 
        (.CI(\leqOp_inferred__0/i__carry_n_0 ),
         .CO({\NLW_leqOp_inferred__0/i__carry__0_CO_UNCONNECTED [3],leqOp_1,\leqOp_inferred__0/i__carry__0_n_2 ,\leqOp_inferred__0/i__carry__0_n_3 }),
         .CYINIT(1'b0),
-        .DI({1'b0,1'b0,i__carry__0_i_1__0_n_0,i__carry__0_i_2__0_n_0}),
+        .DI({1'b0,1'b0,i__carry__0_i_1_n_0,i__carry__0_i_2__0_n_0}),
         .O(\NLW_leqOp_inferred__0/i__carry__0_O_UNCONNECTED [3:0]),
         .S({1'b0,i__carry__0_i_3__1_n_0,i__carry__0_i_4_n_0,i__carry__0_i_5_n_0}));
   FDRE line_end_d_reg
@@ -20882,20 +20700,20 @@ module hdmi_in_v_tc_1_0_tc_detector
         .O(NLW_ltOp_carry__0_O_UNCONNECTED[3:0]),
         .S({1'b0,1'b0,ltOp_carry__0_i_3_n_0,ltOp_carry__0_i_4_n_0}));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
     ltOp_carry__0_i_1
-       (.I0(det_hactive_start_int[10]),
-        .I1(det_v0sync_start_hori_int[10]),
-        .I2(det_v0sync_start_hori_int[11]),
-        .I3(det_hactive_start_int[11]),
+       (.I0(det_hactive_start_int[11]),
+        .I1(det_v0sync_start_hori_int[11]),
+        .I2(det_hactive_start_int[10]),
+        .I3(det_v0sync_start_hori_int[10]),
         .O(ltOp_carry__0_i_1_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
     ltOp_carry__0_i_2
-       (.I0(det_hactive_start_int[8]),
-        .I1(det_v0sync_start_hori_int[8]),
-        .I2(det_v0sync_start_hori_int[9]),
-        .I3(det_hactive_start_int[9]),
+       (.I0(det_hactive_start_int[9]),
+        .I1(det_v0sync_start_hori_int[9]),
+        .I2(det_hactive_start_int[8]),
+        .I3(det_v0sync_start_hori_int[8]),
         .O(ltOp_carry__0_i_2_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
@@ -20914,36 +20732,36 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I3(det_hactive_start_int[8]),
         .O(ltOp_carry__0_i_4_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
     ltOp_carry_i_1
-       (.I0(det_hactive_start_int[6]),
-        .I1(det_v0sync_start_hori_int[6]),
-        .I2(det_v0sync_start_hori_int[7]),
-        .I3(det_hactive_start_int[7]),
+       (.I0(det_hactive_start_int[7]),
+        .I1(det_v0sync_start_hori_int[7]),
+        .I2(det_hactive_start_int[6]),
+        .I3(det_v0sync_start_hori_int[6]),
         .O(ltOp_carry_i_1_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
     ltOp_carry_i_2
-       (.I0(det_hactive_start_int[4]),
-        .I1(det_v0sync_start_hori_int[4]),
-        .I2(det_v0sync_start_hori_int[5]),
-        .I3(det_hactive_start_int[5]),
+       (.I0(det_hactive_start_int[5]),
+        .I1(det_v0sync_start_hori_int[5]),
+        .I2(det_hactive_start_int[4]),
+        .I3(det_v0sync_start_hori_int[4]),
         .O(ltOp_carry_i_2_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
     ltOp_carry_i_3
-       (.I0(det_hactive_start_int[2]),
-        .I1(det_v0sync_start_hori_int[2]),
-        .I2(det_v0sync_start_hori_int[3]),
-        .I3(det_hactive_start_int[3]),
+       (.I0(det_hactive_start_int[3]),
+        .I1(det_v0sync_start_hori_int[3]),
+        .I2(det_hactive_start_int[2]),
+        .I3(det_v0sync_start_hori_int[2]),
         .O(ltOp_carry_i_3_n_0));
   LUT4 #(
-    .INIT(16'h2F02)) 
+    .INIT(16'h22B2)) 
     ltOp_carry_i_4
-       (.I0(det_hactive_start_int[0]),
-        .I1(det_v0sync_start_hori_int[0]),
-        .I2(det_v0sync_start_hori_int[1]),
-        .I3(det_hactive_start_int[1]),
+       (.I0(det_hactive_start_int[1]),
+        .I1(det_v0sync_start_hori_int[1]),
+        .I2(det_hactive_start_int[0]),
+        .I3(det_v0sync_start_hori_int[0]),
         .O(ltOp_carry_i_4_n_0));
   LUT4 #(
     .INIT(16'h9009)) 
@@ -21104,7 +20922,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .CYINIT(1'b0),
         .DI({1'b0,Q[10:8]}),
         .O(minusOp0_out[11:8]),
-        .S({i__carry__1_i_1_n_0,i__carry__1_i_2__2_n_0,i__carry__1_i_3__2_n_0,i__carry__1_i_4__2_n_0}));
+        .S({i__carry__1_i_1__1_n_0,i__carry__1_i_2__2_n_0,i__carry__1_i_3__2_n_0,i__carry__1_i_4__2_n_0}));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 neqOp_carry
        (.CI(1'b0),
@@ -21116,40 +20934,40 @@ module hdmi_in_v_tc_1_0_tc_detector
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     neqOp_carry_i_1
-       (.I0(det_hbp_start_last[10]),
-        .I1(det_hbp_start_int[10]),
-        .I2(det_hbp_start_last[9]),
-        .I3(det_hbp_start_int[9]),
-        .I4(det_hbp_start_int[11]),
-        .I5(det_hbp_start_last[11]),
+       (.I0(det_hbp_start_last[9]),
+        .I1(det_hbp_start_int[9]),
+        .I2(det_hbp_start_last[11]),
+        .I3(det_hbp_start_int[11]),
+        .I4(det_hbp_start_int[10]),
+        .I5(det_hbp_start_last[10]),
         .O(neqOp_carry_i_1_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     neqOp_carry_i_2
-       (.I0(det_hbp_start_last[7]),
-        .I1(det_hbp_start_int[7]),
-        .I2(det_hbp_start_last[6]),
-        .I3(det_hbp_start_int[6]),
+       (.I0(det_hbp_start_last[6]),
+        .I1(det_hbp_start_int[6]),
+        .I2(det_hbp_start_last[7]),
+        .I3(det_hbp_start_int[7]),
         .I4(det_hbp_start_int[8]),
         .I5(det_hbp_start_last[8]),
         .O(neqOp_carry_i_2_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     neqOp_carry_i_3
-       (.I0(det_hbp_start_last[4]),
-        .I1(det_hbp_start_int[4]),
-        .I2(det_hbp_start_last[3]),
-        .I3(det_hbp_start_int[3]),
+       (.I0(det_hbp_start_last[3]),
+        .I1(det_hbp_start_int[3]),
+        .I2(det_hbp_start_last[4]),
+        .I3(det_hbp_start_int[4]),
         .I4(det_hbp_start_int[5]),
         .I5(det_hbp_start_last[5]),
         .O(neqOp_carry_i_3_n_0));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     neqOp_carry_i_4
-       (.I0(det_hbp_start_last[1]),
-        .I1(det_hbp_start_int[1]),
-        .I2(det_hbp_start_last[0]),
-        .I3(det_hbp_start_int[0]),
+       (.I0(det_hbp_start_last[0]),
+        .I1(det_hbp_start_int[0]),
+        .I2(det_hbp_start_last[1]),
+        .I3(det_hbp_start_int[1]),
         .I4(det_hbp_start_int[2]),
         .I5(det_hbp_start_last[2]),
         .O(neqOp_carry_i_4_n_0));
@@ -21221,24 +21039,24 @@ module hdmi_in_v_tc_1_0_tc_detector
         .CYINIT(1'b0),
         .DI({1'b0,\time_status_regs[6] [10:8]}),
         .O({\plusOp_inferred__2/i__carry__1_n_4 ,\plusOp_inferred__2/i__carry__1_n_5 ,\plusOp_inferred__2/i__carry__1_n_6 ,\plusOp_inferred__2/i__carry__1_n_7 }),
-        .S({i__carry__1_i_1__0_n_0,i__carry__1_i_2_n_0,i__carry__1_i_3_n_0,i__carry__1_i_4_n_0}));
+        .S({i__carry__1_i_1__2_n_0,i__carry__1_i_2_n_0,i__carry__1_i_3_n_0,i__carry__1_i_4_n_0}));
   LUT6 #(
-    .INIT(64'h2A3A2A2AFFFFFFFF)) 
+    .INIT(64'h8ACA8A8AFFFFFFFF)) 
     top_of_frame_i_1
        (.I0(top_of_frame_reg_n_0),
-        .I1(top_of_frame141_out),
+        .I1(top_of_frame_i_2_n_0),
         .I2(det_ce),
         .I3(\DET_VSYNC.vsync_d2_reg_n_0 ),
         .I4(\DET_VSYNC.vsync_d_reg_n_0 ),
         .I5(resetn_out),
         .O(top_of_frame_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair275" *) 
+  (* SOFT_HLUTNM = "soft_lutpair291" *) 
   LUT2 #(
-    .INIT(4'h2)) 
+    .INIT(4'hB)) 
     top_of_frame_i_2
-       (.I0(active_video_d),
-        .I1(active_video_d2),
-        .O(top_of_frame141_out));
+       (.I0(active_video_d2),
+        .I1(active_video_d),
+        .O(top_of_frame_i_2_n_0));
   FDRE #(
     .INIT(1'b1)) 
     top_of_frame_reg
@@ -21253,60 +21071,61 @@ module hdmi_in_v_tc_1_0_tc_detector
        (.I0(v_count_reg__0[0]),
         .O(plusOp__0[0]));
   LUT6 #(
-    .INIT(64'hFFFFFFFFF8C80000)) 
+    .INIT(64'hFF80FF80FFFFFFF0)) 
     \v_count[10]_i_1 
        (.I0(leqOp_1),
-        .I1(p_0_in16_in),
-        .I2(h_count0__0),
-        .I3(found_eof_reg_n_0),
-        .I4(det_ce),
-        .I5(h_count1),
+        .I1(det_ce),
+        .I2(\v_count[10]_i_3_n_0 ),
+        .I3(h_count1),
+        .I4(found_eof_reg_n_0),
+        .I5(\v_count[10]_i_4_n_0 ),
         .O(\v_count[10]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h7FFFFFFF80000000)) 
+    .INIT(64'hF7FFFFFF08000000)) 
     \v_count[10]_i_2 
-       (.I0(v_count_reg__0[8]),
+       (.I0(v_count_reg__0[9]),
         .I1(v_count_reg__0[6]),
         .I2(\v_count[10]_i_5_n_0 ),
         .I3(v_count_reg__0[7]),
-        .I4(v_count_reg__0[9]),
+        .I4(v_count_reg__0[8]),
         .I5(v_count_reg__0[10]),
         .O(plusOp__0[10]));
-  (* SOFT_HLUTNM = "soft_lutpair284" *) 
+  (* SOFT_HLUTNM = "soft_lutpair293" *) 
   LUT4 #(
-    .INIT(16'h4004)) 
+    .INIT(16'h0090)) 
     \v_count[10]_i_3 
-       (.I0(frame_end_d),
-        .I1(top_of_frame_reg_n_0),
-        .I2(\time_status_regs[3] [2]),
-        .I3(active_video_in),
-        .O(p_0_in16_in));
-  (* SOFT_HLUTNM = "soft_lutpair296" *) 
-  LUT3 #(
-    .INIT(8'h09)) 
+       (.I0(active_video_in),
+        .I1(\time_status_regs[3] [2]),
+        .I2(top_of_frame_reg_n_0),
+        .I3(frame_end_d),
+        .O(\v_count[10]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair292" *) 
+  LUT4 #(
+    .INIT(16'hBEFF)) 
     \v_count[10]_i_4 
-       (.I0(\time_status_regs[3] [1]),
+       (.I0(line_end_d_reg_n_0),
         .I1(hsync_in),
-        .I2(line_end_d_reg_n_0),
-        .O(h_count0__0));
+        .I2(\time_status_regs[3] [1]),
+        .I3(det_ce),
+        .O(\v_count[10]_i_4_n_0 ));
   LUT6 #(
-    .INIT(64'h8000000000000000)) 
+    .INIT(64'h7FFFFFFFFFFFFFFF)) 
     \v_count[10]_i_5 
        (.I0(v_count_reg__0[5]),
-        .I1(v_count_reg__0[3]),
+        .I1(v_count_reg__0[2]),
         .I2(v_count_reg__0[1]),
         .I3(v_count_reg__0[0]),
-        .I4(v_count_reg__0[2]),
+        .I4(v_count_reg__0[3]),
         .I5(v_count_reg__0[4]),
         .O(\v_count[10]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair293" *) 
+  (* SOFT_HLUTNM = "soft_lutpair300" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \v_count[1]_i_1 
        (.I0(v_count_reg__0[0]),
         .I1(v_count_reg__0[1]),
         .O(plusOp__0[1]));
-  (* SOFT_HLUTNM = "soft_lutpair293" *) 
+  (* SOFT_HLUTNM = "soft_lutpair300" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \v_count[2]_i_1 
@@ -21314,74 +21133,74 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(v_count_reg__0[1]),
         .I2(v_count_reg__0[2]),
         .O(plusOp__0[2]));
-  (* SOFT_HLUTNM = "soft_lutpair281" *) 
+  (* SOFT_HLUTNM = "soft_lutpair288" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \v_count[3]_i_1 
-       (.I0(v_count_reg__0[1]),
-        .I1(v_count_reg__0[0]),
-        .I2(v_count_reg__0[2]),
+       (.I0(v_count_reg__0[2]),
+        .I1(v_count_reg__0[1]),
+        .I2(v_count_reg__0[0]),
         .I3(v_count_reg__0[3]),
         .O(plusOp__0[3]));
-  (* SOFT_HLUTNM = "soft_lutpair281" *) 
+  (* SOFT_HLUTNM = "soft_lutpair288" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \v_count[4]_i_1 
-       (.I0(v_count_reg__0[2]),
+       (.I0(v_count_reg__0[3]),
         .I1(v_count_reg__0[0]),
         .I2(v_count_reg__0[1]),
-        .I3(v_count_reg__0[3]),
+        .I3(v_count_reg__0[2]),
         .I4(v_count_reg__0[4]),
         .O(plusOp__0[4]));
   LUT6 #(
     .INIT(64'h7FFFFFFF80000000)) 
     \v_count[5]_i_1 
-       (.I0(v_count_reg__0[3]),
+       (.I0(v_count_reg__0[2]),
         .I1(v_count_reg__0[1]),
         .I2(v_count_reg__0[0]),
-        .I3(v_count_reg__0[2]),
+        .I3(v_count_reg__0[3]),
         .I4(v_count_reg__0[4]),
         .I5(v_count_reg__0[5]),
         .O(plusOp__0[5]));
-  (* SOFT_HLUTNM = "soft_lutpair294" *) 
+  (* SOFT_HLUTNM = "soft_lutpair308" *) 
   LUT2 #(
-    .INIT(4'h6)) 
+    .INIT(4'h9)) 
     \v_count[6]_i_1 
        (.I0(\v_count[10]_i_5_n_0 ),
         .I1(v_count_reg__0[6]),
         .O(plusOp__0[6]));
-  (* SOFT_HLUTNM = "soft_lutpair294" *) 
+  (* SOFT_HLUTNM = "soft_lutpair308" *) 
   LUT3 #(
-    .INIT(8'h78)) 
+    .INIT(8'hB4)) 
     \v_count[7]_i_1 
        (.I0(\v_count[10]_i_5_n_0 ),
         .I1(v_count_reg__0[6]),
         .I2(v_count_reg__0[7]),
         .O(plusOp__0[7]));
-  (* SOFT_HLUTNM = "soft_lutpair276" *) 
+  (* SOFT_HLUTNM = "soft_lutpair287" *) 
   LUT4 #(
-    .INIT(16'h7F80)) 
+    .INIT(16'hDF20)) 
     \v_count[8]_i_1 
        (.I0(v_count_reg__0[6]),
         .I1(\v_count[10]_i_5_n_0 ),
         .I2(v_count_reg__0[7]),
         .I3(v_count_reg__0[8]),
         .O(plusOp__0[8]));
-  (* SOFT_HLUTNM = "soft_lutpair276" *) 
+  (* SOFT_HLUTNM = "soft_lutpair287" *) 
   LUT5 #(
-    .INIT(32'h7FFF8000)) 
+    .INIT(32'hF7FF0800)) 
     \v_count[9]_i_1 
-       (.I0(v_count_reg__0[7]),
-        .I1(\v_count[10]_i_5_n_0 ),
-        .I2(v_count_reg__0[6]),
-        .I3(v_count_reg__0[8]),
+       (.I0(v_count_reg__0[8]),
+        .I1(v_count_reg__0[7]),
+        .I2(\v_count[10]_i_5_n_0 ),
+        .I3(v_count_reg__0[6]),
         .I4(v_count_reg__0[9]),
         .O(plusOp__0[9]));
   FDRE #(
     .INIT(1'b0)) 
     \v_count_last_reg[0] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(v_count_reg__0[0]),
         .Q(v_count_last[0]),
         .R(h_count1));
@@ -21389,7 +21208,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \v_count_last_reg[10] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(v_count_reg__0[10]),
         .Q(v_count_last[10]),
         .R(h_count1));
@@ -21397,7 +21216,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \v_count_last_reg[1] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(v_count_reg__0[1]),
         .Q(v_count_last[1]),
         .R(h_count1));
@@ -21405,7 +21224,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \v_count_last_reg[2] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(v_count_reg__0[2]),
         .Q(v_count_last[2]),
         .R(h_count1));
@@ -21413,7 +21232,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \v_count_last_reg[3] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(v_count_reg__0[3]),
         .Q(v_count_last[3]),
         .R(h_count1));
@@ -21421,7 +21240,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \v_count_last_reg[4] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(v_count_reg__0[4]),
         .Q(v_count_last[4]),
         .R(h_count1));
@@ -21429,7 +21248,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \v_count_last_reg[5] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(v_count_reg__0[5]),
         .Q(v_count_last[5]),
         .R(h_count1));
@@ -21437,7 +21256,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \v_count_last_reg[6] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(v_count_reg__0[6]),
         .Q(v_count_last[6]),
         .R(h_count1));
@@ -21445,7 +21264,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \v_count_last_reg[7] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(v_count_reg__0[7]),
         .Q(v_count_last[7]),
         .R(h_count1));
@@ -21453,7 +21272,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \v_count_last_reg[8] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(v_count_reg__0[8]),
         .Q(v_count_last[8]),
         .R(h_count1));
@@ -21461,7 +21280,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \v_count_last_reg[9] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(v_count_reg__0[9]),
         .Q(v_count_last[9]),
         .R(h_count1));
@@ -21469,7 +21288,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \v_count_reg[0] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(plusOp__0[0]),
         .Q(v_count_reg__0[0]),
         .R(\v_count[10]_i_1_n_0 ));
@@ -21477,7 +21296,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \v_count_reg[10] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(plusOp__0[10]),
         .Q(v_count_reg__0[10]),
         .R(\v_count[10]_i_1_n_0 ));
@@ -21485,7 +21304,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \v_count_reg[1] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(plusOp__0[1]),
         .Q(v_count_reg__0[1]),
         .R(\v_count[10]_i_1_n_0 ));
@@ -21493,7 +21312,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \v_count_reg[2] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(plusOp__0[2]),
         .Q(v_count_reg__0[2]),
         .R(\v_count[10]_i_1_n_0 ));
@@ -21501,7 +21320,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \v_count_reg[3] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(plusOp__0[3]),
         .Q(v_count_reg__0[3]),
         .R(\v_count[10]_i_1_n_0 ));
@@ -21509,7 +21328,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \v_count_reg[4] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(plusOp__0[4]),
         .Q(v_count_reg__0[4]),
         .R(\v_count[10]_i_1_n_0 ));
@@ -21517,7 +21336,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \v_count_reg[5] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(plusOp__0[5]),
         .Q(v_count_reg__0[5]),
         .R(\v_count[10]_i_1_n_0 ));
@@ -21525,7 +21344,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \v_count_reg[6] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(plusOp__0[6]),
         .Q(v_count_reg__0[6]),
         .R(\v_count[10]_i_1_n_0 ));
@@ -21533,7 +21352,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \v_count_reg[7] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(plusOp__0[7]),
         .Q(v_count_reg__0[7]),
         .R(\v_count[10]_i_1_n_0 ));
@@ -21541,7 +21360,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \v_count_reg[8] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(plusOp__0[8]),
         .Q(v_count_reg__0[8]),
         .R(\v_count[10]_i_1_n_0 ));
@@ -21549,7 +21368,7 @@ module hdmi_in_v_tc_1_0_tc_detector
     .INIT(1'b0)) 
     \v_count_reg[9] 
        (.C(clk),
-        .CE(\det_htotal_int[11]_i_1_n_0 ),
+        .CE(found_eof),
         .D(plusOp__0[9]),
         .Q(v_count_reg__0[9]),
         .R(\v_count[10]_i_1_n_0 ));
@@ -21561,45 +21380,48 @@ module hdmi_in_v_tc_1_0_tc_top
     \time_status_regs[6] ,
     \time_status_regs[3] ,
     \time_status_regs_int_reg[0] ,
-    intc_if,
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][10] ,
     \time_status_regs[8] ,
     \time_status_regs[7] ,
     \time_status_regs[9] ,
+    intc_if,
     clk,
     clken,
-    active_video_in,
     vblank_in,
-    hsync_in,
-    det_clken,
-    resetn_out,
+    active_video_in,
     \genr_control_regs[0] ,
     core_d_out,
-    vsync_in,
-    \time_control_regs[19] );
+    hsync_in,
+    resetn_out,
+    det_clken,
+    \time_control_regs[19] ,
+    vsync_in);
   output [11:0]Q;
   output [23:0]\time_status_regs[6] ;
   output [2:0]\time_status_regs[3] ;
   output [22:0]\time_status_regs_int_reg[0] ;
-  output [8:0]intc_if;
   output [10:0]\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][10] ;
   output [21:0]\time_status_regs[8] ;
   output [23:0]\time_status_regs[7] ;
   output [23:0]\time_status_regs[9] ;
+  output [8:0]intc_if;
   input clk;
   input clken;
-  input active_video_in;
   input vblank_in;
-  input hsync_in;
-  input det_clken;
-  input resetn_out;
+  input active_video_in;
   input [2:0]\genr_control_regs[0] ;
   input core_d_out;
-  input vsync_in;
+  input hsync_in;
+  input resetn_out;
+  input det_clken;
   input [0:0]\time_control_regs[19] ;
+  input vsync_in;
 
-  wire \GEN_DETECTION.U_tc_DET_n_68 ;
+  wire \GEN_DETECTION.U_tc_DET_n_56 ;
+  wire \GEN_DETECTION.U_tc_DET_n_57 ;
   wire \GEN_DETECTION.U_tc_DET_n_69 ;
+  wire \GEN_DETECTION.U_tc_DET_n_70 ;
+  wire \GEN_DETECTION.U_tc_DET_n_71 ;
   wire [10:0]\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][10] ;
   wire [11:0]Q;
   wire active_video_in;
@@ -21632,12 +21454,10 @@ module hdmi_in_v_tc_1_0_tc_top
   wire hsync_lock_int;
   wire [8:0]intc_if;
   wire intr_error_int;
-  wire intr_status_int17_out;
   wire \intr_status_int[10]_i_1_n_0 ;
   wire \intr_status_int[11]_i_1_n_0 ;
   wire \intr_status_int[12]_i_1_n_0 ;
-  wire \intr_status_int[8]_i_1_n_0 ;
-  wire \intr_status_int[9]_i_1_n_0 ;
+  wire \intr_status_int[12]_i_2_n_0 ;
   wire lost_lock;
   wire lost_lock_i_1_n_0;
   wire p_0_in;
@@ -21655,14 +21475,15 @@ module hdmi_in_v_tc_1_0_tc_top
   wire vsync_lock_int;
 
   hdmi_in_v_tc_1_0_tc_detector \GEN_DETECTION.U_tc_DET 
-       (.\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][11] (\time_status_regs_int_reg[0] [11:0]),
+       (.D({\GEN_DETECTION.U_tc_DET_n_56 ,\GEN_DETECTION.U_tc_DET_n_57 }),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][11] (\time_status_regs_int_reg[0] [11:0]),
         .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][10] (\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][10] ),
         .Q(Q),
         .active_video_in(active_video_in),
         .active_video_lock_int(active_video_lock_int),
         .all_lock(all_lock),
         .all_lock_d0(all_lock_d0),
-        .all_lock_reg(\GEN_DETECTION.U_tc_DET_n_69 ),
+        .all_lock_reg(\GEN_DETECTION.U_tc_DET_n_71 ),
         .clk(clk),
         .clken(clken),
         .core_d_out(core_d_out),
@@ -21673,10 +21494,10 @@ module hdmi_in_v_tc_1_0_tc_top
         .\genr_control_regs[0] ({\genr_control_regs[0] [2],\genr_control_regs[0] [0]}),
         .hsync_in(hsync_in),
         .hsync_lock_int(hsync_lock_int),
-        .intc_if(intc_if[7]),
-        .intr_status_int17_out(intr_status_int17_out),
-        .\intr_status_int_reg[11] (\GEN_DETECTION.U_tc_DET_n_68 ),
+        .\intr_status_int_reg[11] (\GEN_DETECTION.U_tc_DET_n_69 ),
+        .\intr_status_int_reg[11]_0 (\GEN_DETECTION.U_tc_DET_n_70 ),
         .lost_lock(lost_lock),
+        .p_0_in(p_0_in),
         .reset(reset),
         .resetn_out(resetn_out),
         .\time_status_regs[3] (\time_status_regs[3] ),
@@ -21688,7 +21509,7 @@ module hdmi_in_v_tc_1_0_tc_top
         .vblank_in(vblank_in),
         .vsync_in(vsync_in),
         .vsync_lock_int(vsync_lock_int));
-  (* SOFT_HLUTNM = "soft_lutpair315" *) 
+  (* SOFT_HLUTNM = "soft_lutpair324" *) 
   LUT4 #(
     .INIT(16'hFFE2)) 
     all_lock_d_i_1
@@ -21703,19 +21524,19 @@ module hdmi_in_v_tc_1_0_tc_top
         .D(all_lock_d_i_1_n_0),
         .Q(all_lock_d),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair316" *) 
+  (* SOFT_HLUTNM = "soft_lutpair325" *) 
   LUT4 #(
-    .INIT(16'hF5F7)) 
+    .INIT(16'hF1FF)) 
     all_lock_i_2
-       (.I0(resetn_out),
-        .I1(\genr_control_regs[0] [1]),
+       (.I0(\genr_control_regs[0] [1]),
+        .I1(\genr_control_regs[0] [0]),
         .I2(core_d_out),
-        .I3(\genr_control_regs[0] [0]),
+        .I3(resetn_out),
         .O(all_lock_d0));
   FDRE all_lock_reg
        (.C(clk),
         .CE(1'b1),
-        .D(\GEN_DETECTION.U_tc_DET_n_69 ),
+        .D(\GEN_DETECTION.U_tc_DET_n_71 ),
         .Q(all_lock),
         .R(1'b0));
   FDRE det_active_video_d_reg
@@ -21742,11 +21563,11 @@ module hdmi_in_v_tc_1_0_tc_top
         .D(detect_en),
         .Q(\detect_en_d_reg[1]_srl2___U_TC_TOP_detect_en_d_reg_r_3_n_0 ));
   LUT3 #(
-    .INIT(8'h32)) 
+    .INIT(8'h0E)) 
     \detect_en_d_reg[1]_srl2___U_TC_TOP_detect_en_d_reg_r_3_i_1 
-       (.I0(\genr_control_regs[0] [0]),
-        .I1(core_d_out),
-        .I2(\genr_control_regs[0] [2]),
+       (.I0(\genr_control_regs[0] [2]),
+        .I1(\genr_control_regs[0] [0]),
+        .I2(core_d_out),
         .O(detect_en));
   FDRE \detect_en_d_reg[2]_U_TC_TOP_detect_en_d_reg_r_4 
        (.C(clk),
@@ -21760,7 +21581,7 @@ module hdmi_in_v_tc_1_0_tc_top
         .D(detect_en_d_reg_gate_n_0),
         .Q(p_0_in),
         .R(reset));
-  (* SOFT_HLUTNM = "soft_lutpair317" *) 
+  (* SOFT_HLUTNM = "soft_lutpair327" *) 
   LUT2 #(
     .INIT(4'h8)) 
     detect_en_d_reg_gate
@@ -21796,13 +21617,13 @@ module hdmi_in_v_tc_1_0_tc_top
         .CLK(clk),
         .D(generate_en),
         .Q(\generate_en_d_reg[1]_srl2___U_TC_TOP_detect_en_d_reg_r_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair316" *) 
+  (* SOFT_HLUTNM = "soft_lutpair325" *) 
   LUT3 #(
-    .INIT(8'h32)) 
+    .INIT(8'h0E)) 
     \generate_en_d_reg[1]_srl2___U_TC_TOP_detect_en_d_reg_r_3_i_1 
-       (.I0(\genr_control_regs[0] [0]),
-        .I1(core_d_out),
-        .I2(\genr_control_regs[0] [1]),
+       (.I0(\genr_control_regs[0] [1]),
+        .I1(\genr_control_regs[0] [0]),
+        .I2(core_d_out),
         .O(generate_en));
   FDRE \generate_en_d_reg[2]_U_TC_TOP_detect_en_d_reg_r_4 
        (.C(clk),
@@ -21816,7 +21637,7 @@ module hdmi_in_v_tc_1_0_tc_top
         .D(generate_en_d_reg_gate_n_0),
         .Q(generate_en_d),
         .R(reset));
-  (* SOFT_HLUTNM = "soft_lutpair317" *) 
+  (* SOFT_HLUTNM = "soft_lutpair327" *) 
   LUT2 #(
     .INIT(4'h8)) 
     generate_en_d_reg_gate
@@ -21861,55 +21682,41 @@ module hdmi_in_v_tc_1_0_tc_top
         .D(1'b1),
         .Q(intc_if[3]),
         .R(reset));
-  LUT5 #(
-    .INIT(32'h3000AA00)) 
+  (* SOFT_HLUTNM = "soft_lutpair326" *) 
+  LUT3 #(
+    .INIT(8'h08)) 
     \intr_status_int[10]_i_1 
-       (.I0(intc_if[6]),
-        .I1(vblank_in),
-        .I2(p_0_in),
-        .I3(resetn_out),
-        .I4(clken),
+       (.I0(resetn_out),
+        .I1(p_0_in),
+        .I2(vblank_in),
         .O(\intr_status_int[10]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h8CFF000080000000)) 
+    .INIT(64'h8800CC0C88000000)) 
     \intr_status_int[11]_i_1 
-       (.I0(\GEN_DETECTION.U_tc_DET_n_68 ),
-        .I1(p_0_in),
-        .I2(active_video_lock_int),
-        .I3(clken),
-        .I4(resetn_out),
+       (.I0(\GEN_DETECTION.U_tc_DET_n_70 ),
+        .I1(resetn_out),
+        .I2(clken),
+        .I3(p_0_in),
+        .I4(\GEN_DETECTION.U_tc_DET_n_69 ),
         .I5(intc_if[7]),
         .O(\intr_status_int[11]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h3000AA00)) 
+  LUT2 #(
+    .INIT(4'hB)) 
     \intr_status_int[12]_i_1 
-       (.I0(intc_if[8]),
-        .I1(\time_control_regs[19] ),
-        .I2(generate_en_d),
-        .I3(resetn_out),
-        .I4(clken),
+       (.I0(clken),
+        .I1(resetn_out),
         .O(\intr_status_int[12]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hC000AA00)) 
-    \intr_status_int[8]_i_1 
-       (.I0(intc_if[4]),
-        .I1(intr_status_int17_out),
-        .I2(p_0_in),
-        .I3(resetn_out),
-        .I4(clken),
-        .O(\intr_status_int[8]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h3000AA00)) 
-    \intr_status_int[9]_i_1 
-       (.I0(intc_if[5]),
-        .I1(intr_status_int17_out),
-        .I2(p_0_in),
-        .I3(resetn_out),
-        .I4(clken),
-        .O(\intr_status_int[9]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair326" *) 
+  LUT3 #(
+    .INIT(8'h40)) 
+    \intr_status_int[12]_i_2 
+       (.I0(\time_control_regs[19] ),
+        .I1(resetn_out),
+        .I2(generate_en_d),
+        .O(\intr_status_int[12]_i_2_n_0 ));
   FDRE \intr_status_int_reg[10] 
        (.C(clk),
-        .CE(1'b1),
+        .CE(\intr_status_int[12]_i_1_n_0 ),
         .D(\intr_status_int[10]_i_1_n_0 ),
         .Q(intc_if[6]),
         .R(1'b0));
@@ -21921,23 +21728,23 @@ module hdmi_in_v_tc_1_0_tc_top
         .R(1'b0));
   FDRE \intr_status_int_reg[12] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\intr_status_int[12]_i_1_n_0 ),
+        .CE(\intr_status_int[12]_i_1_n_0 ),
+        .D(\intr_status_int[12]_i_2_n_0 ),
         .Q(intc_if[8]),
         .R(1'b0));
   FDRE \intr_status_int_reg[8] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\intr_status_int[8]_i_1_n_0 ),
+        .CE(\intr_status_int[12]_i_1_n_0 ),
+        .D(\GEN_DETECTION.U_tc_DET_n_57 ),
         .Q(intc_if[4]),
         .R(1'b0));
   FDRE \intr_status_int_reg[9] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\intr_status_int[9]_i_1_n_0 ),
+        .CE(\intr_status_int[12]_i_1_n_0 ),
+        .D(\GEN_DETECTION.U_tc_DET_n_56 ),
         .Q(intc_if[5]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair315" *) 
+  (* SOFT_HLUTNM = "soft_lutpair324" *) 
   LUT5 #(
     .INIT(32'h00002E22)) 
     lost_lock_i_1
@@ -22461,21 +22268,21 @@ module hdmi_in_v_tc_1_0_v_tc
         .vid_aclk_en(clken),
         .vid_aresetn(resetn));
   LUT3 #(
-    .INIT(8'hCD)) 
+    .INIT(8'hAB)) 
     U_VIDEO_CTRL_i_1
-       (.I0(\genr_control_regs[0] [2]),
-        .I1(core_d),
-        .I2(\genr_control_regs[0] [0]),
+       (.I0(core_d),
+        .I1(\genr_control_regs[0] [0]),
+        .I2(\genr_control_regs[0] [2]),
         .O(reg_update));
   LUT6 #(
-    .INIT(64'hCA0A0A0A00000000)) 
+    .INIT(64'hA0C000C000C000C0)) 
     \gen_v0chroma_start[0]_i_1 
-       (.I0(gen_v0chroma_start),
-        .I1(\time_control_regs[18] [8]),
-        .I2(clken),
-        .I3(\time_control_regs[18] [1]),
-        .I4(\time_control_regs[18] [0]),
-        .I5(resetn),
+       (.I0(\time_control_regs[18] [8]),
+        .I1(gen_v0chroma_start),
+        .I2(resetn),
+        .I3(clken),
+        .I4(\time_control_regs[18] [1]),
+        .I5(\time_control_regs[18] [0]),
         .O(\gen_v0chroma_start[0]_i_1_n_0 ));
   FDRE \gen_v0chroma_start_reg[0] 
        (.C(clk),
@@ -22516,8 +22323,30 @@ module hdmi_in_v_tc_1_0_video_clock_cross
     \AXI4_LITE_INTERFACE.genr_control_regs_int_reg[2][18] ,
     \AXI4_LITE_INTERFACE.genr_control_regs_int_reg[2][17] ,
     \AXI4_LITE_INTERFACE.genr_control_regs_int_reg[2][16] ,
-    p_533_out,
     p_535_out,
+    p_533_out,
+    E,
+    ipif_Addr,
+    \AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][0] ,
+    \AXI4_LITE_INTERFACE.time_control_regs_int_reg[26][0] ,
+    \AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][0] ,
+    \AXI4_LITE_INTERFACE.time_control_regs_int_reg[24][0] ,
+    \AXI4_LITE_INTERFACE.time_control_regs_int_reg[20][0] ,
+    \AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][0] ,
+    \AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][0] ,
+    \AXI4_LITE_INTERFACE.time_control_regs_int_reg[22][0] ,
+    \AXI4_LITE_INTERFACE.time_control_regs_int_reg[19][0] ,
+    \AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][0] ,
+    \AXI4_LITE_INTERFACE.time_control_regs_int_reg[18][7] ,
+    \AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][8] ,
+    \AXI4_LITE_INTERFACE.genr_control_regs_int_reg[0][0] ,
+    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[7][0] ,
+    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[6][0] ,
+    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[3][0] ,
+    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[2][0] ,
+    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[1][0] ,
+    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[0][0] ,
+    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[9][0] ,
     \GEN_TREE.GEN_BRANCH[33].GEN_MUX_REG.data_out_reg_reg[33][26] ,
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][31] ,
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][30] ,
@@ -22945,6 +22774,7 @@ module hdmi_in_v_tc_1_0_video_clock_cross
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][24] ,
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][23] ,
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22] ,
+    \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ,
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][21] ,
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][20] ,
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][19] ,
@@ -22967,7 +22797,6 @@ module hdmi_in_v_tc_1_0_video_clock_cross
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][2] ,
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][1] ,
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0] ,
-    \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ,
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][31] ,
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][30] ,
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][29] ,
@@ -23000,40 +22829,6 @@ module hdmi_in_v_tc_1_0_video_clock_cross
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][2] ,
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][1] ,
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][0] ,
-    p_456_out,
-    \AXI4_LITE_INTERFACE.ipif_RdData_reg[31] ,
-    ipif_Addr,
-    E,
-    \AXI4_LITE_INTERFACE.time_control_regs_int_reg[28][0] ,
-    \AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][0] ,
-    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[0][0] ,
-    \AXI4_LITE_INTERFACE.time_control_regs_int_reg[24][0] ,
-    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[2][0] ,
-    \AXI4_LITE_INTERFACE.time_control_regs_int_reg[26][0] ,
-    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[3][0] ,
-    \AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][0] ,
-    \AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][8] ,
-    \AXI4_LITE_INTERFACE.time_control_regs_int_reg[19][0] ,
-    \AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][0] ,
-    \AXI4_LITE_INTERFACE.time_control_regs_int_reg[22][0] ,
-    \AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][0] ,
-    \AXI4_LITE_INTERFACE.time_control_regs_int_reg[20][0] ,
-    \AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][0] ,
-    \AXI4_LITE_INTERFACE.time_control_regs_int_reg[18][7] ,
-    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[16][0] ,
-    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[8][0] ,
-    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[12][0] ,
-    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[4][0] ,
-    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[11][0] ,
-    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[15][0] ,
-    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[7][0] ,
-    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[10][0] ,
-    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[14][0] ,
-    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[6][0] ,
-    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[1][0] ,
-    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[9][0] ,
-    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[13][0] ,
-    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[5][0] ,
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][30] ,
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][29] ,
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][28] ,
@@ -23065,11 +22860,24 @@ module hdmi_in_v_tc_1_0_video_clock_cross
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][2] ,
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][1] ,
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][0] ,
-    \GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][22] ,
-    \AXI4_LITE_INTERFACE.soft_resetn_reg ,
-    D,
+    p_456_out,
+    \AXI4_LITE_INTERFACE.ipif_RdData_reg[31] ,
+    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[16][0] ,
+    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[8][0] ,
+    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[8][0]_0 ,
+    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[11][0] ,
+    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[10][0] ,
+    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[14][0] ,
+    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[4][0] ,
+    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[12][0] ,
+    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[13][0] ,
+    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[5][0] ,
+    \AXI4_LITE_INTERFACE.core_control_regs_int_reg[15][0] ,
     vid_aclk_en,
+    D,
+    \AXI4_LITE_INTERFACE.soft_resetn_reg ,
     \AXI4_LITE_INTERFACE.genr_control_regs_int_reg[2][21]_0 ,
+    write_ack_int,
     \time_status_regs[27] ,
     \time_status_regs[26] ,
     genr_regs,
@@ -23113,7 +22921,9 @@ module hdmi_in_v_tc_1_0_video_clock_cross
     \genr_control_regs[3] ,
     intr_err,
     \genr_status_regs[3] ,
+    \genr_status_regs_int_reg[1] ,
     \genr_control_regs[0] ,
+    \genr_status_regs[0] ,
     reg_update,
     vid_aresetn,
     \GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][31] ,
@@ -23180,9 +22990,6 @@ module hdmi_in_v_tc_1_0_video_clock_cross
     \GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][1]_0 ,
     \GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][0] ,
     \GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][0]_0 ,
-    write_ack_int,
-    \genr_status_regs_int_reg[1] ,
-    \genr_status_regs[0] ,
     \AXI4_LITE_INTERFACE.proc_sync1_reg[44] ,
     vid_aclk);
   output \AXI4_LITE_INTERFACE.genr_control_regs_int_reg[1][31] ;
@@ -23214,8 +23021,30 @@ module hdmi_in_v_tc_1_0_video_clock_cross
   output \AXI4_LITE_INTERFACE.genr_control_regs_int_reg[2][18] ;
   output \AXI4_LITE_INTERFACE.genr_control_regs_int_reg[2][17] ;
   output \AXI4_LITE_INTERFACE.genr_control_regs_int_reg[2][16] ;
-  output p_533_out;
   output p_535_out;
+  output p_533_out;
+  output [0:0]E;
+  output [8:0]ipif_Addr;
+  output [0:0]\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][0] ;
+  output [0:0]\AXI4_LITE_INTERFACE.time_control_regs_int_reg[26][0] ;
+  output [0:0]\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][0] ;
+  output [0:0]\AXI4_LITE_INTERFACE.time_control_regs_int_reg[24][0] ;
+  output [0:0]\AXI4_LITE_INTERFACE.time_control_regs_int_reg[20][0] ;
+  output [0:0]\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][0] ;
+  output [0:0]\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][0] ;
+  output [0:0]\AXI4_LITE_INTERFACE.time_control_regs_int_reg[22][0] ;
+  output [0:0]\AXI4_LITE_INTERFACE.time_control_regs_int_reg[19][0] ;
+  output [0:0]\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][0] ;
+  output [0:0]\AXI4_LITE_INTERFACE.time_control_regs_int_reg[18][7] ;
+  output [0:0]\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][8] ;
+  output [0:0]\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[0][0] ;
+  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[7][0] ;
+  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[6][0] ;
+  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[3][0] ;
+  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[2][0] ;
+  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[1][0] ;
+  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[0][0] ;
+  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[9][0] ;
   output \GEN_TREE.GEN_BRANCH[33].GEN_MUX_REG.data_out_reg_reg[33][26] ;
   output \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][31] ;
   output \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][30] ;
@@ -23643,6 +23472,7 @@ module hdmi_in_v_tc_1_0_video_clock_cross
   output \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][24] ;
   output \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][23] ;
   output \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22] ;
+  output \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ;
   output \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][21] ;
   output \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][20] ;
   output \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][19] ;
@@ -23665,7 +23495,6 @@ module hdmi_in_v_tc_1_0_video_clock_cross
   output \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][2] ;
   output \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][1] ;
   output \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0] ;
-  output \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ;
   output \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][31] ;
   output \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][30] ;
   output \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][29] ;
@@ -23698,40 +23527,6 @@ module hdmi_in_v_tc_1_0_video_clock_cross
   output \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][2] ;
   output \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][1] ;
   output \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][0] ;
-  output p_456_out;
-  output [31:0]\AXI4_LITE_INTERFACE.ipif_RdData_reg[31] ;
-  output [8:0]ipif_Addr;
-  output [0:0]E;
-  output [0:0]\AXI4_LITE_INTERFACE.time_control_regs_int_reg[28][0] ;
-  output [0:0]\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][0] ;
-  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[0][0] ;
-  output [0:0]\AXI4_LITE_INTERFACE.time_control_regs_int_reg[24][0] ;
-  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[2][0] ;
-  output [0:0]\AXI4_LITE_INTERFACE.time_control_regs_int_reg[26][0] ;
-  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[3][0] ;
-  output [0:0]\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][0] ;
-  output [0:0]\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][8] ;
-  output [0:0]\AXI4_LITE_INTERFACE.time_control_regs_int_reg[19][0] ;
-  output [0:0]\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][0] ;
-  output [0:0]\AXI4_LITE_INTERFACE.time_control_regs_int_reg[22][0] ;
-  output [0:0]\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][0] ;
-  output [0:0]\AXI4_LITE_INTERFACE.time_control_regs_int_reg[20][0] ;
-  output [0:0]\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][0] ;
-  output [0:0]\AXI4_LITE_INTERFACE.time_control_regs_int_reg[18][7] ;
-  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[16][0] ;
-  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[8][0] ;
-  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[12][0] ;
-  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[4][0] ;
-  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[11][0] ;
-  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[15][0] ;
-  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[7][0] ;
-  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[10][0] ;
-  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[14][0] ;
-  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[6][0] ;
-  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[1][0] ;
-  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[9][0] ;
-  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[13][0] ;
-  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[5][0] ;
   output \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][30] ;
   output \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][29] ;
   output \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][28] ;
@@ -23763,11 +23558,24 @@ module hdmi_in_v_tc_1_0_video_clock_cross
   output \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][2] ;
   output \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][1] ;
   output \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][0] ;
-  output \GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][22] ;
-  input \AXI4_LITE_INTERFACE.soft_resetn_reg ;
-  input [21:0]D;
+  output p_456_out;
+  output [31:0]\AXI4_LITE_INTERFACE.ipif_RdData_reg[31] ;
+  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[16][0] ;
+  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[8][0] ;
+  output \AXI4_LITE_INTERFACE.core_control_regs_int_reg[8][0]_0 ;
+  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[11][0] ;
+  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[10][0] ;
+  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[14][0] ;
+  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[4][0] ;
+  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[12][0] ;
+  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[13][0] ;
+  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[5][0] ;
+  output [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[15][0] ;
   input vid_aclk_en;
+  input [21:0]D;
+  input \AXI4_LITE_INTERFACE.soft_resetn_reg ;
   input [5:0]\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[2][21]_0 ;
+  input write_ack_int;
   input [5:0]\time_status_regs[27] ;
   input [5:0]\time_status_regs[26] ;
   input [199:0]genr_regs;
@@ -23811,7 +23619,9 @@ module hdmi_in_v_tc_1_0_video_clock_cross
   input [21:0]\genr_control_regs[3] ;
   input [31:0]intr_err;
   input [9:0]\genr_status_regs[3] ;
+  input [30:0]\genr_status_regs_int_reg[1] ;
   input [24:0]\genr_control_regs[0] ;
+  input [6:0]\genr_status_regs[0] ;
   input reg_update;
   input vid_aresetn;
   input \GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][31] ;
@@ -23878,16 +23688,14 @@ module hdmi_in_v_tc_1_0_video_clock_cross
   input \GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][1]_0 ;
   input \GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][0] ;
   input \GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][0]_0 ;
-  input write_ack_int;
-  input [30:0]\genr_status_regs_int_reg[1] ;
-  input [6:0]\genr_status_regs[0] ;
   input [44:0]\AXI4_LITE_INTERFACE.proc_sync1_reg[44] ;
   input vid_aclk;
 
-  wire \AXI4_LITE_INTERFACE.core_control_regs_int[10][26]_i_2_n_0 ;
+  wire \AXI4_LITE_INTERFACE.core_control_regs_int[0][26]_i_2_n_0 ;
+  wire \AXI4_LITE_INTERFACE.core_control_regs_int[11][26]_i_2_n_0 ;
   wire \AXI4_LITE_INTERFACE.core_control_regs_int[16][26]_i_2_n_0 ;
-  wire \AXI4_LITE_INTERFACE.core_control_regs_int[1][26]_i_2_n_0 ;
-  wire \AXI4_LITE_INTERFACE.core_control_regs_int[8][26]_i_2_n_0 ;
+  wire \AXI4_LITE_INTERFACE.core_control_regs_int[5][26]_i_2_n_0 ;
+  wire \AXI4_LITE_INTERFACE.core_control_regs_int[8][26]_i_3_n_0 ;
   wire [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[0][0] ;
   wire [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[10][0] ;
   wire [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[11][0] ;
@@ -23904,11 +23712,13 @@ module hdmi_in_v_tc_1_0_video_clock_cross
   wire [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[6][0] ;
   wire [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[7][0] ;
   wire [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[8][0] ;
+  wire \AXI4_LITE_INTERFACE.core_control_regs_int_reg[8][0]_0 ;
   wire [0:0]\AXI4_LITE_INTERFACE.core_control_regs_int_reg[9][0] ;
+  wire \AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_2_n_0 ;
   wire \AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ;
   wire \AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ;
   wire \AXI4_LITE_INTERFACE.genr_control_regs_int[2][21]_i_2_n_0 ;
-  wire \AXI4_LITE_INTERFACE.genr_control_regs_int[3][31]_i_2_n_0 ;
+  wire [0:0]\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[0][0] ;
   wire \AXI4_LITE_INTERFACE.genr_control_regs_int_reg[1][10] ;
   wire \AXI4_LITE_INTERFACE.genr_control_regs_int_reg[1][11] ;
   wire \AXI4_LITE_INTERFACE.genr_control_regs_int_reg[1][12] ;
@@ -23943,11 +23753,9 @@ module hdmi_in_v_tc_1_0_video_clock_cross
   (* shreg_extract = "no" *) wire [44:0]\AXI4_LITE_INTERFACE.proc_sync1_reg[44] ;
   wire \AXI4_LITE_INTERFACE.soft_resetn_reg ;
   wire \AXI4_LITE_INTERFACE.time_control_regs_int[18][6]_i_2_n_0 ;
-  wire \AXI4_LITE_INTERFACE.time_control_regs_int[19][6]_i_2_n_0 ;
   wire \AXI4_LITE_INTERFACE.time_control_regs_int[24][28]_i_2_n_0 ;
   wire \AXI4_LITE_INTERFACE.time_control_regs_int[24][28]_i_3_n_0 ;
-  wire \AXI4_LITE_INTERFACE.time_control_regs_int[25][28]_i_2_n_0 ;
-  wire \AXI4_LITE_INTERFACE.time_control_regs_int[26][28]_i_2_n_0 ;
+  wire \AXI4_LITE_INTERFACE.time_control_regs_int[28][28]_i_2_n_0 ;
   wire [0:0]\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][0] ;
   wire [25:0]\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][28] ;
   wire [0:0]\AXI4_LITE_INTERFACE.time_control_regs_int_reg[18][7] ;
@@ -23969,7 +23777,6 @@ module hdmi_in_v_tc_1_0_video_clock_cross
   wire [0:0]\AXI4_LITE_INTERFACE.time_control_regs_int_reg[26][0] ;
   wire [0:0]\AXI4_LITE_INTERFACE.time_control_regs_int_reg[26][0]_0 ;
   wire [0:0]\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][0] ;
-  wire [0:0]\AXI4_LITE_INTERFACE.time_control_regs_int_reg[28][0] ;
   wire [21:0]D;
   wire [0:0]E;
   wire \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][0] ;
@@ -24037,7 +23844,6 @@ module hdmi_in_v_tc_1_0_video_clock_cross
   wire \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][9] ;
   wire \GEN_TREE.GEN_BRANCH[33].GEN_MUX_REG.data_out_reg_reg[33][26] ;
   wire \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0] ;
-  wire \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ;
   wire \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][10] ;
   wire \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][11] ;
   wire \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][12] ;
@@ -24052,6 +23858,7 @@ module hdmi_in_v_tc_1_0_video_clock_cross
   wire \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][20] ;
   wire \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][21] ;
   wire \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22] ;
+  wire \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ;
   wire \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][23] ;
   wire \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][24] ;
   wire \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][25] ;
@@ -24133,7 +23940,6 @@ module hdmi_in_v_tc_1_0_video_clock_cross
   wire \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][7] ;
   wire \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][8] ;
   wire \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][9] ;
-  wire \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ;
   wire \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][0] ;
   wire \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][10] ;
   wire \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][11] ;
@@ -24166,6 +23972,7 @@ module hdmi_in_v_tc_1_0_video_clock_cross
   wire \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][7] ;
   wire \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][8] ;
   wire \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][9] ;
+  wire \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ;
   wire \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][0] ;
   wire \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][10] ;
   wire \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][11] ;
@@ -24262,7 +24069,7 @@ module hdmi_in_v_tc_1_0_video_clock_cross
   wire \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][7] ;
   wire \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][8] ;
   wire \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][9] ;
-  wire \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ;
+  wire \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ;
   wire \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][0] ;
   wire \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][10] ;
   wire \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][11] ;
@@ -24359,7 +24166,6 @@ module hdmi_in_v_tc_1_0_video_clock_cross
   wire \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][7] ;
   wire \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][8] ;
   wire \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][9] ;
-  wire \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ;
   wire \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][0] ;
   wire \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][10] ;
   wire \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][11] ;
@@ -24392,6 +24198,7 @@ module hdmi_in_v_tc_1_0_video_clock_cross
   wire \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][7] ;
   wire \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][8] ;
   wire \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][9] ;
+  wire \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ;
   wire \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][0] ;
   wire \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][10] ;
   wire \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][11] ;
@@ -24456,7 +24263,6 @@ module hdmi_in_v_tc_1_0_video_clock_cross
   wire \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][7] ;
   wire \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][8] ;
   wire \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][9] ;
-  wire \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ;
   wire \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][0] ;
   wire \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][10] ;
   wire \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][11] ;
@@ -24489,7 +24295,6 @@ module hdmi_in_v_tc_1_0_video_clock_cross
   wire \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][7] ;
   wire \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][8] ;
   wire \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][9] ;
-  wire \GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][22] ;
   wire \GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][0] ;
   wire \GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][0]_0 ;
   wire \GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][10] ;
@@ -24605,531 +24410,539 @@ module hdmi_in_v_tc_1_0_video_clock_cross
 
   assign out_data[32] = \data_sync[2]_2 [42];
   assign out_data[31:0] = \data_sync[2]_2 [31:0];
-  LUT6 #(
-    .INIT(64'h0000000000008000)) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  LUT4 #(
+    .INIT(16'h0001)) 
     \AXI4_LITE_INTERFACE.core_control_regs_int[0][26]_i_1 
-       (.I0(write_ack_int),
-        .I1(\data_sync[2]_2 [42]),
-        .I2(\AXI4_LITE_INTERFACE.core_control_regs_int[16][26]_i_2_n_0 ),
-        .I3(vid_aclk_en),
-        .I4(ipif_Addr[5]),
-        .I5(ipif_Addr[6]),
+       (.I0(ipif_Addr[3]),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
+        .I2(ipif_Addr[4]),
+        .I3(\AXI4_LITE_INTERFACE.core_control_regs_int[0][26]_i_2_n_0 ),
         .O(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[0][0] ));
-  LUT6 #(
-    .INIT(64'h0000000000200000)) 
+  LUT5 #(
+    .INIT(32'hFBFFFFFF)) 
+    \AXI4_LITE_INTERFACE.core_control_regs_int[0][26]_i_2 
+       (.I0(ipif_Addr[6]),
+        .I1(vid_aclk_en),
+        .I2(ipif_Addr[5]),
+        .I3(\data_sync[2]_2 [42]),
+        .I4(write_ack_int),
+        .O(\AXI4_LITE_INTERFACE.core_control_regs_int[0][26]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  LUT4 #(
+    .INIT(16'h0004)) 
     \AXI4_LITE_INTERFACE.core_control_regs_int[10][26]_i_1 
-       (.I0(vid_aclk_en),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
-        .I2(ipif_Addr[3]),
-        .I3(ipif_Addr[4]),
-        .I4(ipif_Addr[5]),
-        .I5(\AXI4_LITE_INTERFACE.core_control_regs_int[10][26]_i_2_n_0 ),
+       (.I0(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[8][0]_0 ),
+        .I1(ipif_Addr[3]),
+        .I2(ipif_Addr[4]),
+        .I3(\AXI4_LITE_INTERFACE.core_control_regs_int[8][26]_i_3_n_0 ),
         .O(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[10][0] ));
+  LUT6 #(
+    .INIT(64'h0800000000000000)) 
+    \AXI4_LITE_INTERFACE.core_control_regs_int[11][26]_i_1 
+       (.I0(\AXI4_LITE_INTERFACE.core_control_regs_int[11][26]_i_2_n_0 ),
+        .I1(vid_aclk_en),
+        .I2(ipif_Addr[4]),
+        .I3(ipif_Addr[5]),
+        .I4(ipif_Addr[3]),
+        .I5(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[8][0]_0 ),
+        .O(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[11][0] ));
   LUT3 #(
-    .INIT(8'hBF)) 
-    \AXI4_LITE_INTERFACE.core_control_regs_int[10][26]_i_2 
+    .INIT(8'h40)) 
+    \AXI4_LITE_INTERFACE.core_control_regs_int[11][26]_i_2 
        (.I0(ipif_Addr[6]),
         .I1(\data_sync[2]_2 [42]),
         .I2(write_ack_int),
-        .O(\AXI4_LITE_INTERFACE.core_control_regs_int[10][26]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+        .O(\AXI4_LITE_INTERFACE.core_control_regs_int[11][26]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  LUT4 #(
+    .INIT(16'h0004)) 
+    \AXI4_LITE_INTERFACE.core_control_regs_int[12][26]_i_1 
+       (.I0(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[8][0]_0 ),
+        .I1(ipif_Addr[4]),
+        .I2(ipif_Addr[3]),
+        .I3(\AXI4_LITE_INTERFACE.core_control_regs_int[8][26]_i_3_n_0 ),
+        .O(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[12][0] ));
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT4 #(
     .INIT(16'h0008)) 
-    \AXI4_LITE_INTERFACE.core_control_regs_int[11][26]_i_1 
-       (.I0(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
-        .I1(ipif_Addr[3]),
-        .I2(ipif_Addr[4]),
-        .I3(\AXI4_LITE_INTERFACE.core_control_regs_int[8][26]_i_2_n_0 ),
-        .O(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[11][0] ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT4 #(
-    .INIT(16'h0010)) 
-    \AXI4_LITE_INTERFACE.core_control_regs_int[12][26]_i_1 
-       (.I0(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
-        .I1(ipif_Addr[3]),
-        .I2(ipif_Addr[4]),
-        .I3(\AXI4_LITE_INTERFACE.core_control_regs_int[8][26]_i_2_n_0 ),
-        .O(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[12][0] ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
-  LUT4 #(
-    .INIT(16'h0040)) 
     \AXI4_LITE_INTERFACE.core_control_regs_int[13][26]_i_1 
-       (.I0(ipif_Addr[3]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
-        .I2(ipif_Addr[4]),
-        .I3(\AXI4_LITE_INTERFACE.core_control_regs_int[8][26]_i_2_n_0 ),
+       (.I0(\AXI4_LITE_INTERFACE.core_control_regs_int[5][26]_i_2_n_0 ),
+        .I1(ipif_Addr[5]),
+        .I2(ipif_Addr[3]),
+        .I3(ipif_Addr[6]),
         .O(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[13][0] ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT4 #(
     .INIT(16'h0040)) 
     \AXI4_LITE_INTERFACE.core_control_regs_int[14][26]_i_1 
-       (.I0(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+       (.I0(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[8][0]_0 ),
         .I1(ipif_Addr[3]),
         .I2(ipif_Addr[4]),
-        .I3(\AXI4_LITE_INTERFACE.core_control_regs_int[8][26]_i_2_n_0 ),
+        .I3(\AXI4_LITE_INTERFACE.core_control_regs_int[8][26]_i_3_n_0 ),
         .O(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[14][0] ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT4 #(
     .INIT(16'h0080)) 
     \AXI4_LITE_INTERFACE.core_control_regs_int[15][26]_i_1 
-       (.I0(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
-        .I1(ipif_Addr[3]),
-        .I2(ipif_Addr[4]),
-        .I3(\AXI4_LITE_INTERFACE.core_control_regs_int[8][26]_i_2_n_0 ),
+       (.I0(ipif_Addr[4]),
+        .I1(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[8][0]_0 ),
+        .I2(ipif_Addr[3]),
+        .I3(\AXI4_LITE_INTERFACE.core_control_regs_int[8][26]_i_3_n_0 ),
         .O(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[15][0] ));
   LUT6 #(
-    .INIT(64'h0000000080000000)) 
+    .INIT(64'h2000000000000000)) 
     \AXI4_LITE_INTERFACE.core_control_regs_int[16][26]_i_1 
-       (.I0(write_ack_int),
-        .I1(\data_sync[2]_2 [42]),
-        .I2(\AXI4_LITE_INTERFACE.core_control_regs_int[16][26]_i_2_n_0 ),
-        .I3(vid_aclk_en),
-        .I4(ipif_Addr[6]),
-        .I5(ipif_Addr[5]),
+       (.I0(\AXI4_LITE_INTERFACE.core_control_regs_int[16][26]_i_2_n_0 ),
+        .I1(ipif_Addr[5]),
+        .I2(\data_sync[2]_2 [42]),
+        .I3(write_ack_int),
+        .I4(vid_aclk_en),
+        .I5(ipif_Addr[6]),
         .O(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[16][0] ));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT3 #(
     .INIT(8'h01)) 
     \AXI4_LITE_INTERFACE.core_control_regs_int[16][26]_i_2 
        (.I0(ipif_Addr[4]),
-        .I1(ipif_Addr[3]),
-        .I2(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[8][0]_0 ),
+        .I2(ipif_Addr[3]),
         .O(\AXI4_LITE_INTERFACE.core_control_regs_int[16][26]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT4 #(
     .INIT(16'h0004)) 
     \AXI4_LITE_INTERFACE.core_control_regs_int[1][26]_i_1 
-       (.I0(ipif_Addr[3]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
-        .I2(ipif_Addr[4]),
-        .I3(\AXI4_LITE_INTERFACE.core_control_regs_int[1][26]_i_2_n_0 ),
+       (.I0(ipif_Addr[4]),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
+        .I2(ipif_Addr[3]),
+        .I3(\AXI4_LITE_INTERFACE.core_control_regs_int[0][26]_i_2_n_0 ),
         .O(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[1][0] ));
-  LUT5 #(
-    .INIT(32'hFFFFF7FF)) 
-    \AXI4_LITE_INTERFACE.core_control_regs_int[1][26]_i_2 
-       (.I0(write_ack_int),
-        .I1(\data_sync[2]_2 [42]),
-        .I2(ipif_Addr[6]),
-        .I3(vid_aclk_en),
-        .I4(ipif_Addr[5]),
-        .O(\AXI4_LITE_INTERFACE.core_control_regs_int[1][26]_i_2_n_0 ));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \AXI4_LITE_INTERFACE.core_control_regs_int[2][26]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.time_control_regs_int[26][28]_i_2_n_0 ),
-        .I1(\data_sync[2]_2 [42]),
-        .I2(write_ack_int),
-        .O(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[2][0] ));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \AXI4_LITE_INTERFACE.core_control_regs_int[3][26]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[3][31]_i_2_n_0 ),
-        .I1(\data_sync[2]_2 [42]),
-        .I2(write_ack_int),
-        .O(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[3][0] ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT4 #(
-    .INIT(16'h0010)) 
-    \AXI4_LITE_INTERFACE.core_control_regs_int[4][26]_i_1 
-       (.I0(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+    .INIT(16'h0004)) 
+    \AXI4_LITE_INTERFACE.core_control_regs_int[2][26]_i_1 
+       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I1(ipif_Addr[3]),
         .I2(ipif_Addr[4]),
-        .I3(\AXI4_LITE_INTERFACE.core_control_regs_int[1][26]_i_2_n_0 ),
-        .O(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[4][0] ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+        .I3(\AXI4_LITE_INTERFACE.core_control_regs_int[0][26]_i_2_n_0 ),
+        .O(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[2][0] ));
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT4 #(
-    .INIT(16'h0040)) 
-    \AXI4_LITE_INTERFACE.core_control_regs_int[5][26]_i_1 
+    .INIT(16'h0008)) 
+    \AXI4_LITE_INTERFACE.core_control_regs_int[3][26]_i_1 
        (.I0(ipif_Addr[3]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(ipif_Addr[4]),
-        .I3(\AXI4_LITE_INTERFACE.core_control_regs_int[1][26]_i_2_n_0 ),
+        .I3(\AXI4_LITE_INTERFACE.core_control_regs_int[0][26]_i_2_n_0 ),
+        .O(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[3][0] ));
+  LUT4 #(
+    .INIT(16'h8000)) 
+    \AXI4_LITE_INTERFACE.core_control_regs_int[4][26]_i_1 
+       (.I0(\AXI4_LITE_INTERFACE.time_control_regs_int[28][28]_i_2_n_0 ),
+        .I1(vid_aclk_en),
+        .I2(write_ack_int),
+        .I3(\data_sync[2]_2 [42]),
+        .O(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[4][0] ));
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  LUT4 #(
+    .INIT(16'h0002)) 
+    \AXI4_LITE_INTERFACE.core_control_regs_int[5][26]_i_1 
+       (.I0(\AXI4_LITE_INTERFACE.core_control_regs_int[5][26]_i_2_n_0 ),
+        .I1(ipif_Addr[3]),
+        .I2(ipif_Addr[6]),
+        .I3(ipif_Addr[5]),
         .O(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[5][0] ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  LUT5 #(
+    .INIT(32'h80000000)) 
+    \AXI4_LITE_INTERFACE.core_control_regs_int[5][26]_i_2 
+       (.I0(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[8][0]_0 ),
+        .I1(ipif_Addr[4]),
+        .I2(vid_aclk_en),
+        .I3(write_ack_int),
+        .I4(\data_sync[2]_2 [42]),
+        .O(\AXI4_LITE_INTERFACE.core_control_regs_int[5][26]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT4 #(
     .INIT(16'h0040)) 
     \AXI4_LITE_INTERFACE.core_control_regs_int[6][26]_i_1 
-       (.I0(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I1(ipif_Addr[3]),
         .I2(ipif_Addr[4]),
-        .I3(\AXI4_LITE_INTERFACE.core_control_regs_int[1][26]_i_2_n_0 ),
+        .I3(\AXI4_LITE_INTERFACE.core_control_regs_int[0][26]_i_2_n_0 ),
         .O(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[6][0] ));
   (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT4 #(
     .INIT(16'h0080)) 
     \AXI4_LITE_INTERFACE.core_control_regs_int[7][26]_i_1 
-       (.I0(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
-        .I1(ipif_Addr[3]),
-        .I2(ipif_Addr[4]),
-        .I3(\AXI4_LITE_INTERFACE.core_control_regs_int[1][26]_i_2_n_0 ),
+       (.I0(ipif_Addr[4]),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
+        .I2(ipif_Addr[3]),
+        .I3(\AXI4_LITE_INTERFACE.core_control_regs_int[0][26]_i_2_n_0 ),
         .O(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[7][0] ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT4 #(
     .INIT(16'h0001)) 
     \AXI4_LITE_INTERFACE.core_control_regs_int[8][26]_i_1 
-       (.I0(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
-        .I1(ipif_Addr[3]),
-        .I2(ipif_Addr[4]),
-        .I3(\AXI4_LITE_INTERFACE.core_control_regs_int[8][26]_i_2_n_0 ),
-        .O(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[8][0] ));
-  LUT5 #(
-    .INIT(32'hF7FFFFFF)) 
-    \AXI4_LITE_INTERFACE.core_control_regs_int[8][26]_i_2 
-       (.I0(write_ack_int),
-        .I1(\data_sync[2]_2 [42]),
-        .I2(ipif_Addr[6]),
-        .I3(ipif_Addr[5]),
-        .I4(vid_aclk_en),
-        .O(\AXI4_LITE_INTERFACE.core_control_regs_int[8][26]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT4 #(
-    .INIT(16'h0004)) 
-    \AXI4_LITE_INTERFACE.core_control_regs_int[9][26]_i_1 
        (.I0(ipif_Addr[3]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[8][0]_0 ),
         .I2(ipif_Addr[4]),
-        .I3(\AXI4_LITE_INTERFACE.core_control_regs_int[8][26]_i_2_n_0 ),
-        .O(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[9][0] ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
-  LUT4 #(
-    .INIT(16'h0100)) 
-    \AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_1 
-       (.I0(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
-        .I1(ipif_Addr[3]),
-        .I2(ipif_Addr[4]),
-        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
-        .O(E));
+        .I3(\AXI4_LITE_INTERFACE.core_control_regs_int[8][26]_i_3_n_0 ),
+        .O(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[8][0] ));
   (* IS_FANOUT_CONSTRAINED = "1" *) 
   LUT1 #(
     .INIT(2'h2)) 
-    \AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_2 
+    \AXI4_LITE_INTERFACE.core_control_regs_int[8][26]_i_2 
        (.I0(\data_sync[2]_2 [34]),
-        .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ));
+        .O(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[8][0]_0 ));
+  LUT5 #(
+    .INIT(32'hFFFF7FFF)) 
+    \AXI4_LITE_INTERFACE.core_control_regs_int[8][26]_i_3 
+       (.I0(ipif_Addr[5]),
+        .I1(vid_aclk_en),
+        .I2(write_ack_int),
+        .I3(\data_sync[2]_2 [42]),
+        .I4(ipif_Addr[6]),
+        .O(\AXI4_LITE_INTERFACE.core_control_regs_int[8][26]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  LUT4 #(
+    .INIT(16'h0004)) 
+    \AXI4_LITE_INTERFACE.core_control_regs_int[9][26]_i_1 
+       (.I0(ipif_Addr[4]),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
+        .I2(ipif_Addr[3]),
+        .I3(\AXI4_LITE_INTERFACE.core_control_regs_int[8][26]_i_3_n_0 ),
+        .O(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[9][0] ));
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  LUT4 #(
+    .INIT(16'h0002)) 
+    \AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_1 
+       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_2_n_0 ),
+        .I1(ipif_Addr[3]),
+        .I2(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
+        .I3(ipif_Addr[4]),
+        .O(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[0][0] ));
   LUT6 #(
-    .INIT(64'h0000000000000800)) 
+    .INIT(64'h0000000004000000)) 
+    \AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_2 
+       (.I0(ipif_Addr[6]),
+        .I1(vid_aclk_en),
+        .I2(ipif_Addr[5]),
+        .I3(write_ack_int),
+        .I4(\data_sync[2]_2 [41]),
+        .I5(ipif_Addr[7]),
+        .O(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_2_n_0 ));
+  (* IS_FANOUT_CONSTRAINED = "1" *) 
+  LUT1 #(
+    .INIT(2'h2)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3 
-       (.I0(write_ack_int),
-        .I1(\data_sync[2]_2 [41]),
-        .I2(ipif_Addr[7]),
-        .I3(vid_aclk_en),
-        .I4(ipif_Addr[5]),
-        .I5(ipif_Addr[6]),
+       (.I0(\data_sync[2]_2 [34]),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'hD0008080D0D08080)) 
+    .INIT(64'hB0BBF00000000000)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[1][10]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
-        .I1(\data_sync[2]_2 [10]),
-        .I2(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
-        .I3(\data_sync[2]_2 [41]),
+       (.I0(\data_sync[2]_2 [41]),
+        .I1(vid_aclk_en),
+        .I2(\data_sync[2]_2 [10]),
+        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
         .I4(D[2]),
-        .I5(vid_aclk_en),
+        .I5(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[1][10] ));
   LUT6 #(
-    .INIT(64'hD0008080D0D08080)) 
+    .INIT(64'hB0BBF00000000000)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[1][11]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
-        .I1(\data_sync[2]_2 [11]),
-        .I2(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
-        .I3(\data_sync[2]_2 [41]),
+       (.I0(\data_sync[2]_2 [41]),
+        .I1(vid_aclk_en),
+        .I2(\data_sync[2]_2 [11]),
+        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
         .I4(D[3]),
-        .I5(vid_aclk_en),
+        .I5(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[1][11] ));
   LUT6 #(
-    .INIT(64'hD0008080D0D08080)) 
+    .INIT(64'hB0BBF00000000000)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[1][12]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
-        .I1(\data_sync[2]_2 [12]),
-        .I2(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
-        .I3(\data_sync[2]_2 [41]),
+       (.I0(\data_sync[2]_2 [41]),
+        .I1(vid_aclk_en),
+        .I2(\data_sync[2]_2 [12]),
+        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
         .I4(D[4]),
-        .I5(vid_aclk_en),
+        .I5(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[1][12] ));
   LUT6 #(
-    .INIT(64'hD0008080D0D08080)) 
+    .INIT(64'hB0BBF00000000000)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[1][13]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
-        .I1(\data_sync[2]_2 [13]),
-        .I2(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
-        .I3(\data_sync[2]_2 [41]),
+       (.I0(\data_sync[2]_2 [41]),
+        .I1(vid_aclk_en),
+        .I2(\data_sync[2]_2 [13]),
+        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
         .I4(D[5]),
-        .I5(vid_aclk_en),
+        .I5(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[1][13] ));
   LUT6 #(
-    .INIT(64'hD0008080D0D08080)) 
+    .INIT(64'hB0BBF00000000000)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[1][16]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
-        .I1(\data_sync[2]_2 [16]),
-        .I2(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
-        .I3(\data_sync[2]_2 [41]),
+       (.I0(\data_sync[2]_2 [41]),
+        .I1(vid_aclk_en),
+        .I2(\data_sync[2]_2 [16]),
+        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
         .I4(D[6]),
-        .I5(vid_aclk_en),
+        .I5(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[1][16] ));
   LUT6 #(
-    .INIT(64'hD0008080D0D08080)) 
+    .INIT(64'hB0BBF00000000000)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[1][17]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
-        .I1(\data_sync[2]_2 [17]),
-        .I2(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
-        .I3(\data_sync[2]_2 [41]),
+       (.I0(\data_sync[2]_2 [41]),
+        .I1(vid_aclk_en),
+        .I2(\data_sync[2]_2 [17]),
+        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
         .I4(D[7]),
-        .I5(vid_aclk_en),
+        .I5(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[1][17] ));
   LUT6 #(
-    .INIT(64'hD0008080D0D08080)) 
+    .INIT(64'hB0BBF00000000000)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[1][18]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
-        .I1(\data_sync[2]_2 [18]),
-        .I2(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
-        .I3(\data_sync[2]_2 [41]),
+       (.I0(\data_sync[2]_2 [41]),
+        .I1(vid_aclk_en),
+        .I2(\data_sync[2]_2 [18]),
+        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
         .I4(D[8]),
-        .I5(vid_aclk_en),
+        .I5(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[1][18] ));
   LUT6 #(
-    .INIT(64'hD0008080D0D08080)) 
+    .INIT(64'hB0BBF00000000000)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[1][19]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
-        .I1(\data_sync[2]_2 [19]),
-        .I2(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
-        .I3(\data_sync[2]_2 [41]),
+       (.I0(\data_sync[2]_2 [41]),
+        .I1(vid_aclk_en),
+        .I2(\data_sync[2]_2 [19]),
+        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
         .I4(D[9]),
-        .I5(vid_aclk_en),
+        .I5(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[1][19] ));
   LUT6 #(
-    .INIT(64'hD0008080D0D08080)) 
+    .INIT(64'hB0BBF00000000000)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[1][20]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
-        .I1(\data_sync[2]_2 [20]),
-        .I2(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
-        .I3(\data_sync[2]_2 [41]),
+       (.I0(\data_sync[2]_2 [41]),
+        .I1(vid_aclk_en),
+        .I2(\data_sync[2]_2 [20]),
+        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
         .I4(D[10]),
-        .I5(vid_aclk_en),
+        .I5(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[1][20] ));
   LUT6 #(
-    .INIT(64'hD0008080D0D08080)) 
+    .INIT(64'hB0BBF00000000000)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[1][21]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
-        .I1(\data_sync[2]_2 [21]),
-        .I2(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
-        .I3(\data_sync[2]_2 [41]),
+       (.I0(\data_sync[2]_2 [41]),
+        .I1(vid_aclk_en),
+        .I2(\data_sync[2]_2 [21]),
+        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
         .I4(D[11]),
-        .I5(vid_aclk_en),
+        .I5(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[1][21] ));
   LUT6 #(
-    .INIT(64'hD0008080D0D08080)) 
+    .INIT(64'hB0BBF00000000000)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[1][22]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
-        .I1(\data_sync[2]_2 [22]),
-        .I2(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
-        .I3(\data_sync[2]_2 [41]),
+       (.I0(\data_sync[2]_2 [41]),
+        .I1(vid_aclk_en),
+        .I2(\data_sync[2]_2 [22]),
+        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
         .I4(D[12]),
-        .I5(vid_aclk_en),
+        .I5(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[1][22] ));
   LUT6 #(
-    .INIT(64'hD0008080D0D08080)) 
+    .INIT(64'hB0BBF00000000000)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[1][23]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
-        .I1(\data_sync[2]_2 [23]),
-        .I2(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
-        .I3(\data_sync[2]_2 [41]),
+       (.I0(\data_sync[2]_2 [41]),
+        .I1(vid_aclk_en),
+        .I2(\data_sync[2]_2 [23]),
+        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
         .I4(D[13]),
-        .I5(vid_aclk_en),
+        .I5(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[1][23] ));
   LUT6 #(
-    .INIT(64'hD0008080D0D08080)) 
+    .INIT(64'hB0BBF00000000000)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[1][24]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
-        .I1(\data_sync[2]_2 [24]),
-        .I2(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
-        .I3(\data_sync[2]_2 [41]),
+       (.I0(\data_sync[2]_2 [41]),
+        .I1(vid_aclk_en),
+        .I2(\data_sync[2]_2 [24]),
+        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
         .I4(D[14]),
-        .I5(vid_aclk_en),
+        .I5(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[1][24] ));
   LUT6 #(
-    .INIT(64'hD0008080D0D08080)) 
+    .INIT(64'hB0BBF00000000000)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[1][25]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
-        .I1(\data_sync[2]_2 [25]),
-        .I2(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
-        .I3(\data_sync[2]_2 [41]),
+       (.I0(\data_sync[2]_2 [41]),
+        .I1(vid_aclk_en),
+        .I2(\data_sync[2]_2 [25]),
+        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
         .I4(D[15]),
-        .I5(vid_aclk_en),
+        .I5(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[1][25] ));
   LUT6 #(
-    .INIT(64'hD0008080D0D08080)) 
+    .INIT(64'hB0BBF00000000000)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[1][26]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
-        .I1(\data_sync[2]_2 [26]),
-        .I2(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
-        .I3(\data_sync[2]_2 [41]),
+       (.I0(\data_sync[2]_2 [41]),
+        .I1(vid_aclk_en),
+        .I2(\data_sync[2]_2 [26]),
+        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
         .I4(D[16]),
-        .I5(vid_aclk_en),
+        .I5(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[1][26] ));
   LUT6 #(
-    .INIT(64'hD0008080D0D08080)) 
+    .INIT(64'hB0BBF00000000000)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[1][27]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
-        .I1(\data_sync[2]_2 [27]),
-        .I2(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
-        .I3(\data_sync[2]_2 [41]),
+       (.I0(\data_sync[2]_2 [41]),
+        .I1(vid_aclk_en),
+        .I2(\data_sync[2]_2 [27]),
+        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
         .I4(D[17]),
-        .I5(vid_aclk_en),
+        .I5(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[1][27] ));
   LUT6 #(
-    .INIT(64'hD0008080D0D08080)) 
+    .INIT(64'hB0BBF00000000000)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[1][28]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
-        .I1(\data_sync[2]_2 [28]),
-        .I2(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
-        .I3(\data_sync[2]_2 [41]),
+       (.I0(\data_sync[2]_2 [41]),
+        .I1(vid_aclk_en),
+        .I2(\data_sync[2]_2 [28]),
+        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
         .I4(D[18]),
-        .I5(vid_aclk_en),
+        .I5(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[1][28] ));
   LUT6 #(
-    .INIT(64'hD0008080D0D08080)) 
+    .INIT(64'hB0BBF00000000000)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[1][29]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
-        .I1(\data_sync[2]_2 [29]),
-        .I2(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
-        .I3(\data_sync[2]_2 [41]),
+       (.I0(\data_sync[2]_2 [41]),
+        .I1(vid_aclk_en),
+        .I2(\data_sync[2]_2 [29]),
+        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
         .I4(D[19]),
-        .I5(vid_aclk_en),
+        .I5(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[1][29] ));
   LUT6 #(
-    .INIT(64'hD0008080D0D08080)) 
+    .INIT(64'hB0BBF00000000000)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[1][30]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
-        .I1(\data_sync[2]_2 [30]),
-        .I2(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
-        .I3(\data_sync[2]_2 [41]),
+       (.I0(\data_sync[2]_2 [41]),
+        .I1(vid_aclk_en),
+        .I2(\data_sync[2]_2 [30]),
+        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
         .I4(D[20]),
-        .I5(vid_aclk_en),
+        .I5(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[1][30] ));
   LUT6 #(
-    .INIT(64'hD0008080D0D08080)) 
+    .INIT(64'hB0BBF00000000000)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
-        .I1(\data_sync[2]_2 [31]),
-        .I2(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
-        .I3(\data_sync[2]_2 [41]),
+       (.I0(\data_sync[2]_2 [41]),
+        .I1(vid_aclk_en),
+        .I2(\data_sync[2]_2 [31]),
+        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
         .I4(D[21]),
-        .I5(vid_aclk_en),
+        .I5(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[1][31] ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT4 #(
-    .INIT(16'h0020)) 
+    .INIT(16'h0400)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2 
-       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
-        .I1(ipif_Addr[3]),
-        .I2(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
-        .I3(ipif_Addr[4]),
+       (.I0(ipif_Addr[4]),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
+        .I2(ipif_Addr[3]),
+        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_2_n_0 ),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hD0008080D0D08080)) 
+    .INIT(64'hB0BBF00000000000)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[1][8]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
-        .I1(\data_sync[2]_2 [8]),
-        .I2(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
-        .I3(\data_sync[2]_2 [41]),
+       (.I0(\data_sync[2]_2 [41]),
+        .I1(vid_aclk_en),
+        .I2(\data_sync[2]_2 [8]),
+        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
         .I4(D[0]),
-        .I5(vid_aclk_en),
+        .I5(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[1][8] ));
   LUT6 #(
-    .INIT(64'hD0008080D0D08080)) 
+    .INIT(64'hB0BBF00000000000)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[1][9]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
-        .I1(\data_sync[2]_2 [9]),
-        .I2(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
-        .I3(\data_sync[2]_2 [41]),
+       (.I0(\data_sync[2]_2 [41]),
+        .I1(vid_aclk_en),
+        .I2(\data_sync[2]_2 [9]),
+        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[1][31]_i_2_n_0 ),
         .I4(D[1]),
-        .I5(vid_aclk_en),
+        .I5(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[1][9] ));
   LUT6 #(
-    .INIT(64'hD0008080D0D08080)) 
+    .INIT(64'hB0BBF00000000000)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[2][16]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[2][21]_i_2_n_0 ),
-        .I1(\data_sync[2]_2 [16]),
-        .I2(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
-        .I3(\data_sync[2]_2 [41]),
+       (.I0(\data_sync[2]_2 [41]),
+        .I1(vid_aclk_en),
+        .I2(\data_sync[2]_2 [16]),
+        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[2][21]_i_2_n_0 ),
         .I4(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[2][21]_0 [0]),
-        .I5(vid_aclk_en),
+        .I5(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[2][16] ));
   LUT6 #(
-    .INIT(64'hD0008080D0D08080)) 
+    .INIT(64'hB0BBF00000000000)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[2][17]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[2][21]_i_2_n_0 ),
-        .I1(\data_sync[2]_2 [17]),
-        .I2(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
-        .I3(\data_sync[2]_2 [41]),
+       (.I0(\data_sync[2]_2 [41]),
+        .I1(vid_aclk_en),
+        .I2(\data_sync[2]_2 [17]),
+        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[2][21]_i_2_n_0 ),
         .I4(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[2][21]_0 [1]),
-        .I5(vid_aclk_en),
+        .I5(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[2][17] ));
   LUT6 #(
-    .INIT(64'hD0008080D0D08080)) 
+    .INIT(64'hB0BBF00000000000)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[2][18]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[2][21]_i_2_n_0 ),
-        .I1(\data_sync[2]_2 [18]),
-        .I2(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
-        .I3(\data_sync[2]_2 [41]),
+       (.I0(\data_sync[2]_2 [41]),
+        .I1(vid_aclk_en),
+        .I2(\data_sync[2]_2 [18]),
+        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[2][21]_i_2_n_0 ),
         .I4(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[2][21]_0 [2]),
-        .I5(vid_aclk_en),
+        .I5(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[2][18] ));
   LUT6 #(
-    .INIT(64'hD0008080D0D08080)) 
+    .INIT(64'hB0BBF00000000000)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[2][19]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[2][21]_i_2_n_0 ),
-        .I1(\data_sync[2]_2 [19]),
-        .I2(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
-        .I3(\data_sync[2]_2 [41]),
+       (.I0(\data_sync[2]_2 [41]),
+        .I1(vid_aclk_en),
+        .I2(\data_sync[2]_2 [19]),
+        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[2][21]_i_2_n_0 ),
         .I4(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[2][21]_0 [3]),
-        .I5(vid_aclk_en),
+        .I5(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[2][19] ));
   LUT6 #(
-    .INIT(64'hD0008080D0D08080)) 
+    .INIT(64'hB0BBF00000000000)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[2][20]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[2][21]_i_2_n_0 ),
-        .I1(\data_sync[2]_2 [20]),
-        .I2(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
-        .I3(\data_sync[2]_2 [41]),
+       (.I0(\data_sync[2]_2 [41]),
+        .I1(vid_aclk_en),
+        .I2(\data_sync[2]_2 [20]),
+        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[2][21]_i_2_n_0 ),
         .I4(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[2][21]_0 [4]),
-        .I5(vid_aclk_en),
+        .I5(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[2][20] ));
   LUT6 #(
-    .INIT(64'hD0008080D0D08080)) 
+    .INIT(64'hB0BBF00000000000)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[2][21]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[2][21]_i_2_n_0 ),
-        .I1(\data_sync[2]_2 [21]),
-        .I2(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
-        .I3(\data_sync[2]_2 [41]),
+       (.I0(\data_sync[2]_2 [41]),
+        .I1(vid_aclk_en),
+        .I2(\data_sync[2]_2 [21]),
+        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[2][21]_i_2_n_0 ),
         .I4(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[2][21]_0 [5]),
-        .I5(vid_aclk_en),
+        .I5(\AXI4_LITE_INTERFACE.soft_resetn_reg ),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[2][21] ));
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT4 #(
-    .INIT(16'h0800)) 
+    .INIT(16'h0020)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[2][21]_i_2 
-       (.I0(write_ack_int),
-        .I1(\data_sync[2]_2 [41]),
-        .I2(ipif_Addr[7]),
-        .I3(\AXI4_LITE_INTERFACE.time_control_regs_int[26][28]_i_2_n_0 ),
+       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
+        .I2(ipif_Addr[3]),
+        .I3(ipif_Addr[4]),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int[2][21]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT4 #(
-    .INIT(16'h0800)) 
+    .INIT(16'h0080)) 
     \AXI4_LITE_INTERFACE.genr_control_regs_int[3][31]_i_1 
-       (.I0(write_ack_int),
-        .I1(\data_sync[2]_2 [41]),
-        .I2(ipif_Addr[7]),
-        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[3][31]_i_2_n_0 ),
+       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_2_n_0 ),
+        .I1(ipif_Addr[3]),
+        .I2(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
+        .I3(ipif_Addr[4]),
         .O(\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][8] ));
-  LUT6 #(
-    .INIT(64'h0100000000000000)) 
-    \AXI4_LITE_INTERFACE.genr_control_regs_int[3][31]_i_2 
-       (.I0(ipif_Addr[5]),
-        .I1(ipif_Addr[6]),
-        .I2(ipif_Addr[4]),
-        .I3(vid_aclk_en),
-        .I4(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
-        .I5(ipif_Addr[3]),
-        .O(\AXI4_LITE_INTERFACE.genr_control_regs_int[3][31]_i_2_n_0 ));
   MUXF7 \AXI4_LITE_INTERFACE.ipif_RdData_reg[0]_i_1 
        (.I0(\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][0] ),
         .I1(\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][0]_0 ),
@@ -25310,162 +25123,142 @@ module hdmi_in_v_tc_1_0_video_clock_cross
   LUT4 #(
     .INIT(16'h0001)) 
     \AXI4_LITE_INTERFACE.time_control_regs_int[16][28]_i_1 
-       (.I0(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+       (.I0(ipif_Addr[3]),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
+        .I2(ipif_Addr[4]),
+        .I3(\AXI4_LITE_INTERFACE.time_control_regs_int[18][6]_i_2_n_0 ),
+        .O(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][0] ));
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  LUT4 #(
+    .INIT(16'h0004)) 
+    \AXI4_LITE_INTERFACE.time_control_regs_int[18][6]_i_1 
+       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I1(ipif_Addr[3]),
         .I2(ipif_Addr[4]),
-        .I3(\AXI4_LITE_INTERFACE.time_control_regs_int[19][6]_i_2_n_0 ),
-        .O(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][0] ));
-  LUT6 #(
-    .INIT(64'h0010000000000000)) 
-    \AXI4_LITE_INTERFACE.time_control_regs_int[18][6]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.time_control_regs_int[18][6]_i_2_n_0 ),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
-        .I2(ipif_Addr[3]),
-        .I3(ipif_Addr[4]),
-        .I4(\data_sync[2]_2 [41]),
-        .I5(write_ack_int),
+        .I3(\AXI4_LITE_INTERFACE.time_control_regs_int[18][6]_i_2_n_0 ),
         .O(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[18][7] ));
-  LUT4 #(
-    .INIT(16'hFF7F)) 
+  LUT6 #(
+    .INIT(64'hF7FFFFFFFFFFFFFF)) 
     \AXI4_LITE_INTERFACE.time_control_regs_int[18][6]_i_2 
        (.I0(ipif_Addr[6]),
         .I1(vid_aclk_en),
-        .I2(ipif_Addr[5]),
-        .I3(ipif_Addr[7]),
+        .I2(ipif_Addr[7]),
+        .I3(ipif_Addr[5]),
+        .I4(write_ack_int),
+        .I5(\data_sync[2]_2 [41]),
         .O(\AXI4_LITE_INTERFACE.time_control_regs_int[18][6]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT4 #(
     .INIT(16'h0008)) 
     \AXI4_LITE_INTERFACE.time_control_regs_int[19][6]_i_1 
-       (.I0(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
-        .I1(ipif_Addr[3]),
+       (.I0(ipif_Addr[3]),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(ipif_Addr[4]),
-        .I3(\AXI4_LITE_INTERFACE.time_control_regs_int[19][6]_i_2_n_0 ),
+        .I3(\AXI4_LITE_INTERFACE.time_control_regs_int[18][6]_i_2_n_0 ),
         .O(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[19][0] ));
-  LUT6 #(
-    .INIT(64'hF7FFFFFFFFFFFFFF)) 
-    \AXI4_LITE_INTERFACE.time_control_regs_int[19][6]_i_2 
-       (.I0(\data_sync[2]_2 [41]),
-        .I1(write_ack_int),
-        .I2(ipif_Addr[7]),
-        .I3(ipif_Addr[5]),
-        .I4(vid_aclk_en),
-        .I5(ipif_Addr[6]),
-        .O(\AXI4_LITE_INTERFACE.time_control_regs_int[19][6]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT4 #(
     .INIT(16'h0010)) 
     \AXI4_LITE_INTERFACE.time_control_regs_int[20][28]_i_1 
-       (.I0(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+       (.I0(\AXI4_LITE_INTERFACE.time_control_regs_int[18][6]_i_2_n_0 ),
         .I1(ipif_Addr[3]),
         .I2(ipif_Addr[4]),
-        .I3(\AXI4_LITE_INTERFACE.time_control_regs_int[19][6]_i_2_n_0 ),
+        .I3(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .O(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[20][0] ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT4 #(
-    .INIT(16'h0040)) 
+    .INIT(16'h1000)) 
     \AXI4_LITE_INTERFACE.time_control_regs_int[21][28]_i_1 
-       (.I0(ipif_Addr[3]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
-        .I2(ipif_Addr[4]),
-        .I3(\AXI4_LITE_INTERFACE.time_control_regs_int[19][6]_i_2_n_0 ),
+       (.I0(\AXI4_LITE_INTERFACE.time_control_regs_int[18][6]_i_2_n_0 ),
+        .I1(ipif_Addr[3]),
+        .I2(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
+        .I3(ipif_Addr[4]),
         .O(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][0] ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT4 #(
     .INIT(16'h0040)) 
     \AXI4_LITE_INTERFACE.time_control_regs_int[22][28]_i_1 
-       (.I0(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I1(ipif_Addr[3]),
         .I2(ipif_Addr[4]),
-        .I3(\AXI4_LITE_INTERFACE.time_control_regs_int[19][6]_i_2_n_0 ),
+        .I3(\AXI4_LITE_INTERFACE.time_control_regs_int[18][6]_i_2_n_0 ),
         .O(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[22][0] ));
   (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT4 #(
     .INIT(16'h0080)) 
     \AXI4_LITE_INTERFACE.time_control_regs_int[23][28]_i_1 
-       (.I0(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
-        .I1(ipif_Addr[3]),
-        .I2(ipif_Addr[4]),
-        .I3(\AXI4_LITE_INTERFACE.time_control_regs_int[19][6]_i_2_n_0 ),
-        .O(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][0] ));
-  LUT6 #(
-    .INIT(64'h0000000000000040)) 
-    \AXI4_LITE_INTERFACE.time_control_regs_int[24][28]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.time_control_regs_int[24][28]_i_2_n_0 ),
-        .I1(ipif_Addr[7]),
-        .I2(vid_aclk_en),
-        .I3(ipif_Addr[5]),
-        .I4(ipif_Addr[6]),
-        .I5(\AXI4_LITE_INTERFACE.time_control_regs_int[24][28]_i_3_n_0 ),
-        .O(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[24][0] ));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    \AXI4_LITE_INTERFACE.time_control_regs_int[24][28]_i_2 
-       (.I0(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
-        .I1(ipif_Addr[3]),
-        .O(\AXI4_LITE_INTERFACE.time_control_regs_int[24][28]_i_2_n_0 ));
-  LUT3 #(
-    .INIT(8'hBF)) 
-    \AXI4_LITE_INTERFACE.time_control_regs_int[24][28]_i_3 
        (.I0(ipif_Addr[4]),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
+        .I2(ipif_Addr[3]),
+        .I3(\AXI4_LITE_INTERFACE.time_control_regs_int[18][6]_i_2_n_0 ),
+        .O(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][0] ));
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  LUT3 #(
+    .INIT(8'h01)) 
+    \AXI4_LITE_INTERFACE.time_control_regs_int[24][28]_i_1 
+       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
+        .I1(ipif_Addr[3]),
+        .I2(\AXI4_LITE_INTERFACE.time_control_regs_int[24][28]_i_2_n_0 ),
+        .O(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[24][0] ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFEFFFFFF)) 
+    \AXI4_LITE_INTERFACE.time_control_regs_int[24][28]_i_2 
+       (.I0(ipif_Addr[4]),
+        .I1(ipif_Addr[6]),
+        .I2(ipif_Addr[5]),
+        .I3(vid_aclk_en),
+        .I4(ipif_Addr[7]),
+        .I5(\AXI4_LITE_INTERFACE.time_control_regs_int[24][28]_i_3_n_0 ),
+        .O(\AXI4_LITE_INTERFACE.time_control_regs_int[24][28]_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'h7)) 
+    \AXI4_LITE_INTERFACE.time_control_regs_int[24][28]_i_3 
+       (.I0(write_ack_int),
         .I1(\data_sync[2]_2 [41]),
-        .I2(write_ack_int),
         .O(\AXI4_LITE_INTERFACE.time_control_regs_int[24][28]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
-  LUT4 #(
-    .INIT(16'h0004)) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
     \AXI4_LITE_INTERFACE.time_control_regs_int[25][28]_i_1 
        (.I0(ipif_Addr[3]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
-        .I2(ipif_Addr[4]),
-        .I3(\AXI4_LITE_INTERFACE.time_control_regs_int[25][28]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
+        .I2(\AXI4_LITE_INTERFACE.time_control_regs_int[24][28]_i_2_n_0 ),
         .O(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][0] ));
-  LUT6 #(
-    .INIT(64'hFDFFFFFFFFFFFFFF)) 
-    \AXI4_LITE_INTERFACE.time_control_regs_int[25][28]_i_2 
-       (.I0(vid_aclk_en),
-        .I1(ipif_Addr[5]),
-        .I2(ipif_Addr[6]),
-        .I3(ipif_Addr[7]),
-        .I4(write_ack_int),
-        .I5(\data_sync[2]_2 [41]),
-        .O(\AXI4_LITE_INTERFACE.time_control_regs_int[25][28]_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'h8000)) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  LUT3 #(
+    .INIT(8'h02)) 
     \AXI4_LITE_INTERFACE.time_control_regs_int[26][28]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.time_control_regs_int[26][28]_i_2_n_0 ),
-        .I1(ipif_Addr[7]),
-        .I2(write_ack_int),
-        .I3(\data_sync[2]_2 [41]),
+       (.I0(ipif_Addr[3]),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
+        .I2(\AXI4_LITE_INTERFACE.time_control_regs_int[24][28]_i_2_n_0 ),
         .O(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[26][0] ));
-  LUT6 #(
-    .INIT(64'h0000010000000000)) 
-    \AXI4_LITE_INTERFACE.time_control_regs_int[26][28]_i_2 
-       (.I0(ipif_Addr[5]),
-        .I1(ipif_Addr[6]),
-        .I2(ipif_Addr[4]),
-        .I3(vid_aclk_en),
-        .I4(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
-        .I5(ipif_Addr[3]),
-        .O(\AXI4_LITE_INTERFACE.time_control_regs_int[26][28]_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'h8000)) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  LUT3 #(
+    .INIT(8'h08)) 
     \AXI4_LITE_INTERFACE.time_control_regs_int[27][28]_i_1 
-       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[3][31]_i_2_n_0 ),
+       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
+        .I1(ipif_Addr[3]),
+        .I2(\AXI4_LITE_INTERFACE.time_control_regs_int[24][28]_i_2_n_0 ),
+        .O(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][0] ));
+  LUT5 #(
+    .INIT(32'h80000000)) 
+    \AXI4_LITE_INTERFACE.time_control_regs_int[28][28]_i_1 
+       (.I0(vid_aclk_en),
         .I1(ipif_Addr[7]),
         .I2(write_ack_int),
         .I3(\data_sync[2]_2 [41]),
-        .O(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][0] ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
-  LUT4 #(
-    .INIT(16'h0010)) 
-    \AXI4_LITE_INTERFACE.time_control_regs_int[28][28]_i_1 
-       (.I0(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
-        .I1(ipif_Addr[3]),
-        .I2(ipif_Addr[4]),
-        .I3(\AXI4_LITE_INTERFACE.time_control_regs_int[25][28]_i_2_n_0 ),
-        .O(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[28][0] ));
+        .I4(\AXI4_LITE_INTERFACE.time_control_regs_int[28][28]_i_2_n_0 ),
+        .O(E));
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  LUT5 #(
+    .INIT(32'h00000100)) 
+    \AXI4_LITE_INTERFACE.time_control_regs_int[28][28]_i_2 
+       (.I0(ipif_Addr[6]),
+        .I1(ipif_Addr[5]),
+        .I2(\AXI4_LITE_INTERFACE.core_control_regs_int_reg[8][0]_0 ),
+        .I3(ipif_Addr[4]),
+        .I4(ipif_Addr[3]),
+        .O(\AXI4_LITE_INTERFACE.time_control_regs_int[28][28]_i_2_n_0 ));
   LUT3 #(
     .INIT(8'h54)) 
     \AXI4_LITE_INTERFACE.write_ack_e1_i_2 
@@ -25473,4130 +25266,4124 @@ module hdmi_in_v_tc_1_0_video_clock_cross
         .I1(\data_sync[2]_2 [42]),
         .I2(\data_sync[2]_2 [41]),
         .O(p_533_out));
-  (* SOFT_HLUTNM = "soft_lutpair260" *) 
+  (* SOFT_HLUTNM = "soft_lutpair279" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg[31][0]_i_1 
        (.I0(\genr_status_regs_int_reg[1] [0]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\genr_control_regs[0] [0]),
         .O(\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][0] ));
-  (* SOFT_HLUTNM = "soft_lutpair269" *) 
+  (* SOFT_HLUTNM = "soft_lutpair275" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg[31][10]_i_1 
        (.I0(\genr_status_regs_int_reg[1] [10]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\genr_control_regs[0] [7]),
         .O(\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][10] ));
-  (* SOFT_HLUTNM = "soft_lutpair269" *) 
+  (* SOFT_HLUTNM = "soft_lutpair274" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg[31][11]_i_1 
        (.I0(\genr_status_regs_int_reg[1] [11]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\genr_control_regs[0] [8]),
         .O(\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][11] ));
-  (* SOFT_HLUTNM = "soft_lutpair268" *) 
+  (* SOFT_HLUTNM = "soft_lutpair274" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg[31][12]_i_1 
        (.I0(\genr_status_regs_int_reg[1] [12]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\genr_status_regs[0] [3]),
         .O(\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][12] ));
-  (* SOFT_HLUTNM = "soft_lutpair268" *) 
+  (* SOFT_HLUTNM = "soft_lutpair273" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg[31][13]_i_1 
        (.I0(\genr_status_regs_int_reg[1] [13]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\genr_control_regs[0] [9]),
         .O(\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][13] ));
-  (* SOFT_HLUTNM = "soft_lutpair267" *) 
+  (* SOFT_HLUTNM = "soft_lutpair272" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg[31][14]_i_1 
        (.I0(\genr_status_regs_int_reg[1] [14]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\genr_control_regs[0] [10]),
         .O(\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][14] ));
-  (* SOFT_HLUTNM = "soft_lutpair259" *) 
+  (* SOFT_HLUTNM = "soft_lutpair272" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg[31][15]_i_1 
        (.I0(\genr_status_regs_int_reg[1] [15]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\genr_control_regs[0] [11]),
         .O(\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][15] ));
-  (* SOFT_HLUTNM = "soft_lutpair266" *) 
+  (* SOFT_HLUTNM = "soft_lutpair265" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg[31][16]_i_1 
        (.I0(\genr_status_regs_int_reg[1] [16]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\genr_control_regs[0] [12]),
         .O(\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][16] ));
-  (* SOFT_HLUTNM = "soft_lutpair266" *) 
+  (* SOFT_HLUTNM = "soft_lutpair271" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg[31][17]_i_1 
        (.I0(\genr_status_regs_int_reg[1] [17]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\genr_control_regs[0] [13]),
         .O(\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][17] ));
-  (* SOFT_HLUTNM = "soft_lutpair265" *) 
+  (* SOFT_HLUTNM = "soft_lutpair271" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg[31][18]_i_1 
        (.I0(\genr_status_regs_int_reg[1] [18]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\genr_control_regs[0] [14]),
         .O(\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][18] ));
-  (* SOFT_HLUTNM = "soft_lutpair265" *) 
+  (* SOFT_HLUTNM = "soft_lutpair270" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg[31][19]_i_1 
        (.I0(\genr_status_regs_int_reg[1] [19]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\genr_control_regs[0] [15]),
         .O(\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][19] ));
-  (* SOFT_HLUTNM = "soft_lutpair267" *) 
+  (* SOFT_HLUTNM = "soft_lutpair279" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg[31][1]_i_1 
        (.I0(\genr_status_regs_int_reg[1] [1]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\genr_control_regs[0] [1]),
         .O(\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][1] ));
-  (* SOFT_HLUTNM = "soft_lutpair264" *) 
+  (* SOFT_HLUTNM = "soft_lutpair270" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg[31][20]_i_1 
        (.I0(\genr_status_regs_int_reg[1] [20]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\genr_control_regs[0] [16]),
         .O(\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][20] ));
-  (* SOFT_HLUTNM = "soft_lutpair264" *) 
+  (* SOFT_HLUTNM = "soft_lutpair269" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg[31][21]_i_1 
        (.I0(\genr_status_regs_int_reg[1] [21]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\genr_control_regs[0] [17]),
         .O(\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][21] ));
-  (* SOFT_HLUTNM = "soft_lutpair263" *) 
+  (* SOFT_HLUTNM = "soft_lutpair269" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg[31][22]_i_1 
        (.I0(\genr_status_regs_int_reg[1] [22]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\genr_control_regs[0] [18]),
         .O(\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][22] ));
-  (* SOFT_HLUTNM = "soft_lutpair263" *) 
+  (* SOFT_HLUTNM = "soft_lutpair268" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg[31][23]_i_1 
        (.I0(\genr_status_regs_int_reg[1] [23]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\genr_control_regs[0] [19]),
         .O(\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][23] ));
-  (* SOFT_HLUTNM = "soft_lutpair262" *) 
+  (* SOFT_HLUTNM = "soft_lutpair268" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg[31][24]_i_1 
        (.I0(\genr_status_regs_int_reg[1] [24]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\genr_control_regs[0] [20]),
         .O(\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][24] ));
-  (* SOFT_HLUTNM = "soft_lutpair262" *) 
+  (* SOFT_HLUTNM = "soft_lutpair267" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg[31][25]_i_1 
        (.I0(\genr_status_regs_int_reg[1] [25]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\genr_control_regs[0] [21]),
         .O(\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][25] ));
-  (* SOFT_HLUTNM = "soft_lutpair261" *) 
+  (* SOFT_HLUTNM = "soft_lutpair267" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg[31][26]_i_1 
        (.I0(\genr_status_regs_int_reg[1] [26]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\genr_control_regs[0] [22]),
         .O(\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][26] ));
-  (* SOFT_HLUTNM = "soft_lutpair261" *) 
+  (* SOFT_HLUTNM = "soft_lutpair266" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg[31][27]_i_1 
        (.I0(\genr_status_regs_int_reg[1] [27]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\genr_status_regs[0] [4]),
         .O(\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][27] ));
-  (* SOFT_HLUTNM = "soft_lutpair260" *) 
+  (* SOFT_HLUTNM = "soft_lutpair266" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg[31][28]_i_1 
        (.I0(\genr_status_regs_int_reg[1] [28]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\genr_status_regs[0] [5]),
         .O(\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][28] ));
-  (* SOFT_HLUTNM = "soft_lutpair259" *) 
+  (* SOFT_HLUTNM = "soft_lutpair265" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg[31][29]_i_1 
        (.I0(\genr_status_regs_int_reg[1] [29]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\genr_status_regs[0] [6]),
         .O(\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][29] ));
-  (* SOFT_HLUTNM = "soft_lutpair273" *) 
+  (* SOFT_HLUTNM = "soft_lutpair278" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg[31][2]_i_1 
        (.I0(\genr_status_regs_int_reg[1] [2]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\genr_control_regs[0] [2]),
         .O(\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][2] ));
-  (* SOFT_HLUTNM = "soft_lutpair258" *) 
+  (* SOFT_HLUTNM = "soft_lutpair264" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg[31][30]_i_1 
        (.I0(\genr_status_regs_int_reg[1] [30]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\genr_control_regs[0] [23]),
         .O(\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][30] ));
-  (* SOFT_HLUTNM = "soft_lutpair273" *) 
+  (* SOFT_HLUTNM = "soft_lutpair277" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg[31][3]_i_1 
        (.I0(\genr_status_regs_int_reg[1] [3]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\genr_control_regs[0] [3]),
         .O(\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][3] ));
-  (* SOFT_HLUTNM = "soft_lutpair272" *) 
+  (* SOFT_HLUTNM = "soft_lutpair278" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg[31][4]_i_1 
        (.I0(\genr_status_regs_int_reg[1] [4]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\genr_status_regs[0] [0]),
         .O(\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][4] ));
-  (* SOFT_HLUTNM = "soft_lutpair272" *) 
+  (* SOFT_HLUTNM = "soft_lutpair277" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg[31][5]_i_1 
        (.I0(\genr_status_regs_int_reg[1] [5]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\genr_control_regs[0] [4]),
         .O(\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][5] ));
-  (* SOFT_HLUTNM = "soft_lutpair271" *) 
+  (* SOFT_HLUTNM = "soft_lutpair276" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg[31][6]_i_1 
        (.I0(\genr_status_regs_int_reg[1] [6]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\genr_status_regs[0] [1]),
         .O(\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][6] ));
-  (* SOFT_HLUTNM = "soft_lutpair271" *) 
+  (* SOFT_HLUTNM = "soft_lutpair273" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg[31][7]_i_1 
        (.I0(\genr_status_regs_int_reg[1] [7]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\genr_status_regs[0] [2]),
         .O(\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair270" *) 
+  (* SOFT_HLUTNM = "soft_lutpair276" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg[31][8]_i_1 
        (.I0(\genr_status_regs_int_reg[1] [8]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\genr_control_regs[0] [5]),
         .O(\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][8] ));
-  (* SOFT_HLUTNM = "soft_lutpair270" *) 
+  (* SOFT_HLUTNM = "soft_lutpair275" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg[31][9]_i_1 
        (.I0(\genr_status_regs_int_reg[1] [9]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\genr_control_regs[0] [6]),
         .O(\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][9] ));
-  (* SOFT_HLUTNM = "soft_lutpair244" *) 
+  (* SOFT_HLUTNM = "soft_lutpair264" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][0]_i_1 
        (.I0(\genr_status_regs[3] [0]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[0]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][0] ));
-  (* SOFT_HLUTNM = "soft_lutpair254" *) 
+  (* SOFT_HLUTNM = "soft_lutpair259" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][10]_i_1 
        (.I0(\genr_control_regs[3] [2]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[10]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][10] ));
-  (* SOFT_HLUTNM = "soft_lutpair253" *) 
+  (* SOFT_HLUTNM = "soft_lutpair259" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][11]_i_1 
        (.I0(\genr_control_regs[3] [3]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[11]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][11] ));
-  (* SOFT_HLUTNM = "soft_lutpair253" *) 
+  (* SOFT_HLUTNM = "soft_lutpair258" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][12]_i_1 
        (.I0(\genr_control_regs[3] [4]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[12]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][12] ));
-  (* SOFT_HLUTNM = "soft_lutpair252" *) 
+  (* SOFT_HLUTNM = "soft_lutpair258" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][13]_i_1 
        (.I0(\genr_control_regs[3] [5]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[13]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][13] ));
-  (* SOFT_HLUTNM = "soft_lutpair252" *) 
+  (* SOFT_HLUTNM = "soft_lutpair257" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][14]_i_1 
        (.I0(\genr_status_regs[3] [8]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[14]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][14] ));
-  (* SOFT_HLUTNM = "soft_lutpair251" *) 
+  (* SOFT_HLUTNM = "soft_lutpair257" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][15]_i_1 
        (.I0(\genr_status_regs[3] [9]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[15]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][15] ));
-  (* SOFT_HLUTNM = "soft_lutpair251" *) 
+  (* SOFT_HLUTNM = "soft_lutpair256" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][16]_i_1 
        (.I0(\genr_control_regs[3] [6]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[16]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][16] ));
-  (* SOFT_HLUTNM = "soft_lutpair250" *) 
+  (* SOFT_HLUTNM = "soft_lutpair256" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][17]_i_1 
        (.I0(\genr_control_regs[3] [7]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[17]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][17] ));
-  (* SOFT_HLUTNM = "soft_lutpair250" *) 
+  (* SOFT_HLUTNM = "soft_lutpair255" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][18]_i_1 
        (.I0(\genr_control_regs[3] [8]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[18]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][18] ));
-  (* SOFT_HLUTNM = "soft_lutpair249" *) 
+  (* SOFT_HLUTNM = "soft_lutpair255" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][19]_i_1 
        (.I0(\genr_control_regs[3] [9]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[19]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][19] ));
-  (* SOFT_HLUTNM = "soft_lutpair243" *) 
+  (* SOFT_HLUTNM = "soft_lutpair263" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][1]_i_1 
        (.I0(\genr_status_regs[3] [1]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[1]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][1] ));
-  (* SOFT_HLUTNM = "soft_lutpair249" *) 
+  (* SOFT_HLUTNM = "soft_lutpair254" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][20]_i_1 
        (.I0(\genr_control_regs[3] [10]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[20]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][20] ));
-  (* SOFT_HLUTNM = "soft_lutpair248" *) 
+  (* SOFT_HLUTNM = "soft_lutpair254" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][21]_i_1 
        (.I0(\genr_control_regs[3] [11]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[21]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][21] ));
-  (* SOFT_HLUTNM = "soft_lutpair248" *) 
+  (* SOFT_HLUTNM = "soft_lutpair253" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][22]_i_1 
        (.I0(\genr_control_regs[3] [12]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[22]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][22] ));
-  (* SOFT_HLUTNM = "soft_lutpair247" *) 
+  (* SOFT_HLUTNM = "soft_lutpair253" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][23]_i_1 
        (.I0(\genr_control_regs[3] [13]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[23]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][23] ));
-  (* SOFT_HLUTNM = "soft_lutpair247" *) 
+  (* SOFT_HLUTNM = "soft_lutpair252" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][24]_i_1 
        (.I0(\genr_control_regs[3] [14]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[24]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][24] ));
-  (* SOFT_HLUTNM = "soft_lutpair246" *) 
+  (* SOFT_HLUTNM = "soft_lutpair252" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][25]_i_1 
        (.I0(\genr_control_regs[3] [15]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[25]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][25] ));
-  (* SOFT_HLUTNM = "soft_lutpair246" *) 
+  (* SOFT_HLUTNM = "soft_lutpair251" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][26]_i_1 
        (.I0(\genr_control_regs[3] [16]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[26]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][26] ));
-  (* SOFT_HLUTNM = "soft_lutpair245" *) 
+  (* SOFT_HLUTNM = "soft_lutpair251" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][27]_i_1 
        (.I0(\genr_control_regs[3] [17]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[27]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][27] ));
-  (* SOFT_HLUTNM = "soft_lutpair245" *) 
+  (* SOFT_HLUTNM = "soft_lutpair250" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][28]_i_1 
        (.I0(\genr_control_regs[3] [18]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[28]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][28] ));
-  (* SOFT_HLUTNM = "soft_lutpair244" *) 
+  (* SOFT_HLUTNM = "soft_lutpair250" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][29]_i_1 
        (.I0(\genr_control_regs[3] [19]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[29]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][29] ));
-  (* SOFT_HLUTNM = "soft_lutpair258" *) 
+  (* SOFT_HLUTNM = "soft_lutpair249" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][2]_i_1 
        (.I0(\genr_status_regs[3] [2]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[2]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][2] ));
-  (* SOFT_HLUTNM = "soft_lutpair243" *) 
+  (* SOFT_HLUTNM = "soft_lutpair249" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][30]_i_1 
        (.I0(\genr_control_regs[3] [20]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[30]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][30] ));
-  (* SOFT_HLUTNM = "soft_lutpair212" *) 
+  (* SOFT_HLUTNM = "soft_lutpair248" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][31]_i_1 
        (.I0(\genr_control_regs[3] [21]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[31]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][31] ));
-  (* SOFT_HLUTNM = "soft_lutpair257" *) 
+  (* SOFT_HLUTNM = "soft_lutpair263" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][3]_i_1 
        (.I0(\genr_status_regs[3] [3]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[3]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][3] ));
-  (* SOFT_HLUTNM = "soft_lutpair257" *) 
+  (* SOFT_HLUTNM = "soft_lutpair262" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][4]_i_1 
        (.I0(\genr_status_regs[3] [4]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[4]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][4] ));
-  (* SOFT_HLUTNM = "soft_lutpair256" *) 
+  (* SOFT_HLUTNM = "soft_lutpair262" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][5]_i_1 
        (.I0(\genr_status_regs[3] [5]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[5]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][5] ));
-  (* SOFT_HLUTNM = "soft_lutpair256" *) 
+  (* SOFT_HLUTNM = "soft_lutpair261" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][6]_i_1 
        (.I0(\genr_status_regs[3] [6]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[6]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][6] ));
-  (* SOFT_HLUTNM = "soft_lutpair255" *) 
+  (* SOFT_HLUTNM = "soft_lutpair261" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][7]_i_1 
        (.I0(\genr_status_regs[3] [7]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[7]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair255" *) 
+  (* SOFT_HLUTNM = "soft_lutpair260" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][8]_i_1 
        (.I0(\genr_control_regs[3] [0]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[8]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][8] ));
-  (* SOFT_HLUTNM = "soft_lutpair254" *) 
+  (* SOFT_HLUTNM = "soft_lutpair260" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg[32][9]_i_1 
        (.I0(\genr_control_regs[3] [1]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(intr_err[9]),
         .O(\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][9] ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \GEN_TREE.GEN_BRANCH[33].GEN_MUX_REG.data_out_reg[33][26]_i_1 
-       (.I0(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+       (.I0(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .O(\GEN_TREE.GEN_BRANCH[33].GEN_MUX_REG.data_out_reg_reg[33][26] ));
-  (* SOFT_HLUTNM = "soft_lutpair212" *) 
+  (* SOFT_HLUTNM = "soft_lutpair247" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][0]_i_1 
        (.I0(\time_status_regs[1] [0]),
-        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\time_status_regs[0] [0]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0] ));
-  (* SOFT_HLUTNM = "soft_lutpair238" *) 
+  (* SOFT_HLUTNM = "soft_lutpair243" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][10]_i_1 
        (.I0(\time_status_regs[1] [10]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\time_status_regs[0] [10]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][10] ));
-  (* SOFT_HLUTNM = "soft_lutpair238" *) 
+  (* SOFT_HLUTNM = "soft_lutpair243" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][11]_i_1 
        (.I0(\time_status_regs[1] [11]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\time_status_regs[0] [11]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][11] ));
-  (* SOFT_HLUTNM = "soft_lutpair237" *) 
+  (* SOFT_HLUTNM = "soft_lutpair242" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][12]_i_1 
        (.I0(\time_status_regs[1] [12]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\time_status_regs[0] [12]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][12] ));
-  (* SOFT_HLUTNM = "soft_lutpair237" *) 
+  (* SOFT_HLUTNM = "soft_lutpair242" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][13]_i_1 
        (.I0(\time_status_regs[1] [13]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\time_status_regs[0] [13]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][13] ));
-  (* SOFT_HLUTNM = "soft_lutpair236" *) 
+  (* SOFT_HLUTNM = "soft_lutpair241" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][14]_i_1 
        (.I0(\time_status_regs[1] [14]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\time_status_regs[0] [14]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][14] ));
-  (* SOFT_HLUTNM = "soft_lutpair236" *) 
+  (* SOFT_HLUTNM = "soft_lutpair241" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][15]_i_1 
        (.I0(\time_status_regs[1] [15]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\time_status_regs[0] [15]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][15] ));
-  (* SOFT_HLUTNM = "soft_lutpair235" *) 
+  (* SOFT_HLUTNM = "soft_lutpair240" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][16]_i_1 
        (.I0(\time_status_regs[1] [16]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\time_status_regs[0] [16]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][16] ));
-  (* SOFT_HLUTNM = "soft_lutpair235" *) 
+  (* SOFT_HLUTNM = "soft_lutpair240" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][17]_i_1 
        (.I0(\time_status_regs[1] [17]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\time_status_regs[0] [17]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][17] ));
-  (* SOFT_HLUTNM = "soft_lutpair234" *) 
+  (* SOFT_HLUTNM = "soft_lutpair239" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][18]_i_1 
        (.I0(\time_status_regs[1] [18]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\time_status_regs[0] [18]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][18] ));
-  (* SOFT_HLUTNM = "soft_lutpair234" *) 
+  (* SOFT_HLUTNM = "soft_lutpair239" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][19]_i_1 
        (.I0(\time_status_regs[1] [19]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\time_status_regs[0] [19]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][19] ));
-  (* SOFT_HLUTNM = "soft_lutpair242" *) 
+  (* SOFT_HLUTNM = "soft_lutpair248" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][1]_i_1 
        (.I0(\time_status_regs[1] [1]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\time_status_regs[0] [1]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][1] ));
-  (* SOFT_HLUTNM = "soft_lutpair233" *) 
+  (* SOFT_HLUTNM = "soft_lutpair238" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][20]_i_1 
        (.I0(\time_status_regs[1] [20]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\time_status_regs[0] [20]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][20] ));
-  (* SOFT_HLUTNM = "soft_lutpair233" *) 
+  (* SOFT_HLUTNM = "soft_lutpair238" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][21]_i_1 
        (.I0(\time_status_regs[1] [21]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\time_status_regs[0] [21]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][21] ));
-  (* SOFT_HLUTNM = "soft_lutpair232" *) 
+  (* SOFT_HLUTNM = "soft_lutpair217" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][22]_i_1 
        (.I0(\time_status_regs[1] [22]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\time_status_regs[0] [22]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22] ));
-  (* SOFT_HLUTNM = "soft_lutpair232" *) 
+  (* IS_FANOUT_CONSTRAINED = "1" *) 
+  LUT1 #(
+    .INIT(2'h2)) 
+    \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][22]_i_2 
+       (.I0(\data_sync[2]_2 [34]),
+        .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair237" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][23]_i_1 
        (.I0(\time_status_regs[1] [23]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[0] [23]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][23] ));
-  (* SOFT_HLUTNM = "soft_lutpair231" *) 
+  (* SOFT_HLUTNM = "soft_lutpair237" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][24]_i_1 
        (.I0(\time_status_regs[1] [24]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[0] [24]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][24] ));
-  (* SOFT_HLUTNM = "soft_lutpair231" *) 
+  (* SOFT_HLUTNM = "soft_lutpair236" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][25]_i_1 
        (.I0(\time_status_regs[1] [25]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[0] [25]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][25] ));
-  (* SOFT_HLUTNM = "soft_lutpair230" *) 
+  (* SOFT_HLUTNM = "soft_lutpair236" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][26]_i_1 
        (.I0(\time_status_regs[1] [26]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[0] [26]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][26] ));
-  (* SOFT_HLUTNM = "soft_lutpair230" *) 
+  (* SOFT_HLUTNM = "soft_lutpair235" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][27]_i_1 
        (.I0(\time_status_regs[1] [27]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[0] [27]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][27] ));
-  (* SOFT_HLUTNM = "soft_lutpair229" *) 
+  (* SOFT_HLUTNM = "soft_lutpair235" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][28]_i_1 
        (.I0(\time_status_regs[1] [28]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[0] [28]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][28] ));
-  (* SOFT_HLUTNM = "soft_lutpair229" *) 
+  (* SOFT_HLUTNM = "soft_lutpair234" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][29]_i_1 
        (.I0(\time_status_regs[1] [29]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[0] [29]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][29] ));
-  (* SOFT_HLUTNM = "soft_lutpair242" *) 
+  (* SOFT_HLUTNM = "soft_lutpair247" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][2]_i_1 
        (.I0(\time_status_regs[1] [2]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\time_status_regs[0] [2]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][2] ));
-  (* SOFT_HLUTNM = "soft_lutpair228" *) 
+  (* SOFT_HLUTNM = "soft_lutpair234" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][30]_i_1 
        (.I0(\time_status_regs[1] [30]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[0] [30]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][30] ));
-  (* SOFT_HLUTNM = "soft_lutpair228" *) 
+  (* SOFT_HLUTNM = "soft_lutpair233" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][31]_i_1 
        (.I0(\time_status_regs[1] [31]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[0] [31]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][31] ));
-  (* SOFT_HLUTNM = "soft_lutpair211" *) 
+  (* SOFT_HLUTNM = "soft_lutpair246" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][3]_i_1 
        (.I0(\time_status_regs[1] [3]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\time_status_regs[0] [3]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][3] ));
-  (* SOFT_HLUTNM = "soft_lutpair241" *) 
+  (* SOFT_HLUTNM = "soft_lutpair217" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][4]_i_1 
        (.I0(\time_status_regs[1] [4]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\time_status_regs[0] [4]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][4] ));
-  (* SOFT_HLUTNM = "soft_lutpair241" *) 
+  (* SOFT_HLUTNM = "soft_lutpair246" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][5]_i_1 
        (.I0(\time_status_regs[1] [5]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\time_status_regs[0] [5]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][5] ));
-  (* SOFT_HLUTNM = "soft_lutpair240" *) 
+  (* SOFT_HLUTNM = "soft_lutpair245" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][6]_i_1 
        (.I0(\time_status_regs[1] [6]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\time_status_regs[0] [6]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][6] ));
-  (* SOFT_HLUTNM = "soft_lutpair240" *) 
+  (* SOFT_HLUTNM = "soft_lutpair245" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][7]_i_1 
        (.I0(\time_status_regs[1] [7]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\time_status_regs[0] [7]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair239" *) 
+  (* SOFT_HLUTNM = "soft_lutpair244" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][8]_i_1 
        (.I0(\time_status_regs[1] [8]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\time_status_regs[0] [8]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][8] ));
-  (* SOFT_HLUTNM = "soft_lutpair239" *) 
+  (* SOFT_HLUTNM = "soft_lutpair244" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg[35][9]_i_1 
        (.I0(\time_status_regs[1] [9]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 ),
         .I2(\time_status_regs[0] [9]),
         .O(\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][9] ));
-  (* SOFT_HLUTNM = "soft_lutpair227" *) 
+  (* SOFT_HLUTNM = "soft_lutpair233" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][0]_i_1 
        (.I0(\time_status_regs[3] [0]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [0]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][0] ));
-  (* SOFT_HLUTNM = "soft_lutpair222" *) 
+  (* SOFT_HLUTNM = "soft_lutpair228" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][10]_i_1 
        (.I0(\time_status_regs[3] [10]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [10]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][10] ));
-  (* SOFT_HLUTNM = "soft_lutpair222" *) 
+  (* SOFT_HLUTNM = "soft_lutpair227" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][11]_i_1 
        (.I0(\time_status_regs[3] [11]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [11]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][11] ));
-  (* SOFT_HLUTNM = "soft_lutpair221" *) 
+  (* SOFT_HLUTNM = "soft_lutpair227" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][12]_i_1 
        (.I0(\time_status_regs[3] [12]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [12]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][12] ));
-  (* SOFT_HLUTNM = "soft_lutpair221" *) 
+  (* SOFT_HLUTNM = "soft_lutpair226" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][13]_i_1 
        (.I0(\time_status_regs[3] [13]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [13]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][13] ));
-  (* SOFT_HLUTNM = "soft_lutpair220" *) 
+  (* SOFT_HLUTNM = "soft_lutpair226" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][14]_i_1 
        (.I0(\time_status_regs[3] [14]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [14]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][14] ));
-  (* SOFT_HLUTNM = "soft_lutpair220" *) 
+  (* SOFT_HLUTNM = "soft_lutpair225" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][15]_i_1 
        (.I0(\time_status_regs[3] [15]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [15]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][15] ));
-  (* SOFT_HLUTNM = "soft_lutpair219" *) 
+  (* SOFT_HLUTNM = "soft_lutpair225" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][16]_i_1 
        (.I0(\time_status_regs[3] [16]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [16]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][16] ));
-  (* SOFT_HLUTNM = "soft_lutpair219" *) 
+  (* SOFT_HLUTNM = "soft_lutpair224" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][17]_i_1 
        (.I0(\time_status_regs[3] [17]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [17]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][17] ));
-  (* SOFT_HLUTNM = "soft_lutpair218" *) 
+  (* SOFT_HLUTNM = "soft_lutpair224" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][18]_i_1 
        (.I0(\time_status_regs[3] [18]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [18]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][18] ));
-  (* SOFT_HLUTNM = "soft_lutpair218" *) 
+  (* SOFT_HLUTNM = "soft_lutpair223" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][19]_i_1 
        (.I0(\time_status_regs[3] [19]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [19]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][19] ));
-  (* SOFT_HLUTNM = "soft_lutpair227" *) 
+  (* SOFT_HLUTNM = "soft_lutpair232" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][1]_i_1 
        (.I0(\time_status_regs[3] [1]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [1]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][1] ));
-  (* SOFT_HLUTNM = "soft_lutpair217" *) 
+  (* SOFT_HLUTNM = "soft_lutpair223" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][20]_i_1 
        (.I0(\time_status_regs[3] [20]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [20]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][20] ));
-  (* SOFT_HLUTNM = "soft_lutpair217" *) 
+  (* SOFT_HLUTNM = "soft_lutpair222" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][21]_i_1 
        (.I0(\time_status_regs[3] [21]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [21]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][21] ));
-  (* SOFT_HLUTNM = "soft_lutpair216" *) 
+  (* SOFT_HLUTNM = "soft_lutpair222" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][22]_i_1 
        (.I0(\time_status_regs[3] [22]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [22]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][22] ));
-  (* SOFT_HLUTNM = "soft_lutpair216" *) 
+  (* SOFT_HLUTNM = "soft_lutpair221" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][23]_i_1 
        (.I0(\time_status_regs[3] [23]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [23]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][23] ));
-  (* SOFT_HLUTNM = "soft_lutpair215" *) 
+  (* SOFT_HLUTNM = "soft_lutpair221" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][24]_i_1 
        (.I0(\time_status_regs[3] [24]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [24]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][24] ));
-  (* SOFT_HLUTNM = "soft_lutpair215" *) 
+  (* SOFT_HLUTNM = "soft_lutpair220" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][25]_i_1 
        (.I0(\time_status_regs[3] [25]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [25]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][25] ));
-  (* SOFT_HLUTNM = "soft_lutpair214" *) 
+  (* SOFT_HLUTNM = "soft_lutpair220" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][26]_i_1 
        (.I0(\time_status_regs[3] [26]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [26]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][26] ));
-  (* SOFT_HLUTNM = "soft_lutpair214" *) 
+  (* SOFT_HLUTNM = "soft_lutpair219" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][27]_i_1 
        (.I0(\time_status_regs[3] [27]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [27]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][27] ));
-  (* SOFT_HLUTNM = "soft_lutpair213" *) 
+  (* SOFT_HLUTNM = "soft_lutpair219" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][28]_i_1 
        (.I0(\time_status_regs[3] [28]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [28]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][28] ));
-  (* SOFT_HLUTNM = "soft_lutpair213" *) 
+  (* SOFT_HLUTNM = "soft_lutpair218" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][29]_i_1 
        (.I0(\time_status_regs[3] [29]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [29]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][29] ));
-  (* SOFT_HLUTNM = "soft_lutpair226" *) 
+  (* SOFT_HLUTNM = "soft_lutpair232" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][2]_i_1 
        (.I0(\time_status_regs[3] [2]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [2]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][2] ));
-  (* SOFT_HLUTNM = "soft_lutpair211" *) 
+  (* SOFT_HLUTNM = "soft_lutpair218" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][30]_i_1 
        (.I0(\time_status_regs[3] [30]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [30]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][30] ));
-  (* SOFT_HLUTNM = "soft_lutpair208" *) 
+  (* SOFT_HLUTNM = "soft_lutpair216" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][31]_i_1 
        (.I0(\time_status_regs[3] [31]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [31]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][31] ));
-  (* SOFT_HLUTNM = "soft_lutpair226" *) 
+  (* SOFT_HLUTNM = "soft_lutpair231" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][3]_i_1 
        (.I0(\time_status_regs[3] [3]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [3]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][3] ));
-  (* SOFT_HLUTNM = "soft_lutpair225" *) 
+  (* SOFT_HLUTNM = "soft_lutpair231" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][4]_i_1 
        (.I0(\time_status_regs[3] [4]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [4]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][4] ));
-  (* SOFT_HLUTNM = "soft_lutpair225" *) 
+  (* SOFT_HLUTNM = "soft_lutpair230" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][5]_i_1 
        (.I0(\time_status_regs[3] [5]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [5]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][5] ));
-  (* SOFT_HLUTNM = "soft_lutpair224" *) 
+  (* SOFT_HLUTNM = "soft_lutpair230" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][6]_i_1 
        (.I0(\time_status_regs[3] [6]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [6]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][6] ));
-  (* SOFT_HLUTNM = "soft_lutpair224" *) 
+  (* SOFT_HLUTNM = "soft_lutpair229" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][7]_i_1 
        (.I0(\time_status_regs[3] [7]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [7]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair223" *) 
+  (* SOFT_HLUTNM = "soft_lutpair229" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][8]_i_1 
        (.I0(\time_status_regs[3] [8]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [8]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][8] ));
-  (* SOFT_HLUTNM = "soft_lutpair223" *) 
+  (* SOFT_HLUTNM = "soft_lutpair228" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg[36][9]_i_1 
        (.I0(\time_status_regs[3] [9]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[2] [9]),
         .O(\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][9] ));
-  (* SOFT_HLUTNM = "soft_lutpair148" *) 
+  (* SOFT_HLUTNM = "soft_lutpair213" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][0]_i_1 
        (.I0(\time_status_regs[5] [0]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [0]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][0] ));
-  (* SOFT_HLUTNM = "soft_lutpair206" *) 
+  (* SOFT_HLUTNM = "soft_lutpair211" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][10]_i_1 
        (.I0(\time_status_regs[5] [10]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [10]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][10] ));
-  (* SOFT_HLUTNM = "soft_lutpair205" *) 
+  (* SOFT_HLUTNM = "soft_lutpair211" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][11]_i_1 
        (.I0(\time_status_regs[5] [11]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [11]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][11] ));
-  (* SOFT_HLUTNM = "soft_lutpair205" *) 
+  (* SOFT_HLUTNM = "soft_lutpair210" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][12]_i_1 
        (.I0(\time_status_regs[5] [12]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [12]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][12] ));
-  (* SOFT_HLUTNM = "soft_lutpair204" *) 
+  (* SOFT_HLUTNM = "soft_lutpair210" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][13]_i_1 
        (.I0(\time_status_regs[5] [13]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [13]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][13] ));
-  (* SOFT_HLUTNM = "soft_lutpair204" *) 
+  (* SOFT_HLUTNM = "soft_lutpair209" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][14]_i_1 
        (.I0(\time_status_regs[5] [14]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [14]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][14] ));
-  (* SOFT_HLUTNM = "soft_lutpair203" *) 
+  (* SOFT_HLUTNM = "soft_lutpair209" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][15]_i_1 
        (.I0(\time_status_regs[5] [15]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [15]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][15] ));
-  (* SOFT_HLUTNM = "soft_lutpair203" *) 
+  (* SOFT_HLUTNM = "soft_lutpair208" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][16]_i_1 
        (.I0(\time_status_regs[5] [16]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [16]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][16] ));
-  (* SOFT_HLUTNM = "soft_lutpair202" *) 
+  (* SOFT_HLUTNM = "soft_lutpair208" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][17]_i_1 
        (.I0(\time_status_regs[5] [17]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [17]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][17] ));
-  (* SOFT_HLUTNM = "soft_lutpair202" *) 
+  (* SOFT_HLUTNM = "soft_lutpair207" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][18]_i_1 
        (.I0(\time_status_regs[5] [18]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [18]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][18] ));
-  (* SOFT_HLUTNM = "soft_lutpair201" *) 
+  (* SOFT_HLUTNM = "soft_lutpair207" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][19]_i_1 
        (.I0(\time_status_regs[5] [19]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [19]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][19] ));
-  (* SOFT_HLUTNM = "soft_lutpair210" *) 
+  (* SOFT_HLUTNM = "soft_lutpair216" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][1]_i_1 
        (.I0(\time_status_regs[5] [1]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [1]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][1] ));
-  (* SOFT_HLUTNM = "soft_lutpair201" *) 
+  (* SOFT_HLUTNM = "soft_lutpair206" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][20]_i_1 
        (.I0(\time_status_regs[5] [20]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [20]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][20] ));
-  (* SOFT_HLUTNM = "soft_lutpair200" *) 
+  (* SOFT_HLUTNM = "soft_lutpair206" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][21]_i_1 
        (.I0(\time_status_regs[5] [21]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [21]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][21] ));
-  (* SOFT_HLUTNM = "soft_lutpair200" *) 
+  (* SOFT_HLUTNM = "soft_lutpair205" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][22]_i_1 
        (.I0(\time_status_regs[5] [22]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [22]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][22] ));
-  (* SOFT_HLUTNM = "soft_lutpair199" *) 
+  (* SOFT_HLUTNM = "soft_lutpair205" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][23]_i_1 
        (.I0(\time_status_regs[5] [23]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [23]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][23] ));
-  (* SOFT_HLUTNM = "soft_lutpair199" *) 
+  (* SOFT_HLUTNM = "soft_lutpair204" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][24]_i_1 
        (.I0(\time_status_regs[5] [24]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [24]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][24] ));
-  (* SOFT_HLUTNM = "soft_lutpair198" *) 
+  (* SOFT_HLUTNM = "soft_lutpair204" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][25]_i_1 
        (.I0(\time_status_regs[5] [25]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [25]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][25] ));
-  (* SOFT_HLUTNM = "soft_lutpair198" *) 
+  (* SOFT_HLUTNM = "soft_lutpair203" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][26]_i_1 
        (.I0(\time_status_regs[5] [26]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [26]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][26] ));
-  (* SOFT_HLUTNM = "soft_lutpair197" *) 
+  (* SOFT_HLUTNM = "soft_lutpair203" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][27]_i_1 
        (.I0(\time_status_regs[5] [27]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [27]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][27] ));
-  (* SOFT_HLUTNM = "soft_lutpair197" *) 
+  (* SOFT_HLUTNM = "soft_lutpair202" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][28]_i_1 
        (.I0(\time_status_regs[5] [28]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [28]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][28] ));
-  (* SOFT_HLUTNM = "soft_lutpair196" *) 
+  (* SOFT_HLUTNM = "soft_lutpair202" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][29]_i_1 
        (.I0(\time_status_regs[5] [29]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [29]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][29] ));
-  (* SOFT_HLUTNM = "soft_lutpair210" *) 
+  (* SOFT_HLUTNM = "soft_lutpair215" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][2]_i_1 
        (.I0(\time_status_regs[5] [2]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [2]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][2] ));
-  (* SOFT_HLUTNM = "soft_lutpair196" *) 
+  (* SOFT_HLUTNM = "soft_lutpair201" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][30]_i_1 
        (.I0(\time_status_regs[5] [30]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [30]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][30] ));
-  (* SOFT_HLUTNM = "soft_lutpair195" *) 
+  (* SOFT_HLUTNM = "soft_lutpair201" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][31]_i_1 
        (.I0(\time_status_regs[5] [31]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [31]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][31] ));
-  (* SOFT_HLUTNM = "soft_lutpair209" *) 
+  (* SOFT_HLUTNM = "soft_lutpair215" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][3]_i_1 
        (.I0(\time_status_regs[5] [3]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [3]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][3] ));
-  (* SOFT_HLUTNM = "soft_lutpair209" *) 
+  (* SOFT_HLUTNM = "soft_lutpair214" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][4]_i_1 
        (.I0(\time_status_regs[5] [4]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [4]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][4] ));
-  (* SOFT_HLUTNM = "soft_lutpair208" *) 
+  (* SOFT_HLUTNM = "soft_lutpair214" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][5]_i_1 
        (.I0(\time_status_regs[5] [5]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [5]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][5] ));
-  (* SOFT_HLUTNM = "soft_lutpair207" *) 
+  (* SOFT_HLUTNM = "soft_lutpair213" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][6]_i_1 
        (.I0(\time_status_regs[5] [6]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [6]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][6] ));
-  (* SOFT_HLUTNM = "soft_lutpair147" *) 
+  (* SOFT_HLUTNM = "soft_lutpair212" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][7]_i_1 
        (.I0(\time_status_regs[5] [7]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [7]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair207" *) 
+  (* SOFT_HLUTNM = "soft_lutpair153" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][8]_i_1 
        (.I0(\time_status_regs[5] [8]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [8]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][8] ));
-  (* SOFT_HLUTNM = "soft_lutpair206" *) 
+  (* SOFT_HLUTNM = "soft_lutpair212" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg[37][9]_i_1 
        (.I0(\time_status_regs[5] [9]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[4] [9]),
         .O(\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][9] ));
-  (* SOFT_HLUTNM = "soft_lutpair195" *) 
+  (* SOFT_HLUTNM = "soft_lutpair200" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][0]_i_1 
        (.I0(\time_status_regs[7] [0]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [0]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][0] ));
-  (* SOFT_HLUTNM = "soft_lutpair190" *) 
+  (* SOFT_HLUTNM = "soft_lutpair195" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][10]_i_1 
        (.I0(\time_status_regs[7] [10]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [10]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][10] ));
-  (* SOFT_HLUTNM = "soft_lutpair189" *) 
+  (* SOFT_HLUTNM = "soft_lutpair195" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][11]_i_1 
        (.I0(\time_status_regs[7] [11]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [11]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][11] ));
-  (* SOFT_HLUTNM = "soft_lutpair189" *) 
+  (* SOFT_HLUTNM = "soft_lutpair194" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][12]_i_1 
        (.I0(\time_status_regs[7] [12]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [12]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][12] ));
-  (* SOFT_HLUTNM = "soft_lutpair188" *) 
+  (* SOFT_HLUTNM = "soft_lutpair194" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][13]_i_1 
        (.I0(\time_status_regs[7] [13]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [13]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][13] ));
-  (* SOFT_HLUTNM = "soft_lutpair188" *) 
+  (* SOFT_HLUTNM = "soft_lutpair193" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][14]_i_1 
        (.I0(\time_status_regs[7] [14]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [14]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][14] ));
-  (* SOFT_HLUTNM = "soft_lutpair148" *) 
+  (* SOFT_HLUTNM = "soft_lutpair193" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][15]_i_1 
        (.I0(\time_status_regs[7] [15]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [15]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][15] ));
-  (* SOFT_HLUTNM = "soft_lutpair147" *) 
+  (* SOFT_HLUTNM = "soft_lutpair192" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_1 
        (.I0(\time_status_regs[7] [16]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [16]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][16] ));
-  (* IS_FANOUT_CONSTRAINED = "1" *) 
-  LUT1 #(
-    .INIT(2'h2)) 
-    \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2 
-       (.I0(\data_sync[2]_2 [34]),
-        .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair187" *) 
+  (* SOFT_HLUTNM = "soft_lutpair192" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][17]_i_1 
        (.I0(\time_status_regs[7] [17]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [17]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][17] ));
-  (* SOFT_HLUTNM = "soft_lutpair187" *) 
+  (* SOFT_HLUTNM = "soft_lutpair191" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][18]_i_1 
        (.I0(\time_status_regs[7] [18]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [18]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][18] ));
-  (* SOFT_HLUTNM = "soft_lutpair186" *) 
+  (* SOFT_HLUTNM = "soft_lutpair191" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][19]_i_1 
        (.I0(\time_status_regs[7] [19]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [19]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][19] ));
-  (* SOFT_HLUTNM = "soft_lutpair194" *) 
+  (* SOFT_HLUTNM = "soft_lutpair200" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][1]_i_1 
        (.I0(\time_status_regs[7] [1]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [1]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][1] ));
-  (* SOFT_HLUTNM = "soft_lutpair186" *) 
+  (* SOFT_HLUTNM = "soft_lutpair190" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][20]_i_1 
        (.I0(\time_status_regs[7] [20]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [20]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][20] ));
-  (* SOFT_HLUTNM = "soft_lutpair185" *) 
+  (* SOFT_HLUTNM = "soft_lutpair190" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][21]_i_1 
        (.I0(\time_status_regs[7] [21]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [21]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][21] ));
-  (* SOFT_HLUTNM = "soft_lutpair185" *) 
+  (* SOFT_HLUTNM = "soft_lutpair189" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][22]_i_1 
        (.I0(\time_status_regs[7] [22]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [22]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][22] ));
-  (* SOFT_HLUTNM = "soft_lutpair184" *) 
+  (* SOFT_HLUTNM = "soft_lutpair189" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][23]_i_1 
        (.I0(\time_status_regs[7] [23]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [23]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][23] ));
-  (* SOFT_HLUTNM = "soft_lutpair184" *) 
+  (* SOFT_HLUTNM = "soft_lutpair188" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][24]_i_1 
        (.I0(\time_status_regs[7] [24]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [24]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][24] ));
-  (* SOFT_HLUTNM = "soft_lutpair183" *) 
+  (* SOFT_HLUTNM = "soft_lutpair188" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][25]_i_1 
        (.I0(\time_status_regs[7] [25]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [25]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][25] ));
-  (* SOFT_HLUTNM = "soft_lutpair183" *) 
+  (* SOFT_HLUTNM = "soft_lutpair187" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][26]_i_1 
        (.I0(\time_status_regs[7] [26]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [26]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][26] ));
-  (* SOFT_HLUTNM = "soft_lutpair182" *) 
+  (* SOFT_HLUTNM = "soft_lutpair187" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][27]_i_1 
        (.I0(\time_status_regs[7] [27]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [27]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][27] ));
-  (* SOFT_HLUTNM = "soft_lutpair182" *) 
+  (* SOFT_HLUTNM = "soft_lutpair186" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][28]_i_1 
        (.I0(\time_status_regs[7] [28]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [28]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][28] ));
-  (* SOFT_HLUTNM = "soft_lutpair181" *) 
+  (* SOFT_HLUTNM = "soft_lutpair186" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][29]_i_1 
        (.I0(\time_status_regs[7] [29]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [29]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][29] ));
-  (* SOFT_HLUTNM = "soft_lutpair194" *) 
+  (* SOFT_HLUTNM = "soft_lutpair199" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][2]_i_1 
        (.I0(\time_status_regs[7] [2]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [2]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][2] ));
-  (* SOFT_HLUTNM = "soft_lutpair181" *) 
+  (* SOFT_HLUTNM = "soft_lutpair185" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][30]_i_1 
        (.I0(\time_status_regs[7] [30]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [30]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][30] ));
-  (* SOFT_HLUTNM = "soft_lutpair180" *) 
+  (* SOFT_HLUTNM = "soft_lutpair185" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][31]_i_1 
        (.I0(\time_status_regs[7] [31]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [31]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][31] ));
-  (* SOFT_HLUTNM = "soft_lutpair193" *) 
+  (* SOFT_HLUTNM = "soft_lutpair199" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][3]_i_1 
        (.I0(\time_status_regs[7] [3]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [3]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][3] ));
-  (* SOFT_HLUTNM = "soft_lutpair193" *) 
+  (* SOFT_HLUTNM = "soft_lutpair198" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][4]_i_1 
        (.I0(\time_status_regs[7] [4]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [4]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][4] ));
-  (* SOFT_HLUTNM = "soft_lutpair192" *) 
+  (* SOFT_HLUTNM = "soft_lutpair198" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][5]_i_1 
        (.I0(\time_status_regs[7] [5]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [5]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][5] ));
-  (* SOFT_HLUTNM = "soft_lutpair192" *) 
+  (* SOFT_HLUTNM = "soft_lutpair197" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][6]_i_1 
        (.I0(\time_status_regs[7] [6]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [6]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][6] ));
-  (* SOFT_HLUTNM = "soft_lutpair191" *) 
+  (* SOFT_HLUTNM = "soft_lutpair197" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][7]_i_1 
        (.I0(\time_status_regs[7] [7]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [7]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair191" *) 
+  (* SOFT_HLUTNM = "soft_lutpair196" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][8]_i_1 
        (.I0(\time_status_regs[7] [8]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [8]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][8] ));
-  (* SOFT_HLUTNM = "soft_lutpair190" *) 
+  (* SOFT_HLUTNM = "soft_lutpair196" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][9]_i_1 
        (.I0(\time_status_regs[7] [9]),
-        .I1(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg[38][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[6] [9]),
         .O(\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][9] ));
-  (* SOFT_HLUTNM = "soft_lutpair180" *) 
+  (* SOFT_HLUTNM = "soft_lutpair184" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][0]_i_1 
        (.I0(\time_status_regs[9] [0]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[8] [0]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][0] ));
-  (* SOFT_HLUTNM = "soft_lutpair175" *) 
+  (* SOFT_HLUTNM = "soft_lutpair180" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][10]_i_1 
        (.I0(\time_status_regs[9] [10]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[8] [10]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][10] ));
-  (* SOFT_HLUTNM = "soft_lutpair174" *) 
+  (* SOFT_HLUTNM = "soft_lutpair179" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][11]_i_1 
        (.I0(\time_status_regs[9] [11]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[8] [11]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][11] ));
-  (* SOFT_HLUTNM = "soft_lutpair174" *) 
+  (* SOFT_HLUTNM = "soft_lutpair179" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][12]_i_1 
        (.I0(\time_status_regs[9] [12]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[8] [12]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][12] ));
-  (* SOFT_HLUTNM = "soft_lutpair173" *) 
+  (* SOFT_HLUTNM = "soft_lutpair178" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][13]_i_1 
        (.I0(\time_status_regs[9] [13]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[8] [13]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][13] ));
-  (* SOFT_HLUTNM = "soft_lutpair173" *) 
+  (* SOFT_HLUTNM = "soft_lutpair178" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][14]_i_1 
        (.I0(\time_status_regs[9] [14]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[8] [14]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][14] ));
-  (* SOFT_HLUTNM = "soft_lutpair172" *) 
+  (* SOFT_HLUTNM = "soft_lutpair177" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][15]_i_1 
        (.I0(\time_status_regs[9] [15]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[8] [15]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][15] ));
-  (* SOFT_HLUTNM = "soft_lutpair172" *) 
+  (* SOFT_HLUTNM = "soft_lutpair177" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][16]_i_1 
        (.I0(\time_status_regs[9] [16]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[8] [16]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][16] ));
-  (* SOFT_HLUTNM = "soft_lutpair171" *) 
+  (* SOFT_HLUTNM = "soft_lutpair176" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][17]_i_1 
        (.I0(\time_status_regs[9] [17]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[8] [17]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][17] ));
-  (* SOFT_HLUTNM = "soft_lutpair171" *) 
+  (* SOFT_HLUTNM = "soft_lutpair176" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][18]_i_1 
        (.I0(\time_status_regs[9] [18]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[8] [18]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][18] ));
-  (* SOFT_HLUTNM = "soft_lutpair170" *) 
+  (* SOFT_HLUTNM = "soft_lutpair175" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][19]_i_1 
        (.I0(\time_status_regs[9] [19]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[8] [19]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][19] ));
-  (* SOFT_HLUTNM = "soft_lutpair179" *) 
+  (* SOFT_HLUTNM = "soft_lutpair184" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][1]_i_1 
        (.I0(\time_status_regs[9] [1]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[8] [1]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][1] ));
-  (* SOFT_HLUTNM = "soft_lutpair170" *) 
+  (* SOFT_HLUTNM = "soft_lutpair175" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][20]_i_1 
        (.I0(\time_status_regs[9] [20]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[8] [20]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][20] ));
-  (* SOFT_HLUTNM = "soft_lutpair169" *) 
+  (* SOFT_HLUTNM = "soft_lutpair174" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][21]_i_1 
        (.I0(\time_status_regs[9] [21]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[8] [21]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][21] ));
-  (* SOFT_HLUTNM = "soft_lutpair169" *) 
+  (* SOFT_HLUTNM = "soft_lutpair174" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][22]_i_1 
        (.I0(\time_status_regs[9] [22]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[8] [22]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][22] ));
-  (* SOFT_HLUTNM = "soft_lutpair168" *) 
+  (* SOFT_HLUTNM = "soft_lutpair173" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][23]_i_1 
        (.I0(\time_status_regs[9] [23]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[8] [23]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][23] ));
-  (* SOFT_HLUTNM = "soft_lutpair168" *) 
+  (* SOFT_HLUTNM = "soft_lutpair173" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][24]_i_1 
        (.I0(\time_status_regs[9] [24]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[8] [24]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][24] ));
-  (* SOFT_HLUTNM = "soft_lutpair167" *) 
+  (* SOFT_HLUTNM = "soft_lutpair172" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][25]_i_1 
        (.I0(\time_status_regs[9] [25]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[8] [25]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][25] ));
-  (* SOFT_HLUTNM = "soft_lutpair167" *) 
+  (* SOFT_HLUTNM = "soft_lutpair172" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][26]_i_1 
        (.I0(\time_status_regs[9] [26]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[8] [26]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][26] ));
-  (* SOFT_HLUTNM = "soft_lutpair166" *) 
+  (* SOFT_HLUTNM = "soft_lutpair171" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][27]_i_1 
        (.I0(\time_status_regs[9] [27]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[8] [27]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][27] ));
-  (* SOFT_HLUTNM = "soft_lutpair166" *) 
+  (* SOFT_HLUTNM = "soft_lutpair171" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][28]_i_1 
        (.I0(\time_status_regs[9] [28]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[8] [28]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][28] ));
-  (* SOFT_HLUTNM = "soft_lutpair165" *) 
+  (* SOFT_HLUTNM = "soft_lutpair170" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][29]_i_1 
        (.I0(\time_status_regs[9] [29]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[8] [29]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][29] ));
-  (* SOFT_HLUTNM = "soft_lutpair179" *) 
+  (* SOFT_HLUTNM = "soft_lutpair183" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][2]_i_1 
        (.I0(\time_status_regs[9] [2]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[8] [2]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][2] ));
-  (* SOFT_HLUTNM = "soft_lutpair165" *) 
+  (* SOFT_HLUTNM = "soft_lutpair170" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][30]_i_1 
        (.I0(\time_status_regs[9] [30]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[8] [30]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][30] ));
-  (* SOFT_HLUTNM = "soft_lutpair164" *) 
+  (* SOFT_HLUTNM = "soft_lutpair169" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][31]_i_1 
        (.I0(\time_status_regs[9] [31]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[8] [31]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][31] ));
-  (* SOFT_HLUTNM = "soft_lutpair178" *) 
+  (* SOFT_HLUTNM = "soft_lutpair183" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][3]_i_1 
        (.I0(\time_status_regs[9] [3]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[8] [3]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][3] ));
-  (* SOFT_HLUTNM = "soft_lutpair178" *) 
+  (* SOFT_HLUTNM = "soft_lutpair182" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][4]_i_1 
        (.I0(\time_status_regs[9] [4]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[8] [4]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][4] ));
-  (* SOFT_HLUTNM = "soft_lutpair177" *) 
+  (* SOFT_HLUTNM = "soft_lutpair182" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][5]_i_1 
        (.I0(\time_status_regs[9] [5]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[8] [5]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][5] ));
-  (* SOFT_HLUTNM = "soft_lutpair177" *) 
+  (* SOFT_HLUTNM = "soft_lutpair153" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_1 
        (.I0(\time_status_regs[9] [6]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ),
         .I2(\time_status_regs[8] [6]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][6] ));
-  (* SOFT_HLUTNM = "soft_lutpair176" *) 
+  (* IS_FANOUT_CONSTRAINED = "1" *) 
+  LUT1 #(
+    .INIT(2'h2)) 
+    \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2 
+       (.I0(\data_sync[2]_2 [34]),
+        .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][6]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair181" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][7]_i_1 
        (.I0(\time_status_regs[9] [7]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[8] [7]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair176" *) 
+  (* SOFT_HLUTNM = "soft_lutpair181" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][8]_i_1 
        (.I0(\time_status_regs[9] [8]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[8] [8]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][8] ));
-  (* SOFT_HLUTNM = "soft_lutpair175" *) 
+  (* SOFT_HLUTNM = "soft_lutpair180" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg[39][9]_i_1 
        (.I0(\time_status_regs[9] [9]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[8] [9]),
         .O(\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][9] ));
-  (* SOFT_HLUTNM = "soft_lutpair164" *) 
+  (* SOFT_HLUTNM = "soft_lutpair169" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][0]_i_1 
        (.I0(\time_status_regs[11] [0]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [0]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][0] ));
-  (* SOFT_HLUTNM = "soft_lutpair159" *) 
+  (* SOFT_HLUTNM = "soft_lutpair164" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][10]_i_1 
        (.I0(\time_status_regs[11] [10]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [10]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][10] ));
-  (* SOFT_HLUTNM = "soft_lutpair158" *) 
+  (* SOFT_HLUTNM = "soft_lutpair163" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][11]_i_1 
        (.I0(\time_status_regs[11] [11]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [11]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][11] ));
-  (* SOFT_HLUTNM = "soft_lutpair158" *) 
+  (* SOFT_HLUTNM = "soft_lutpair163" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][12]_i_1 
        (.I0(\time_status_regs[11] [12]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [12]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][12] ));
-  (* SOFT_HLUTNM = "soft_lutpair157" *) 
+  (* SOFT_HLUTNM = "soft_lutpair162" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][13]_i_1 
        (.I0(\time_status_regs[11] [13]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [13]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][13] ));
-  (* SOFT_HLUTNM = "soft_lutpair157" *) 
+  (* SOFT_HLUTNM = "soft_lutpair162" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][14]_i_1 
        (.I0(\time_status_regs[11] [14]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [14]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][14] ));
-  (* SOFT_HLUTNM = "soft_lutpair156" *) 
+  (* SOFT_HLUTNM = "soft_lutpair161" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][15]_i_1 
        (.I0(\time_status_regs[11] [15]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [15]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][15] ));
-  (* SOFT_HLUTNM = "soft_lutpair156" *) 
+  (* SOFT_HLUTNM = "soft_lutpair161" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][16]_i_1 
        (.I0(\time_status_regs[11] [16]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [16]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][16] ));
-  (* SOFT_HLUTNM = "soft_lutpair155" *) 
+  (* SOFT_HLUTNM = "soft_lutpair160" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][17]_i_1 
        (.I0(\time_status_regs[11] [17]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [17]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][17] ));
-  (* SOFT_HLUTNM = "soft_lutpair155" *) 
+  (* SOFT_HLUTNM = "soft_lutpair160" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][18]_i_1 
        (.I0(\time_status_regs[11] [18]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [18]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][18] ));
-  (* SOFT_HLUTNM = "soft_lutpair154" *) 
+  (* SOFT_HLUTNM = "soft_lutpair159" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][19]_i_1 
        (.I0(\time_status_regs[11] [19]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [19]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][19] ));
-  (* SOFT_HLUTNM = "soft_lutpair163" *) 
+  (* SOFT_HLUTNM = "soft_lutpair168" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][1]_i_1 
        (.I0(\time_status_regs[11] [1]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [1]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][1] ));
-  (* SOFT_HLUTNM = "soft_lutpair154" *) 
+  (* SOFT_HLUTNM = "soft_lutpair159" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][20]_i_1 
        (.I0(\time_status_regs[11] [20]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [20]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][20] ));
-  (* SOFT_HLUTNM = "soft_lutpair153" *) 
+  (* SOFT_HLUTNM = "soft_lutpair158" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][21]_i_1 
        (.I0(\time_status_regs[11] [21]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [21]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][21] ));
-  (* SOFT_HLUTNM = "soft_lutpair153" *) 
+  (* SOFT_HLUTNM = "soft_lutpair158" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][22]_i_1 
        (.I0(\time_status_regs[11] [22]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [22]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][22] ));
-  (* SOFT_HLUTNM = "soft_lutpair152" *) 
+  (* SOFT_HLUTNM = "soft_lutpair157" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][23]_i_1 
        (.I0(\time_status_regs[11] [23]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [23]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][23] ));
-  (* SOFT_HLUTNM = "soft_lutpair152" *) 
+  (* SOFT_HLUTNM = "soft_lutpair157" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][24]_i_1 
        (.I0(\time_status_regs[11] [24]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [24]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][24] ));
-  (* SOFT_HLUTNM = "soft_lutpair151" *) 
+  (* SOFT_HLUTNM = "soft_lutpair156" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][25]_i_1 
        (.I0(\time_status_regs[11] [25]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [25]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][25] ));
-  (* SOFT_HLUTNM = "soft_lutpair151" *) 
+  (* SOFT_HLUTNM = "soft_lutpair156" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][26]_i_1 
        (.I0(\time_status_regs[11] [26]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [26]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][26] ));
-  (* SOFT_HLUTNM = "soft_lutpair150" *) 
+  (* SOFT_HLUTNM = "soft_lutpair155" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][27]_i_1 
        (.I0(\time_status_regs[11] [27]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [27]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][27] ));
-  (* SOFT_HLUTNM = "soft_lutpair150" *) 
+  (* SOFT_HLUTNM = "soft_lutpair155" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][28]_i_1 
        (.I0(\time_status_regs[11] [28]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [28]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][28] ));
-  (* SOFT_HLUTNM = "soft_lutpair149" *) 
+  (* SOFT_HLUTNM = "soft_lutpair154" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][29]_i_1 
        (.I0(\time_status_regs[11] [29]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [29]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][29] ));
-  (* SOFT_HLUTNM = "soft_lutpair163" *) 
+  (* SOFT_HLUTNM = "soft_lutpair168" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][2]_i_1 
        (.I0(\time_status_regs[11] [2]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [2]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][2] ));
-  (* SOFT_HLUTNM = "soft_lutpair149" *) 
+  (* SOFT_HLUTNM = "soft_lutpair154" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][30]_i_1 
        (.I0(\time_status_regs[11] [30]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [30]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][30] ));
-  (* SOFT_HLUTNM = "soft_lutpair140" *) 
+  (* SOFT_HLUTNM = "soft_lutpair152" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][31]_i_1 
        (.I0(\time_status_regs[11] [31]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [31]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][31] ));
-  (* SOFT_HLUTNM = "soft_lutpair162" *) 
+  (* SOFT_HLUTNM = "soft_lutpair167" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][3]_i_1 
        (.I0(\time_status_regs[11] [3]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [3]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][3] ));
-  (* SOFT_HLUTNM = "soft_lutpair162" *) 
+  (* SOFT_HLUTNM = "soft_lutpair167" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][4]_i_1 
        (.I0(\time_status_regs[11] [4]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [4]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][4] ));
-  (* SOFT_HLUTNM = "soft_lutpair161" *) 
+  (* SOFT_HLUTNM = "soft_lutpair166" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][5]_i_1 
        (.I0(\time_status_regs[11] [5]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [5]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][5] ));
-  (* SOFT_HLUTNM = "soft_lutpair161" *) 
+  (* SOFT_HLUTNM = "soft_lutpair166" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][6]_i_1 
        (.I0(\time_status_regs[11] [6]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [6]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][6] ));
-  (* SOFT_HLUTNM = "soft_lutpair160" *) 
+  (* SOFT_HLUTNM = "soft_lutpair165" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][7]_i_1 
        (.I0(\time_status_regs[11] [7]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [7]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair160" *) 
+  (* SOFT_HLUTNM = "soft_lutpair165" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][8]_i_1 
        (.I0(\time_status_regs[11] [8]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [8]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][8] ));
-  (* SOFT_HLUTNM = "soft_lutpair159" *) 
+  (* SOFT_HLUTNM = "soft_lutpair164" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg[40][9]_i_1 
        (.I0(\time_status_regs[11] [9]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[10] [9]),
         .O(\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][9] ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair144" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][0]_i_1 
        (.I0(\time_status_regs[13] [0]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [0]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][0] ));
-  (* SOFT_HLUTNM = "soft_lutpair142" *) 
+  (* SOFT_HLUTNM = "soft_lutpair147" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][10]_i_1 
        (.I0(\time_status_regs[13] [10]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [10]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][10] ));
-  (* SOFT_HLUTNM = "soft_lutpair141" *) 
+  (* SOFT_HLUTNM = "soft_lutpair147" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][11]_i_1 
        (.I0(\time_status_regs[13] [11]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [11]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][11] ));
-  (* SOFT_HLUTNM = "soft_lutpair141" *) 
+  (* SOFT_HLUTNM = "soft_lutpair146" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][12]_i_1 
        (.I0(\time_status_regs[13] [12]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [12]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][12] ));
-  (* SOFT_HLUTNM = "soft_lutpair140" *) 
+  (* SOFT_HLUTNM = "soft_lutpair146" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][13]_i_1 
        (.I0(\time_status_regs[13] [13]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [13]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][13] ));
-  (* SOFT_HLUTNM = "soft_lutpair139" *) 
+  (* SOFT_HLUTNM = "soft_lutpair145" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][14]_i_1 
        (.I0(\time_status_regs[13] [14]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [14]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][14] ));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair145" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][15]_i_1 
        (.I0(\time_status_regs[13] [15]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [15]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][15] ));
-  (* SOFT_HLUTNM = "soft_lutpair139" *) 
+  (* SOFT_HLUTNM = "soft_lutpair144" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][16]_i_1 
        (.I0(\time_status_regs[13] [16]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [16]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][16] ));
-  (* SOFT_HLUTNM = "soft_lutpair138" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][17]_i_1 
        (.I0(\time_status_regs[13] [17]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [17]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][17] ));
-  (* SOFT_HLUTNM = "soft_lutpair138" *) 
+  (* SOFT_HLUTNM = "soft_lutpair143" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][18]_i_1 
        (.I0(\time_status_regs[13] [18]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [18]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][18] ));
-  (* SOFT_HLUTNM = "soft_lutpair137" *) 
+  (* SOFT_HLUTNM = "soft_lutpair143" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][19]_i_1 
        (.I0(\time_status_regs[13] [19]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [19]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][19] ));
-  (* SOFT_HLUTNM = "soft_lutpair146" *) 
+  (* SOFT_HLUTNM = "soft_lutpair152" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][1]_i_1 
        (.I0(\time_status_regs[13] [1]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [1]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][1] ));
-  (* SOFT_HLUTNM = "soft_lutpair137" *) 
+  (* SOFT_HLUTNM = "soft_lutpair142" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][20]_i_1 
        (.I0(\time_status_regs[13] [20]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [20]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][20] ));
-  (* SOFT_HLUTNM = "soft_lutpair136" *) 
+  (* SOFT_HLUTNM = "soft_lutpair142" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][21]_i_1 
        (.I0(\time_status_regs[13] [21]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [21]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][21] ));
-  (* SOFT_HLUTNM = "soft_lutpair136" *) 
+  (* SOFT_HLUTNM = "soft_lutpair141" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][22]_i_1 
        (.I0(\time_status_regs[13] [22]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [22]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][22] ));
-  (* SOFT_HLUTNM = "soft_lutpair135" *) 
+  (* SOFT_HLUTNM = "soft_lutpair141" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][23]_i_1 
        (.I0(\time_status_regs[13] [23]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [23]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][23] ));
-  (* SOFT_HLUTNM = "soft_lutpair135" *) 
+  (* SOFT_HLUTNM = "soft_lutpair140" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][24]_i_1 
        (.I0(\time_status_regs[13] [24]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [24]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][24] ));
-  (* SOFT_HLUTNM = "soft_lutpair134" *) 
+  (* SOFT_HLUTNM = "soft_lutpair140" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][25]_i_1 
        (.I0(\time_status_regs[13] [25]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [25]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][25] ));
-  (* SOFT_HLUTNM = "soft_lutpair134" *) 
+  (* SOFT_HLUTNM = "soft_lutpair139" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][26]_i_1 
        (.I0(\time_status_regs[13] [26]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [26]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][26] ));
-  (* SOFT_HLUTNM = "soft_lutpair133" *) 
+  (* SOFT_HLUTNM = "soft_lutpair139" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][27]_i_1 
        (.I0(\time_status_regs[13] [27]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [27]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][27] ));
-  (* SOFT_HLUTNM = "soft_lutpair133" *) 
+  (* SOFT_HLUTNM = "soft_lutpair138" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][28]_i_1 
        (.I0(\time_status_regs[13] [28]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [28]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][28] ));
-  (* SOFT_HLUTNM = "soft_lutpair132" *) 
+  (* SOFT_HLUTNM = "soft_lutpair138" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][29]_i_1 
        (.I0(\time_status_regs[13] [29]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [29]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][29] ));
-  (* SOFT_HLUTNM = "soft_lutpair146" *) 
+  (* SOFT_HLUTNM = "soft_lutpair151" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][2]_i_1 
        (.I0(\time_status_regs[13] [2]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [2]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][2] ));
-  (* SOFT_HLUTNM = "soft_lutpair132" *) 
+  (* SOFT_HLUTNM = "soft_lutpair137" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][30]_i_1 
        (.I0(\time_status_regs[13] [30]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [30]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][30] ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair137" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][31]_i_1 
        (.I0(\time_status_regs[13] [31]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [31]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][31] ));
-  (* SOFT_HLUTNM = "soft_lutpair145" *) 
+  (* SOFT_HLUTNM = "soft_lutpair151" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][3]_i_1 
        (.I0(\time_status_regs[13] [3]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [3]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][3] ));
-  (* SOFT_HLUTNM = "soft_lutpair145" *) 
+  (* SOFT_HLUTNM = "soft_lutpair150" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][4]_i_1 
        (.I0(\time_status_regs[13] [4]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [4]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][4] ));
-  (* SOFT_HLUTNM = "soft_lutpair144" *) 
+  (* SOFT_HLUTNM = "soft_lutpair150" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][5]_i_1 
        (.I0(\time_status_regs[13] [5]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [5]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][5] ));
-  (* SOFT_HLUTNM = "soft_lutpair144" *) 
+  (* SOFT_HLUTNM = "soft_lutpair149" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][6]_i_1 
        (.I0(\time_status_regs[13] [6]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [6]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][6] ));
-  (* SOFT_HLUTNM = "soft_lutpair143" *) 
+  (* SOFT_HLUTNM = "soft_lutpair149" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][7]_i_1 
        (.I0(\time_status_regs[13] [7]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [7]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair143" *) 
+  (* SOFT_HLUTNM = "soft_lutpair148" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][8]_i_1 
        (.I0(\time_status_regs[13] [8]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [8]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][8] ));
-  (* SOFT_HLUTNM = "soft_lutpair142" *) 
+  (* SOFT_HLUTNM = "soft_lutpair148" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg[41][9]_i_1 
        (.I0(\time_status_regs[13] [9]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[12] [9]),
         .O(\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][9] ));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair136" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_1 
        (.I0(\time_status_regs[15] [0]),
-        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[14] [0]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][0] ));
-  (* IS_FANOUT_CONSTRAINED = "1" *) 
-  LUT1 #(
-    .INIT(2'h2)) 
-    \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2 
-       (.I0(\data_sync[2]_2 [34]),
-        .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][0]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair127" *) 
+  (* SOFT_HLUTNM = "soft_lutpair131" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][10]_i_1 
        (.I0(\time_status_regs[15] [10]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[14] [10]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][10] ));
-  (* SOFT_HLUTNM = "soft_lutpair126" *) 
+  (* SOFT_HLUTNM = "soft_lutpair131" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][11]_i_1 
        (.I0(\time_status_regs[15] [11]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[14] [11]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][11] ));
-  (* SOFT_HLUTNM = "soft_lutpair126" *) 
+  (* SOFT_HLUTNM = "soft_lutpair130" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][12]_i_1 
        (.I0(\time_status_regs[15] [12]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[14] [12]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][12] ));
-  (* SOFT_HLUTNM = "soft_lutpair125" *) 
+  (* SOFT_HLUTNM = "soft_lutpair130" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][13]_i_1 
        (.I0(\time_status_regs[15] [13]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[14] [13]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][13] ));
-  (* SOFT_HLUTNM = "soft_lutpair125" *) 
+  (* SOFT_HLUTNM = "soft_lutpair129" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][14]_i_1 
        (.I0(\time_status_regs[15] [14]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[14] [14]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][14] ));
-  (* SOFT_HLUTNM = "soft_lutpair124" *) 
+  (* SOFT_HLUTNM = "soft_lutpair129" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][15]_i_1 
        (.I0(\time_status_regs[15] [15]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[14] [15]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][15] ));
-  (* SOFT_HLUTNM = "soft_lutpair124" *) 
+  (* SOFT_HLUTNM = "soft_lutpair128" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][16]_i_1 
        (.I0(\time_status_regs[15] [16]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[14] [16]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][16] ));
-  (* SOFT_HLUTNM = "soft_lutpair123" *) 
+  (* SOFT_HLUTNM = "soft_lutpair128" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][17]_i_1 
        (.I0(\time_status_regs[15] [17]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[14] [17]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][17] ));
-  (* SOFT_HLUTNM = "soft_lutpair123" *) 
+  (* SOFT_HLUTNM = "soft_lutpair127" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][18]_i_1 
        (.I0(\time_status_regs[15] [18]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[14] [18]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][18] ));
-  (* SOFT_HLUTNM = "soft_lutpair122" *) 
+  (* SOFT_HLUTNM = "soft_lutpair127" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][19]_i_1 
        (.I0(\time_status_regs[15] [19]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[14] [19]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][19] ));
-  (* SOFT_HLUTNM = "soft_lutpair131" *) 
+  (* SOFT_HLUTNM = "soft_lutpair136" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][1]_i_1 
        (.I0(\time_status_regs[15] [1]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[14] [1]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][1] ));
-  (* SOFT_HLUTNM = "soft_lutpair122" *) 
+  (* SOFT_HLUTNM = "soft_lutpair126" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][20]_i_1 
        (.I0(\time_status_regs[15] [20]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[14] [20]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][20] ));
-  (* SOFT_HLUTNM = "soft_lutpair121" *) 
+  (* SOFT_HLUTNM = "soft_lutpair126" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][21]_i_1 
        (.I0(\time_status_regs[15] [21]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[14] [21]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][21] ));
-  (* SOFT_HLUTNM = "soft_lutpair121" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_1 
        (.I0(\time_status_regs[15] [22]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[14] [22]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][22] ));
-  (* SOFT_HLUTNM = "soft_lutpair120" *) 
+  (* IS_FANOUT_CONSTRAINED = "1" *) 
+  LUT1 #(
+    .INIT(2'h2)) 
+    \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2 
+       (.I0(\data_sync[2]_2 [34]),
+        .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair125" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][23]_i_1 
        (.I0(\time_status_regs[15] [23]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[14] [23]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][23] ));
-  (* SOFT_HLUTNM = "soft_lutpair120" *) 
+  (* SOFT_HLUTNM = "soft_lutpair125" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][24]_i_1 
        (.I0(\time_status_regs[15] [24]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[14] [24]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][24] ));
-  (* SOFT_HLUTNM = "soft_lutpair119" *) 
+  (* SOFT_HLUTNM = "soft_lutpair124" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][25]_i_1 
        (.I0(\time_status_regs[15] [25]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[14] [25]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][25] ));
-  (* SOFT_HLUTNM = "soft_lutpair119" *) 
+  (* SOFT_HLUTNM = "soft_lutpair124" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][26]_i_1 
        (.I0(\time_status_regs[15] [26]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[14] [26]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][26] ));
-  (* SOFT_HLUTNM = "soft_lutpair118" *) 
+  (* SOFT_HLUTNM = "soft_lutpair123" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][27]_i_1 
        (.I0(\time_status_regs[15] [27]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[14] [27]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][27] ));
-  (* SOFT_HLUTNM = "soft_lutpair118" *) 
+  (* SOFT_HLUTNM = "soft_lutpair123" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][28]_i_1 
        (.I0(\time_status_regs[15] [28]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[14] [28]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][28] ));
-  (* SOFT_HLUTNM = "soft_lutpair117" *) 
+  (* SOFT_HLUTNM = "soft_lutpair122" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][29]_i_1 
        (.I0(\time_status_regs[15] [29]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[14] [29]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][29] ));
-  (* SOFT_HLUTNM = "soft_lutpair131" *) 
+  (* SOFT_HLUTNM = "soft_lutpair135" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][2]_i_1 
        (.I0(\time_status_regs[15] [2]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[14] [2]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][2] ));
-  (* SOFT_HLUTNM = "soft_lutpair117" *) 
+  (* SOFT_HLUTNM = "soft_lutpair122" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][30]_i_1 
        (.I0(\time_status_regs[15] [30]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[14] [30]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][30] ));
-  (* SOFT_HLUTNM = "soft_lutpair116" *) 
+  (* SOFT_HLUTNM = "soft_lutpair121" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][31]_i_1 
        (.I0(\time_status_regs[15] [31]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[14] [31]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][31] ));
-  (* SOFT_HLUTNM = "soft_lutpair130" *) 
+  (* SOFT_HLUTNM = "soft_lutpair135" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][3]_i_1 
        (.I0(\time_status_regs[15] [3]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[14] [3]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][3] ));
-  (* SOFT_HLUTNM = "soft_lutpair130" *) 
+  (* SOFT_HLUTNM = "soft_lutpair134" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][4]_i_1 
        (.I0(\time_status_regs[15] [4]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[14] [4]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][4] ));
-  (* SOFT_HLUTNM = "soft_lutpair129" *) 
+  (* SOFT_HLUTNM = "soft_lutpair134" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][5]_i_1 
        (.I0(\time_status_regs[15] [5]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[14] [5]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][5] ));
-  (* SOFT_HLUTNM = "soft_lutpair129" *) 
+  (* SOFT_HLUTNM = "soft_lutpair133" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][6]_i_1 
        (.I0(\time_status_regs[15] [6]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[14] [6]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][6] ));
-  (* SOFT_HLUTNM = "soft_lutpair128" *) 
+  (* SOFT_HLUTNM = "soft_lutpair133" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][7]_i_1 
        (.I0(\time_status_regs[15] [7]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[14] [7]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair128" *) 
+  (* SOFT_HLUTNM = "soft_lutpair132" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][8]_i_1 
        (.I0(\time_status_regs[15] [8]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[14] [8]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][8] ));
-  (* SOFT_HLUTNM = "soft_lutpair127" *) 
+  (* SOFT_HLUTNM = "soft_lutpair132" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][9]_i_1 
        (.I0(\time_status_regs[15] [9]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg[42][22]_i_2_n_0 ),
         .I2(\time_status_regs[14] [9]),
         .O(\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][9] ));
-  (* SOFT_HLUTNM = "soft_lutpair116" *) 
+  (* SOFT_HLUTNM = "soft_lutpair121" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][0]_i_1 
        (.I0(\time_status_regs[17] [0]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][28] [0]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][0] ));
-  (* SOFT_HLUTNM = "soft_lutpair111" *) 
+  (* SOFT_HLUTNM = "soft_lutpair116" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][10]_i_1 
        (.I0(\time_status_regs[17] [10]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][28] [10]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][10] ));
-  (* SOFT_HLUTNM = "soft_lutpair110" *) 
+  (* SOFT_HLUTNM = "soft_lutpair115" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][11]_i_1 
        (.I0(\time_status_regs[17] [11]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][28] [11]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][11] ));
-  (* SOFT_HLUTNM = "soft_lutpair110" *) 
+  (* SOFT_HLUTNM = "soft_lutpair115" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][12]_i_1 
        (.I0(\time_status_regs[17] [12]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][28] [12]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][12] ));
-  (* SOFT_HLUTNM = "soft_lutpair109" *) 
+  (* SOFT_HLUTNM = "soft_lutpair114" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][13]_i_1 
        (.I0(\time_status_regs[17] [13]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[16] [0]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][13] ));
-  (* SOFT_HLUTNM = "soft_lutpair109" *) 
+  (* SOFT_HLUTNM = "soft_lutpair114" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][14]_i_1 
        (.I0(\time_status_regs[17] [14]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[16] [1]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][14] ));
-  (* SOFT_HLUTNM = "soft_lutpair108" *) 
+  (* SOFT_HLUTNM = "soft_lutpair113" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][15]_i_1 
        (.I0(\time_status_regs[17] [15]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[16] [2]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][15] ));
-  (* SOFT_HLUTNM = "soft_lutpair108" *) 
+  (* SOFT_HLUTNM = "soft_lutpair113" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][16]_i_1 
        (.I0(\time_status_regs[17] [16]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][28] [13]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][16] ));
-  (* SOFT_HLUTNM = "soft_lutpair107" *) 
+  (* SOFT_HLUTNM = "soft_lutpair112" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][17]_i_1 
        (.I0(\time_status_regs[17] [17]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][28] [14]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][17] ));
-  (* SOFT_HLUTNM = "soft_lutpair107" *) 
+  (* SOFT_HLUTNM = "soft_lutpair112" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][18]_i_1 
        (.I0(\time_status_regs[17] [18]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][28] [15]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][18] ));
-  (* SOFT_HLUTNM = "soft_lutpair106" *) 
+  (* SOFT_HLUTNM = "soft_lutpair111" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][19]_i_1 
        (.I0(\time_status_regs[17] [19]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][28] [16]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][19] ));
-  (* SOFT_HLUTNM = "soft_lutpair115" *) 
+  (* SOFT_HLUTNM = "soft_lutpair120" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][1]_i_1 
        (.I0(\time_status_regs[17] [1]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][28] [1]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][1] ));
-  (* SOFT_HLUTNM = "soft_lutpair106" *) 
+  (* SOFT_HLUTNM = "soft_lutpair111" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][20]_i_1 
        (.I0(\time_status_regs[17] [20]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][28] [17]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][20] ));
-  (* SOFT_HLUTNM = "soft_lutpair105" *) 
+  (* SOFT_HLUTNM = "soft_lutpair110" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][21]_i_1 
        (.I0(\time_status_regs[17] [21]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][28] [18]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][21] ));
-  (* SOFT_HLUTNM = "soft_lutpair105" *) 
+  (* SOFT_HLUTNM = "soft_lutpair110" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][22]_i_1 
        (.I0(\time_status_regs[17] [22]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][28] [19]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][22] ));
-  (* SOFT_HLUTNM = "soft_lutpair104" *) 
+  (* SOFT_HLUTNM = "soft_lutpair109" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][23]_i_1 
        (.I0(\time_status_regs[17] [23]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][28] [20]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][23] ));
-  (* SOFT_HLUTNM = "soft_lutpair104" *) 
+  (* SOFT_HLUTNM = "soft_lutpair109" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][24]_i_1 
        (.I0(\time_status_regs[17] [24]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][28] [21]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][24] ));
-  (* SOFT_HLUTNM = "soft_lutpair103" *) 
+  (* SOFT_HLUTNM = "soft_lutpair108" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][25]_i_1 
        (.I0(\time_status_regs[17] [25]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][28] [22]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][25] ));
-  (* SOFT_HLUTNM = "soft_lutpair103" *) 
+  (* SOFT_HLUTNM = "soft_lutpair108" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][26]_i_1 
        (.I0(\time_status_regs[17] [26]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][28] [23]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][26] ));
-  (* SOFT_HLUTNM = "soft_lutpair102" *) 
+  (* SOFT_HLUTNM = "soft_lutpair107" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][27]_i_1 
        (.I0(\time_status_regs[17] [27]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][28] [24]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][27] ));
-  (* SOFT_HLUTNM = "soft_lutpair102" *) 
+  (* SOFT_HLUTNM = "soft_lutpair107" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][28]_i_1 
        (.I0(\time_status_regs[17] [28]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][28] [25]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][28] ));
-  (* SOFT_HLUTNM = "soft_lutpair101" *) 
+  (* SOFT_HLUTNM = "soft_lutpair106" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][29]_i_1 
        (.I0(\time_status_regs[17] [29]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[16] [3]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][29] ));
-  (* SOFT_HLUTNM = "soft_lutpair115" *) 
+  (* SOFT_HLUTNM = "soft_lutpair120" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][2]_i_1 
        (.I0(\time_status_regs[17] [2]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][28] [2]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][2] ));
-  (* SOFT_HLUTNM = "soft_lutpair101" *) 
+  (* SOFT_HLUTNM = "soft_lutpair106" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][30]_i_1 
        (.I0(\time_status_regs[17] [30]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[16] [4]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][30] ));
-  (* SOFT_HLUTNM = "soft_lutpair100" *) 
+  (* SOFT_HLUTNM = "soft_lutpair105" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][31]_i_1 
        (.I0(\time_status_regs[17] [31]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[16] [5]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][31] ));
-  (* SOFT_HLUTNM = "soft_lutpair114" *) 
+  (* SOFT_HLUTNM = "soft_lutpair119" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][3]_i_1 
        (.I0(\time_status_regs[17] [3]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][28] [3]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][3] ));
-  (* SOFT_HLUTNM = "soft_lutpair114" *) 
+  (* SOFT_HLUTNM = "soft_lutpair119" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][4]_i_1 
        (.I0(\time_status_regs[17] [4]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][28] [4]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][4] ));
-  (* SOFT_HLUTNM = "soft_lutpair113" *) 
+  (* SOFT_HLUTNM = "soft_lutpair118" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][5]_i_1 
        (.I0(\time_status_regs[17] [5]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][28] [5]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][5] ));
-  (* SOFT_HLUTNM = "soft_lutpair113" *) 
+  (* SOFT_HLUTNM = "soft_lutpair118" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][6]_i_1 
        (.I0(\time_status_regs[17] [6]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][28] [6]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][6] ));
-  (* SOFT_HLUTNM = "soft_lutpair112" *) 
+  (* SOFT_HLUTNM = "soft_lutpair117" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][7]_i_1 
        (.I0(\time_status_regs[17] [7]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][28] [7]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair112" *) 
+  (* SOFT_HLUTNM = "soft_lutpair117" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][8]_i_1 
        (.I0(\time_status_regs[17] [8]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][28] [8]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][8] ));
-  (* SOFT_HLUTNM = "soft_lutpair111" *) 
+  (* SOFT_HLUTNM = "soft_lutpair116" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg[43][9]_i_1 
        (.I0(\time_status_regs[17] [9]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][28] [9]),
         .O(\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][9] ));
-  (* SOFT_HLUTNM = "soft_lutpair100" *) 
+  (* SOFT_HLUTNM = "soft_lutpair105" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][0]_i_1 
        (.I0(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[19][6] [0]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[18][9] [0]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][0] ));
-  (* SOFT_HLUTNM = "soft_lutpair95" *) 
+  (* SOFT_HLUTNM = "soft_lutpair100" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][10]_i_1 
        (.I0(\time_status_regs[19] [3]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[18] [2]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][10] ));
-  (* SOFT_HLUTNM = "soft_lutpair94" *) 
+  (* SOFT_HLUTNM = "soft_lutpair99" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][11]_i_1 
        (.I0(\time_status_regs[19] [4]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[18] [3]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][11] ));
-  (* SOFT_HLUTNM = "soft_lutpair94" *) 
+  (* SOFT_HLUTNM = "soft_lutpair99" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][12]_i_1 
        (.I0(\time_status_regs[19] [5]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[18] [4]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][12] ));
-  (* SOFT_HLUTNM = "soft_lutpair93" *) 
+  (* SOFT_HLUTNM = "soft_lutpair98" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][13]_i_1 
        (.I0(\time_status_regs[19] [6]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[18] [5]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][13] ));
-  (* SOFT_HLUTNM = "soft_lutpair93" *) 
+  (* SOFT_HLUTNM = "soft_lutpair98" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][14]_i_1 
        (.I0(\time_status_regs[19] [7]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[18] [6]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][14] ));
-  (* SOFT_HLUTNM = "soft_lutpair92" *) 
+  (* SOFT_HLUTNM = "soft_lutpair97" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][15]_i_1 
        (.I0(\time_status_regs[19] [8]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[18] [7]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][15] ));
-  (* SOFT_HLUTNM = "soft_lutpair92" *) 
+  (* SOFT_HLUTNM = "soft_lutpair97" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][16]_i_1 
        (.I0(\time_status_regs[19] [9]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[18] [8]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][16] ));
-  (* SOFT_HLUTNM = "soft_lutpair91" *) 
+  (* SOFT_HLUTNM = "soft_lutpair96" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][17]_i_1 
        (.I0(\time_status_regs[19] [10]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[18] [9]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][17] ));
-  (* SOFT_HLUTNM = "soft_lutpair91" *) 
+  (* SOFT_HLUTNM = "soft_lutpair96" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][18]_i_1 
        (.I0(\time_status_regs[19] [11]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[18] [10]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][18] ));
-  (* SOFT_HLUTNM = "soft_lutpair90" *) 
+  (* SOFT_HLUTNM = "soft_lutpair95" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][19]_i_1 
        (.I0(\time_status_regs[19] [12]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[18] [11]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][19] ));
-  (* SOFT_HLUTNM = "soft_lutpair99" *) 
+  (* SOFT_HLUTNM = "soft_lutpair104" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][1]_i_1 
        (.I0(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[19][6] [1]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[18][9] [1]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][1] ));
-  (* SOFT_HLUTNM = "soft_lutpair90" *) 
+  (* SOFT_HLUTNM = "soft_lutpair95" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][20]_i_1 
        (.I0(\time_status_regs[19] [13]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[18] [12]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][20] ));
-  (* SOFT_HLUTNM = "soft_lutpair89" *) 
+  (* SOFT_HLUTNM = "soft_lutpair94" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][21]_i_1 
        (.I0(\time_status_regs[19] [14]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[18] [13]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][21] ));
-  (* SOFT_HLUTNM = "soft_lutpair89" *) 
+  (* SOFT_HLUTNM = "soft_lutpair94" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][22]_i_1 
        (.I0(\time_status_regs[19] [15]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[18] [14]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][22] ));
-  (* SOFT_HLUTNM = "soft_lutpair88" *) 
+  (* SOFT_HLUTNM = "soft_lutpair93" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][23]_i_1 
        (.I0(\time_status_regs[19] [16]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[18] [15]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][23] ));
-  (* SOFT_HLUTNM = "soft_lutpair88" *) 
+  (* SOFT_HLUTNM = "soft_lutpair93" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][24]_i_1 
        (.I0(\time_status_regs[19] [17]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[18] [16]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][24] ));
-  (* SOFT_HLUTNM = "soft_lutpair87" *) 
+  (* SOFT_HLUTNM = "soft_lutpair92" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][25]_i_1 
        (.I0(\time_status_regs[19] [18]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[18] [17]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][25] ));
-  (* SOFT_HLUTNM = "soft_lutpair87" *) 
+  (* SOFT_HLUTNM = "soft_lutpair92" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][26]_i_1 
        (.I0(\time_status_regs[19] [19]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[18] [18]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][26] ));
-  (* SOFT_HLUTNM = "soft_lutpair86" *) 
+  (* SOFT_HLUTNM = "soft_lutpair91" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][27]_i_1 
        (.I0(\time_status_regs[19] [20]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[18] [19]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][27] ));
-  (* SOFT_HLUTNM = "soft_lutpair86" *) 
+  (* SOFT_HLUTNM = "soft_lutpair91" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][28]_i_1 
        (.I0(\time_status_regs[19] [21]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[18] [20]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][28] ));
-  (* SOFT_HLUTNM = "soft_lutpair85" *) 
+  (* SOFT_HLUTNM = "soft_lutpair90" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][29]_i_1 
        (.I0(\time_status_regs[19] [22]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[18] [21]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][29] ));
-  (* SOFT_HLUTNM = "soft_lutpair99" *) 
+  (* SOFT_HLUTNM = "soft_lutpair104" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][2]_i_1 
        (.I0(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[19][6] [2]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[18][9] [2]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][2] ));
-  (* SOFT_HLUTNM = "soft_lutpair85" *) 
+  (* SOFT_HLUTNM = "soft_lutpair90" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][30]_i_1 
        (.I0(\time_status_regs[19] [23]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[18] [22]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][30] ));
-  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  (* SOFT_HLUTNM = "soft_lutpair89" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][31]_i_1 
        (.I0(\time_status_regs[19] [24]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[18] [23]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][31] ));
-  (* SOFT_HLUTNM = "soft_lutpair98" *) 
+  (* SOFT_HLUTNM = "soft_lutpair103" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][3]_i_1 
        (.I0(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[19][6] [3]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[18][9] [3]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][3] ));
-  (* SOFT_HLUTNM = "soft_lutpair98" *) 
+  (* SOFT_HLUTNM = "soft_lutpair103" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][4]_i_1 
        (.I0(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[19][6] [4]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[18] [0]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][4] ));
-  (* SOFT_HLUTNM = "soft_lutpair97" *) 
+  (* SOFT_HLUTNM = "soft_lutpair102" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][5]_i_1 
        (.I0(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[19][6] [5]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[18] [1]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][5] ));
-  (* SOFT_HLUTNM = "soft_lutpair97" *) 
+  (* SOFT_HLUTNM = "soft_lutpair102" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][6]_i_1 
        (.I0(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[19][6] [6]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[18][9] [4]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][6] ));
-  (* SOFT_HLUTNM = "soft_lutpair96" *) 
+  (* SOFT_HLUTNM = "soft_lutpair101" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][7]_i_1 
        (.I0(\time_status_regs[19] [0]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[18][9] [5]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair96" *) 
+  (* SOFT_HLUTNM = "soft_lutpair101" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][8]_i_1 
        (.I0(\time_status_regs[19] [1]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[18][9] [6]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][8] ));
-  (* SOFT_HLUTNM = "soft_lutpair95" *) 
+  (* SOFT_HLUTNM = "soft_lutpair100" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg[44][9]_i_1 
        (.I0(\time_status_regs[19] [2]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[18][9] [7]),
         .O(\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][9] ));
-  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  (* SOFT_HLUTNM = "soft_lutpair89" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][0]_i_1 
        (.I0(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][0]_0 ),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[20][0]_0 ),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][0] ));
-  (* SOFT_HLUTNM = "soft_lutpair79" *) 
+  (* SOFT_HLUTNM = "soft_lutpair84" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][10]_i_1 
        (.I0(genr_regs[34]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(genr_regs[9]),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][10] ));
-  (* SOFT_HLUTNM = "soft_lutpair78" *) 
+  (* SOFT_HLUTNM = "soft_lutpair83" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][11]_i_1 
        (.I0(genr_regs[35]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(genr_regs[10]),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][11] ));
-  (* SOFT_HLUTNM = "soft_lutpair78" *) 
+  (* SOFT_HLUTNM = "soft_lutpair83" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][12]_i_1 
        (.I0(genr_regs[36]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(genr_regs[11]),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][12] ));
-  (* SOFT_HLUTNM = "soft_lutpair77" *) 
+  (* SOFT_HLUTNM = "soft_lutpair82" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][13]_i_1 
        (.I0(\time_status_regs[21] [0]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[20] [0]),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][13] ));
-  (* SOFT_HLUTNM = "soft_lutpair77" *) 
+  (* SOFT_HLUTNM = "soft_lutpair82" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][14]_i_1 
        (.I0(\time_status_regs[21] [1]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[20] [1]),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][14] ));
-  (* SOFT_HLUTNM = "soft_lutpair76" *) 
+  (* SOFT_HLUTNM = "soft_lutpair81" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][15]_i_1 
        (.I0(\time_status_regs[21] [2]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[20] [2]),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][15] ));
-  (* SOFT_HLUTNM = "soft_lutpair76" *) 
+  (* SOFT_HLUTNM = "soft_lutpair81" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_1 
        (.I0(genr_regs[37]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(genr_regs[12]),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][16] ));
-  (* IS_FANOUT_CONSTRAINED = "1" *) 
-  LUT1 #(
-    .INIT(2'h2)) 
-    \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2 
-       (.I0(\data_sync[2]_2 [34]),
-        .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair75" *) 
+  (* SOFT_HLUTNM = "soft_lutpair80" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][17]_i_1 
        (.I0(genr_regs[38]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(genr_regs[13]),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][17] ));
-  (* SOFT_HLUTNM = "soft_lutpair75" *) 
+  (* SOFT_HLUTNM = "soft_lutpair80" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][18]_i_1 
        (.I0(genr_regs[39]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(genr_regs[14]),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][18] ));
-  (* SOFT_HLUTNM = "soft_lutpair74" *) 
+  (* SOFT_HLUTNM = "soft_lutpair79" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][19]_i_1 
        (.I0(genr_regs[40]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(genr_regs[15]),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][19] ));
-  (* SOFT_HLUTNM = "soft_lutpair83" *) 
+  (* SOFT_HLUTNM = "soft_lutpair88" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][1]_i_1 
        (.I0(genr_regs[25]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(genr_regs[0]),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][1] ));
-  (* SOFT_HLUTNM = "soft_lutpair74" *) 
+  (* SOFT_HLUTNM = "soft_lutpair79" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][20]_i_1 
        (.I0(genr_regs[41]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(genr_regs[16]),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][20] ));
-  (* SOFT_HLUTNM = "soft_lutpair73" *) 
+  (* SOFT_HLUTNM = "soft_lutpair78" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][21]_i_1 
        (.I0(genr_regs[42]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(genr_regs[17]),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][21] ));
-  (* SOFT_HLUTNM = "soft_lutpair73" *) 
+  (* SOFT_HLUTNM = "soft_lutpair78" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][22]_i_1 
        (.I0(genr_regs[43]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(genr_regs[18]),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][22] ));
-  (* SOFT_HLUTNM = "soft_lutpair72" *) 
+  (* SOFT_HLUTNM = "soft_lutpair77" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][23]_i_1 
        (.I0(genr_regs[44]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(genr_regs[19]),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][23] ));
-  (* SOFT_HLUTNM = "soft_lutpair72" *) 
+  (* SOFT_HLUTNM = "soft_lutpair77" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][24]_i_1 
        (.I0(genr_regs[45]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(genr_regs[20]),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][24] ));
-  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+  (* SOFT_HLUTNM = "soft_lutpair76" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][25]_i_1 
        (.I0(genr_regs[46]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(genr_regs[21]),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][25] ));
-  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+  (* SOFT_HLUTNM = "soft_lutpair76" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][26]_i_1 
        (.I0(genr_regs[47]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(genr_regs[22]),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][26] ));
-  (* SOFT_HLUTNM = "soft_lutpair70" *) 
+  (* SOFT_HLUTNM = "soft_lutpair75" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][27]_i_1 
        (.I0(genr_regs[48]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(genr_regs[23]),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][27] ));
-  (* SOFT_HLUTNM = "soft_lutpair70" *) 
+  (* SOFT_HLUTNM = "soft_lutpair75" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][28]_i_1 
        (.I0(genr_regs[49]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(genr_regs[24]),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][28] ));
-  (* SOFT_HLUTNM = "soft_lutpair69" *) 
+  (* SOFT_HLUTNM = "soft_lutpair74" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][29]_i_1 
        (.I0(\time_status_regs[21] [3]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[20] [3]),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][29] ));
-  (* SOFT_HLUTNM = "soft_lutpair83" *) 
+  (* SOFT_HLUTNM = "soft_lutpair88" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][2]_i_1 
        (.I0(genr_regs[26]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(genr_regs[1]),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][2] ));
-  (* SOFT_HLUTNM = "soft_lutpair69" *) 
+  (* SOFT_HLUTNM = "soft_lutpair74" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][30]_i_1 
        (.I0(\time_status_regs[21] [4]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[20] [4]),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][30] ));
-  (* SOFT_HLUTNM = "soft_lutpair68" *) 
+  (* SOFT_HLUTNM = "soft_lutpair73" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][31]_i_1 
        (.I0(\time_status_regs[21] [5]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\time_status_regs[20] [5]),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][31] ));
-  (* SOFT_HLUTNM = "soft_lutpair82" *) 
+  (* SOFT_HLUTNM = "soft_lutpair87" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][3]_i_1 
        (.I0(genr_regs[27]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(genr_regs[2]),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][3] ));
-  (* SOFT_HLUTNM = "soft_lutpair82" *) 
+  (* SOFT_HLUTNM = "soft_lutpair87" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][4]_i_1 
        (.I0(genr_regs[28]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(genr_regs[3]),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][4] ));
-  (* SOFT_HLUTNM = "soft_lutpair81" *) 
+  (* SOFT_HLUTNM = "soft_lutpair86" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][5]_i_1 
        (.I0(genr_regs[29]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(genr_regs[4]),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][5] ));
-  (* SOFT_HLUTNM = "soft_lutpair81" *) 
+  (* SOFT_HLUTNM = "soft_lutpair86" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][6]_i_1 
        (.I0(genr_regs[30]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(genr_regs[5]),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][6] ));
-  (* SOFT_HLUTNM = "soft_lutpair80" *) 
+  (* SOFT_HLUTNM = "soft_lutpair85" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][7]_i_1 
        (.I0(genr_regs[31]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(genr_regs[6]),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair80" *) 
+  (* SOFT_HLUTNM = "soft_lutpair85" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][8]_i_1 
        (.I0(genr_regs[32]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(genr_regs[7]),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][8] ));
-  (* SOFT_HLUTNM = "soft_lutpair79" *) 
+  (* SOFT_HLUTNM = "soft_lutpair84" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][9]_i_1 
        (.I0(genr_regs[33]),
-        .I1(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg[45][16]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(genr_regs[8]),
         .O(\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][9] ));
-  (* SOFT_HLUTNM = "soft_lutpair68" *) 
+  (* SOFT_HLUTNM = "soft_lutpair73" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][0]_i_1 
        (.I0(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][0]_0 ),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[22][0]_0 ),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][0] ));
-  (* SOFT_HLUTNM = "soft_lutpair63" *) 
+  (* SOFT_HLUTNM = "soft_lutpair68" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][10]_i_1 
        (.I0(genr_regs[84]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[59]),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][10] ));
-  (* SOFT_HLUTNM = "soft_lutpair62" *) 
+  (* SOFT_HLUTNM = "soft_lutpair67" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][11]_i_1 
        (.I0(genr_regs[85]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[60]),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][11] ));
-  (* SOFT_HLUTNM = "soft_lutpair62" *) 
+  (* SOFT_HLUTNM = "soft_lutpair67" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][12]_i_1 
        (.I0(genr_regs[86]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[61]),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][12] ));
-  (* SOFT_HLUTNM = "soft_lutpair61" *) 
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][13]_i_1 
        (.I0(\time_status_regs[23] [0]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(\time_status_regs[22] [0]),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][13] ));
-  (* SOFT_HLUTNM = "soft_lutpair61" *) 
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][14]_i_1 
        (.I0(\time_status_regs[23] [1]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(\time_status_regs[22] [1]),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][14] ));
-  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][15]_i_1 
        (.I0(\time_status_regs[23] [2]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(\time_status_regs[22] [2]),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][15] ));
-  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][16]_i_1 
        (.I0(genr_regs[87]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[62]),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][16] ));
-  (* SOFT_HLUTNM = "soft_lutpair59" *) 
+  (* SOFT_HLUTNM = "soft_lutpair64" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][17]_i_1 
        (.I0(genr_regs[88]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[63]),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][17] ));
-  (* SOFT_HLUTNM = "soft_lutpair59" *) 
+  (* SOFT_HLUTNM = "soft_lutpair64" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][18]_i_1 
        (.I0(genr_regs[89]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[64]),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][18] ));
-  (* SOFT_HLUTNM = "soft_lutpair58" *) 
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][19]_i_1 
        (.I0(genr_regs[90]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[65]),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][19] ));
-  (* SOFT_HLUTNM = "soft_lutpair67" *) 
+  (* SOFT_HLUTNM = "soft_lutpair72" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][1]_i_1 
        (.I0(genr_regs[75]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(genr_regs[50]),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][1] ));
-  (* SOFT_HLUTNM = "soft_lutpair58" *) 
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][20]_i_1 
        (.I0(genr_regs[91]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[66]),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][20] ));
-  (* SOFT_HLUTNM = "soft_lutpair57" *) 
+  (* SOFT_HLUTNM = "soft_lutpair62" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][21]_i_1 
        (.I0(genr_regs[92]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[67]),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][21] ));
-  (* SOFT_HLUTNM = "soft_lutpair57" *) 
+  (* SOFT_HLUTNM = "soft_lutpair62" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][22]_i_1 
        (.I0(genr_regs[93]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[68]),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][22] ));
-  (* SOFT_HLUTNM = "soft_lutpair56" *) 
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][23]_i_1 
        (.I0(genr_regs[94]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[69]),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][23] ));
-  (* SOFT_HLUTNM = "soft_lutpair56" *) 
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][24]_i_1 
        (.I0(genr_regs[95]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[70]),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][24] ));
-  (* SOFT_HLUTNM = "soft_lutpair55" *) 
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][25]_i_1 
        (.I0(genr_regs[96]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[71]),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][25] ));
-  (* SOFT_HLUTNM = "soft_lutpair55" *) 
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][26]_i_1 
        (.I0(genr_regs[97]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[72]),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][26] ));
-  (* SOFT_HLUTNM = "soft_lutpair54" *) 
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][27]_i_1 
        (.I0(genr_regs[98]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[73]),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][27] ));
-  (* SOFT_HLUTNM = "soft_lutpair54" *) 
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][28]_i_1 
        (.I0(genr_regs[99]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[74]),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][28] ));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+  (* SOFT_HLUTNM = "soft_lutpair58" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][29]_i_1 
        (.I0(\time_status_regs[23] [3]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(\time_status_regs[22] [3]),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][29] ));
-  (* SOFT_HLUTNM = "soft_lutpair67" *) 
+  (* SOFT_HLUTNM = "soft_lutpair72" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][2]_i_1 
        (.I0(genr_regs[76]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(genr_regs[51]),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][2] ));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+  (* SOFT_HLUTNM = "soft_lutpair58" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][30]_i_1 
        (.I0(\time_status_regs[23] [4]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(\time_status_regs[22] [4]),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][30] ));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  (* SOFT_HLUTNM = "soft_lutpair57" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][31]_i_1 
        (.I0(\time_status_regs[23] [5]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(\time_status_regs[22] [5]),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][31] ));
-  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  (* SOFT_HLUTNM = "soft_lutpair71" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][3]_i_1 
        (.I0(genr_regs[77]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(genr_regs[52]),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][3] ));
-  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  (* SOFT_HLUTNM = "soft_lutpair71" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][4]_i_1 
        (.I0(genr_regs[78]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(genr_regs[53]),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][4] ));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  (* SOFT_HLUTNM = "soft_lutpair70" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][5]_i_1 
        (.I0(genr_regs[79]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(genr_regs[54]),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][5] ));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  (* SOFT_HLUTNM = "soft_lutpair70" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_1 
        (.I0(genr_regs[80]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ),
         .I2(genr_regs[55]),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][6] ));
-  (* SOFT_HLUTNM = "soft_lutpair64" *) 
+  (* IS_FANOUT_CONSTRAINED = "1" *) 
+  LUT1 #(
+    .INIT(2'h2)) 
+    \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2 
+       (.I0(\data_sync[2]_2 [34]),
+        .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][6]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair69" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][7]_i_1 
        (.I0(genr_regs[81]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[56]),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair64" *) 
+  (* SOFT_HLUTNM = "soft_lutpair69" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][8]_i_1 
        (.I0(genr_regs[82]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[57]),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][8] ));
-  (* SOFT_HLUTNM = "soft_lutpair63" *) 
+  (* SOFT_HLUTNM = "soft_lutpair68" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg[46][9]_i_1 
        (.I0(genr_regs[83]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[58]),
         .O(\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][9] ));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  (* SOFT_HLUTNM = "soft_lutpair57" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][0]_i_1 
        (.I0(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][0]_0 ),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[24][0]_0 ),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][0] ));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][10]_i_1 
        (.I0(genr_regs[134]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[109]),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][10] ));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][11]_i_1 
        (.I0(genr_regs[135]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[110]),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][11] ));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][12]_i_1 
        (.I0(genr_regs[136]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[111]),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][12] ));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][13]_i_1 
        (.I0(\time_status_regs[25] [0]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(\time_status_regs[24] [0]),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][13] ));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][14]_i_1 
        (.I0(\time_status_regs[25] [1]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(\time_status_regs[24] [1]),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][14] ));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][15]_i_1 
        (.I0(\time_status_regs[25] [2]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(\time_status_regs[24] [2]),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][15] ));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][16]_i_1 
        (.I0(genr_regs[137]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[112]),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][16] ));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][17]_i_1 
        (.I0(genr_regs[138]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[113]),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][17] ));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][18]_i_1 
        (.I0(genr_regs[139]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[114]),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][18] ));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][19]_i_1 
        (.I0(genr_regs[140]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[115]),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][19] ));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+  (* SOFT_HLUTNM = "soft_lutpair56" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][1]_i_1 
        (.I0(genr_regs[125]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[100]),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][1] ));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][20]_i_1 
        (.I0(genr_regs[141]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[116]),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][20] ));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][21]_i_1 
        (.I0(genr_regs[142]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[117]),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][21] ));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][22]_i_1 
        (.I0(genr_regs[143]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[118]),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][22] ));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][23]_i_1 
        (.I0(genr_regs[144]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[119]),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][23] ));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][24]_i_1 
        (.I0(genr_regs[145]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[120]),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][24] ));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][25]_i_1 
        (.I0(genr_regs[146]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[121]),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][25] ));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][26]_i_1 
        (.I0(genr_regs[147]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[122]),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][26] ));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][27]_i_1 
        (.I0(genr_regs[148]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[123]),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][27] ));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][28]_i_1 
        (.I0(genr_regs[149]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[124]),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][28] ));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][29]_i_1 
        (.I0(\time_status_regs[25] [3]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(\time_status_regs[24] [3]),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][29] ));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+  (* SOFT_HLUTNM = "soft_lutpair56" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][2]_i_1 
        (.I0(genr_regs[126]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[101]),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][2] ));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][30]_i_1 
        (.I0(\time_status_regs[25] [4]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(\time_status_regs[24] [4]),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][30] ));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][31]_i_1 
        (.I0(\time_status_regs[25] [5]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(\time_status_regs[24] [5]),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][31] ));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  (* SOFT_HLUTNM = "soft_lutpair55" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][3]_i_1 
        (.I0(genr_regs[127]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[102]),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][3] ));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  (* SOFT_HLUTNM = "soft_lutpair55" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][4]_i_1 
        (.I0(genr_regs[128]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[103]),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][4] ));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][5]_i_1 
        (.I0(genr_regs[129]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[104]),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][5] ));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][6]_i_1 
        (.I0(genr_regs[130]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[105]),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][6] ));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][7]_i_1 
        (.I0(genr_regs[131]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[106]),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][8]_i_1 
        (.I0(genr_regs[132]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[107]),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][8] ));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg[47][9]_i_1 
        (.I0(genr_regs[133]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[108]),
         .O(\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][9] ));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][0]_i_1 
        (.I0(Q),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(\AXI4_LITE_INTERFACE.time_control_regs_int_reg[26][0]_0 ),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][0] ));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][10]_i_1 
        (.I0(genr_regs[184]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[159]),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][10] ));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][11]_i_1 
        (.I0(genr_regs[185]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[160]),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][11] ));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][12]_i_1 
        (.I0(genr_regs[186]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[161]),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][12] ));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][13]_i_1 
        (.I0(\time_status_regs[27] [0]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(\time_status_regs[26] [0]),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][13] ));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][14]_i_1 
        (.I0(\time_status_regs[27] [1]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(\time_status_regs[26] [1]),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][14] ));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][15]_i_1 
        (.I0(\time_status_regs[27] [2]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(\time_status_regs[26] [2]),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][15] ));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][16]_i_1 
        (.I0(genr_regs[187]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[162]),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][16] ));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][17]_i_1 
        (.I0(genr_regs[188]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[163]),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][17] ));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][18]_i_1 
        (.I0(genr_regs[189]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[164]),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][18] ));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][19]_i_1 
        (.I0(genr_regs[190]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[165]),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][19] ));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][1]_i_1 
        (.I0(genr_regs[175]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[150]),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][1] ));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][20]_i_1 
        (.I0(genr_regs[191]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[166]),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][20] ));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][21]_i_1 
        (.I0(genr_regs[192]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[167]),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][21] ));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][22]_i_1 
        (.I0(genr_regs[193]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[168]),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][22] ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][23]_i_1 
        (.I0(genr_regs[194]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[169]),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][23] ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][24]_i_1 
        (.I0(genr_regs[195]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[170]),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][24] ));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][25]_i_1 
        (.I0(genr_regs[196]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[171]),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][25] ));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][26]_i_1 
        (.I0(genr_regs[197]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[172]),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][26] ));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][27]_i_1 
        (.I0(genr_regs[198]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[173]),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][27] ));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][28]_i_1 
        (.I0(genr_regs[199]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[174]),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][28] ));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][29]_i_1 
        (.I0(\time_status_regs[27] [3]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(\time_status_regs[26] [3]),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][29] ));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][2]_i_1 
        (.I0(genr_regs[176]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[151]),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][2] ));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][30]_i_1 
        (.I0(\time_status_regs[27] [4]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(\time_status_regs[26] [4]),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][30] ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_1 
        (.I0(\time_status_regs[27] [5]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(\time_status_regs[26] [5]),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][31] ));
-  (* IS_FANOUT_CONSTRAINED = "1" *) 
-  LUT1 #(
-    .INIT(2'h2)) 
-    \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2 
-       (.I0(\data_sync[2]_2 [34]),
-        .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][3]_i_1 
        (.I0(genr_regs[177]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[152]),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][3] ));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][4]_i_1 
        (.I0(genr_regs[178]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[153]),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][4] ));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][5]_i_1 
        (.I0(genr_regs[179]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[154]),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][5] ));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][6]_i_1 
        (.I0(genr_regs[180]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[155]),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][6] ));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][7]_i_1 
        (.I0(genr_regs[181]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[156]),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][7] ));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][8]_i_1 
        (.I0(genr_regs[182]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[157]),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][8] ));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][9]_i_1 
        (.I0(genr_regs[183]),
-        .I1(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg[48][31]_i_2_n_0 ),
+        .I1(\AXI4_LITE_INTERFACE.genr_control_regs_int[0][31]_i_3_n_0 ),
         .I2(genr_regs[158]),
         .O(\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][9] ));
-  (* IS_FANOUT_CONSTRAINED = "1" *) 
-  LUT1 #(
-    .INIT(2'h2)) 
-    \GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg[4][22]_i_4 
-       (.I0(\data_sync[2]_2 [34]),
-        .O(\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][22] ));
   (* ASYNC_REG *) 
   (* KEEP = "yes" *) 
   (* SHREG_EXTRACT = "no" *) 
@@ -30996,20 +30783,24 @@ endmodule
 
 (* ORIG_REF_NAME = "video_clock_cross" *) 
 module hdmi_in_v_tc_1_0_video_clock_cross__parameterized0
-   (p_526_out,
+   (D,
     out_data,
+    p_526_out,
     p_528_out,
     \AXI4_LITE_INTERFACE.ipif_Error_reg ,
+    p_150_out,
     write_ack_d2,
     write_ack_d1,
     read_ack_d2,
     read_ack_d1,
     in_data,
     aclk);
-  output p_526_out;
+  output [1:0]D;
   output [33:0]out_data;
+  output p_526_out;
   output p_528_out;
   output \AXI4_LITE_INTERFACE.ipif_Error_reg ;
+  input [1:0]p_150_out;
   input write_ack_d2;
   input write_ack_d1;
   input read_ack_d2;
@@ -31018,11 +30809,13 @@ module hdmi_in_v_tc_1_0_video_clock_cross__parameterized0
   input aclk;
 
   wire \AXI4_LITE_INTERFACE.ipif_Error_reg ;
+  wire [1:0]D;
   wire aclk;
   (* async_reg = "true" *) (* shift_extract = "NO" *) (* shreg_extract = "no" *) wire [33:0]\data_sync[0]_0 ;
   (* async_reg = "true" *) (* shift_extract = "NO" *) (* shreg_extract = "no" *) wire [33:0]\data_sync[1]_1 ;
   (* async_reg = "true" *) (* shift_extract = "NO" *) (* shreg_extract = "no" *) wire [33:0]\data_sync[2]_2 ;
   (* shreg_extract = "no" *) wire [33:0]in_data;
+  wire [1:0]p_150_out;
   wire p_526_out;
   wire p_528_out;
   wire read_ack_d1;
@@ -31032,29 +30825,43 @@ module hdmi_in_v_tc_1_0_video_clock_cross__parameterized0
 
   assign out_data[33:0] = \data_sync[2]_2 ;
   LUT6 #(
-    .INIT(64'hF7F7F7F700F7F7F7)) 
+    .INIT(64'hDFDF00DFDFDFDFDF)) 
     \AXI4_LITE_INTERFACE.ipif_Error_i_1 
        (.I0(read_ack_d1),
-        .I1(\data_sync[2]_2 [32]),
-        .I2(read_ack_d2),
+        .I1(read_ack_d2),
+        .I2(\data_sync[2]_2 [32]),
         .I3(write_ack_d1),
-        .I4(\data_sync[2]_2 [33]),
-        .I5(write_ack_d2),
+        .I4(write_ack_d2),
+        .I5(\data_sync[2]_2 [33]),
         .O(\AXI4_LITE_INTERFACE.ipif_Error_reg ));
   LUT3 #(
-    .INIT(8'h40)) 
+    .INIT(8'h20)) 
     \AXI4_LITE_INTERFACE.ipif_RdAck_i_1 
-       (.I0(read_ack_d2),
-        .I1(\data_sync[2]_2 [32]),
+       (.I0(\data_sync[2]_2 [32]),
+        .I1(read_ack_d2),
         .I2(read_ack_d1),
         .O(p_528_out));
   LUT3 #(
-    .INIT(8'h40)) 
+    .INIT(8'h20)) 
     \AXI4_LITE_INTERFACE.ipif_WrAck_i_1 
-       (.I0(write_ack_d2),
-        .I1(\data_sync[2]_2 [33]),
+       (.I0(\data_sync[2]_2 [33]),
+        .I1(write_ack_d2),
         .I2(write_ack_d1),
         .O(p_526_out));
+  LUT3 #(
+    .INIT(8'h02)) 
+    \AXI4_LITE_INTERFACE.ipif_proc_Req_d1[0]_i_1 
+       (.I0(p_150_out[0]),
+        .I1(\data_sync[2]_2 [33]),
+        .I2(\data_sync[2]_2 [32]),
+        .O(D[0]));
+  LUT3 #(
+    .INIT(8'h02)) 
+    \AXI4_LITE_INTERFACE.ipif_proc_Req_d1[1]_i_1 
+       (.I0(p_150_out[1]),
+        .I1(\data_sync[2]_2 [33]),
+        .I2(\data_sync[2]_2 [32]),
+        .O(D[1]));
   (* ASYNC_REG *) 
   (* KEEP = "yes" *) 
   (* SHREG_EXTRACT = "no" *) 
@@ -32488,7 +32295,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
   wire \AXI4_LITE_INTERFACE.GENR_MUX0_n_95 ;
   wire \AXI4_LITE_INTERFACE.GENR_MUX0_n_96 ;
   wire \AXI4_LITE_INTERFACE.GENR_MUX0_n_97 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2PROCCLK_I_n_36 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2PROCCLK_I_n_38 ;
   wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_0 ;
   wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_100 ;
   wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_101 ;
@@ -32956,6 +32763,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
   wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_542 ;
   wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_543 ;
   wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_544 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_545 ;
   wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_546 ;
   wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_547 ;
   wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_548 ;
@@ -32991,9 +32799,48 @@ module hdmi_in_v_tc_1_0_video_ctrl
   wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_575 ;
   wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_576 ;
   wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_577 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_578 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_579 ;
   wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_58 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_580 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_581 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_582 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_583 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_584 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_585 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_586 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_587 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_588 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_589 ;
   wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_59 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_590 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_591 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_592 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_593 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_594 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_595 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_596 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_597 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_598 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_599 ;
   wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_60 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_600 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_601 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_602 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_603 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_604 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_605 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_607 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_608 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_609 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_610 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_611 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_612 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_613 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_614 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_615 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_616 ;
+  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_617 ;
   wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_618 ;
   wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_619 ;
   wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_620 ;
@@ -33006,7 +32853,6 @@ module hdmi_in_v_tc_1_0_video_ctrl
   wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_627 ;
   wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_628 ;
   wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_629 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_63 ;
   wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_630 ;
   wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_631 ;
   wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_632 ;
@@ -33016,46 +32862,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
   wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_636 ;
   wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_637 ;
   wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_638 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_639 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_64 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_640 ;
   wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_641 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_642 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_643 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_644 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_645 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_646 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_647 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_648 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_649 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_65 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_66 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_67 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_68 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_69 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_70 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_71 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_72 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_73 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_74 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_75 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_76 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_77 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_78 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_79 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_80 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_81 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_82 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_83 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_84 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_85 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_86 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_87 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_88 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_89 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_90 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_91 ;
-  wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_92 ;
   wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_93 ;
   wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_94 ;
   wire \AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_95 ;
@@ -33073,7 +32880,6 @@ module hdmi_in_v_tc_1_0_video_ctrl
   wire \AXI4_LITE_INTERFACE.read_ack_reg_r_n_0 ;
   wire \AXI4_LITE_INTERFACE.time_control_regs2_int[16][28]_i_1_n_0 ;
   wire \AXI4_LITE_INTERFACE.write_ack_e1_i_1_n_0 ;
-  wire \AXI4_LITE_INTERFACE.write_ack_int_i_1_n_0 ;
   wire \GEN_HAS_IRQ.intr_err[0]_i_1_n_0 ;
   wire \GEN_HAS_IRQ.intr_err[10]_i_1_n_0 ;
   wire \GEN_HAS_IRQ.intr_err[11]_i_1_n_0 ;
@@ -33275,8 +33081,9 @@ module hdmi_in_v_tc_1_0_video_ctrl
   wire ipif_cs_out;
   wire [31:0]ipif_data_out;
   wire [8:0]ipif_proc_Addr_int;
-  wire [1:0]ipif_proc_CS;
   wire ipif_proc_RNW;
+  wire [1:0]ipif_proc_Req;
+  wire [1:0]ipif_proc_Req_d1;
   wire ipif_rnw_out;
   wire irq;
   wire p_0_in;
@@ -33286,6 +33093,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
   wire p_13_in;
   wire [33:0]p_143_out;
   wire p_14_in;
+  wire [1:0]p_150_out;
   wire p_15_in;
   wire p_16_in;
   wire p_17_in;
@@ -33304,6 +33112,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
   wire p_4_in;
   wire p_526_out;
   wire p_528_out;
+  wire p_531_out;
   wire p_533_out;
   wire p_534_out;
   wire p_535_out;
@@ -34373,13 +34182,14 @@ module hdmi_in_v_tc_1_0_video_ctrl
   assign \time_control_regs[9] [1] = \<const0> ;
   assign \time_control_regs[9] [0] = \<const0> ;
   hdmi_in_v_tc_1_0_axi_lite_ipif \AXI4_LITE_INTERFACE.AXI_LITE_IPIF_I 
-       (.D({ipif_proc_RNW,ipif_proc_CS,ipif_proc_Addr_int}),
+       (.D({ipif_proc_RNW,ipif_proc_Addr_int}),
         .aclk(aclk),
         .aresetn(aresetn),
         .ipif_Error(ipif_Error),
         .ipif_RdAck(ipif_RdAck),
         .ipif_WrAck(ipif_WrAck),
         .out_data(p_143_out[31:0]),
+        .p_150_out(p_150_out),
         .rst_reg(\AXI4_LITE_INTERFACE.AXI_LITE_IPIF_I_n_0 ),
         .s_axi_araddr(s_axi_araddr),
         .s_axi_arready(s_axi_arready),
@@ -34428,71 +34238,71 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .\AXI4_LITE_INTERFACE.ipif_RdData_reg[7] (\AXI4_LITE_INTERFACE.CORE_MUX0_n_25 ),
         .\AXI4_LITE_INTERFACE.ipif_RdData_reg[8] (\AXI4_LITE_INTERFACE.CORE_MUX0_n_24 ),
         .\AXI4_LITE_INTERFACE.ipif_RdData_reg[9] (\AXI4_LITE_INTERFACE.CORE_MUX0_n_23 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_33 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_34 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_1 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_35 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_10 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_44 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_11 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_45 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_12 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_46 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_13 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_47 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_14 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_48 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_15 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_49 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_16 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_50 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_17 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_51 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_18 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_52 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_19 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_53 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_2 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_36 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_20 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_54 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_21 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_55 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_22 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_56 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_23 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_57 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_24 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_58 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_25 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_59 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_26 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_60 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_27 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_61 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_28 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_62 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_29 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_63 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_3 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_37 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_30 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_64 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_31 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_65 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_32 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_66 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_33 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_67 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_34 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_68 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_35 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_69 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_36 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_70 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_37 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_71 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_38 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_72 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_39 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_73 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_4 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_38 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_40 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_74 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_41 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_75 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_42 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_76 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_43 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_77 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_44 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_78 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_45 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_79 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_46 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_80 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_47 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_81 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_48 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_82 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_49 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_83 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_5 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_39 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_50 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_84 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_51 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_85 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_52 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_86 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_53 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_87 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_54 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_88 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_55 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_89 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_56 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_90 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_57 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_91 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_58 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_92 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_59 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_93 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_6 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_40 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_60 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_94 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_61 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_95 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_62 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_96 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_63 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_97 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_7 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_41 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_8 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_42 ),
-        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_9 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_43 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_1 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_2 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_1 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_3 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_10 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_12 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_11 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_13 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_12 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_14 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_13 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_15 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_14 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_16 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_15 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_17 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_16 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_18 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_17 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_19 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_18 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_20 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_19 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_21 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_2 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_4 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_20 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_22 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_21 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_23 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_22 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_24 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_23 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_25 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_24 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_26 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_25 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_27 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_26 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_28 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_27 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_29 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_28 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_30 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_29 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_31 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_3 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_5 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_30 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_32 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_31 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_33 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_32 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_34 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_33 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_35 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_34 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_36 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_35 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_37 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_36 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_38 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_37 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_39 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_38 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_40 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_39 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_41 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_4 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_6 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_40 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_42 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_41 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_43 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_42 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_44 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_43 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_45 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_44 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_46 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_45 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_47 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_46 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_48 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_47 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_49 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_48 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_50 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_49 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_51 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_5 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_7 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_50 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_52 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_51 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_53 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_52 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_54 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_53 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_55 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_54 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_56 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_55 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_57 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_56 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_58 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_57 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_59 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_58 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_60 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_59 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_61 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_6 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_8 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_60 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_62 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_61 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_63 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_62 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_64 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_63 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_65 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_7 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_9 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_8 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_10 ),
+        .\GEN_SEL_DELAY[2].sel_int_reg[2][0]_9 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_11 ),
         .\GEN_SEL_DELAY[4].sel_int_reg[4][0] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_0 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][0]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_0 ),
         .\core_control_regs[16] ({\^core_control_regs[16] [26:16],\^core_control_regs[16] [11:0]}),
@@ -34515,311 +34325,311 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .\AXI4_LITE_INTERFACE.core_control_regs_int_reg[7][0] (\core_control_regs2_int[7] ),
         .\AXI4_LITE_INTERFACE.core_control_regs_int_reg[8][0] (\core_control_regs2_int[8] ),
         .\AXI4_LITE_INTERFACE.core_control_regs_int_reg[9][0] (\core_control_regs2_int[9] ),
-        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_534 ),
-        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_533 ),
-        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_532 ),
-        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_531 ),
-        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_528 ),
-        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_527 ),
-        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_526 ),
-        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_525 ),
-        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_524 ),
-        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_523 ),
-        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_522 ),
-        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_521 ),
-        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_520 ),
-        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_519 ),
-        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_518 ),
-        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_517 ),
-        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_516 ),
-        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_515 ),
-        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_514 ),
-        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_513 ),
-        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_536 ),
-        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_535 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[0] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_32 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[10] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_22 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[11] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_21 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[12] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_20 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[13] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_19 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[14] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_18 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[15] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_17 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[16] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_16 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[17] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_15 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[18] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_14 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[19] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_13 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[1] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_31 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[20] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_12 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[21] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_11 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[22] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_10 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[23] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_9 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[24] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_8 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[25] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_7 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[26] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_6 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[27] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_5 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[28] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_4 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[29] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_3 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[2] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_30 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[30] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_2 ),
+        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_564 ),
+        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_563 ),
+        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_562 ),
+        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_561 ),
+        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_558 ),
+        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_557 ),
+        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_556 ),
+        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_555 ),
+        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_554 ),
+        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_553 ),
+        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_552 ),
+        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_551 ),
+        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_550 ),
+        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_549 ),
+        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_548 ),
+        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_547 ),
+        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_546 ),
+        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_545 ),
+        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_544 ),
+        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_543 ),
+        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_566 ),
+        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_565 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[0] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_97 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[10] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_87 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[11] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_86 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[12] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_85 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[13] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_84 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[14] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_83 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[15] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_82 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[16] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_81 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[17] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_80 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[18] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_79 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[19] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_78 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[1] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_96 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[20] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_77 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[21] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_76 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[22] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_75 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[23] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_74 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[24] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_73 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[25] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_72 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[26] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_71 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[27] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_70 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[28] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_69 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[29] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_68 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[2] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_95 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[30] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_67 ),
         .\AXI4_LITE_INTERFACE.ipif_RdData_reg[31] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_0 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[31]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_1 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[3] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_29 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[4] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_28 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[5] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_27 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[6] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_26 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[7] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_25 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[8] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_24 ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[9] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_23 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_255 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_245 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_244 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_243 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_239 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_238 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_237 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_236 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_235 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_234 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_233 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_232 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_231 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_230 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_229 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_228 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_227 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_253 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_252 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_251 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_250 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_249 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_248 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_247 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_246 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[18][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_216 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[18][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_215 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[18][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_214 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[19][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_223 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[19][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_222 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[19][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_221 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[19][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_220 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[19][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_219 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[19][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_218 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[19][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_217 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_191 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_181 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_180 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_179 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_175 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_174 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_173 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_172 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_190 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_171 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_170 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_169 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_168 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_167 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_166 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_165 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_164 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_163 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_189 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_188 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_187 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_186 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_185 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_184 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_183 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_182 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_159 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_149 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_148 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_147 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_143 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_142 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_141 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_140 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_158 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_139 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_138 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_137 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_136 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_135 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_134 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_133 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_132 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_131 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_157 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_156 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_155 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_154 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_153 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_152 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_151 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_150 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_127 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_117 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_116 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_115 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_111 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_110 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_109 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_108 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_126 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_107 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_106 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_105 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_104 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_103 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_102 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_101 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_100 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_99 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_125 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_124 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_123 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_122 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_121 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_120 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_119 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_118 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_95 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_85 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_84 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_83 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_79 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_78 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_77 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_76 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_94 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_75 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_74 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_73 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_72 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_71 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_70 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_69 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_68 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_67 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_93 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_92 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_91 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_90 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_89 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_88 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_87 ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_86 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[31]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_66 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[3] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_94 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[4] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_93 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[5] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_92 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[6] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_91 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[7] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_90 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[8] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_89 ),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[9] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_88 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_285 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_275 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_274 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_273 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_269 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_268 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_267 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_266 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_265 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_264 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_263 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_262 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_261 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_260 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_259 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_258 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_257 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_283 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_282 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_281 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_280 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_279 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_278 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_277 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_276 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[18][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_246 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[18][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_245 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[18][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_244 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[19][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_253 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[19][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_252 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[19][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_251 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[19][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_250 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[19][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_249 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[19][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_248 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[19][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_247 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_221 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_211 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_210 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_209 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_205 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_204 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_203 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_202 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_220 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_201 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_200 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_199 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_198 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_197 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_196 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_195 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_194 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_193 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_219 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_218 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_217 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_216 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_215 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_214 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_213 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[21][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_212 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_189 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_179 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_178 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_177 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_173 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_172 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_171 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_170 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_188 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_169 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_168 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_167 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_166 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_165 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_164 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_163 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_162 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_161 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_187 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_186 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_185 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_184 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_183 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_182 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_181 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[23][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_180 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_157 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_147 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_146 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_145 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_141 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_140 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_139 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_138 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_156 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_137 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_136 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_135 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_134 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_133 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_132 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_131 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_130 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_129 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_155 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_154 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_153 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_152 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_151 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_150 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_149 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[25][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_148 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_125 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_115 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_114 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_113 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_109 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_108 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_107 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_106 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_124 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_105 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_104 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_103 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_102 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_101 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_100 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_99 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_98 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_97 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_123 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_122 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_121 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_120 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_119 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_118 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_117 ),
+        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_116 ),
         .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[28][28] ({genr_regs[1180:1168],genr_regs[1164:1153],\time_control_regs2_int[28] }),
-        .\DET_HACTIVE.det_active_video_pol_int_reg (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_475 ),
-        .\DET_HSYNC.det_hsync_pol_int_reg (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_476 ),
-        .\DET_VSYNC.det_vsync_pol_int_reg (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_477 ),
-        .\GEN_HAS_IRQ.intr_err_reg[0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_544 ),
-        .\GEN_HAS_IRQ.intr_err_reg[14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_530 ),
-        .\GEN_HAS_IRQ.intr_err_reg[15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_529 ),
-        .\GEN_HAS_IRQ.intr_err_reg[1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_543 ),
-        .\GEN_HAS_IRQ.intr_err_reg[2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_542 ),
-        .\GEN_HAS_IRQ.intr_err_reg[3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_541 ),
-        .\GEN_HAS_IRQ.intr_err_reg[4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_540 ),
-        .\GEN_HAS_IRQ.intr_err_reg[5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_539 ),
-        .\GEN_HAS_IRQ.intr_err_reg[6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_538 ),
-        .\GEN_HAS_IRQ.intr_err_reg[7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_537 ),
-        .\GEN_HAS_IRQ.intr_stat_reg[0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_648 ),
-        .\GEN_HAS_IRQ.intr_stat_reg[10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_638 ),
-        .\GEN_HAS_IRQ.intr_stat_reg[11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_637 ),
-        .\GEN_HAS_IRQ.intr_stat_reg[12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_636 ),
-        .\GEN_HAS_IRQ.intr_stat_reg[13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_635 ),
-        .\GEN_HAS_IRQ.intr_stat_reg[14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_634 ),
-        .\GEN_HAS_IRQ.intr_stat_reg[15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_633 ),
-        .\GEN_HAS_IRQ.intr_stat_reg[16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_632 ),
-        .\GEN_HAS_IRQ.intr_stat_reg[17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_631 ),
-        .\GEN_HAS_IRQ.intr_stat_reg[18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_630 ),
-        .\GEN_HAS_IRQ.intr_stat_reg[19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_629 ),
-        .\GEN_HAS_IRQ.intr_stat_reg[1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_647 ),
-        .\GEN_HAS_IRQ.intr_stat_reg[20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_628 ),
-        .\GEN_HAS_IRQ.intr_stat_reg[21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_627 ),
-        .\GEN_HAS_IRQ.intr_stat_reg[22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_626 ),
-        .\GEN_HAS_IRQ.intr_stat_reg[23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_625 ),
-        .\GEN_HAS_IRQ.intr_stat_reg[24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_624 ),
-        .\GEN_HAS_IRQ.intr_stat_reg[25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_623 ),
-        .\GEN_HAS_IRQ.intr_stat_reg[26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_622 ),
-        .\GEN_HAS_IRQ.intr_stat_reg[27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_621 ),
-        .\GEN_HAS_IRQ.intr_stat_reg[28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_620 ),
-        .\GEN_HAS_IRQ.intr_stat_reg[29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_619 ),
-        .\GEN_HAS_IRQ.intr_stat_reg[2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_646 ),
-        .\GEN_HAS_IRQ.intr_stat_reg[30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_618 ),
-        .\GEN_HAS_IRQ.intr_stat_reg[3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_645 ),
-        .\GEN_HAS_IRQ.intr_stat_reg[4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_644 ),
-        .\GEN_HAS_IRQ.intr_stat_reg[5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_643 ),
-        .\GEN_HAS_IRQ.intr_stat_reg[6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_642 ),
-        .\GEN_HAS_IRQ.intr_stat_reg[7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_641 ),
-        .\GEN_HAS_IRQ.intr_stat_reg[8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_640 ),
-        .\GEN_HAS_IRQ.intr_stat_reg[9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_639 ),
+        .\DET_HACTIVE.det_active_video_pol_int_reg (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_505 ),
+        .\DET_HSYNC.det_hsync_pol_int_reg (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_506 ),
+        .\DET_VSYNC.det_vsync_pol_int_reg (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_507 ),
+        .\GEN_HAS_IRQ.intr_err_reg[0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_574 ),
+        .\GEN_HAS_IRQ.intr_err_reg[14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_560 ),
+        .\GEN_HAS_IRQ.intr_err_reg[15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_559 ),
+        .\GEN_HAS_IRQ.intr_err_reg[1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_573 ),
+        .\GEN_HAS_IRQ.intr_err_reg[2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_572 ),
+        .\GEN_HAS_IRQ.intr_err_reg[3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_571 ),
+        .\GEN_HAS_IRQ.intr_err_reg[4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_570 ),
+        .\GEN_HAS_IRQ.intr_err_reg[5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_569 ),
+        .\GEN_HAS_IRQ.intr_err_reg[6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_568 ),
+        .\GEN_HAS_IRQ.intr_err_reg[7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_567 ),
+        .\GEN_HAS_IRQ.intr_stat_reg[0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_605 ),
+        .\GEN_HAS_IRQ.intr_stat_reg[10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_595 ),
+        .\GEN_HAS_IRQ.intr_stat_reg[11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_594 ),
+        .\GEN_HAS_IRQ.intr_stat_reg[12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_593 ),
+        .\GEN_HAS_IRQ.intr_stat_reg[13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_592 ),
+        .\GEN_HAS_IRQ.intr_stat_reg[14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_591 ),
+        .\GEN_HAS_IRQ.intr_stat_reg[15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_590 ),
+        .\GEN_HAS_IRQ.intr_stat_reg[16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_589 ),
+        .\GEN_HAS_IRQ.intr_stat_reg[17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_588 ),
+        .\GEN_HAS_IRQ.intr_stat_reg[18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_587 ),
+        .\GEN_HAS_IRQ.intr_stat_reg[19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_586 ),
+        .\GEN_HAS_IRQ.intr_stat_reg[1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_604 ),
+        .\GEN_HAS_IRQ.intr_stat_reg[20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_585 ),
+        .\GEN_HAS_IRQ.intr_stat_reg[21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_584 ),
+        .\GEN_HAS_IRQ.intr_stat_reg[22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_583 ),
+        .\GEN_HAS_IRQ.intr_stat_reg[23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_582 ),
+        .\GEN_HAS_IRQ.intr_stat_reg[24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_581 ),
+        .\GEN_HAS_IRQ.intr_stat_reg[25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_580 ),
+        .\GEN_HAS_IRQ.intr_stat_reg[26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_579 ),
+        .\GEN_HAS_IRQ.intr_stat_reg[27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_578 ),
+        .\GEN_HAS_IRQ.intr_stat_reg[28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_577 ),
+        .\GEN_HAS_IRQ.intr_stat_reg[29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_576 ),
+        .\GEN_HAS_IRQ.intr_stat_reg[2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_603 ),
+        .\GEN_HAS_IRQ.intr_stat_reg[30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_575 ),
+        .\GEN_HAS_IRQ.intr_stat_reg[3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_602 ),
+        .\GEN_HAS_IRQ.intr_stat_reg[4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_601 ),
+        .\GEN_HAS_IRQ.intr_stat_reg[5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_600 ),
+        .\GEN_HAS_IRQ.intr_stat_reg[6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_599 ),
+        .\GEN_HAS_IRQ.intr_stat_reg[7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_598 ),
+        .\GEN_HAS_IRQ.intr_stat_reg[8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_597 ),
+        .\GEN_HAS_IRQ.intr_stat_reg[9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_596 ),
         .\GEN_SEL_DELAY[3].sel_int_reg[3][0] (\AXI4_LITE_INTERFACE.CORE_MUX0_n_0 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][0]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_97 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][10]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_87 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][11]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_86 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][12]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_85 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][13]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_84 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][14]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_83 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][15]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_82 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][16]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_81 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][17]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_80 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][18]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_79 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][19]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_78 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][1]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_96 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][20]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_77 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][21]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_76 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][22]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_75 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][23]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_74 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][24]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_73 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][25]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_72 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][26]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_71 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][27]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_70 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][28]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_69 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][29]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_68 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][2]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_95 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][30]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_67 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][31]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_66 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][3]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_94 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][4]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_93 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][5]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_92 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][6]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_91 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][7]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_90 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][8]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_89 ),
-        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][9]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_88 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][0]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_65 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][10]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_55 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][11]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_54 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][12]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_53 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][13]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_52 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][14]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_51 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][15]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_50 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][16]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_49 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][17]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_48 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][18]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_47 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][19]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_46 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][1]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_64 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][20]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_45 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][21]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_44 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][22]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_43 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][23]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_42 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][24]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_41 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][25]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_40 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][26]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_39 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][27]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_38 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][28]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_37 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][29]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_36 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][2]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_63 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][30]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_35 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][31]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_34 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][3]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_62 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][4]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_61 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][5]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_60 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][6]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_59 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][7]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_58 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][8]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_57 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][9]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_56 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][0]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_33 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][0]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_65 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][10]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_55 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][11]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_54 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][12]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_53 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][13]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_52 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][14]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_51 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][15]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_50 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][16]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_49 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][17]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_48 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][18]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_47 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][19]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_46 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][1]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_64 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][20]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_45 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][21]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_44 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][22]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_43 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][23]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_42 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][24]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_41 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][25]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_40 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][26]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_39 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][27]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_38 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][28]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_37 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][29]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_36 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][2]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_63 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][30]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_35 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][31]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_34 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][3]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_62 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][4]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_61 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][5]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_60 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][6]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_59 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][7]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_58 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][8]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_57 ),
+        .\GEN_TREE.GEN_BRANCH[3].GEN_MUX_REG.data_out_reg_reg[3][9]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_56 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][0]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_33 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][10]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_23 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][11]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_22 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][12]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_21 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][13]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_20 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][14]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_19 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][15]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_18 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][16]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_17 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][17]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_16 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][18]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_15 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][19]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_14 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][1]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_32 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][20]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_13 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][21]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_12 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][22]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_11 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][23]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_10 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][24]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_9 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][25]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_8 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][26]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_7 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][27]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_6 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][28]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_5 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][29]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_4 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][2]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_31 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][30]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_3 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][31]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_2 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][3]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_30 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][4]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_29 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][5]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_28 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][6]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_27 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][7]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_26 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][8]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_25 ),
+        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][9]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_24 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][0]_0 (\AXI4_LITE_INTERFACE.GENR_MUX0_n_1 ),
         .Q(\core_control_regs2_int[11] ),
         .core_regs({core_regs[506:496],core_regs[491:481],core_regs[474:464],core_regs[459:449],core_regs[442:432],core_regs[427:417],core_regs[410:400],core_regs[395:385],core_regs[378:368],core_regs[363:353],core_regs[346:336],core_regs[331:321],core_regs[314:304],core_regs[299:289],core_regs[282:272],core_regs[267:257],core_regs[250:240],core_regs[235:225],core_regs[218:208],core_regs[203:193],core_regs[186:176],core_regs[171:161],core_regs[154:144],core_regs[139:129],core_regs[122:112],core_regs[107:97],core_regs[90:80],core_regs[75:65],core_regs[58:48],core_regs[43:33],core_regs[26:16],core_regs[11:1]}),
         .\core_status_regs[0] ({\core_status_regs[0] [31:27],\core_status_regs[0] [15:12]}),
@@ -34838,324 +34648,326 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .\core_status_regs[7] ({\core_status_regs[7] [31:27],\core_status_regs[7] [15:12]}),
         .\core_status_regs[8] ({\core_status_regs[8] [31:27],\core_status_regs[8] [15:12]}),
         .\core_status_regs[9] ({\core_status_regs[9] [31:27],\core_status_regs[9] [15:12]}),
-        .\data_sync_reg[2][34] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_63 ),
-        .\data_sync_reg[2][34]_0 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_512 ),
-        .\data_sync_reg[2][34]_1 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_649 ),
-        .\data_sync_reg[2][34]_10 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_98 ),
-        .\data_sync_reg[2][34]_100 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_302 ),
-        .\data_sync_reg[2][34]_101 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_303 ),
-        .\data_sync_reg[2][34]_102 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_304 ),
-        .\data_sync_reg[2][34]_103 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_305 ),
-        .\data_sync_reg[2][34]_104 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_306 ),
-        .\data_sync_reg[2][34]_105 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_307 ),
-        .\data_sync_reg[2][34]_106 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_308 ),
-        .\data_sync_reg[2][34]_107 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_309 ),
-        .\data_sync_reg[2][34]_108 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_310 ),
-        .\data_sync_reg[2][34]_109 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_311 ),
-        .\data_sync_reg[2][34]_11 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_112 ),
-        .\data_sync_reg[2][34]_110 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_312 ),
-        .\data_sync_reg[2][34]_111 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_313 ),
-        .\data_sync_reg[2][34]_112 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_314 ),
-        .\data_sync_reg[2][34]_113 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_315 ),
-        .\data_sync_reg[2][34]_114 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_316 ),
-        .\data_sync_reg[2][34]_115 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_317 ),
-        .\data_sync_reg[2][34]_116 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_318 ),
-        .\data_sync_reg[2][34]_117 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_319 ),
-        .\data_sync_reg[2][34]_118 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_320 ),
-        .\data_sync_reg[2][34]_119 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_321 ),
-        .\data_sync_reg[2][34]_12 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_113 ),
-        .\data_sync_reg[2][34]_120 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_322 ),
-        .\data_sync_reg[2][34]_121 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_323 ),
-        .\data_sync_reg[2][34]_122 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_324 ),
-        .\data_sync_reg[2][34]_123 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_325 ),
-        .\data_sync_reg[2][34]_124 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_326 ),
-        .\data_sync_reg[2][34]_125 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_327 ),
-        .\data_sync_reg[2][34]_126 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_328 ),
-        .\data_sync_reg[2][34]_127 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_329 ),
-        .\data_sync_reg[2][34]_128 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_330 ),
-        .\data_sync_reg[2][34]_129 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_331 ),
-        .\data_sync_reg[2][34]_13 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_114 ),
-        .\data_sync_reg[2][34]_130 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_332 ),
-        .\data_sync_reg[2][34]_131 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_333 ),
-        .\data_sync_reg[2][34]_132 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_334 ),
-        .\data_sync_reg[2][34]_133 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_335 ),
-        .\data_sync_reg[2][34]_134 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_336 ),
-        .\data_sync_reg[2][34]_135 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_337 ),
-        .\data_sync_reg[2][34]_136 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_338 ),
-        .\data_sync_reg[2][34]_137 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_339 ),
-        .\data_sync_reg[2][34]_138 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_340 ),
-        .\data_sync_reg[2][34]_139 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_341 ),
-        .\data_sync_reg[2][34]_14 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_128 ),
-        .\data_sync_reg[2][34]_140 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_342 ),
-        .\data_sync_reg[2][34]_141 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_343 ),
-        .\data_sync_reg[2][34]_142 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_344 ),
-        .\data_sync_reg[2][34]_143 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_345 ),
-        .\data_sync_reg[2][34]_144 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_346 ),
-        .\data_sync_reg[2][34]_145 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_347 ),
-        .\data_sync_reg[2][34]_146 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_348 ),
-        .\data_sync_reg[2][34]_147 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_349 ),
-        .\data_sync_reg[2][34]_148 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_350 ),
-        .\data_sync_reg[2][34]_149 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_351 ),
-        .\data_sync_reg[2][34]_15 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_129 ),
-        .\data_sync_reg[2][34]_150 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_352 ),
-        .\data_sync_reg[2][34]_151 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_353 ),
-        .\data_sync_reg[2][34]_152 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_354 ),
-        .\data_sync_reg[2][34]_153 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_355 ),
-        .\data_sync_reg[2][34]_154 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_368 ),
-        .\data_sync_reg[2][34]_155 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_369 ),
-        .\data_sync_reg[2][34]_156 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_370 ),
-        .\data_sync_reg[2][34]_157 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_371 ),
-        .\data_sync_reg[2][34]_158 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_384 ),
-        .\data_sync_reg[2][34]_159 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_385 ),
-        .\data_sync_reg[2][34]_16 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_130 ),
-        .\data_sync_reg[2][34]_160 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_386 ),
-        .\data_sync_reg[2][34]_161 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_387 ),
-        .\data_sync_reg[2][34]_162 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_400 ),
-        .\data_sync_reg[2][34]_163 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_401 ),
-        .\data_sync_reg[2][34]_164 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_402 ),
-        .\data_sync_reg[2][34]_165 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_403 ),
-        .\data_sync_reg[2][34]_166 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_416 ),
-        .\data_sync_reg[2][34]_167 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_417 ),
-        .\data_sync_reg[2][34]_168 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_418 ),
-        .\data_sync_reg[2][34]_169 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_419 ),
-        .\data_sync_reg[2][34]_17 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_144 ),
-        .\data_sync_reg[2][34]_170 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_420 ),
-        .\data_sync_reg[2][34]_171 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_421 ),
-        .\data_sync_reg[2][34]_172 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_422 ),
-        .\data_sync_reg[2][34]_173 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_423 ),
-        .\data_sync_reg[2][34]_174 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_424 ),
-        .\data_sync_reg[2][34]_175 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_425 ),
-        .\data_sync_reg[2][34]_176 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_426 ),
-        .\data_sync_reg[2][34]_177 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_427 ),
-        .\data_sync_reg[2][34]_178 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_428 ),
-        .\data_sync_reg[2][34]_179 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_429 ),
-        .\data_sync_reg[2][34]_18 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_145 ),
-        .\data_sync_reg[2][34]_180 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_430 ),
-        .\data_sync_reg[2][34]_181 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_431 ),
-        .\data_sync_reg[2][34]_182 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_432 ),
-        .\data_sync_reg[2][34]_183 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_433 ),
-        .\data_sync_reg[2][34]_184 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_434 ),
-        .\data_sync_reg[2][34]_185 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_435 ),
-        .\data_sync_reg[2][34]_186 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_448 ),
-        .\data_sync_reg[2][34]_187 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_449 ),
-        .\data_sync_reg[2][34]_188 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_450 ),
-        .\data_sync_reg[2][34]_189 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_451 ),
-        .\data_sync_reg[2][34]_19 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_146 ),
-        .\data_sync_reg[2][34]_190 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_452 ),
-        .\data_sync_reg[2][34]_191 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_453 ),
-        .\data_sync_reg[2][34]_192 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_454 ),
-        .\data_sync_reg[2][34]_193 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_455 ),
-        .\data_sync_reg[2][34]_194 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_456 ),
-        .\data_sync_reg[2][34]_195 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_457 ),
-        .\data_sync_reg[2][34]_196 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_458 ),
-        .\data_sync_reg[2][34]_197 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_459 ),
-        .\data_sync_reg[2][34]_198 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_460 ),
-        .\data_sync_reg[2][34]_199 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_461 ),
-        .\data_sync_reg[2][34]_2 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_64 ),
-        .\data_sync_reg[2][34]_20 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_160 ),
-        .\data_sync_reg[2][34]_200 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_462 ),
-        .\data_sync_reg[2][34]_201 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_463 ),
-        .\data_sync_reg[2][34]_202 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_464 ),
-        .\data_sync_reg[2][34]_203 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_465 ),
-        .\data_sync_reg[2][34]_204 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_466 ),
-        .\data_sync_reg[2][34]_205 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_467 ),
-        .\data_sync_reg[2][34]_206 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_468 ),
-        .\data_sync_reg[2][34]_207 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_469 ),
-        .\data_sync_reg[2][34]_208 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_470 ),
-        .\data_sync_reg[2][34]_209 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_472 ),
-        .\data_sync_reg[2][34]_21 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_161 ),
-        .\data_sync_reg[2][34]_210 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_473 ),
-        .\data_sync_reg[2][34]_211 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_474 ),
-        .\data_sync_reg[2][34]_212 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_478 ),
-        .\data_sync_reg[2][34]_213 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_479 ),
-        .\data_sync_reg[2][34]_214 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_480 ),
-        .\data_sync_reg[2][34]_215 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_481 ),
-        .\data_sync_reg[2][34]_216 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_482 ),
-        .\data_sync_reg[2][34]_217 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_483 ),
-        .\data_sync_reg[2][34]_218 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_484 ),
-        .\data_sync_reg[2][34]_219 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_496 ),
-        .\data_sync_reg[2][34]_22 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_162 ),
-        .\data_sync_reg[2][34]_220 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_497 ),
-        .\data_sync_reg[2][34]_221 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_498 ),
-        .\data_sync_reg[2][34]_222 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_499 ),
-        .\data_sync_reg[2][34]_23 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_176 ),
-        .\data_sync_reg[2][34]_24 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_177 ),
-        .\data_sync_reg[2][34]_25 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_178 ),
-        .\data_sync_reg[2][34]_26 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_192 ),
-        .\data_sync_reg[2][34]_27 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_193 ),
-        .\data_sync_reg[2][34]_28 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_194 ),
-        .\data_sync_reg[2][34]_29 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_195 ),
-        .\data_sync_reg[2][34]_3 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_65 ),
-        .\data_sync_reg[2][34]_30 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_196 ),
-        .\data_sync_reg[2][34]_31 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_197 ),
-        .\data_sync_reg[2][34]_32 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_198 ),
-        .\data_sync_reg[2][34]_33 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_199 ),
-        .\data_sync_reg[2][34]_34 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_200 ),
-        .\data_sync_reg[2][34]_35 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_201 ),
-        .\data_sync_reg[2][34]_36 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_202 ),
-        .\data_sync_reg[2][34]_37 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_203 ),
-        .\data_sync_reg[2][34]_38 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_204 ),
-        .\data_sync_reg[2][34]_39 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_205 ),
-        .\data_sync_reg[2][34]_4 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_66 ),
-        .\data_sync_reg[2][34]_40 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_206 ),
-        .\data_sync_reg[2][34]_41 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_207 ),
-        .\data_sync_reg[2][34]_42 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_208 ),
-        .\data_sync_reg[2][34]_43 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_209 ),
-        .\data_sync_reg[2][34]_44 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_210 ),
-        .\data_sync_reg[2][34]_45 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_211 ),
-        .\data_sync_reg[2][34]_46 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_212 ),
-        .\data_sync_reg[2][34]_47 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_213 ),
-        .\data_sync_reg[2][34]_48 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_224 ),
-        .\data_sync_reg[2][34]_49 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_225 ),
-        .\data_sync_reg[2][34]_5 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_80 ),
-        .\data_sync_reg[2][34]_50 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_226 ),
-        .\data_sync_reg[2][34]_51 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_240 ),
-        .\data_sync_reg[2][34]_52 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_241 ),
-        .\data_sync_reg[2][34]_53 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_242 ),
-        .\data_sync_reg[2][34]_54 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_256 ),
-        .\data_sync_reg[2][34]_55 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_257 ),
-        .\data_sync_reg[2][34]_56 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_258 ),
-        .\data_sync_reg[2][34]_57 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_259 ),
-        .\data_sync_reg[2][34]_58 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_260 ),
-        .\data_sync_reg[2][34]_59 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_261 ),
-        .\data_sync_reg[2][34]_6 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_81 ),
-        .\data_sync_reg[2][34]_60 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_262 ),
-        .\data_sync_reg[2][34]_61 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_263 ),
-        .\data_sync_reg[2][34]_62 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_264 ),
-        .\data_sync_reg[2][34]_63 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_265 ),
-        .\data_sync_reg[2][34]_64 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_266 ),
-        .\data_sync_reg[2][34]_65 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_267 ),
-        .\data_sync_reg[2][34]_66 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_268 ),
-        .\data_sync_reg[2][34]_67 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_269 ),
-        .\data_sync_reg[2][34]_68 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_270 ),
-        .\data_sync_reg[2][34]_69 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_271 ),
-        .\data_sync_reg[2][34]_7 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_82 ),
-        .\data_sync_reg[2][34]_70 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_272 ),
-        .\data_sync_reg[2][34]_71 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_273 ),
-        .\data_sync_reg[2][34]_72 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_274 ),
-        .\data_sync_reg[2][34]_73 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_275 ),
-        .\data_sync_reg[2][34]_74 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_276 ),
-        .\data_sync_reg[2][34]_75 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_277 ),
-        .\data_sync_reg[2][34]_76 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_278 ),
-        .\data_sync_reg[2][34]_77 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_279 ),
-        .\data_sync_reg[2][34]_78 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_280 ),
-        .\data_sync_reg[2][34]_79 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_281 ),
-        .\data_sync_reg[2][34]_8 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_96 ),
-        .\data_sync_reg[2][34]_80 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_282 ),
-        .\data_sync_reg[2][34]_81 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_283 ),
-        .\data_sync_reg[2][34]_82 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_284 ),
-        .\data_sync_reg[2][34]_83 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_285 ),
-        .\data_sync_reg[2][34]_84 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_286 ),
-        .\data_sync_reg[2][34]_85 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_287 ),
-        .\data_sync_reg[2][34]_86 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_288 ),
-        .\data_sync_reg[2][34]_87 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_289 ),
-        .\data_sync_reg[2][34]_88 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_290 ),
-        .\data_sync_reg[2][34]_89 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_291 ),
-        .\data_sync_reg[2][34]_9 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_97 ),
-        .\data_sync_reg[2][34]_90 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_292 ),
-        .\data_sync_reg[2][34]_91 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_293 ),
-        .\data_sync_reg[2][34]_92 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_294 ),
-        .\data_sync_reg[2][34]_93 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_295 ),
-        .\data_sync_reg[2][34]_94 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_296 ),
-        .\data_sync_reg[2][34]_95 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_297 ),
-        .\data_sync_reg[2][34]_96 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_298 ),
-        .\data_sync_reg[2][34]_97 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_299 ),
-        .\data_sync_reg[2][34]_98 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_300 ),
-        .\data_sync_reg[2][34]_99 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_301 ),
-        .\det_hfp_start_int2_reg[10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_501 ),
-        .\det_hfp_start_int2_reg[11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_500 ),
-        .\det_hfp_start_int2_reg[3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_508 ),
-        .\det_hfp_start_int2_reg[4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_507 ),
-        .\det_hfp_start_int2_reg[5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_506 ),
-        .\det_hfp_start_int2_reg[6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_505 ),
-        .\det_hfp_start_int2_reg[7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_504 ),
-        .\det_hfp_start_int2_reg[8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_503 ),
-        .\det_hfp_start_int2_reg[9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_502 ),
-        .\det_htotal_int2_reg[11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_436 ),
-        .\det_v0active_start_hori_int2_reg[0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_399 ),
-        .\det_v0active_start_hori_int2_reg[10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_389 ),
-        .\det_v0active_start_hori_int2_reg[11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_388 ),
-        .\det_v0active_start_hori_int2_reg[1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_398 ),
-        .\det_v0active_start_hori_int2_reg[2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_397 ),
-        .\det_v0active_start_hori_int2_reg[3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_396 ),
-        .\det_v0active_start_hori_int2_reg[4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_395 ),
-        .\det_v0active_start_hori_int2_reg[5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_394 ),
-        .\det_v0active_start_hori_int2_reg[6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_393 ),
-        .\det_v0active_start_hori_int2_reg[7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_392 ),
-        .\det_v0active_start_hori_int2_reg[8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_391 ),
-        .\det_v0active_start_hori_int2_reg[9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_390 ),
-        .\det_v0bp_start_hori_int2_reg[0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_367 ),
-        .\det_v0bp_start_hori_int2_reg[10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_357 ),
-        .\det_v0bp_start_hori_int2_reg[11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_356 ),
-        .\det_v0bp_start_hori_int2_reg[1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_366 ),
-        .\det_v0bp_start_hori_int2_reg[2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_365 ),
-        .\det_v0bp_start_hori_int2_reg[3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_364 ),
-        .\det_v0bp_start_hori_int2_reg[4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_363 ),
-        .\det_v0bp_start_hori_int2_reg[5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_362 ),
-        .\det_v0bp_start_hori_int2_reg[6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_361 ),
-        .\det_v0bp_start_hori_int2_reg[7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_360 ),
-        .\det_v0bp_start_hori_int2_reg[8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_359 ),
-        .\det_v0bp_start_hori_int2_reg[9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_358 ),
-        .\det_v0fp_start_hori_int2_reg[0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_415 ),
-        .\det_v0fp_start_hori_int2_reg[10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_405 ),
-        .\det_v0fp_start_hori_int2_reg[11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_404 ),
-        .\det_v0fp_start_hori_int2_reg[1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_414 ),
-        .\det_v0fp_start_hori_int2_reg[2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_413 ),
-        .\det_v0fp_start_hori_int2_reg[3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_412 ),
-        .\det_v0fp_start_hori_int2_reg[4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_411 ),
-        .\det_v0fp_start_hori_int2_reg[5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_410 ),
-        .\det_v0fp_start_hori_int2_reg[6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_409 ),
-        .\det_v0fp_start_hori_int2_reg[7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_408 ),
-        .\det_v0fp_start_hori_int2_reg[8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_407 ),
-        .\det_v0fp_start_hori_int2_reg[9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_406 ),
-        .\det_v0fp_start_int_reg[0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_495 ),
-        .\det_v0fp_start_int_reg[10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_485 ),
-        .\det_v0fp_start_int_reg[1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_494 ),
-        .\det_v0fp_start_int_reg[2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_493 ),
-        .\det_v0fp_start_int_reg[3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_492 ),
-        .\det_v0fp_start_int_reg[4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_491 ),
-        .\det_v0fp_start_int_reg[5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_490 ),
-        .\det_v0fp_start_int_reg[6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_489 ),
-        .\det_v0fp_start_int_reg[7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_488 ),
-        .\det_v0fp_start_int_reg[8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_487 ),
-        .\det_v0fp_start_int_reg[9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_486 ),
-        .\det_v0sync_start_hori_int2_reg[0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_383 ),
-        .\det_v0sync_start_hori_int2_reg[10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_373 ),
-        .\det_v0sync_start_hori_int2_reg[11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_372 ),
-        .\det_v0sync_start_hori_int2_reg[1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_382 ),
-        .\det_v0sync_start_hori_int2_reg[2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_381 ),
-        .\det_v0sync_start_hori_int2_reg[3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_380 ),
-        .\det_v0sync_start_hori_int2_reg[4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_379 ),
-        .\det_v0sync_start_hori_int2_reg[5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_378 ),
-        .\det_v0sync_start_hori_int2_reg[6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_377 ),
-        .\det_v0sync_start_hori_int2_reg[7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_376 ),
-        .\det_v0sync_start_hori_int2_reg[8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_375 ),
-        .\det_v0sync_start_hori_int2_reg[9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_374 ),
-        .\det_v0total_reg[0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_447 ),
-        .\det_v0total_reg[10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_437 ),
-        .\det_v0total_reg[1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_446 ),
-        .\det_v0total_reg[2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_445 ),
-        .\det_v0total_reg[3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_444 ),
-        .\det_v0total_reg[4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_443 ),
-        .\det_v0total_reg[5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_442 ),
-        .\det_v0total_reg[6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_441 ),
-        .\det_v0total_reg[7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_440 ),
-        .\det_v0total_reg[8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_439 ),
-        .\det_v0total_reg[9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_438 ),
-        .\gen_v0chroma_start_reg[0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_471 ),
+        .\data_sync_reg[2][34] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_93 ),
+        .\data_sync_reg[2][34]_0 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_520 ),
+        .\data_sync_reg[2][34]_1 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_641 ),
+        .\data_sync_reg[2][34]_10 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_128 ),
+        .\data_sync_reg[2][34]_100 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_332 ),
+        .\data_sync_reg[2][34]_101 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_333 ),
+        .\data_sync_reg[2][34]_102 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_334 ),
+        .\data_sync_reg[2][34]_103 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_335 ),
+        .\data_sync_reg[2][34]_104 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_336 ),
+        .\data_sync_reg[2][34]_105 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_337 ),
+        .\data_sync_reg[2][34]_106 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_338 ),
+        .\data_sync_reg[2][34]_107 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_339 ),
+        .\data_sync_reg[2][34]_108 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_340 ),
+        .\data_sync_reg[2][34]_109 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_341 ),
+        .\data_sync_reg[2][34]_11 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_142 ),
+        .\data_sync_reg[2][34]_110 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_342 ),
+        .\data_sync_reg[2][34]_111 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_343 ),
+        .\data_sync_reg[2][34]_112 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_344 ),
+        .\data_sync_reg[2][34]_113 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_345 ),
+        .\data_sync_reg[2][34]_114 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_346 ),
+        .\data_sync_reg[2][34]_115 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_347 ),
+        .\data_sync_reg[2][34]_116 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_348 ),
+        .\data_sync_reg[2][34]_117 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_349 ),
+        .\data_sync_reg[2][34]_118 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_350 ),
+        .\data_sync_reg[2][34]_119 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_351 ),
+        .\data_sync_reg[2][34]_12 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_143 ),
+        .\data_sync_reg[2][34]_120 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_352 ),
+        .\data_sync_reg[2][34]_121 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_353 ),
+        .\data_sync_reg[2][34]_122 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_354 ),
+        .\data_sync_reg[2][34]_123 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_355 ),
+        .\data_sync_reg[2][34]_124 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_356 ),
+        .\data_sync_reg[2][34]_125 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_357 ),
+        .\data_sync_reg[2][34]_126 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_358 ),
+        .\data_sync_reg[2][34]_127 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_359 ),
+        .\data_sync_reg[2][34]_128 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_360 ),
+        .\data_sync_reg[2][34]_129 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_361 ),
+        .\data_sync_reg[2][34]_13 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_144 ),
+        .\data_sync_reg[2][34]_130 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_362 ),
+        .\data_sync_reg[2][34]_131 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_363 ),
+        .\data_sync_reg[2][34]_132 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_364 ),
+        .\data_sync_reg[2][34]_133 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_365 ),
+        .\data_sync_reg[2][34]_134 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_366 ),
+        .\data_sync_reg[2][34]_135 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_367 ),
+        .\data_sync_reg[2][34]_136 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_368 ),
+        .\data_sync_reg[2][34]_137 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_369 ),
+        .\data_sync_reg[2][34]_138 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_370 ),
+        .\data_sync_reg[2][34]_139 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_371 ),
+        .\data_sync_reg[2][34]_14 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_158 ),
+        .\data_sync_reg[2][34]_140 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_372 ),
+        .\data_sync_reg[2][34]_141 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_373 ),
+        .\data_sync_reg[2][34]_142 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_374 ),
+        .\data_sync_reg[2][34]_143 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_375 ),
+        .\data_sync_reg[2][34]_144 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_376 ),
+        .\data_sync_reg[2][34]_145 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_377 ),
+        .\data_sync_reg[2][34]_146 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_378 ),
+        .\data_sync_reg[2][34]_147 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_379 ),
+        .\data_sync_reg[2][34]_148 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_380 ),
+        .\data_sync_reg[2][34]_149 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_381 ),
+        .\data_sync_reg[2][34]_15 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_159 ),
+        .\data_sync_reg[2][34]_150 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_382 ),
+        .\data_sync_reg[2][34]_151 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_383 ),
+        .\data_sync_reg[2][34]_152 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_384 ),
+        .\data_sync_reg[2][34]_153 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_385 ),
+        .\data_sync_reg[2][34]_154 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_398 ),
+        .\data_sync_reg[2][34]_155 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_399 ),
+        .\data_sync_reg[2][34]_156 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_400 ),
+        .\data_sync_reg[2][34]_157 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_401 ),
+        .\data_sync_reg[2][34]_158 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_414 ),
+        .\data_sync_reg[2][34]_159 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_415 ),
+        .\data_sync_reg[2][34]_16 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_160 ),
+        .\data_sync_reg[2][34]_160 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_416 ),
+        .\data_sync_reg[2][34]_161 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_417 ),
+        .\data_sync_reg[2][34]_162 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_430 ),
+        .\data_sync_reg[2][34]_163 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_431 ),
+        .\data_sync_reg[2][34]_164 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_432 ),
+        .\data_sync_reg[2][34]_165 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_433 ),
+        .\data_sync_reg[2][34]_166 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_446 ),
+        .\data_sync_reg[2][34]_167 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_447 ),
+        .\data_sync_reg[2][34]_168 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_448 ),
+        .\data_sync_reg[2][34]_169 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_449 ),
+        .\data_sync_reg[2][34]_17 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_174 ),
+        .\data_sync_reg[2][34]_170 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_450 ),
+        .\data_sync_reg[2][34]_171 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_451 ),
+        .\data_sync_reg[2][34]_172 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_452 ),
+        .\data_sync_reg[2][34]_173 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_453 ),
+        .\data_sync_reg[2][34]_174 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_454 ),
+        .\data_sync_reg[2][34]_175 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_455 ),
+        .\data_sync_reg[2][34]_176 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_456 ),
+        .\data_sync_reg[2][34]_177 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_457 ),
+        .\data_sync_reg[2][34]_178 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_458 ),
+        .\data_sync_reg[2][34]_179 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_459 ),
+        .\data_sync_reg[2][34]_18 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_175 ),
+        .\data_sync_reg[2][34]_180 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_460 ),
+        .\data_sync_reg[2][34]_181 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_461 ),
+        .\data_sync_reg[2][34]_182 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_462 ),
+        .\data_sync_reg[2][34]_183 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_463 ),
+        .\data_sync_reg[2][34]_184 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_464 ),
+        .\data_sync_reg[2][34]_185 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_465 ),
+        .\data_sync_reg[2][34]_186 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_478 ),
+        .\data_sync_reg[2][34]_187 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_479 ),
+        .\data_sync_reg[2][34]_188 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_480 ),
+        .\data_sync_reg[2][34]_189 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_481 ),
+        .\data_sync_reg[2][34]_19 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_176 ),
+        .\data_sync_reg[2][34]_190 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_482 ),
+        .\data_sync_reg[2][34]_191 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_483 ),
+        .\data_sync_reg[2][34]_192 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_484 ),
+        .\data_sync_reg[2][34]_193 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_485 ),
+        .\data_sync_reg[2][34]_194 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_486 ),
+        .\data_sync_reg[2][34]_195 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_487 ),
+        .\data_sync_reg[2][34]_196 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_488 ),
+        .\data_sync_reg[2][34]_197 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_489 ),
+        .\data_sync_reg[2][34]_198 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_490 ),
+        .\data_sync_reg[2][34]_199 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_491 ),
+        .\data_sync_reg[2][34]_2 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_94 ),
+        .\data_sync_reg[2][34]_20 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_190 ),
+        .\data_sync_reg[2][34]_200 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_492 ),
+        .\data_sync_reg[2][34]_201 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_493 ),
+        .\data_sync_reg[2][34]_202 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_494 ),
+        .\data_sync_reg[2][34]_203 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_495 ),
+        .\data_sync_reg[2][34]_204 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_496 ),
+        .\data_sync_reg[2][34]_205 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_497 ),
+        .\data_sync_reg[2][34]_206 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_498 ),
+        .\data_sync_reg[2][34]_207 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_499 ),
+        .\data_sync_reg[2][34]_208 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_500 ),
+        .\data_sync_reg[2][34]_209 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_502 ),
+        .\data_sync_reg[2][34]_21 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_191 ),
+        .\data_sync_reg[2][34]_210 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_503 ),
+        .\data_sync_reg[2][34]_211 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_504 ),
+        .\data_sync_reg[2][34]_212 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_508 ),
+        .\data_sync_reg[2][34]_213 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_509 ),
+        .\data_sync_reg[2][34]_214 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_510 ),
+        .\data_sync_reg[2][34]_215 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_511 ),
+        .\data_sync_reg[2][34]_216 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_512 ),
+        .\data_sync_reg[2][34]_217 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_513 ),
+        .\data_sync_reg[2][34]_218 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_514 ),
+        .\data_sync_reg[2][34]_219 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_527 ),
+        .\data_sync_reg[2][34]_22 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_192 ),
+        .\data_sync_reg[2][34]_220 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_528 ),
+        .\data_sync_reg[2][34]_221 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_529 ),
+        .\data_sync_reg[2][34]_222 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_530 ),
+        .\data_sync_reg[2][34]_23 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_206 ),
+        .\data_sync_reg[2][34]_24 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_207 ),
+        .\data_sync_reg[2][34]_25 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_208 ),
+        .\data_sync_reg[2][34]_26 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_222 ),
+        .\data_sync_reg[2][34]_27 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_223 ),
+        .\data_sync_reg[2][34]_28 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_224 ),
+        .\data_sync_reg[2][34]_29 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_225 ),
+        .\data_sync_reg[2][34]_3 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_95 ),
+        .\data_sync_reg[2][34]_30 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_226 ),
+        .\data_sync_reg[2][34]_31 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_227 ),
+        .\data_sync_reg[2][34]_32 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_228 ),
+        .\data_sync_reg[2][34]_33 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_229 ),
+        .\data_sync_reg[2][34]_34 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_230 ),
+        .\data_sync_reg[2][34]_35 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_231 ),
+        .\data_sync_reg[2][34]_36 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_232 ),
+        .\data_sync_reg[2][34]_37 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_233 ),
+        .\data_sync_reg[2][34]_38 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_234 ),
+        .\data_sync_reg[2][34]_39 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_235 ),
+        .\data_sync_reg[2][34]_4 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_96 ),
+        .\data_sync_reg[2][34]_40 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_236 ),
+        .\data_sync_reg[2][34]_41 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_237 ),
+        .\data_sync_reg[2][34]_42 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_238 ),
+        .\data_sync_reg[2][34]_43 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_239 ),
+        .\data_sync_reg[2][34]_44 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_240 ),
+        .\data_sync_reg[2][34]_45 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_241 ),
+        .\data_sync_reg[2][34]_46 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_242 ),
+        .\data_sync_reg[2][34]_47 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_243 ),
+        .\data_sync_reg[2][34]_48 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_254 ),
+        .\data_sync_reg[2][34]_49 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_255 ),
+        .\data_sync_reg[2][34]_5 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_110 ),
+        .\data_sync_reg[2][34]_50 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_256 ),
+        .\data_sync_reg[2][34]_51 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_270 ),
+        .\data_sync_reg[2][34]_52 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_271 ),
+        .\data_sync_reg[2][34]_53 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_272 ),
+        .\data_sync_reg[2][34]_54 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_286 ),
+        .\data_sync_reg[2][34]_55 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_287 ),
+        .\data_sync_reg[2][34]_56 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_288 ),
+        .\data_sync_reg[2][34]_57 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_289 ),
+        .\data_sync_reg[2][34]_58 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_290 ),
+        .\data_sync_reg[2][34]_59 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_291 ),
+        .\data_sync_reg[2][34]_6 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_111 ),
+        .\data_sync_reg[2][34]_60 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_292 ),
+        .\data_sync_reg[2][34]_61 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_293 ),
+        .\data_sync_reg[2][34]_62 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_294 ),
+        .\data_sync_reg[2][34]_63 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_295 ),
+        .\data_sync_reg[2][34]_64 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_296 ),
+        .\data_sync_reg[2][34]_65 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_297 ),
+        .\data_sync_reg[2][34]_66 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_298 ),
+        .\data_sync_reg[2][34]_67 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_299 ),
+        .\data_sync_reg[2][34]_68 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_300 ),
+        .\data_sync_reg[2][34]_69 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_301 ),
+        .\data_sync_reg[2][34]_7 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_112 ),
+        .\data_sync_reg[2][34]_70 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_302 ),
+        .\data_sync_reg[2][34]_71 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_303 ),
+        .\data_sync_reg[2][34]_72 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_304 ),
+        .\data_sync_reg[2][34]_73 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_305 ),
+        .\data_sync_reg[2][34]_74 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_306 ),
+        .\data_sync_reg[2][34]_75 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_307 ),
+        .\data_sync_reg[2][34]_76 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_308 ),
+        .\data_sync_reg[2][34]_77 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_309 ),
+        .\data_sync_reg[2][34]_78 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_310 ),
+        .\data_sync_reg[2][34]_79 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_311 ),
+        .\data_sync_reg[2][34]_8 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_126 ),
+        .\data_sync_reg[2][34]_80 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_312 ),
+        .\data_sync_reg[2][34]_81 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_313 ),
+        .\data_sync_reg[2][34]_82 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_314 ),
+        .\data_sync_reg[2][34]_83 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_315 ),
+        .\data_sync_reg[2][34]_84 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_316 ),
+        .\data_sync_reg[2][34]_85 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_317 ),
+        .\data_sync_reg[2][34]_86 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_318 ),
+        .\data_sync_reg[2][34]_87 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_319 ),
+        .\data_sync_reg[2][34]_88 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_320 ),
+        .\data_sync_reg[2][34]_89 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_321 ),
+        .\data_sync_reg[2][34]_9 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_127 ),
+        .\data_sync_reg[2][34]_90 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_322 ),
+        .\data_sync_reg[2][34]_91 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_323 ),
+        .\data_sync_reg[2][34]_92 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_324 ),
+        .\data_sync_reg[2][34]_93 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_325 ),
+        .\data_sync_reg[2][34]_94 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_326 ),
+        .\data_sync_reg[2][34]_95 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_327 ),
+        .\data_sync_reg[2][34]_96 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_328 ),
+        .\data_sync_reg[2][34]_97 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_329 ),
+        .\data_sync_reg[2][34]_98 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_330 ),
+        .\data_sync_reg[2][34]_99 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_331 ),
+        .\det_hfp_start_int2_reg[10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_532 ),
+        .\det_hfp_start_int2_reg[11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_531 ),
+        .\det_hfp_start_int2_reg[3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_539 ),
+        .\det_hfp_start_int2_reg[4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_538 ),
+        .\det_hfp_start_int2_reg[5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_537 ),
+        .\det_hfp_start_int2_reg[6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_536 ),
+        .\det_hfp_start_int2_reg[7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_535 ),
+        .\det_hfp_start_int2_reg[8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_534 ),
+        .\det_hfp_start_int2_reg[9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_533 ),
+        .\det_htotal_int2_reg[11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_466 ),
+        .\det_v0active_start_hori_int2_reg[0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_429 ),
+        .\det_v0active_start_hori_int2_reg[10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_419 ),
+        .\det_v0active_start_hori_int2_reg[11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_418 ),
+        .\det_v0active_start_hori_int2_reg[1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_428 ),
+        .\det_v0active_start_hori_int2_reg[2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_427 ),
+        .\det_v0active_start_hori_int2_reg[3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_426 ),
+        .\det_v0active_start_hori_int2_reg[4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_425 ),
+        .\det_v0active_start_hori_int2_reg[5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_424 ),
+        .\det_v0active_start_hori_int2_reg[6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_423 ),
+        .\det_v0active_start_hori_int2_reg[7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_422 ),
+        .\det_v0active_start_hori_int2_reg[8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_421 ),
+        .\det_v0active_start_hori_int2_reg[9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_420 ),
+        .\det_v0bp_start_hori_int2_reg[0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_397 ),
+        .\det_v0bp_start_hori_int2_reg[10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_387 ),
+        .\det_v0bp_start_hori_int2_reg[11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_386 ),
+        .\det_v0bp_start_hori_int2_reg[1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_396 ),
+        .\det_v0bp_start_hori_int2_reg[2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_395 ),
+        .\det_v0bp_start_hori_int2_reg[3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_394 ),
+        .\det_v0bp_start_hori_int2_reg[4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_393 ),
+        .\det_v0bp_start_hori_int2_reg[5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_392 ),
+        .\det_v0bp_start_hori_int2_reg[6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_391 ),
+        .\det_v0bp_start_hori_int2_reg[7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_390 ),
+        .\det_v0bp_start_hori_int2_reg[8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_389 ),
+        .\det_v0bp_start_hori_int2_reg[9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_388 ),
+        .\det_v0fp_start_hori_int2_reg[0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_445 ),
+        .\det_v0fp_start_hori_int2_reg[10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_435 ),
+        .\det_v0fp_start_hori_int2_reg[11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_434 ),
+        .\det_v0fp_start_hori_int2_reg[1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_444 ),
+        .\det_v0fp_start_hori_int2_reg[2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_443 ),
+        .\det_v0fp_start_hori_int2_reg[3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_442 ),
+        .\det_v0fp_start_hori_int2_reg[4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_441 ),
+        .\det_v0fp_start_hori_int2_reg[5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_440 ),
+        .\det_v0fp_start_hori_int2_reg[6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_439 ),
+        .\det_v0fp_start_hori_int2_reg[7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_438 ),
+        .\det_v0fp_start_hori_int2_reg[8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_437 ),
+        .\det_v0fp_start_hori_int2_reg[9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_436 ),
+        .\det_v0fp_start_int_reg[0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_526 ),
+        .\det_v0fp_start_int_reg[10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_515 ),
+        .\det_v0fp_start_int_reg[1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_525 ),
+        .\det_v0fp_start_int_reg[2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_524 ),
+        .\det_v0fp_start_int_reg[3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_523 ),
+        .\det_v0fp_start_int_reg[4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_522 ),
+        .\det_v0fp_start_int_reg[5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_521 ),
+        .\det_v0fp_start_int_reg[6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_519 ),
+        .\det_v0fp_start_int_reg[7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_518 ),
+        .\det_v0fp_start_int_reg[8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_517 ),
+        .\det_v0fp_start_int_reg[9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_516 ),
+        .\det_v0sync_start_hori_int2_reg[0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_413 ),
+        .\det_v0sync_start_hori_int2_reg[10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_403 ),
+        .\det_v0sync_start_hori_int2_reg[11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_402 ),
+        .\det_v0sync_start_hori_int2_reg[1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_412 ),
+        .\det_v0sync_start_hori_int2_reg[2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_411 ),
+        .\det_v0sync_start_hori_int2_reg[3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_410 ),
+        .\det_v0sync_start_hori_int2_reg[4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_409 ),
+        .\det_v0sync_start_hori_int2_reg[5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_408 ),
+        .\det_v0sync_start_hori_int2_reg[6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_407 ),
+        .\det_v0sync_start_hori_int2_reg[7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_406 ),
+        .\det_v0sync_start_hori_int2_reg[8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_405 ),
+        .\det_v0sync_start_hori_int2_reg[9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_404 ),
+        .\det_v0total_reg[0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_477 ),
+        .\det_v0total_reg[10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_467 ),
+        .\det_v0total_reg[1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_476 ),
+        .\det_v0total_reg[2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_475 ),
+        .\det_v0total_reg[3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_474 ),
+        .\det_v0total_reg[4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_473 ),
+        .\det_v0total_reg[5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_472 ),
+        .\det_v0total_reg[6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_471 ),
+        .\det_v0total_reg[7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_470 ),
+        .\det_v0total_reg[8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_469 ),
+        .\det_v0total_reg[9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_468 ),
+        .\gen_v0chroma_start_reg[0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_501 ),
         .\genr_control_regs[0] (\^genr_control_regs[0] [31]),
-        .\intr_status_int_reg[10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_510 ),
-        .\intr_status_int_reg[11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_509 ),
-        .\intr_status_int_reg[12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_254 ),
-        .\intr_status_int_reg[8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_511 ),
+        .\intr_status_int_reg[10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_541 ),
+        .\intr_status_int_reg[11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_540 ),
+        .\intr_status_int_reg[12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_284 ),
+        .\intr_status_int_reg[8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_542 ),
         .ipif_Addr({ipif_Addr[7:6],ipif_Addr[4:2]}),
         .\time_status_regs[28] ({\time_status_regs[28] [31:29],\time_status_regs[28] [15:13]}),
         .vid_aclk(vid_aclk));
   hdmi_in_v_tc_1_0_video_clock_cross__parameterized0 \AXI4_LITE_INTERFACE.SYNC2PROCCLK_I 
-       (.\AXI4_LITE_INTERFACE.ipif_Error_reg (\AXI4_LITE_INTERFACE.SYNC2PROCCLK_I_n_36 ),
+       (.\AXI4_LITE_INTERFACE.ipif_Error_reg (\AXI4_LITE_INTERFACE.SYNC2PROCCLK_I_n_38 ),
+        .D(ipif_proc_Req),
         .aclk(aclk),
         .in_data({write_ack,read_ack_d,ipif_RdData}),
         .out_data(p_143_out),
+        .p_150_out(p_150_out),
         .p_526_out(p_526_out),
         .p_528_out(p_528_out),
         .read_ack_d1(read_ack_d1),
@@ -35179,7 +34991,9 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .\AXI4_LITE_INTERFACE.core_control_regs_int_reg[6][0] (\core_control_regs_int[6] ),
         .\AXI4_LITE_INTERFACE.core_control_regs_int_reg[7][0] (\core_control_regs_int[7] ),
         .\AXI4_LITE_INTERFACE.core_control_regs_int_reg[8][0] (\core_control_regs_int[8] ),
+        .\AXI4_LITE_INTERFACE.core_control_regs_int_reg[8][0]_0 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_641 ),
         .\AXI4_LITE_INTERFACE.core_control_regs_int_reg[9][0] (\core_control_regs_int[9] ),
+        .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[0][0] (\genr_control_regs_int[0] ),
         .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[1][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_52 ),
         .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[1][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_51 ),
         .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[1][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_50 ),
@@ -35210,7 +35024,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[2][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_55 ),
         .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[2][21]_0 (\^genr_control_regs[2] ),
         .\AXI4_LITE_INTERFACE.genr_control_regs_int_reg[3][8] (\genr_control_regs_int[3] ),
-        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[31] ({\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_546 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_547 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_548 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_549 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_550 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_551 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_552 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_553 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_554 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_555 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_556 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_557 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_558 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_559 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_560 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_561 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_562 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_563 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_564 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_565 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_566 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_567 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_568 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_569 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_570 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_571 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_572 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_573 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_574 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_575 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_576 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_577 }),
+        .\AXI4_LITE_INTERFACE.ipif_RdData_reg[31] ({\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_607 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_608 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_609 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_610 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_611 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_612 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_613 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_614 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_615 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_616 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_617 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_618 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_619 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_620 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_621 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_622 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_623 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_624 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_625 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_626 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_627 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_628 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_629 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_630 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_631 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_632 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_633 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_634 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_635 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_636 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_637 ,\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_638 }),
         .\AXI4_LITE_INTERFACE.proc_sync1_reg[44] (proc_sync1),
         .\AXI4_LITE_INTERFACE.soft_resetn_reg (resetn_out),
         .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[16][0] (\time_control_regs_int[16] ),
@@ -35234,586 +35048,584 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[26][0] (\time_control_regs_int[26] ),
         .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[26][0]_0 (\time_control_regs2_int[26] ),
         .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[27][0] (\time_control_regs_int[27] ),
-        .\AXI4_LITE_INTERFACE.time_control_regs_int_reg[28][0] (\time_control_regs_int[28] ),
         .D({\^genr_control_regs[1] [31:16],\^genr_control_regs[1] [13:8]}),
-        .E(\genr_control_regs_int[0] ),
-        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_648 ),
-        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_638 ),
-        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_637 ),
-        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_636 ),
-        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_635 ),
-        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_634 ),
-        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_633 ),
-        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_632 ),
-        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_631 ),
-        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_630 ),
-        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_629 ),
-        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_647 ),
-        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_628 ),
-        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_627 ),
-        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_626 ),
-        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_625 ),
-        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_624 ),
-        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_623 ),
-        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_622 ),
-        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_621 ),
-        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_620 ),
-        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_619 ),
-        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_646 ),
-        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_618 ),
-        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_645 ),
-        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_644 ),
-        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_643 ),
-        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_642 ),
-        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_641 ),
-        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_640 ),
-        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_639 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_544 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_534 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_533 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_532 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_531 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_530 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_529 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_528 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_527 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_526 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_525 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_543 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_524 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_523 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_522 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_521 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_520 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_519 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_518 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_517 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_516 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_515 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_542 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_514 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_513 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_541 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_540 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_539 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_538 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_537 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_536 ),
-        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_535 ),
-        .\GEN_TREE.GEN_BRANCH[33].GEN_MUX_REG.data_out_reg_reg[33][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_63 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_511 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0]_0 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_512 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_501 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_500 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_499 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_498 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_497 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_496 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_495 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_494 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_493 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_492 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_510 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_491 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_490 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_489 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_488 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_487 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_486 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_485 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_484 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_483 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_482 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_509 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_481 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_480 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_508 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_507 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_506 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_505 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_504 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_503 ),
-        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_502 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_479 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_469 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_468 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_467 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_466 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_465 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_464 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_463 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_462 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_461 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_460 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_478 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_459 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_458 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_457 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_456 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_455 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_454 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_453 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_452 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_451 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_450 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_477 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_449 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_448 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_476 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_475 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_474 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_473 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_472 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_471 ),
-        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_470 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_447 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_437 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_436 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_435 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_434 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_433 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_432 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_431 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_430 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_429 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_428 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_446 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_427 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_426 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_425 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_424 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_423 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_422 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_421 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_420 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_419 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_418 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_445 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_417 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_416 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_444 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_443 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_442 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_441 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_440 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_439 ),
-        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_438 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_415 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_405 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_404 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_403 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_402 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_401 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_400 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_399 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_398 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_397 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_396 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_414 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_395 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_394 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_393 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_392 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_391 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_390 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_389 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_388 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_387 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_386 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_413 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_385 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_384 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_412 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_411 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_410 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_409 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_408 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_407 ),
-        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_406 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_383 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_373 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_372 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_371 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_370 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_369 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_368 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_367 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_366 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_365 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_364 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_382 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_363 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_362 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_361 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_360 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_359 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_358 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_357 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_356 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_355 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_354 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_381 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_353 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_352 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_380 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_379 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_378 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_377 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_376 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_375 ),
-        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_374 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_351 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_341 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_340 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_339 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_338 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_337 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_336 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_335 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_334 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_333 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_332 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_350 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_331 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_330 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_329 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_328 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_327 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_326 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_325 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_324 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_323 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_322 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_349 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_321 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_320 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_348 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_347 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_346 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_345 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_344 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_343 ),
-        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_342 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_319 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_309 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_308 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_307 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_306 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_305 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_304 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_303 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_302 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_301 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_300 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_318 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_299 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_298 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_297 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_296 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_295 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_294 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_293 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_292 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_291 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_290 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_317 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_289 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_288 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_316 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_315 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_314 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_313 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_312 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_311 ),
-        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_310 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_287 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_277 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_276 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_275 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_274 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_273 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_272 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_271 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_270 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_269 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_268 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_286 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_267 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_266 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_265 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_264 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_263 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_262 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_261 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_260 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_259 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_258 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_285 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_257 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_256 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_284 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_283 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_282 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_281 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_280 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_279 ),
-        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_278 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_255 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_245 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_244 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_243 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_242 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_241 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_240 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_239 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_238 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_237 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_236 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_254 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_235 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_234 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_233 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_232 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_231 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_230 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_229 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_228 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_227 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_226 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_253 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_225 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_224 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_252 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_251 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_250 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_249 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_248 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_247 ),
-        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_246 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_223 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_213 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_212 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_211 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_210 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_209 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_208 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_207 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_206 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_205 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_204 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_222 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_203 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_202 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_201 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_200 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_199 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_198 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_197 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_196 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_195 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_194 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_221 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_193 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_192 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_220 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_219 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_218 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_217 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_216 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_215 ),
-        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_214 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_191 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_181 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_180 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_179 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_178 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_177 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_176 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_175 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_174 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_173 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_172 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_190 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_171 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_170 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_169 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_168 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_167 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_166 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_165 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_164 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_163 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_162 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_189 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_161 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_160 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_188 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_187 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_186 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_185 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_184 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_183 ),
-        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_182 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_159 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_149 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_148 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_147 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_146 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_145 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_144 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_143 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_142 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_141 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_140 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_158 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_139 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_138 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_137 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_136 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_135 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_134 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_133 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_132 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_131 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_130 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_157 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_129 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_128 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_156 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_155 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_154 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_153 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_152 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_151 ),
-        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_150 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_127 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_117 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_116 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_115 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_114 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_113 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_112 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_111 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_110 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_109 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_108 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_126 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_107 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_106 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_105 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_104 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_103 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_102 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_101 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_100 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_99 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_98 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_125 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_97 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_96 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_124 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_123 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_122 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_121 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_120 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_119 ),
-        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_118 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_95 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_85 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_84 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_83 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_82 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_81 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_80 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_79 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_78 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_77 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_76 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_94 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_75 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_74 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_73 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_72 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_71 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_70 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_69 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_68 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_67 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_66 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_93 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_65 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_64 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_92 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_91 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_90 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_89 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_88 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_87 ),
-        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_86 ),
-        .\GEN_TREE.GEN_BRANCH[4].GEN_MUX_REG.data_out_reg_reg[4][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_649 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][0] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_32 ),
+        .E(\time_control_regs_int[28] ),
+        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_605 ),
+        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_595 ),
+        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_594 ),
+        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_593 ),
+        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_592 ),
+        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_591 ),
+        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_590 ),
+        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_589 ),
+        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_588 ),
+        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_587 ),
+        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_586 ),
+        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_604 ),
+        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_585 ),
+        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_584 ),
+        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_583 ),
+        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_582 ),
+        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_581 ),
+        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_580 ),
+        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_579 ),
+        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_578 ),
+        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_577 ),
+        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_576 ),
+        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_603 ),
+        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_575 ),
+        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_602 ),
+        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_601 ),
+        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_600 ),
+        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_599 ),
+        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_598 ),
+        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_597 ),
+        .\GEN_TREE.GEN_BRANCH[31].GEN_MUX_REG.data_out_reg_reg[31][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_596 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_574 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_564 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_563 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_562 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_561 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_560 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_559 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_558 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_557 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_556 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_555 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_573 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_554 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_553 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_552 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_551 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_550 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_549 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_548 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_547 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_546 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_545 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_572 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_544 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_543 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_571 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_570 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_569 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_568 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_567 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_566 ),
+        .\GEN_TREE.GEN_BRANCH[32].GEN_MUX_REG.data_out_reg_reg[32][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_565 ),
+        .\GEN_TREE.GEN_BRANCH[33].GEN_MUX_REG.data_out_reg_reg[33][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_93 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_542 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_532 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_531 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_530 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_529 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_528 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_527 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_526 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_525 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_524 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_523 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_541 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_522 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_521 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_519 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][22]_0 (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_520 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_518 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_517 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_516 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_515 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_514 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_513 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_512 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_540 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_511 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_510 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_539 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_538 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_537 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_536 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_535 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_534 ),
+        .\GEN_TREE.GEN_BRANCH[35].GEN_MUX_REG.data_out_reg_reg[35][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_533 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_509 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_499 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_498 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_497 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_496 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_495 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_494 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_493 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_492 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_491 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_490 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_508 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_489 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_488 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_487 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_486 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_485 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_484 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_483 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_482 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_481 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_480 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_507 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_479 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_478 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_506 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_505 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_504 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_503 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_502 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_501 ),
+        .\GEN_TREE.GEN_BRANCH[36].GEN_MUX_REG.data_out_reg_reg[36][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_500 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_477 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_467 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_466 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_465 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_464 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_463 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_462 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_461 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_460 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_459 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_458 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_476 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_457 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_456 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_455 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_454 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_453 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_452 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_451 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_450 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_449 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_448 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_475 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_447 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_446 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_474 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_473 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_472 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_471 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_470 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_469 ),
+        .\GEN_TREE.GEN_BRANCH[37].GEN_MUX_REG.data_out_reg_reg[37][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_468 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_445 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_435 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_434 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_433 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_432 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_431 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_430 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_429 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_428 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_427 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_426 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_444 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_425 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_424 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_423 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_422 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_421 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_420 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_419 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_418 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_417 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_416 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_443 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_415 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_414 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_442 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_441 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_440 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_439 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_438 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_437 ),
+        .\GEN_TREE.GEN_BRANCH[38].GEN_MUX_REG.data_out_reg_reg[38][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_436 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_413 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_403 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_402 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_401 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_400 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_399 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_398 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_397 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_396 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_395 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_394 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_412 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_393 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_392 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_391 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_390 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_389 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_388 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_387 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_386 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_385 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_384 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_411 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_383 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_382 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_410 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_409 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_408 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_407 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_406 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_405 ),
+        .\GEN_TREE.GEN_BRANCH[39].GEN_MUX_REG.data_out_reg_reg[39][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_404 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_381 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_371 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_370 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_369 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_368 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_367 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_366 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_365 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_364 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_363 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_362 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_380 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_361 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_360 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_359 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_358 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_357 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_356 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_355 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_354 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_353 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_352 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_379 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_351 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_350 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_378 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_377 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_376 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_375 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_374 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_373 ),
+        .\GEN_TREE.GEN_BRANCH[40].GEN_MUX_REG.data_out_reg_reg[40][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_372 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_349 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_339 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_338 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_337 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_336 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_335 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_334 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_333 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_332 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_331 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_330 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_348 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_329 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_328 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_327 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_326 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_325 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_324 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_323 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_322 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_321 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_320 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_347 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_319 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_318 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_346 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_345 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_344 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_343 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_342 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_341 ),
+        .\GEN_TREE.GEN_BRANCH[41].GEN_MUX_REG.data_out_reg_reg[41][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_340 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_317 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_307 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_306 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_305 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_304 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_303 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_302 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_301 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_300 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_299 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_298 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_316 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_297 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_296 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_295 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_294 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_293 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_292 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_291 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_290 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_289 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_288 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_315 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_287 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_286 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_314 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_313 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_312 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_311 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_310 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_309 ),
+        .\GEN_TREE.GEN_BRANCH[42].GEN_MUX_REG.data_out_reg_reg[42][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_308 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_285 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_275 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_274 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_273 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_272 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_271 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_270 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_269 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_268 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_267 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_266 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_284 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_265 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_264 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_263 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_262 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_261 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_260 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_259 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_258 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_257 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_256 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_283 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_255 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_254 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_282 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_281 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_280 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_279 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_278 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_277 ),
+        .\GEN_TREE.GEN_BRANCH[43].GEN_MUX_REG.data_out_reg_reg[43][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_276 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_253 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_243 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_242 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_241 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_240 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_239 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_238 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_237 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_236 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_235 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_234 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_252 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_233 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_232 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_231 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_230 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_229 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_228 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_227 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_226 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_225 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_224 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_251 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_223 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_222 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_250 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_249 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_248 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_247 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_246 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_245 ),
+        .\GEN_TREE.GEN_BRANCH[44].GEN_MUX_REG.data_out_reg_reg[44][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_244 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_221 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_211 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_210 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_209 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_208 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_207 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_206 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_205 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_204 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_203 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_202 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_220 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_201 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_200 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_199 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_198 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_197 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_196 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_195 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_194 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_193 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_192 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_219 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_191 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_190 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_218 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_217 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_216 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_215 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_214 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_213 ),
+        .\GEN_TREE.GEN_BRANCH[45].GEN_MUX_REG.data_out_reg_reg[45][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_212 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_189 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_179 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_178 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_177 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_176 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_175 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_174 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_173 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_172 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_171 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_170 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_188 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_169 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_168 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_167 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_166 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_165 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_164 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_163 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_162 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_161 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_160 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_187 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_159 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_158 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_186 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_185 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_184 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_183 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_182 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_181 ),
+        .\GEN_TREE.GEN_BRANCH[46].GEN_MUX_REG.data_out_reg_reg[46][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_180 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_157 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_147 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_146 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_145 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_144 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_143 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_142 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_141 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_140 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_139 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_138 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_156 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_137 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_136 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_135 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_134 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_133 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_132 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_131 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_130 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_129 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_128 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_155 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_127 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_126 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_154 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_153 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_152 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_151 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_150 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_149 ),
+        .\GEN_TREE.GEN_BRANCH[47].GEN_MUX_REG.data_out_reg_reg[47][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_148 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][0] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_125 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][10] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_115 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][11] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_114 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][12] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_113 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][13] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_112 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][14] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_111 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][15] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_110 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][16] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_109 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][17] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_108 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][18] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_107 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][19] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_106 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][1] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_124 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][20] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_105 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][21] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_104 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][22] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_103 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][23] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_102 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][24] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_101 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][25] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_100 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][26] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_99 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][27] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_98 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][28] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_97 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][29] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_96 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][2] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_123 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][30] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_95 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][31] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_94 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][3] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_122 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][4] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_121 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][5] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_120 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][6] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_119 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][7] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_118 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][8] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_117 ),
+        .\GEN_TREE.GEN_BRANCH[48].GEN_MUX_REG.data_out_reg_reg[48][9] (\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_116 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][0] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_97 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][0]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_32 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][10] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_22 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][10] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_87 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][10]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_22 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][11] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_21 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][11] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_86 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][11]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_21 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][12] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_20 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][12] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_85 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][12]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_20 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][13] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_19 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][13] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_84 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][13]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_19 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][14] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_18 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][14] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_83 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][14]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_18 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][15] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_17 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][15] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_82 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][15]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_17 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][16] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_16 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][16] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_81 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][16]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_16 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][17] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_15 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][17] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_80 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][17]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_15 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][18] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_14 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][18] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_79 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][18]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_14 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][19] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_13 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][19] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_78 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][19]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_13 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][1] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_31 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][1] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_96 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][1]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_31 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][20] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_12 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][20] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_77 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][20]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_12 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][21] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_11 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][21] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_76 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][21]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_11 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][22] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_10 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][22] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_75 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][22]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_10 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][23] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_9 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][23] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_74 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][23]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_9 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][24] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_8 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][24] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_73 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][24]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_8 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][25] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_7 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][25] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_72 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][25]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_7 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][26] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_6 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][26] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_71 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][26]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_6 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][27] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_5 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][27] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_70 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][27]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_5 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][28] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_4 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][28] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_69 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][28]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_4 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][29] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_3 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][29] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_68 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][29]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_3 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][2] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_30 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][2] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_95 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][2]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_30 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][30] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_2 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][30] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_67 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][30]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_2 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][31] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_1 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][31] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_66 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][31]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_1 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][3] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_29 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][3] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_94 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][3]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_29 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][4] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_28 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][4] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_93 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][4]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_28 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][5] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_27 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][5] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_92 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][5]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_27 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][6] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_26 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][6] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_91 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][6]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_26 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][7] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_25 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][7] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_90 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][7]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_25 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][8] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_24 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][8] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_89 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][8]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_24 ),
-        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][9] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_23 ),
+        .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][9] (\AXI4_LITE_INTERFACE.GENR_MUX0_n_88 ),
         .\GEN_TREE.GEN_BRANCH[5].GEN_MUX_REG.data_out_reg_reg[5][9]_0 (\AXI4_LITE_INTERFACE.CORE_MUX0_n_23 ),
         .Q(\time_control_regs2_int[27] ),
         .\genr_control_regs[0] ({\^genr_control_regs[0] [31:30],\^genr_control_regs[0] [26:13],\^genr_control_regs[0] [11:8],\^genr_control_regs[0] [5],\^genr_control_regs[0] [3:0]}),
@@ -42538,7 +42350,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_Error_reg 
        (.C(aclk),
         .CE(aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2PROCCLK_I_n_36 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2PROCCLK_I_n_38 ),
         .Q(ipif_Error),
         .S(\AXI4_LITE_INTERFACE.AXI_LITE_IPIF_I_n_0 ));
   FDRE #(
@@ -42554,7 +42366,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[0] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_577 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_638 ),
         .Q(ipif_RdData[0]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42562,7 +42374,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[10] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_567 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_628 ),
         .Q(ipif_RdData[10]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42570,7 +42382,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[11] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_566 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_627 ),
         .Q(ipif_RdData[11]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42578,7 +42390,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[12] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_565 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_626 ),
         .Q(ipif_RdData[12]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42586,7 +42398,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[13] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_564 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_625 ),
         .Q(ipif_RdData[13]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42594,7 +42406,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[14] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_563 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_624 ),
         .Q(ipif_RdData[14]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42602,7 +42414,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[15] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_562 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_623 ),
         .Q(ipif_RdData[15]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42610,7 +42422,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[16] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_561 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_622 ),
         .Q(ipif_RdData[16]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42618,7 +42430,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[17] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_560 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_621 ),
         .Q(ipif_RdData[17]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42626,7 +42438,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[18] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_559 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_620 ),
         .Q(ipif_RdData[18]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42634,7 +42446,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[19] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_558 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_619 ),
         .Q(ipif_RdData[19]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42642,7 +42454,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[1] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_576 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_637 ),
         .Q(ipif_RdData[1]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42650,7 +42462,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[20] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_557 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_618 ),
         .Q(ipif_RdData[20]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42658,7 +42470,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[21] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_556 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_617 ),
         .Q(ipif_RdData[21]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42666,7 +42478,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[22] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_555 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_616 ),
         .Q(ipif_RdData[22]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42674,7 +42486,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[23] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_554 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_615 ),
         .Q(ipif_RdData[23]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42682,7 +42494,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[24] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_553 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_614 ),
         .Q(ipif_RdData[24]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42690,7 +42502,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[25] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_552 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_613 ),
         .Q(ipif_RdData[25]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42698,7 +42510,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[26] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_551 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_612 ),
         .Q(ipif_RdData[26]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42706,7 +42518,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[27] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_550 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_611 ),
         .Q(ipif_RdData[27]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42714,7 +42526,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[28] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_549 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_610 ),
         .Q(ipif_RdData[28]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42722,7 +42534,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[29] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_548 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_609 ),
         .Q(ipif_RdData[29]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42730,7 +42542,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[2] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_575 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_636 ),
         .Q(ipif_RdData[2]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42738,7 +42550,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[30] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_547 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_608 ),
         .Q(ipif_RdData[30]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42746,7 +42558,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[31] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_546 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_607 ),
         .Q(ipif_RdData[31]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42754,7 +42566,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[3] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_574 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_635 ),
         .Q(ipif_RdData[3]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42762,7 +42574,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[4] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_573 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_634 ),
         .Q(ipif_RdData[4]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42770,7 +42582,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[5] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_572 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_633 ),
         .Q(ipif_RdData[5]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42778,7 +42590,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[6] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_571 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_632 ),
         .Q(ipif_RdData[6]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42786,7 +42598,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[7] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_570 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_631 ),
         .Q(ipif_RdData[7]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42794,7 +42606,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[8] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_569 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_630 ),
         .Q(ipif_RdData[8]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42802,7 +42614,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.ipif_RdData_reg[9] 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_568 ),
+        .D(\AXI4_LITE_INTERFACE.SYNC2VIDCLK_I_n_629 ),
         .Q(ipif_RdData[9]),
         .R(\GEN_HAS_IRQ.irq_i_1_n_0 ));
   FDRE #(
@@ -42813,6 +42625,22 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .D(p_526_out),
         .Q(ipif_WrAck),
         .R(\AXI4_LITE_INTERFACE.AXI_LITE_IPIF_I_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \AXI4_LITE_INTERFACE.ipif_proc_Req_d1_reg[0] 
+       (.C(aclk),
+        .CE(1'b1),
+        .D(ipif_proc_Req[0]),
+        .Q(ipif_proc_Req_d1[0]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \AXI4_LITE_INTERFACE.ipif_proc_Req_d1_reg[1] 
+       (.C(aclk),
+        .CE(1'b1),
+        .D(ipif_proc_Req[1]),
+        .Q(ipif_proc_Req_d1[1]),
+        .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     \AXI4_LITE_INTERFACE.proc_sync1_reg[0] 
@@ -43098,7 +42926,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.proc_sync1_reg[41] 
        (.C(aclk),
         .CE(1'b1),
-        .D(ipif_proc_CS[0]),
+        .D(ipif_proc_Req_d1[0]),
         .Q(proc_sync1[41]),
         .R(1'b0));
   FDRE #(
@@ -43106,7 +42934,7 @@ module hdmi_in_v_tc_1_0_video_ctrl
     \AXI4_LITE_INTERFACE.proc_sync1_reg[42] 
        (.C(aclk),
         .CE(1'b1),
-        .D(ipif_proc_CS[1]),
+        .D(ipif_proc_Req_d1[1]),
         .Q(proc_sync1[42]),
         .R(1'b0));
   FDRE #(
@@ -47654,27 +47482,27 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .D(write_ack_e1),
         .Q(write_ack_e2),
         .R(\AXI4_LITE_INTERFACE.write_ack_e1_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair274" *) 
+  (* SOFT_HLUTNM = "soft_lutpair280" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \AXI4_LITE_INTERFACE.write_ack_i_1 
        (.I0(write_ack_e1),
         .I1(write_ack_e2),
         .O(p_534_out));
-  (* SOFT_HLUTNM = "soft_lutpair274" *) 
+  (* SOFT_HLUTNM = "soft_lutpair280" *) 
   LUT3 #(
     .INIT(8'h08)) 
     \AXI4_LITE_INTERFACE.write_ack_int_i_1 
        (.I0(write_ack_e2),
         .I1(write_ack_e1),
         .I2(write_ack),
-        .O(\AXI4_LITE_INTERFACE.write_ack_int_i_1_n_0 ));
+        .O(p_531_out));
   FDRE #(
     .INIT(1'b0)) 
     \AXI4_LITE_INTERFACE.write_ack_int_reg 
        (.C(vid_aclk),
         .CE(vid_aclk_en),
-        .D(\AXI4_LITE_INTERFACE.write_ack_int_i_1_n_0 ),
+        .D(p_531_out),
         .Q(write_ack_int),
         .R(\AXI4_LITE_INTERFACE.write_ack_e1_i_1_n_0 ));
   FDRE #(
@@ -47742,14 +47570,14 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .I3(intr_err[15]),
         .O(\GEN_HAS_IRQ.intr_err[15]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hBA00AA000000AA00)) 
+    .INIT(64'hFF0F200000000000)) 
     \GEN_HAS_IRQ.intr_err[16]_i_1 
-       (.I0(intr_err[16]),
+       (.I0(\genr_status_regs[2] [16]),
         .I1(intr_err_set_d[16]),
-        .I2(\genr_status_regs[2] [16]),
-        .I3(resetn_out),
-        .I4(vid_aclk_en),
-        .I5(\GEN_HAS_IRQ.intr_err[16]_i_2_n_0 ),
+        .I2(vid_aclk_en),
+        .I3(\GEN_HAS_IRQ.intr_err[16]_i_2_n_0 ),
+        .I4(intr_err[16]),
+        .I5(resetn_out),
         .O(\GEN_HAS_IRQ.intr_err[16]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
@@ -47758,14 +47586,14 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .I1(\^genr_control_regs[2] [16]),
         .O(\GEN_HAS_IRQ.intr_err[16]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hBA00AA000000AA00)) 
+    .INIT(64'hFF0F200000000000)) 
     \GEN_HAS_IRQ.intr_err[17]_i_1 
-       (.I0(intr_err[17]),
+       (.I0(\genr_status_regs[2] [17]),
         .I1(intr_err_set_d[17]),
-        .I2(\genr_status_regs[2] [17]),
-        .I3(resetn_out),
-        .I4(vid_aclk_en),
-        .I5(\GEN_HAS_IRQ.intr_err[17]_i_2_n_0 ),
+        .I2(vid_aclk_en),
+        .I3(\GEN_HAS_IRQ.intr_err[17]_i_2_n_0 ),
+        .I4(intr_err[17]),
+        .I5(resetn_out),
         .O(\GEN_HAS_IRQ.intr_err[17]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
@@ -47774,14 +47602,14 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .I1(\^genr_control_regs[2] [17]),
         .O(\GEN_HAS_IRQ.intr_err[17]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hBA00AA000000AA00)) 
+    .INIT(64'hFF0F200000000000)) 
     \GEN_HAS_IRQ.intr_err[18]_i_1 
-       (.I0(intr_err[18]),
+       (.I0(\genr_status_regs[2] [18]),
         .I1(intr_err_set_d[18]),
-        .I2(\genr_status_regs[2] [18]),
-        .I3(resetn_out),
-        .I4(vid_aclk_en),
-        .I5(\GEN_HAS_IRQ.intr_err[18]_i_2_n_0 ),
+        .I2(vid_aclk_en),
+        .I3(\GEN_HAS_IRQ.intr_err[18]_i_2_n_0 ),
+        .I4(intr_err[18]),
+        .I5(resetn_out),
         .O(\GEN_HAS_IRQ.intr_err[18]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
@@ -47790,14 +47618,14 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .I1(\^genr_control_regs[2] [18]),
         .O(\GEN_HAS_IRQ.intr_err[18]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hBA00AA000000AA00)) 
+    .INIT(64'hFF0F200000000000)) 
     \GEN_HAS_IRQ.intr_err[19]_i_1 
-       (.I0(intr_err[19]),
+       (.I0(\genr_status_regs[2] [19]),
         .I1(intr_err_set_d[19]),
-        .I2(\genr_status_regs[2] [19]),
-        .I3(resetn_out),
-        .I4(vid_aclk_en),
-        .I5(\GEN_HAS_IRQ.intr_err[19]_i_2_n_0 ),
+        .I2(vid_aclk_en),
+        .I3(\GEN_HAS_IRQ.intr_err[19]_i_2_n_0 ),
+        .I4(intr_err[19]),
+        .I5(resetn_out),
         .O(\GEN_HAS_IRQ.intr_err[19]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
@@ -47814,14 +47642,14 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .I3(intr_err[1]),
         .O(\GEN_HAS_IRQ.intr_err[1]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hBA00AA000000AA00)) 
+    .INIT(64'hFF0F200000000000)) 
     \GEN_HAS_IRQ.intr_err[20]_i_1 
-       (.I0(intr_err[20]),
+       (.I0(\genr_status_regs[2] [20]),
         .I1(intr_err_set_d[20]),
-        .I2(\genr_status_regs[2] [20]),
-        .I3(resetn_out),
-        .I4(vid_aclk_en),
-        .I5(\GEN_HAS_IRQ.intr_err[20]_i_2_n_0 ),
+        .I2(vid_aclk_en),
+        .I3(\GEN_HAS_IRQ.intr_err[20]_i_2_n_0 ),
+        .I4(intr_err[20]),
+        .I5(resetn_out),
         .O(\GEN_HAS_IRQ.intr_err[20]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
@@ -47830,14 +47658,14 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .I1(\^genr_control_regs[2] [20]),
         .O(\GEN_HAS_IRQ.intr_err[20]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hBA00AA000000AA00)) 
+    .INIT(64'hFF0F200000000000)) 
     \GEN_HAS_IRQ.intr_err[21]_i_1 
-       (.I0(intr_err[21]),
+       (.I0(\genr_status_regs[2] [21]),
         .I1(intr_err_set_d[21]),
-        .I2(\genr_status_regs[2] [21]),
-        .I3(resetn_out),
-        .I4(vid_aclk_en),
-        .I5(\GEN_HAS_IRQ.intr_err[21]_i_2_n_0 ),
+        .I2(vid_aclk_en),
+        .I3(\GEN_HAS_IRQ.intr_err[21]_i_2_n_0 ),
+        .I4(intr_err[21]),
+        .I5(resetn_out),
         .O(\GEN_HAS_IRQ.intr_err[21]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
@@ -48558,14 +48386,14 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .I3(\genr_status_regs_int_reg[1] [0]),
         .O(\GEN_HAS_IRQ.intr_stat[0]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hBA00AA000000AA00)) 
+    .INIT(64'hFF0F200000000000)) 
     \GEN_HAS_IRQ.intr_stat[10]_i_1 
-       (.I0(\genr_status_regs_int_reg[1] [10]),
+       (.I0(\genr_status_regs[1] [10]),
         .I1(intr_stat_set_d[10]),
-        .I2(\genr_status_regs[1] [10]),
-        .I3(resetn_out),
-        .I4(vid_aclk_en),
-        .I5(\GEN_HAS_IRQ.intr_stat[10]_i_2_n_0 ),
+        .I2(vid_aclk_en),
+        .I3(\GEN_HAS_IRQ.intr_stat[10]_i_2_n_0 ),
+        .I4(\genr_status_regs_int_reg[1] [10]),
+        .I5(resetn_out),
         .O(\GEN_HAS_IRQ.intr_stat[10]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
@@ -48574,14 +48402,14 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .I1(\^genr_control_regs[1] [10]),
         .O(\GEN_HAS_IRQ.intr_stat[10]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hBA00AA000000AA00)) 
+    .INIT(64'hFF0F200000000000)) 
     \GEN_HAS_IRQ.intr_stat[11]_i_1 
-       (.I0(\genr_status_regs_int_reg[1] [11]),
+       (.I0(\genr_status_regs[1] [11]),
         .I1(intr_stat_set_d[11]),
-        .I2(\genr_status_regs[1] [11]),
-        .I3(resetn_out),
-        .I4(vid_aclk_en),
-        .I5(\GEN_HAS_IRQ.intr_stat[11]_i_2_n_0 ),
+        .I2(vid_aclk_en),
+        .I3(\GEN_HAS_IRQ.intr_stat[11]_i_2_n_0 ),
+        .I4(\genr_status_regs_int_reg[1] [11]),
+        .I5(resetn_out),
         .O(\GEN_HAS_IRQ.intr_stat[11]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
@@ -48590,14 +48418,14 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .I1(\^genr_control_regs[1] [11]),
         .O(\GEN_HAS_IRQ.intr_stat[11]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hBA00AA000000AA00)) 
+    .INIT(64'hFF0F200000000000)) 
     \GEN_HAS_IRQ.intr_stat[12]_i_1 
-       (.I0(\genr_status_regs_int_reg[1] [12]),
+       (.I0(\genr_status_regs[1] [12]),
         .I1(intr_stat_set_d[12]),
-        .I2(\genr_status_regs[1] [12]),
-        .I3(resetn_out),
-        .I4(vid_aclk_en),
-        .I5(\GEN_HAS_IRQ.intr_stat[12]_i_2_n_0 ),
+        .I2(vid_aclk_en),
+        .I3(\GEN_HAS_IRQ.intr_stat[12]_i_2_n_0 ),
+        .I4(\genr_status_regs_int_reg[1] [12]),
+        .I5(resetn_out),
         .O(\GEN_HAS_IRQ.intr_stat[12]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
@@ -48606,14 +48434,14 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .I1(\^genr_control_regs[1] [12]),
         .O(\GEN_HAS_IRQ.intr_stat[12]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hBA00AA000000AA00)) 
+    .INIT(64'hFF0F200000000000)) 
     \GEN_HAS_IRQ.intr_stat[13]_i_1 
-       (.I0(\genr_status_regs_int_reg[1] [13]),
+       (.I0(\genr_status_regs[1] [13]),
         .I1(intr_stat_set_d[13]),
-        .I2(\genr_status_regs[1] [13]),
-        .I3(resetn_out),
-        .I4(vid_aclk_en),
-        .I5(\GEN_HAS_IRQ.intr_stat[13]_i_2_n_0 ),
+        .I2(vid_aclk_en),
+        .I3(\GEN_HAS_IRQ.intr_stat[13]_i_2_n_0 ),
+        .I4(\genr_status_regs_int_reg[1] [13]),
+        .I5(resetn_out),
         .O(\GEN_HAS_IRQ.intr_stat[13]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
@@ -48638,14 +48466,14 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .I3(\genr_status_regs_int_reg[1] [15]),
         .O(\GEN_HAS_IRQ.intr_stat[15]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hBA00AA000000AA00)) 
+    .INIT(64'hFF0F200000000000)) 
     \GEN_HAS_IRQ.intr_stat[16]_i_1 
-       (.I0(\genr_status_regs_int_reg[1] [16]),
+       (.I0(\genr_status_regs[1] [16]),
         .I1(intr_stat_set_d[16]),
-        .I2(\genr_status_regs[1] [16]),
-        .I3(resetn_out),
-        .I4(vid_aclk_en),
-        .I5(\GEN_HAS_IRQ.intr_stat[16]_i_2_n_0 ),
+        .I2(vid_aclk_en),
+        .I3(\GEN_HAS_IRQ.intr_stat[16]_i_2_n_0 ),
+        .I4(\genr_status_regs_int_reg[1] [16]),
+        .I5(resetn_out),
         .O(\GEN_HAS_IRQ.intr_stat[16]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
@@ -48654,14 +48482,14 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .I1(\^genr_control_regs[1] [16]),
         .O(\GEN_HAS_IRQ.intr_stat[16]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hBA00AA000000AA00)) 
+    .INIT(64'hFF0F200000000000)) 
     \GEN_HAS_IRQ.intr_stat[17]_i_1 
-       (.I0(\genr_status_regs_int_reg[1] [17]),
+       (.I0(\genr_status_regs[1] [17]),
         .I1(intr_stat_set_d[17]),
-        .I2(\genr_status_regs[1] [17]),
-        .I3(resetn_out),
-        .I4(vid_aclk_en),
-        .I5(\GEN_HAS_IRQ.intr_stat[17]_i_2_n_0 ),
+        .I2(vid_aclk_en),
+        .I3(\GEN_HAS_IRQ.intr_stat[17]_i_2_n_0 ),
+        .I4(\genr_status_regs_int_reg[1] [17]),
+        .I5(resetn_out),
         .O(\GEN_HAS_IRQ.intr_stat[17]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
@@ -48670,14 +48498,14 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .I1(\^genr_control_regs[1] [17]),
         .O(\GEN_HAS_IRQ.intr_stat[17]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hBA00AA000000AA00)) 
+    .INIT(64'hFF0F200000000000)) 
     \GEN_HAS_IRQ.intr_stat[18]_i_1 
-       (.I0(\genr_status_regs_int_reg[1] [18]),
+       (.I0(\genr_status_regs[1] [18]),
         .I1(intr_stat_set_d[18]),
-        .I2(\genr_status_regs[1] [18]),
-        .I3(resetn_out),
-        .I4(vid_aclk_en),
-        .I5(\GEN_HAS_IRQ.intr_stat[18]_i_2_n_0 ),
+        .I2(vid_aclk_en),
+        .I3(\GEN_HAS_IRQ.intr_stat[18]_i_2_n_0 ),
+        .I4(\genr_status_regs_int_reg[1] [18]),
+        .I5(resetn_out),
         .O(\GEN_HAS_IRQ.intr_stat[18]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
@@ -48686,14 +48514,14 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .I1(\^genr_control_regs[1] [18]),
         .O(\GEN_HAS_IRQ.intr_stat[18]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hBA00AA000000AA00)) 
+    .INIT(64'hFF0F200000000000)) 
     \GEN_HAS_IRQ.intr_stat[19]_i_1 
-       (.I0(\genr_status_regs_int_reg[1] [19]),
+       (.I0(\genr_status_regs[1] [19]),
         .I1(intr_stat_set_d[19]),
-        .I2(\genr_status_regs[1] [19]),
-        .I3(resetn_out),
-        .I4(vid_aclk_en),
-        .I5(\GEN_HAS_IRQ.intr_stat[19]_i_2_n_0 ),
+        .I2(vid_aclk_en),
+        .I3(\GEN_HAS_IRQ.intr_stat[19]_i_2_n_0 ),
+        .I4(\genr_status_regs_int_reg[1] [19]),
+        .I5(resetn_out),
         .O(\GEN_HAS_IRQ.intr_stat[19]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
@@ -48710,14 +48538,14 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .I3(\genr_status_regs_int_reg[1] [1]),
         .O(\GEN_HAS_IRQ.intr_stat[1]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hBA00AA000000AA00)) 
+    .INIT(64'hFF0F200000000000)) 
     \GEN_HAS_IRQ.intr_stat[20]_i_1 
-       (.I0(\genr_status_regs_int_reg[1] [20]),
+       (.I0(\genr_status_regs[1] [20]),
         .I1(intr_stat_set_d[20]),
-        .I2(\genr_status_regs[1] [20]),
-        .I3(resetn_out),
-        .I4(vid_aclk_en),
-        .I5(\GEN_HAS_IRQ.intr_stat[20]_i_2_n_0 ),
+        .I2(vid_aclk_en),
+        .I3(\GEN_HAS_IRQ.intr_stat[20]_i_2_n_0 ),
+        .I4(\genr_status_regs_int_reg[1] [20]),
+        .I5(resetn_out),
         .O(\GEN_HAS_IRQ.intr_stat[20]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
@@ -48726,14 +48554,14 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .I1(\^genr_control_regs[1] [20]),
         .O(\GEN_HAS_IRQ.intr_stat[20]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hBA00AA000000AA00)) 
+    .INIT(64'hFF0F200000000000)) 
     \GEN_HAS_IRQ.intr_stat[21]_i_1 
-       (.I0(\genr_status_regs_int_reg[1] [21]),
+       (.I0(\genr_status_regs[1] [21]),
         .I1(intr_stat_set_d[21]),
-        .I2(\genr_status_regs[1] [21]),
-        .I3(resetn_out),
-        .I4(vid_aclk_en),
-        .I5(\GEN_HAS_IRQ.intr_stat[21]_i_2_n_0 ),
+        .I2(vid_aclk_en),
+        .I3(\GEN_HAS_IRQ.intr_stat[21]_i_2_n_0 ),
+        .I4(\genr_status_regs_int_reg[1] [21]),
+        .I5(resetn_out),
         .O(\GEN_HAS_IRQ.intr_stat[21]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
@@ -48742,14 +48570,14 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .I1(\^genr_control_regs[1] [21]),
         .O(\GEN_HAS_IRQ.intr_stat[21]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hBA00AA000000AA00)) 
+    .INIT(64'hFF0F200000000000)) 
     \GEN_HAS_IRQ.intr_stat[22]_i_1 
-       (.I0(\genr_status_regs_int_reg[1] [22]),
+       (.I0(\genr_status_regs[1] [22]),
         .I1(intr_stat_set_d[22]),
-        .I2(\genr_status_regs[1] [22]),
-        .I3(resetn_out),
-        .I4(vid_aclk_en),
-        .I5(\GEN_HAS_IRQ.intr_stat[22]_i_2_n_0 ),
+        .I2(vid_aclk_en),
+        .I3(\GEN_HAS_IRQ.intr_stat[22]_i_2_n_0 ),
+        .I4(\genr_status_regs_int_reg[1] [22]),
+        .I5(resetn_out),
         .O(\GEN_HAS_IRQ.intr_stat[22]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
@@ -48758,14 +48586,14 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .I1(\^genr_control_regs[1] [22]),
         .O(\GEN_HAS_IRQ.intr_stat[22]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hBA00AA000000AA00)) 
+    .INIT(64'hFF0F200000000000)) 
     \GEN_HAS_IRQ.intr_stat[23]_i_1 
-       (.I0(\genr_status_regs_int_reg[1] [23]),
+       (.I0(\genr_status_regs[1] [23]),
         .I1(intr_stat_set_d[23]),
-        .I2(\genr_status_regs[1] [23]),
-        .I3(resetn_out),
-        .I4(vid_aclk_en),
-        .I5(\GEN_HAS_IRQ.intr_stat[23]_i_2_n_0 ),
+        .I2(vid_aclk_en),
+        .I3(\GEN_HAS_IRQ.intr_stat[23]_i_2_n_0 ),
+        .I4(\genr_status_regs_int_reg[1] [23]),
+        .I5(resetn_out),
         .O(\GEN_HAS_IRQ.intr_stat[23]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
@@ -48774,14 +48602,14 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .I1(\^genr_control_regs[1] [23]),
         .O(\GEN_HAS_IRQ.intr_stat[23]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hBA00AA000000AA00)) 
+    .INIT(64'hFF0F200000000000)) 
     \GEN_HAS_IRQ.intr_stat[24]_i_1 
-       (.I0(\genr_status_regs_int_reg[1] [24]),
+       (.I0(\genr_status_regs[1] [24]),
         .I1(intr_stat_set_d[24]),
-        .I2(\genr_status_regs[1] [24]),
-        .I3(resetn_out),
-        .I4(vid_aclk_en),
-        .I5(\GEN_HAS_IRQ.intr_stat[24]_i_2_n_0 ),
+        .I2(vid_aclk_en),
+        .I3(\GEN_HAS_IRQ.intr_stat[24]_i_2_n_0 ),
+        .I4(\genr_status_regs_int_reg[1] [24]),
+        .I5(resetn_out),
         .O(\GEN_HAS_IRQ.intr_stat[24]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
@@ -48790,14 +48618,14 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .I1(\^genr_control_regs[1] [24]),
         .O(\GEN_HAS_IRQ.intr_stat[24]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hBA00AA000000AA00)) 
+    .INIT(64'hFF0F200000000000)) 
     \GEN_HAS_IRQ.intr_stat[25]_i_1 
-       (.I0(\genr_status_regs_int_reg[1] [25]),
+       (.I0(\genr_status_regs[1] [25]),
         .I1(intr_stat_set_d[25]),
-        .I2(\genr_status_regs[1] [25]),
-        .I3(resetn_out),
-        .I4(vid_aclk_en),
-        .I5(\GEN_HAS_IRQ.intr_stat[25]_i_2_n_0 ),
+        .I2(vid_aclk_en),
+        .I3(\GEN_HAS_IRQ.intr_stat[25]_i_2_n_0 ),
+        .I4(\genr_status_regs_int_reg[1] [25]),
+        .I5(resetn_out),
         .O(\GEN_HAS_IRQ.intr_stat[25]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
@@ -48806,14 +48634,14 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .I1(\^genr_control_regs[1] [25]),
         .O(\GEN_HAS_IRQ.intr_stat[25]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hBA00AA000000AA00)) 
+    .INIT(64'hFF0F200000000000)) 
     \GEN_HAS_IRQ.intr_stat[26]_i_1 
-       (.I0(\genr_status_regs_int_reg[1] [26]),
+       (.I0(\genr_status_regs[1] [26]),
         .I1(intr_stat_set_d[26]),
-        .I2(\genr_status_regs[1] [26]),
-        .I3(resetn_out),
-        .I4(vid_aclk_en),
-        .I5(\GEN_HAS_IRQ.intr_stat[26]_i_2_n_0 ),
+        .I2(vid_aclk_en),
+        .I3(\GEN_HAS_IRQ.intr_stat[26]_i_2_n_0 ),
+        .I4(\genr_status_regs_int_reg[1] [26]),
+        .I5(resetn_out),
         .O(\GEN_HAS_IRQ.intr_stat[26]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
@@ -48822,14 +48650,14 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .I1(\^genr_control_regs[1] [26]),
         .O(\GEN_HAS_IRQ.intr_stat[26]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hBA00AA000000AA00)) 
+    .INIT(64'hFF0F200000000000)) 
     \GEN_HAS_IRQ.intr_stat[27]_i_1 
-       (.I0(\genr_status_regs_int_reg[1] [27]),
+       (.I0(\genr_status_regs[1] [27]),
         .I1(intr_stat_set_d[27]),
-        .I2(\genr_status_regs[1] [27]),
-        .I3(resetn_out),
-        .I4(vid_aclk_en),
-        .I5(\GEN_HAS_IRQ.intr_stat[27]_i_2_n_0 ),
+        .I2(vid_aclk_en),
+        .I3(\GEN_HAS_IRQ.intr_stat[27]_i_2_n_0 ),
+        .I4(\genr_status_regs_int_reg[1] [27]),
+        .I5(resetn_out),
         .O(\GEN_HAS_IRQ.intr_stat[27]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
@@ -48838,14 +48666,14 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .I1(\^genr_control_regs[1] [27]),
         .O(\GEN_HAS_IRQ.intr_stat[27]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hBA00AA000000AA00)) 
+    .INIT(64'hFF0F200000000000)) 
     \GEN_HAS_IRQ.intr_stat[28]_i_1 
-       (.I0(\genr_status_regs_int_reg[1] [28]),
+       (.I0(\genr_status_regs[1] [28]),
         .I1(intr_stat_set_d[28]),
-        .I2(\genr_status_regs[1] [28]),
-        .I3(resetn_out),
-        .I4(vid_aclk_en),
-        .I5(\GEN_HAS_IRQ.intr_stat[28]_i_2_n_0 ),
+        .I2(vid_aclk_en),
+        .I3(\GEN_HAS_IRQ.intr_stat[28]_i_2_n_0 ),
+        .I4(\genr_status_regs_int_reg[1] [28]),
+        .I5(resetn_out),
         .O(\GEN_HAS_IRQ.intr_stat[28]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
@@ -48854,14 +48682,14 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .I1(\^genr_control_regs[1] [28]),
         .O(\GEN_HAS_IRQ.intr_stat[28]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hBA00AA000000AA00)) 
+    .INIT(64'hFF0F200000000000)) 
     \GEN_HAS_IRQ.intr_stat[29]_i_1 
-       (.I0(\genr_status_regs_int_reg[1] [29]),
+       (.I0(\genr_status_regs[1] [29]),
         .I1(intr_stat_set_d[29]),
-        .I2(\genr_status_regs[1] [29]),
-        .I3(resetn_out),
-        .I4(vid_aclk_en),
-        .I5(\GEN_HAS_IRQ.intr_stat[29]_i_2_n_0 ),
+        .I2(vid_aclk_en),
+        .I3(\GEN_HAS_IRQ.intr_stat[29]_i_2_n_0 ),
+        .I4(\genr_status_regs_int_reg[1] [29]),
+        .I5(resetn_out),
         .O(\GEN_HAS_IRQ.intr_stat[29]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
@@ -48878,14 +48706,14 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .I3(\genr_status_regs_int_reg[1] [2]),
         .O(\GEN_HAS_IRQ.intr_stat[2]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hBA00AA000000AA00)) 
+    .INIT(64'hFF0F200000000000)) 
     \GEN_HAS_IRQ.intr_stat[30]_i_1 
-       (.I0(\genr_status_regs_int_reg[1] [30]),
+       (.I0(\genr_status_regs[1] [30]),
         .I1(intr_stat_set_d[30]),
-        .I2(\genr_status_regs[1] [30]),
-        .I3(resetn_out),
-        .I4(vid_aclk_en),
-        .I5(\GEN_HAS_IRQ.intr_stat[30]_i_2_n_0 ),
+        .I2(vid_aclk_en),
+        .I3(\GEN_HAS_IRQ.intr_stat[30]_i_2_n_0 ),
+        .I4(\genr_status_regs_int_reg[1] [30]),
+        .I5(resetn_out),
         .O(\GEN_HAS_IRQ.intr_stat[30]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
@@ -48894,14 +48722,14 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .I1(\^genr_control_regs[1] [30]),
         .O(\GEN_HAS_IRQ.intr_stat[30]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hBA00AA000000AA00)) 
+    .INIT(64'hFF0F200000000000)) 
     \GEN_HAS_IRQ.intr_stat[31]_i_1 
-       (.I0(\GEN_HAS_IRQ.intr_stat_reg_n_0_[31] ),
+       (.I0(\genr_status_regs[1] [31]),
         .I1(intr_stat_set_d[31]),
-        .I2(\genr_status_regs[1] [31]),
-        .I3(resetn_out),
-        .I4(vid_aclk_en),
-        .I5(\GEN_HAS_IRQ.intr_stat[31]_i_2_n_0 ),
+        .I2(vid_aclk_en),
+        .I3(\GEN_HAS_IRQ.intr_stat[31]_i_2_n_0 ),
+        .I4(\GEN_HAS_IRQ.intr_stat_reg_n_0_[31] ),
+        .I5(resetn_out),
         .O(\GEN_HAS_IRQ.intr_stat[31]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
@@ -48950,14 +48778,14 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .I3(\genr_status_regs_int_reg[1] [7]),
         .O(\GEN_HAS_IRQ.intr_stat[7]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hBA00AA000000AA00)) 
+    .INIT(64'hFF0F200000000000)) 
     \GEN_HAS_IRQ.intr_stat[8]_i_1 
-       (.I0(\genr_status_regs_int_reg[1] [8]),
+       (.I0(\genr_status_regs[1] [8]),
         .I1(intr_stat_set_d[8]),
-        .I2(\genr_status_regs[1] [8]),
-        .I3(resetn_out),
-        .I4(vid_aclk_en),
-        .I5(\GEN_HAS_IRQ.intr_stat[8]_i_2_n_0 ),
+        .I2(vid_aclk_en),
+        .I3(\GEN_HAS_IRQ.intr_stat[8]_i_2_n_0 ),
+        .I4(\genr_status_regs_int_reg[1] [8]),
+        .I5(resetn_out),
         .O(\GEN_HAS_IRQ.intr_stat[8]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
@@ -48966,14 +48794,14 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .I1(\^genr_control_regs[1] [8]),
         .O(\GEN_HAS_IRQ.intr_stat[8]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hBA00AA000000AA00)) 
+    .INIT(64'hFF0F200000000000)) 
     \GEN_HAS_IRQ.intr_stat[9]_i_1 
-       (.I0(\genr_status_regs_int_reg[1] [9]),
+       (.I0(\genr_status_regs[1] [9]),
         .I1(intr_stat_set_d[9]),
-        .I2(\genr_status_regs[1] [9]),
-        .I3(resetn_out),
-        .I4(vid_aclk_en),
-        .I5(\GEN_HAS_IRQ.intr_stat[9]_i_2_n_0 ),
+        .I2(vid_aclk_en),
+        .I3(\GEN_HAS_IRQ.intr_stat[9]_i_2_n_0 ),
+        .I4(\genr_status_regs_int_reg[1] [9]),
+        .I5(resetn_out),
         .O(\GEN_HAS_IRQ.intr_stat[9]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hB)) 
@@ -49715,14 +49543,14 @@ module hdmi_in_v_tc_1_0_video_ctrl
         .I1(\genr_status_regs_int_reg[1] [12]),
         .I2(\^genr_control_regs[3] [13]),
         .I3(\genr_status_regs_int_reg[1] [13]),
-        .I4(\genr_status_regs_int_reg[1] [10]),
-        .I5(\^genr_control_regs[3] [10]),
+        .I4(\genr_status_regs_int_reg[1] [11]),
+        .I5(\^genr_control_regs[3] [11]),
         .O(\GEN_HAS_IRQ.irq_i_3_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFF888F888F888)) 
     \GEN_HAS_IRQ.irq_i_4 
-       (.I0(\genr_status_regs_int_reg[1] [11]),
-        .I1(\^genr_control_regs[3] [11]),
+       (.I0(\genr_status_regs_int_reg[1] [10]),
+        .I1(\^genr_control_regs[3] [10]),
         .I2(\^genr_control_regs[3] [8]),
         .I3(\genr_status_regs_int_reg[1] [8]),
         .I4(\^genr_control_regs[3] [9]),
@@ -49767,10 +49595,10 @@ module hdmi_in_v_tc_1_0_video_ctrl
   LUT4 #(
     .INIT(16'hF888)) 
     \GEN_HAS_IRQ.irq_i_9 
-       (.I0(\genr_status_regs_int_reg[1] [25]),
-        .I1(\^genr_control_regs[3] [25]),
-        .I2(\genr_status_regs_int_reg[1] [24]),
-        .I3(\^genr_control_regs[3] [24]),
+       (.I0(\genr_status_regs_int_reg[1] [24]),
+        .I1(\^genr_control_regs[3] [24]),
+        .I2(\genr_status_regs_int_reg[1] [25]),
+        .I3(\^genr_control_regs[3] [25]),
         .O(\GEN_HAS_IRQ.irq_i_9_n_0 ));
   FDRE \GEN_HAS_IRQ.irq_reg 
        (.C(vid_aclk),

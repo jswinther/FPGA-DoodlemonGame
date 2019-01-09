@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Dec 29 14:15:56 2017" VIVADOVERSION="2017.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jan  9 09:14:32 2019" VIVADOVERSION="2018.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo:part0:1.0" DEVICE="7z010" NAME="hdmi_in" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -200,9 +200,9 @@
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="PXL_CLK_O" SIGIS="clk" SIGNAME="axi_dynclk_0_PXL_CLK_O">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rgb2vga_0" PORT="PixelClk"/>
-            <CONNECTION INSTANCE="v_tc_0" PORT="clk"/>
             <CONNECTION INSTANCE="axi_vdma_0" PORT="m_axis_mm2s_aclk"/>
             <CONNECTION INSTANCE="v_axi4s_vid_out_0" PORT="aclk"/>
+            <CONNECTION INSTANCE="v_tc_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="PXL_CLK_5X_O" SIGIS="clk"/>
@@ -4222,6 +4222,7 @@
         <PARAMETER NAME="C_ENABLE_DEBUG_INFO_15" VALUE="1"/>
         <PARAMETER NAME="C_INSTANCE" VALUE="axi_vdma"/>
         <PARAMETER NAME="C_SELECT_XPM" VALUE="0"/>
+        <PARAMETER NAME="C_ENABLE_VERT_FLIP" VALUE="0"/>
         <PARAMETER NAME="C_FAMILY" VALUE="zynq"/>
         <PARAMETER NAME="Component_Name" VALUE="hdmi_in_axi_vdma_0_0"/>
         <PARAMETER NAME="c_m_axi_mm2s_data_width" VALUE="32"/>
@@ -4278,6 +4279,7 @@
         <PARAMETER NAME="c_mm2s_genlock_repeat_en" VALUE="0"/>
         <PARAMETER NAME="c_addr_width" VALUE="32"/>
         <PARAMETER NAME="c_single_interface" VALUE="0"/>
+        <PARAMETER NAME="c_enable_vert_flip" VALUE="0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
         <PARAMETER NAME="C_BASEADDR" VALUE="0x43000000"/>
         <PARAMETER NAME="C_HIGHADDR" VALUE="0x4300FFFF"/>
@@ -4807,7 +4809,7 @@
     </MODULE>
     <MODULE FULLNAME="/dvi2rgb_0" HWVERSION="1.7" INSTANCE="dvi2rgb_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="dvi2rgb" VLNV="digilentinc.com:ip:dvi2rgb:1.7">
       <DOCUMENTS>
-        <DOCUMENT SOURCE="c:/Programming/E17_02321/3w/vivado/hdmi-in/hdmi-in.ipdefs/repo_0/vivado-library/ip/dvi2rgb_v1_7/docs/dvi2rgb.pdf"/>
+        <DOCUMENT SOURCE="c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.ipdefs/repo_0_0/vivado-library/ip/dvi2rgb_v1_7/docs/dvi2rgb.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="kEmulateDDC" VALUE="true"/>
@@ -4860,8 +4862,8 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="PixelClk" SIGIS="clk" SIGNAME="dvi2rgb_0_PixelClk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="v_tc_1" PORT="clk"/>
             <CONNECTION INSTANCE="proc_sys_reset_0" PORT="slowest_sync_clk"/>
+            <CONNECTION INSTANCE="v_tc_1" PORT="clk"/>
             <CONNECTION INSTANCE="v_vid_in_axi4s_0" PORT="vid_io_in_clk"/>
           </CONNECTIONS>
         </PORT>
@@ -5008,6 +5010,7 @@
         <PARAMETER NAME="C_USE_M_AXI_GP0" VALUE="1"/>
         <PARAMETER NAME="C_USE_M_AXI_GP1" VALUE="0"/>
         <PARAMETER NAME="C_USE_S_AXI_GP0" VALUE="0"/>
+        <PARAMETER NAME="C_USE_S_AXI_GP1" VALUE="0"/>
         <PARAMETER NAME="C_USE_S_AXI_HP0" VALUE="1"/>
         <PARAMETER NAME="C_USE_S_AXI_HP1" VALUE="0"/>
         <PARAMETER NAME="C_USE_S_AXI_HP2" VALUE="0"/>
@@ -5477,6 +5480,9 @@
         <PARAMETER NAME="PCW_QSPI_GRP_SINGLE_SS_IO" VALUE="MIO 1 .. 6"/>
         <PARAMETER NAME="PCW_QSPI_GRP_SS1_ENABLE" VALUE="0"/>
         <PARAMETER NAME="PCW_QSPI_GRP_SS1_IO" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PCW_SINGLE_QSPI_DATA_MODE" VALUE="x4"/>
+        <PARAMETER NAME="PCW_DUAL_STACK_QSPI_DATA_MODE" VALUE="&lt;Select>"/>
+        <PARAMETER NAME="PCW_DUAL_PARALLEL_QSPI_DATA_MODE" VALUE="&lt;Select>"/>
         <PARAMETER NAME="PCW_QSPI_GRP_IO1_ENABLE" VALUE="0"/>
         <PARAMETER NAME="PCW_QSPI_GRP_IO1_IO" VALUE="&lt;Select>"/>
         <PARAMETER NAME="PCW_QSPI_GRP_FBCLK_ENABLE" VALUE="1"/>
@@ -5845,7 +5851,7 @@
         <PARAMETER NAME="preset" VALUE="Default"/>
         <PARAMETER NAME="PCW_UIPARAM_GENERATE_SUMMARY" VALUE="NA"/>
         <PARAMETER NAME="PCW_MIO_TREE_PERIPHERALS" VALUE="GPIO#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#GPIO#Quad SPI Flash#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#GPIO#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#USB Reset#SD 0#UART 1#UART 1#GPIO#GPIO#Enet 0#Enet 0"/>
-        <PARAMETER NAME="PCW_MIO_TREE_SIGNALS" VALUE="gpio[0]#qspi0_ss_b#qspi0_io[0]#qspi0_io[1]#qspi0_io[2]#qspi0_io[3]#qspi0_sclk#gpio[7]#qspi_fbclk#gpio[9]#gpio[10]#gpio[11]#gpio[12]#gpio[13]#gpio[14]#gpio[15]#tx_clk#txd[0]#txd[1]#txd[2]#txd[3]#tx_ctl#rx_clk#rxd[0]#rxd[1]#rxd[2]#rxd[3]#rx_ctl#data[4]#dir#stp#nxt#data[0]#data[1]#data[2]#data[3]#clk#data[5]#data[6]#data[7]#clk#cmd#data[0]#data[1]#data[2]#data[3]#reset#cd#tx#rx#gpio[50]#gpio[51]#mdc#mdio"/>
+        <PARAMETER NAME="PCW_MIO_TREE_SIGNALS" VALUE="gpio[0]#qspi0_ss_b#qspi0_io[0]#qspi0_io[1]#qspi0_io[2]#qspi0_io[3]/HOLD_B#qspi0_sclk#gpio[7]#qspi_fbclk#gpio[9]#gpio[10]#gpio[11]#gpio[12]#gpio[13]#gpio[14]#gpio[15]#tx_clk#txd[0]#txd[1]#txd[2]#txd[3]#tx_ctl#rx_clk#rxd[0]#rxd[1]#rxd[2]#rxd[3]#rx_ctl#data[4]#dir#stp#nxt#data[0]#data[1]#data[2]#data[3]#clk#data[5]#data[6]#data[7]#clk#cmd#data[0]#data[1]#data[2]#data[3]#reset#cd#tx#rx#gpio[50]#gpio[51]#mdc#mdio"/>
         <PARAMETER NAME="PCW_PS7_SI_REV" VALUE="PRODUCTION"/>
         <PARAMETER NAME="PCW_FPGA_FCLK0_ENABLE" VALUE="1"/>
         <PARAMETER NAME="PCW_FPGA_FCLK1_ENABLE" VALUE="1"/>
@@ -6319,8 +6325,6 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_dynclk_0" PORT="REF_CLK_I"/>
             <CONNECTION INSTANCE="axi_dynclk_0" PORT="s00_axi_aclk"/>
-            <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_aclk"/>
-            <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="axi_gpio_btn" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="axi_gpio_led" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="axi_gpio_sw" PORT="s_axi_aclk"/>
@@ -6338,6 +6342,8 @@
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M06_ACLK"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M07_ACLK"/>
             <CONNECTION INSTANCE="rst_processing_system7_0_100M" PORT="slowest_sync_clk"/>
+            <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="142857132" DIR="O" NAME="FCLK_CLK1" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK1">
@@ -7541,12 +7547,12 @@
         <PORT DIR="O" NAME="M03_AXI_awprot" SIGIS="undef"/>
         <PORT DIR="O" NAME="M03_AXI_awregion" SIGIS="undef"/>
         <PORT DIR="O" NAME="M03_AXI_awqos" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="0" NAME="M03_AXI_awvalid" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M03_AXI_awvalid">
+        <PORT DIR="O" NAME="M03_AXI_awvalid" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M03_AXI_awvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_awvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M03_AXI_awready" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M03_AXI_awready">
+        <PORT DIR="I" NAME="M03_AXI_awready" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M03_AXI_awready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_awready"/>
           </CONNECTIONS>
@@ -7562,12 +7568,12 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="M03_AXI_wlast" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="0" NAME="M03_AXI_wvalid" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M03_AXI_wvalid">
+        <PORT DIR="O" NAME="M03_AXI_wvalid" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M03_AXI_wvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M03_AXI_wready" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M03_AXI_wready">
+        <PORT DIR="I" NAME="M03_AXI_wready" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M03_AXI_wready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_wready"/>
           </CONNECTIONS>
@@ -7577,12 +7583,12 @@
             <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_bresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M03_AXI_bvalid" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M03_AXI_bvalid">
+        <PORT DIR="I" NAME="M03_AXI_bvalid" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M03_AXI_bvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_bvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="M03_AXI_bready" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M03_AXI_bready">
+        <PORT DIR="O" NAME="M03_AXI_bready" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M03_AXI_bready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_bready"/>
           </CONNECTIONS>
@@ -7600,12 +7606,12 @@
         <PORT DIR="O" NAME="M03_AXI_arprot" SIGIS="undef"/>
         <PORT DIR="O" NAME="M03_AXI_arregion" SIGIS="undef"/>
         <PORT DIR="O" NAME="M03_AXI_arqos" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="0" NAME="M03_AXI_arvalid" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M03_AXI_arvalid">
+        <PORT DIR="O" NAME="M03_AXI_arvalid" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M03_AXI_arvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_arvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M03_AXI_arready" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M03_AXI_arready">
+        <PORT DIR="I" NAME="M03_AXI_arready" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M03_AXI_arready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_arready"/>
           </CONNECTIONS>
@@ -7621,12 +7627,12 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="M03_AXI_rlast" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="0" NAME="M03_AXI_rvalid" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M03_AXI_rvalid">
+        <PORT DIR="I" NAME="M03_AXI_rvalid" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M03_AXI_rvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_rvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="M03_AXI_rready" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M03_AXI_rready">
+        <PORT DIR="O" NAME="M03_AXI_rready" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M03_AXI_rready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_rready"/>
           </CONNECTIONS>
@@ -7854,12 +7860,12 @@
         <PORT DIR="O" NAME="M06_AXI_awprot" SIGIS="undef"/>
         <PORT DIR="O" NAME="M06_AXI_awregion" SIGIS="undef"/>
         <PORT DIR="O" NAME="M06_AXI_awqos" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="0" NAME="M06_AXI_awvalid" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M06_AXI_awvalid">
+        <PORT DIR="O" NAME="M06_AXI_awvalid" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M06_AXI_awvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_awvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M06_AXI_awready" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M06_AXI_awready">
+        <PORT DIR="I" NAME="M06_AXI_awready" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M06_AXI_awready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_awready"/>
           </CONNECTIONS>
@@ -7875,12 +7881,12 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="M06_AXI_wlast" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="0" NAME="M06_AXI_wvalid" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M06_AXI_wvalid">
+        <PORT DIR="O" NAME="M06_AXI_wvalid" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M06_AXI_wvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M06_AXI_wready" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M06_AXI_wready">
+        <PORT DIR="I" NAME="M06_AXI_wready" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M06_AXI_wready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_wready"/>
           </CONNECTIONS>
@@ -7890,12 +7896,12 @@
             <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_bresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M06_AXI_bvalid" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M06_AXI_bvalid">
+        <PORT DIR="I" NAME="M06_AXI_bvalid" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M06_AXI_bvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_bvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="M06_AXI_bready" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M06_AXI_bready">
+        <PORT DIR="O" NAME="M06_AXI_bready" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M06_AXI_bready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_bready"/>
           </CONNECTIONS>
@@ -7913,12 +7919,12 @@
         <PORT DIR="O" NAME="M06_AXI_arprot" SIGIS="undef"/>
         <PORT DIR="O" NAME="M06_AXI_arregion" SIGIS="undef"/>
         <PORT DIR="O" NAME="M06_AXI_arqos" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="0" NAME="M06_AXI_arvalid" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M06_AXI_arvalid">
+        <PORT DIR="O" NAME="M06_AXI_arvalid" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M06_AXI_arvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_arvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M06_AXI_arready" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M06_AXI_arready">
+        <PORT DIR="I" NAME="M06_AXI_arready" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M06_AXI_arready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_arready"/>
           </CONNECTIONS>
@@ -7934,12 +7940,12 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="M06_AXI_rlast" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="0" NAME="M06_AXI_rvalid" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M06_AXI_rvalid">
+        <PORT DIR="I" NAME="M06_AXI_rvalid" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M06_AXI_rvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_rvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="M06_AXI_rready" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M06_AXI_rready">
+        <PORT DIR="O" NAME="M06_AXI_rready" SIGIS="undef" SIGNAME="processing_system7_0_axi_periph_M06_AXI_rready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_rready"/>
           </CONNECTIONS>
@@ -8432,7 +8438,7 @@
     </MODULE>
     <MODULE FULLNAME="/rgb2vga_0" HWVERSION="1.0" INSTANCE="rgb2vga_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="rgb2vga" VLNV="digilentinc.com:ip:rgb2vga:1.0">
       <DOCUMENTS>
-        <DOCUMENT SOURCE="c:/Programming/E17_02321/3w/vivado/hdmi-in/hdmi-in.ipdefs/repo_0/vivado-library/ip/rgb2vga_v1_0/docs/rgb2vga_v1_0.pdf"/>
+        <DOCUMENT SOURCE="c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.ipdefs/repo_0_0/vivado-library/ip/rgb2vga_v1_0/docs/rgb2vga_v1_0.pdf"/>
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="VID_IN_DATA_WIDTH" VALUE="24"/>
@@ -8550,8 +8556,6 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="axi_dynclk_0" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="dvi2rgb_0" PORT="aRst_n"/>
-            <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_aresetn"/>
-            <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="axi_gpio_btn" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="axi_gpio_led" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="axi_gpio_sw" PORT="s_axi_aresetn"/>
@@ -8566,6 +8570,8 @@
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M05_ARESETN"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M06_ARESETN"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M07_ARESETN"/>
+            <CONNECTION INSTANCE="v_tc_0" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="v_tc_1" PORT="s_axi_aresetn"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

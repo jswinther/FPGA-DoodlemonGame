@@ -1,10 +1,10 @@
--- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
--- Date        : Fri Dec 29 14:23:33 2017
--- Host        : DESKTOP-3SP9FPP running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Programming/E17_02321/3w/vivado/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_s00_regslice_0/hdmi_in_s00_regslice_0_sim_netlist.vhdl
+-- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+-- Date        : Wed Jan  9 09:30:34 2019
+-- Host        : NicoLenovo running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim {c:/Users/bruger/OneDrive - Danmarks Tekniske
+--               Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_s00_regslice_0/hdmi_in_s00_regslice_0_sim_netlist.vhdl}
 -- Design      : hdmi_in_s00_regslice_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -14,7 +14,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axic_register_slice is
+entity hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axic_register_slice is
   port (
     m_axi_awvalid : out STD_LOGIC;
     p_0_in : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -29,10 +29,10 @@ entity hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axic_register_slice is
     D : in STD_LOGIC_VECTOR ( 61 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axic_register_slice : entity is "axi_register_slice_v2_1_13_axic_register_slice";
-end hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axic_register_slice;
+  attribute ORIG_REF_NAME of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axic_register_slice : entity is "axi_register_slice_v2_1_17_axic_register_slice";
+end hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axic_register_slice;
 
-architecture STRUCTURE of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axic_register_slice is
+architecture STRUCTURE of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axic_register_slice is
   signal \^m_axi_awvalid\ : STD_LOGIC;
   signal \m_payload_i[53]_i_1_n_0\ : STD_LOGIC;
   signal \m_valid_i_i_1__1_n_0\ : STD_LOGIC;
@@ -617,14 +617,14 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axic_register_slice__parameterized0\ is
+entity \hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axic_register_slice__parameterized0\ is
   port (
     m_axi_wvalid : out STD_LOGIC;
     s_axi_wready : out STD_LOGIC;
     Q : out STD_LOGIC_VECTOR ( 72 downto 0 );
     aclk : in STD_LOGIC;
-    s_axi_wvalid : in STD_LOGIC;
     m_axi_wready : in STD_LOGIC;
+    s_axi_wvalid : in STD_LOGIC;
     \aresetn_d_reg[1]\ : in STD_LOGIC;
     p_0_in : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_wlast : in STD_LOGIC;
@@ -632,13 +632,13 @@ entity \hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axic_register_slice__p
     s_axi_wdata : in STD_LOGIC_VECTOR ( 63 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axic_register_slice__parameterized0\ : entity is "axi_register_slice_v2_1_13_axic_register_slice";
-end \hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axic_register_slice__parameterized0\;
+  attribute ORIG_REF_NAME of \hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axic_register_slice__parameterized0\ : entity is "axi_register_slice_v2_1_17_axic_register_slice";
+end \hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axic_register_slice__parameterized0\;
 
-architecture STRUCTURE of \hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axic_register_slice__parameterized0\ is
+architecture STRUCTURE of \hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axic_register_slice__parameterized0\ is
   signal \^m_axi_wvalid\ : STD_LOGIC;
-  signal \m_payload_i[63]_i_1_n_0\ : STD_LOGIC;
   signal \m_valid_i_i_1__0_n_0\ : STD_LOGIC;
+  signal p_1_in : STD_LOGIC;
   signal \^s_axi_wready\ : STD_LOGIC;
   signal s_ready_i_i_1_n_0 : STD_LOGIC;
   signal skid_buffer : STD_LOGIC_VECTOR ( 72 downto 0 );
@@ -1388,7 +1388,7 @@ begin
         port map (
       I0 => m_axi_wready,
       I1 => \^m_axi_wvalid\,
-      O => \m_payload_i[63]_i_1_n_0\
+      O => p_1_in
     );
 \m_payload_i[63]_i_2\: unisim.vcomponents.LUT3
     generic map(
@@ -1533,7 +1533,7 @@ begin
 \m_payload_i_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(0),
       Q => Q(0),
       R => '0'
@@ -1541,7 +1541,7 @@ begin
 \m_payload_i_reg[10]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(10),
       Q => Q(10),
       R => '0'
@@ -1549,7 +1549,7 @@ begin
 \m_payload_i_reg[11]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(11),
       Q => Q(11),
       R => '0'
@@ -1557,7 +1557,7 @@ begin
 \m_payload_i_reg[12]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(12),
       Q => Q(12),
       R => '0'
@@ -1565,7 +1565,7 @@ begin
 \m_payload_i_reg[13]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(13),
       Q => Q(13),
       R => '0'
@@ -1573,7 +1573,7 @@ begin
 \m_payload_i_reg[14]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(14),
       Q => Q(14),
       R => '0'
@@ -1581,7 +1581,7 @@ begin
 \m_payload_i_reg[15]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(15),
       Q => Q(15),
       R => '0'
@@ -1589,7 +1589,7 @@ begin
 \m_payload_i_reg[16]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(16),
       Q => Q(16),
       R => '0'
@@ -1597,7 +1597,7 @@ begin
 \m_payload_i_reg[17]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(17),
       Q => Q(17),
       R => '0'
@@ -1605,7 +1605,7 @@ begin
 \m_payload_i_reg[18]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(18),
       Q => Q(18),
       R => '0'
@@ -1613,7 +1613,7 @@ begin
 \m_payload_i_reg[19]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(19),
       Q => Q(19),
       R => '0'
@@ -1621,7 +1621,7 @@ begin
 \m_payload_i_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(1),
       Q => Q(1),
       R => '0'
@@ -1629,7 +1629,7 @@ begin
 \m_payload_i_reg[20]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(20),
       Q => Q(20),
       R => '0'
@@ -1637,7 +1637,7 @@ begin
 \m_payload_i_reg[21]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(21),
       Q => Q(21),
       R => '0'
@@ -1645,7 +1645,7 @@ begin
 \m_payload_i_reg[22]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(22),
       Q => Q(22),
       R => '0'
@@ -1653,7 +1653,7 @@ begin
 \m_payload_i_reg[23]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(23),
       Q => Q(23),
       R => '0'
@@ -1661,7 +1661,7 @@ begin
 \m_payload_i_reg[24]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(24),
       Q => Q(24),
       R => '0'
@@ -1669,7 +1669,7 @@ begin
 \m_payload_i_reg[25]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(25),
       Q => Q(25),
       R => '0'
@@ -1677,7 +1677,7 @@ begin
 \m_payload_i_reg[26]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(26),
       Q => Q(26),
       R => '0'
@@ -1685,7 +1685,7 @@ begin
 \m_payload_i_reg[27]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(27),
       Q => Q(27),
       R => '0'
@@ -1693,7 +1693,7 @@ begin
 \m_payload_i_reg[28]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(28),
       Q => Q(28),
       R => '0'
@@ -1701,7 +1701,7 @@ begin
 \m_payload_i_reg[29]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(29),
       Q => Q(29),
       R => '0'
@@ -1709,7 +1709,7 @@ begin
 \m_payload_i_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(2),
       Q => Q(2),
       R => '0'
@@ -1717,7 +1717,7 @@ begin
 \m_payload_i_reg[30]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(30),
       Q => Q(30),
       R => '0'
@@ -1725,7 +1725,7 @@ begin
 \m_payload_i_reg[31]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(31),
       Q => Q(31),
       R => '0'
@@ -1733,7 +1733,7 @@ begin
 \m_payload_i_reg[32]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(32),
       Q => Q(32),
       R => '0'
@@ -1741,7 +1741,7 @@ begin
 \m_payload_i_reg[33]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(33),
       Q => Q(33),
       R => '0'
@@ -1749,7 +1749,7 @@ begin
 \m_payload_i_reg[34]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(34),
       Q => Q(34),
       R => '0'
@@ -1757,7 +1757,7 @@ begin
 \m_payload_i_reg[35]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(35),
       Q => Q(35),
       R => '0'
@@ -1765,7 +1765,7 @@ begin
 \m_payload_i_reg[36]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(36),
       Q => Q(36),
       R => '0'
@@ -1773,7 +1773,7 @@ begin
 \m_payload_i_reg[37]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(37),
       Q => Q(37),
       R => '0'
@@ -1781,7 +1781,7 @@ begin
 \m_payload_i_reg[38]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(38),
       Q => Q(38),
       R => '0'
@@ -1789,7 +1789,7 @@ begin
 \m_payload_i_reg[39]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(39),
       Q => Q(39),
       R => '0'
@@ -1797,7 +1797,7 @@ begin
 \m_payload_i_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(3),
       Q => Q(3),
       R => '0'
@@ -1805,7 +1805,7 @@ begin
 \m_payload_i_reg[40]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(40),
       Q => Q(40),
       R => '0'
@@ -1813,7 +1813,7 @@ begin
 \m_payload_i_reg[41]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(41),
       Q => Q(41),
       R => '0'
@@ -1821,7 +1821,7 @@ begin
 \m_payload_i_reg[42]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(42),
       Q => Q(42),
       R => '0'
@@ -1829,7 +1829,7 @@ begin
 \m_payload_i_reg[43]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(43),
       Q => Q(43),
       R => '0'
@@ -1837,7 +1837,7 @@ begin
 \m_payload_i_reg[44]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(44),
       Q => Q(44),
       R => '0'
@@ -1845,7 +1845,7 @@ begin
 \m_payload_i_reg[45]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(45),
       Q => Q(45),
       R => '0'
@@ -1853,7 +1853,7 @@ begin
 \m_payload_i_reg[46]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(46),
       Q => Q(46),
       R => '0'
@@ -1861,7 +1861,7 @@ begin
 \m_payload_i_reg[47]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(47),
       Q => Q(47),
       R => '0'
@@ -1869,7 +1869,7 @@ begin
 \m_payload_i_reg[48]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(48),
       Q => Q(48),
       R => '0'
@@ -1877,7 +1877,7 @@ begin
 \m_payload_i_reg[49]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(49),
       Q => Q(49),
       R => '0'
@@ -1885,7 +1885,7 @@ begin
 \m_payload_i_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(4),
       Q => Q(4),
       R => '0'
@@ -1893,7 +1893,7 @@ begin
 \m_payload_i_reg[50]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(50),
       Q => Q(50),
       R => '0'
@@ -1901,7 +1901,7 @@ begin
 \m_payload_i_reg[51]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(51),
       Q => Q(51),
       R => '0'
@@ -1909,7 +1909,7 @@ begin
 \m_payload_i_reg[52]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(52),
       Q => Q(52),
       R => '0'
@@ -1917,7 +1917,7 @@ begin
 \m_payload_i_reg[53]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(53),
       Q => Q(53),
       R => '0'
@@ -1925,7 +1925,7 @@ begin
 \m_payload_i_reg[54]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(54),
       Q => Q(54),
       R => '0'
@@ -1933,7 +1933,7 @@ begin
 \m_payload_i_reg[55]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(55),
       Q => Q(55),
       R => '0'
@@ -1941,7 +1941,7 @@ begin
 \m_payload_i_reg[56]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(56),
       Q => Q(56),
       R => '0'
@@ -1949,7 +1949,7 @@ begin
 \m_payload_i_reg[57]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(57),
       Q => Q(57),
       R => '0'
@@ -1957,7 +1957,7 @@ begin
 \m_payload_i_reg[58]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(58),
       Q => Q(58),
       R => '0'
@@ -1965,7 +1965,7 @@ begin
 \m_payload_i_reg[59]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(59),
       Q => Q(59),
       R => '0'
@@ -1973,7 +1973,7 @@ begin
 \m_payload_i_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(5),
       Q => Q(5),
       R => '0'
@@ -1981,7 +1981,7 @@ begin
 \m_payload_i_reg[60]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(60),
       Q => Q(60),
       R => '0'
@@ -1989,7 +1989,7 @@ begin
 \m_payload_i_reg[61]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(61),
       Q => Q(61),
       R => '0'
@@ -1997,7 +1997,7 @@ begin
 \m_payload_i_reg[62]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(62),
       Q => Q(62),
       R => '0'
@@ -2005,7 +2005,7 @@ begin
 \m_payload_i_reg[63]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(63),
       Q => Q(63),
       R => '0'
@@ -2013,7 +2013,7 @@ begin
 \m_payload_i_reg[64]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(64),
       Q => Q(64),
       R => '0'
@@ -2021,7 +2021,7 @@ begin
 \m_payload_i_reg[65]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(65),
       Q => Q(65),
       R => '0'
@@ -2029,7 +2029,7 @@ begin
 \m_payload_i_reg[66]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(66),
       Q => Q(66),
       R => '0'
@@ -2037,7 +2037,7 @@ begin
 \m_payload_i_reg[67]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(67),
       Q => Q(67),
       R => '0'
@@ -2045,7 +2045,7 @@ begin
 \m_payload_i_reg[68]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(68),
       Q => Q(68),
       R => '0'
@@ -2053,7 +2053,7 @@ begin
 \m_payload_i_reg[69]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(69),
       Q => Q(69),
       R => '0'
@@ -2061,7 +2061,7 @@ begin
 \m_payload_i_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(6),
       Q => Q(6),
       R => '0'
@@ -2069,7 +2069,7 @@ begin
 \m_payload_i_reg[70]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(70),
       Q => Q(70),
       R => '0'
@@ -2077,7 +2077,7 @@ begin
 \m_payload_i_reg[71]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(71),
       Q => Q(71),
       R => '0'
@@ -2085,7 +2085,7 @@ begin
 \m_payload_i_reg[72]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(72),
       Q => Q(72),
       R => '0'
@@ -2093,7 +2093,7 @@ begin
 \m_payload_i_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(7),
       Q => Q(7),
       R => '0'
@@ -2101,7 +2101,7 @@ begin
 \m_payload_i_reg[8]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(8),
       Q => Q(8),
       R => '0'
@@ -2109,20 +2109,20 @@ begin
 \m_payload_i_reg[9]\: unisim.vcomponents.FDRE
      port map (
       C => aclk,
-      CE => \m_payload_i[63]_i_1_n_0\,
+      CE => p_1_in,
       D => skid_buffer(9),
       Q => Q(9),
       R => '0'
     );
 \m_valid_i_i_1__0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"BAFF0000"
+      INIT => X"FF2F0000"
     )
         port map (
-      I0 => s_axi_wvalid,
+      I0 => \^m_axi_wvalid\,
       I1 => m_axi_wready,
-      I2 => \^m_axi_wvalid\,
-      I3 => \^s_axi_wready\,
+      I2 => \^s_axi_wready\,
+      I3 => s_axi_wvalid,
       I4 => \aresetn_d_reg[1]\,
       O => \m_valid_i_i_1__0_n_0\
     );
@@ -2749,7 +2749,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axic_register_slice__parameterized1\ is
+entity \hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axic_register_slice__parameterized1\ is
   port (
     s_axi_bvalid : out STD_LOGIC;
     m_valid_i_reg_0 : out STD_LOGIC;
@@ -2765,10 +2765,10 @@ entity \hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axic_register_slice__p
     m_axi_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axic_register_slice__parameterized1\ : entity is "axi_register_slice_v2_1_13_axic_register_slice";
-end \hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axic_register_slice__parameterized1\;
+  attribute ORIG_REF_NAME of \hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axic_register_slice__parameterized1\ : entity is "axi_register_slice_v2_1_17_axic_register_slice";
+end \hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axic_register_slice__parameterized1\;
 
-architecture STRUCTURE of \hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axic_register_slice__parameterized1\ is
+architecture STRUCTURE of \hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axic_register_slice__parameterized1\ is
   signal \^m_axi_bready\ : STD_LOGIC;
   signal \m_payload_i[0]_i_1_n_0\ : STD_LOGIC;
   signal \m_payload_i[1]_i_1_n_0\ : STD_LOGIC;
@@ -2903,9 +2903,10 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice is
+entity hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice is
   port (
     aclk : in STD_LOGIC;
+    aclk2x : in STD_LOGIC;
     aresetn : in STD_LOGIC;
     s_axi_awid : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -2999,199 +3000,235 @@ entity hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice is
     m_axi_rready : out STD_LOGIC
   );
   attribute C_AXI_ADDR_WIDTH : integer;
-  attribute C_AXI_ADDR_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 32;
+  attribute C_AXI_ADDR_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 32;
   attribute C_AXI_ARUSER_WIDTH : integer;
-  attribute C_AXI_ARUSER_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
+  attribute C_AXI_ARUSER_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 1;
   attribute C_AXI_AWUSER_WIDTH : integer;
-  attribute C_AXI_AWUSER_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
+  attribute C_AXI_AWUSER_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 1;
   attribute C_AXI_BUSER_WIDTH : integer;
-  attribute C_AXI_BUSER_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
+  attribute C_AXI_BUSER_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 1;
   attribute C_AXI_DATA_WIDTH : integer;
-  attribute C_AXI_DATA_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 64;
+  attribute C_AXI_DATA_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 64;
   attribute C_AXI_ID_WIDTH : integer;
-  attribute C_AXI_ID_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
+  attribute C_AXI_ID_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 1;
   attribute C_AXI_PROTOCOL : integer;
-  attribute C_AXI_PROTOCOL of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
+  attribute C_AXI_PROTOCOL of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
   attribute C_AXI_RUSER_WIDTH : integer;
-  attribute C_AXI_RUSER_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
+  attribute C_AXI_RUSER_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 1;
   attribute C_AXI_SUPPORTS_REGION_SIGNALS : integer;
-  attribute C_AXI_SUPPORTS_REGION_SIGNALS of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
+  attribute C_AXI_SUPPORTS_REGION_SIGNALS of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 1;
   attribute C_AXI_SUPPORTS_USER_SIGNALS : integer;
-  attribute C_AXI_SUPPORTS_USER_SIGNALS of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
+  attribute C_AXI_SUPPORTS_USER_SIGNALS of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
   attribute C_AXI_WUSER_WIDTH : integer;
-  attribute C_AXI_WUSER_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
+  attribute C_AXI_WUSER_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 1;
   attribute C_FAMILY : string;
-  attribute C_FAMILY of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is "zynq";
+  attribute C_FAMILY of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is "zynq";
+  attribute C_NUM_SLR_CROSSINGS : integer;
+  attribute C_NUM_SLR_CROSSINGS of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
+  attribute C_PIPELINES_MASTER_AR : integer;
+  attribute C_PIPELINES_MASTER_AR of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
+  attribute C_PIPELINES_MASTER_AW : integer;
+  attribute C_PIPELINES_MASTER_AW of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
+  attribute C_PIPELINES_MASTER_B : integer;
+  attribute C_PIPELINES_MASTER_B of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
+  attribute C_PIPELINES_MASTER_R : integer;
+  attribute C_PIPELINES_MASTER_R of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
+  attribute C_PIPELINES_MASTER_W : integer;
+  attribute C_PIPELINES_MASTER_W of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
+  attribute C_PIPELINES_MIDDLE_AR : integer;
+  attribute C_PIPELINES_MIDDLE_AR of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
+  attribute C_PIPELINES_MIDDLE_AW : integer;
+  attribute C_PIPELINES_MIDDLE_AW of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
+  attribute C_PIPELINES_MIDDLE_B : integer;
+  attribute C_PIPELINES_MIDDLE_B of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
+  attribute C_PIPELINES_MIDDLE_R : integer;
+  attribute C_PIPELINES_MIDDLE_R of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
+  attribute C_PIPELINES_MIDDLE_W : integer;
+  attribute C_PIPELINES_MIDDLE_W of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
+  attribute C_PIPELINES_SLAVE_AR : integer;
+  attribute C_PIPELINES_SLAVE_AR of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
+  attribute C_PIPELINES_SLAVE_AW : integer;
+  attribute C_PIPELINES_SLAVE_AW of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
+  attribute C_PIPELINES_SLAVE_B : integer;
+  attribute C_PIPELINES_SLAVE_B of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
+  attribute C_PIPELINES_SLAVE_R : integer;
+  attribute C_PIPELINES_SLAVE_R of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
+  attribute C_PIPELINES_SLAVE_W : integer;
+  attribute C_PIPELINES_SLAVE_W of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
   attribute C_REG_CONFIG_AR : integer;
-  attribute C_REG_CONFIG_AR of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
+  attribute C_REG_CONFIG_AR of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
   attribute C_REG_CONFIG_AW : integer;
-  attribute C_REG_CONFIG_AW of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 7;
+  attribute C_REG_CONFIG_AW of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 7;
   attribute C_REG_CONFIG_B : integer;
-  attribute C_REG_CONFIG_B of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 7;
+  attribute C_REG_CONFIG_B of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 7;
   attribute C_REG_CONFIG_R : integer;
-  attribute C_REG_CONFIG_R of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
+  attribute C_REG_CONFIG_R of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
   attribute C_REG_CONFIG_W : integer;
-  attribute C_REG_CONFIG_W of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
+  attribute C_REG_CONFIG_W of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 1;
   attribute DowngradeIPIdentifiedWarnings : string;
-  attribute DowngradeIPIdentifiedWarnings of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is "yes";
+  attribute DowngradeIPIdentifiedWarnings of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is "yes";
   attribute G_AXI_ARADDR_INDEX : integer;
-  attribute G_AXI_ARADDR_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
+  attribute G_AXI_ARADDR_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
   attribute G_AXI_ARADDR_WIDTH : integer;
-  attribute G_AXI_ARADDR_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 32;
+  attribute G_AXI_ARADDR_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 32;
   attribute G_AXI_ARBURST_INDEX : integer;
-  attribute G_AXI_ARBURST_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 38;
+  attribute G_AXI_ARBURST_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 38;
   attribute G_AXI_ARBURST_WIDTH : integer;
-  attribute G_AXI_ARBURST_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 2;
+  attribute G_AXI_ARBURST_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 2;
   attribute G_AXI_ARCACHE_INDEX : integer;
-  attribute G_AXI_ARCACHE_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 40;
+  attribute G_AXI_ARCACHE_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 40;
   attribute G_AXI_ARCACHE_WIDTH : integer;
-  attribute G_AXI_ARCACHE_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 4;
+  attribute G_AXI_ARCACHE_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 4;
   attribute G_AXI_ARID_INDEX : integer;
-  attribute G_AXI_ARID_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 53;
+  attribute G_AXI_ARID_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 53;
   attribute G_AXI_ARID_WIDTH : integer;
-  attribute G_AXI_ARID_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
+  attribute G_AXI_ARID_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 1;
   attribute G_AXI_ARLEN_INDEX : integer;
-  attribute G_AXI_ARLEN_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 44;
+  attribute G_AXI_ARLEN_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 44;
   attribute G_AXI_ARLEN_WIDTH : integer;
-  attribute G_AXI_ARLEN_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 8;
+  attribute G_AXI_ARLEN_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 8;
   attribute G_AXI_ARLOCK_INDEX : integer;
-  attribute G_AXI_ARLOCK_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 52;
+  attribute G_AXI_ARLOCK_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 52;
   attribute G_AXI_ARLOCK_WIDTH : integer;
-  attribute G_AXI_ARLOCK_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
+  attribute G_AXI_ARLOCK_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 1;
   attribute G_AXI_ARPAYLOAD_WIDTH : integer;
-  attribute G_AXI_ARPAYLOAD_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 62;
+  attribute G_AXI_ARPAYLOAD_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 62;
   attribute G_AXI_ARPROT_INDEX : integer;
-  attribute G_AXI_ARPROT_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 32;
+  attribute G_AXI_ARPROT_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 32;
   attribute G_AXI_ARPROT_WIDTH : integer;
-  attribute G_AXI_ARPROT_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 3;
+  attribute G_AXI_ARPROT_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 3;
   attribute G_AXI_ARQOS_INDEX : integer;
-  attribute G_AXI_ARQOS_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 54;
+  attribute G_AXI_ARQOS_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 54;
   attribute G_AXI_ARQOS_WIDTH : integer;
-  attribute G_AXI_ARQOS_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 4;
+  attribute G_AXI_ARQOS_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 4;
   attribute G_AXI_ARREGION_INDEX : integer;
-  attribute G_AXI_ARREGION_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 58;
+  attribute G_AXI_ARREGION_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 58;
   attribute G_AXI_ARREGION_WIDTH : integer;
-  attribute G_AXI_ARREGION_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 4;
+  attribute G_AXI_ARREGION_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 4;
   attribute G_AXI_ARSIZE_INDEX : integer;
-  attribute G_AXI_ARSIZE_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 35;
+  attribute G_AXI_ARSIZE_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 35;
   attribute G_AXI_ARSIZE_WIDTH : integer;
-  attribute G_AXI_ARSIZE_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 3;
+  attribute G_AXI_ARSIZE_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 3;
   attribute G_AXI_ARUSER_INDEX : integer;
-  attribute G_AXI_ARUSER_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 62;
+  attribute G_AXI_ARUSER_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 62;
   attribute G_AXI_ARUSER_WIDTH : integer;
-  attribute G_AXI_ARUSER_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
+  attribute G_AXI_ARUSER_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
   attribute G_AXI_AWADDR_INDEX : integer;
-  attribute G_AXI_AWADDR_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
+  attribute G_AXI_AWADDR_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
   attribute G_AXI_AWADDR_WIDTH : integer;
-  attribute G_AXI_AWADDR_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 32;
+  attribute G_AXI_AWADDR_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 32;
   attribute G_AXI_AWBURST_INDEX : integer;
-  attribute G_AXI_AWBURST_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 38;
+  attribute G_AXI_AWBURST_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 38;
   attribute G_AXI_AWBURST_WIDTH : integer;
-  attribute G_AXI_AWBURST_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 2;
+  attribute G_AXI_AWBURST_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 2;
   attribute G_AXI_AWCACHE_INDEX : integer;
-  attribute G_AXI_AWCACHE_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 40;
+  attribute G_AXI_AWCACHE_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 40;
   attribute G_AXI_AWCACHE_WIDTH : integer;
-  attribute G_AXI_AWCACHE_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 4;
+  attribute G_AXI_AWCACHE_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 4;
   attribute G_AXI_AWID_INDEX : integer;
-  attribute G_AXI_AWID_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 53;
+  attribute G_AXI_AWID_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 53;
   attribute G_AXI_AWID_WIDTH : integer;
-  attribute G_AXI_AWID_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
+  attribute G_AXI_AWID_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 1;
   attribute G_AXI_AWLEN_INDEX : integer;
-  attribute G_AXI_AWLEN_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 44;
+  attribute G_AXI_AWLEN_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 44;
   attribute G_AXI_AWLEN_WIDTH : integer;
-  attribute G_AXI_AWLEN_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 8;
+  attribute G_AXI_AWLEN_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 8;
   attribute G_AXI_AWLOCK_INDEX : integer;
-  attribute G_AXI_AWLOCK_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 52;
+  attribute G_AXI_AWLOCK_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 52;
   attribute G_AXI_AWLOCK_WIDTH : integer;
-  attribute G_AXI_AWLOCK_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
+  attribute G_AXI_AWLOCK_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 1;
   attribute G_AXI_AWPAYLOAD_WIDTH : integer;
-  attribute G_AXI_AWPAYLOAD_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 62;
+  attribute G_AXI_AWPAYLOAD_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 62;
   attribute G_AXI_AWPROT_INDEX : integer;
-  attribute G_AXI_AWPROT_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 32;
+  attribute G_AXI_AWPROT_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 32;
   attribute G_AXI_AWPROT_WIDTH : integer;
-  attribute G_AXI_AWPROT_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 3;
+  attribute G_AXI_AWPROT_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 3;
   attribute G_AXI_AWQOS_INDEX : integer;
-  attribute G_AXI_AWQOS_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 54;
+  attribute G_AXI_AWQOS_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 54;
   attribute G_AXI_AWQOS_WIDTH : integer;
-  attribute G_AXI_AWQOS_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 4;
+  attribute G_AXI_AWQOS_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 4;
   attribute G_AXI_AWREGION_INDEX : integer;
-  attribute G_AXI_AWREGION_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 58;
+  attribute G_AXI_AWREGION_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 58;
   attribute G_AXI_AWREGION_WIDTH : integer;
-  attribute G_AXI_AWREGION_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 4;
+  attribute G_AXI_AWREGION_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 4;
   attribute G_AXI_AWSIZE_INDEX : integer;
-  attribute G_AXI_AWSIZE_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 35;
+  attribute G_AXI_AWSIZE_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 35;
   attribute G_AXI_AWSIZE_WIDTH : integer;
-  attribute G_AXI_AWSIZE_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 3;
+  attribute G_AXI_AWSIZE_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 3;
   attribute G_AXI_AWUSER_INDEX : integer;
-  attribute G_AXI_AWUSER_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 62;
+  attribute G_AXI_AWUSER_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 62;
   attribute G_AXI_AWUSER_WIDTH : integer;
-  attribute G_AXI_AWUSER_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
+  attribute G_AXI_AWUSER_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
   attribute G_AXI_BID_INDEX : integer;
-  attribute G_AXI_BID_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 2;
+  attribute G_AXI_BID_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 2;
   attribute G_AXI_BID_WIDTH : integer;
-  attribute G_AXI_BID_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
+  attribute G_AXI_BID_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 1;
   attribute G_AXI_BPAYLOAD_WIDTH : integer;
-  attribute G_AXI_BPAYLOAD_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 3;
+  attribute G_AXI_BPAYLOAD_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 3;
   attribute G_AXI_BRESP_INDEX : integer;
-  attribute G_AXI_BRESP_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
+  attribute G_AXI_BRESP_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
   attribute G_AXI_BRESP_WIDTH : integer;
-  attribute G_AXI_BRESP_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 2;
+  attribute G_AXI_BRESP_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 2;
   attribute G_AXI_BUSER_INDEX : integer;
-  attribute G_AXI_BUSER_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 3;
+  attribute G_AXI_BUSER_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 3;
   attribute G_AXI_BUSER_WIDTH : integer;
-  attribute G_AXI_BUSER_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
+  attribute G_AXI_BUSER_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
   attribute G_AXI_RDATA_INDEX : integer;
-  attribute G_AXI_RDATA_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
+  attribute G_AXI_RDATA_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
   attribute G_AXI_RDATA_WIDTH : integer;
-  attribute G_AXI_RDATA_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 64;
+  attribute G_AXI_RDATA_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 64;
   attribute G_AXI_RID_INDEX : integer;
-  attribute G_AXI_RID_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 67;
+  attribute G_AXI_RID_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 67;
   attribute G_AXI_RID_WIDTH : integer;
-  attribute G_AXI_RID_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
+  attribute G_AXI_RID_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 1;
   attribute G_AXI_RLAST_INDEX : integer;
-  attribute G_AXI_RLAST_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 66;
+  attribute G_AXI_RLAST_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 66;
   attribute G_AXI_RLAST_WIDTH : integer;
-  attribute G_AXI_RLAST_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
+  attribute G_AXI_RLAST_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 1;
   attribute G_AXI_RPAYLOAD_WIDTH : integer;
-  attribute G_AXI_RPAYLOAD_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 68;
+  attribute G_AXI_RPAYLOAD_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 68;
   attribute G_AXI_RRESP_INDEX : integer;
-  attribute G_AXI_RRESP_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 64;
+  attribute G_AXI_RRESP_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 64;
   attribute G_AXI_RRESP_WIDTH : integer;
-  attribute G_AXI_RRESP_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 2;
+  attribute G_AXI_RRESP_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 2;
   attribute G_AXI_RUSER_INDEX : integer;
-  attribute G_AXI_RUSER_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 68;
+  attribute G_AXI_RUSER_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 68;
   attribute G_AXI_RUSER_WIDTH : integer;
-  attribute G_AXI_RUSER_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
+  attribute G_AXI_RUSER_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
   attribute G_AXI_WDATA_INDEX : integer;
-  attribute G_AXI_WDATA_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
+  attribute G_AXI_WDATA_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
   attribute G_AXI_WDATA_WIDTH : integer;
-  attribute G_AXI_WDATA_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 64;
+  attribute G_AXI_WDATA_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 64;
   attribute G_AXI_WID_INDEX : integer;
-  attribute G_AXI_WID_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 73;
+  attribute G_AXI_WID_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 73;
   attribute G_AXI_WID_WIDTH : integer;
-  attribute G_AXI_WID_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
+  attribute G_AXI_WID_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
   attribute G_AXI_WLAST_INDEX : integer;
-  attribute G_AXI_WLAST_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 72;
+  attribute G_AXI_WLAST_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 72;
   attribute G_AXI_WLAST_WIDTH : integer;
-  attribute G_AXI_WLAST_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 1;
+  attribute G_AXI_WLAST_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 1;
   attribute G_AXI_WPAYLOAD_WIDTH : integer;
-  attribute G_AXI_WPAYLOAD_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 73;
+  attribute G_AXI_WPAYLOAD_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 73;
   attribute G_AXI_WSTRB_INDEX : integer;
-  attribute G_AXI_WSTRB_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 64;
+  attribute G_AXI_WSTRB_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 64;
   attribute G_AXI_WSTRB_WIDTH : integer;
-  attribute G_AXI_WSTRB_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 8;
+  attribute G_AXI_WSTRB_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 8;
   attribute G_AXI_WUSER_INDEX : integer;
-  attribute G_AXI_WUSER_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 73;
+  attribute G_AXI_WUSER_INDEX of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 73;
   attribute G_AXI_WUSER_WIDTH : integer;
-  attribute G_AXI_WUSER_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is 0;
+  attribute G_AXI_WUSER_WIDTH of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice : entity is "axi_register_slice_v2_1_13_axi_register_slice";
-end hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice;
+  attribute ORIG_REF_NAME of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is "axi_register_slice_v2_1_17_axi_register_slice";
+  attribute P_FORWARD : integer;
+  attribute P_FORWARD of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 0;
+  attribute P_RESPONSE : integer;
+  attribute P_RESPONSE of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice : entity is 1;
+end hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice;
 
-architecture STRUCTURE of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice is
+architecture STRUCTURE of hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice is
   signal \<const0>\ : STD_LOGIC;
-  signal aw_pipe_n_2 : STD_LOGIC;
-  signal b_pipe_n_1 : STD_LOGIC;
+  signal \aw.aw_pipe_n_2\ : STD_LOGIC;
+  signal \b.b_pipe_n_1\ : STD_LOGIC;
   signal \^m_axi_arready\ : STD_LOGIC;
   signal \^m_axi_rdata\ : STD_LOGIC_VECTOR ( 63 downto 0 );
   signal \^m_axi_rid\ : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -3258,7 +3295,7 @@ GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
     );
-aw_pipe: entity work.hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axic_register_slice
+\aw.aw_pipe\: entity work.hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axic_register_slice
      port map (
       D(61 downto 58) => s_axi_awregion(3 downto 0),
       D(57 downto 54) => s_axi_awqos(3 downto 0),
@@ -3282,36 +3319,36 @@ aw_pipe: entity work.hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axic_regi
       Q(31 downto 0) => m_axi_awaddr(31 downto 0),
       aclk => aclk,
       aresetn => aresetn,
-      \aresetn_d_reg[1]\ => aw_pipe_n_2,
-      \aresetn_d_reg[1]_0\ => b_pipe_n_1,
+      \aresetn_d_reg[1]\ => \aw.aw_pipe_n_2\,
+      \aresetn_d_reg[1]_0\ => \b.b_pipe_n_1\,
       m_axi_awready => m_axi_awready,
       m_axi_awvalid => m_axi_awvalid,
       p_0_in(0) => p_0_in(1),
       s_axi_awready => s_axi_awready,
       s_axi_awvalid => s_axi_awvalid
     );
-b_pipe: entity work.\hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axic_register_slice__parameterized1\
+\b.b_pipe\: entity work.\hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axic_register_slice__parameterized1\
      port map (
       aclk => aclk,
-      \aresetn_d_reg[0]\ => aw_pipe_n_2,
+      \aresetn_d_reg[0]\ => \aw.aw_pipe_n_2\,
       m_axi_bid(0) => m_axi_bid(0),
       m_axi_bready => m_axi_bready,
       m_axi_bresp(1 downto 0) => m_axi_bresp(1 downto 0),
       m_axi_bvalid => m_axi_bvalid,
-      m_valid_i_reg_0 => b_pipe_n_1,
+      m_valid_i_reg_0 => \b.b_pipe_n_1\,
       p_0_in(0) => p_0_in(1),
       s_axi_bid(0) => s_axi_bid(0),
       s_axi_bready => s_axi_bready,
       s_axi_bresp(1 downto 0) => s_axi_bresp(1 downto 0),
       s_axi_bvalid => s_axi_bvalid
     );
-w_pipe: entity work.\hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axic_register_slice__parameterized0\
+\w.w_pipe\: entity work.\hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axic_register_slice__parameterized0\
      port map (
       Q(72) => m_axi_wlast,
       Q(71 downto 64) => m_axi_wstrb(7 downto 0),
       Q(63 downto 0) => m_axi_wdata(63 downto 0),
       aclk => aclk,
-      \aresetn_d_reg[1]\ => b_pipe_n_1,
+      \aresetn_d_reg[1]\ => \b.b_pipe_n_1\,
       m_axi_wready => m_axi_wready,
       m_axi_wvalid => m_axi_wvalid,
       p_0_in(0) => p_0_in(1),
@@ -3372,11 +3409,11 @@ entity hdmi_in_s00_regslice_0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of hdmi_in_s00_regslice_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of hdmi_in_s00_regslice_0 : entity is "hdmi_in_s00_regslice_0,axi_register_slice_v2_1_13_axi_register_slice,{}";
+  attribute CHECK_LICENSE_TYPE of hdmi_in_s00_regslice_0 : entity is "hdmi_in_s00_regslice_0,axi_register_slice_v2_1_17_axi_register_slice,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of hdmi_in_s00_regslice_0 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of hdmi_in_s00_regslice_0 : entity is "axi_register_slice_v2_1_13_axi_register_slice,Vivado 2017.2";
+  attribute X_CORE_INFO of hdmi_in_s00_regslice_0 : entity is "axi_register_slice_v2_1_17_axi_register_slice,Vivado 2018.2";
 end hdmi_in_s00_regslice_0;
 
 architecture STRUCTURE of hdmi_in_s00_regslice_0 is
@@ -3430,6 +3467,38 @@ architecture STRUCTURE of hdmi_in_s00_regslice_0 is
   attribute C_AXI_WUSER_WIDTH of inst : label is 1;
   attribute C_FAMILY : string;
   attribute C_FAMILY of inst : label is "zynq";
+  attribute C_NUM_SLR_CROSSINGS : integer;
+  attribute C_NUM_SLR_CROSSINGS of inst : label is 0;
+  attribute C_PIPELINES_MASTER_AR : integer;
+  attribute C_PIPELINES_MASTER_AR of inst : label is 0;
+  attribute C_PIPELINES_MASTER_AW : integer;
+  attribute C_PIPELINES_MASTER_AW of inst : label is 0;
+  attribute C_PIPELINES_MASTER_B : integer;
+  attribute C_PIPELINES_MASTER_B of inst : label is 0;
+  attribute C_PIPELINES_MASTER_R : integer;
+  attribute C_PIPELINES_MASTER_R of inst : label is 0;
+  attribute C_PIPELINES_MASTER_W : integer;
+  attribute C_PIPELINES_MASTER_W of inst : label is 0;
+  attribute C_PIPELINES_MIDDLE_AR : integer;
+  attribute C_PIPELINES_MIDDLE_AR of inst : label is 0;
+  attribute C_PIPELINES_MIDDLE_AW : integer;
+  attribute C_PIPELINES_MIDDLE_AW of inst : label is 0;
+  attribute C_PIPELINES_MIDDLE_B : integer;
+  attribute C_PIPELINES_MIDDLE_B of inst : label is 0;
+  attribute C_PIPELINES_MIDDLE_R : integer;
+  attribute C_PIPELINES_MIDDLE_R of inst : label is 0;
+  attribute C_PIPELINES_MIDDLE_W : integer;
+  attribute C_PIPELINES_MIDDLE_W of inst : label is 0;
+  attribute C_PIPELINES_SLAVE_AR : integer;
+  attribute C_PIPELINES_SLAVE_AR of inst : label is 0;
+  attribute C_PIPELINES_SLAVE_AW : integer;
+  attribute C_PIPELINES_SLAVE_AW of inst : label is 0;
+  attribute C_PIPELINES_SLAVE_B : integer;
+  attribute C_PIPELINES_SLAVE_B of inst : label is 0;
+  attribute C_PIPELINES_SLAVE_R : integer;
+  attribute C_PIPELINES_SLAVE_R of inst : label is 0;
+  attribute C_PIPELINES_SLAVE_W : integer;
+  attribute C_PIPELINES_SLAVE_W of inst : label is 0;
   attribute C_REG_CONFIG_AR : integer;
   attribute C_REG_CONFIG_AR of inst : label is 0;
   attribute C_REG_CONFIG_AW : integer;
@@ -3591,10 +3660,61 @@ architecture STRUCTURE of hdmi_in_s00_regslice_0 is
   attribute G_AXI_WUSER_INDEX of inst : label is 73;
   attribute G_AXI_WUSER_WIDTH : integer;
   attribute G_AXI_WUSER_WIDTH of inst : label is 0;
+  attribute P_FORWARD : integer;
+  attribute P_FORWARD of inst : label is 0;
+  attribute P_RESPONSE : integer;
+  attribute P_RESPONSE of inst : label is 1;
+  attribute X_INTERFACE_INFO : string;
+  attribute X_INTERFACE_INFO of aclk : signal is "xilinx.com:signal:clock:1.0 CLK CLK";
+  attribute X_INTERFACE_PARAMETER : string;
+  attribute X_INTERFACE_PARAMETER of aclk : signal is "XIL_INTERFACENAME CLK, FREQ_HZ 142857132, PHASE 0.000, CLK_DOMAIN hdmi_in_processing_system7_0_0_FCLK_CLK1, ASSOCIATED_BUSIF S_AXI:M_AXI, ASSOCIATED_RESET ARESETN";
+  attribute X_INTERFACE_INFO of aresetn : signal is "xilinx.com:signal:reset:1.0 RST RST";
+  attribute X_INTERFACE_PARAMETER of aresetn : signal is "XIL_INTERFACENAME RST, POLARITY ACTIVE_LOW, TYPE INTERCONNECT";
+  attribute X_INTERFACE_INFO of m_axi_awready : signal is "xilinx.com:interface:aximm:1.0 M_AXI AWREADY";
+  attribute X_INTERFACE_INFO of m_axi_awvalid : signal is "xilinx.com:interface:aximm:1.0 M_AXI AWVALID";
+  attribute X_INTERFACE_INFO of m_axi_bready : signal is "xilinx.com:interface:aximm:1.0 M_AXI BREADY";
+  attribute X_INTERFACE_PARAMETER of m_axi_bready : signal is "XIL_INTERFACENAME M_AXI, DATA_WIDTH 64, PROTOCOL AXI4, FREQ_HZ 142857132, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE WRITE_ONLY, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 0, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 32, PHASE 0.000, CLK_DOMAIN hdmi_in_processing_system7_0_0_FCLK_CLK1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0";
+  attribute X_INTERFACE_INFO of m_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 M_AXI BVALID";
+  attribute X_INTERFACE_INFO of m_axi_wlast : signal is "xilinx.com:interface:aximm:1.0 M_AXI WLAST";
+  attribute X_INTERFACE_INFO of m_axi_wready : signal is "xilinx.com:interface:aximm:1.0 M_AXI WREADY";
+  attribute X_INTERFACE_INFO of m_axi_wvalid : signal is "xilinx.com:interface:aximm:1.0 M_AXI WVALID";
+  attribute X_INTERFACE_INFO of s_axi_awready : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWREADY";
+  attribute X_INTERFACE_INFO of s_axi_awvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWVALID";
+  attribute X_INTERFACE_INFO of s_axi_bready : signal is "xilinx.com:interface:aximm:1.0 S_AXI BREADY";
+  attribute X_INTERFACE_PARAMETER of s_axi_bready : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 64, PROTOCOL AXI4, FREQ_HZ 142857132, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE WRITE_ONLY, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 0, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 32, PHASE 0.000, CLK_DOMAIN hdmi_in_processing_system7_0_0_FCLK_CLK1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0";
+  attribute X_INTERFACE_INFO of s_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI BVALID";
+  attribute X_INTERFACE_INFO of s_axi_wlast : signal is "xilinx.com:interface:aximm:1.0 S_AXI WLAST";
+  attribute X_INTERFACE_INFO of s_axi_wready : signal is "xilinx.com:interface:aximm:1.0 S_AXI WREADY";
+  attribute X_INTERFACE_INFO of s_axi_wvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI WVALID";
+  attribute X_INTERFACE_INFO of m_axi_awaddr : signal is "xilinx.com:interface:aximm:1.0 M_AXI AWADDR";
+  attribute X_INTERFACE_INFO of m_axi_awburst : signal is "xilinx.com:interface:aximm:1.0 M_AXI AWBURST";
+  attribute X_INTERFACE_INFO of m_axi_awcache : signal is "xilinx.com:interface:aximm:1.0 M_AXI AWCACHE";
+  attribute X_INTERFACE_INFO of m_axi_awlen : signal is "xilinx.com:interface:aximm:1.0 M_AXI AWLEN";
+  attribute X_INTERFACE_INFO of m_axi_awlock : signal is "xilinx.com:interface:aximm:1.0 M_AXI AWLOCK";
+  attribute X_INTERFACE_INFO of m_axi_awprot : signal is "xilinx.com:interface:aximm:1.0 M_AXI AWPROT";
+  attribute X_INTERFACE_INFO of m_axi_awqos : signal is "xilinx.com:interface:aximm:1.0 M_AXI AWQOS";
+  attribute X_INTERFACE_INFO of m_axi_awregion : signal is "xilinx.com:interface:aximm:1.0 M_AXI AWREGION";
+  attribute X_INTERFACE_INFO of m_axi_awsize : signal is "xilinx.com:interface:aximm:1.0 M_AXI AWSIZE";
+  attribute X_INTERFACE_INFO of m_axi_bresp : signal is "xilinx.com:interface:aximm:1.0 M_AXI BRESP";
+  attribute X_INTERFACE_INFO of m_axi_wdata : signal is "xilinx.com:interface:aximm:1.0 M_AXI WDATA";
+  attribute X_INTERFACE_INFO of m_axi_wstrb : signal is "xilinx.com:interface:aximm:1.0 M_AXI WSTRB";
+  attribute X_INTERFACE_INFO of s_axi_awaddr : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWADDR";
+  attribute X_INTERFACE_INFO of s_axi_awburst : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWBURST";
+  attribute X_INTERFACE_INFO of s_axi_awcache : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWCACHE";
+  attribute X_INTERFACE_INFO of s_axi_awlen : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWLEN";
+  attribute X_INTERFACE_INFO of s_axi_awlock : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWLOCK";
+  attribute X_INTERFACE_INFO of s_axi_awprot : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWPROT";
+  attribute X_INTERFACE_INFO of s_axi_awqos : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWQOS";
+  attribute X_INTERFACE_INFO of s_axi_awregion : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWREGION";
+  attribute X_INTERFACE_INFO of s_axi_awsize : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWSIZE";
+  attribute X_INTERFACE_INFO of s_axi_bresp : signal is "xilinx.com:interface:aximm:1.0 S_AXI BRESP";
+  attribute X_INTERFACE_INFO of s_axi_wdata : signal is "xilinx.com:interface:aximm:1.0 S_AXI WDATA";
+  attribute X_INTERFACE_INFO of s_axi_wstrb : signal is "xilinx.com:interface:aximm:1.0 S_AXI WSTRB";
 begin
-inst: entity work.hdmi_in_s00_regslice_0_axi_register_slice_v2_1_13_axi_register_slice
+inst: entity work.hdmi_in_s00_regslice_0_axi_register_slice_v2_1_17_axi_register_slice
      port map (
       aclk => aclk,
+      aclk2x => '0',
       aresetn => aresetn,
       m_axi_araddr(31 downto 0) => NLW_inst_m_axi_araddr_UNCONNECTED(31 downto 0),
       m_axi_arburst(1 downto 0) => NLW_inst_m_axi_arburst_UNCONNECTED(1 downto 0),
