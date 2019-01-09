@@ -55,7 +55,7 @@ struct Block {
 	u16 width;
 	u16 height;
 	u16 floor;
-	u32 velocity;
+	int velocity;
 };
 
 enum Speed {

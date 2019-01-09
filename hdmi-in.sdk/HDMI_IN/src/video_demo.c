@@ -92,6 +92,8 @@ int main(void)
 {
 	DemoInitialize();
 	DemoRun();
+
+
 	return 0;
 }
 
@@ -136,20 +138,31 @@ int collisiondetect (struct Block *player, struct Block *platform){
 	int playerh = player->height;
 	int playera = player->anchor;
 	int playerLC = (playera + playerh) + (playerw*DEMO_STRIDE);
-	int playerRC = playera+playerh;
+	int playerRC = playera + playerh;
 
 
 
 	int platformw = platform->width;
+	int platformh = platform->height;
 	int platforma = platform->anchor;
 	int platformLT = platforma + (platformw*DEMO_STRIDE);
+	int Stride = DEMO_STRIDE;
 	int platformRT = platforma;
-	int i;
-	for(i = platformRT; i <= platformLT; i+=DEMO_STRIDE) {
-			if(i == playerLC || i == playerRC) {
+	int g;
+	int singleStepHeight = 0;
+	int returnStatus = 0;
+	for(int j = 0; j < platformh; j++){
+
+	for(g = platformRT + singleStepHeight; g <= platformLT; g+=DEMO_STRIDE) {
+
+			if(g == playerLC || g == playerRC) {
+				returnStatus = 1;
 				return 1;
+
 			}
 		}
+	singleStepHeight++;
+	}
 	return 0;
 }
 
@@ -189,17 +202,17 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 		random_x = rand() % 990 + 0;
 		random_y = rand() % 5760 + 0;
 		platformBlock[i].anchor = DEMO_STRIDE*random_x+random_y;
-		platformBlock[i].height = 15;
+		platformBlock[i].height = 24;
 		platformBlock[i].width = 500;
 		platformBlock[i].floor = random_y;
 		platform[i] = &platformBlock[i];
 	}
 
-
 	/**
 	 * Jumping doodlemon.
 	 */
 	int counter = 0;
+	int k=0;
 	while(1) {
 
 		for(j = 0; j < numberofplatforms; j++) {
@@ -208,7 +221,7 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 			platformBlock[j].floor+=hast;
 			if(platformBlock[j].floor >= DEMO_STRIDE) {
 				platformBlock[j].floor = 0;
-				platformBlock[j].anchor = DEMO_STRIDE* (rand() % 900 + 0);
+				platformBlock[j].anchor = DEMO_STRIDE*(rand() % 900 + 0);
 			}
 
 		}
@@ -223,13 +236,19 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 			break;
 		case AIR:
 			if(counter%10==0) {
-				playerBlock.velocity-=PLAYERGRAVITY;
+				if(playerBlock.velocity > -24)
+					playerBlock.velocity-=PLAYERGRAVITY;
 			}
 			playerBlock.anchor -= playerBlock.velocity;
+
 			if(playerBlock.velocity < 0) {
-				for(int k = 0; k < numberofplatforms; k++) {
+
+				for(k = 0; k < numberofplatforms; k++) {
+
 					if((collisiondetect(player, platform[k]))==1) {
+
 						playerVelocity = GROUND;
+
 					}
 				}
 			}
