@@ -54,6 +54,8 @@ struct Block {
 	u32 anchor;
 	u16 width;
 	u16 height;
+	u16 floor;
+	u32 velocity;
 };
 
 enum Speed {
@@ -63,14 +65,8 @@ enum Speed {
 };
 
 enum Velocity {
-	HIT = 0,
-	R1 = 1,
-	R2 = 2,
-	R3 = 3,
-	TOP = 4,
-	F3 = 5,
-	F2 = 6,
-	F1 = 7
+	GROUND,
+	AIR
 };
 
 

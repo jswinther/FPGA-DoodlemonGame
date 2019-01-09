@@ -51,6 +51,7 @@
 #define VID_GPIO_IRPT_ID XPS_FPGA4_INT_ID
 #define SCU_TIMER_ID XPAR_SCUTIMER_DEVICE_ID
 #define UART_BASEADDR XPAR_PS7_UART_1_BASEADDR
+#define PLAYERGRAVITY 2
 
 /* ------------------------------------------------------------ */
 /*				Global Variables								*/
@@ -130,16 +131,40 @@ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
 
 }
 
-void platformGenerator() {
+int collisiondetect (struct Block *player, struct Block *platform){
+	int playerw = player->width;
+	int playerh = player->height;
+	int playera = player->anchor;
+	int playerLC = (playera + playerh) + (playerw*DEMO_STRIDE);
+	int playerRC = playera+playerh;
 
+
+
+	int platformw = platform->width;
+	int platforma = platform->anchor;
+	int platformLT = platforma + (platformw*DEMO_STRIDE);
+	int platformRT = platforma;
+	int i;
+	for(i = platformRT; i <= platformLT; i+=DEMO_STRIDE) {
+			if(i == playerLC || i == playerRC) {
+				return 1;
+			}
+		}
+	return 0;
 }
+
+
 
 void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 	/**
-	 * Generate Sprite.
-	 */
-	struct Block playerBlock = {3000000, 300, 300};
-	struct Block *player = &playerBlock;
+		 * Generate Sprite.
+		 */
+		struct Block playerBlock = {0, 200, 200, 0, 0};
+		struct Block *player = &playerBlock;
+	int playerStart = DEMO_STRIDE*539+DEMO_STRIDE-(playerBlock.width/2);
+	int pos = 0;
+		playerBlock.anchor = playerStart;
+		playerBlock.floor = DEMO_STRIDE - playerBlock.anchor + playerBlock.height;
 
 	/**
 	 * Print game background.
@@ -148,8 +173,7 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 	/**
 	 * playerMovement FSM.
 	 */
-	enum Velocity playerVelocity = HIT;
-	enum Speed playerSpeed = EQUILIBRIUM;
+	enum Velocity playerVelocity = GROUND;
 
 	/**
 	 * Generate Platforms.
@@ -158,7 +182,6 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 	int random_x;
 	int random_y;
 	int hast = 5;
-	int c = 0;
 	struct Block platformBlock[numberofplatforms];
 	struct Block *platform[numberofplatforms];
 	int i, j;
@@ -166,8 +189,9 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 		random_x = rand() % 990 + 0;
 		random_y = rand() % 5760 + 0;
 		platformBlock[i].anchor = DEMO_STRIDE*random_x+random_y;
-		platformBlock[i].height = 25;
+		platformBlock[i].height = 15;
 		platformBlock[i].width = 500;
+		platformBlock[i].floor = random_y;
 		platform[i] = &platformBlock[i];
 	}
 
@@ -179,17 +203,43 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 	while(1) {
 
 		for(j = 0; j < numberofplatforms; j++) {
-
 			DemoPrintBlock(frame, platform[j], platform[j]->anchor, 255);
-			if((platform[j]->anchor)%5760==0) {
-							platform[j]->anchor=rand() % 990 + 0;
-						}
-			platform[j]->anchor+=hast;
+			platformBlock[j].anchor+=hast;
+			platformBlock[j].floor+=hast;
+			if(platformBlock[j].floor >= DEMO_STRIDE) {
+				platformBlock[j].floor = 0;
+				platformBlock[j].anchor = DEMO_STRIDE* (rand() % 900 + 0);
+			}
 
 		}
 
 		DemoPrintBlock(frame, player, playerBlock.anchor, 255);
 
+		switch(playerVelocity) {
+		case GROUND:
+			counter = 0;
+			playerBlock.velocity = 24;
+			playerVelocity = AIR;
+			break;
+		case AIR:
+			if(counter%10==0) {
+				playerBlock.velocity-=PLAYERGRAVITY;
+			}
+			playerBlock.anchor -= playerBlock.velocity;
+			if(playerBlock.velocity < 0) {
+				for(int k = 0; k < numberofplatforms; k++) {
+					if((collisiondetect(player, platform[k]))==1) {
+						playerVelocity = GROUND;
+					}
+				}
+			}
+			counter++;
+			break;
+		}
+
+
+
+/*
 		switch(playerVelocity) {
 		case HIT:
 			counter = 0;
@@ -243,7 +293,7 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 			break;
 		default:
 			break;
-	}
+	}*/
 
 		for(j = 0; j < numberofplatforms; j++) {
 					DemoPrintBlock(frame, platform[j], platform[j]->anchor, 128);

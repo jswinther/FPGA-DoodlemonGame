@@ -5097,3 +5097,2857 @@ make pre-build main-build
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for 'main-build'.
+12:20:36 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:161:6: warning: unused variable 'c' [-Wunused-variable]
+  int c = 0;
+      ^
+../src/video_demo.c:152:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:345:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116936	   4368	18688960	18810264	11f0598	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+12:21:17 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:161:6: warning: unused variable 'c' [-Wunused-variable]
+  int c = 0;
+      ^
+../src/video_demo.c:152:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:345:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116936	   4368	18688960	18810264	11f0598	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+12:23:07 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:161:6: warning: unused variable 'c' [-Wunused-variable]
+  int c = 0;
+      ^
+../src/video_demo.c:152:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:348:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117016	   4368	18688960	18810344	11f05e8	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+12:24:13 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+12:27:22 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:161:6: warning: unused variable 'c' [-Wunused-variable]
+  int c = 0;
+      ^
+../src/video_demo.c:152:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:341:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116808	   4368	18688960	18810136	11f0518	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+12:27:28 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:161:6: warning: unused variable 'c' [-Wunused-variable]
+  int c = 0;
+      ^
+../src/video_demo.c:152:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:341:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116624	   4368	18688960	18809952	11f0460	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+12:27:41 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+12:31:56 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:161:6: warning: unused variable 'c' [-Wunused-variable]
+  int c = 0;
+      ^
+../src/video_demo.c:152:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:341:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116808	   4368	18688960	18810136	11f0518	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+12:37:01 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:161:6: warning: unused variable 'c' [-Wunused-variable]
+  int c = 0;
+      ^
+../src/video_demo.c:152:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:347:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117064	   4368	18688960	18810392	11f0618	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+12:37:18 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+12:38:08 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:161:6: warning: unused variable 'c' [-Wunused-variable]
+  int c = 0;
+      ^
+../src/video_demo.c:152:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:347:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117064	   4368	18688960	18810392	11f0618	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+12:38:36 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+12:40:21 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:161:6: warning: unused variable 'c' [-Wunused-variable]
+  int c = 0;
+      ^
+../src/video_demo.c:152:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:347:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117064	   4368	18688960	18810392	11f0618	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+12:40:33 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+12:41:50 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:161:6: warning: unused variable 'c' [-Wunused-variable]
+  int c = 0;
+      ^
+../src/video_demo.c:152:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:347:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117064	   4368	18688960	18810392	11f0618	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+12:42:05 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+12:43:32 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:161:6: warning: unused variable 'c' [-Wunused-variable]
+  int c = 0;
+      ^
+../src/video_demo.c:152:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:347:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117064	   4368	18688960	18810392	11f0618	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+12:43:47 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+12:46:00 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:161:6: warning: unused variable 'c' [-Wunused-variable]
+  int c = 0;
+      ^
+../src/video_demo.c:152:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:348:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117000	   4368	18688960	18810328	11f05d8	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+12:46:13 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+12:46:49 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:161:6: warning: unused variable 'c' [-Wunused-variable]
+  int c = 0;
+      ^
+../src/video_demo.c:152:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:348:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116936	   4368	18688960	18810264	11f0598	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+12:47:05 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+12:47:45 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:161:6: warning: unused variable 'c' [-Wunused-variable]
+  int c = 0;
+      ^
+../src/video_demo.c:152:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:347:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116936	   4368	18688960	18810264	11f0598	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+12:48:41 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:161:6: warning: unused variable 'c' [-Wunused-variable]
+  int c = 0;
+      ^
+../src/video_demo.c:152:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:347:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117000	   4368	18688960	18810328	11f05d8	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+12:49:23 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:161:6: warning: unused variable 'c' [-Wunused-variable]
+  int c = 0;
+      ^
+../src/video_demo.c:152:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:347:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117192	   4368	18688960	18810520	11f0698	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+12:49:38 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+12:50:27 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:161:6: warning: unused variable 'c' [-Wunused-variable]
+  int c = 0;
+      ^
+../src/video_demo.c:152:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:347:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117192	   4368	18688960	18810520	11f0698	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+12:50:37 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+12:50:47 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+12:53:03 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:161:6: warning: unused variable 'c' [-Wunused-variable]
+  int c = 0;
+      ^
+../src/video_demo.c:152:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:347:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117192	   4368	18688960	18810520	11f0698	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+12:53:08 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+12:53:32 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:01:17 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:171:19: error: 'struct Block' has no member named 'bund'
+   platformBlock[i].bund = random_y;
+                   ^
+../src/video_demo.c:185:20: error: 'struct Block' has no member named 'bund'
+    platformBlock[j].bund+=hast;
+                    ^
+../src/video_demo.c:186:23: error: 'struct Block' has no member named 'bund'
+    if(platformBlock[j].bund >= DEMO_STRIDE) {
+                       ^
+../src/video_demo.c:187:21: error: 'struct Block' has no member named 'bund'
+     platformBlock[j].bund = 0;
+                     ^
+../src/video_demo.c:161:6: warning: unused variable 'c' [-Wunused-variable]
+  int c = 0;
+      ^
+../src/video_demo.c:152:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:347:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+13:01:36 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:172:19: error: 'struct Block' has no member named 'bund'
+   platformBlock[i].bund = random_y;
+                   ^
+../src/video_demo.c:188:21: error: 'struct Block' has no member named 'bund'
+     platformBlock[j].bund = 0;
+                     ^
+../src/video_demo.c:162:6: warning: unused variable 'c' [-Wunused-variable]
+  int c = 0;
+      ^
+../src/video_demo.c:153:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:353:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+13:01:39 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:162:6: warning: unused variable 'c' [-Wunused-variable]
+  int c = 0;
+      ^
+../src/video_demo.c:153:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:353:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116872	   4368	18688960	18810200	11f0558	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+13:02:15 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:152:33: error: 'HIT' undeclared (first use in this function)
+  enum Velocity playerVelocity = HIT;
+                                 ^~~
+../src/video_demo.c:152:33: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c:204:21: error: 'R1' undeclared (first use in this function); did you mean 'j1'?
+    playerVelocity = R1;
+                     ^~
+                     j1
+../src/video_demo.c:210:22: error: 'R2' undeclared (first use in this function); did you mean 'R1'?
+     playerVelocity = R2;
+                      ^~
+                      R1
+../src/video_demo.c:217:22: error: 'R3' undeclared (first use in this function); did you mean 'R2'?
+     playerVelocity = R3;
+                      ^~
+                      R2
+../src/video_demo.c:224:22: error: 'TOP' undeclared (first use in this function)
+     playerVelocity = TOP;
+                      ^~~
+../src/video_demo.c:229:22: error: 'F3' undeclared (first use in this function); did you mean 'R3'?
+     playerVelocity = F3;
+                      ^~
+                      R3
+../src/video_demo.c:237:22: error: 'F2' undeclared (first use in this function); did you mean 'F3'?
+     playerVelocity = F2;
+                      ^~
+                      F3
+../src/video_demo.c:244:22: error: 'F1' undeclared (first use in this function); did you mean 'F2'?
+     playerVelocity = F1;
+                      ^~
+                      F2
+../src/video_demo.c:162:6: warning: unused variable 'c' [-Wunused-variable]
+  int c = 0;
+      ^
+../src/video_demo.c:153:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:353:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+13:02:48 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:195:3: error: 'swi' undeclared (first use in this function)
+   swi
+   ^~~
+../src/video_demo.c:195:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c:255:3: error: expected ';' before 'for'
+   for(j = 0; j < numberofplatforms; j++) {
+   ^~~
+../src/video_demo.c:179:6: warning: unused variable 'counter' [-Wunused-variable]
+  int counter = 0;
+      ^~~~~~~
+../src/video_demo.c:153:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c:152:16: warning: unused variable 'playerVelocity' [-Wunused-variable]
+  enum Velocity playerVelocity = GROUND;
+                ^~~~~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:352:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+13:03:10 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:196:7: error: expected expression before ':' token
+   case:
+       ^
+../src/video_demo.c:196:7: error: label at end of compound statement
+../src/video_demo.c:195:3: warning: enumeration value 'GROUND' not handled in switch [-Wswitch]
+   switch(playerVelocity) {
+   ^~~~~~
+../src/video_demo.c:195:3: warning: enumeration value 'AIR' not handled in switch [-Wswitch]
+../src/video_demo.c:179:6: warning: unused variable 'counter' [-Wunused-variable]
+  int counter = 0;
+      ^~~~~~~
+../src/video_demo.c:153:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:354:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+13:08:09 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:153:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:364:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116552	   4368	18688960	18809880	11f0418	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+13:08:22 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:08:41 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:09:59 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:153:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:365:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116616	   4368	18688960	18809944	11f0458	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+13:10:23 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:10:51 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:153:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:365:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116616	   4368	18688960	18809944	11f0458	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+13:11:07 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:11:40 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:153:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:365:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116616	   4368	18688960	18809944	11f0458	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+13:11:52 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:13:34 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:153:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:365:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116616	   4368	18688960	18809944	11f0458	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+13:13:49 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:15:07 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:153:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:365:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116616	   4368	18688960	18809944	11f0458	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+13:15:49 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:153:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:365:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116616	   4368	18688960	18809944	11f0458	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+13:16:08 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:153:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:365:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116616	   4368	18688960	18809944	11f0458	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+13:16:20 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:17:00 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:153:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:365:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116616	   4368	18688960	18809944	11f0458	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+13:17:07 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:153:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:365:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116616	   4368	18688960	18809944	11f0458	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+13:17:25 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:153:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:365:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116616	   4368	18688960	18809944	11f0458	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+13:17:35 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:19:57 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:153:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:365:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116616	   4368	18688960	18809944	11f0458	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+13:20:12 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:20:51 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:153:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:365:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116616	   4368	18688960	18809944	11f0458	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+13:21:16 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:22:43 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:153:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:365:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116616	   4368	18688960	18809944	11f0458	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+13:22:56 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:42:17 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'collisiondetect':
+../src/video_demo.c:135:22: error: 'player' is a pointer; did you mean to use '->'?
+  int playerw = player.width;
+                      ^
+                      ->
+../src/video_demo.c:136:22: error: 'player' is a pointer; did you mean to use '->'?
+  int playerh = player.height;
+                      ^
+                      ->
+../src/video_demo.c:137:22: error: 'player' is a pointer; did you mean to use '->'?
+  int playera = player.anchor;
+                      ^
+                      ->
+../src/video_demo.c:139:26: error: 'platform' is a pointer; did you mean to use '->'?
+  int platformw = platform.width;
+                          ^
+                          ->
+../src/video_demo.c:140:26: error: 'platform' is a pointer; did you mean to use '->'?
+  int platformh = platform.height;
+                          ^
+                          ->
+../src/video_demo.c:141:26: error: 'platform' is a pointer; did you mean to use '->'?
+  int platforma = platform.anchor;
+                          ^
+                          ->
+../src/video_demo.c:147:64: error: 'game' undeclared (first use in this function); did you mean 'gamma'?
+       if(playera+playerh > platforma && playera < platforma && game->man.dy > 0)
+                                                                ^~~~
+                                                                gamma
+../src/video_demo.c:147:64: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c:149:9: error: 'playerblock' undeclared (first use in this function); did you mean 'playera'?
+         playerblock.anchor = platforma-playerh;
+         ^~~~~~~~~~~
+         playera
+../src/video_demo.c:140:6: warning: unused variable 'platformh' [-Wunused-variable]
+  int platformh = platform.height;
+      ^~~~~~~~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:170:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:382:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+13:42:32 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'collisiondetect':
+../src/video_demo.c:136:22: error: 'player' is a pointer; did you mean to use '->'?
+  int playerh = player.height;
+                      ^
+                      ->
+../src/video_demo.c:137:22: error: 'player' is a pointer; did you mean to use '->'?
+  int playera = player.anchor;
+                      ^
+                      ->
+../src/video_demo.c:139:26: error: 'platform' is a pointer; did you mean to use '->'?
+  int platformw = platform.width;
+                          ^
+                          ->
+../src/video_demo.c:140:26: error: 'platform' is a pointer; did you mean to use '->'?
+  int platformh = platform.height;
+                          ^
+                          ->
+../src/video_demo.c:141:26: error: 'platform' is a pointer; did you mean to use '->'?
+  int platforma = platform.anchor;
+                          ^
+                          ->
+../src/video_demo.c:147:64: error: 'game' undeclared (first use in this function); did you mean 'gamma'?
+       if(playera+playerh > platforma && playera < platforma && game->man.dy > 0)
+                                                                ^~~~
+                                                                gamma
+../src/video_demo.c:147:64: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c:149:9: error: 'playerblock' undeclared (first use in this function); did you mean 'playera'?
+         playerblock.anchor = platforma-playerh;
+         ^~~~~~~~~~~
+         playera
+../src/video_demo.c:140:6: warning: unused variable 'platformh' [-Wunused-variable]
+  int platformh = platform.height;
+      ^~~~~~~~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:170:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:382:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+13:42:59 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'collisiondetect':
+../src/video_demo.c:147:64: error: 'game' undeclared (first use in this function); did you mean 'gamma'?
+       if(playera+playerh > platforma && playera < platforma && game->man.dy > 0)
+                                                                ^~~~
+                                                                gamma
+../src/video_demo.c:147:64: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c:149:9: error: 'playerblock' undeclared (first use in this function); did you mean 'playera'?
+         playerblock.anchor = platforma-playerh;
+         ^~~~~~~~~~~
+         playera
+../src/video_demo.c:140:6: warning: unused variable 'platformh' [-Wunused-variable]
+  int platformh = platform->height;
+      ^~~~~~~~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:170:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:382:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+13:43:18 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'collisiondetect':
+../src/video_demo.c:146:64: error: 'game' undeclared (first use in this function); did you mean 'gamma'?
+       if(playera+playerh > platforma && playera < platforma && game->man.dy > 0)
+                                                                ^~~~
+                                                                gamma
+../src/video_demo.c:146:64: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c:148:9: error: 'playerblock' undeclared (first use in this function); did you mean 'playera'?
+         playerblock.anchor = platforma-playerh;
+         ^~~~~~~~~~~
+         playera
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:169:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:381:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+13:48:26 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'collisiondetect':
+../src/video_demo.c:151:64: error: 'game' undeclared (first use in this function); did you mean 'gamma'?
+       if(playera+playerh > platforma && playera < platforma && game->man.dy > 0)
+                                                                ^~~~
+                                                                gamma
+../src/video_demo.c:151:64: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c:153:9: error: 'playerblock' undeclared (first use in this function); did you mean 'playerRC'?
+         playerblock.anchor = platforma-playerh;
+         ^~~~~~~~~~~
+         playerRC
+../src/video_demo.c:139:6: warning: unused variable 'playerRC' [-Wunused-variable]
+  int playerRC = playera+playerw;
+      ^~~~~~~~
+../src/video_demo.c:138:6: warning: unused variable 'playerLC' [-Wunused-variable]
+  int playerLC = playera+(playerh*DEMO_STRIDE);
+      ^~~~~~~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:174:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:386:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+13:49:49 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'collisiondetect':
+../src/video_demo.c:151:64: error: 'game' undeclared (first use in this function); did you mean 'gamma'?
+       if(playera+playerh > platforma && playera < platforma && game->man.dy > 0)
+                                                                ^~~~
+                                                                gamma
+../src/video_demo.c:151:64: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c:153:9: error: 'playerblock' undeclared (first use in this function); did you mean 'playerRC'?
+         playerblock.anchor = platforma-playerh;
+         ^~~~~~~~~~~
+         playerRC
+../src/video_demo.c:139:6: warning: unused variable 'playerRC' [-Wunused-variable]
+  int playerRC = playera+playerw;
+      ^~~~~~~~
+../src/video_demo.c:138:6: warning: unused variable 'playerLC' [-Wunused-variable]
+  int playerLC = (playera + playerw) + (playerh*DEMO_STRIDE);
+      ^~~~~~~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:174:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:386:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+13:51:53 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'collisiondetect':
+../src/video_demo.c:152:64: error: 'game' undeclared (first use in this function); did you mean 'gamma'?
+       if(playera+playerh > platforma && playera < platforma && game->man.dy > 0)
+                                                                ^~~~
+                                                                gamma
+../src/video_demo.c:152:64: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c:154:9: error: 'playerblock' undeclared (first use in this function); did you mean 'playerRC'?
+         playerblock.anchor = platforma-playerh;
+         ^~~~~~~~~~~
+         playerRC
+../src/video_demo.c:146:6: warning: unused variable 'platformRT' [-Wunused-variable]
+  int platformRT = platforma;
+      ^~~~~~~~~~
+../src/video_demo.c:145:6: warning: unused variable 'platformLT' [-Wunused-variable]
+  int platformLT = platforma + (platformw*DEMO_STRIDE);
+      ^~~~~~~~~~
+../src/video_demo.c:139:6: warning: unused variable 'playerRC' [-Wunused-variable]
+  int playerRC = playera+playerw;
+      ^~~~~~~~
+../src/video_demo.c:138:6: warning: unused variable 'playerLC' [-Wunused-variable]
+  int playerLC = (playera + playerw) + (playerh*DEMO_STRIDE);
+      ^~~~~~~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:175:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:387:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+13:57:01 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:171:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:383:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116808	   4368	18688960	18810136	11f0518	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+14:29:46 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c:158:1: error: two or more data types in declaration specifiers
+ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
+ ^~~~
+../src/video_demo.c:158:6: error: conflicting types for 'DemoStartGame'
+ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
+      ^~~~~~~~~~~~~
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:82:6: note: previous declaration of 'DemoStartGame' was here
+ void DemoStartGame(u8 *frame, u32 width, u32 height);
+      ^~~~~~~~~~~~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:226:36: error: expected expression before ')' token
+    if(playerBlock.velocity <= 0 && ) {
+                                    ^
+../src/video_demo.c:174:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:390:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+14:33:08 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c:158:1: error: two or more data types in declaration specifiers
+ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
+ ^~~~
+../src/video_demo.c:158:6: error: conflicting types for 'DemoStartGame'
+ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
+      ^~~~~~~~~~~~~
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:82:6: note: previous declaration of 'DemoStartGame' was here
+ void DemoStartGame(u8 *frame, u32 width, u32 height);
+      ^~~~~~~~~~~~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:227:36: error: expected expression before ')' token
+    if(playerBlock.velocity <= 0 && ) {
+                                    ^
+../src/video_demo.c:175:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c:164:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = DEMO_STRIDE*539+DEMO_STRIDE-(playerBlock.width/2);
+      ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:391:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+14:35:07 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c:158:1: error: two or more data types in declaration specifiers
+ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
+ ^~~~
+../src/video_demo.c:158:6: error: conflicting types for 'DemoStartGame'
+ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
+      ^~~~~~~~~~~~~
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:82:6: note: previous declaration of 'DemoStartGame' was here
+ void DemoStartGame(u8 *frame, u32 width, u32 height);
+      ^~~~~~~~~~~~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:230:9: error: too few arguments to function 'collisiondetect'
+      if(collisiondetect()==1) {
+         ^~~~~~~~~~~~~~~
+../src/video_demo.c:134:5: note: declared here
+ int collisiondetect (struct Block *player, struct Block *platform){
+     ^~~~~~~~~~~~~~~
+../src/video_demo.c:175:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c:164:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = DEMO_STRIDE*539+DEMO_STRIDE-(playerBlock.width/2);
+      ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:396:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+14:35:25 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c:158:1: error: two or more data types in declaration specifiers
+ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
+ ^~~~
+../src/video_demo.c:158:6: error: conflicting types for 'DemoStartGame'
+ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
+      ^~~~~~~~~~~~~
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:82:6: note: previous declaration of 'DemoStartGame' was here
+ void DemoStartGame(u8 *frame, u32 width, u32 height);
+      ^~~~~~~~~~~~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:175:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c:164:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = DEMO_STRIDE*539+DEMO_STRIDE-(playerBlock.width/2);
+      ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:395:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+14:36:06 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:175:13: warning: unused variable 'playerSpeed' [-Wunused-variable]
+  enum Speed playerSpeed = EQUILIBRIUM;
+             ^~~~~~~~~~~
+../src/video_demo.c:164:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = DEMO_STRIDE*539+DEMO_STRIDE-(playerBlock.width/2);
+      ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:395:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116888	   4368	18688960	18810216	11f0568	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+14:36:20 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:164:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = DEMO_STRIDE*539+DEMO_STRIDE-(playerBlock.width/2);
+      ^~~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:394:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116888	   4368	18688960	18810216	11f0568	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+14:36:32 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:39:29 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:394:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116888	   4368	18688960	18810216	11f0568	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+14:43:29 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:395:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116952	   4368	18688960	18810280	11f05a8	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+14:43:52 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:50:24 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'collisiondetect':
+../src/video_demo.c:149:3: warning: implicit declaration of function 'xilprintf'; did you mean 'xil_printf'? [-Wimplicit-function-declaration]
+   xilprintf("1");
+   ^~~~~~~~~
+   xil_printf
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:396:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/video_demo.o: In function `collisiondetect':
+C:\Users\Jonat\Documents\GitHub\hdmi-in\hdmi-in.sdk\HDMI_IN\Debug/../src/video_demo.c:149: undefined reference to `xilprintf'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:46: HDMI_IN.elf] Error 1
+14:50:32 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:396:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116960	   4368	18688960	18810288	11f05b0	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+14:50:48 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:51:44 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:396:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116960	   4368	18688960	18810288	11f05b0	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+14:51:54 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:56:55 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:396:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116960	   4368	18688960	18810288	11f05b0	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+14:57:47 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:402:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117024	   4368	18688960	18810352	11f05f0	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+14:57:57 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:58:48 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:401:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117024	   4368	18688960	18810352	11f05f0	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+14:59:10 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:01:01 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:401:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117024	   4368	18688960	18810352	11f05f0	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+15:01:06 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:395:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116952	   4368	18688960	18810280	11f05a8	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+15:01:21 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:02:13 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'collisiondetect':
+../src/video_demo.c:146:6: warning: unused variable 'platformRT' [-Wunused-variable]
+  int platformRT = platforma;
+      ^~~~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:395:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116952	   4368	18688960	18810280	11f05a8	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+15:02:25 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:02:58 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:395:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116952	   4368	18688960	18810280	11f05a8	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+15:08:05 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'collisiondetect':
+../src/video_demo.c:139:6: warning: unused variable 'playerRC' [-Wunused-variable]
+  int playerRC = playera+playerw;
+      ^~~~~~~~
+../src/video_demo.c:138:6: warning: unused variable 'playerLC' [-Wunused-variable]
+  int playerLC = (playera + playerw) + (playerh*DEMO_STRIDE);
+      ^~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:395:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116952	   4368	18688960	18810280	11f05a8	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+15:08:35 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:10:01 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'collisiondetect':
+../src/video_demo.c:139:6: warning: unused variable 'playerRC' [-Wunused-variable]
+  int playerRC = playera+playerw;
+      ^~~~~~~~
+../src/video_demo.c:138:6: warning: unused variable 'playerLC' [-Wunused-variable]
+  int playerLC = (playera + playerw) + (playerh*DEMO_STRIDE);
+      ^~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:395:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116952	   4368	18688960	18810280	11f05a8	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+15:10:25 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'collisiondetect':
+../src/video_demo.c:139:6: warning: unused variable 'playerRC' [-Wunused-variable]
+  int playerRC = playera+playerw;
+      ^~~~~~~~
+../src/video_demo.c:138:6: warning: unused variable 'playerLC' [-Wunused-variable]
+  int playerLC = (playera + playerw) + (playerh*DEMO_STRIDE);
+      ^~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:395:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116888	   4368	18688960	18810216	11f0568	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+15:10:35 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:13:04 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'collisiondetect':
+../src/video_demo.c:139:6: warning: unused variable 'playerRC' [-Wunused-variable]
+  int playerRC = playera+playerw;
+      ^~~~~~~~
+../src/video_demo.c:138:6: warning: unused variable 'playerLC' [-Wunused-variable]
+  int playerLC = (playera + playerw) + (playerh*DEMO_STRIDE);
+      ^~~~~~~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:239:5: error: expected expression before '}' token
+     }
+     ^
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:403:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+15:13:10 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'collisiondetect':
+../src/video_demo.c:139:6: warning: unused variable 'playerRC' [-Wunused-variable]
+  int playerRC = playera+playerw;
+      ^~~~~~~~
+../src/video_demo.c:138:6: warning: unused variable 'playerLC' [-Wunused-variable]
+  int playerLC = (playera + playerw) + (playerh*DEMO_STRIDE);
+      ^~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:405:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116952	   4368	18688960	18810280	11f05a8	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+15:13:23 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'collisiondetect':
+../src/video_demo.c:139:6: warning: unused variable 'playerRC' [-Wunused-variable]
+  int playerRC = playera+playerw;
+      ^~~~~~~~
+../src/video_demo.c:138:6: warning: unused variable 'playerLC' [-Wunused-variable]
+  int playerLC = (playera + playerw) + (playerh*DEMO_STRIDE);
+      ^~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:402:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117016	   4368	18688960	18810344	11f05e8	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+15:13:39 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:15:37 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'collisiondetect':
+../src/video_demo.c:139:6: warning: unused variable 'playerRC' [-Wunused-variable]
+  int playerRC = playera+playerw;
+      ^~~~~~~~
+../src/video_demo.c:138:6: warning: unused variable 'playerLC' [-Wunused-variable]
+  int playerLC = (playera + playerw) + (playerh*DEMO_STRIDE);
+      ^~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:390:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116824	   4368	18688960	18810152	11f0528	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+15:15:45 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'collisiondetect':
+../src/video_demo.c:139:6: warning: unused variable 'playerRC' [-Wunused-variable]
+  int playerRC = playera+playerw;
+      ^~~~~~~~
+../src/video_demo.c:138:6: warning: unused variable 'playerLC' [-Wunused-variable]
+  int playerLC = (playera + playerw) + (playerh*DEMO_STRIDE);
+      ^~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:388:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116824	   4368	18688960	18810152	11f0528	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+15:16:01 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:16:48 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'collisiondetect':
+../src/video_demo.c:139:6: warning: unused variable 'playerRC' [-Wunused-variable]
+  int playerRC = playera+playerw;
+      ^~~~~~~~
+../src/video_demo.c:138:6: warning: unused variable 'playerLC' [-Wunused-variable]
+  int playerLC = (playera + playerw) + (playerh*DEMO_STRIDE);
+      ^~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:389:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116824	   4368	18688960	18810152	11f0528	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+15:19:01 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:22:21 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'collisiondetect':
+../src/video_demo.c:139:6: warning: unused variable 'playerRC' [-Wunused-variable]
+  int playerRC = playera+playerw;
+      ^~~~~~~~
+../src/video_demo.c:138:6: warning: unused variable 'playerLC' [-Wunused-variable]
+  int playerLC = (playera + playerw) + (playerh*DEMO_STRIDE);
+      ^~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:392:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116888	   4368	18688960	18810216	11f0568	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+15:22:29 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'collisiondetect':
+../src/video_demo.c:139:6: warning: unused variable 'playerRC' [-Wunused-variable]
+  int playerRC = playera+playerw;
+      ^~~~~~~~
+../src/video_demo.c:138:6: warning: unused variable 'playerLC' [-Wunused-variable]
+  int playerLC = (playera + playerw) + (playerh*DEMO_STRIDE);
+      ^~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:392:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116888	   4368	18688960	18810216	11f0568	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+15:22:49 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:23:30 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'collisiondetect':
+../src/video_demo.c:139:6: warning: unused variable 'playerRC' [-Wunused-variable]
+  int playerRC = playera+playerw;
+      ^~~~~~~~
+../src/video_demo.c:138:6: warning: unused variable 'playerLC' [-Wunused-variable]
+  int playerLC = (playera + playerw) + (playerh*DEMO_STRIDE);
+      ^~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:392:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116888	   4368	18688960	18810216	11f0568	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+15:24:07 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:25:29 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'collisiondetect':
+../src/video_demo.c:139:6: warning: unused variable 'playerRC' [-Wunused-variable]
+  int playerRC = playera+playerw;
+      ^~~~~~~~
+../src/video_demo.c:138:6: warning: unused variable 'playerLC' [-Wunused-variable]
+  int playerLC = (playera + playerw) + (playerh*DEMO_STRIDE);
+      ^~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:392:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116888	   4368	18688960	18810216	11f0568	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+15:25:41 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:31:19 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'collisiondetect':
+../src/video_demo.c:139:6: warning: unused variable 'playerRC' [-Wunused-variable]
+  int playerRC = playera+playerw;
+      ^~~~~~~~
+../src/video_demo.c:138:6: warning: unused variable 'playerLC' [-Wunused-variable]
+  int playerLC = (playera + playerw) + (playerh*DEMO_STRIDE);
+      ^~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:398:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116952	   4368	18688960	18810280	11f05a8	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+15:31:29 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:34:08 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'collisiondetect':
+../src/video_demo.c:139:6: warning: unused variable 'playerRC' [-Wunused-variable]
+  int playerRC = playera+playerw;
+      ^~~~~~~~
+../src/video_demo.c:138:6: warning: unused variable 'playerLC' [-Wunused-variable]
+  int playerLC = (playera + playerw) + (playerh*DEMO_STRIDE);
+      ^~~~~~~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:398:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116952	   4368	18688960	18810280	11f05a8	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+15:34:35 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'collisiondetect':
+../src/video_demo.c:139:6: warning: unused variable 'playerRC' [-Wunused-variable]
+  int playerRC = playera+playerw;
+      ^~~~~~~~
+../src/video_demo.c:138:6: warning: unused variable 'playerLC' [-Wunused-variable]
+  int playerLC = (playera + playerw) + (playerh*DEMO_STRIDE);
+      ^~~~~~~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:165:6: warning: unused variable 'pos' [-Wunused-variable]
+  int pos = 0;
+      ^~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:396:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116952	   4368	18688960	18810280	11f05a8	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+15:35:01 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:36:49 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'collisiondetect':
+../src/video_demo.c:139:6: warning: unused variable 'playerRC' [-Wunused-variable]
+  int playerRC = playera+playerw;
+      ^~~~~~~~
+../src/video_demo.c:138:6: warning: unused variable 'playerLC' [-Wunused-variable]
+  int playerLC = (playera + playerw) + (playerh*DEMO_STRIDE);
+      ^~~~~~~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:232:41: error: 'k' undeclared (first use in this function)
+     if(collisiondetect(player, platform[k])==1) {
+                                         ^
+../src/video_demo.c:232:41: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c:165:6: warning: unused variable 'pos' [-Wunused-variable]
+  int pos = 0;
+      ^~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:401:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+15:37:18 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'collisiondetect':
+../src/video_demo.c:139:6: warning: unused variable 'playerRC' [-Wunused-variable]
+  int playerRC = playera+playerw;
+      ^~~~~~~~
+../src/video_demo.c:138:6: warning: unused variable 'playerLC' [-Wunused-variable]
+  int playerLC = (playera + playerw) + (playerh*DEMO_STRIDE);
+      ^~~~~~~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:165:6: warning: unused variable 'pos' [-Wunused-variable]
+  int pos = 0;
+      ^~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:401:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116824	   4368	18688960	18810152	11f0528	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+15:37:37 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'collisiondetect':
+../src/video_demo.c:139:6: warning: unused variable 'playerRC' [-Wunused-variable]
+  int playerRC = playera+playerw;
+      ^~~~~~~~
+../src/video_demo.c:138:6: warning: unused variable 'playerLC' [-Wunused-variable]
+  int playerLC = (playera + playerw) + (playerh*DEMO_STRIDE);
+      ^~~~~~~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:165:6: warning: unused variable 'pos' [-Wunused-variable]
+  int pos = 0;
+      ^~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:401:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116824	   4368	18688960	18810152	11f0528	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+15:38:13 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'collisiondetect':
+../src/video_demo.c:139:6: warning: unused variable 'playerRC' [-Wunused-variable]
+  int playerRC = playera+playerw;
+      ^~~~~~~~
+../src/video_demo.c:138:6: warning: unused variable 'playerLC' [-Wunused-variable]
+  int playerLC = (playera + playerw) + (playerh*DEMO_STRIDE);
+      ^~~~~~~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:165:6: warning: unused variable 'pos' [-Wunused-variable]
+  int pos = 0;
+      ^~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:402:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116824	   4368	18688960	18810152	11f0528	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+15:38:18 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'collisiondetect':
+../src/video_demo.c:139:6: warning: unused variable 'playerRC' [-Wunused-variable]
+  int playerRC = playera+playerw;
+      ^~~~~~~~
+../src/video_demo.c:138:6: warning: unused variable 'playerLC' [-Wunused-variable]
+  int playerLC = (playera + playerw) + (playerh*DEMO_STRIDE);
+      ^~~~~~~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:165:6: warning: unused variable 'pos' [-Wunused-variable]
+  int pos = 0;
+      ^~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:401:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116824	   4368	18688960	18810152	11f0528	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+15:38:36 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'collisiondetect':
+../src/video_demo.c:139:6: warning: unused variable 'playerRC' [-Wunused-variable]
+  int playerRC = playera+playerw;
+      ^~~~~~~~
+../src/video_demo.c:138:6: warning: unused variable 'playerLC' [-Wunused-variable]
+  int playerLC = (playera + playerw) + (playerh*DEMO_STRIDE);
+      ^~~~~~~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:165:6: warning: unused variable 'pos' [-Wunused-variable]
+  int pos = 0;
+      ^~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:395:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116824	   4368	18688960	18810152	11f0528	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+15:39:22 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:47:16 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:165:6: warning: unused variable 'pos' [-Wunused-variable]
+  int pos = 0;
+      ^~~
+../src/video_demo.c: In function 'DemoRun':
+../src/video_demo.c:395:6: warning: unused variable 'playerStart' [-Wunused-variable]
+  int playerStart = 3101000;
+      ^~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116888	   4368	18688960	18810216	11f0568	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+15:50:21 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
