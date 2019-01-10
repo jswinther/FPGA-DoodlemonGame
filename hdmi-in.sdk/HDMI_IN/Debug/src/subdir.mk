@@ -7,18 +7,12 @@ LD_SRCS += \
 ../src/lscript.ld 
 
 C_SRCS += \
-../src/intc.c \
-../src/interrupt_counter_tut_2D_fixed.c \
 ../src/video_demo.c 
 
 OBJS += \
-./src/intc.o \
-./src/interrupt_counter_tut_2D_fixed.o \
 ./src/video_demo.o 
 
 C_DEPS += \
-./src/intc.d \
-./src/interrupt_counter_tut_2D_fixed.d \
 ./src/video_demo.d 
 
 

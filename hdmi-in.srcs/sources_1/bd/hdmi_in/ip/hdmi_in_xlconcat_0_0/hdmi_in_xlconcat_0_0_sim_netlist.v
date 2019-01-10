@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Wed Jan  9 09:18:26 2019
+// Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+// Date        : Thu Jan 10 11:17:02 2019
 // Host        : NicoLenovo running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim {C:/Users/bruger/OneDrive - Danmarks Tekniske
 //               Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_xlconcat_0_0/hdmi_in_xlconcat_0_0_sim_netlist.v}
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "hdmi_in_xlconcat_0_0,xlconcat_v2_1_1_xlconcat,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "xlconcat_v2_1_1_xlconcat,Vivado 2018.2" *) 
+(* CHECK_LICENSE_TYPE = "hdmi_in_xlconcat_0_0,xlconcat_v2_1_1_xlconcat,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "xlconcat_v2_1_1_xlconcat,Vivado 2018.3" *) 
 (* NotValidForBitStream *)
 module hdmi_in_xlconcat_0_0
    (In0,
@@ -20,20 +20,24 @@ module hdmi_in_xlconcat_0_0
     In2,
     In3,
     In4,
+    In5,
     dout);
   input [0:0]In0;
   input [0:0]In1;
   input [0:0]In2;
   input [0:0]In3;
   input [0:0]In4;
-  output [4:0]dout;
+  input [0:0]In5;
+  output [5:0]dout;
 
   wire [0:0]In0;
   wire [0:0]In1;
   wire [0:0]In2;
   wire [0:0]In3;
   wire [0:0]In4;
+  wire [0:0]In5;
 
+  assign dout[5] = In5;
   assign dout[4] = In4;
   assign dout[3] = In3;
   assign dout[2] = In2;

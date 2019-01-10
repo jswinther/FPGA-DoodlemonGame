@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Wed Jan  9 09:13:35 2019
+--Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+--Date        : Thu Jan 10 11:14:14 2019
 --Host        : NicoLenovo running 64-bit major release  (build 9200)
 --Command     : generate_target hdmi_in.bd
 --Design      : hdmi_in
@@ -4640,9 +4640,7 @@ entity hdmi_in is
     TMDS_data_p : in STD_LOGIC_VECTOR ( 2 downto 0 );
     btns_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
     hdmi_hpd_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
-    leds_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
     leds_4bits_tri_o : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    leds_4bits_tri_t : out STD_LOGIC_VECTOR ( 3 downto 0 );
     sws_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
     vga_b : out STD_LOGIC_VECTOR ( 4 downto 0 );
     vga_g : out STD_LOGIC_VECTOR ( 5 downto 0 );
@@ -4730,9 +4728,137 @@ architecture STRUCTURE of hdmi_in is
     In2 : in STD_LOGIC_VECTOR ( 0 to 0 );
     In3 : in STD_LOGIC_VECTOR ( 0 to 0 );
     In4 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    dout : out STD_LOGIC_VECTOR ( 4 downto 0 )
+    In5 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    dout : out STD_LOGIC_VECTOR ( 5 downto 0 )
   );
   end component hdmi_in_xlconcat_0_0;
+  component hdmi_in_processing_system7_0_0 is
+  port (
+    I2C0_SDA_I : in STD_LOGIC;
+    I2C0_SDA_O : out STD_LOGIC;
+    I2C0_SDA_T : out STD_LOGIC;
+    I2C0_SCL_I : in STD_LOGIC;
+    I2C0_SCL_O : out STD_LOGIC;
+    I2C0_SCL_T : out STD_LOGIC;
+    SDIO0_WP : in STD_LOGIC;
+    TTC0_WAVE0_OUT : out STD_LOGIC;
+    TTC0_WAVE1_OUT : out STD_LOGIC;
+    TTC0_WAVE2_OUT : out STD_LOGIC;
+    USB0_PORT_INDCTL : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    USB0_VBUS_PWRSELECT : out STD_LOGIC;
+    USB0_VBUS_PWRFAULT : in STD_LOGIC;
+    M_AXI_GP0_ARVALID : out STD_LOGIC;
+    M_AXI_GP0_AWVALID : out STD_LOGIC;
+    M_AXI_GP0_BREADY : out STD_LOGIC;
+    M_AXI_GP0_RREADY : out STD_LOGIC;
+    M_AXI_GP0_WLAST : out STD_LOGIC;
+    M_AXI_GP0_WVALID : out STD_LOGIC;
+    M_AXI_GP0_ARID : out STD_LOGIC_VECTOR ( 11 downto 0 );
+    M_AXI_GP0_AWID : out STD_LOGIC_VECTOR ( 11 downto 0 );
+    M_AXI_GP0_WID : out STD_LOGIC_VECTOR ( 11 downto 0 );
+    M_AXI_GP0_ARBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    M_AXI_GP0_ARLOCK : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    M_AXI_GP0_ARSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    M_AXI_GP0_AWBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    M_AXI_GP0_AWLOCK : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    M_AXI_GP0_AWSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    M_AXI_GP0_ARPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    M_AXI_GP0_AWPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    M_AXI_GP0_ARADDR : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    M_AXI_GP0_AWADDR : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    M_AXI_GP0_WDATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    M_AXI_GP0_ARCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    M_AXI_GP0_ARLEN : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    M_AXI_GP0_ARQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    M_AXI_GP0_AWCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    M_AXI_GP0_AWLEN : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    M_AXI_GP0_AWQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    M_AXI_GP0_WSTRB : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    M_AXI_GP0_ACLK : in STD_LOGIC;
+    M_AXI_GP0_ARREADY : in STD_LOGIC;
+    M_AXI_GP0_AWREADY : in STD_LOGIC;
+    M_AXI_GP0_BVALID : in STD_LOGIC;
+    M_AXI_GP0_RLAST : in STD_LOGIC;
+    M_AXI_GP0_RVALID : in STD_LOGIC;
+    M_AXI_GP0_WREADY : in STD_LOGIC;
+    M_AXI_GP0_BID : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    M_AXI_GP0_RID : in STD_LOGIC_VECTOR ( 11 downto 0 );
+    M_AXI_GP0_BRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    M_AXI_GP0_RRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    M_AXI_GP0_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    S_AXI_HP0_ARREADY : out STD_LOGIC;
+    S_AXI_HP0_AWREADY : out STD_LOGIC;
+    S_AXI_HP0_BVALID : out STD_LOGIC;
+    S_AXI_HP0_RLAST : out STD_LOGIC;
+    S_AXI_HP0_RVALID : out STD_LOGIC;
+    S_AXI_HP0_WREADY : out STD_LOGIC;
+    S_AXI_HP0_BRESP : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    S_AXI_HP0_RRESP : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    S_AXI_HP0_BID : out STD_LOGIC_VECTOR ( 5 downto 0 );
+    S_AXI_HP0_RID : out STD_LOGIC_VECTOR ( 5 downto 0 );
+    S_AXI_HP0_RDATA : out STD_LOGIC_VECTOR ( 63 downto 0 );
+    S_AXI_HP0_RCOUNT : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    S_AXI_HP0_WCOUNT : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    S_AXI_HP0_RACOUNT : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    S_AXI_HP0_WACOUNT : out STD_LOGIC_VECTOR ( 5 downto 0 );
+    S_AXI_HP0_ACLK : in STD_LOGIC;
+    S_AXI_HP0_ARVALID : in STD_LOGIC;
+    S_AXI_HP0_AWVALID : in STD_LOGIC;
+    S_AXI_HP0_BREADY : in STD_LOGIC;
+    S_AXI_HP0_RDISSUECAP1_EN : in STD_LOGIC;
+    S_AXI_HP0_RREADY : in STD_LOGIC;
+    S_AXI_HP0_WLAST : in STD_LOGIC;
+    S_AXI_HP0_WRISSUECAP1_EN : in STD_LOGIC;
+    S_AXI_HP0_WVALID : in STD_LOGIC;
+    S_AXI_HP0_ARBURST : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    S_AXI_HP0_ARLOCK : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    S_AXI_HP0_ARSIZE : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    S_AXI_HP0_AWBURST : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    S_AXI_HP0_AWLOCK : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    S_AXI_HP0_AWSIZE : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    S_AXI_HP0_ARPROT : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    S_AXI_HP0_AWPROT : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    S_AXI_HP0_ARADDR : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    S_AXI_HP0_AWADDR : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    S_AXI_HP0_ARCACHE : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    S_AXI_HP0_ARLEN : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    S_AXI_HP0_ARQOS : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    S_AXI_HP0_AWCACHE : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    S_AXI_HP0_AWLEN : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    S_AXI_HP0_AWQOS : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    S_AXI_HP0_ARID : in STD_LOGIC_VECTOR ( 5 downto 0 );
+    S_AXI_HP0_AWID : in STD_LOGIC_VECTOR ( 5 downto 0 );
+    S_AXI_HP0_WID : in STD_LOGIC_VECTOR ( 5 downto 0 );
+    S_AXI_HP0_WDATA : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    S_AXI_HP0_WSTRB : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    IRQ_F2P : in STD_LOGIC_VECTOR ( 5 downto 0 );
+    FCLK_CLK0 : out STD_LOGIC;
+    FCLK_CLK1 : out STD_LOGIC;
+    FCLK_CLK2 : out STD_LOGIC;
+    FCLK_RESET0_N : out STD_LOGIC;
+    MIO : inout STD_LOGIC_VECTOR ( 53 downto 0 );
+    DDR_CAS_n : inout STD_LOGIC;
+    DDR_CKE : inout STD_LOGIC;
+    DDR_Clk_n : inout STD_LOGIC;
+    DDR_Clk : inout STD_LOGIC;
+    DDR_CS_n : inout STD_LOGIC;
+    DDR_DRSTB : inout STD_LOGIC;
+    DDR_ODT : inout STD_LOGIC;
+    DDR_RAS_n : inout STD_LOGIC;
+    DDR_WEB : inout STD_LOGIC;
+    DDR_BankAddr : inout STD_LOGIC_VECTOR ( 2 downto 0 );
+    DDR_Addr : inout STD_LOGIC_VECTOR ( 14 downto 0 );
+    DDR_VRN : inout STD_LOGIC;
+    DDR_VRP : inout STD_LOGIC;
+    DDR_DM : inout STD_LOGIC_VECTOR ( 3 downto 0 );
+    DDR_DQ : inout STD_LOGIC_VECTOR ( 31 downto 0 );
+    DDR_DQS_n : inout STD_LOGIC_VECTOR ( 3 downto 0 );
+    DDR_DQS : inout STD_LOGIC_VECTOR ( 3 downto 0 );
+    PS_SRSTB : inout STD_LOGIC;
+    PS_CLK : inout STD_LOGIC;
+    PS_PORB : inout STD_LOGIC
+  );
+  end component hdmi_in_processing_system7_0_0;
   component hdmi_in_axi_gpio_btn_0 is
   port (
     s_axi_aclk : in STD_LOGIC;
@@ -4754,6 +4880,7 @@ architecture STRUCTURE of hdmi_in is
     s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_rvalid : out STD_LOGIC;
     s_axi_rready : in STD_LOGIC;
+    ip2intc_irpt : out STD_LOGIC;
     gpio_io_i : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component hdmi_in_axi_gpio_btn_0;
@@ -4778,9 +4905,7 @@ architecture STRUCTURE of hdmi_in is
     s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_rvalid : out STD_LOGIC;
     s_axi_rready : in STD_LOGIC;
-    gpio_io_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    gpio_io_o : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    gpio_io_t : out STD_LOGIC_VECTOR ( 3 downto 0 )
+    gpio_io_o : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component hdmi_in_axi_gpio_led_0;
   component hdmi_in_axi_gpio_sw_0 is
@@ -4918,133 +5043,6 @@ architecture STRUCTURE of hdmi_in is
     peripheral_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component hdmi_in_proc_sys_reset_0_0;
-  component hdmi_in_processing_system7_0_0 is
-  port (
-    I2C0_SDA_I : in STD_LOGIC;
-    I2C0_SDA_O : out STD_LOGIC;
-    I2C0_SDA_T : out STD_LOGIC;
-    I2C0_SCL_I : in STD_LOGIC;
-    I2C0_SCL_O : out STD_LOGIC;
-    I2C0_SCL_T : out STD_LOGIC;
-    SDIO0_WP : in STD_LOGIC;
-    TTC0_WAVE0_OUT : out STD_LOGIC;
-    TTC0_WAVE1_OUT : out STD_LOGIC;
-    TTC0_WAVE2_OUT : out STD_LOGIC;
-    USB0_PORT_INDCTL : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    USB0_VBUS_PWRSELECT : out STD_LOGIC;
-    USB0_VBUS_PWRFAULT : in STD_LOGIC;
-    M_AXI_GP0_ARVALID : out STD_LOGIC;
-    M_AXI_GP0_AWVALID : out STD_LOGIC;
-    M_AXI_GP0_BREADY : out STD_LOGIC;
-    M_AXI_GP0_RREADY : out STD_LOGIC;
-    M_AXI_GP0_WLAST : out STD_LOGIC;
-    M_AXI_GP0_WVALID : out STD_LOGIC;
-    M_AXI_GP0_ARID : out STD_LOGIC_VECTOR ( 11 downto 0 );
-    M_AXI_GP0_AWID : out STD_LOGIC_VECTOR ( 11 downto 0 );
-    M_AXI_GP0_WID : out STD_LOGIC_VECTOR ( 11 downto 0 );
-    M_AXI_GP0_ARBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    M_AXI_GP0_ARLOCK : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    M_AXI_GP0_ARSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    M_AXI_GP0_AWBURST : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    M_AXI_GP0_AWLOCK : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    M_AXI_GP0_AWSIZE : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    M_AXI_GP0_ARPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    M_AXI_GP0_AWPROT : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    M_AXI_GP0_ARADDR : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    M_AXI_GP0_AWADDR : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    M_AXI_GP0_WDATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    M_AXI_GP0_ARCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    M_AXI_GP0_ARLEN : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    M_AXI_GP0_ARQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    M_AXI_GP0_AWCACHE : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    M_AXI_GP0_AWLEN : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    M_AXI_GP0_AWQOS : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    M_AXI_GP0_WSTRB : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    M_AXI_GP0_ACLK : in STD_LOGIC;
-    M_AXI_GP0_ARREADY : in STD_LOGIC;
-    M_AXI_GP0_AWREADY : in STD_LOGIC;
-    M_AXI_GP0_BVALID : in STD_LOGIC;
-    M_AXI_GP0_RLAST : in STD_LOGIC;
-    M_AXI_GP0_RVALID : in STD_LOGIC;
-    M_AXI_GP0_WREADY : in STD_LOGIC;
-    M_AXI_GP0_BID : in STD_LOGIC_VECTOR ( 11 downto 0 );
-    M_AXI_GP0_RID : in STD_LOGIC_VECTOR ( 11 downto 0 );
-    M_AXI_GP0_BRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    M_AXI_GP0_RRESP : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    M_AXI_GP0_RDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    S_AXI_HP0_ARREADY : out STD_LOGIC;
-    S_AXI_HP0_AWREADY : out STD_LOGIC;
-    S_AXI_HP0_BVALID : out STD_LOGIC;
-    S_AXI_HP0_RLAST : out STD_LOGIC;
-    S_AXI_HP0_RVALID : out STD_LOGIC;
-    S_AXI_HP0_WREADY : out STD_LOGIC;
-    S_AXI_HP0_BRESP : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    S_AXI_HP0_RRESP : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    S_AXI_HP0_BID : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    S_AXI_HP0_RID : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    S_AXI_HP0_RDATA : out STD_LOGIC_VECTOR ( 63 downto 0 );
-    S_AXI_HP0_RCOUNT : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    S_AXI_HP0_WCOUNT : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    S_AXI_HP0_RACOUNT : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    S_AXI_HP0_WACOUNT : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    S_AXI_HP0_ACLK : in STD_LOGIC;
-    S_AXI_HP0_ARVALID : in STD_LOGIC;
-    S_AXI_HP0_AWVALID : in STD_LOGIC;
-    S_AXI_HP0_BREADY : in STD_LOGIC;
-    S_AXI_HP0_RDISSUECAP1_EN : in STD_LOGIC;
-    S_AXI_HP0_RREADY : in STD_LOGIC;
-    S_AXI_HP0_WLAST : in STD_LOGIC;
-    S_AXI_HP0_WRISSUECAP1_EN : in STD_LOGIC;
-    S_AXI_HP0_WVALID : in STD_LOGIC;
-    S_AXI_HP0_ARBURST : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    S_AXI_HP0_ARLOCK : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    S_AXI_HP0_ARSIZE : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    S_AXI_HP0_AWBURST : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    S_AXI_HP0_AWLOCK : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    S_AXI_HP0_AWSIZE : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    S_AXI_HP0_ARPROT : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    S_AXI_HP0_AWPROT : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    S_AXI_HP0_ARADDR : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    S_AXI_HP0_AWADDR : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    S_AXI_HP0_ARCACHE : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    S_AXI_HP0_ARLEN : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    S_AXI_HP0_ARQOS : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    S_AXI_HP0_AWCACHE : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    S_AXI_HP0_AWLEN : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    S_AXI_HP0_AWQOS : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    S_AXI_HP0_ARID : in STD_LOGIC_VECTOR ( 5 downto 0 );
-    S_AXI_HP0_AWID : in STD_LOGIC_VECTOR ( 5 downto 0 );
-    S_AXI_HP0_WID : in STD_LOGIC_VECTOR ( 5 downto 0 );
-    S_AXI_HP0_WDATA : in STD_LOGIC_VECTOR ( 63 downto 0 );
-    S_AXI_HP0_WSTRB : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    IRQ_F2P : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    FCLK_CLK0 : out STD_LOGIC;
-    FCLK_CLK1 : out STD_LOGIC;
-    FCLK_CLK2 : out STD_LOGIC;
-    FCLK_RESET0_N : out STD_LOGIC;
-    MIO : inout STD_LOGIC_VECTOR ( 53 downto 0 );
-    DDR_CAS_n : inout STD_LOGIC;
-    DDR_CKE : inout STD_LOGIC;
-    DDR_Clk_n : inout STD_LOGIC;
-    DDR_Clk : inout STD_LOGIC;
-    DDR_CS_n : inout STD_LOGIC;
-    DDR_DRSTB : inout STD_LOGIC;
-    DDR_ODT : inout STD_LOGIC;
-    DDR_RAS_n : inout STD_LOGIC;
-    DDR_WEB : inout STD_LOGIC;
-    DDR_BankAddr : inout STD_LOGIC_VECTOR ( 2 downto 0 );
-    DDR_Addr : inout STD_LOGIC_VECTOR ( 14 downto 0 );
-    DDR_VRN : inout STD_LOGIC;
-    DDR_VRP : inout STD_LOGIC;
-    DDR_DM : inout STD_LOGIC_VECTOR ( 3 downto 0 );
-    DDR_DQ : inout STD_LOGIC_VECTOR ( 31 downto 0 );
-    DDR_DQS_n : inout STD_LOGIC_VECTOR ( 3 downto 0 );
-    DDR_DQS : inout STD_LOGIC_VECTOR ( 3 downto 0 );
-    PS_SRSTB : inout STD_LOGIC;
-    PS_CLK : inout STD_LOGIC;
-    PS_PORB : inout STD_LOGIC
-  );
-  end component hdmi_in_processing_system7_0_0;
   component hdmi_in_rst_processing_system7_0_100M_0 is
   port (
     slowest_sync_clk : in STD_LOGIC;
@@ -5102,6 +5100,7 @@ architecture STRUCTURE of hdmi_in is
     locked : out STD_LOGIC;
     overflow : out STD_LOGIC;
     underflow : out STD_LOGIC;
+    fifo_read_level : out STD_LOGIC_VECTOR ( 5 downto 0 );
     status : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   end component hdmi_in_v_axi4s_vid_out_0_0;
@@ -5219,9 +5218,8 @@ architecture STRUCTURE of hdmi_in is
   signal axi_gpio_0_GPIO1_TRI_I : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal axi_gpio_0_GPIO2_TRI_O : STD_LOGIC_VECTOR ( 0 to 0 );
   signal axi_gpio_0_GPIO_TRI_I : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal axi_gpio_led_GPIO_TRI_I : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal axi_gpio_btn_ip2intc_irpt : STD_LOGIC;
   signal axi_gpio_led_GPIO_TRI_O : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal axi_gpio_led_GPIO_TRI_T : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal axi_gpio_video_ip2intc_irpt : STD_LOGIC;
   signal axi_mem_intercon_M00_AXI_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal axi_mem_intercon_M00_AXI_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -5545,7 +5543,7 @@ architecture STRUCTURE of hdmi_in is
   signal v_vid_in_axi4s_0_vtiming_out_ACTIVE_VIDEO : STD_LOGIC;
   signal v_vid_in_axi4s_0_vtiming_out_HSYNC : STD_LOGIC;
   signal v_vid_in_axi4s_0_vtiming_out_VSYNC : STD_LOGIC;
-  signal xlconcat_0_dout : STD_LOGIC_VECTOR ( 4 downto 0 );
+  signal xlconcat_0_dout : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_axi_dynclk_0_LOCKED_O_UNCONNECTED : STD_LOGIC;
   signal NLW_axi_dynclk_0_PXL_CLK_5X_O_UNCONNECTED : STD_LOGIC;
@@ -5577,6 +5575,7 @@ architecture STRUCTURE of hdmi_in is
   signal NLW_v_axi4s_vid_out_0_vid_hblank_UNCONNECTED : STD_LOGIC;
   signal NLW_v_axi4s_vid_out_0_vid_vblank_UNCONNECTED : STD_LOGIC;
   signal NLW_v_axi4s_vid_out_0_vtg_ce_UNCONNECTED : STD_LOGIC;
+  signal NLW_v_axi4s_vid_out_0_fifo_read_level_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal NLW_v_axi4s_vid_out_0_status_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_v_tc_0_fsync_out_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_v_tc_1_intc_if_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -5629,9 +5628,7 @@ architecture STRUCTURE of hdmi_in is
   attribute X_INTERFACE_INFO of TMDS_data_p : signal is "digilentinc.com:interface:tmds:1.0 TMDS DATA_P";
   attribute X_INTERFACE_INFO of btns_4bits_tri_i : signal is "xilinx.com:interface:gpio:1.0 btns_4bits TRI_I";
   attribute X_INTERFACE_INFO of hdmi_hpd_tri_o : signal is "xilinx.com:interface:gpio:1.0 hdmi_hpd TRI_O";
-  attribute X_INTERFACE_INFO of leds_4bits_tri_i : signal is "xilinx.com:interface:gpio:1.0 leds_4bits TRI_I";
   attribute X_INTERFACE_INFO of leds_4bits_tri_o : signal is "xilinx.com:interface:gpio:1.0 leds_4bits TRI_O";
-  attribute X_INTERFACE_INFO of leds_4bits_tri_t : signal is "xilinx.com:interface:gpio:1.0 leds_4bits TRI_T";
   attribute X_INTERFACE_INFO of sws_4bits_tri_i : signal is "xilinx.com:interface:gpio:1.0 sws_4bits TRI_I";
 begin
   DDC_scl_o <= dvi2rgb_0_DDC_SCL_O;
@@ -5649,12 +5646,10 @@ begin
   TMDS_1_DATA_P(2 downto 0) <= TMDS_data_p(2 downto 0);
   axi_gpio_0_GPIO1_TRI_I(3 downto 0) <= sws_4bits_tri_i(3 downto 0);
   axi_gpio_0_GPIO_TRI_I(3 downto 0) <= btns_4bits_tri_i(3 downto 0);
-  axi_gpio_led_GPIO_TRI_I(3 downto 0) <= leds_4bits_tri_i(3 downto 0);
   dvi2rgb_0_DDC_SCL_I <= DDC_scl_i;
   dvi2rgb_0_DDC_SDA_I <= DDC_sda_i;
   hdmi_hpd_tri_o(0) <= axi_gpio_0_GPIO2_TRI_O(0);
   leds_4bits_tri_o(3 downto 0) <= axi_gpio_led_GPIO_TRI_O(3 downto 0);
-  leds_4bits_tri_t(3 downto 0) <= axi_gpio_led_GPIO_TRI_T(3 downto 0);
   processing_system7_0_IIC_0_SCL_I <= IIC_0_scl_i;
   processing_system7_0_IIC_0_SDA_I <= IIC_0_sda_i;
   vga_b(4 downto 0) <= rgb2vga_0_vga_pBlue(4 downto 0);
@@ -5693,6 +5688,7 @@ axi_dynclk_0: component hdmi_in_axi_dynclk_0_0
 axi_gpio_btn: component hdmi_in_axi_gpio_btn_0
      port map (
       gpio_io_i(3 downto 0) => axi_gpio_0_GPIO_TRI_I(3 downto 0),
+      ip2intc_irpt => axi_gpio_btn_ip2intc_irpt,
       s_axi_aclk => processing_system7_0_FCLK_CLK0,
       s_axi_araddr(8 downto 0) => processing_system7_0_axi_periph_M01_AXI_ARADDR(8 downto 0),
       s_axi_aresetn => rst_processing_system7_0_100M_peripheral_aresetn(0),
@@ -5715,9 +5711,7 @@ axi_gpio_btn: component hdmi_in_axi_gpio_btn_0
     );
 axi_gpio_led: component hdmi_in_axi_gpio_led_0
      port map (
-      gpio_io_i(3 downto 0) => axi_gpio_led_GPIO_TRI_I(3 downto 0),
       gpio_io_o(3 downto 0) => axi_gpio_led_GPIO_TRI_O(3 downto 0),
-      gpio_io_t(3 downto 0) => axi_gpio_led_GPIO_TRI_T(3 downto 0),
       s_axi_aclk => processing_system7_0_FCLK_CLK0,
       s_axi_araddr(8 downto 0) => processing_system7_0_axi_periph_M00_AXI_ARADDR(8 downto 0),
       s_axi_aresetn => rst_processing_system7_0_100M_peripheral_aresetn(0),
@@ -5998,7 +5992,7 @@ processing_system7_0: component hdmi_in_processing_system7_0_0
       I2C0_SDA_I => processing_system7_0_IIC_0_SDA_I,
       I2C0_SDA_O => processing_system7_0_IIC_0_SDA_O,
       I2C0_SDA_T => processing_system7_0_IIC_0_SDA_T,
-      IRQ_F2P(4 downto 0) => xlconcat_0_dout(4 downto 0),
+      IRQ_F2P(5 downto 0) => xlconcat_0_dout(5 downto 0),
       MIO(53 downto 0) => FIXED_IO_mio(53 downto 0),
       M_AXI_GP0_ACLK => processing_system7_0_FCLK_CLK0,
       M_AXI_GP0_ARADDR(31 downto 0) => processing_system7_0_M_AXI_GP0_ARADDR(31 downto 0),
@@ -6341,6 +6335,7 @@ v_axi4s_vid_out_0: component hdmi_in_v_axi4s_vid_out_0_0
       aclken => '1',
       aresetn => '1',
       fid => '0',
+      fifo_read_level(5 downto 0) => NLW_v_axi4s_vid_out_0_fifo_read_level_UNCONNECTED(5 downto 0),
       locked => NLW_v_axi4s_vid_out_0_locked_UNCONNECTED,
       overflow => NLW_v_axi4s_vid_out_0_overflow_UNCONNECTED,
       s_axis_video_tdata(23 downto 0) => axi_vdma_0_M_AXIS_MM2S_TDATA(23 downto 0),
@@ -6471,7 +6466,8 @@ xlconcat_0: component hdmi_in_xlconcat_0_0
       In2(0) => v_tc_0_irq,
       In3(0) => v_tc_1_irq,
       In4(0) => axi_gpio_video_ip2intc_irpt,
-      dout(4 downto 0) => xlconcat_0_dout(4 downto 0)
+      In5(0) => axi_gpio_btn_ip2intc_irpt,
+      dout(5 downto 0) => xlconcat_0_dout(5 downto 0)
     );
 xlconstant_0: component hdmi_in_xlconstant_0_0
      port map (

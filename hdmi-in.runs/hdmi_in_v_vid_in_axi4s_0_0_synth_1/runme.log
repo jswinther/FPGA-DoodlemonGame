@@ -3,24 +3,29 @@
     with args -log hdmi_in_v_vid_in_axi4s_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source hdmi_in_v_vid_in_axi4s_0_0.tcl
 
 
-****** Vivado v2018.2 (64-bit)
-  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
-  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
 source hdmi_in_v_vid_in_axi4s_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 271.957 ; gain = 48.559
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.ipdefs/repo_0_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+update_ip_catalog: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 302.984 ; gain = 24.684
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.cache/ip 
 Command: synth_design -top hdmi_in_v_vid_in_axi4s_0_0 -part xc7z010clg400-1 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 14300 
+INFO: Helper process launched with PID 11876 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 413.691 ; gain = 96.707
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 423.852 ; gain = 98.344
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'hdmi_in_v_vid_in_axi4s_0_0' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_vid_in_axi4s_0_0/synth/hdmi_in_v_vid_in_axi4s_0_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'v_vid_in_axi4s_v4_0_8' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/d987/hdl/v_vid_in_axi4s_v4_0_vl_rfs.v:1714]
+INFO: [Synth 8-6157] synthesizing module 'v_vid_in_axi4s_v4_0_9' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b2aa/hdl/v_vid_in_axi4s_v4_0_vl_rfs.v:1714]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_PIXELS_PER_CLOCK bound to: 1 - type: integer 
 	Parameter C_COMPONENTS_PER_PIXEL bound to: 3 - type: integer 
@@ -33,21 +38,21 @@ INFO: [Synth 8-6157] synthesizing module 'v_vid_in_axi4s_v4_0_8' [c:/Users/bruge
 	Parameter C_INCLUDE_PIXEL_DROP bound to: 0 - type: integer 
 	Parameter C_INCLUDE_PIXEL_REMAP_420 bound to: 0 - type: integer 
 	Parameter C_ADDR_WIDTH_PIXEL_REMAP_420 bound to: 10 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'v_vid_in_axi4s_v4_0_8_cdc_single' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/d987/hdl/v_vid_in_axi4s_v4_0_vl_rfs.v:207]
+INFO: [Synth 8-6157] synthesizing module 'v_vid_in_axi4s_v4_0_9_cdc_single' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b2aa/hdl/v_vid_in_axi4s_v4_0_vl_rfs.v:207]
 	Parameter C_SYNC_FF bound to: 4 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single' [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single' [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
 	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
 	Parameter INIT_SYNC_FF bound to: 0 - type: integer 
 	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
 	Parameter SRC_INPUT_REG bound to: 0 - type: integer 
 	Parameter VERSION bound to: 0 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:205]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single' (1#1) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
-INFO: [Synth 8-6155] done synthesizing module 'v_vid_in_axi4s_v4_0_8_cdc_single' (2#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/d987/hdl/v_vid_in_axi4s_v4_0_vl_rfs.v:207]
-INFO: [Synth 8-6157] synthesizing module 'v_vid_in_axi4s_v4_0_8_formatter' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/d987/hdl/v_vid_in_axi4s_v4_0_vl_rfs.v:520]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:205]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single' (1#1) [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
+INFO: [Synth 8-6155] done synthesizing module 'v_vid_in_axi4s_v4_0_9_cdc_single' (2#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b2aa/hdl/v_vid_in_axi4s_v4_0_vl_rfs.v:207]
+INFO: [Synth 8-6157] synthesizing module 'v_vid_in_axi4s_v4_0_9_formatter' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b2aa/hdl/v_vid_in_axi4s_v4_0_vl_rfs.v:520]
 	Parameter C_NATIVE_DATA_WIDTH bound to: 24 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'v_vid_in_axi4s_v4_0_8_formatter' (3#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/d987/hdl/v_vid_in_axi4s_v4_0_vl_rfs.v:520]
-INFO: [Synth 8-6157] synthesizing module 'v_vid_in_axi4s_v4_0_8_coupler' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/d987/hdl/v_vid_in_axi4s_v4_0_vl_rfs.v:293]
+INFO: [Synth 8-6155] done synthesizing module 'v_vid_in_axi4s_v4_0_9_formatter' (3#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b2aa/hdl/v_vid_in_axi4s_v4_0_vl_rfs.v:520]
+INFO: [Synth 8-6157] synthesizing module 'v_vid_in_axi4s_v4_0_9_coupler' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b2aa/hdl/v_vid_in_axi4s_v4_0_vl_rfs.v:293]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_HAS_ASYNC_CLK bound to: 1 - type: integer 
 	Parameter C_ADDR_WIDTH bound to: 12 - type: integer 
@@ -63,10 +68,10 @@ INFO: [Synth 8-6157] synthesizing module 'v_vid_in_axi4s_v4_0_8_coupler' [c:/Use
 	Parameter C_DATA_WIDTH bound to: 27 - type: integer 
 	Parameter C_DIFF_COMPONENT_WIDTH bound to: 0 - type: integer 
 	Parameter C_DIFF_AXIS_DATA_WIDTH bound to: 0 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'v_vid_in_axi4s_v4_0_8_fifo_async' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/d987/hdl/v_vid_in_axi4s_v4_0_vl_rfs.v:59]
+INFO: [Synth 8-6157] synthesizing module 'v_vid_in_axi4s_v4_0_9_fifo_async' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b2aa/hdl/v_vid_in_axi4s_v4_0_vl_rfs.v:59]
 	Parameter C_ADDR_WIDTH bound to: 12 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 27 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_async' [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1937]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_async' [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2016]
 	Parameter FIFO_MEMORY_TYPE bound to: auto - type: string 
 	Parameter ECC_MODE bound to: no_ecc - type: string 
 	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
@@ -84,64 +89,84 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_async' [C:/Xilinx/Vivado/2018
 	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
 	Parameter CDC_SYNC_STAGES bound to: 4 - type: integer 
 	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+	Parameter EN_ADV_FEATURE_ASYNC bound to: 16'b0000011100000111 
 	Parameter P_FIFO_MEMORY_TYPE bound to: 0 - type: integer 
 	Parameter P_COMMON_CLOCK bound to: 0 - type: integer 
 	Parameter P_ECC_MODE bound to: 0 - type: integer 
 	Parameter P_READ_MODE bound to: 1 - type: integer 
 	Parameter P_WAKEUP_TIME bound to: 2 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base' [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:124]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:124]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:124]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:124]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base' [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:124]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:124]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:124]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:124]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:124]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:124]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
 	Parameter COMMON_CLOCK bound to: 0 - type: integer 
 	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
 	Parameter FIFO_MEMORY_TYPE bound to: 0 - type: integer 
@@ -162,12 +187,18 @@ WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Viv
 	Parameter REMOVE_WR_RD_PROT_LOGIC bound to: 0 - type: integer 
 	Parameter WAKEUP_TIME bound to: 0 - type: integer 
 	Parameter VERSION bound to: 0 - type: integer 
+	Parameter invalid bound to: 0 - type: integer 
+	Parameter stage1_valid bound to: 2 - type: integer 
+	Parameter stage2_valid bound to: 1 - type: integer 
+	Parameter both_stages_valid bound to: 3 - type: integer 
 	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
 	Parameter FIFO_MEM_TYPE bound to: 0 - type: integer 
 	Parameter RD_MODE bound to: 1 - type: integer 
 	Parameter ENABLE_ECC bound to: 0 - type: integer 
 	Parameter FIFO_READ_DEPTH bound to: 4096 - type: integer 
 	Parameter FIFO_SIZE bound to: 110592 - type: integer 
+	Parameter WR_WIDTH_LOG bound to: 5 - type: integer 
+	Parameter WR_DEPTH_LOG bound to: 12 - type: integer 
 	Parameter WR_PNTR_WIDTH bound to: 12 - type: integer 
 	Parameter RD_PNTR_WIDTH bound to: 12 - type: integer 
 	Parameter FULL_RST_VAL bound to: 1'b1 
@@ -181,6 +212,7 @@ WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Viv
 	Parameter WR_DC_WIDTH_EXT bound to: 13 - type: integer 
 	Parameter RD_DC_WIDTH_EXT bound to: 13 - type: integer 
 	Parameter RD_LATENCY bound to: 2 - type: integer 
+	Parameter WIDTH_RATIO bound to: 1 - type: integer 
 	Parameter EN_ADV_FEATURE bound to: 16'b0000011100000111 
 	Parameter EN_OF bound to: 1'b1 
 	Parameter EN_PF bound to: 1'b1 
@@ -193,20 +225,20 @@ WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Viv
 	Parameter EN_RDC bound to: 1'b1 
 	Parameter EN_AE bound to: 1'b0 
 	Parameter EN_DVLD bound to: 1'b0 
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:124]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:124]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 	Parameter MEMORY_TYPE bound to: 1 - type: integer 
 	Parameter MEMORY_SIZE bound to: 110592 - type: integer 
 	Parameter MEMORY_PRIMITIVE bound to: 0 - type: integer 
@@ -214,7 +246,7 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [C:/Xilinx/Vivado/201
 	Parameter ECC_MODE bound to: 0 - type: integer 
 	Parameter MEMORY_INIT_FILE bound to: none - type: string 
 	Parameter MEMORY_INIT_PARAM bound to: (null) - type: string 
-	Parameter USE_MEM_INIT bound to: 1 - type: integer 
+	Parameter USE_MEM_INIT bound to: 0 - type: integer 
 	Parameter MEMORY_OPTIMIZATION bound to: true - type: string 
 	Parameter WAKEUP_TIME bound to: 0 - type: integer 
 	Parameter AUTO_SLEEP_TIME bound to: 0 - type: integer 
@@ -228,6 +260,7 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [C:/Xilinx/Vivado/201
 	Parameter READ_RESET_VALUE_A bound to: 0 - type: string 
 	Parameter READ_LATENCY_A bound to: 2 - type: integer 
 	Parameter WRITE_MODE_A bound to: 2 - type: integer 
+	Parameter RST_MODE_A bound to: SYNC - type: string 
 	Parameter WRITE_DATA_WIDTH_B bound to: 27 - type: integer 
 	Parameter READ_DATA_WIDTH_B bound to: 27 - type: integer 
 	Parameter BYTE_WRITE_WIDTH_B bound to: 27 - type: integer 
@@ -235,6 +268,7 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [C:/Xilinx/Vivado/201
 	Parameter READ_RESET_VALUE_B bound to: 0 - type: string 
 	Parameter READ_LATENCY_B bound to: 2 - type: integer 
 	Parameter WRITE_MODE_B bound to: 2 - type: integer 
+	Parameter RST_MODE_B bound to: SYNC - type: string 
 	Parameter P_MEMORY_PRIMITIVE bound to: auto - type: string 
 	Parameter P_MIN_WIDTH_DATA_A bound to: 27 - type: integer 
 	Parameter P_MIN_WIDTH_DATA_B bound to: 27 - type: integer 
@@ -266,13 +300,11 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [C:/Xilinx/Vivado/201
 	Parameter MAX_NUM_CHAR bound to: 0 - type: integer 
 	Parameter P_MIN_WIDTH_DATA_SHFT bound to: 27 - type: integer 
 	Parameter P_MIN_WIDTH_DATA_LDW bound to: 4 - type: integer 
-INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:467]
-INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-2] MEMORY_INIT_FILE (none), MEMORY_INIT_PARAM together specify no memory initialization. Initial memory contents will be all 0's.   [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:469]
-WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:2588]
-INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:518]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:2935]
 INFO: [Synth 8-5772] Detected attribute (* ram_ecc = "no_ecc" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (4#1) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray' [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (4#1) [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray' [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
 	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
 	Parameter INIT_SYNC_FF bound to: 1 - type: integer 
 	Parameter REG_OUTPUT bound to: 0 - type: integer 
@@ -280,13 +312,13 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray' [C:/Xilinx/Vivado/2018.2
 	Parameter SIM_LOSSLESS_GRAY_CHK bound to: 0 - type: integer 
 	Parameter VERSION bound to: 0 - type: integer 
 	Parameter WIDTH bound to: 12 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:358]
-WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray' (5#1) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
-INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec' [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1733]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:358]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray' (5#1) [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec' [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1759]
 	Parameter REG_WIDTH bound to: 12 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec' (6#1) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1733]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized0' [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec' (6#1) [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1759]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized0' [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
 	Parameter DEST_SYNC_FF bound to: 6 - type: integer 
 	Parameter INIT_SYNC_FF bound to: 1 - type: integer 
 	Parameter REG_OUTPUT bound to: 0 - type: integer 
@@ -294,12 +326,12 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized0' [C:/Xili
 	Parameter SIM_LOSSLESS_GRAY_CHK bound to: 0 - type: integer 
 	Parameter VERSION bound to: 0 - type: integer 
 	Parameter WIDTH bound to: 13 - type: integer 
-WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized0' (6#1) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
-INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec__parameterized0' [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1733]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized0' (6#1) [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec__parameterized0' [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1759]
 	Parameter REG_WIDTH bound to: 13 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec__parameterized0' (6#1) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1733]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized1' [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec__parameterized0' (6#1) [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1759]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized1' [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
 	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
 	Parameter INIT_SYNC_FF bound to: 1 - type: integer 
 	Parameter REG_OUTPUT bound to: 0 - type: integer 
@@ -307,96 +339,77 @@ INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized1' [C:/Xili
 	Parameter SIM_LOSSLESS_GRAY_CHK bound to: 0 - type: integer 
 	Parameter VERSION bound to: 0 - type: integer 
 	Parameter WIDTH bound to: 13 - type: integer 
-WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized1' (6#1) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
-INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_bit' [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1755]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized1' (6#1) [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:284]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_bit' [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1781]
 	Parameter RST_VALUE bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_bit' (7#1) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1755]
-INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1161]
-INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1207]
-INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1218]
-INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn' [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1707]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_bit' (7#1) [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1781]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1187]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1233]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1244]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn' [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1733]
 	Parameter COUNTER_WIDTH bound to: 2 - type: integer 
 	Parameter RESET_VALUE bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn' (8#1) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1707]
-INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_rst' [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1478]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn' (8#1) [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1733]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_rst' [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1504]
 	Parameter COMMON_CLOCK bound to: 0 - type: integer 
 	Parameter CDC_DEST_SYNC_FF bound to: 4 - type: integer 
 	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
-INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1638]
-INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1663]
-INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_sync_rst' [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1055]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1664]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1689]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_sync_rst' [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1055]
 	Parameter DEST_SYNC_FF bound to: 4 - type: integer 
 	Parameter INIT bound to: 32'sb00000000000000000000000000000000 
 	Parameter INIT_SYNC_FF bound to: 1 - type: integer 
 	Parameter SIM_ASSERT_CHK bound to: 0 - type: integer 
 	Parameter VERSION bound to: 0 - type: integer 
 	Parameter DEF_VAL bound to: 1'b0 
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1107]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_sync_rst' (9#1) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1055]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_rst' (10#1) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1478]
-INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized0' [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1707]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1107]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_sync_rst' (9#1) [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1055]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_rst' (10#1) [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1504]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized0' [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1733]
 	Parameter COUNTER_WIDTH bound to: 13 - type: integer 
 	Parameter RESET_VALUE bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized0' (10#1) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1707]
-INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized1' [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1707]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized0' (10#1) [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1733]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized1' [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1733]
 	Parameter COUNTER_WIDTH bound to: 12 - type: integer 
 	Parameter RESET_VALUE bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized1' (10#1) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1707]
-INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized2' [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1707]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized1' (10#1) [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1733]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized2' [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1733]
 	Parameter COUNTER_WIDTH bound to: 12 - type: integer 
 	Parameter RESET_VALUE bound to: 2 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized2' (10#1) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1707]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:124]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:124]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:124]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
-WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized2' (10#1) [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1733]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:124]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:124]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
+WARNING: [Synth 8-6104] Input port 'value' has an internal driver [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:126]
 INFO: [Common 17-14] Message 'Synth 8-6104' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-4471] merging register 'gen_fwft.empty_fwft_fb_reg' into 'gen_fwft.empty_fwft_i_reg' [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1266]
-WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1266]
-INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base' (11#1) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
+INFO: [Synth 8-4471] merging register 'gen_fwft.empty_fwft_fb_reg' into 'gen_fwft.empty_fwft_i_reg' [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1292]
+WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1292]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base' (11#1) [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_async' (12#1) [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1937]
-WARNING: [Synth 8-350] instance 'XPM_FIFO_ASYNC_INST' of module 'xpm_fifo_async' requires 26 connections, but only 22 given [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/d987/hdl/v_vid_in_axi4s_v4_0_vl_rfs.v:108]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_async' (12#1) [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2016]
+WARNING: [Synth 8-350] instance 'XPM_FIFO_ASYNC_INST' of module 'xpm_fifo_async' requires 26 connections, but only 22 given [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b2aa/hdl/v_vid_in_axi4s_v4_0_vl_rfs.v:108]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-6155] done synthesizing module 'v_vid_in_axi4s_v4_0_8_fifo_async' (13#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/d987/hdl/v_vid_in_axi4s_v4_0_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'v_vid_in_axi4s_v4_0_9_fifo_async' (13#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b2aa/hdl/v_vid_in_axi4s_v4_0_vl_rfs.v:59]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-6155] done synthesizing module 'v_vid_in_axi4s_v4_0_8_coupler' (14#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/d987/hdl/v_vid_in_axi4s_v4_0_vl_rfs.v:293]
+INFO: [Synth 8-6155] done synthesizing module 'v_vid_in_axi4s_v4_0_9_coupler' (14#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b2aa/hdl/v_vid_in_axi4s_v4_0_vl_rfs.v:293]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-WARNING: [Synth 8-3848] Net fifo_overflow_from_remap in module/entity v_vid_in_axi4s_v4_0_8 does not have driver. [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/d987/hdl/v_vid_in_axi4s_v4_0_vl_rfs.v:1820]
-INFO: [Synth 8-6155] done synthesizing module 'v_vid_in_axi4s_v4_0_8' (15#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/d987/hdl/v_vid_in_axi4s_v4_0_vl_rfs.v:1714]
+WARNING: [Synth 8-3848] Net fifo_overflow_from_remap in module/entity v_vid_in_axi4s_v4_0_9 does not have driver. [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b2aa/hdl/v_vid_in_axi4s_v4_0_vl_rfs.v:1820]
+INFO: [Synth 8-6155] done synthesizing module 'v_vid_in_axi4s_v4_0_9' (15#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b2aa/hdl/v_vid_in_axi4s_v4_0_vl_rfs.v:1714]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-6155] done synthesizing module 'hdmi_in_v_vid_in_axi4s_0_0' (16#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_vid_in_axi4s_0_0/synth/hdmi_in_v_vid_in_axi4s_0_0.v:57]
 WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port sleep
@@ -433,12 +446,12 @@ WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[1]
 WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[0]
 WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port injectsbiterrb
 WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port injectdbiterrb
-WARNING: [Synth 8-3331] design v_vid_in_axi4s_v4_0_8_coupler has unconnected port ARESETN
+WARNING: [Synth 8-3331] design v_vid_in_axi4s_v4_0_9_coupler has unconnected port ARESETN
 WARNING: [Synth 8-3331] design xpm_cdc_single has unconnected port src_clk
-WARNING: [Synth 8-3331] design v_vid_in_axi4s_v4_0_8 has unconnected port drop_en
-WARNING: [Synth 8-3331] design v_vid_in_axi4s_v4_0_8 has unconnected port remap_420_en
+WARNING: [Synth 8-3331] design v_vid_in_axi4s_v4_0_9 has unconnected port drop_en
+WARNING: [Synth 8-3331] design v_vid_in_axi4s_v4_0_9 has unconnected port remap_420_en
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:18 . Memory (MB): peak = 468.441 ; gain = 151.457
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 480.879 ; gain = 155.371
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -447,15 +460,15 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-INFO: [Synth 8-3295] tying undriven pin CDC_SINGLE_REMAP_OVERFLOW_INST:DAT_IN to constant 0 [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/d987/hdl/v_vid_in_axi4s_v4_0_vl_rfs.v:1946]
+INFO: [Synth 8-3295] tying undriven pin CDC_SINGLE_REMAP_OVERFLOW_INST:DAT_IN to constant 0 [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b2aa/hdl/v_vid_in_axi4s_v4_0_vl_rfs.v:1946]
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 468.441 ; gain = 151.457
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 480.879 ; gain = 155.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 468.441 ; gain = 151.457
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 480.879 ; gain = 155.371
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -468,45 +481,48 @@ Parsing XDC File [C:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokum
 Finished Parsing XDC File [C:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_v_vid_in_axi4s_0_0_synth_1/dont_touch.xdc]
 Parsing XDC File [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_vid_in_axi4s_0_0/hdmi_in_v_vid_in_axi4s_0_0_clocks.xdc] for cell 'inst'
 Finished Parsing XDC File [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_vid_in_axi4s_0_0/hdmi_in_v_vid_in_axi4s_0_0_clocks.xdc] for cell 'inst'
-Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst'
-Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst'
-Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst'
-Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst'
-Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst'
-Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst'
-Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst'
-Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/hdmi_in_v_vid_in_axi4s_0_0_propImpl.xdc].
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/hdmi_in_v_vid_in_axi4s_0_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/hdmi_in_v_vid_in_axi4s_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/CDC_SINGLE_REMAP_OVERFLOW_INST/xpm_cdc_single_inst'
-Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/CDC_SINGLE_REMAP_OVERFLOW_INST/xpm_cdc_single_inst'
-Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/CDC_SINGLE_RESET_PULSE_INST/xpm_cdc_single_inst'
-Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/CDC_SINGLE_RESET_PULSE_INST/xpm_cdc_single_inst'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/hdmi_in_v_vid_in_axi4s_0_0_propImpl.xdc].
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/CDC_SINGLE_REMAP_OVERFLOW_INST/xpm_cdc_single_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/CDC_SINGLE_REMAP_OVERFLOW_INST/xpm_cdc_single_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/CDC_SINGLE_RESET_PULSE_INST/xpm_cdc_single_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'inst/CDC_SINGLE_RESET_PULSE_INST/xpm_cdc_single_inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/hdmi_in_v_vid_in_axi4s_0_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/hdmi_in_v_vid_in_axi4s_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rrst_wr_inst'
-Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rrst_wr_inst'
-Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wrst_rd_inst'
-Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wrst_rd_inst'
-Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst'
-Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/hdmi_in_v_vid_in_axi4s_0_0_propImpl.xdc].
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rrst_wr_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rrst_wr_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wrst_rd_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wrst_rd_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/hdmi_in_v_vid_in_axi4s_0_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/hdmi_in_v_vid_in_axi4s_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 824.434 ; gain = 0.000
 Completed Processing XDC Constraints
 
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 824.434 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.164 . Memory (MB): peak = 812.852 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 824.434 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.088 . Memory (MB): peak = 824.434 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:39 ; elapsed = 00:01:17 . Memory (MB): peak = 812.852 ; gain = 495.867
+Finished Constraint Validation : Time (s): cpu = 00:00:32 ; elapsed = 00:00:45 . Memory (MB): peak = 824.434 ; gain = 498.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:39 ; elapsed = 00:01:17 . Memory (MB): peak = 812.852 ; gain = 495.867
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:32 ; elapsed = 00:00:45 . Memory (MB): peak = 824.434 ; gain = 498.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -520,9 +536,9 @@ Applied set_property DONT_TOUCH = true for inst/CDC_SINGLE_RESET_PULSE_INST/xpm_
 Applied set_property DONT_TOUCH = true for inst/CDC_SINGLE_REMAP_OVERFLOW_INST/xpm_cdc_single_inst. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst/COUPLER_INST/\generate_async_fifo.FIFO_INST /XPM_FIFO_ASYNC_INST/\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.rrst_wr_inst . (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst/COUPLER_INST/\generate_async_fifo.FIFO_INST /XPM_FIFO_ASYNC_INST/\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.wrst_rd_inst . (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for inst/COUPLER_INST/\generate_async_fifo.FIFO_INST /XPM_FIFO_ASYNC_INST/\gnuram_async_fifo.xpm_fifo_base_inst . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for inst/COUPLER_INST/\generate_async_fifo.FIFO_INST /XPM_FIFO_ASYNC_INST. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:01:17 . Memory (MB): peak = 812.852 ; gain = 495.867
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:46 . Memory (MB): peak = 824.434 ; gain = 498.926
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst'
 INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst'
@@ -535,13 +551,13 @@ INFO: [Synth 8-5544] ROM "gen_rst_ic.next_wrst_state" won't be mapped to Block R
 INFO: [Synth 8-5544] ROM "gen_rst_ic.next_wrst_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "gen_rst_ic.next_rrst_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "gen_rst_ic.next_rrst_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:827]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Xilinx/Vivado/2018.3/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:853]
 INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base'
 INFO: [Synth 8-5544] ROM "gen_fwft.leaving_empty_fwft" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "gen_fwft.next_fwft_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "gen_fwft.next_fwft_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "gen_fwft.next_fwft_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "gen_fwft.next_fwft_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_fwft_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_fwft_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_fwft_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_fwft_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -571,7 +587,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_rrst_state
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:40 ; elapsed = 00:01:22 . Memory (MB): peak = 812.852 ; gain = 495.867
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:33 ; elapsed = 00:00:48 . Memory (MB): peak = 824.434 ; gain = 498.926
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -624,7 +640,7 @@ Module xpm_cdc_single
 Detailed RTL Component Info : 
 +---Registers : 
 	                4 Bit    Registers := 1     
-Module v_vid_in_axi4s_v4_0_8_formatter 
+Module v_vid_in_axi4s_v4_0_9_formatter 
 Detailed RTL Component Info : 
 +---Registers : 
 	               24 Bit    Registers := 3     
@@ -724,7 +740,7 @@ Detailed RTL Component Info :
 	   4 Input      2 Bit        Muxes := 7     
 	   4 Input      1 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 4     
-Module v_vid_in_axi4s_v4_0_8 
+Module v_vid_in_axi4s_v4_0_9 
 Detailed RTL Component Info : 
 +---Registers : 
 	               16 Bit    Registers := 1     
@@ -745,10 +761,6 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-6014] Unused sequential element gen_fwft.next_state_d1_inst/d_out_reg was removed.  [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1766]
-WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_d1_inst/d_out_reg was removed.  [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1766]
-WARNING: [Synth 8-6014] Unused sequential element gen_fwft.ge_fwft_d1_inst/d_out_reg was removed.  [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1766]
-WARNING: [Synth 8-6014] Unused sequential element rst_d2_inst/d_out_reg was removed.  [C:/Xilinx/Vivado/2018.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1766]
 WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port rsta
 WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port regcea
 WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port injectsbiterra
@@ -783,15 +795,11 @@ WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port dinb[0]
 WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port injectsbiterrb
 WARNING: [Synth 8-3331] design xpm_memory_base has unconnected port injectdbiterrb
 WARNING: [Synth 8-3331] design xpm_cdc_single has unconnected port src_clk
-WARNING: [Synth 8-3331] design v_vid_in_axi4s_v4_0_8 has unconnected port aresetn
-WARNING: [Synth 8-3331] design v_vid_in_axi4s_v4_0_8 has unconnected port drop_en
-WARNING: [Synth 8-3331] design v_vid_in_axi4s_v4_0_8 has unconnected port remap_420_en
-WARNING: [Synth 8-3332] Sequential element (gen_pf_ic_rc.gpf_ic.diff_pntr_pf_q_reg[3]) is unused and will be removed from module xpm_fifo_base.
-WARNING: [Synth 8-3332] Sequential element (gen_pf_ic_rc.gpf_ic.diff_pntr_pf_q_reg[2]) is unused and will be removed from module xpm_fifo_base.
-WARNING: [Synth 8-3332] Sequential element (gen_pf_ic_rc.gpf_ic.diff_pntr_pf_q_reg[1]) is unused and will be removed from module xpm_fifo_base.
-WARNING: [Synth 8-3332] Sequential element (gen_pf_ic_rc.gpf_ic.diff_pntr_pf_q_reg[0]) is unused and will be removed from module xpm_fifo_base.
+WARNING: [Synth 8-3331] design v_vid_in_axi4s_v4_0_9 has unconnected port aresetn
+WARNING: [Synth 8-3331] design v_vid_in_axi4s_v4_0_9 has unconnected port drop_en
+WARNING: [Synth 8-3331] design v_vid_in_axi4s_v4_0_9 has unconnected port remap_420_en
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:01:28 . Memory (MB): peak = 812.852 ; gain = 495.867
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:52 . Memory (MB): peak = 824.434 ; gain = 498.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -804,7 +812,7 @@ Block RAM: Preliminary Mapping  Report (see note below)
 |xpm_memory_base: | gen_wr_a.gen_word_narrow.mem_reg | 4 K x 27(NO_CHANGE)    | W |   | 4 K x 27(WRITE_FIRST)  |   | R | Port A and B     | 0      | 3      | 
 +-----------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
-Note: The tale above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
@@ -818,13 +826,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:11 ; elapsed = 00:02:14 . Memory (MB): peak = 812.852 ; gain = 495.867
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:58 ; elapsed = 00:01:16 . Memory (MB): peak = 824.434 ; gain = 498.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:11 ; elapsed = 00:02:14 . Memory (MB): peak = 812.852 ; gain = 495.867
+Finished Timing Optimization : Time (s): cpu = 00:00:58 ; elapsed = 00:01:16 . Memory (MB): peak = 824.434 ; gain = 498.926
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -850,7 +858,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:12 ; elapsed = 00:02:16 . Memory (MB): peak = 815.734 ; gain = 498.750
+Finished Technology Mapping : Time (s): cpu = 00:00:59 ; elapsed = 00:01:18 . Memory (MB): peak = 825.527 ; gain = 500.020
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -875,7 +883,7 @@ Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-3295] tying undriven pin CDC_SINGLE_REMAP_OVERFLOW_INST/xpm_cdc_single_inst:src_in to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:15 ; elapsed = 00:02:20 . Memory (MB): peak = 815.734 ; gain = 498.750
+Finished IO Insertion : Time (s): cpu = 00:01:02 ; elapsed = 00:01:22 . Memory (MB): peak = 825.527 ; gain = 500.020
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -888,7 +896,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:16 ; elapsed = 00:02:20 . Memory (MB): peak = 815.734 ; gain = 498.750
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:02 ; elapsed = 00:01:22 . Memory (MB): peak = 825.527 ; gain = 500.020
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -900,25 +908,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:16 ; elapsed = 00:02:21 . Memory (MB): peak = 815.734 ; gain = 498.750
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:02 ; elapsed = 00:01:22 . Memory (MB): peak = 825.527 ; gain = 500.020
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:16 ; elapsed = 00:02:21 . Memory (MB): peak = 815.734 ; gain = 498.750
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:02 ; elapsed = 00:01:22 . Memory (MB): peak = 825.527 ; gain = 500.020
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:16 ; elapsed = 00:02:21 . Memory (MB): peak = 815.734 ; gain = 498.750
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:02 ; elapsed = 00:01:22 . Memory (MB): peak = 825.527 ; gain = 500.020
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:16 ; elapsed = 00:02:21 . Memory (MB): peak = 815.734 ; gain = 498.750
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:02 ; elapsed = 00:01:22 . Memory (MB): peak = 825.527 ; gain = 500.020
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -939,10 +947,10 @@ Report Cell Usage:
 |3     |LUT2       |   112|
 |4     |LUT3       |    23|
 |5     |LUT4       |    31|
-|6     |LUT5       |    24|
+|6     |LUT5       |    23|
 |7     |LUT6       |    51|
 |8     |RAMB36E1_1 |     3|
-|9     |FDRE       |   574|
+|9     |FDRE       |   573|
 |10    |FDSE       |     8|
 +------+-----------+------+
 
@@ -950,22 +958,22 @@ Report Instance Areas:
 +------+-------------------------------------------------+--------------------------------------------+------+
 |      |Instance                                         |Module                                      |Cells |
 +------+-------------------------------------------------+--------------------------------------------+------+
-|1     |top                                              |                                            |   877|
-|2     |  inst                                           |v_vid_in_axi4s_v4_0_8                       |   877|
-|3     |    CDC_SINGLE_REMAP_OVERFLOW_INST               |v_vid_in_axi4s_v4_0_8_cdc_single            |     4|
+|1     |top                                              |                                            |   875|
+|2     |  inst                                           |v_vid_in_axi4s_v4_0_9                       |   875|
+|3     |    CDC_SINGLE_REMAP_OVERFLOW_INST               |v_vid_in_axi4s_v4_0_9_cdc_single            |     4|
 |4     |      xpm_cdc_single_inst                        |xpm_cdc_single                              |     4|
-|5     |    CDC_SINGLE_RESET_PULSE_INST                  |v_vid_in_axi4s_v4_0_8_cdc_single__xdcDup__1 |     4|
+|5     |    CDC_SINGLE_RESET_PULSE_INST                  |v_vid_in_axi4s_v4_0_9_cdc_single__xdcDup__1 |     4|
 |6     |      xpm_cdc_single_inst                        |xpm_cdc_single__2                           |     4|
-|7     |    COUPLER_INST                                 |v_vid_in_axi4s_v4_0_8_coupler               |   756|
-|8     |      \generate_async_fifo.FIFO_INST             |v_vid_in_axi4s_v4_0_8_fifo_async            |   755|
-|9     |        XPM_FIFO_ASYNC_INST                      |xpm_fifo_async                              |   755|
-|10    |          \gnuram_async_fifo.xpm_fifo_base_inst  |xpm_fifo_base                               |   735|
+|7     |    COUPLER_INST                                 |v_vid_in_axi4s_v4_0_9_coupler               |   754|
+|8     |      \generate_async_fifo.FIFO_INST             |v_vid_in_axi4s_v4_0_9_fifo_async            |   753|
+|9     |        XPM_FIFO_ASYNC_INST                      |xpm_fifo_async                              |   733|
+|10    |          \gnuram_async_fifo.xpm_fifo_base_inst  |xpm_fifo_base                               |   733|
 |11    |            \gen_sdpram.xpm_memory_base_inst     |xpm_memory_base                             |     3|
-|12    |            \gen_cdc_pntr.wr_pntr_cdc_inst       |xpm_cdc_gray__1                             |    82|
+|12    |            \gen_cdc_pntr.wr_pntr_cdc_inst       |xpm_cdc_gray__2                             |    82|
 |13    |            \gen_cdc_pntr.wr_pntr_cdc_dc_inst    |xpm_cdc_gray__parameterized0                |   115|
 |14    |            \gen_cdc_pntr.rd_pntr_cdc_inst       |xpm_cdc_gray                                |    82|
 |15    |            \gen_cdc_pntr.rd_pntr_cdc_dc_inst    |xpm_cdc_gray__parameterized1                |    89|
-|16    |            \gen_cdc_pntr.rpw_gray_reg           |xpm_fifo_reg_vec                            |    24|
+|16    |            \gen_cdc_pntr.rpw_gray_reg           |xpm_fifo_reg_vec                            |    23|
 |17    |            \gen_cdc_pntr.rpw_gray_reg_dc        |xpm_fifo_reg_vec__parameterized0            |    13|
 |18    |            \gen_cdc_pntr.wpr_gray_reg           |xpm_fifo_reg_vec_0                          |    26|
 |19    |            \gen_cdc_pntr.wpr_gray_reg_dc        |xpm_fifo_reg_vec__parameterized0_1          |    27|
@@ -977,34 +985,38 @@ Report Instance Areas:
 |25    |            wrpp1_inst                           |xpm_counter_updn__parameterized1_3          |    30|
 |26    |            wrpp2_inst                           |xpm_counter_updn__parameterized2            |    15|
 |27    |            xpm_fifo_rst_inst                    |xpm_fifo_rst                                |    38|
-|28    |              \gen_rst_ic.wrst_rd_inst           |xpm_cdc_sync_rst__1                         |     4|
+|28    |              \gen_rst_ic.wrst_rd_inst           |xpm_cdc_sync_rst__2                         |     4|
 |29    |              \gen_rst_ic.rrst_wr_inst           |xpm_cdc_sync_rst                            |     4|
-|30    |    FORMATTER_INST                               |v_vid_in_axi4s_v4_0_8_formatter             |    93|
+|30    |    FORMATTER_INST                               |v_vid_in_axi4s_v4_0_9_formatter             |    93|
 +------+-------------------------------------------------+--------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:16 ; elapsed = 00:02:21 . Memory (MB): peak = 815.734 ; gain = 498.750
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:02 ; elapsed = 00:01:22 . Memory (MB): peak = 825.527 ; gain = 500.020
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 45 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:01:37 . Memory (MB): peak = 815.734 ; gain = 154.340
-Synthesis Optimization Complete : Time (s): cpu = 00:01:17 ; elapsed = 00:02:22 . Memory (MB): peak = 815.734 ; gain = 498.750
+Synthesis finished with 0 errors, 0 critical warnings and 37 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:01:00 . Memory (MB): peak = 825.527 ; gain = 156.465
+Synthesis Optimization Complete : Time (s): cpu = 00:01:02 ; elapsed = 00:01:23 . Memory (MB): peak = 825.527 ; gain = 500.020
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 42 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 837.520 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-101 Infos, 190 Warnings, 0 Critical Warnings and 0 Errors encountered.
+102 Infos, 183 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:22 ; elapsed = 00:02:31 . Memory (MB): peak = 824.816 ; gain = 518.035
-WARNING: [Constraints 18-5210] No constraint will be written out.
+synth_design: Time (s): cpu = 00:01:06 ; elapsed = 00:01:29 . Memory (MB): peak = 837.574 ; gain = 523.535
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 837.574 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_v_vid_in_axi4s_0_0_synth_1/hdmi_in_v_vid_in_axi4s_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_vid_in_axi4s_0_0/hdmi_in_v_vid_in_axi4s_0_0.xci
+WARNING: [Coretcl 2-1488] Problem adding IP cache entry: Directory already exists: c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.cache/ip/2018.3/3521610900dd5d60
 INFO: [Coretcl 2-1174] Renamed 29 cell refs.
-WARNING: [Constraints 18-5210] No constraint will be written out.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 837.574 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_v_vid_in_axi4s_0_0_synth_1/hdmi_in_v_vid_in_axi4s_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file hdmi_in_v_vid_in_axi4s_0_0_utilization_synth.rpt -pb hdmi_in_v_vid_in_axi4s_0_0_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.084 . Memory (MB): peak = 824.816 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Jan  9 09:22:34 2019...
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 10 11:19:13 2019...

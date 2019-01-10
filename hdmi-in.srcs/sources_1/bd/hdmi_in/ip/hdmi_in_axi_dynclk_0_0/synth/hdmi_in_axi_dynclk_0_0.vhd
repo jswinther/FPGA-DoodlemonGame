@@ -121,7 +121,7 @@ ARCHITECTURE hdmi_in_axi_dynclk_0_0_arch OF hdmi_in_axi_dynclk_0_0 IS
     );
   END COMPONENT axi_dynclk;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF hdmi_in_axi_dynclk_0_0_arch: ARCHITECTURE IS "axi_dynclk,Vivado 2018.2";
+  ATTRIBUTE X_CORE_INFO OF hdmi_in_axi_dynclk_0_0_arch: ARCHITECTURE IS "axi_dynclk,Vivado 2018.3";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF hdmi_in_axi_dynclk_0_0_arch : ARCHITECTURE IS "hdmi_in_axi_dynclk_0_0,axi_dynclk,{}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;

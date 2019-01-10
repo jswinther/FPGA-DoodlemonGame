@@ -53,11 +53,11 @@
 #ifndef _hdmi_in_xlconstant_0_0_H_
 #define _hdmi_in_xlconstant_0_0_H_
 
-#include "xlconstant_v1_1.h"
+#include "xlconstant_v1_1_5.h"
 #include "systemc.h"
 class hdmi_in_xlconstant_0_0 : public sc_module {
   public:
-  xlconstant_v1_1_5<1,0> mod;
+xlconstant_v1_1_5<1,0> mod;
   sc_out< sc_bv<1> > dout;
 hdmi_in_xlconstant_0_0 (sc_core::sc_module_name name) :sc_module(name), mod("mod") {
     mod.dout(dout);

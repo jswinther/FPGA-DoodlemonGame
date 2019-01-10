@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-// Date        : Wed Jan  9 09:29:38 2019
+// Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+// Date        : Thu Jan 10 11:22:40 2019
 // Host        : NicoLenovo running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub {c:/Users/bruger/OneDrive - Danmarks Tekniske
 //               Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_s01_regslice_0/hdmi_in_s01_regslice_0_stub.v}
@@ -13,7 +13,7 @@
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
-(* X_CORE_INFO = "axi_register_slice_v2_1_17_axi_register_slice,Vivado 2018.2" *)
+(* X_CORE_INFO = "axi_register_slice_v2_1_18_axi_register_slice,Vivado 2018.3" *)
 module hdmi_in_s01_regslice_0(aclk, aresetn, s_axi_araddr, s_axi_arlen, 
   s_axi_arsize, s_axi_arburst, s_axi_arlock, s_axi_arcache, s_axi_arprot, s_axi_arregion, 
   s_axi_arqos, s_axi_arvalid, s_axi_arready, s_axi_rdata, s_axi_rresp, s_axi_rlast, 

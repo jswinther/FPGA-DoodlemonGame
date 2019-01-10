@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Wed Jan  9 09:22:30 2019
+-- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+-- Date        : Thu Jan 10 11:21:12 2019
 -- Host        : NicoLenovo running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub {C:/Users/bruger/OneDrive - Danmarks Tekniske
 --               Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_axi4s_vid_out_0_0/hdmi_in_v_axi4s_vid_out_0_0_stub.vhdl}
@@ -41,6 +41,7 @@ entity hdmi_in_v_axi4s_vid_out_0_0 is
     locked : out STD_LOGIC;
     overflow : out STD_LOGIC;
     underflow : out STD_LOGIC;
+    fifo_read_level : out STD_LOGIC_VECTOR ( 5 downto 0 );
     status : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
 
@@ -50,8 +51,8 @@ architecture stub of hdmi_in_v_axi4s_vid_out_0_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "aclk,aclken,aresetn,s_axis_video_tdata[23:0],s_axis_video_tvalid,s_axis_video_tready,s_axis_video_tuser,s_axis_video_tlast,fid,vid_io_out_ce,vid_active_video,vid_vsync,vid_hsync,vid_vblank,vid_hblank,vid_field_id,vid_data[23:0],vtg_vsync,vtg_hsync,vtg_vblank,vtg_hblank,vtg_active_video,vtg_field_id,vtg_ce,locked,overflow,underflow,status[31:0]";
+attribute black_box_pad_pin of stub : architecture is "aclk,aclken,aresetn,s_axis_video_tdata[23:0],s_axis_video_tvalid,s_axis_video_tready,s_axis_video_tuser,s_axis_video_tlast,fid,vid_io_out_ce,vid_active_video,vid_vsync,vid_hsync,vid_vblank,vid_hblank,vid_field_id,vid_data[23:0],vtg_vsync,vtg_hsync,vtg_vblank,vtg_hblank,vtg_active_video,vtg_field_id,vtg_ce,locked,overflow,underflow,fifo_read_level[5:0],status[31:0]";
 attribute X_CORE_INFO : string;
-attribute X_CORE_INFO of stub : architecture is "v_axi4s_vid_out_v4_0_9,Vivado 2018.2";
+attribute X_CORE_INFO of stub : architecture is "v_axi4s_vid_out_v4_0_10,Vivado 2018.3";
 begin
 end;

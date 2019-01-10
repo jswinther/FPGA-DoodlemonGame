@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
---Date        : Wed Jan  9 09:13:36 2019
+--Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+--Date        : Thu Jan 10 11:14:14 2019
 --Host        : NicoLenovo running 64-bit major release  (build 9200)
 --Command     : generate_target hdmi_in_wrapper.bd
 --Design      : hdmi_in_wrapper
@@ -45,7 +45,7 @@ entity hdmi_in_wrapper is
     TMDS_data_p : in STD_LOGIC_VECTOR ( 2 downto 0 );
     btns_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
     hdmi_hpd_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
-    leds_4bits_tri_io : inout STD_LOGIC_VECTOR ( 3 downto 0 );
+    leds_4bits_tri_o : out STD_LOGIC_VECTOR ( 3 downto 0 );
     sws_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
     vga_b : out STD_LOGIC_VECTOR ( 4 downto 0 );
     vga_g : out STD_LOGIC_VECTOR ( 5 downto 0 );
@@ -97,9 +97,7 @@ architecture STRUCTURE of hdmi_in_wrapper is
     TMDS_data_n : in STD_LOGIC_VECTOR ( 2 downto 0 );
     btns_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
     hdmi_hpd_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
-    leds_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
     leds_4bits_tri_o : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    leds_4bits_tri_t : out STD_LOGIC_VECTOR ( 3 downto 0 );
     sws_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
     vga_b : out STD_LOGIC_VECTOR ( 4 downto 0 );
     vga_g : out STD_LOGIC_VECTOR ( 5 downto 0 );
@@ -129,22 +127,6 @@ architecture STRUCTURE of hdmi_in_wrapper is
   signal IIC_0_sda_i : STD_LOGIC;
   signal IIC_0_sda_o : STD_LOGIC;
   signal IIC_0_sda_t : STD_LOGIC;
-  signal leds_4bits_tri_i_0 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal leds_4bits_tri_i_1 : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal leds_4bits_tri_i_2 : STD_LOGIC_VECTOR ( 2 to 2 );
-  signal leds_4bits_tri_i_3 : STD_LOGIC_VECTOR ( 3 to 3 );
-  signal leds_4bits_tri_io_0 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal leds_4bits_tri_io_1 : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal leds_4bits_tri_io_2 : STD_LOGIC_VECTOR ( 2 to 2 );
-  signal leds_4bits_tri_io_3 : STD_LOGIC_VECTOR ( 3 to 3 );
-  signal leds_4bits_tri_o_0 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal leds_4bits_tri_o_1 : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal leds_4bits_tri_o_2 : STD_LOGIC_VECTOR ( 2 to 2 );
-  signal leds_4bits_tri_o_3 : STD_LOGIC_VECTOR ( 3 to 3 );
-  signal leds_4bits_tri_t_0 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal leds_4bits_tri_t_1 : STD_LOGIC_VECTOR ( 1 to 1 );
-  signal leds_4bits_tri_t_2 : STD_LOGIC_VECTOR ( 2 to 2 );
-  signal leds_4bits_tri_t_3 : STD_LOGIC_VECTOR ( 3 to 3 );
 begin
 DDC_scl_iobuf: component IOBUF
      port map (
@@ -216,51 +198,12 @@ hdmi_in_i: component hdmi_in
       TMDS_data_p(2 downto 0) => TMDS_data_p(2 downto 0),
       btns_4bits_tri_i(3 downto 0) => btns_4bits_tri_i(3 downto 0),
       hdmi_hpd_tri_o(0) => hdmi_hpd_tri_o(0),
-      leds_4bits_tri_i(3) => leds_4bits_tri_i_3(3),
-      leds_4bits_tri_i(2) => leds_4bits_tri_i_2(2),
-      leds_4bits_tri_i(1) => leds_4bits_tri_i_1(1),
-      leds_4bits_tri_i(0) => leds_4bits_tri_i_0(0),
-      leds_4bits_tri_o(3) => leds_4bits_tri_o_3(3),
-      leds_4bits_tri_o(2) => leds_4bits_tri_o_2(2),
-      leds_4bits_tri_o(1) => leds_4bits_tri_o_1(1),
-      leds_4bits_tri_o(0) => leds_4bits_tri_o_0(0),
-      leds_4bits_tri_t(3) => leds_4bits_tri_t_3(3),
-      leds_4bits_tri_t(2) => leds_4bits_tri_t_2(2),
-      leds_4bits_tri_t(1) => leds_4bits_tri_t_1(1),
-      leds_4bits_tri_t(0) => leds_4bits_tri_t_0(0),
+      leds_4bits_tri_o(3 downto 0) => leds_4bits_tri_o(3 downto 0),
       sws_4bits_tri_i(3 downto 0) => sws_4bits_tri_i(3 downto 0),
       vga_b(4 downto 0) => vga_b(4 downto 0),
       vga_g(5 downto 0) => vga_g(5 downto 0),
       vga_hs => vga_hs,
       vga_r(4 downto 0) => vga_r(4 downto 0),
       vga_vs => vga_vs
-    );
-leds_4bits_tri_iobuf_0: component IOBUF
-     port map (
-      I => leds_4bits_tri_o_0(0),
-      IO => leds_4bits_tri_io(0),
-      O => leds_4bits_tri_i_0(0),
-      T => leds_4bits_tri_t_0(0)
-    );
-leds_4bits_tri_iobuf_1: component IOBUF
-     port map (
-      I => leds_4bits_tri_o_1(1),
-      IO => leds_4bits_tri_io(1),
-      O => leds_4bits_tri_i_1(1),
-      T => leds_4bits_tri_t_1(1)
-    );
-leds_4bits_tri_iobuf_2: component IOBUF
-     port map (
-      I => leds_4bits_tri_o_2(2),
-      IO => leds_4bits_tri_io(2),
-      O => leds_4bits_tri_i_2(2),
-      T => leds_4bits_tri_t_2(2)
-    );
-leds_4bits_tri_iobuf_3: component IOBUF
-     port map (
-      I => leds_4bits_tri_o_3(3),
-      IO => leds_4bits_tri_io(3),
-      O => leds_4bits_tri_i_3(3),
-      T => leds_4bits_tri_t_3(3)
     );
 end STRUCTURE;

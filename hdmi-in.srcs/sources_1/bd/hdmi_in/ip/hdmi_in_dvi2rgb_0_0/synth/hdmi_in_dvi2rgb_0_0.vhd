@@ -116,7 +116,7 @@ ARCHITECTURE hdmi_in_dvi2rgb_0_0_arch OF hdmi_in_dvi2rgb_0_0 IS
     );
   END COMPONENT dvi2rgb;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF hdmi_in_dvi2rgb_0_0_arch: ARCHITECTURE IS "dvi2rgb,Vivado 2018.2";
+  ATTRIBUTE X_CORE_INFO OF hdmi_in_dvi2rgb_0_0_arch: ARCHITECTURE IS "dvi2rgb,Vivado 2018.3";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF hdmi_in_dvi2rgb_0_0_arch : ARCHITECTURE IS "hdmi_in_dvi2rgb_0_0,dvi2rgb,{}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
