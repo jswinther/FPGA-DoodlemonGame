@@ -36,6 +36,11 @@
 
 #define DEMO_MAX_FRAME (1920*1080*3)
 #define DEMO_STRIDE (1920 * 3)
+#define jumperGRAVITY 3
+#define PLATFORM_AMOUNT 10
+#define PLATFORM_VELOCITY 5
+#define PLATFORM_WIDTH 24
+#define PLATFORM_HEIGHT 160
 
 /*
  * Configure the Video capture driver to start streaming on signal
@@ -54,11 +59,17 @@ struct Block {
 	int velocity;
 };
 
+struct Block platformBlock[PLATFORM_AMOUNT];
+struct Block *platform[PLATFORM_AMOUNT];
+struct Block jumperBlock = {0, 150, 150, 0, 0};
+struct Block *jumper;
+
 enum Velocity {
 	GROUND,
 	AIR
 };
 
+enum Velocity jumperVelocity = GROUND;
 
 
 /* ------------------------------------------------------------ */
@@ -79,8 +90,11 @@ void DemoISR(void *callBackRef, void *pVideo);
 void DemoOverwriteJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW);
 int collisiondetect (struct Block *jumper, struct Block *platform);
 void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW);
-
-
+void DemoCreateBlocks();
+void DemoCreateJumper();
+void DemoOverwritePlatform(u8 *frame);
+void DemoMovePlatforms(u8 *frame);
+void DemoMoveJumper(u8 *frame);
 /* ------------------------------------------------------------ */
 
 /************************************************************************/
