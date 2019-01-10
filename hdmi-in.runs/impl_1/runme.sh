@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/impl_1'
+HD_PWD='C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .write_bitstream.begin.rst
+/bin/touch .init_design.begin.rst
 EAStep vivado -log hdmi_in_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source hdmi_in_wrapper.tcl -notrace
 
 

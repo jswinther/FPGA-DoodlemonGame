@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="39" Path="C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.xpr">
+<Project Version="7" Minor="39" Path="C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="e9ad014e4cf1434ca8555e548ff40d93"/>
@@ -67,17 +67,26 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="hdmi_in.bd" FileRelPathName="ip/hdmi_in_rgb2vga_0_0/hdmi_in_rgb2vga_0_0.xci">
-          <Proxy FileSetName="hdmi_in_rgb2vga_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="hdmi_in.bd" FileRelPathName="ip/hdmi_in_processing_system7_0_0/hdmi_in_processing_system7_0_0.xci">
-          <Proxy FileSetName="hdmi_in_processing_system7_0_0"/>
+        <CompFileExtendedInfo CompFileName="hdmi_in.bd" FileRelPathName="ip/hdmi_in_axi_dynclk_0_0/hdmi_in_axi_dynclk_0_0.xci">
+          <Proxy FileSetName="hdmi_in_axi_dynclk_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="hdmi_in.bd" FileRelPathName="ip/hdmi_in_rst_processing_system7_0_100M_0/hdmi_in_rst_processing_system7_0_100M_0.xci">
           <Proxy FileSetName="hdmi_in_rst_processing_system7_0_100M_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="hdmi_in.bd" FileRelPathName="ip/hdmi_in_v_axi4s_vid_out_0_0/hdmi_in_v_axi4s_vid_out_0_0.xci">
-          <Proxy FileSetName="hdmi_in_v_axi4s_vid_out_0_0"/>
+        <CompFileExtendedInfo CompFileName="hdmi_in.bd" FileRelPathName="ip/hdmi_in_v_tc_0_0/hdmi_in_v_tc_0_0.xci">
+          <Proxy FileSetName="hdmi_in_v_tc_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="hdmi_in.bd" FileRelPathName="ip/hdmi_in_processing_system7_0_0/hdmi_in_processing_system7_0_0.xci">
+          <Proxy FileSetName="hdmi_in_processing_system7_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="hdmi_in.bd" FileRelPathName="ip/hdmi_in_xbar_1/hdmi_in_xbar_1.xci">
+          <Proxy FileSetName="hdmi_in_xbar_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="hdmi_in.bd" FileRelPathName="ip/hdmi_in_rgb2vga_0_0/hdmi_in_rgb2vga_0_0.xci">
+          <Proxy FileSetName="hdmi_in_rgb2vga_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="hdmi_in.bd" FileRelPathName="ip/hdmi_in_axi_gpio_btn_0/hdmi_in_axi_gpio_btn_0.xci">
+          <Proxy FileSetName="hdmi_in_axi_gpio_btn_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="hdmi_in.bd" FileRelPathName="ip/hdmi_in_v_tc_1_0/hdmi_in_v_tc_1_0.xci">
           <Proxy FileSetName="hdmi_in_v_tc_1_0"/>
@@ -85,26 +94,17 @@
         <CompFileExtendedInfo CompFileName="hdmi_in.bd" FileRelPathName="ip/hdmi_in_xlconcat_0_0/hdmi_in_xlconcat_0_0.xci">
           <Proxy FileSetName="hdmi_in_xlconcat_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="hdmi_in.bd" FileRelPathName="ip/hdmi_in_axi_dynclk_0_0/hdmi_in_axi_dynclk_0_0.xci">
-          <Proxy FileSetName="hdmi_in_axi_dynclk_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="hdmi_in.bd" FileRelPathName="ip/hdmi_in_xbar_1/hdmi_in_xbar_1.xci">
-          <Proxy FileSetName="hdmi_in_xbar_1"/>
+        <CompFileExtendedInfo CompFileName="hdmi_in.bd" FileRelPathName="ip/hdmi_in_axi_vdma_0_0/hdmi_in_axi_vdma_0_0.xci">
+          <Proxy FileSetName="hdmi_in_axi_vdma_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="hdmi_in.bd" FileRelPathName="ip/hdmi_in_v_vid_in_axi4s_0_0/hdmi_in_v_vid_in_axi4s_0_0.xci">
           <Proxy FileSetName="hdmi_in_v_vid_in_axi4s_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="hdmi_in.bd" FileRelPathName="ip/hdmi_in_axi_gpio_btn_0/hdmi_in_axi_gpio_btn_0.xci">
-          <Proxy FileSetName="hdmi_in_axi_gpio_btn_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="hdmi_in.bd" FileRelPathName="ip/hdmi_in_v_tc_0_0/hdmi_in_v_tc_0_0.xci">
-          <Proxy FileSetName="hdmi_in_v_tc_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="hdmi_in.bd" FileRelPathName="ip/hdmi_in_axi_vdma_0_0/hdmi_in_axi_vdma_0_0.xci">
-          <Proxy FileSetName="hdmi_in_axi_vdma_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="hdmi_in.bd" FileRelPathName="ip/hdmi_in_xbar_0/hdmi_in_xbar_0.xci">
           <Proxy FileSetName="hdmi_in_xbar_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="hdmi_in.bd" FileRelPathName="ip/hdmi_in_v_axi4s_vid_out_0_0/hdmi_in_v_axi4s_vid_out_0_0.xci">
+          <Proxy FileSetName="hdmi_in_v_axi4s_vid_out_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="hdmi_in.bd" FileRelPathName="ip/hdmi_in_rst_processing_system7_0_150M_0/hdmi_in_rst_processing_system7_0_150M_0.xci">
           <Proxy FileSetName="hdmi_in_rst_processing_system7_0_150M_0"/>

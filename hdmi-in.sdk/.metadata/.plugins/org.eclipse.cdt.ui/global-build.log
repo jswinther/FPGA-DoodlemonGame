@@ -10336,3 +10336,252 @@ arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
  117464	 274368	18688960	19080792	1232658	HDMI_IN.elf
 'Finished building: HDMI_IN.elf.size'
 ' '
+18:00:44 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117464	 274368	18688960	19080792	1232658	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+18:01:06 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+18:02:21 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117400	 274368	18688960	19080728	1232618	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+18:02:35 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+18:08:33 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117400	 274368	18688960	19080728	1232618	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+18:16:34 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:220:17: warning: unused variable 'overWrite' [-Wunused-variable]
+   struct Block *overWrite = &overWriteBlock;
+                 ^~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117656	 274368	18688960	19080984	1232718	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+18:17:10 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117656	 274368	18688960	19080984	1232718	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+18:17:59 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+18:18:41 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+18:21:30 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117656	 274368	18688960	19080984	1232718	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+18:21:48 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+18:22:58 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117656	 274368	18688960	19080984	1232718	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+18:23:11 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+18:24:35 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117656	 274368	18688960	19080984	1232718	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+18:25:03 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+18:25:57 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117656	 274368	18688960	19080984	1232718	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+18:26:09 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+18:31:09 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117784	 274368	18688960	19081112	1232798	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+18:31:24 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.

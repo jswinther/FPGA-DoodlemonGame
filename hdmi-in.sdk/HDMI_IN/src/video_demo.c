@@ -159,16 +159,37 @@ void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
 
 }
 
+void DemoOverwriteJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+	int cor = anchor;
+	int arrayCounter = 0;
+	for(int i = 0; i < imgH; i++) {
+		for(int j = 0; j<imgW*3; j+=3) {
+			if (jumperImg[arrayCounter] != 255){
+			frame[cor + j + 0] = 255;
+			frame[cor + j + 1] = 255;
+			frame[cor + j + 2] = 255;
+			arrayCounter += 3;
+			} else {
+				arrayCounter+=3;
+			}
+
+
+		}
+		cor = cor + DEMO_STRIDE;
+	}
+
+}
+
 int collisiondetect (struct Block *jumper, struct Block *platform){
-	int jumperw = (jumper->height);
-	int jumperh = jumper->width;
+	int jumperw = jumper->width;
+	int jumperh = (jumper->height)*3;
 	int jumpera = jumper->anchor;
 	int jumperLC = (jumpera + jumperh) + (jumperw*DEMO_STRIDE);
 	int jumperRC = jumpera + jumperh;
 
 
 
-	int platformw = (platform->height);
+	int platformw = platform->height;
 	int platformh = platform->width;
 	int platforma = platform->anchor;
 	int platformLT = platforma + (platformw*DEMO_STRIDE);
@@ -195,8 +216,8 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 	/**
 		 * Generate Sprite.
 		 */
-		struct Block overWriteBlock = {0, 150, 150, 0, 0};
-		struct Block *overWrite = &overWriteBlock;
+		//struct Block overWriteBlock = {0, 150, 150, 0, 0};
+		//struct Block *overWrite = &overWriteBlock;
 		struct Block jumperBlock = {0, 150, 150, 0, 0};
 		struct Block *jumper = &jumperBlock;
 		int jumperStart = DEMO_STRIDE*539+DEMO_STRIDE-(jumperBlock.width/2);
@@ -232,9 +253,7 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 		platform[i] = &platformBlock[i];
 	}
 
-	/**
-	 * Jumping doodlemon.
-	 */
+
 	int counter = 0;
 	int k=0;
 	while(1) {
@@ -247,11 +266,8 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 				platformBlock[j].floor = 0;
 				platformBlock[j].anchor = DEMO_STRIDE*(rand() % 900 + 0);
 			}
-
+			DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 150, 150);
 		}
-
-		DemoPrintBlock(frame, overWrite, overWriteBlock.anchor, 255);
-
 		switch(jumperVelocity) {
 		case GROUND:
 			counter = 0;
@@ -282,7 +298,7 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 
 
 
-		DemoPrintBlock(frame, overWrite, overWriteBlock.anchor, 255);
+		//DemoPrintBlock(frame, overWrite, overWriteBlock.anchor, 255);
 		for(j = 0; j < numberofplatforms; j++) {
 					DemoPrintBlock(frame, platform[j], platform[j]->anchor, 128);
 				}
@@ -331,7 +347,6 @@ void DemoInitialize()
 		xil_printf("VDMA Configuration Initialization failed %d\r\n", Status);
 		return;
 	}
-//dhsjdhsjd
 
 
 	/*
