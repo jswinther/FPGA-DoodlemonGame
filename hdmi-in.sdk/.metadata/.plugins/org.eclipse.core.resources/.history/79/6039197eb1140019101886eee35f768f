@@ -134,7 +134,7 @@ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
 }
 
 int collisiondetect (struct Block *player, struct Block *platform){
-	int playerw = (player->width)/3;
+	int playerw = player->width;
 	int playerh = player->height;
 	int playera = player->anchor;
 	int playerLC = (playera + playerh) + (playerw*DEMO_STRIDE);
@@ -142,7 +142,7 @@ int collisiondetect (struct Block *player, struct Block *platform){
 
 
 
-	int platformw = (platform->width)/3;
+	int platformw = platform->width;
 	int platformh = platform->height;
 	int platforma = platform->anchor;
 	int platformLT = platforma + (platformw*DEMO_STRIDE);
