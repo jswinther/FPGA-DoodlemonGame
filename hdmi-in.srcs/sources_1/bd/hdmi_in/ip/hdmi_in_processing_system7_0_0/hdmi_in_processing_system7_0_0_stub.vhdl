@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Thu Jan 10 11:17:30 2019
--- Host        : NicoLenovo running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub {C:/Users/bruger/OneDrive - Danmarks Tekniske
---               Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_processing_system7_0_0/hdmi_in_processing_system7_0_0_stub.vhdl}
+-- Date        : Thu Jan 10 14:54:20 2019
+-- Host        : DESKTOP-D2B4873 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode synth_stub
+--               C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_processing_system7_0_0/hdmi_in_processing_system7_0_0_stub.vhdl
 -- Design      : hdmi_in_processing_system7_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z010clg400-1

@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_rst_processing_system7_0_100M_0_synth_1'
+HD_PWD='C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_rst_processing_system7_0_100M_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

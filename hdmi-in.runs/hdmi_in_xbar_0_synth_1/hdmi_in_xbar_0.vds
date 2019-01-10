@@ -2,32 +2,28 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Thu Jan 10 11:17:31 2019
-# Process ID: 4068
-# Current directory: C:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_xbar_0_synth_1
+# Start of session at: Thu Jan 10 14:52:48 2019
+# Process ID: 16908
+# Current directory: C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_xbar_0_synth_1
 # Command line: vivado.exe -log hdmi_in_xbar_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source hdmi_in_xbar_0.tcl
-# Log file: C:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_xbar_0_synth_1/hdmi_in_xbar_0.vds
-# Journal file: C:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_xbar_0_synth_1\vivado.jou
+# Log file: C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_xbar_0_synth_1/hdmi_in_xbar_0.vds
+# Journal file: C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_xbar_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source hdmi_in_xbar_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 279.113 ; gain = 31.203
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.ipdefs/repo_0_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.ipdefs/repo_0_0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
-update_ip_catalog: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 304.309 ; gain = 25.195
-WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
-Current IP cache path is c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.cache/ip 
 Command: synth_design -top hdmi_in_xbar_0 -part xc7z010clg400-1 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 6736 
+INFO: Helper process launched with PID 9868 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 432.598 ; gain = 106.090
+Starting RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 405.855 ; gain = 106.238
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'hdmi_in_xbar_0' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_xbar_0/synth/hdmi_in_xbar_0.v:59]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_axi_crossbar' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:4884]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_in_xbar_0' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_xbar_0/synth/hdmi_in_xbar_0.v:59]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_axi_crossbar' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:4884]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_NUM_SLAVE_SLOTS bound to: 2 - type: integer 
 	Parameter C_NUM_MASTER_SLOTS bound to: 1 - type: integer 
@@ -76,7 +72,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_axi_crossbar' [c:
 	Parameter P_LEN bound to: 8 - type: integer 
 	Parameter P_LOCK bound to: 1 - type: integer 
 	Parameter P_FAMILY bound to: zynq - type: string 
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_crossbar' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:2239]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_crossbar' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:2239]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_NUM_SLAVE_SLOTS bound to: 2 - type: integer 
 	Parameter C_NUM_MASTER_SLOTS bound to: 1 - type: integer 
@@ -144,7 +140,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_crossbar' [c:/Use
 	Parameter P_M_AXI_READ_ISSUING bound to: 64'b0000000000000000000000000000000100000000000000000000000000001000 
 	Parameter P_M_AXI_WRITE_ISSUING bound to: 64'b0000000000000000000000000000000100000000000000000000000000001000 
 	Parameter P_DECERR bound to: 2'b11 
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_si_transactor' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_si_transactor' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_SI bound to: 0 - type: integer 
 	Parameter C_DIR bound to: 0 - type: integer 
@@ -182,7 +178,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_si_transactor' [c
 	Parameter P_NUM_ID_VAL bound to: 1 - type: integer 
 	Parameter P_NUM_THREADS bound to: 1 - type: integer 
 	Parameter P_M_SECURE_MASK bound to: 1'b0 
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_addr_decoder' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_addr_decoder' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_NUM_TARGETS bound to: 1 - type: integer 
 	Parameter C_NUM_TARGETS_LOG bound to: 1 - type: integer 
@@ -196,19 +192,19 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_addr_decoder' [c:
 	Parameter C_TARGET_QUAL bound to: 2'b01 
 	Parameter C_RESOLUTION bound to: 2 - type: integer 
 	Parameter C_COMPARATOR_THRESHOLD bound to: 6 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_VALUE bound to: 30'b000000000000000000000000000000 
 	Parameter C_DATA_WIDTH bound to: 30 - type: integer 
 	Parameter C_BITS_PER_LUT bound to: 6 - type: integer 
 	Parameter C_NUM_LUT bound to: 5 - type: integer 
 	Parameter C_FIX_DATA_WIDTH bound to: 30 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_carry_and' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_carry_and' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:62]
 	Parameter C_FAMILY bound to: rtl - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_carry_and' (1#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:62]
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' (2#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_19_addr_decoder' (3#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_17_axic_srl_fifo' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_carry_and' (1#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_comparator_static' (2#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2133]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_19_addr_decoder' (3#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_17_axic_srl_fifo' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_FIFO_WIDTH bound to: 8 - type: integer 
 	Parameter C_MAX_CTRL_FANOUT bound to: 33 - type: integer 
@@ -220,7 +216,7 @@ INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_17_axic_srl_fifo' [
 	Parameter P_ALMOSTFULL_TEMP bound to: 3'b110 
 	Parameter P_ALMOSTFULL bound to: 2'b10 
 	Parameter P_NUM_REPS bound to: 1 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_17_ndeep_srl' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_17_ndeep_srl' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_A_WIDTH bound to: 2 - type: integer 
 	Parameter P_SRLASIZE bound to: 5 - type: integer 
@@ -231,30 +227,30 @@ INFO: [Synth 8-6157] synthesizing module 'SRLC32E' [C:/Xilinx/Vivado/2018.3/scri
 	Parameter INIT bound to: 32'b00000000000000000000000000000000 
 	Parameter IS_CLK_INVERTED bound to: 1'b0 
 INFO: [Synth 8-6155] done synthesizing module 'SRLC32E' (4#1) [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:51849]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_17_ndeep_srl' (5#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
-WARNING: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:750]
-WARNING: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:789]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_17_axic_srl_fifo' (6#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_17_ndeep_srl' (5#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
+WARNING: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:750]
+WARNING: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:789]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_17_axic_srl_fifo' (6#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_RATIO bound to: 2 - type: integer 
 	Parameter C_SEL_WIDTH bound to: 1 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 5 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' (7#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
-WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.debug_r_beat_cnt_i_reg was removed.  [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:4192]
-WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.active_id_reg was removed.  [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:4150]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_19_si_transactor' (8#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_splitter' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:4461]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc' (7#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.debug_r_beat_cnt_i_reg was removed.  [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:4192]
+WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.active_id_reg was removed.  [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:4150]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_19_si_transactor' (8#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_splitter' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:4461]
 	Parameter C_NUM_M bound to: 2 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_19_splitter' (9#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:4461]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_wdata_router' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:4736]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_19_splitter' (9#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:4461]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_wdata_router' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:4736]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_WMESG_WIDTH bound to: 74 - type: integer 
 	Parameter C_NUM_MASTER_SLOTS bound to: 2 - type: integer 
 	Parameter C_SELECT_WIDTH bound to: 1 - type: integer 
 	Parameter C_FIFO_DEPTH_LOG bound to: 1 - type: integer 
 	Parameter P_FIFO_DEPTH_LOG bound to: 1 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_17_axic_reg_srl_fifo' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_17_axic_reg_srl_fifo' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_FIFO_WIDTH bound to: 1 - type: integer 
 	Parameter C_MAX_CTRL_FANOUT bound to: 33 - type: integer 
@@ -269,10 +265,10 @@ INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_17_axic_reg_srl_fif
 	Parameter ZERO bound to: 2'b10 
 	Parameter ONE bound to: 2'b11 
 	Parameter TWO bound to: 2'b01 
-INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_17_axic_reg_srl_fifo' (10#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_19_wdata_router' (11#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:4736]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_si_transactor__parameterized0' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_17_axic_reg_srl_fifo' (10#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_19_wdata_router' (11#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:4736]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_si_transactor__parameterized0' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_SI bound to: 1 - type: integer 
 	Parameter C_DIR bound to: 1 - type: integer 
@@ -310,16 +306,16 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_si_transactor__pa
 	Parameter P_NUM_ID_VAL bound to: 1 - type: integer 
 	Parameter P_NUM_THREADS bound to: 1 - type: integer 
 	Parameter P_M_SECURE_MASK bound to: 1'b0 
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_RATIO bound to: 2 - type: integer 
 	Parameter C_SEL_WIDTH bound to: 1 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 69 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' (11#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
-WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.debug_r_beat_cnt_i_reg was removed.  [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:4192]
-WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.active_id_reg was removed.  [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:4150]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_19_si_transactor__parameterized0' (11#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_addr_decoder__parameterized0' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized0' (11#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.debug_r_beat_cnt_i_reg was removed.  [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:4192]
+WARNING: [Synth 8-6014] Unused sequential element gen_single_thread.active_id_reg was removed.  [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:4150]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_19_si_transactor__parameterized0' (11#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:3800]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_addr_decoder__parameterized0' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_NUM_TARGETS bound to: 2 - type: integer 
 	Parameter C_NUM_TARGETS_LOG bound to: 1 - type: integer 
@@ -333,8 +329,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_addr_decoder__par
 	Parameter C_TARGET_QUAL bound to: 3'b010 
 	Parameter C_RESOLUTION bound to: 0 - type: integer 
 	Parameter C_COMPARATOR_THRESHOLD bound to: 6 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_19_addr_decoder__parameterized0' (11#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_addr_decoder__parameterized1' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_19_addr_decoder__parameterized0' (11#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_addr_decoder__parameterized1' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_NUM_TARGETS bound to: 2 - type: integer 
 	Parameter C_NUM_TARGETS_LOG bound to: 1 - type: integer 
@@ -348,8 +344,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_addr_decoder__par
 	Parameter C_TARGET_QUAL bound to: 3'b001 
 	Parameter C_RESOLUTION bound to: 0 - type: integer 
 	Parameter C_COMPARATOR_THRESHOLD bound to: 6 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_19_addr_decoder__parameterized1' (11#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_17_axic_srl_fifo__parameterized0' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_19_addr_decoder__parameterized1' (11#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_17_axic_srl_fifo__parameterized0' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_FIFO_WIDTH bound to: 8 - type: integer 
 	Parameter C_MAX_CTRL_FANOUT bound to: 33 - type: integer 
@@ -361,25 +357,25 @@ INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_17_axic_srl_fifo__p
 	Parameter P_ALMOSTFULL_TEMP bound to: 4'b1110 
 	Parameter P_ALMOSTFULL bound to: 3'b110 
 	Parameter P_NUM_REPS bound to: 1 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_17_ndeep_srl__parameterized0' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_17_ndeep_srl__parameterized0' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_A_WIDTH bound to: 3 - type: integer 
 	Parameter P_SRLASIZE bound to: 5 - type: integer 
 	Parameter P_SRLDEPTH bound to: 32 - type: integer 
 	Parameter P_NUMSRLS bound to: 1 - type: integer 
 	Parameter P_SHIFT_DEPTH bound to: 8 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_17_ndeep_srl__parameterized0' (11#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
-WARNING: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:750]
-WARNING: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:789]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_17_axic_srl_fifo__parameterized0' (11#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_wdata_mux' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:4561]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_17_ndeep_srl__parameterized0' (11#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:1135]
+WARNING: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:750]
+WARNING: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:789]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_17_axic_srl_fifo__parameterized0' (11#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_wdata_mux' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:4561]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_WMESG_WIDTH bound to: 74 - type: integer 
 	Parameter C_NUM_SLAVE_SLOTS bound to: 2 - type: integer 
 	Parameter C_SELECT_WIDTH bound to: 1 - type: integer 
 	Parameter C_FIFO_DEPTH_LOG bound to: 3 - type: integer 
 	Parameter P_FIFO_DEPTH_LOG bound to: 3 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_17_axic_reg_srl_fifo__parameterized0' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_17_axic_reg_srl_fifo__parameterized0' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_FIFO_WIDTH bound to: 1 - type: integer 
 	Parameter C_MAX_CTRL_FANOUT bound to: 33 - type: integer 
@@ -394,17 +390,17 @@ INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_17_axic_reg_srl_fif
 	Parameter ZERO bound to: 2'b10 
 	Parameter ONE bound to: 2'b11 
 	Parameter TWO bound to: 2'b01 
-INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
-WARNING: [Synth 8-6014] Unused sequential element s_ready_i_reg was removed.  [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:1038]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_17_axic_reg_srl_fifo__parameterized0' (11#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized1' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
+WARNING: [Synth 8-6014] Unused sequential element s_ready_i_reg was removed.  [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:1038]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_17_axic_reg_srl_fifo__parameterized0' (11#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized1' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_RATIO bound to: 2 - type: integer 
 	Parameter C_SEL_WIDTH bound to: 1 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 74 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized1' (11#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_19_wdata_mux' (12#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:4561]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_18_axi_register_slice' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:2637]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized1' (11#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_19_wdata_mux' (12#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:4561]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_18_axi_register_slice' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:2637]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
@@ -515,27 +511,27 @@ INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_18_axi_registe
 	Parameter G_AXI_RUSER_INDEX bound to: 68 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 68 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_18_axic_register_slice' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:409]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_18_axic_register_slice' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:409]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_DATA_WIDTH bound to: 31 - type: integer 
 	Parameter C_REG_CONFIG bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_18_axic_register_slice' (13#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:409]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_18_axic_register_slice__parameterized0' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:409]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_18_axic_register_slice' (13#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:409]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_18_axic_register_slice__parameterized0' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:409]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_DATA_WIDTH bound to: 73 - type: integer 
 	Parameter C_REG_CONFIG bound to: 0 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_18_axic_register_slice__parameterized0' (13#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:409]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_18_axic_register_slice__parameterized1' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:409]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_18_axic_register_slice__parameterized0' (13#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:409]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_18_axic_register_slice__parameterized1' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:409]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_DATA_WIDTH bound to: 3 - type: integer 
 	Parameter C_REG_CONFIG bound to: 7 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_18_axic_register_slice__parameterized1' (13#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:409]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_18_axic_register_slice__parameterized2' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:409]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_18_axic_register_slice__parameterized1' (13#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:409]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_18_axic_register_slice__parameterized2' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:409]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_DATA_WIDTH bound to: 68 - type: integer 
 	Parameter C_REG_CONFIG bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_18_axic_register_slice__parameterized2' (13#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:409]
-INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_18_axic_register_slice__parameterized2' (13#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:409]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
 	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 1 - type: integer 
@@ -627,8 +623,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' 
 	Parameter G_AXI_RUSER_INDEX bound to: 68 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 68 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (14#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
-INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (14#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
 	Parameter C_AXI_PROTOCOL bound to: 0 - type: integer 
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_ADDR_WIDTH bound to: 1 - type: integer 
@@ -720,10 +716,10 @@ INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' 
 	Parameter G_AXI_RUSER_INDEX bound to: 68 - type: integer 
 	Parameter G_AXI_RUSER_WIDTH bound to: 0 - type: integer 
 	Parameter G_AXI_RPAYLOAD_WIDTH bound to: 68 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (15#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_18_axi_register_slice' (16#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:2637]
-WARNING: [Synth 8-350] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_18_axi_register_slice' requires 93 connections, but only 92 given [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_addr_decoder__parameterized2' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (15#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_18_axi_register_slice' (16#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:2637]
+WARNING: [Synth 8-350] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_18_axi_register_slice' requires 93 connections, but only 92 given [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_addr_decoder__parameterized2' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_NUM_TARGETS bound to: 2 - type: integer 
 	Parameter C_NUM_TARGETS_LOG bound to: 1 - type: integer 
@@ -737,8 +733,8 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_addr_decoder__par
 	Parameter C_TARGET_QUAL bound to: 3'b011 
 	Parameter C_RESOLUTION bound to: 0 - type: integer 
 	Parameter C_COMPARATOR_THRESHOLD bound to: 6 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_19_addr_decoder__parameterized2' (16#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_17_axic_srl_fifo__parameterized1' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_19_addr_decoder__parameterized2' (16#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:794]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_17_axic_srl_fifo__parameterized1' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_FIFO_WIDTH bound to: 8 - type: integer 
 	Parameter C_MAX_CTRL_FANOUT bound to: 33 - type: integer 
@@ -750,17 +746,17 @@ INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_17_axic_srl_fifo__p
 	Parameter P_ALMOSTFULL_TEMP bound to: 3'b110 
 	Parameter P_ALMOSTFULL bound to: 2'b10 
 	Parameter P_NUM_REPS bound to: 1 - type: integer 
-WARNING: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:750]
-WARNING: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:789]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_17_axic_srl_fifo__parameterized1' (16#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_wdata_mux__parameterized0' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:4561]
+WARNING: [Synth 8-6014] Unused sequential element areset_d1_reg was removed.  [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:750]
+WARNING: [Synth 8-6014] Unused sequential element S_READY_i_reg was removed.  [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:789]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_17_axic_srl_fifo__parameterized1' (16#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:698]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_wdata_mux__parameterized0' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:4561]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_WMESG_WIDTH bound to: 74 - type: integer 
 	Parameter C_NUM_SLAVE_SLOTS bound to: 2 - type: integer 
 	Parameter C_SELECT_WIDTH bound to: 1 - type: integer 
 	Parameter C_FIFO_DEPTH_LOG bound to: 0 - type: integer 
 	Parameter P_FIFO_DEPTH_LOG bound to: 0 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_17_axic_reg_srl_fifo__parameterized1' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
+INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_17_axic_reg_srl_fifo__parameterized1' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_FIFO_WIDTH bound to: 1 - type: integer 
 	Parameter C_MAX_CTRL_FANOUT bound to: 33 - type: integer 
@@ -775,12 +771,12 @@ INFO: [Synth 8-6157] synthesizing module 'axi_data_fifo_v2_1_17_axic_reg_srl_fif
 	Parameter ZERO bound to: 2'b10 
 	Parameter ONE bound to: 2'b11 
 	Parameter TWO bound to: 2'b01 
-INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
-WARNING: [Synth 8-6014] Unused sequential element s_ready_i_reg was removed.  [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:1038]
-INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_17_axic_reg_srl_fifo__parameterized1' (16#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_19_wdata_mux__parameterized0' (16#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:4561]
-WARNING: [Synth 8-350] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_18_axi_register_slice' requires 93 connections, but only 92 given [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_decerr_slave' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:3501]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:986]
+WARNING: [Synth 8-6014] Unused sequential element s_ready_i_reg was removed.  [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:1038]
+INFO: [Synth 8-6155] done synthesizing module 'axi_data_fifo_v2_1_17_axic_reg_srl_fifo__parameterized1' (16#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/c4fd/hdl/axi_data_fifo_v2_1_vl_rfs.v:889]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_19_wdata_mux__parameterized0' (16#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:4561]
+WARNING: [Synth 8-350] instance 'reg_slice_mi' of module 'axi_register_slice_v2_1_18_axi_register_slice' requires 93 connections, but only 92 given [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:3122]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_decerr_slave' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:3501]
 	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
 	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
 	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
@@ -795,9 +791,9 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_decerr_slave' [c:
 	Parameter P_AXI4 bound to: 0 - type: integer 
 	Parameter P_AXI3 bound to: 1 - type: integer 
 	Parameter P_AXILITE bound to: 2 - type: integer 
-INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:3633]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_19_decerr_slave' (17#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:3501]
-INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_addr_arbiter' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:423]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:3633]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_19_decerr_slave' (17#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:3501]
+INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_addr_arbiter' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:423]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_NUM_S bound to: 2 - type: integer 
 	Parameter C_NUM_S_LOG bound to: 1 - type: integer 
@@ -805,24 +801,24 @@ INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_addr_arbiter' [c:
 	Parameter C_MESG_WIDTH bound to: 64 - type: integer 
 	Parameter C_ARB_PRIORITY bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
 	Parameter P_PRIO_MASK bound to: 2'b00 
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized2' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized2' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_RATIO bound to: 2 - type: integer 
 	Parameter C_SEL_WIDTH bound to: 1 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 64 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized2' (17#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized3' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized2' (17#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized3' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
 	Parameter C_FAMILY bound to: rtl - type: string 
 	Parameter C_RATIO bound to: 2 - type: integer 
 	Parameter C_SEL_WIDTH bound to: 1 - type: integer 
 	Parameter C_DATA_WIDTH bound to: 2 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized3' (17#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_19_addr_arbiter' (18#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:423]
-WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[0].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:2997]
-WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[1].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:2997]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_19_crossbar' (19#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:2239]
-INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_19_axi_crossbar' (20#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:4884]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_in_xbar_0' (21#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_xbar_0/synth/hdmi_in_xbar_0.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_0_mux_enc__parameterized3' (17#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v:2452]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_19_addr_arbiter' (18#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:423]
+WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[0].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:2997]
+WARNING: [Synth 8-6014] Unused sequential element gen_master_slots[1].gen_mi_write.gen_debug_w.debug_w_beat_cnt_i_reg was removed.  [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:2997]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_19_crossbar' (19#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:2239]
+INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_19_axi_crossbar' (20#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:4884]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_in_xbar_0' (21#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_xbar_0/synth/hdmi_in_xbar_0.v:59]
 WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_vector2axi has unconnected port m_axi_buser[0]
 WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_vector2axi has unconnected port m_axi_ruser[0]
 WARNING: [Synth 8-3331] design axi_infrastructure_v1_1_0_axi2vector has unconnected port s_axi_awuser[0]
@@ -925,7 +921,7 @@ WARNING: [Synth 8-3331] design axi_crossbar_v2_1_19_crossbar has unconnected por
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_19_crossbar has unconnected port S_AXI_WDATA[109]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:31 ; elapsed = 00:00:44 . Memory (MB): peak = 592.512 ; gain = 266.004
+Finished RTL Elaboration : Time (s): cpu = 00:00:28 ; elapsed = 00:00:42 . Memory (MB): peak = 563.801 ; gain = 264.184
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -938,46 +934,43 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:45 . Memory (MB): peak = 592.512 ; gain = 266.004
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 563.801 ; gain = 264.184
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:45 . Memory (MB): peak = 592.512 ; gain = 266.004
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:42 . Memory (MB): peak = 563.801 ; gain = 264.184
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_xbar_0/hdmi_in_xbar_0_ooc.xdc] for cell 'inst'
-Finished Parsing XDC File [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_xbar_0/hdmi_in_xbar_0_ooc.xdc] for cell 'inst'
-Parsing XDC File [C:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_xbar_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_xbar_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 833.766 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 792.129 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 833.766 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.164 . Memory (MB): peak = 835.273 ; gain = 1.508
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 792.129 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.261 . Memory (MB): peak = 795.324 ; gain = 3.195
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:54 ; elapsed = 00:01:15 . Memory (MB): peak = 835.273 ; gain = 508.766
+Finished Constraint Validation : Time (s): cpu = 00:00:48 ; elapsed = 00:01:04 . Memory (MB): peak = 795.324 ; gain = 495.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:54 ; elapsed = 00:01:15 . Memory (MB): peak = 835.273 ; gain = 508.766
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:48 ; elapsed = 00:01:04 . Memory (MB): peak = 795.324 ; gain = 495.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for inst. (constraint file  {C:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_xbar_0_synth_1/dont_touch.xdc}, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:01:15 . Memory (MB): peak = 835.273 ; gain = 508.766
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:01:04 . Memory (MB): peak = 795.324 ; gain = 495.707
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4471] merging register 'gen_axi.s_axi_rvalid_i_reg' into 'gen_axi.read_cs_reg[0:0]' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:3669]
+INFO: [Synth 8-4471] merging register 'gen_axi.s_axi_rvalid_i_reg' into 'gen_axi.read_cs_reg[0:0]' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:3669]
 INFO: [Synth 8-802] inferred FSM for state register 'gen_axi.write_cs_reg' in module 'axi_crossbar_v2_1_19_decerr_slave'
 INFO: [Synth 8-5546] ROM "gen_axi.read_cs" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "gen_axi.s_axi_rlast_i" won't be mapped to RAM because it is too sparse
@@ -988,8 +981,8 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_d
 INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'axi_data_fifo_v2_1_17_axic_reg_srl_fifo__parameterized1'
 INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:3092]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:3087]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:3092]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:3087]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -1026,7 +1019,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'axi_data_fifo_v2_1_17_axic_reg_srl_fifo__parameterized1'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:57 ; elapsed = 00:01:18 . Memory (MB): peak = 835.273 ; gain = 508.766
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:50 ; elapsed = 00:01:07 . Memory (MB): peak = 795.324 ; gain = 495.707
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1262,46 +1255,124 @@ Start Cross Boundary and Area Optimization
 Warning: Parallel synthesis criteria is not met 
 INFO: [Synth 8-5546] ROM "gen_axi.s_axi_rlast_i" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "gen_axi.read_cs" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.grant_hot_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.grant_hot_reg[1] )
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_awready[1] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_wready[1] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_bid[1] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_bid[0] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_bresp[3] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_bresp[2] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_bvalid[1] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_arready[0] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rid[1] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rid[0] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[63] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[62] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[61] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[60] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[59] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[58] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[57] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[56] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[55] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[54] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[53] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[52] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[51] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[50] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[49] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[48] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[47] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[46] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[45] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[44] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[43] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[42] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[41] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[40] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[39] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[38] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[37] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[36] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[35] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[34] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[33] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[32] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[31] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[30] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[29] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[28] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[27] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[26] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[25] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[24] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[23] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[22] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[21] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[20] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[19] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[18] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[17] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[16] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[15] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[14] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[13] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[12] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[11] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[10] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[9] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[8] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[7] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[6] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[5] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[4] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[3] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[2] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[1] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rdata[0] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rresp[1] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rresp[0] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rlast[0] driven by constant 0
+INFO: [Synth 8-3917] design hdmi_in_xbar_0 has port s_axi_rvalid[0] driven by constant 0
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.grant_hot_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.grant_hot_reg[1] )
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[1].reg_slice_mi/r.r_pipe/aresetn_d_reg[0]' (FDR) to 'inst/gen_samd.crossbar_samd/gen_master_slots[0].reg_slice_mi/b.b_pipe/aresetn_d_reg[0]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[1].reg_slice_mi/b.b_pipe/aresetn_d_reg[0]' (FDR) to 'inst/gen_samd.crossbar_samd/gen_master_slots[0].reg_slice_mi/b.b_pipe/aresetn_d_reg[0]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[0].reg_slice_mi/r.r_pipe/aresetn_d_reg[0]' (FDR) to 'inst/gen_samd.crossbar_samd/gen_master_slots[0].reg_slice_mi/b.b_pipe/aresetn_d_reg[0]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.last_rr_hot_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.last_rr_hot_reg[0] )
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.qual_reg_reg[0]' (FDR) to 'inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.qual_reg_reg[1]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_read.si_transactor_ar/gen_single_thread.active_region_reg[3]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_read.si_transactor_ar/gen_single_thread.active_region_reg[0]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_read.si_transactor_ar/gen_single_thread.active_region_reg[0]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_read.si_transactor_ar/gen_single_thread.active_region_reg[1]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_read.si_transactor_ar/gen_single_thread.active_region_reg[1]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_read.si_transactor_ar/gen_single_thread.active_region_reg[2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_read.si_transactor_ar/gen_single_thread.active_region_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_read.si_transactor_ar/gen_single_thread.active_region_reg[2] )
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.si_transactor_aw/gen_single_thread.active_region_reg[3]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.si_transactor_aw/gen_single_thread.active_region_reg[0]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.si_transactor_aw/gen_single_thread.active_region_reg[0]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.si_transactor_aw/gen_single_thread.active_region_reg[1]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.si_transactor_aw/gen_single_thread.active_region_reg[1]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.si_transactor_aw/gen_single_thread.active_region_reg[2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.si_transactor_aw/gen_single_thread.active_region_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.si_transactor_aw/gen_single_thread.active_region_reg[2] )
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[0].reg_slice_mi/r.r_pipe/aresetn_d_reg[1]' (FDR) to 'inst/gen_samd.crossbar_samd/gen_master_slots[0].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[1].reg_slice_mi/r.r_pipe/aresetn_d_reg[1]' (FDR) to 'inst/gen_samd.crossbar_samd/gen_master_slots[0].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[0].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]' (FDR) to 'inst/gen_samd.crossbar_samd/gen_master_slots[1].reg_slice_mi/b.b_pipe/aresetn_d_reg[1]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/areset_d1_reg' (FD) to 'inst/gen_samd.crossbar_samd/gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/areset_d1_reg'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_grant_enc_i_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_grant_enc_i_reg[0] )
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/areset_d1_reg' (FD) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.wdata_router_w/wrouter_aw_fifo/areset_d1_reg'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.m_mesg_i_reg[49]' (FDRE) to 'inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.m_mesg_i_reg[50]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.m_mesg_i_reg[50]' (FDRE) to 'inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.m_mesg_i_reg[51]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.m_mesg_i_reg[51]' (FDRE) to 'inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.m_mesg_i_reg[52]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.m_mesg_i_reg[52] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/gen_samd.crossbar_samd/addr_arbiter_ar/gen_arbiter.m_mesg_i_reg[52] )
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_mesg_i_reg[49]' (FDRE) to 'inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_mesg_i_reg[0]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_mesg_i_reg[50]' (FDRE) to 'inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_mesg_i_reg[0]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_mesg_i_reg[51]' (FDRE) to 'inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_mesg_i_reg[0]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_mesg_i_reg[52]' (FDRE) to 'inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_mesg_i_reg[0]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_mesg_i_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/gen_samd.crossbar_samd/addr_arbiter_aw/gen_arbiter.m_mesg_i_reg[0] )
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_read.si_transactor_ar/gen_single_thread.active_target_hot_reg[1]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[1].gen_si_read.si_transactor_ar/gen_single_thread.active_target_enc_reg[0]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.si_transactor_aw/gen_single_thread.active_target_hot_reg[1]' (FDRE) to 'inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.si_transactor_aw/gen_single_thread.active_target_enc_reg[0]'
 INFO: [Synth 8-3886] merging instance 'inst/gen_samd.crossbar_samd/gen_master_slots[1].reg_slice_mi/b.b_pipe/m_payload_i_reg[0]' (FDE) to 'inst/gen_samd.crossbar_samd/gen_master_slots[1].reg_slice_mi/b.b_pipe/m_payload_i_reg[1]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\gen_samd.crossbar_samd/gen_master_slots[1].reg_slice_mi/b.b_pipe/m_payload_i_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\gen_samd.crossbar_samd/gen_master_slots[1].reg_slice_mi/b.b_pipe/m_payload_i_reg[2] )
-INFO: [Synth 8-3332] Sequential element (gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.wdata_router_w/wrouter_aw_fifo/FSM_onehot_state_reg[2]) is unused and will be removed from module axi_crossbar_v2_1_19_axi_crossbar.
-INFO: [Synth 8-3332] Sequential element (gen_samd.crossbar_samd/gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[2]) is unused and will be removed from module axi_crossbar_v2_1_19_axi_crossbar.
-INFO: [Synth 8-3332] Sequential element (gen_samd.crossbar_samd/gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[2]) is unused and will be removed from module axi_crossbar_v2_1_19_axi_crossbar.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\inst/gen_samd.crossbar_samd/gen_master_slots[1].reg_slice_mi/b.b_pipe/m_payload_i_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/gen_samd.crossbar_samd/gen_master_slots[1].reg_slice_mi/b.b_pipe/m_payload_i_reg[2] )
+INFO: [Synth 8-3332] Sequential element (inst/gen_samd.crossbar_samd/gen_slave_slots[0].gen_si_write.wdata_router_w/wrouter_aw_fifo/FSM_onehot_state_reg[2]) is unused and will be removed from module hdmi_in_xbar_0.
+INFO: [Synth 8-3332] Sequential element (inst/gen_samd.crossbar_samd/gen_master_slots[0].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[2]) is unused and will be removed from module hdmi_in_xbar_0.
+INFO: [Synth 8-3332] Sequential element (inst/gen_samd.crossbar_samd/gen_master_slots[1].gen_mi_write.wdata_mux_w/gen_wmux.wmux_aw_fifo/FSM_onehot_state_reg[2]) is unused and will be removed from module hdmi_in_xbar_0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:03 ; elapsed = 00:01:26 . Memory (MB): peak = 835.273 ; gain = 508.766
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:01:13 . Memory (MB): peak = 795.324 ; gain = 495.707
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1313,13 +1384,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:26 ; elapsed = 00:01:56 . Memory (MB): peak = 835.273 ; gain = 508.766
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:15 ; elapsed = 00:01:34 . Memory (MB): peak = 795.324 ; gain = 495.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:30 ; elapsed = 00:02:01 . Memory (MB): peak = 851.309 ; gain = 524.801
+Finished Timing Optimization : Time (s): cpu = 00:01:15 ; elapsed = 00:01:34 . Memory (MB): peak = 795.324 ; gain = 495.707
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1331,7 +1402,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:31 ; elapsed = 00:02:03 . Memory (MB): peak = 859.168 ; gain = 532.660
+Finished Technology Mapping : Time (s): cpu = 00:01:16 ; elapsed = 00:01:35 . Memory (MB): peak = 813.395 ; gain = 513.777
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1355,7 +1426,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:34 ; elapsed = 00:02:06 . Memory (MB): peak = 859.168 ; gain = 532.660
+Finished IO Insertion : Time (s): cpu = 00:01:18 ; elapsed = 00:01:37 . Memory (MB): peak = 813.395 ; gain = 513.777
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1368,7 +1439,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:34 ; elapsed = 00:02:06 . Memory (MB): peak = 859.168 ; gain = 532.660
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:18 ; elapsed = 00:01:37 . Memory (MB): peak = 813.395 ; gain = 513.777
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1380,25 +1451,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:34 ; elapsed = 00:02:06 . Memory (MB): peak = 859.168 ; gain = 532.660
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:18 ; elapsed = 00:01:37 . Memory (MB): peak = 813.395 ; gain = 513.777
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:34 ; elapsed = 00:02:07 . Memory (MB): peak = 859.168 ; gain = 532.660
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:18 ; elapsed = 00:01:37 . Memory (MB): peak = 813.395 ; gain = 513.777
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:34 ; elapsed = 00:02:07 . Memory (MB): peak = 859.168 ; gain = 532.660
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:18 ; elapsed = 00:01:37 . Memory (MB): peak = 813.395 ; gain = 513.777
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:34 ; elapsed = 00:02:07 . Memory (MB): peak = 859.168 ; gain = 532.660
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:18 ; elapsed = 00:01:37 . Memory (MB): peak = 813.395 ; gain = 513.777
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1416,10 +1487,10 @@ Report Cell Usage:
 +------+--------+------+
 |1     |LUT1    |     7|
 |2     |LUT2    |   204|
-|3     |LUT3    |   100|
-|4     |LUT4    |    38|
-|5     |LUT5    |    39|
-|6     |LUT6    |    56|
+|3     |LUT3    |    99|
+|4     |LUT4    |    39|
+|5     |LUT5    |    40|
+|6     |LUT6    |    53|
 |7     |SRLC32E |     3|
 |8     |FDRE    |   337|
 |9     |FDSE    |    13|
@@ -1429,58 +1500,58 @@ Report Instance Areas:
 +------+---------------------------------------------------------+-----------------------------------------------------------------+------+
 |      |Instance                                                 |Module                                                           |Cells |
 +------+---------------------------------------------------------+-----------------------------------------------------------------+------+
-|1     |top                                                      |                                                                 |   797|
-|2     |  inst                                                   |axi_crossbar_v2_1_19_axi_crossbar                                |   797|
-|3     |    \gen_samd.crossbar_samd                              |axi_crossbar_v2_1_19_crossbar                                    |   797|
-|4     |      addr_arbiter_ar                                    |axi_crossbar_v2_1_19_addr_arbiter                                |   149|
-|5     |      addr_arbiter_aw                                    |axi_crossbar_v2_1_19_addr_arbiter_0                              |    95|
-|6     |      \gen_decerr_slave.decerr_slave_inst                |axi_crossbar_v2_1_19_decerr_slave                                |    48|
+|1     |top                                                      |                                                                 |   795|
+|2     |  inst                                                   |axi_crossbar_v2_1_19_axi_crossbar                                |   795|
+|3     |    \gen_samd.crossbar_samd                              |axi_crossbar_v2_1_19_crossbar                                    |   774|
+|4     |      addr_arbiter_ar                                    |axi_crossbar_v2_1_19_addr_arbiter                                |   145|
+|5     |      addr_arbiter_aw                                    |axi_crossbar_v2_1_19_addr_arbiter_0                              |    94|
+|6     |      \gen_decerr_slave.decerr_slave_inst                |axi_crossbar_v2_1_19_decerr_slave                                |    38|
 |7     |      \gen_master_slots[0].gen_mi_write.wdata_mux_w      |axi_crossbar_v2_1_19_wdata_mux                                   |    96|
 |8     |        \gen_wmux.wmux_aw_fifo                           |axi_data_fifo_v2_1_17_axic_reg_srl_fifo__parameterized0          |    96|
-|9     |          \gen_srls[0].gen_rep[0].srl_nx1                |axi_data_fifo_v2_1_17_ndeep_srl__parameterized0                  |     4|
-|10    |      \gen_master_slots[0].reg_slice_mi                  |axi_register_slice_v2_1_18_axi_register_slice                    |   255|
-|11    |        \b.b_pipe                                        |axi_register_slice_v2_1_18_axic_register_slice__parameterized1_4 |    12|
+|9     |          \gen_srls[0].gen_rep[0].srl_nx1                |axi_data_fifo_v2_1_17_ndeep_srl__parameterized0                  |     3|
+|10    |      \gen_master_slots[0].reg_slice_mi                  |axi_register_slice_v2_1_18_axi_register_slice                    |   253|
+|11    |        \b.b_pipe                                        |axi_register_slice_v2_1_18_axic_register_slice__parameterized1_4 |    10|
 |12    |        \r.r_pipe                                        |axi_register_slice_v2_1_18_axic_register_slice__parameterized2_5 |   243|
-|13    |      \gen_master_slots[1].gen_mi_write.wdata_mux_w      |axi_crossbar_v2_1_19_wdata_mux__parameterized0                   |    19|
-|14    |        \gen_wmux.wmux_aw_fifo                           |axi_data_fifo_v2_1_17_axic_reg_srl_fifo__parameterized1          |    19|
-|15    |          \gen_srls[0].gen_rep[0].srl_nx1                |axi_data_fifo_v2_1_17_ndeep_srl_3                                |     4|
-|16    |      \gen_master_slots[1].reg_slice_mi                  |axi_register_slice_v2_1_18_axi_register_slice_1                  |    21|
-|17    |        \b.b_pipe                                        |axi_register_slice_v2_1_18_axic_register_slice__parameterized1   |     5|
-|18    |        \r.r_pipe                                        |axi_register_slice_v2_1_18_axic_register_slice__parameterized2   |    16|
+|13    |      \gen_master_slots[1].gen_mi_write.wdata_mux_w      |axi_crossbar_v2_1_19_wdata_mux__parameterized0                   |    20|
+|14    |        \gen_wmux.wmux_aw_fifo                           |axi_data_fifo_v2_1_17_axic_reg_srl_fifo__parameterized1          |    20|
+|15    |          \gen_srls[0].gen_rep[0].srl_nx1                |axi_data_fifo_v2_1_17_ndeep_srl_3                                |     3|
+|16    |      \gen_master_slots[1].reg_slice_mi                  |axi_register_slice_v2_1_18_axi_register_slice_1                  |    19|
+|17    |        \b.b_pipe                                        |axi_register_slice_v2_1_18_axic_register_slice__parameterized1   |     4|
+|18    |        \r.r_pipe                                        |axi_register_slice_v2_1_18_axic_register_slice__parameterized2   |    15|
 |19    |      \gen_slave_slots[0].gen_si_write.si_transactor_aw  |axi_crossbar_v2_1_19_si_transactor                               |    14|
-|20    |      \gen_slave_slots[0].gen_si_write.splitter_aw_si    |axi_crossbar_v2_1_19_splitter                                    |     9|
-|21    |      \gen_slave_slots[0].gen_si_write.wdata_router_w    |axi_crossbar_v2_1_19_wdata_router                                |    30|
-|22    |        wrouter_aw_fifo                                  |axi_data_fifo_v2_1_17_axic_reg_srl_fifo                          |    30|
-|23    |          \gen_srls[0].gen_rep[0].srl_nx1                |axi_data_fifo_v2_1_17_ndeep_srl                                  |     4|
-|24    |      \gen_slave_slots[1].gen_si_read.si_transactor_ar   |axi_crossbar_v2_1_19_si_transactor__parameterized0               |    44|
+|20    |      \gen_slave_slots[0].gen_si_write.splitter_aw_si    |axi_crossbar_v2_1_19_splitter                                    |     7|
+|21    |      \gen_slave_slots[0].gen_si_write.wdata_router_w    |axi_crossbar_v2_1_19_wdata_router                                |    26|
+|22    |        wrouter_aw_fifo                                  |axi_data_fifo_v2_1_17_axic_reg_srl_fifo                          |    26|
+|23    |          \gen_srls[0].gen_rep[0].srl_nx1                |axi_data_fifo_v2_1_17_ndeep_srl                                  |     3|
+|24    |      \gen_slave_slots[1].gen_si_read.si_transactor_ar   |axi_crossbar_v2_1_19_si_transactor__parameterized0               |    45|
 |25    |      splitter_aw_mi                                     |axi_crossbar_v2_1_19_splitter_2                                  |     4|
 +------+---------------------------------------------------------+-----------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:34 ; elapsed = 00:02:07 . Memory (MB): peak = 859.168 ; gain = 532.660
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:18 ; elapsed = 00:01:37 . Memory (MB): peak = 813.395 ; gain = 513.777
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 420 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:47 ; elapsed = 00:01:45 . Memory (MB): peak = 859.168 ; gain = 289.898
-Synthesis Optimization Complete : Time (s): cpu = 00:01:34 ; elapsed = 00:02:07 . Memory (MB): peak = 859.168 ; gain = 532.660
+Synthesis finished with 0 errors, 0 critical warnings and 410 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:01:22 . Memory (MB): peak = 813.395 ; gain = 282.254
+Synthesis Optimization Complete : Time (s): cpu = 00:01:19 ; elapsed = 00:01:38 . Memory (MB): peak = 813.395 ; gain = 513.777
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 859.168 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 813.395 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-150 Infos, 117 Warnings, 0 Critical Warnings and 0 Errors encountered.
+228 Infos, 117 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:39 ; elapsed = 00:02:14 . Memory (MB): peak = 859.168 ; gain = 539.559
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 859.168 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:22 ; elapsed = 00:01:42 . Memory (MB): peak = 813.395 ; gain = 520.672
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 813.395 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_xbar_0_synth_1/hdmi_in_xbar_0.dcp' has been generated.
-WARNING: [Coretcl 2-1488] Problem adding IP cache entry: Directory already exists: c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.cache/ip/2018.3/e684f92ab5b92d13
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_xbar_0_synth_1/hdmi_in_xbar_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP hdmi_in_xbar_0, cache-ID = cdcc88f57dd46743
 INFO: [Coretcl 2-1174] Renamed 24 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 859.168 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 813.395 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_xbar_0_synth_1/hdmi_in_xbar_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_xbar_0_synth_1/hdmi_in_xbar_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file hdmi_in_xbar_0_utilization_synth.rpt -pb hdmi_in_xbar_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jan 10 11:20:16 2019...
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 10 14:54:44 2019...

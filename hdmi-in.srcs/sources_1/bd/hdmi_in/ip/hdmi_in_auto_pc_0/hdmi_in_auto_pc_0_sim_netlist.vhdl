@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Thu Jan 10 11:24:34 2019
--- Host        : NicoLenovo running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim {c:/Users/bruger/OneDrive - Danmarks Tekniske
---               Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_auto_pc_0/hdmi_in_auto_pc_0_sim_netlist.vhdl}
+-- Date        : Thu Jan 10 14:56:03 2019
+-- Host        : DESKTOP-D2B4873 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim -rename_top hdmi_in_auto_pc_0 -prefix
+--               hdmi_in_auto_pc_0_ hdmi_in_auto_pc_0_sim_netlist.vhdl
 -- Design      : hdmi_in_auto_pc_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -29,8 +29,6 @@ entity hdmi_in_auto_pc_0_axi_protocol_converter_v2_1_18_b_downsizer is
     dout : in STD_LOGIC_VECTOR ( 4 downto 0 );
     m_axi_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_in_auto_pc_0_axi_protocol_converter_v2_1_18_b_downsizer : entity is "axi_protocol_converter_v2_1_18_b_downsizer";
 end hdmi_in_auto_pc_0_axi_protocol_converter_v2_1_18_b_downsizer;
 
 architecture STRUCTURE of hdmi_in_auto_pc_0_axi_protocol_converter_v2_1_18_b_downsizer is
@@ -279,8 +277,6 @@ entity hdmi_in_auto_pc_0_axi_protocol_converter_v2_1_18_w_axi3_conv is
     empty : in STD_LOGIC;
     dout : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_in_auto_pc_0_axi_protocol_converter_v2_1_18_w_axi3_conv : entity is "axi_protocol_converter_v2_1_18_w_axi3_conv";
 end hdmi_in_auto_pc_0_axi_protocol_converter_v2_1_18_w_axi3_conv;
 
 architecture STRUCTURE of hdmi_in_auto_pc_0_axi_protocol_converter_v2_1_18_w_axi3_conv is
@@ -608,8 +604,6 @@ entity hdmi_in_auto_pc_0_xpm_cdc_async_rst is
   attribute INIT_SYNC_FF of hdmi_in_auto_pc_0_xpm_cdc_async_rst : entity is 0;
   attribute INV_DEF_VAL : string;
   attribute INV_DEF_VAL of hdmi_in_auto_pc_0_xpm_cdc_async_rst : entity is "1'b1";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_in_auto_pc_0_xpm_cdc_async_rst : entity is "xpm_cdc_async_rst";
   attribute RST_ACTIVE_HIGH : integer;
   attribute RST_ACTIVE_HIGH of hdmi_in_auto_pc_0_xpm_cdc_async_rst : entity is 1;
   attribute VERSION : integer;
@@ -814,8 +808,6 @@ entity hdmi_in_auto_pc_0_dmem is
     I28 : in STD_LOGIC_VECTOR ( 4 downto 0 );
     \gpr1.dout_i_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_in_auto_pc_0_dmem : entity is "dmem";
 end hdmi_in_auto_pc_0_dmem;
 
 architecture STRUCTURE of hdmi_in_auto_pc_0_dmem is
@@ -1108,8 +1100,6 @@ entity hdmi_in_auto_pc_0_rd_bin_cntr is
     clk : in STD_LOGIC;
     \gc0.count_d1_reg[0]_0\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_in_auto_pc_0_rd_bin_cntr : entity is "rd_bin_cntr";
 end hdmi_in_auto_pc_0_rd_bin_cntr;
 
 architecture STRUCTURE of hdmi_in_auto_pc_0_rd_bin_cntr is
@@ -1672,8 +1662,6 @@ entity hdmi_in_auto_pc_0_rd_fwft is
     rd_en : in STD_LOGIC;
     \gc0.count_reg[4]\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_in_auto_pc_0_rd_fwft : entity is "rd_fwft";
 end hdmi_in_auto_pc_0_rd_fwft;
 
 architecture STRUCTURE of hdmi_in_auto_pc_0_rd_fwft is
@@ -2374,8 +2362,6 @@ entity hdmi_in_auto_pc_0_rd_status_flags_ss is
     clk : in STD_LOGIC;
     ram_empty_fb_i_reg_0 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_in_auto_pc_0_rd_status_flags_ss : entity is "rd_status_flags_ss";
 end hdmi_in_auto_pc_0_rd_status_flags_ss;
 
 architecture STRUCTURE of hdmi_in_auto_pc_0_rd_status_flags_ss is
@@ -2544,8 +2530,6 @@ entity hdmi_in_auto_pc_0_wr_bin_cntr is
     clk : in STD_LOGIC;
     AR : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_in_auto_pc_0_wr_bin_cntr : entity is "wr_bin_cntr";
 end hdmi_in_auto_pc_0_wr_bin_cntr;
 
 architecture STRUCTURE of hdmi_in_auto_pc_0_wr_bin_cntr is
@@ -3442,8 +3426,6 @@ entity hdmi_in_auto_pc_0_wr_status_flags_ss is
     AR : in STD_LOGIC_VECTOR ( 0 to 0 );
     wr_en : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_in_auto_pc_0_wr_status_flags_ss : entity is "wr_status_flags_ss";
 end hdmi_in_auto_pc_0_wr_status_flags_ss;
 
 architecture STRUCTURE of hdmi_in_auto_pc_0_wr_status_flags_ss is
@@ -3704,8 +3686,6 @@ entity hdmi_in_auto_pc_0_memory is
     I28 : in STD_LOGIC_VECTOR ( 4 downto 0 );
     \gpr1.dout_i_reg[0]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_in_auto_pc_0_memory : entity is "memory";
 end hdmi_in_auto_pc_0_memory;
 
 architecture STRUCTURE of hdmi_in_auto_pc_0_memory is
@@ -3939,8 +3919,6 @@ entity hdmi_in_auto_pc_0_rd_logic is
     \gc0.count_d1_reg[0]\ : in STD_LOGIC;
     rd_en : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_in_auto_pc_0_rd_logic : entity is "rd_logic";
 end hdmi_in_auto_pc_0_rd_logic;
 
 architecture STRUCTURE of hdmi_in_auto_pc_0_rd_logic is
@@ -4100,8 +4078,6 @@ entity hdmi_in_auto_pc_0_reset_blk_ramfifo is
     rst : in STD_LOGIC;
     clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_in_auto_pc_0_reset_blk_ramfifo : entity is "reset_blk_ramfifo";
 end hdmi_in_auto_pc_0_reset_blk_ramfifo;
 
 architecture STRUCTURE of hdmi_in_auto_pc_0_reset_blk_ramfifo is
@@ -4371,8 +4347,6 @@ entity hdmi_in_auto_pc_0_wr_logic is
     ram_empty_fb_i_i_3 : in STD_LOGIC_VECTOR ( 4 downto 0 );
     ram_empty_fb_i_i_2 : in STD_LOGIC_VECTOR ( 4 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_in_auto_pc_0_wr_logic : entity is "wr_logic";
 end hdmi_in_auto_pc_0_wr_logic;
 
 architecture STRUCTURE of hdmi_in_auto_pc_0_wr_logic is
@@ -4530,8 +4504,6 @@ entity hdmi_in_auto_pc_0_fifo_generator_ramfifo is
     rd_en : in STD_LOGIC;
     wr_en : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_in_auto_pc_0_fifo_generator_ramfifo : entity is "fifo_generator_ramfifo";
 end hdmi_in_auto_pc_0_fifo_generator_ramfifo;
 
 architecture STRUCTURE of hdmi_in_auto_pc_0_fifo_generator_ramfifo is
@@ -4786,8 +4758,6 @@ entity hdmi_in_auto_pc_0_fifo_generator_top is
     rd_en : in STD_LOGIC;
     wr_en : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_in_auto_pc_0_fifo_generator_top : entity is "fifo_generator_top";
 end hdmi_in_auto_pc_0_fifo_generator_top;
 
 architecture STRUCTURE of hdmi_in_auto_pc_0_fifo_generator_top is
@@ -4885,8 +4855,6 @@ entity hdmi_in_auto_pc_0_fifo_generator_v13_2_3_synth is
     rd_en : in STD_LOGIC;
     wr_en : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_in_auto_pc_0_fifo_generator_v13_2_3_synth : entity is "fifo_generator_v13_2_3_synth";
 end hdmi_in_auto_pc_0_fifo_generator_v13_2_3_synth;
 
 architecture STRUCTURE of hdmi_in_auto_pc_0_fifo_generator_v13_2_3_synth is
@@ -5611,8 +5579,6 @@ entity hdmi_in_auto_pc_0_fifo_generator_v13_2_3 is
   attribute C_WR_PNTR_WIDTH_WRCH of hdmi_in_auto_pc_0_fifo_generator_v13_2_3 : entity is 4;
   attribute C_WR_RESPONSE_LATENCY : integer;
   attribute C_WR_RESPONSE_LATENCY of hdmi_in_auto_pc_0_fifo_generator_v13_2_3 : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_in_auto_pc_0_fifo_generator_v13_2_3 : entity is "fifo_generator_v13_2_3";
 end hdmi_in_auto_pc_0_fifo_generator_v13_2_3;
 
 architecture STRUCTURE of hdmi_in_auto_pc_0_fifo_generator_v13_2_3 is
@@ -8826,8 +8792,6 @@ entity hdmi_in_auto_pc_0_axi_data_fifo_v2_1_17_fifo_gen is
     areset_d : in STD_LOGIC_VECTOR ( 0 to 0 );
     command_ongoing_reg : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_in_auto_pc_0_axi_data_fifo_v2_1_17_fifo_gen : entity is "axi_data_fifo_v2_1_17_fifo_gen";
 end hdmi_in_auto_pc_0_axi_data_fifo_v2_1_17_fifo_gen;
 
 architecture STRUCTURE of hdmi_in_auto_pc_0_axi_data_fifo_v2_1_17_fifo_gen is
@@ -12133,8 +12097,6 @@ entity hdmi_in_auto_pc_0_axi_data_fifo_v2_1_17_axic_fifo is
     areset_d : in STD_LOGIC_VECTOR ( 0 to 0 );
     command_ongoing_reg : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_in_auto_pc_0_axi_data_fifo_v2_1_17_axic_fifo : entity is "axi_data_fifo_v2_1_17_axic_fifo";
 end hdmi_in_auto_pc_0_axi_data_fifo_v2_1_17_axic_fifo;
 
 architecture STRUCTURE of hdmi_in_auto_pc_0_axi_data_fifo_v2_1_17_axic_fifo is
@@ -12427,8 +12389,6 @@ entity hdmi_in_auto_pc_0_axi_protocol_converter_v2_1_18_a_axi3_conv is
     s_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awqos : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_in_auto_pc_0_axi_protocol_converter_v2_1_18_a_axi3_conv : entity is "axi_protocol_converter_v2_1_18_a_axi3_conv";
 end hdmi_in_auto_pc_0_axi_protocol_converter_v2_1_18_a_axi3_conv;
 
 architecture STRUCTURE of hdmi_in_auto_pc_0_axi_protocol_converter_v2_1_18_a_axi3_conv is
@@ -18915,8 +18875,6 @@ entity hdmi_in_auto_pc_0_axi_protocol_converter_v2_1_18_axi3_conv is
     s_axi_awvalid : in STD_LOGIC;
     s_axi_arvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_in_auto_pc_0_axi_protocol_converter_v2_1_18_axi3_conv : entity is "axi_protocol_converter_v2_1_18_axi3_conv";
 end hdmi_in_auto_pc_0_axi_protocol_converter_v2_1_18_axi3_conv;
 
 architecture STRUCTURE of hdmi_in_auto_pc_0_axi_protocol_converter_v2_1_18_axi3_conv is
@@ -19177,8 +19135,6 @@ entity hdmi_in_auto_pc_0_axi_protocol_converter_v2_1_18_axi_protocol_converter i
   attribute C_TRANSLATION_MODE of hdmi_in_auto_pc_0_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is 2;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of hdmi_in_auto_pc_0_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of hdmi_in_auto_pc_0_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is "axi_protocol_converter_v2_1_18_axi_protocol_converter";
   attribute P_AXI3 : integer;
   attribute P_AXI3 of hdmi_in_auto_pc_0_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is 1;
   attribute P_AXI4 : integer;
@@ -19471,7 +19427,7 @@ architecture STRUCTURE of hdmi_in_auto_pc_0 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of aclk : signal is "xilinx.com:signal:clock:1.0 CLK CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of aclk : signal is "XIL_INTERFACENAME CLK, FREQ_HZ 142857132, PHASE 0.000, CLK_DOMAIN hdmi_in_processing_system7_0_0_FCLK_CLK1, ASSOCIATED_BUSIF S_AXI:M_AXI, ASSOCIATED_RESET ARESETN, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of aclk : signal is "XIL_INTERFACENAME CLK, FREQ_HZ 1.42857e+08, PHASE 0.000, CLK_DOMAIN hdmi_in_processing_system7_0_0_FCLK_CLK1, ASSOCIATED_BUSIF S_AXI:M_AXI, ASSOCIATED_RESET ARESETN, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of aresetn : signal is "xilinx.com:signal:reset:1.0 RST RST";
   attribute X_INTERFACE_PARAMETER of aresetn : signal is "XIL_INTERFACENAME RST, POLARITY ACTIVE_LOW, INSERT_VIP 0, TYPE INTERCONNECT";
   attribute X_INTERFACE_INFO of m_axi_arready : signal is "xilinx.com:interface:aximm:1.0 M_AXI ARREADY";
@@ -19482,7 +19438,7 @@ architecture STRUCTURE of hdmi_in_auto_pc_0 is
   attribute X_INTERFACE_INFO of m_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 M_AXI BVALID";
   attribute X_INTERFACE_INFO of m_axi_rlast : signal is "xilinx.com:interface:aximm:1.0 M_AXI RLAST";
   attribute X_INTERFACE_INFO of m_axi_rready : signal is "xilinx.com:interface:aximm:1.0 M_AXI RREADY";
-  attribute X_INTERFACE_PARAMETER of m_axi_rready : signal is "XIL_INTERFACENAME M_AXI, DATA_WIDTH 64, PROTOCOL AXI3, FREQ_HZ 142857132, ID_WIDTH 1, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 16, PHASE 0.000, CLK_DOMAIN hdmi_in_processing_system7_0_0_FCLK_CLK1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of m_axi_rready : signal is "XIL_INTERFACENAME M_AXI, DATA_WIDTH 64, PROTOCOL AXI3, FREQ_HZ 1.42857e+08, ID_WIDTH 1, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 16, PHASE 0.000, CLK_DOMAIN hdmi_in_processing_system7_0_0_FCLK_CLK1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of m_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 M_AXI RVALID";
   attribute X_INTERFACE_INFO of m_axi_wlast : signal is "xilinx.com:interface:aximm:1.0 M_AXI WLAST";
   attribute X_INTERFACE_INFO of m_axi_wready : signal is "xilinx.com:interface:aximm:1.0 M_AXI WREADY";
@@ -19495,7 +19451,7 @@ architecture STRUCTURE of hdmi_in_auto_pc_0 is
   attribute X_INTERFACE_INFO of s_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI BVALID";
   attribute X_INTERFACE_INFO of s_axi_rlast : signal is "xilinx.com:interface:aximm:1.0 S_AXI RLAST";
   attribute X_INTERFACE_INFO of s_axi_rready : signal is "xilinx.com:interface:aximm:1.0 S_AXI RREADY";
-  attribute X_INTERFACE_PARAMETER of s_axi_rready : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 64, PROTOCOL AXI4, FREQ_HZ 142857132, ID_WIDTH 1, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 1, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 32, PHASE 0.000, CLK_DOMAIN hdmi_in_processing_system7_0_0_FCLK_CLK1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of s_axi_rready : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 64, PROTOCOL AXI4, FREQ_HZ 1.42857e+08, ID_WIDTH 1, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 1, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 32, PHASE 0.000, CLK_DOMAIN hdmi_in_processing_system7_0_0_FCLK_CLK1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of s_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 S_AXI RVALID";
   attribute X_INTERFACE_INFO of s_axi_wlast : signal is "xilinx.com:interface:aximm:1.0 S_AXI WLAST";
   attribute X_INTERFACE_INFO of s_axi_wready : signal is "xilinx.com:interface:aximm:1.0 S_AXI WREADY";

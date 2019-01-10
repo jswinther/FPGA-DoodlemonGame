@@ -38,6 +38,7 @@
 #include "xil_cache.h"
 #include "timer_ps/timer_ps.h"
 #include "xparameters.h"
+#include "xscugic.h"
 
 /*
  * XPAR redefines
@@ -51,7 +52,7 @@
 #define VID_GPIO_IRPT_ID XPS_FPGA4_INT_ID
 #define SCU_TIMER_ID XPAR_SCUTIMER_DEVICE_ID
 #define UART_BASEADDR XPAR_PS7_UART_1_BASEADDR
-#define PLAYERGRAVITY 2
+#define jumperGRAVITY 3
 
 /* ------------------------------------------------------------ */
 /*				Global Variables								*/
@@ -97,6 +98,10 @@ int main(void)
 	return 0;
 }
 
+/* ------------------------------------------------------------ */
+/*				Printing										*/
+/* ------------------------------------------------------------ */
+
 void DemoPrintBackground(u8 *frame, int width, int height) {
 	int x, y, iPixelAddr;
 	for(x = 0; x < (width*3); x+=3) {
@@ -122,8 +127,8 @@ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
 	block->anchor = anchor;
 	int i, j, cor;
 	cor = anchor;
-	for(i=0;i<block->width;i+=3) {
-		for(j=0;j<block->height;j++) {
+	for(i=0;i<block->height;i++) {
+		for(j=0;j<block->width;j+=3) {
 			frame[cor + j] = color;
 			frame[cor + j + 1] = color;
 			frame[cor + j + 2] = color;
@@ -133,30 +138,48 @@ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
 
 }
 
-int collisiondetect (struct Block *player, struct Block *platform){
-	int playerw = (player->width)/3;
-	int playerh = player->height;
-	int playera = player->anchor;
-	int playerLC = (playera + playerh) + (playerw*DEMO_STRIDE);
-	int playerRC = playera + playerh;
+void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+	int cor = anchor;
+	int arrayCounter = 0;
+	for(int i = 0; i < imgH; i++) {
+		for(int j = 0; j<imgW*3; j+=3) {
+			if (jumperImg[arrayCounter] != 255){
+			frame[cor + j + 0] = jumperImg[arrayCounter + 0];
+			frame[cor + j + 1] = jumperImg[arrayCounter + 1];
+			frame[cor + j + 2] = jumperImg[arrayCounter + 2];
+			arrayCounter += 3;
+			} else {
+				arrayCounter+=3;
+			}
+
+
+		}
+		cor = cor + DEMO_STRIDE;
+	}
+
+}
+
+int collisiondetect (struct Block *jumper, struct Block *platform){
+	int jumperw = (jumper->height);
+	int jumperh = jumper->width;
+	int jumpera = jumper->anchor;
+	int jumperLC = (jumpera + jumperh) + (jumperw*DEMO_STRIDE);
+	int jumperRC = jumpera + jumperh;
 
 
 
-	int platformw = (platform->width)/3;
-	int platformh = platform->height;
+	int platformw = (platform->height);
+	int platformh = platform->width;
 	int platforma = platform->anchor;
 	int platformLT = platforma + (platformw*DEMO_STRIDE);
-	int Stride = DEMO_STRIDE;
 	int platformRT = platforma;
 	int g;
 	int singleStepHeight = 0;
-	int returnStatus = 0;
 	for(int j = 0; j < platformh; j++){
 
 	for(g = platformRT + singleStepHeight; g <= platformLT; g+=DEMO_STRIDE) {
 
-			if(g == playerLC || g == playerRC) {
-				returnStatus = 1;
+			if(g == jumperLC || g == jumperRC) {
 				return 1;
 
 			}
@@ -172,21 +195,22 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 	/**
 		 * Generate Sprite.
 		 */
-		struct Block playerBlock = {0, 200, 200, 0, 0};
-		struct Block *player = &playerBlock;
-	int playerStart = DEMO_STRIDE*539+DEMO_STRIDE-(playerBlock.width/2);
-	int pos = 0;
-		playerBlock.anchor = playerStart;
-		playerBlock.floor = DEMO_STRIDE - playerBlock.anchor + playerBlock.height;
+		struct Block overWriteBlock = {0, 150, 150, 0, 0};
+		struct Block *overWrite = &overWriteBlock;
+		struct Block jumperBlock = {0, 150, 150, 0, 0};
+		struct Block *jumper = &jumperBlock;
+		int jumperStart = DEMO_STRIDE*539+DEMO_STRIDE-(jumperBlock.width/2);
+		jumperBlock.anchor = jumperStart;
+		jumperBlock.floor = DEMO_STRIDE - jumperBlock.anchor + jumperBlock.height;
 
 	/**
 	 * Print game background.
 	 */
 	DemoPrintBackground(frame, gameWidth, gameHeight);
 	/**
-	 * playerMovement FSM.
+	 * jumperMovement FSM.
 	 */
-	enum Velocity playerVelocity = GROUND;
+	enum Velocity jumperVelocity = GROUND;
 
 	/**
 	 * Generate Platforms.
@@ -202,8 +226,8 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 		random_x = rand() % 990 + 0;
 		random_y = rand() % 5760 + 0;
 		platformBlock[i].anchor = DEMO_STRIDE*random_x+random_y;
-		platformBlock[i].height = 24;
-		platformBlock[i].width = 500;
+		platformBlock[i].height = 160;
+		platformBlock[i].width = 24;
 		platformBlock[i].floor = random_y;
 		platform[i] = &platformBlock[i];
 	}
@@ -226,28 +250,28 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 
 		}
 
-		DemoPrintBlock(frame, player, playerBlock.anchor, 255);
+		DemoPrintBlock(frame, overWrite, overWriteBlock.anchor, 255);
 
-		switch(playerVelocity) {
+		switch(jumperVelocity) {
 		case GROUND:
 			counter = 0;
-			playerBlock.velocity = 24;
-			playerVelocity = AIR;
+			jumperBlock.velocity = 24;
+			jumperVelocity = AIR;
 			break;
 		case AIR:
 			if(counter%10==0) {
-				if(playerBlock.velocity > -24)
-					playerBlock.velocity-=PLAYERGRAVITY;
+				if(jumperBlock.velocity > -24)
+					jumperBlock.velocity-=jumperGRAVITY;
 			}
-			playerBlock.anchor -= playerBlock.velocity;
+			jumperBlock.anchor -= jumperBlock.velocity;
 
-			if(playerBlock.velocity < 0) {
+			if(jumperBlock.velocity < 0) {
 
 				for(k = 0; k < numberofplatforms; k++) {
 
-					if((collisiondetect(player, platform[k]))==1) {
+					if((collisiondetect(jumper, platform[k]))==1) {
 
-						playerVelocity = GROUND;
+						jumperVelocity = GROUND;
 
 					}
 				}
@@ -258,66 +282,12 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 
 
 
-/*
-		switch(playerVelocity) {
-		case HIT:
-			counter = 0;
-			playerVelocity = R1;
-			break;
-		case R1:
-			playerBlock.anchor -= VEL3;
-			counter++;
-			if(counter==50)
-				playerVelocity = R2;
-			break;
-		case R2:
-			playerBlock.anchor -= VEL3;
-
-			counter++;
-			if(counter==120)
-				playerVelocity = R3;
-			break;
-		case R3:
-			playerBlock.anchor -= VEL2;
-
-			counter++;
-			if(counter==180)
-				playerVelocity = TOP;
-			break;
-		case TOP:
-			counter++;
-			if(counter==182)
-				playerVelocity = F3;
-
-			break;
-		case F3:
-			playerBlock.anchor += VEL2;
-
-			counter++;
-			if(counter==242)
-				playerVelocity = F2;
-			break;
-		case F2:
-			playerBlock.anchor += VEL3;
-
-			counter++;
-			if(counter==302)
-				playerVelocity = F1;
-			break;
-		case F1:
-			playerBlock.anchor += VEL3;
-			counter++;
-			if(counter==362)
-				playerVelocity = HIT;
-			break;
-		default:
-			break;
-	}*/
-
+		DemoPrintBlock(frame, overWrite, overWriteBlock.anchor, 255);
 		for(j = 0; j < numberofplatforms; j++) {
 					DemoPrintBlock(frame, platform[j], platform[j]->anchor, 128);
 				}
-		DemoPrintBlock(frame, player, playerBlock.anchor, 0);
+		//DemoPrintBlock(frame, jumper, jumperBlock.anchor, 0);
+		DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 150, 150);
 		Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
 	}
 }
@@ -411,7 +381,6 @@ void DemoInitialize()
 }
 
 void DemoRun() {
-	int playerStart = 3101000;
 	while (XUartPs_IsReceiveData(UART_BASEADDR)) {
 			XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
 	}

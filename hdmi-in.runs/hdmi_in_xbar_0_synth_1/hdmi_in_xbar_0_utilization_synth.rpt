@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Thu Jan 10 11:20:15 2019
-| Host         : NicoLenovo running 64-bit major release  (build 9200)
+| Date         : Thu Jan 10 14:54:43 2019
+| Host         : DESKTOP-D2B4873 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file hdmi_in_xbar_0_utilization_synth.rpt -pb hdmi_in_xbar_0_utilization_synth.pb
 | Design       : hdmi_in_xbar_0
 | Device       : 7z010clg400-1
@@ -150,10 +150,10 @@ Table of Contents
 +----------+------+---------------------+
 | FDRE     |  337 |        Flop & Latch |
 | LUT2     |  204 |                 LUT |
-| LUT3     |  100 |                 LUT |
-| LUT6     |   56 |                 LUT |
-| LUT5     |   39 |                 LUT |
-| LUT4     |   38 |                 LUT |
+| LUT3     |   99 |                 LUT |
+| LUT6     |   53 |                 LUT |
+| LUT5     |   40 |                 LUT |
+| LUT4     |   39 |                 LUT |
 | FDSE     |   13 |        Flop & Latch |
 | LUT1     |    7 |                 LUT |
 | SRLC32E  |    3 |  Distributed Memory |

@@ -2,30 +2,27 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Thu Jan 10 11:19:20 2019
-# Process ID: 12492
-# Current directory: C:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_rst_processing_system7_0_150M_0_synth_1
+# Start of session at: Thu Jan 10 14:52:45 2019
+# Process ID: 14732
+# Current directory: C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_rst_processing_system7_0_150M_0_synth_1
 # Command line: vivado.exe -log hdmi_in_rst_processing_system7_0_150M_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source hdmi_in_rst_processing_system7_0_150M_0.tcl
-# Log file: C:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_rst_processing_system7_0_150M_0_synth_1/hdmi_in_rst_processing_system7_0_150M_0.vds
-# Journal file: C:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_rst_processing_system7_0_150M_0_synth_1\vivado.jou
+# Log file: C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_rst_processing_system7_0_150M_0_synth_1/hdmi_in_rst_processing_system7_0_150M_0.vds
+# Journal file: C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_rst_processing_system7_0_150M_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source hdmi_in_rst_processing_system7_0_150M_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.ipdefs/repo_0_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.ipdefs/repo_0_0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
-update_ip_catalog: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 303.320 ; gain = 25.191
-WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
-Current IP cache path is c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.cache/ip 
 Command: synth_design -top hdmi_in_rst_processing_system7_0_150M_0 -part xc7z010clg400-1 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 1268 
+INFO: Helper process launched with PID 10440 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 423.070 ; gain = 99.688
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 396.477 ; gain = 99.328
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'hdmi_in_rst_processing_system7_0_150M_0' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_rst_processing_system7_0_150M_0/synth/hdmi_in_rst_processing_system7_0_150M_0.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'hdmi_in_rst_processing_system7_0_150M_0' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_rst_processing_system7_0_150M_0/synth/hdmi_in_rst_processing_system7_0_150M_0.vhd:74]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
 	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
@@ -35,8 +32,8 @@ INFO: [Synth 8-638] synthesizing module 'hdmi_in_rst_processing_system7_0_150M_0
 	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
 	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
 	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'proc_sys_reset' declared at 'c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_rst_processing_system7_0_150M_0/synth/hdmi_in_rst_processing_system7_0_150M_0.vhd:129]
-INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at 'c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_rst_processing_system7_0_150M_0/synth/hdmi_in_rst_processing_system7_0_150M_0.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
 	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
@@ -50,37 +47,37 @@ INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [c:/Users/bruger/OneDri
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1392]
+INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1392]
 	Parameter INIT bound to: 1'b1 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1408]
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1408]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1434]
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1434]
 	Parameter INIT bound to: 1'b1 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1457]
+INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1457]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1481]
-INFO: [Synth 8-638] synthesizing module 'lpf' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1481]
+INFO: [Synth 8-638] synthesizing module 'lpf' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
 	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
 	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
 	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
-INFO: [Synth 8-3491] module 'SRL16' declared at 'C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:51683' bound to instance 'POR_SRL_I' of component 'SRL16' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
+INFO: [Synth 8-3491] module 'SRL16' declared at 'C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:51683' bound to instance 'POR_SRL_I' of component 'SRL16' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
 INFO: [Synth 8-6157] synthesizing module 'SRL16' [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:51683]
 	Parameter INIT bound to: 16'b0000000000000000 
 INFO: [Synth 8-6155] done synthesizing module 'SRL16' (1#1) [C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:51683]
-INFO: [Synth 8-638] synthesizing module 'cdc_sync' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 	Parameter C_CDC_TYPE bound to: 1 - type: integer 
 	Parameter C_RESET_STATE bound to: 0 - type: integer 
 	Parameter C_SINGLE_BIT bound to: 1 - type: integer 
@@ -88,33 +85,33 @@ INFO: [Synth 8-638] synthesizing module 'cdc_sync' [c:/Users/bruger/OneDrive - D
 	Parameter C_VECTOR_WIDTH bound to: 2 - type: integer 
 	Parameter C_MTBF_STAGES bound to: 4 - type: integer 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (2#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
-INFO: [Synth 8-256] done synthesizing module 'lpf' (3#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
-INFO: [Synth 8-638] synthesizing module 'sequence_psr' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
-INFO: [Synth 8-638] synthesizing module 'upcnt_n' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (2#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (3#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-638] synthesizing module 'sequence_psr' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
 	Parameter C_SIZE bound to: 6 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (4#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
-INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (5#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
-INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (6#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
-INFO: [Synth 8-256] done synthesizing module 'hdmi_in_rst_processing_system7_0_150M_0' (7#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_rst_processing_system7_0_150M_0/synth/hdmi_in_rst_processing_system7_0_150M_0.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (4#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (5#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (6#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-256] done synthesizing module 'hdmi_in_rst_processing_system7_0_150M_0' (7#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_rst_processing_system7_0_150M_0/synth/hdmi_in_rst_processing_system7_0_150M_0.vhd:74]
 WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_aclk
 WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_resetn
 WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[1]
 WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[0]
 WARNING: [Synth 8-3331] design cdc_sync has unconnected port scndry_resetn
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 478.965 ; gain = 155.582
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 454.262 ; gain = 157.113
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -127,10 +124,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 478.965 ; gain = 155.582
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 454.262 ; gain = 157.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 478.965 ; gain = 155.582
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 454.262 ; gain = 157.113
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -139,44 +136,42 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_rst_processing_system7_0_150M_0/hdmi_in_rst_processing_system7_0_150M_0_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_rst_processing_system7_0_150M_0/hdmi_in_rst_processing_system7_0_150M_0_ooc.xdc] for cell 'U0'
-Parsing XDC File [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_rst_processing_system7_0_150M_0/hdmi_in_rst_processing_system7_0_150M_0_board.xdc] for cell 'U0'
-Finished Parsing XDC File [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_rst_processing_system7_0_150M_0/hdmi_in_rst_processing_system7_0_150M_0_board.xdc] for cell 'U0'
-Parsing XDC File [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_rst_processing_system7_0_150M_0/hdmi_in_rst_processing_system7_0_150M_0.xdc] for cell 'U0'
-Finished Parsing XDC File [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_rst_processing_system7_0_150M_0/hdmi_in_rst_processing_system7_0_150M_0.xdc] for cell 'U0'
-Parsing XDC File [C:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_rst_processing_system7_0_150M_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_rst_processing_system7_0_150M_0_synth_1/dont_touch.xdc]
+Parsing XDC File [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_rst_processing_system7_0_150M_0/hdmi_in_rst_processing_system7_0_150M_0_board.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_rst_processing_system7_0_150M_0/hdmi_in_rst_processing_system7_0_150M_0_board.xdc] for cell 'U0'
+Parsing XDC File [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_rst_processing_system7_0_150M_0/hdmi_in_rst_processing_system7_0_150M_0.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_rst_processing_system7_0_150M_0/hdmi_in_rst_processing_system7_0_150M_0.xdc] for cell 'U0'
+Parsing XDC File [C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_rst_processing_system7_0_150M_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_rst_processing_system7_0_150M_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 808.742 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 769.859 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 13 instances were transformed.
   FDR => FDRE: 12 instances
   SRL16 => SRL16E: 1 instances
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 808.754 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.080 . Memory (MB): peak = 810.250 ; gain = 1.508
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 769.859 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 770.805 ; gain = 0.945
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 810.250 ; gain = 486.867
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 770.805 ; gain = 473.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 810.250 ; gain = 486.867
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 770.805 ; gain = 473.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for U0. (constraint file  {C:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_rst_processing_system7_0_150M_0_synth_1/dont_touch.xdc}, line 9).
+Applied set_property DONT_TOUCH = true for U0. (constraint file  C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_rst_processing_system7_0_150M_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 810.250 ; gain = 486.867
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 770.805 ; gain = 473.656
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
+INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 810.250 ; gain = 486.867
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 770.805 ; gain = 473.656
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -245,7 +240,7 @@ WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GE
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
 WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 810.250 ; gain = 486.867
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:38 . Memory (MB): peak = 770.805 ; gain = 473.656
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -257,13 +252,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:00:58 . Memory (MB): peak = 810.250 ; gain = 486.867
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:01:00 . Memory (MB): peak = 773.684 ; gain = 476.535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:00:58 . Memory (MB): peak = 810.250 ; gain = 486.867
+Finished Timing Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:01:00 . Memory (MB): peak = 773.684 ; gain = 476.535
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -275,7 +270,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:50 ; elapsed = 00:00:58 . Memory (MB): peak = 810.461 ; gain = 487.078
+Finished Technology Mapping : Time (s): cpu = 00:00:47 ; elapsed = 00:01:00 . Memory (MB): peak = 783.215 ; gain = 486.066
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -299,7 +294,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:52 ; elapsed = 00:01:01 . Memory (MB): peak = 810.461 ; gain = 487.078
+Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:01:03 . Memory (MB): peak = 783.215 ; gain = 486.066
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -312,7 +307,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:52 ; elapsed = 00:01:01 . Memory (MB): peak = 810.461 ; gain = 487.078
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:01:03 . Memory (MB): peak = 783.215 ; gain = 486.066
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -324,25 +319,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:52 ; elapsed = 00:01:01 . Memory (MB): peak = 810.461 ; gain = 487.078
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:01:03 . Memory (MB): peak = 783.215 ; gain = 486.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:52 ; elapsed = 00:01:01 . Memory (MB): peak = 810.461 ; gain = 487.078
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:01:03 . Memory (MB): peak = 783.215 ; gain = 486.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:52 ; elapsed = 00:01:01 . Memory (MB): peak = 810.461 ; gain = 487.078
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:01:03 . Memory (MB): peak = 783.215 ; gain = 486.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:52 ; elapsed = 00:01:01 . Memory (MB): peak = 810.461 ; gain = 487.078
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:50 ; elapsed = 00:01:03 . Memory (MB): peak = 783.215 ; gain = 486.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -383,35 +378,35 @@ Report Instance Areas:
 |7     |      SEQ_COUNTER                 |upcnt_n        |    13|
 +------+----------------------------------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:53 ; elapsed = 00:01:01 . Memory (MB): peak = 810.461 ; gain = 487.078
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:50 ; elapsed = 00:01:03 . Memory (MB): peak = 783.215 ; gain = 486.066
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:45 . Memory (MB): peak = 810.461 ; gain = 155.793
-Synthesis Optimization Complete : Time (s): cpu = 00:00:53 ; elapsed = 00:01:02 . Memory (MB): peak = 810.461 ; gain = 487.078
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:49 . Memory (MB): peak = 783.215 ; gain = 169.523
+Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:01:03 . Memory (MB): peak = 783.215 ; gain = 486.066
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 821.488 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 799.223 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 9 instances were transformed.
   FDR => FDRE: 8 instances
   SRL16 => SRL16E: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-46 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+46 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:56 ; elapsed = 00:01:07 . Memory (MB): peak = 821.488 ; gain = 507.555
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 821.488 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:53 ; elapsed = 00:01:07 . Memory (MB): peak = 799.223 ; gain = 511.188
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 799.223 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_rst_processing_system7_0_150M_0_synth_1/hdmi_in_rst_processing_system7_0_150M_0.dcp' has been generated.
-WARNING: [Coretcl 2-1488] Problem adding IP cache entry: Directory already exists: c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.cache/ip/2018.3/a1af664f80b5c72c
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_rst_processing_system7_0_150M_0_synth_1/hdmi_in_rst_processing_system7_0_150M_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP hdmi_in_rst_processing_system7_0_150M_0, cache-ID = 90e360e326b26a5a
 INFO: [Coretcl 2-1174] Renamed 6 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 821.488 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 799.223 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_rst_processing_system7_0_150M_0_synth_1/hdmi_in_rst_processing_system7_0_150M_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_rst_processing_system7_0_150M_0_synth_1/hdmi_in_rst_processing_system7_0_150M_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file hdmi_in_rst_processing_system7_0_150M_0_utilization_synth.rpt -pb hdmi_in_rst_processing_system7_0_150M_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jan 10 11:20:45 2019...
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 10 14:54:05 2019...

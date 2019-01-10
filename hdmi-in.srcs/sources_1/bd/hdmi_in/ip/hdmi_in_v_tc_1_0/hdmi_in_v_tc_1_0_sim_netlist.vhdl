@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Thu Jan 10 11:20:58 2019
--- Host        : NicoLenovo running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim {C:/Users/bruger/OneDrive - Danmarks Tekniske
---               Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_1_0/hdmi_in_v_tc_1_0_sim_netlist.vhdl}
+-- Date        : Thu Jan 10 15:43:27 2019
+-- Host        : DESKTOP-D2B4873 running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode funcsim
+--               C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_1_0/hdmi_in_v_tc_1_0_sim_netlist.vhdl
 -- Design      : hdmi_in_v_tc_1_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -15619,52 +15619,54 @@ architecture STRUCTURE of hdmi_in_v_tc_1_0_tc_detector is
   signal \NLW_neqOp_inferred__5/i__carry_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_plusOp_inferred__2/i__carry__1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \DET_HACTIVE.DET_AVIDEO_LOCK.det_active_video_lock_int_i_2\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \DET_HACTIVE.active_video_rose_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \DET_HACTIVE.DET_AVIDEO_LOCK.det_active_video_lock_int_i_2\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \DET_HACTIVE.active_video_rose_i_1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \DET_HACTIVE.det_active_video_pol_int_i_1\ : label is "soft_lutpair12";
   attribute SOFT_HLUTNM of \DET_HSYNC.hsync_d_i_3\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \DET_VACTIVE.active_line_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0bp_start_int[0]_i_1\ : label is "soft_lutpair36";
-  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0bp_start_int[10]_i_1\ : label is "soft_lutpair46";
-  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0bp_start_int[1]_i_1\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0bp_start_int[0]_i_1\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0bp_start_int[10]_i_1\ : label is "soft_lutpair47";
+  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0bp_start_int[1]_i_1\ : label is "soft_lutpair36";
   attribute SOFT_HLUTNM of \DET_VSYNC.det_v0bp_start_int[2]_i_1\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0bp_start_int[4]_i_1\ : label is "soft_lutpair46";
-  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0bp_start_int[5]_i_1\ : label is "soft_lutpair41";
-  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0bp_start_int[6]_i_1\ : label is "soft_lutpair42";
-  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0bp_start_int[7]_i_1\ : label is "soft_lutpair43";
-  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0bp_start_int[8]_i_1\ : label is "soft_lutpair44";
-  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0bp_start_int[9]_i_1\ : label is "soft_lutpair45";
+  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0bp_start_int[3]_i_1\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0bp_start_int[4]_i_1\ : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0bp_start_int[5]_i_1\ : label is "soft_lutpair47";
+  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0bp_start_int[6]_i_1\ : label is "soft_lutpair48";
+  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0bp_start_int[7]_i_1\ : label is "soft_lutpair50";
+  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0bp_start_int[8]_i_1\ : label is "soft_lutpair50";
+  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0bp_start_int[9]_i_1\ : label is "soft_lutpair48";
   attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_hori_int[0]_i_1\ : label is "soft_lutpair45";
-  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_hori_int[10]_i_1\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_hori_int[11]_i_2\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_hori_int[10]_i_1\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_hori_int[11]_i_2\ : label is "soft_lutpair30";
   attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_hori_int[1]_i_1\ : label is "soft_lutpair44";
-  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_hori_int[2]_i_1\ : label is "soft_lutpair43";
-  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_hori_int[3]_i_1\ : label is "soft_lutpair42";
-  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_hori_int[4]_i_1\ : label is "soft_lutpair41";
-  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_hori_int[5]_i_1\ : label is "soft_lutpair40";
-  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_hori_int[6]_i_1\ : label is "soft_lutpair39";
-  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_hori_int[7]_i_1\ : label is "soft_lutpair38";
-  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_hori_int[8]_i_1\ : label is "soft_lutpair37";
-  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_hori_int[9]_i_1\ : label is "soft_lutpair36";
-  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_int[0]_i_1\ : label is "soft_lutpair47";
-  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_int[10]_i_1\ : label is "soft_lutpair47";
-  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_int[1]_i_1\ : label is "soft_lutpair48";
+  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_hori_int[2]_i_1\ : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_hori_int[3]_i_1\ : label is "soft_lutpair38";
+  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_hori_int[4]_i_1\ : label is "soft_lutpair37";
+  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_hori_int[5]_i_1\ : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_hori_int[6]_i_1\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_hori_int[7]_i_1\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_hori_int[8]_i_1\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_hori_int[9]_i_1\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_int[0]_i_1\ : label is "soft_lutpair46";
+  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_int[10]_i_1\ : label is "soft_lutpair44";
+  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_int[1]_i_1\ : label is "soft_lutpair49";
   attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_int[2]_i_1\ : label is "soft_lutpair49";
-  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_int[4]_i_1\ : label is "soft_lutpair49";
-  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_int[5]_i_1\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_int[6]_i_1\ : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_int[7]_i_1\ : label is "soft_lutpair48";
-  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_int[8]_i_1\ : label is "soft_lutpair40";
-  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_int[9]_i_1\ : label is "soft_lutpair39";
-  attribute SOFT_HLUTNM of \DET_VSYNC.vsync_count[1]_i_1\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \DET_VSYNC.vsync_count[2]_i_1\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \DET_VSYNC.vsync_count[3]_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \DET_VSYNC.vsync_count[4]_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \DET_VSYNC.vsync_count[6]_i_1\ : label is "soft_lutpair32";
-  attribute SOFT_HLUTNM of \DET_VSYNC.vsync_count[7]_i_1\ : label is "soft_lutpair32";
-  attribute SOFT_HLUTNM of \DET_VSYNC.vsync_count[8]_i_1\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \DET_VSYNC.vsync_count[9]_i_1\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \DET_VSYNC.vsync_rose_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \DET_VSYNC.vsync_toggled_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_int[3]_i_1\ : label is "soft_lutpair46";
+  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_int[4]_i_1\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_int[5]_i_1\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_int[6]_i_1\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_int[7]_i_1\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_int[8]_i_1\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \DET_VSYNC.det_v0sync_start_int[9]_i_1\ : label is "soft_lutpair45";
+  attribute SOFT_HLUTNM of \DET_VSYNC.vsync_count[1]_i_1\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \DET_VSYNC.vsync_count[2]_i_1\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \DET_VSYNC.vsync_count[3]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \DET_VSYNC.vsync_count[4]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \DET_VSYNC.vsync_count[6]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \DET_VSYNC.vsync_count[7]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \DET_VSYNC.vsync_count[8]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \DET_VSYNC.vsync_count[9]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \DET_VSYNC.vsync_rose_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \DET_VSYNC.vsync_toggled_i_1\ : label is "soft_lutpair11";
   attribute METHODOLOGY_DRC_VIOS : string;
   attribute METHODOLOGY_DRC_VIOS of \_inferred__11/i__carry\ : label is "{SYNTH-8 {cell *THIS*}}";
   attribute METHODOLOGY_DRC_VIOS of \_inferred__11/i__carry__0\ : label is "{SYNTH-8 {cell *THIS*}}";
@@ -15672,37 +15674,37 @@ architecture STRUCTURE of hdmi_in_v_tc_1_0_tc_detector is
   attribute METHODOLOGY_DRC_VIOS of \_inferred__8/i__carry\ : label is "{SYNTH-8 {cell *THIS*}}";
   attribute METHODOLOGY_DRC_VIOS of \_inferred__8/i__carry__0\ : label is "{SYNTH-8 {cell *THIS*}}";
   attribute METHODOLOGY_DRC_VIOS of \_inferred__8/i__carry__1\ : label is "{SYNTH-8 {cell *THIS*}}";
-  attribute SOFT_HLUTNM of \det_v0active_start_hori_int2[0]_i_1\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \det_v0active_start_hori_int2[0]_i_1\ : label is "soft_lutpair26";
   attribute METHODOLOGY_DRC_VIOS of \det_v0active_start_hori_int2_reg[0]_i_2\ : label is "{SYNTH-8 {cell *THIS*}}";
   attribute METHODOLOGY_DRC_VIOS of \det_v0active_start_hori_int2_reg[0]_i_3\ : label is "{SYNTH-8 {cell *THIS*}}";
   attribute METHODOLOGY_DRC_VIOS of \det_v0active_start_hori_int2_reg[11]_i_1\ : label is "{SYNTH-8 {cell *THIS*}}";
   attribute METHODOLOGY_DRC_VIOS of \det_v0active_start_hori_int2_reg[3]_i_1\ : label is "{SYNTH-8 {cell *THIS*}}";
   attribute METHODOLOGY_DRC_VIOS of \det_v0active_start_hori_int2_reg[7]_i_1\ : label is "{SYNTH-8 {cell *THIS*}}";
-  attribute SOFT_HLUTNM of \det_v0fp_start_hori_int2[0]_i_1\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \det_v0fp_start_hori_int2[0]_i_1\ : label is "soft_lutpair26";
   attribute METHODOLOGY_DRC_VIOS of \det_v0fp_start_hori_int2_reg[11]_i_1\ : label is "{SYNTH-8 {cell *THIS*}}";
   attribute METHODOLOGY_DRC_VIOS of \det_v0fp_start_hori_int2_reg[3]_i_1\ : label is "{SYNTH-8 {cell *THIS*}}";
   attribute METHODOLOGY_DRC_VIOS of \det_v0fp_start_hori_int2_reg[7]_i_1\ : label is "{SYNTH-8 {cell *THIS*}}";
-  attribute SOFT_HLUTNM of \det_v0total[1]_i_1\ : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \det_v0total[2]_i_1\ : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \det_v0total[3]_i_1\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \det_v0total[4]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \det_v0total[1]_i_1\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \det_v0total[2]_i_1\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \det_v0total[3]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \det_v0total[4]_i_1\ : label is "soft_lutpair19";
   attribute SOFT_HLUTNM of \det_v0total[6]_i_1\ : label is "soft_lutpair22";
   attribute SOFT_HLUTNM of \det_v0total[7]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \det_v0total[8]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \det_v0total[9]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \det_v0total_int[0]_i_1\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \det_v0total_int[10]_i_2\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \det_v0total_int[1]_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \det_v0total_int[2]_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \det_v0total_int[4]_i_1\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \det_v0total_int[5]_i_1\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \det_v0total_int[6]_i_1\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \det_v0total_int[7]_i_1\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \det_v0total_int[8]_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \det_v0total_int[9]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \det_v0total[8]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \det_v0total[9]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \det_v0total_int[10]_i_2\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \det_v0total_int[1]_i_1\ : label is "soft_lutpair43";
+  attribute SOFT_HLUTNM of \det_v0total_int[2]_i_1\ : label is "soft_lutpair43";
+  attribute SOFT_HLUTNM of \det_v0total_int[3]_i_1\ : label is "soft_lutpair42";
+  attribute SOFT_HLUTNM of \det_v0total_int[4]_i_1\ : label is "soft_lutpair42";
+  attribute SOFT_HLUTNM of \det_v0total_int[5]_i_1\ : label is "soft_lutpair41";
+  attribute SOFT_HLUTNM of \det_v0total_int[6]_i_1\ : label is "soft_lutpair41";
+  attribute SOFT_HLUTNM of \det_v0total_int[7]_i_1\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \det_v0total_int[8]_i_1\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \det_v0total_int[9]_i_1\ : label is "soft_lutpair29";
   attribute SOFT_HLUTNM of frame_end_d_i_1 : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \intr_status_int[8]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \intr_status_int[9]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \intr_status_int[8]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \intr_status_int[9]_i_1\ : label is "soft_lutpair14";
   attribute METHODOLOGY_DRC_VIOS of neqOp_carry : label is "{SYNTH-8 {cell *THIS*}}";
   attribute METHODOLOGY_DRC_VIOS of \neqOp_inferred__0/i__carry\ : label is "{SYNTH-8 {cell *THIS*}}";
   attribute METHODOLOGY_DRC_VIOS of \neqOp_inferred__1/i__carry\ : label is "{SYNTH-8 {cell *THIS*}}";
@@ -15710,17 +15712,17 @@ architecture STRUCTURE of hdmi_in_v_tc_1_0_tc_detector is
   attribute METHODOLOGY_DRC_VIOS of \neqOp_inferred__3/i__carry\ : label is "{SYNTH-8 {cell *THIS*}}";
   attribute METHODOLOGY_DRC_VIOS of \neqOp_inferred__4/i__carry\ : label is "{SYNTH-8 {cell *THIS*}}";
   attribute METHODOLOGY_DRC_VIOS of \neqOp_inferred__5/i__carry\ : label is "{SYNTH-8 {cell *THIS*}}";
-  attribute SOFT_HLUTNM of top_of_frame_i_2 : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of top_of_frame_i_2 : label is "soft_lutpair18";
   attribute SOFT_HLUTNM of \v_count[10]_i_3\ : label is "soft_lutpair21";
   attribute SOFT_HLUTNM of \v_count[10]_i_4\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \v_count[1]_i_1\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \v_count[2]_i_1\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \v_count[3]_i_1\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \v_count[4]_i_1\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \v_count[6]_i_1\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \v_count[7]_i_1\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \v_count[8]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \v_count[9]_i_1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \v_count[1]_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \v_count[2]_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \v_count[3]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \v_count[4]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \v_count[6]_i_1\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \v_count[7]_i_1\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \v_count[8]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \v_count[9]_i_1\ : label is "soft_lutpair13";
 begin
   Q(11 downto 0) <= \^q\(11 downto 0);
   active_video_lock_int <= \^active_video_lock_int\;
@@ -18612,7 +18614,7 @@ begin
       DI(3) => '0',
       DI(2 downto 0) => det_v0bp_start_hori_int(10 downto 8),
       O(3 downto 0) => det_v0bp_start_hori_int2(11 downto 8),
-      S(3) => \i__carry__1_i_1__0_n_0\,
+      S(3) => \i__carry__1_i_1__2_n_0\,
       S(2) => \i__carry__1_i_2__1_n_0\,
       S(1) => \i__carry__1_i_3__1_n_0\,
       S(0) => \i__carry__1_i_4__1_n_0\
@@ -18659,7 +18661,7 @@ begin
       DI(3) => '0',
       DI(2 downto 0) => det_v0sync_start_hori_int(10 downto 8),
       O(3 downto 0) => det_v0sync_start_hori_int2(11 downto 8),
-      S(3) => \i__carry__1_i_1_n_0\,
+      S(3) => \i__carry__1_i_1__1_n_0\,
       S(2) => \i__carry__1_i_2__0_n_0\,
       S(1) => \i__carry__1_i_3__0_n_0\,
       S(0) => \i__carry__1_i_4__0_n_0\
@@ -22631,7 +22633,25 @@ gtOp_carry_i_8: unisim.vcomponents.LUT3
       I3 => L(3),
       O => \i__carry__0_i_5__0_n_0\
     );
-\i__carry__1_i_1\: unisim.vcomponents.LUT4
+\i__carry__1_i_1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"9"
+    )
+        port map (
+      I0 => \^q\(11),
+      I1 => det_hactive_start_int(11),
+      O => \i__carry__1_i_1_n_0\
+    );
+\i__carry__1_i_1__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => \^time_status_regs[6]\(11),
+      I1 => det_hbp_start_int(11),
+      O => \i__carry__1_i_1__0_n_0\
+    );
+\i__carry__1_i_1__1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"2ED1"
     )
@@ -22640,9 +22660,9 @@ gtOp_carry_i_8: unisim.vcomponents.LUT3
       I1 => ltOp,
       I2 => \^det_hfp_start_int2_reg[11]_0\(11),
       I3 => det_v0sync_start_hori_int(11),
-      O => \i__carry__1_i_1_n_0\
+      O => \i__carry__1_i_1__1_n_0\
     );
-\i__carry__1_i_1__0\: unisim.vcomponents.LUT4
+\i__carry__1_i_1__2\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"2ED1"
     )
@@ -22651,24 +22671,6 @@ gtOp_carry_i_8: unisim.vcomponents.LUT3
       I1 => \ltOp_inferred__0/i__carry__0_n_2\,
       I2 => \^det_hfp_start_int2_reg[11]_0\(11),
       I3 => det_v0bp_start_hori_int(11),
-      O => \i__carry__1_i_1__0_n_0\
-    );
-\i__carry__1_i_1__1\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"9"
-    )
-        port map (
-      I0 => \^q\(11),
-      I1 => det_hactive_start_int(11),
-      O => \i__carry__1_i_1__1_n_0\
-    );
-\i__carry__1_i_1__2\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"6"
-    )
-        port map (
-      I0 => \^time_status_regs[6]\(11),
-      I1 => det_hbp_start_int(11),
       O => \i__carry__1_i_1__2_n_0\
     );
 \i__carry__1_i_2\: unisim.vcomponents.LUT2
@@ -24280,7 +24282,7 @@ minusOp_carry_i_4: unisim.vcomponents.LUT2
       DI(3) => '0',
       DI(2 downto 0) => \^q\(10 downto 8),
       O(3 downto 0) => minusOp0_out(11 downto 8),
-      S(3) => \i__carry__1_i_1__1_n_0\,
+      S(3) => \i__carry__1_i_1_n_0\,
       S(2) => \i__carry__1_i_2__2_n_0\,
       S(1) => \i__carry__1_i_3__2_n_0\,
       S(0) => \i__carry__1_i_4__2_n_0\
@@ -24492,7 +24494,7 @@ neqOp_carry_i_4: unisim.vcomponents.LUT6
       O(2) => \plusOp_inferred__2/i__carry__1_n_5\,
       O(1) => \plusOp_inferred__2/i__carry__1_n_6\,
       O(0) => \plusOp_inferred__2/i__carry__1_n_7\,
-      S(3) => \i__carry__1_i_1__2_n_0\,
+      S(3) => \i__carry__1_i_1__0_n_0\,
       S(2) => \i__carry__1_i_2_n_0\,
       S(1) => \i__carry__1_i_3_n_0\,
       S(0) => \i__carry__1_i_4_n_0\
@@ -35266,24 +35268,24 @@ architecture STRUCTURE of hdmi_in_v_tc_1_0_slave_attachment is
   attribute FSM_ENCODED_STATES of \FSM_onehot_state_reg[2]\ : label is "iSTATE:0010,iSTATE0:0100,iSTATE1:1000,iSTATE2:0001";
   attribute FSM_ENCODED_STATES of \FSM_onehot_state_reg[3]\ : label is "iSTATE:0010,iSTATE0:0100,iSTATE1:1000,iSTATE2:0001";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \INCLUDE_DPHASE_TIMER.dpto_cnt[1]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \INCLUDE_DPHASE_TIMER.dpto_cnt[2]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \INCLUDE_DPHASE_TIMER.dpto_cnt[1]_i_1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \INCLUDE_DPHASE_TIMER.dpto_cnt[2]_i_1\ : label is "soft_lutpair4";
   attribute SOFT_HLUTNM of \INCLUDE_DPHASE_TIMER.dpto_cnt[3]_i_1\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \INCLUDE_DPHASE_TIMER.dpto_cnt[4]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \INCLUDE_DPHASE_TIMER.dpto_cnt[6]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \INCLUDE_DPHASE_TIMER.dpto_cnt[7]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \INCLUDE_DPHASE_TIMER.dpto_cnt[8]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \INCLUDE_DPHASE_TIMER.dpto_cnt[9]_i_2\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \bus2ip_addr_i[0]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \bus2ip_addr_i[1]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \INCLUDE_DPHASE_TIMER.dpto_cnt[6]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \INCLUDE_DPHASE_TIMER.dpto_cnt[7]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \INCLUDE_DPHASE_TIMER.dpto_cnt[8]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \INCLUDE_DPHASE_TIMER.dpto_cnt[9]_i_2\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \bus2ip_addr_i[0]_i_1\ : label is "soft_lutpair7";
   attribute SOFT_HLUTNM of \bus2ip_addr_i[2]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \bus2ip_addr_i[3]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \bus2ip_addr_i[5]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \bus2ip_addr_i[6]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \bus2ip_addr_i[3]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \bus2ip_addr_i[4]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \bus2ip_addr_i[5]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \bus2ip_addr_i[6]_i_1\ : label is "soft_lutpair6";
   attribute SOFT_HLUTNM of \bus2ip_addr_i[7]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \bus2ip_addr_i[8]_i_2\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of start2_i_1 : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \state[1]_i_2\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \bus2ip_addr_i[8]_i_2\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of start2_i_1 : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \state[1]_i_2\ : label is "soft_lutpair0";
 begin
   \AXI4_LITE_INTERFACE.ipif_RdAck_reg\ <= \^axi4_lite_interface.ipif_rdack_reg\;
   \AXI4_LITE_INTERFACE.ipif_WrAck_reg\ <= \^axi4_lite_interface.ipif_wrack_reg\;
@@ -36442,20 +36444,20 @@ architecture STRUCTURE of hdmi_in_v_tc_1_0_tc_top is
   signal reset : STD_LOGIC;
   signal vsync_lock_int : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of all_lock_d_i_1 : label is "soft_lutpair50";
-  attribute SOFT_HLUTNM of all_lock_i_2 : label is "soft_lutpair51";
+  attribute SOFT_HLUTNM of all_lock_d_i_1 : label is "soft_lutpair51";
+  attribute SOFT_HLUTNM of all_lock_i_2 : label is "soft_lutpair52";
   attribute srl_bus_name : string;
   attribute srl_bus_name of \detect_en_d_reg[1]_srl2___U_TC_TOP_detect_en_d_reg_r_0\ : label is "U0/\U_TC_TOP/detect_en_d_reg ";
   attribute srl_name : string;
   attribute srl_name of \detect_en_d_reg[1]_srl2___U_TC_TOP_detect_en_d_reg_r_0\ : label is "U0/\U_TC_TOP/detect_en_d_reg[1]_srl2___U_TC_TOP_detect_en_d_reg_r_0 ";
-  attribute SOFT_HLUTNM of detect_en_d_reg_gate : label is "soft_lutpair53";
+  attribute SOFT_HLUTNM of detect_en_d_reg_gate : label is "soft_lutpair54";
   attribute srl_bus_name of \generate_en_d_reg[1]_srl2___U_TC_TOP_detect_en_d_reg_r_0\ : label is "U0/\U_TC_TOP/generate_en_d_reg ";
   attribute srl_name of \generate_en_d_reg[1]_srl2___U_TC_TOP_detect_en_d_reg_r_0\ : label is "U0/\U_TC_TOP/generate_en_d_reg[1]_srl2___U_TC_TOP_detect_en_d_reg_r_0 ";
-  attribute SOFT_HLUTNM of \generate_en_d_reg[1]_srl2___U_TC_TOP_detect_en_d_reg_r_0_i_1\ : label is "soft_lutpair51";
-  attribute SOFT_HLUTNM of generate_en_d_reg_gate : label is "soft_lutpair53";
-  attribute SOFT_HLUTNM of \intr_status_int[10]_i_1\ : label is "soft_lutpair52";
-  attribute SOFT_HLUTNM of \intr_status_int[12]_i_2\ : label is "soft_lutpair52";
-  attribute SOFT_HLUTNM of lost_lock_i_1 : label is "soft_lutpair50";
+  attribute SOFT_HLUTNM of \generate_en_d_reg[1]_srl2___U_TC_TOP_detect_en_d_reg_r_0_i_1\ : label is "soft_lutpair52";
+  attribute SOFT_HLUTNM of generate_en_d_reg_gate : label is "soft_lutpair54";
+  attribute SOFT_HLUTNM of \intr_status_int[10]_i_1\ : label is "soft_lutpair53";
+  attribute SOFT_HLUTNM of \intr_status_int[12]_i_2\ : label is "soft_lutpair53";
+  attribute SOFT_HLUTNM of lost_lock_i_1 : label is "soft_lutpair51";
 begin
   intc_if(8 downto 0) <= \^intc_if\(8 downto 0);
 \GEN_DETECTION.U_tc_DET\: entity work.hdmi_in_v_tc_1_0_tc_detector
@@ -61494,7 +61496,7 @@ architecture STRUCTURE of hdmi_in_v_tc_1_0 is
   attribute x_interface_info of active_video_in : signal is "xilinx.com:interface:video_timing:2.0 vtiming_in ACTIVE_VIDEO";
   attribute x_interface_info of clk : signal is "xilinx.com:signal:clock:1.0 clk_intf CLK";
   attribute x_interface_parameter : string;
-  attribute x_interface_parameter of clk : signal is "XIL_INTERFACENAME clk_intf, ASSOCIATED_BUSIF vtiming_in:vtiming_out, ASSOCIATED_RESET resetn, ASSOCIATED_CLKEN clken, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN hdmi_in_dvi2rgb_0_0_PixelClk, INSERT_VIP 0";
+  attribute x_interface_parameter of clk : signal is "XIL_INTERFACENAME clk_intf, ASSOCIATED_BUSIF vtiming_in:vtiming_out, ASSOCIATED_RESET resetn, ASSOCIATED_CLKEN clken, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN hdmi_in_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   attribute x_interface_info of clken : signal is "xilinx.com:signal:clockenable:1.0 clken_intf CE";
   attribute x_interface_parameter of clken : signal is "XIL_INTERFACENAME clken_intf, POLARITY ACTIVE_LOW";
   attribute x_interface_info of hsync_in : signal is "xilinx.com:interface:video_timing:2.0 vtiming_in HSYNC";
@@ -61503,7 +61505,7 @@ architecture STRUCTURE of hdmi_in_v_tc_1_0 is
   attribute x_interface_info of resetn : signal is "xilinx.com:signal:reset:1.0 resetn_intf RST";
   attribute x_interface_parameter of resetn : signal is "XIL_INTERFACENAME resetn_intf, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute x_interface_info of s_axi_aclk : signal is "xilinx.com:signal:clock:1.0 s_axi_aclk_intf CLK";
-  attribute x_interface_parameter of s_axi_aclk : signal is "XIL_INTERFACENAME s_axi_aclk_intf, ASSOCIATED_BUSIF ctrl, ASSOCIATED_RESET s_axi_aresetn, ASSOCIATED_CLKEN s_axi_aclken, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN hdmi_in_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
+  attribute x_interface_parameter of s_axi_aclk : signal is "XIL_INTERFACENAME s_axi_aclk_intf, ASSOCIATED_BUSIF ctrl, ASSOCIATED_RESET s_axi_aresetn, ASSOCIATED_CLKEN s_axi_aclken, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN hdmi_in_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   attribute x_interface_info of s_axi_aclken : signal is "xilinx.com:signal:clockenable:1.0 s_axi_aclken_intf CE";
   attribute x_interface_parameter of s_axi_aclken : signal is "XIL_INTERFACENAME s_axi_aclken_intf, POLARITY ACTIVE_LOW";
   attribute x_interface_info of s_axi_aresetn : signal is "xilinx.com:signal:reset:1.0 s_axi_aresetn_intf RST";
@@ -61521,7 +61523,7 @@ architecture STRUCTURE of hdmi_in_v_tc_1_0 is
   attribute x_interface_info of vsync_in : signal is "xilinx.com:interface:video_timing:2.0 vtiming_in VSYNC";
   attribute x_interface_info of s_axi_araddr : signal is "xilinx.com:interface:aximm:1.0 ctrl ARADDR";
   attribute x_interface_info of s_axi_awaddr : signal is "xilinx.com:interface:aximm:1.0 ctrl AWADDR";
-  attribute x_interface_parameter of s_axi_awaddr : signal is "XIL_INTERFACENAME ctrl, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN hdmi_in_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute x_interface_parameter of s_axi_awaddr : signal is "XIL_INTERFACENAME ctrl, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 1e+08, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN hdmi_in_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute x_interface_info of s_axi_bresp : signal is "xilinx.com:interface:aximm:1.0 ctrl BRESP";
   attribute x_interface_info of s_axi_rdata : signal is "xilinx.com:interface:aximm:1.0 ctrl RDATA";
   attribute x_interface_info of s_axi_rresp : signal is "xilinx.com:interface:aximm:1.0 ctrl RRESP";

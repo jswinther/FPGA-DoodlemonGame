@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Thu Jan 10 11:20:57 2019
-// Host        : NicoLenovo running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim {C:/Users/bruger/OneDrive - Danmarks Tekniske
-//               Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_1_0/hdmi_in_v_tc_1_0_sim_netlist.v}
+// Date        : Thu Jan 10 15:43:27 2019
+// Host        : DESKTOP-D2B4873 running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim
+//               C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_1_0/hdmi_in_v_tc_1_0_sim_netlist.v
 // Design      : hdmi_in_v_tc_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -44,9 +44,9 @@ module hdmi_in_v_tc_1_0
     s_axi_rvalid,
     s_axi_rready,
     irq);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk_intf CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk_intf, ASSOCIATED_BUSIF vtiming_in:vtiming_out, ASSOCIATED_RESET resetn, ASSOCIATED_CLKEN clken, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN hdmi_in_dvi2rgb_0_0_PixelClk, INSERT_VIP 0" *) input clk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk_intf CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk_intf, ASSOCIATED_BUSIF vtiming_in:vtiming_out, ASSOCIATED_RESET resetn, ASSOCIATED_CLKEN clken, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN hdmi_in_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input clk;
   (* x_interface_info = "xilinx.com:signal:clockenable:1.0 clken_intf CE" *) (* x_interface_parameter = "XIL_INTERFACENAME clken_intf, POLARITY ACTIVE_LOW" *) input clken;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 s_axi_aclk_intf CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME s_axi_aclk_intf, ASSOCIATED_BUSIF ctrl, ASSOCIATED_RESET s_axi_aresetn, ASSOCIATED_CLKEN s_axi_aclken, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN hdmi_in_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input s_axi_aclk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 s_axi_aclk_intf CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME s_axi_aclk_intf, ASSOCIATED_BUSIF ctrl, ASSOCIATED_RESET s_axi_aresetn, ASSOCIATED_CLKEN s_axi_aclken, FREQ_HZ 1e+08, PHASE 0.000, CLK_DOMAIN hdmi_in_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input s_axi_aclk;
   (* x_interface_info = "xilinx.com:signal:clockenable:1.0 s_axi_aclken_intf CE" *) (* x_interface_parameter = "XIL_INTERFACENAME s_axi_aclken_intf, POLARITY ACTIVE_LOW" *) input s_axi_aclken;
   input det_clken;
   output [31:0]intc_if;
@@ -55,7 +55,7 @@ module hdmi_in_v_tc_1_0
   (* x_interface_info = "xilinx.com:interface:video_timing:2.0 vtiming_in ACTIVE_VIDEO" *) input active_video_in;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 resetn_intf RST" *) (* x_interface_parameter = "XIL_INTERFACENAME resetn_intf, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input resetn;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 s_axi_aresetn_intf RST" *) (* x_interface_parameter = "XIL_INTERFACENAME s_axi_aresetn_intf, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s_axi_aresetn;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 ctrl AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME ctrl, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN hdmi_in_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [8:0]s_axi_awaddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 ctrl AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME ctrl, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 1e+08, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN hdmi_in_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [8:0]s_axi_awaddr;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 ctrl AWVALID" *) input s_axi_awvalid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 ctrl AWREADY" *) output s_axi_awready;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 ctrl WDATA" *) input [31:0]s_axi_wdata;
@@ -659,14 +659,14 @@ module hdmi_in_v_tc_1_0_slave_attachment
     \INCLUDE_DPHASE_TIMER.dpto_cnt[0]_i_1 
        (.I0(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [0]),
         .O(plusOp[0]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[1]_i_1 
        (.I0(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [0]),
         .I1(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [1]),
         .O(plusOp[1]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[2]_i_1 
@@ -703,14 +703,14 @@ module hdmi_in_v_tc_1_0_slave_attachment
         .I4(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [4]),
         .I5(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [5]),
         .O(plusOp[5]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[6]_i_1 
        (.I0(\INCLUDE_DPHASE_TIMER.dpto_cnt[9]_i_3_n_0 ),
         .I1(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [6]),
         .O(plusOp[6]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[7]_i_1 
@@ -718,7 +718,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
         .I1(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [6]),
         .I2(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 [7]),
         .O(plusOp[7]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[8]_i_1 
@@ -733,7 +733,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
        (.I0(state[0]),
         .I1(state[1]),
         .O(clear));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \INCLUDE_DPHASE_TIMER.dpto_cnt[9]_i_2 
@@ -826,7 +826,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
         .s_axi_arready(is_read_reg_n_0),
         .s_axi_awready(is_write_reg_n_0),
         .s_axi_awready_0(\INCLUDE_DPHASE_TIMER.dpto_cnt_reg__0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \bus2ip_addr_i[0]_i_1 
@@ -834,7 +834,6 @@ module hdmi_in_v_tc_1_0_slave_attachment
         .I1(s_axi_awaddr[0]),
         .I2(s_axi_arvalid),
         .O(p_1_in[0]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \bus2ip_addr_i[1]_i_1 
@@ -850,7 +849,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
         .I1(s_axi_awaddr[2]),
         .I2(s_axi_arvalid),
         .O(p_1_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \bus2ip_addr_i[3]_i_1 
@@ -858,6 +857,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
         .I1(s_axi_awaddr[3]),
         .I2(s_axi_arvalid),
         .O(p_1_in[3]));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \bus2ip_addr_i[4]_i_1 
@@ -865,7 +865,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
         .I1(s_axi_awaddr[4]),
         .I2(s_axi_arvalid),
         .O(p_1_in[4]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \bus2ip_addr_i[5]_i_1 
@@ -873,7 +873,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
         .I1(s_axi_awaddr[5]),
         .I2(s_axi_arvalid),
         .O(p_1_in[5]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \bus2ip_addr_i[6]_i_1 
@@ -898,7 +898,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
         .I3(state[1]),
         .I4(state[0]),
         .O(\bus2ip_addr_i[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \bus2ip_addr_i[8]_i_2 
@@ -1331,7 +1331,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
         .D(s_axi_rvalid_i_i_1_n_0),
         .Q(s_axi_rvalid_i_reg_0),
         .R(rst));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
     .INIT(32'h000000F8)) 
     start2_i_1
@@ -1366,7 +1366,7 @@ module hdmi_in_v_tc_1_0_slave_attachment
         .I4(state[0]),
         .I5(\AXI4_LITE_INTERFACE.ipif_RdAck_reg ),
         .O(p_0_out[1]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \state[1]_i_2 
@@ -14987,7 +14987,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I4(neqOp1_out),
         .I5(\DET_HACTIVE.DET_AVIDEO_LOCK.det_active_video_lock_int_i_2_n_0 ),
         .O(\DET_HACTIVE.DET_AVIDEO_LOCK.det_active_video_lock_int_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT3 #(
     .INIT(8'hDF)) 
     \DET_HACTIVE.DET_AVIDEO_LOCK.det_active_video_lock_int_i_2 
@@ -15175,7 +15175,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .D(\DET_HACTIVE.active_video_d_i_1_n_0 ),
         .Q(active_video_d),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT5 #(
     .INIT(32'h0000BAAA)) 
     \DET_HACTIVE.active_video_rose_i_1 
@@ -15213,6 +15213,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .D(leqOp),
         .Q(det_active_video_pol_change),
         .R(h_count1));
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT5 #(
     .INIT(32'hDFFF2000)) 
     \DET_HACTIVE.det_active_video_pol_int_i_1 
@@ -15752,7 +15753,6 @@ module hdmi_in_v_tc_1_0_tc_detector
         .D(active_line),
         .Q(active_line_d),
         .R(h_count1));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT5 #(
     .INIT(32'h7F770C00)) 
     \DET_VACTIVE.active_line_i_1 
@@ -16195,7 +16195,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .D(\DET_VSYNC.det_v0sync_start_hori_int[9]_i_1_n_0 ),
         .Q(det_v0bp_start_hori_int[9]),
         .R(h_count1));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0bp_start_int[0]_i_1 
@@ -16203,7 +16203,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(det_v0active_start_int[0]),
         .O(\DET_VSYNC.det_v0bp_start_int[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0bp_start_int[10]_i_1 
@@ -16211,7 +16211,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(det_v0active_start_int[10]),
         .O(\DET_VSYNC.det_v0bp_start_int[10]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0bp_start_int[1]_i_1 
@@ -16227,6 +16227,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(det_v0active_start_int[2]),
         .O(\DET_VSYNC.det_v0bp_start_int[2]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0bp_start_int[3]_i_1 
@@ -16234,7 +16235,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(det_v0active_start_int[3]),
         .O(\DET_VSYNC.det_v0bp_start_int[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0bp_start_int[4]_i_1 
@@ -16242,7 +16243,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(det_v0active_start_int[4]),
         .O(\DET_VSYNC.det_v0bp_start_int[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0bp_start_int[5]_i_1 
@@ -16250,7 +16251,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(det_v0active_start_int[5]),
         .O(\DET_VSYNC.det_v0bp_start_int[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0bp_start_int[6]_i_1 
@@ -16258,7 +16259,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(det_v0active_start_int[6]),
         .O(\DET_VSYNC.det_v0bp_start_int[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0bp_start_int[7]_i_1 
@@ -16266,7 +16267,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(det_v0active_start_int[7]),
         .O(\DET_VSYNC.det_v0bp_start_int[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0bp_start_int[8]_i_1 
@@ -16274,7 +16275,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(det_v0active_start_int[8]),
         .O(\DET_VSYNC.det_v0bp_start_int[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0bp_start_int[9]_i_1 
@@ -16355,7 +16356,7 @@ module hdmi_in_v_tc_1_0_tc_detector
        (.I0(L[11]),
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .O(\DET_VSYNC.det_v0sync_start_hori_int[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \DET_VSYNC.det_v0sync_start_hori_int[10]_i_1 
@@ -16370,7 +16371,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I2(\DET_VSYNC.vsync_d_reg_n_0 ),
         .I3(\DET_VSYNC.vsync_d2_reg_n_0 ),
         .O(det_v0sync_start_int_5));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \DET_VSYNC.det_v0sync_start_hori_int[11]_i_2 
@@ -16384,56 +16385,56 @@ module hdmi_in_v_tc_1_0_tc_detector
        (.I0(L[10]),
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .O(\DET_VSYNC.det_v0sync_start_hori_int[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \DET_VSYNC.det_v0sync_start_hori_int[2]_i_1 
        (.I0(L[9]),
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .O(\DET_VSYNC.det_v0sync_start_hori_int[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \DET_VSYNC.det_v0sync_start_hori_int[3]_i_1 
        (.I0(L[8]),
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .O(\DET_VSYNC.det_v0sync_start_hori_int[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \DET_VSYNC.det_v0sync_start_hori_int[4]_i_1 
        (.I0(L[7]),
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .O(\DET_VSYNC.det_v0sync_start_hori_int[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \DET_VSYNC.det_v0sync_start_hori_int[5]_i_1 
        (.I0(L[6]),
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .O(\DET_VSYNC.det_v0sync_start_hori_int[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \DET_VSYNC.det_v0sync_start_hori_int[6]_i_1 
        (.I0(L[5]),
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .O(\DET_VSYNC.det_v0sync_start_hori_int[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \DET_VSYNC.det_v0sync_start_hori_int[7]_i_1 
        (.I0(L[4]),
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .O(\DET_VSYNC.det_v0sync_start_hori_int[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \DET_VSYNC.det_v0sync_start_hori_int[8]_i_1 
        (.I0(L[3]),
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .O(\DET_VSYNC.det_v0sync_start_hori_int[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \DET_VSYNC.det_v0sync_start_hori_int[9]_i_1 
@@ -16512,7 +16513,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .D(\DET_VSYNC.det_v0sync_start_hori_int[9]_i_1_n_0 ),
         .Q(det_v0sync_start_hori_int[9]),
         .R(h_count1));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0sync_start_int[0]_i_1 
@@ -16520,7 +16521,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(\time_status_regs_int_reg[0] [0]),
         .O(\DET_VSYNC.det_v0sync_start_int[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0sync_start_int[10]_i_1 
@@ -16528,7 +16529,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(\time_status_regs_int_reg[0] [10]),
         .O(\DET_VSYNC.det_v0sync_start_int[10]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0sync_start_int[1]_i_1 
@@ -16544,6 +16545,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(\time_status_regs_int_reg[0] [2]),
         .O(\DET_VSYNC.det_v0sync_start_int[2]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0sync_start_int[3]_i_1 
@@ -16551,7 +16553,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(\time_status_regs_int_reg[0] [3]),
         .O(\DET_VSYNC.det_v0sync_start_int[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0sync_start_int[4]_i_1 
@@ -16559,7 +16561,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(\time_status_regs_int_reg[0] [4]),
         .O(\DET_VSYNC.det_v0sync_start_int[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0sync_start_int[5]_i_1 
@@ -16567,7 +16569,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(\time_status_regs_int_reg[0] [5]),
         .O(\DET_VSYNC.det_v0sync_start_int[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0sync_start_int[6]_i_1 
@@ -16575,7 +16577,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(\time_status_regs_int_reg[0] [6]),
         .O(\DET_VSYNC.det_v0sync_start_int[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0sync_start_int[7]_i_1 
@@ -16583,7 +16585,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(\time_status_regs_int_reg[0] [7]),
         .O(\DET_VSYNC.det_v0sync_start_int[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0sync_start_int[8]_i_1 
@@ -16591,7 +16593,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_toggled_reg_n_0 ),
         .I2(\time_status_regs_int_reg[0] [8]),
         .O(\DET_VSYNC.det_v0sync_start_int[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \DET_VSYNC.det_v0sync_start_int[9]_i_1 
@@ -16759,14 +16761,14 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I4(\DET_VSYNC.vsync_count_reg__0 [3]),
         .I5(\DET_VSYNC.vsync_count_reg__0 [4]),
         .O(\DET_VSYNC.vsync_count[10]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \DET_VSYNC.vsync_count[1]_i_1 
        (.I0(\DET_VSYNC.vsync_count_reg__0 [0]),
         .I1(\DET_VSYNC.vsync_count_reg__0 [1]),
         .O(plusOp__1[1]));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \DET_VSYNC.vsync_count[2]_i_1 
@@ -16774,7 +16776,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_count_reg__0 [1]),
         .I2(\DET_VSYNC.vsync_count_reg__0 [2]),
         .O(plusOp__1[2]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \DET_VSYNC.vsync_count[3]_i_1 
@@ -16783,7 +16785,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I2(\DET_VSYNC.vsync_count_reg__0 [0]),
         .I3(\DET_VSYNC.vsync_count_reg__0 [3]),
         .O(plusOp__1[3]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \DET_VSYNC.vsync_count[4]_i_1 
@@ -16803,14 +16805,14 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I4(\DET_VSYNC.vsync_count_reg__0 [4]),
         .I5(\DET_VSYNC.vsync_count_reg__0 [5]),
         .O(plusOp__1[5]));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT2 #(
     .INIT(4'h9)) 
     \DET_VSYNC.vsync_count[6]_i_1 
        (.I0(\DET_VSYNC.vsync_count[10]_i_4_n_0 ),
         .I1(\DET_VSYNC.vsync_count_reg__0 [6]),
         .O(plusOp__1[6]));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT3 #(
     .INIT(8'hB4)) 
     \DET_VSYNC.vsync_count[7]_i_1 
@@ -16818,7 +16820,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(\DET_VSYNC.vsync_count_reg__0 [6]),
         .I2(\DET_VSYNC.vsync_count_reg__0 [7]),
         .O(plusOp__1[7]));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT4 #(
     .INIT(16'hDF20)) 
     \DET_VSYNC.vsync_count[8]_i_1 
@@ -16827,7 +16829,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I2(\DET_VSYNC.vsync_count_reg__0 [7]),
         .I3(\DET_VSYNC.vsync_count_reg__0 [8]),
         .O(plusOp__1[8]));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT5 #(
     .INIT(32'hF7FF0800)) 
     \DET_VSYNC.vsync_count[9]_i_1 
@@ -16943,7 +16945,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .D(\DET_VSYNC.vsync_d_i_1_n_0 ),
         .Q(\DET_VSYNC.vsync_d_reg_n_0 ),
         .R(h_count1));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT4 #(
     .INIT(16'hFF08)) 
     \DET_VSYNC.vsync_rose_i_1 
@@ -16958,7 +16960,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .D(\DET_VSYNC.vsync_rose_i_1_n_0 ),
         .Q(vsync_rose),
         .R(h_count1));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT5 #(
     .INIT(32'hEFFF2000)) 
     \DET_VSYNC.vsync_toggled_i_1 
@@ -16997,7 +16999,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .CYINIT(1'b0),
         .DI({1'b0,det_v0bp_start_hori_int[10:8]}),
         .O(det_v0bp_start_hori_int2[11:8]),
-        .S({i__carry__1_i_1__0_n_0,i__carry__1_i_2__1_n_0,i__carry__1_i_3__1_n_0,i__carry__1_i_4__1_n_0}));
+        .S({i__carry__1_i_1__2_n_0,i__carry__1_i_2__1_n_0,i__carry__1_i_3__1_n_0,i__carry__1_i_4__1_n_0}));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 \_inferred__8/i__carry 
        (.CI(1'b0),
@@ -17021,7 +17023,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .CYINIT(1'b0),
         .DI({1'b0,det_v0sync_start_hori_int[10:8]}),
         .O(det_v0sync_start_hori_int2[11:8]),
-        .S({i__carry__1_i_1_n_0,i__carry__1_i_2__0_n_0,i__carry__1_i_3__0_n_0,i__carry__1_i_4__0_n_0}));
+        .S({i__carry__1_i_1__1_n_0,i__carry__1_i_2__0_n_0,i__carry__1_i_3__0_n_0,i__carry__1_i_4__0_n_0}));
   LUT6 #(
     .INIT(64'h00000000E2222222)) 
     all_lock_i_1
@@ -17586,7 +17588,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .D(L[2]),
         .Q(det_htotal_int[9]),
         .R(h_count1));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \det_v0active_start_hori_int2[0]_i_1 
@@ -18216,7 +18218,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .D(det_v0bp_start_int2[9]),
         .Q(\time_status_regs[8] [20]),
         .R(reset));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT3 #(
     .INIT(8'hE2)) 
     \det_v0fp_start_hori_int2[0]_i_1 
@@ -18875,14 +18877,14 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I4(det_v0total_int[4]),
         .I5(det_v0total_int[5]),
         .O(\det_v0total[10]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \det_v0total[1]_i_1 
        (.I0(det_v0total_int[0]),
         .I1(det_v0total_int[1]),
         .O(\det_v0total[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \det_v0total[2]_i_1 
@@ -18890,7 +18892,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(det_v0total_int[0]),
         .I2(det_v0total_int[2]),
         .O(\det_v0total[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \det_v0total[3]_i_1 
@@ -18899,7 +18901,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I2(det_v0total_int[1]),
         .I3(det_v0total_int[3]),
         .O(\det_v0total[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \det_v0total[4]_i_1 
@@ -18934,7 +18936,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(det_v0total_int[6]),
         .I2(det_v0total_int[7]),
         .O(\det_v0total[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT4 #(
     .INIT(16'hF708)) 
     \det_v0total[8]_i_1 
@@ -18943,7 +18945,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I2(\det_v0total[10]_i_2_n_0 ),
         .I3(det_v0total_int[8]),
         .O(\det_v0total[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT5 #(
     .INIT(32'hDFFF2000)) 
     \det_v0total[9]_i_1 
@@ -18953,7 +18955,6 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I3(det_v0total_int[7]),
         .I4(det_v0total_int[9]),
         .O(\det_v0total[9]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \det_v0total_int[0]_i_1 
@@ -18970,7 +18971,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I3(active_video_in),
         .I4(det_ce),
         .O(det_v0total_int_6));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \det_v0total_int[10]_i_2 
@@ -18978,7 +18979,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(gtOp_0),
         .I2(v_count_last[10]),
         .O(\det_v0total_int[10]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \det_v0total_int[1]_i_1 
@@ -18986,7 +18987,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(gtOp_0),
         .I2(v_count_last[1]),
         .O(\det_v0total_int[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \det_v0total_int[2]_i_1 
@@ -18994,6 +18995,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(gtOp_0),
         .I2(v_count_last[2]),
         .O(\det_v0total_int[2]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \det_v0total_int[3]_i_1 
@@ -19001,7 +19003,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(gtOp_0),
         .I2(v_count_last[3]),
         .O(\det_v0total_int[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \det_v0total_int[4]_i_1 
@@ -19009,7 +19011,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(gtOp_0),
         .I2(v_count_last[4]),
         .O(\det_v0total_int[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \det_v0total_int[5]_i_1 
@@ -19017,7 +19019,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(gtOp_0),
         .I2(v_count_last[5]),
         .O(\det_v0total_int[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \det_v0total_int[6]_i_1 
@@ -19025,7 +19027,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(gtOp_0),
         .I2(v_count_last[6]),
         .O(\det_v0total_int[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \det_v0total_int[7]_i_1 
@@ -19033,7 +19035,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(gtOp_0),
         .I2(v_count_last[7]),
         .O(\det_v0total_int[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \det_v0total_int[8]_i_1 
@@ -19041,7 +19043,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(gtOp_0),
         .I2(v_count_last[8]),
         .O(\det_v0total_int[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \det_v0total_int[9]_i_1 
@@ -19781,33 +19783,33 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I2(det_htotal_int[9]),
         .I3(L[3]),
         .O(i__carry__0_i_5__0_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    i__carry__1_i_1
+       (.I0(Q[11]),
+        .I1(det_hactive_start_int[11]),
+        .O(i__carry__1_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    i__carry__1_i_1__0
+       (.I0(\time_status_regs[6] [11]),
+        .I1(det_hbp_start_int[11]),
+        .O(i__carry__1_i_1__0_n_0));
   LUT4 #(
     .INIT(16'h2ED1)) 
-    i__carry__1_i_1
+    i__carry__1_i_1__1
        (.I0(det_hactive_start_int[11]),
         .I1(ltOp),
         .I2(\det_hfp_start_int2_reg[11]_0 [11]),
         .I3(det_v0sync_start_hori_int[11]),
-        .O(i__carry__1_i_1_n_0));
+        .O(i__carry__1_i_1__1_n_0));
   LUT4 #(
     .INIT(16'h2ED1)) 
-    i__carry__1_i_1__0
+    i__carry__1_i_1__2
        (.I0(det_hactive_start_int[11]),
         .I1(\ltOp_inferred__0/i__carry__0_n_2 ),
         .I2(\det_hfp_start_int2_reg[11]_0 [11]),
         .I3(det_v0bp_start_hori_int[11]),
-        .O(i__carry__1_i_1__0_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    i__carry__1_i_1__1
-       (.I0(Q[11]),
-        .I1(det_hactive_start_int[11]),
-        .O(i__carry__1_i_1__1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_1__2
-       (.I0(\time_status_regs[6] [11]),
-        .I1(det_hbp_start_int[11]),
         .O(i__carry__1_i_1__2_n_0));
   LUT2 #(
     .INIT(4'h6)) 
@@ -20518,7 +20520,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I3(det_vblank_d),
         .I4(vblank_in),
         .O(\DET_HACTIVE.DET_AVIDEO_LOCK.det_active_video_lock_int_reg_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT5 #(
     .INIT(32'h80000000)) 
     \intr_status_int[8]_i_1 
@@ -20528,7 +20530,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I3(hsync_lock_int),
         .I4(active_video_lock_int),
         .O(D[0]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT5 #(
     .INIT(32'h7F000000)) 
     \intr_status_int[9]_i_1 
@@ -20908,7 +20910,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .CYINIT(1'b0),
         .DI({1'b0,Q[10:8]}),
         .O(minusOp0_out[11:8]),
-        .S({i__carry__1_i_1__1_n_0,i__carry__1_i_2__2_n_0,i__carry__1_i_3__2_n_0,i__carry__1_i_4__2_n_0}));
+        .S({i__carry__1_i_1_n_0,i__carry__1_i_2__2_n_0,i__carry__1_i_3__2_n_0,i__carry__1_i_4__2_n_0}));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-8 {cell *THIS*}}" *) 
   CARRY4 neqOp_carry
        (.CI(1'b0),
@@ -21025,7 +21027,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .CYINIT(1'b0),
         .DI({1'b0,\time_status_regs[6] [10:8]}),
         .O({\plusOp_inferred__2/i__carry__1_n_4 ,\plusOp_inferred__2/i__carry__1_n_5 ,\plusOp_inferred__2/i__carry__1_n_6 ,\plusOp_inferred__2/i__carry__1_n_7 }),
-        .S({i__carry__1_i_1__2_n_0,i__carry__1_i_2_n_0,i__carry__1_i_3_n_0,i__carry__1_i_4_n_0}));
+        .S({i__carry__1_i_1__0_n_0,i__carry__1_i_2_n_0,i__carry__1_i_3_n_0,i__carry__1_i_4_n_0}));
   LUT6 #(
     .INIT(64'h8ACA8A8AFFFFFFFF)) 
     top_of_frame_i_1
@@ -21036,7 +21038,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I4(\DET_VSYNC.vsync_d_reg_n_0 ),
         .I5(resetn_out),
         .O(top_of_frame_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT2 #(
     .INIT(4'hB)) 
     top_of_frame_i_2
@@ -21104,14 +21106,14 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I4(v_count_reg__0[3]),
         .I5(v_count_reg__0[4]),
         .O(\v_count[10]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \v_count[1]_i_1 
        (.I0(v_count_reg__0[0]),
         .I1(v_count_reg__0[1]),
         .O(plusOp__0[1]));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT3 #(
     .INIT(8'h78)) 
     \v_count[2]_i_1 
@@ -21119,7 +21121,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(v_count_reg__0[1]),
         .I2(v_count_reg__0[2]),
         .O(plusOp__0[2]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT4 #(
     .INIT(16'h7F80)) 
     \v_count[3]_i_1 
@@ -21128,7 +21130,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I2(v_count_reg__0[0]),
         .I3(v_count_reg__0[3]),
         .O(plusOp__0[3]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \v_count[4]_i_1 
@@ -21148,14 +21150,14 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I4(v_count_reg__0[4]),
         .I5(v_count_reg__0[5]),
         .O(plusOp__0[5]));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT2 #(
     .INIT(4'h9)) 
     \v_count[6]_i_1 
        (.I0(\v_count[10]_i_5_n_0 ),
         .I1(v_count_reg__0[6]),
         .O(plusOp__0[6]));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT3 #(
     .INIT(8'hB4)) 
     \v_count[7]_i_1 
@@ -21163,7 +21165,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I1(v_count_reg__0[6]),
         .I2(v_count_reg__0[7]),
         .O(plusOp__0[7]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT4 #(
     .INIT(16'hDF20)) 
     \v_count[8]_i_1 
@@ -21172,7 +21174,7 @@ module hdmi_in_v_tc_1_0_tc_detector
         .I2(v_count_reg__0[7]),
         .I3(v_count_reg__0[8]),
         .O(plusOp__0[8]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT5 #(
     .INIT(32'hF7FF0800)) 
     \v_count[9]_i_1 
@@ -21495,7 +21497,7 @@ module hdmi_in_v_tc_1_0_tc_top
         .vblank_in(vblank_in),
         .vsync_in(vsync_in),
         .vsync_lock_int(vsync_lock_int));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT4 #(
     .INIT(16'hFFE2)) 
     all_lock_d_i_1
@@ -21510,7 +21512,7 @@ module hdmi_in_v_tc_1_0_tc_top
         .D(all_lock_d_i_1_n_0),
         .Q(all_lock_d),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
   LUT4 #(
     .INIT(16'hF1FF)) 
     all_lock_i_2
@@ -21567,7 +21569,7 @@ module hdmi_in_v_tc_1_0_tc_top
         .D(detect_en_d_reg_gate_n_0),
         .Q(p_0_in),
         .R(reset));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
   LUT2 #(
     .INIT(4'h8)) 
     detect_en_d_reg_gate
@@ -21603,7 +21605,7 @@ module hdmi_in_v_tc_1_0_tc_top
         .CLK(clk),
         .D(generate_en),
         .Q(\generate_en_d_reg[1]_srl2___U_TC_TOP_detect_en_d_reg_r_0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
   LUT3 #(
     .INIT(8'h0E)) 
     \generate_en_d_reg[1]_srl2___U_TC_TOP_detect_en_d_reg_r_0_i_1 
@@ -21623,7 +21625,7 @@ module hdmi_in_v_tc_1_0_tc_top
         .D(generate_en_d_reg_gate_n_0),
         .Q(generate_en_d),
         .R(reset));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
   LUT2 #(
     .INIT(4'h8)) 
     generate_en_d_reg_gate
@@ -21668,7 +21670,7 @@ module hdmi_in_v_tc_1_0_tc_top
         .D(1'b1),
         .Q(intc_if[3]),
         .R(reset));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
   LUT3 #(
     .INIT(8'h08)) 
     \intr_status_int[10]_i_1 
@@ -21692,7 +21694,7 @@ module hdmi_in_v_tc_1_0_tc_top
        (.I0(clken),
         .I1(resetn_out),
         .O(\intr_status_int[12]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
   LUT3 #(
     .INIT(8'h40)) 
     \intr_status_int[12]_i_2 
@@ -21730,7 +21732,7 @@ module hdmi_in_v_tc_1_0_tc_top
         .D(\GEN_DETECTION.U_tc_DET_n_56 ),
         .Q(intc_if[5]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT5 #(
     .INIT(32'h00002E22)) 
     lost_lock_i_1

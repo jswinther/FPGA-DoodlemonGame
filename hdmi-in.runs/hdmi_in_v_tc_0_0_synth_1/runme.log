@@ -10,21 +10,18 @@
 
 source hdmi_in_v_tc_0_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.ipdefs/repo_0_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.ipdefs/repo_0_0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
-update_ip_catalog: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 304.195 ; gain = 24.879
-WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
-Current IP cache path is c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.cache/ip 
 Command: synth_design -top hdmi_in_v_tc_0_0 -part xc7z010clg400-1 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 11092 
+INFO: Helper process launched with PID 8836 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 425.262 ; gain = 100.750
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 399.074 ; gain = 100.594
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'hdmi_in_v_tc_0_0' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_0_0/synth/hdmi_in_v_tc_0_0.vhd:96]
+INFO: [Synth 8-638] synthesizing module 'hdmi_in_v_tc_0_0' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_0_0/synth/hdmi_in_v_tc_0_0.vhd:96]
 	Parameter C_HAS_AXI4_LITE bound to: 1 - type: integer 
 	Parameter C_HAS_INTC_IF bound to: 0 - type: integer 
 	Parameter C_GEN_INTERLACED bound to: 0 - type: integer 
@@ -110,9 +107,9 @@ INFO: [Synth 8-638] synthesizing module 'hdmi_in_v_tc_0_0' [c:/Users/bruger/OneD
 	Parameter C_GEN_ACHROMA_EN bound to: 0 - type: integer 
 	Parameter C_GEN_FIELDID_EN bound to: 0 - type: integer 
 	Parameter C_DET_FIELDID_EN bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'v_tc' declared at 'c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/a92c/hdl/v_tc_v6_1_vh_rfs.vhd:7218' bound to instance 'U0' of component 'v_tc' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_0_0/synth/hdmi_in_v_tc_0_0.vhd:283]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
-INFO: [Synth 8-638] synthesizing module 'slave_attachment' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-3491] module 'v_tc' declared at 'c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/a92c/hdl/v_tc_v6_1_vh_rfs.vhd:7218' bound to instance 'U0' of component 'v_tc' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_0_0/synth/hdmi_in_v_tc_0_0.vhd:283]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
 	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 256'b0000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000010100001100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010110111 
 	Parameter C_ARD_NUM_CE_ARRAY bound to: 64'b0000000000000000000000000000000100000000000000000000000000000001 
 	Parameter C_IPIF_ABUS_WIDTH bound to: 10 - type: integer 
@@ -121,29 +118,29 @@ INFO: [Synth 8-638] synthesizing module 'slave_attachment' [c:/Users/bruger/OneD
 	Parameter C_USE_WSTRB bound to: 0 - type: integer 
 	Parameter C_DPHASE_TIMEOUT bound to: 512 - type: integer 
 	Parameter C_FAMILY bound to: virtex5 - type: string 
-INFO: [Synth 8-638] synthesizing module 'address_decoder' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
 	Parameter C_BUS_AWIDTH bound to: 9 - type: integer 
 	Parameter C_S_AXI_MIN_SIZE bound to: 511 - type: integer 
 	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 256'b0000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000010100001100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010110111 
 	Parameter C_ARD_NUM_CE_ARRAY bound to: 64'b0000000000000000000000000000000100000000000000000000000000000001 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-638] synthesizing module 'pselect_f' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 2 - type: integer 
 	Parameter C_AW bound to: 9 - type: integer 
 	Parameter C_BAR bound to: 9'b100000000 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'pselect_f' (1#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (1#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
 	Parameter C_AB bound to: 1 - type: integer 
 	Parameter C_AW bound to: 9 - type: integer 
 	Parameter C_BAR bound to: 9'b000000000 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (1#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'address_decoder' (2#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
-INFO: [Synth 8-226] default block is never used [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
-INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (3#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (4#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
-INFO: [Synth 8-256] done synthesizing module 'hdmi_in_v_tc_0_0' (11#1) [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_0_0/synth/hdmi_in_v_tc_0_0.vhd:96]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (1#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (2#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-226] default block is never used [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (3#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (4#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-256] done synthesizing module 'hdmi_in_v_tc_0_0' (11#1) [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_0_0/synth/hdmi_in_v_tc_0_0.vhd:96]
 WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v0chroma_start[11]
 WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v0chroma_start[10]
 WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v0chroma_start[9]
@@ -246,7 +243,7 @@ WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1sync_star
 WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1sync_start_hori[8]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 604.090 ; gain = 279.578
+Finished RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:29 . Memory (MB): peak = 578.020 ; gain = 279.539
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -259,49 +256,52 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:32 . Memory (MB): peak = 604.090 ; gain = 279.578
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 578.020 ; gain = 279.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:32 . Memory (MB): peak = 604.090 ; gain = 279.578
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 578.020 ; gain = 279.539
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_0_0/hdmi_in_v_tc_0_0_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_0_0/hdmi_in_v_tc_0_0_ooc.xdc] for cell 'U0'
-Parsing XDC File [C:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_v_tc_0_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_v_tc_0_0_synth_1/dont_touch.xdc]
-Parsing XDC File [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_0_0/hdmi_in_v_tc_0_0_clocks.xdc] for cell 'U0'
-Finished Parsing XDC File [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_0_0/hdmi_in_v_tc_0_0_clocks.xdc] for cell 'U0'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_0_0/hdmi_in_v_tc_0_0_clocks.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/hdmi_in_v_tc_0_0_propImpl.xdc].
+Parsing XDC File [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_0_0/hdmi_in_v_tc_0_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_0_0/hdmi_in_v_tc_0_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_v_tc_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_v_tc_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_0_0/hdmi_in_v_tc_0_0_clocks.xdc] for cell 'U0'
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -of [get_ports s_axi_aclk]'. [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_0_0/hdmi_in_v_tc_0_0_clocks.xdc:3]
+Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_0_0/hdmi_in_v_tc_0_0_clocks.xdc:3]
+Finished Parsing XDC File [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_0_0/hdmi_in_v_tc_0_0_clocks.xdc] for cell 'U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_v_tc_0_0/hdmi_in_v_tc_0_0_clocks.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/hdmi_in_v_tc_0_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/hdmi_in_v_tc_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 865.512 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 844.613 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 865.781 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 844.613 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 865.781 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.163 . Memory (MB): peak = 867.102 ; gain = 1.320
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 844.613 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.117 . Memory (MB): peak = 844.613 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:50 ; elapsed = 00:01:05 . Memory (MB): peak = 867.102 ; gain = 542.590
+Finished Constraint Validation : Time (s): cpu = 00:00:44 ; elapsed = 00:00:56 . Memory (MB): peak = 844.613 ; gain = 546.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:50 ; elapsed = 00:01:05 . Memory (MB): peak = 867.102 ; gain = 542.590
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:44 ; elapsed = 00:00:56 . Memory (MB): peak = 844.613 ; gain = 546.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for U0. (constraint file  {C:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_v_tc_0_0_synth_1/dont_touch.xdc}, line 9).
+Applied set_property DONT_TOUCH = true for U0. (constraint file  C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_v_tc_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:01:05 . Memory (MB): peak = 867.102 ; gain = 542.590
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:56 . Memory (MB): peak = 844.613 ; gain = 546.133
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
 INFO: [Synth 8-5544] ROM "s_axi_rresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
@@ -322,7 +322,7 @@ INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address si
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'slave_attachment'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:01 ; elapsed = 00:01:18 . Memory (MB): peak = 867.102 ; gain = 542.590
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:52 ; elapsed = 00:01:04 . Memory (MB): peak = 844.613 ; gain = 546.133
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -669,7 +669,7 @@ INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instan
 INFO: [Synth 8-3886] merging instance 'U0/U_VIDEO_CTRL/AXI4_LITE_INTERFACE.GENR_MUX0/GEN_SEL_DELAY[3].sel_int_reg[3][0]' (FDE) to 'U0/U_VIDEO_CTRL/AXI4_LITE_INTERFACE.CORE_MUX0/GEN_SEL_DELAY[3].sel_int_reg[3][0]'
 INFO: [Synth 8-3886] merging instance 'U0/U_VIDEO_CTRL/AXI4_LITE_INTERFACE.CORE_MUX0/GEN_SEL_DELAY[4].sel_int_reg[4][0]' (FDE) to 'U0/U_VIDEO_CTRL/AXI4_LITE_INTERFACE.GENR_MUX0/GEN_SEL_DELAY[4].sel_int_reg[4][0]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:19 ; elapsed = 00:01:42 . Memory (MB): peak = 867.102 ; gain = 542.590
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:08 ; elapsed = 00:01:22 . Memory (MB): peak = 844.613 ; gain = 546.133
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -681,13 +681,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:41 ; elapsed = 00:02:09 . Memory (MB): peak = 867.102 ; gain = 542.590
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:27 ; elapsed = 00:01:42 . Memory (MB): peak = 844.613 ; gain = 546.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:45 ; elapsed = 00:02:13 . Memory (MB): peak = 867.102 ; gain = 542.590
+Finished Timing Optimization : Time (s): cpu = 00:01:31 ; elapsed = 00:01:46 . Memory (MB): peak = 844.613 ; gain = 546.133
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -699,7 +699,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:50 ; elapsed = 00:02:19 . Memory (MB): peak = 867.445 ; gain = 542.934
+Finished Technology Mapping : Time (s): cpu = 00:01:36 ; elapsed = 00:01:51 . Memory (MB): peak = 847.734 ; gain = 549.254
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -723,7 +723,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:53 ; elapsed = 00:02:22 . Memory (MB): peak = 867.445 ; gain = 542.934
+Finished IO Insertion : Time (s): cpu = 00:01:39 ; elapsed = 00:01:54 . Memory (MB): peak = 847.734 ; gain = 549.254
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -736,7 +736,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:53 ; elapsed = 00:02:22 . Memory (MB): peak = 867.445 ; gain = 542.934
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:39 ; elapsed = 00:01:54 . Memory (MB): peak = 847.734 ; gain = 549.254
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -748,25 +748,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:54 ; elapsed = 00:02:24 . Memory (MB): peak = 867.445 ; gain = 542.934
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:39 ; elapsed = 00:01:55 . Memory (MB): peak = 847.734 ; gain = 549.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:54 ; elapsed = 00:02:24 . Memory (MB): peak = 867.445 ; gain = 542.934
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:40 ; elapsed = 00:01:55 . Memory (MB): peak = 847.734 ; gain = 549.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:54 ; elapsed = 00:02:24 . Memory (MB): peak = 867.445 ; gain = 542.934
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:40 ; elapsed = 00:01:55 . Memory (MB): peak = 847.734 ; gain = 549.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:55 ; elapsed = 00:02:24 . Memory (MB): peak = 867.445 ; gain = 542.934
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:40 ; elapsed = 00:01:55 . Memory (MB): peak = 847.734 ; gain = 549.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -831,33 +831,33 @@ Report Instance Areas:
 |12    |      \GEN_GENERATOR.U_TC_GEN               |tc_generator                      |   357|
 +------+--------------------------------------------+----------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:55 ; elapsed = 00:02:24 . Memory (MB): peak = 867.445 ; gain = 542.934
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:40 ; elapsed = 00:01:55 . Memory (MB): peak = 847.734 ; gain = 549.254
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 798 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:11 ; elapsed = 00:02:01 . Memory (MB): peak = 867.445 ; gain = 279.922
-Synthesis Optimization Complete : Time (s): cpu = 00:01:55 ; elapsed = 00:02:25 . Memory (MB): peak = 867.445 ; gain = 542.934
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:02 ; elapsed = 00:01:36 . Memory (MB): peak = 847.734 ; gain = 282.660
+Synthesis Optimization Complete : Time (s): cpu = 00:01:40 ; elapsed = 00:01:55 . Memory (MB): peak = 847.734 ; gain = 549.254
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 165 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 867.504 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 847.734 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-211 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+212 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:01 ; elapsed = 00:02:33 . Memory (MB): peak = 867.523 ; gain = 552.570
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 867.523 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:45 ; elapsed = 00:02:01 . Memory (MB): peak = 847.734 ; gain = 558.324
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 847.734 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_v_tc_0_0_synth_1/hdmi_in_v_tc_0_0.dcp' has been generated.
-WARNING: [Coretcl 2-1488] Problem adding IP cache entry: Directory already exists: c:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.cache/ip/2018.3/c477c1e4615fdf5f
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_v_tc_0_0_synth_1/hdmi_in_v_tc_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP hdmi_in_v_tc_0_0, cache-ID = aeba86dcd3bd1a3a
 INFO: [Coretcl 2-1174] Renamed 11 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 867.523 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 847.734 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/bruger/OneDrive - Danmarks Tekniske Universitet/Dokumenter/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_v_tc_0_0_synth_1/hdmi_in_v_tc_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/hdmi_in_v_tc_0_0_synth_1/hdmi_in_v_tc_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file hdmi_in_v_tc_0_0_utilization_synth.rpt -pb hdmi_in_v_tc_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jan 10 11:20:53 2019...
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 10 14:55:06 2019...
