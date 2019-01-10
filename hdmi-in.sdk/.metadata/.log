@@ -4433,3 +4433,49 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-62
 
 !ENTRY com.xilinx.sdk.utils 0 0 2019-01-09 23:01:05.905
 !MESSAGE XSCT command with result: [disconnect tcfchan#67], Result: [null, ]. Thread: Thread-6804
+!SESSION 2019-01-10 09:07:16.200 -----------------------------------------------
+eclipse.buildId=2018.3
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=da_DK
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.sdk
+
+!ENTRY org.eclipse.ui 2 0 2019-01-10 09:07:36.177
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-01-10 09:07:36.177
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY org.eclipse.ui 2 0 2019-01-10 09:07:37.272
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-01-10 09:07:37.272
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-01-10 09:07:51.417
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-5
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-01-10 09:07:51.424
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-01-10 09:07:55.326
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-5
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-01-10 09:07:55.336
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-01-10 09:07:55.346
+!MESSAGE XSCT Command: [setws C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.sdk], Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-01-10 09:07:55.363
+!MESSAGE XSCT command with result: [setws C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.sdk], Result: [null, ]. Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-01-10 09:07:55.400
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-01-10 09:08:02.128
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.sdk/hdmi_in_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-01-10 09:08:02.135
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.sdk/hdmi_in_wrapper_hw_platform_2/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2019-01-10 09:08:04.380
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.sdk/hdmi_in_wrapper_hw_platform_2/system.hdf], Result: [null, ]. Thread: main
