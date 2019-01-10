@@ -69,19 +69,19 @@ set rc [catch {
   set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.cache/wt [current_project]
-  set_property parent.project_path C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.xpr [current_project]
-  set_property ip_repo_paths C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.ipdefs/repo_0_0 [current_project]
+  set_property webtalk.parent_dir C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.cache/wt [current_project]
+  set_property parent.project_path C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.xpr [current_project]
+  set_property ip_repo_paths C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.ipdefs/repo_0_0 [current_project]
   update_ip_catalog
-  set_property ip_output_repo C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.cache/ip [current_project]
+  set_property ip_output_repo C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/hdmi_in_wrapper.dcp
+  add_files -quiet C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/hdmi_in_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/hdmi_in.bd
+  add_files C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/hdmi_in.bd
   set_param project.isImplRun false
-  read_xdc C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/constrs_1/new/epictroll.xdc
+  read_xdc C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/constrs_1/new/Constraint.xdc
   set_param project.isImplRun true
   link_design -top hdmi_in_wrapper -part xc7z010clg400-1
   set_param project.isImplRun false
@@ -157,6 +157,26 @@ if {$rc} {
   return -code error $RESULT
 } else {
   end_step route_design
+  unset ACTIVE_STEP 
+}
+
+start_step write_bitstream
+set ACTIVE_STEP write_bitstream
+set rc [catch {
+  create_msg_db write_bitstream.pb
+  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
+  catch { write_mem_info -force hdmi_in_wrapper.mmi }
+  write_bitstream -force hdmi_in_wrapper.bit 
+  catch { write_sysdef -hwdef hdmi_in_wrapper.hwdef -bitfile hdmi_in_wrapper.bit -meminfo hdmi_in_wrapper.mmi -file hdmi_in_wrapper.sysdef }
+  catch {write_debug_probes -quiet -force hdmi_in_wrapper}
+  catch {file copy -force hdmi_in_wrapper.ltx debug_nets.ltx}
+  close_msg_db -file write_bitstream.pb
+} RESULT]
+if {$rc} {
+  step_failed write_bitstream
+  return -code error $RESULT
+} else {
+  end_step write_bitstream
   unset ACTIVE_STEP 
 }
 

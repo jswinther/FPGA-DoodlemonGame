@@ -52,7 +52,14 @@
 #define VID_GPIO_IRPT_ID XPS_FPGA4_INT_ID
 #define SCU_TIMER_ID XPAR_SCUTIMER_DEVICE_ID
 #define UART_BASEADDR XPAR_PS7_UART_1_BASEADDR
+
+
+
 #define jumperGRAVITY 3
+#define PLATFORM_AMOUNT 10
+#define PLATFORM_VELOCITY 5
+#define PLATFORM_WIDTH 24
+#define PLATFORM_HEIGHT 160
 
 /* ------------------------------------------------------------ */
 /*				Global Variables								*/
@@ -92,15 +99,196 @@ const ivt_t ivt[] = {
 int main(void)
 {
 	DemoInitialize();
-	DemoRun();
-
-
+	DisplaySetMode(&dispCtrl, &VMODE_1920x1080);
+	DisplayStart(&dispCtrl);
+	DemoStartGame();
 	return 0;
 }
 
 /* ------------------------------------------------------------ */
-/*				Printing										*/
+/*				            Game								*/
 /* ------------------------------------------------------------ */
+
+void DemoStartGame() {
+	u8 *frame = dispCtrl.framePtr[dispCtrl.curFrame];
+	u32 gameWidth = dispCtrl.vMode.width;
+	u32 gameHeight = dispCtrl.vMode.height;
+	int nextFrame = 0;
+
+	/* ------------------------------------------------------------ */
+	/*			    Start of Menu and DemoRun() Cases.		    	*/
+	/* ------------------------------------------------------------ */
+
+	/*
+
+	2- Change Display Framebuffer Index
+
+	nextFrame = dispCtrl.curFrame + 1;
+	if (nextFrame >= DISPLAY_NUM_FRAMES)
+	{
+		nextFrame = 0;
+	}
+	DisplayChangeFrame(&dispCtrl, nextFrame);
+	 */
+
+
+	/*
+
+	3 - Start/Stop Video stream into Video Framebuffer
+
+	if (videoCapt.state == VIDEO_STREAMING)
+		VideoStop(&videoCapt);
+	else
+		VideoStart(&videoCapt);
+	 */
+
+	/*
+
+	4 - Change Video Framebuffer Index
+
+	nextFrame = videoCapt.curFrame + 1;
+	if (nextFrame >= DISPLAY_NUM_FRAMES)
+	{
+		nextFrame = 0;
+	}
+	VideoChangeFrame(&videoCapt, nextFrame);
+	 */
+
+	/*
+
+	5 - Grab Video Frame and invert colors
+
+	nextFrame = videoCapt.curFrame + 1;
+	if (nextFrame >= DISPLAY_NUM_FRAMES)
+	{
+		nextFrame = 0;
+	}
+	VideoStop(&videoCapt);
+	DemoInvertFrame(pFrames[videoCapt.curFrame], pFrames[nextFrame], videoCapt.timing.HActiveVideo, videoCapt.timing.VActiveVideo, DEMO_STRIDE);
+	VideoStart(&videoCapt);
+	DisplayChangeFrame(&dispCtrl, nextFrame);
+	 */
+
+	/*
+
+	6 - Grab Video Frame and scale to Display resolution
+
+	nextFrame = videoCapt.curFrame + 1;
+	if (nextFrame >= DISPLAY_NUM_FRAMES)
+	{
+		nextFrame = 0;
+	}
+	VideoStop(&videoCapt);
+	DemoScaleFrame(pFrames[videoCapt.curFrame], pFrames[nextFrame], videoCapt.timing.HActiveVideo, videoCapt.timing.VActiveVideo, dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE);
+	VideoStart(&videoCapt);
+	DisplayChangeFrame(&dispCtrl, nextFrame);
+
+	 */
+
+
+	/* ------------------------------------------------------------ */
+	/*			    End of Menu and DemoRun() Cases.		    	*/
+	/* ------------------------------------------------------------ */
+
+	/**
+	* Print game background.
+	*/
+	DemoPrintBackground(frame, gameWidth, gameHeight);
+
+
+	/**
+	 * Generate Platforms.
+	 */
+
+	int random_x;
+	int random_y;
+	struct Block platformBlock[PLATFORM_AMOUNT];
+	struct Block *platform[PLATFORM_AMOUNT];
+	for(int i = 0; i < PLATFORM_AMOUNT; i++) {
+		random_x = rand() % 990 + 0;
+		random_y = rand() % DEMO_STRIDE + 0;
+		platformBlock[i].anchor = DEMO_STRIDE*random_x+random_y;
+		platformBlock[i].height = PLATFORM_HEIGHT;
+		platformBlock[i].width = PLATFORM_WIDTH;
+		platformBlock[i].floor = random_y;
+		platform[i] = &platformBlock[i];
+	}
+
+	/*
+	* Generate Sprite.
+	*/
+
+	//Anchor, Width, Height, Distance from Floor and Velocity
+	struct Block jumperBlock = {0, 150, 150, 0, 0};
+	struct Block *jumper = &jumperBlock;
+	enum Velocity jumperVelocity = GROUND;
+	int jumperStart = DEMO_STRIDE*539+DEMO_STRIDE-(jumperBlock.width/2);
+	jumperBlock.anchor = jumperStart;
+	jumperBlock.floor = DEMO_STRIDE - jumperBlock.anchor + jumperBlock.height;
+
+
+
+
+	int counter = 0;
+	while(1) {
+
+		/**
+		 * Overwrite Jumper and Platforms
+		 */
+
+		DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 150, 150);
+
+		for(int j = 0; j < PLATFORM_AMOUNT; j++) {
+			DemoPrintBlock(frame, platform[j], 255);
+			platformBlock[j].anchor+=PLATFORM_VELOCITY;
+			platformBlock[j].floor+=PLATFORM_VELOCITY;
+			if(platformBlock[j].floor >= DEMO_STRIDE) {
+				platformBlock[j].floor = 0;
+				platformBlock[j].anchor = DEMO_STRIDE*(rand() % 900 + 0);
+			}
+
+		}
+		switch(jumperVelocity) {
+		case GROUND:
+			counter = 0;
+			jumperBlock.velocity = 24;
+			jumperVelocity = AIR;
+			break;
+		case AIR:
+			if(counter%10==0) {
+				if(jumperBlock.velocity > -24)
+					jumperBlock.velocity-=jumperGRAVITY;
+			}
+			jumperBlock.anchor -= jumperBlock.velocity;
+
+			if(jumperBlock.velocity < 0) {
+
+				for(int k = 0; k < PLATFORM_AMOUNT; k++) {
+
+					if((collisiondetect(jumper, platform[k]))==1) {
+
+						jumperVelocity = GROUND;
+
+					}
+				}
+			}
+			counter++;
+			break;
+		}
+
+
+
+		//DemoPrintBlock(frame, overWrite, overWriteBlock.anchor, 255);
+		for(int j = 0; j < PLATFORM_AMOUNT; j++) {
+					DemoPrintBlock(frame, platform[j], 128);
+				}
+		//DemoPrintBlock(frame, jumper, jumperBlock.anchor, 0);
+		DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 150, 150);
+		Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
+	}
+}
+
+
 
 void DemoPrintBackground(u8 *frame, int width, int height) {
 	int x, y, iPixelAddr;
@@ -123,12 +311,10 @@ void DemoPrintBackground(u8 *frame, int width, int height) {
 	Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
 }
 
-void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
-	block->anchor = anchor;
-	int i, j, cor;
-	cor = anchor;
-	for(i=0;i<block->height;i++) {
-		for(j=0;j<block->width;j+=3) {
+void DemoPrintBlock(u8 *frame, struct Block *block, int color) {
+	int cor = block->anchor;
+	for(int i=0;i<block->height;i++) {
+		for(int j=0;j<block->width;j+=3) {
 			frame[cor + j] = color;
 			frame[cor + j + 1] = color;
 			frame[cor + j + 2] = color;
@@ -208,109 +394,6 @@ int collisiondetect (struct Block *jumper, struct Block *platform){
 	singleStepHeight++;
 	}
 	return 0;
-}
-
-
-
-void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
-	/**
-		 * Generate Sprite.
-		 */
-		//struct Block overWriteBlock = {0, 150, 150, 0, 0};
-		//struct Block *overWrite = &overWriteBlock;
-		struct Block jumperBlock = {0, 150, 150, 0, 0};
-		struct Block *jumper = &jumperBlock;
-		int jumperStart = DEMO_STRIDE*539+DEMO_STRIDE-(jumperBlock.width/2);
-		jumperBlock.anchor = jumperStart;
-		jumperBlock.floor = DEMO_STRIDE - jumperBlock.anchor + jumperBlock.height;
-
-	/**
-	 * Print game background.
-	 */
-	DemoPrintBackground(frame, gameWidth, gameHeight);
-	/**
-	 * jumperMovement FSM.
-	 */
-	enum Velocity jumperVelocity = GROUND;
-
-	/**
-	 * Generate Platforms.
-	 */
-	int numberofplatforms = 10;
-	int random_x;
-	int random_y;
-	int hast = 5;
-	struct Block platformBlock[numberofplatforms];
-	struct Block *platform[numberofplatforms];
-	int i, j;
-	for(i = 0; i < numberofplatforms; i++) {
-		random_x = rand() % 990 + 0;
-		random_y = rand() % 5760 + 0;
-		platformBlock[i].anchor = DEMO_STRIDE*random_x+random_y;
-		platformBlock[i].height = 160;
-		platformBlock[i].width = 24;
-		platformBlock[i].floor = random_y;
-		platform[i] = &platformBlock[i];
-	}
-
-
-	int counter = 0;
-	int k=0;
-	while(1) {
-
-		for(j = 0; j < numberofplatforms; j++) {
-			DemoPrintBlock(frame, platform[j], platform[j]->anchor, 255);
-			platformBlock[j].anchor+=hast;
-			platformBlock[j].floor+=hast;
-			if(platformBlock[j].floor >= DEMO_STRIDE) {
-				platformBlock[j].floor = 0;
-				platformBlock[j].anchor = DEMO_STRIDE*(rand() % 900 + 0);
-			}
-			DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 150, 150);
-		}
-		switch(jumperVelocity) {
-		case GROUND:
-			counter = 0;
-			jumperBlock.velocity = 24;
-			jumperVelocity = AIR;
-			break;
-		case AIR:
-			if(counter%10==0) {
-				if(jumperBlock.velocity > -24)
-					jumperBlock.velocity-=jumperGRAVITY;
-			}
-			jumperBlock.anchor -= jumperBlock.velocity;
-
-			if(jumperBlock.velocity < 0) {
-
-				for(k = 0; k < numberofplatforms; k++) {
-
-					if((collisiondetect(jumper, platform[k]))==1) {
-
-						jumperVelocity = GROUND;
-
-					}
-				}
-			}
-			counter++;
-			break;
-		}
-
-
-
-		//DemoPrintBlock(frame, overWrite, overWriteBlock.anchor, 255);
-		for(j = 0; j < numberofplatforms; j++) {
-					DemoPrintBlock(frame, platform[j], platform[j]->anchor, 128);
-				}
-		//DemoPrintBlock(frame, jumper, jumperBlock.anchor, 0);
-		DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 150, 150);
-		Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
-	}
-}
-
-void GameOptions() {
-	xil_printf("a - Move Left\n\r");
-	xil_printf("d - Move Right\n\r");
 }
 
 void DemoInitialize()
@@ -393,236 +476,6 @@ void DemoInitialize()
 	DemoPrintBackground(dispCtrl.framePtr[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height);
 
 	return;
-}
-
-void DemoRun() {
-	while (XUartPs_IsReceiveData(UART_BASEADDR)) {
-			XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
-	}
-	int nextFrame = 0;
-	char userInput = 0;
-	/* Flush UART FIFO */
-	while (userInput != 'q') {
-		fRefresh = 0;
-		DemoPrintMenu();
-		/* Wait for data on UART */
-		while (!XUartPs_IsReceiveData(UART_BASEADDR) && !fRefresh)
-		{}
-
-		/* Store the first character in the UART receive FIFO and echo it */
-		if (XUartPs_IsReceiveData(UART_BASEADDR))
-		{
-			userInput = XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
-			xil_printf("%c", userInput);
-		}
-		else  //Refresh triggered by video detect interrupt
-		{
-			userInput = 'r';
-		}
-		switch (userInput)
-		{
-		case '1':
-			DemoChangeRes();
-			break;
-		case '2':
-			nextFrame = dispCtrl.curFrame + 1;
-			if (nextFrame >= DISPLAY_NUM_FRAMES)
-			{
-				nextFrame = 0;
-			}
-			DisplayChangeFrame(&dispCtrl, nextFrame);
-			break;
-		case '3':
-			if (videoCapt.state == VIDEO_STREAMING)
-				VideoStop(&videoCapt);
-			else
-				VideoStart(&videoCapt);
-			break;
-		case '4':
-			nextFrame = videoCapt.curFrame + 1;
-			if (nextFrame >= DISPLAY_NUM_FRAMES)
-			{
-				nextFrame = 0;
-			}
-			VideoChangeFrame(&videoCapt, nextFrame);
-			break;
-		case '5':
-			nextFrame = videoCapt.curFrame + 1;
-			if (nextFrame >= DISPLAY_NUM_FRAMES)
-			{
-				nextFrame = 0;
-			}
-			VideoStop(&videoCapt);
-			DemoInvertFrame(pFrames[videoCapt.curFrame], pFrames[nextFrame], videoCapt.timing.HActiveVideo, videoCapt.timing.VActiveVideo, DEMO_STRIDE);
-			VideoStart(&videoCapt);
-			DisplayChangeFrame(&dispCtrl, nextFrame);
-			break;
-		case '6':
-			nextFrame = videoCapt.curFrame + 1;
-			if (nextFrame >= DISPLAY_NUM_FRAMES)
-			{
-				nextFrame = 0;
-			}
-			VideoStop(&videoCapt);
-			DemoScaleFrame(pFrames[videoCapt.curFrame], pFrames[nextFrame], videoCapt.timing.HActiveVideo, videoCapt.timing.VActiveVideo, dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE);
-			VideoStart(&videoCapt);
-			DisplayChangeFrame(&dispCtrl, nextFrame);
-			break;
-		case '7':
-			DemoStartGame(dispCtrl.framePtr[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height);
-			break;
-		case 'q':
-			break;
-		case 'r':
-			break;
-		default :
-			xil_printf("\n\rInvalid Selection");
-			TimerDelay(500000);
-		}
-	}
-
-	return;
-}
-
-void DemoPrintMenu()
-{
-	xil_printf("\x1B[H"); //Set cursor to top left of terminal
-	xil_printf("\x1B[2J"); //Clear terminal
-	xil_printf("**************************************************\n\r");
-	xil_printf("*                ZYBO Video Demo                 *\n\r");
-	xil_printf("**************************************************\n\r");
-	xil_printf("*Display Resolution: %28s*\n\r", dispCtrl.vMode.label);
-	printf("*Display Pixel Clock Freq. (MHz): %15.3f*\n\r", dispCtrl.pxlFreq);
-	xil_printf("*Display Frame Index: %27d*\n\r", dispCtrl.curFrame);
-	if (videoCapt.state == VIDEO_DISCONNECTED) xil_printf("*Video Capture Resolution: %22s*\n\r", "!HDMI UNPLUGGED!");
-	else xil_printf("*Video Capture Resolution: %17dx%-4d*\n\r", videoCapt.timing.HActiveVideo, videoCapt.timing.VActiveVideo);
-	xil_printf("*Video Frame Index: %29d*\n\r", videoCapt.curFrame);
-	xil_printf("**************************************************\n\r");
-	xil_printf("\n\r");
-	xil_printf("1 - Change Display Resolution\n\r");
-	xil_printf("2 - Change Display Framebuffer Index\n\r");
-	xil_printf("3 - Start/Stop Video stream into Video Framebuffer\n\r");
-	xil_printf("4 - Change Video Framebuffer Index\n\r");
-	xil_printf("5 - Grab Video Frame and invert colors\n\r");
-	xil_printf("6 - Grab Video Frame and scale to Display resolution\n\r");
-	xil_printf("7 - Start Game\n\r");
-	xil_printf("p - Print Square\n\r");
-	xil_printf("q - Quit\n\r");
-	xil_printf("\n\r");
-	xil_printf("\n\r");
-	xil_printf("Enter a selection:");
-}
-
-void DemoChangeRes()
-{
-	int fResSet = 0;
-	int status;
-	char userInput = 0;
-
-	/* Flush UART FIFO */
-	while (XUartPs_IsReceiveData(UART_BASEADDR))
-	{
-		XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
-	}
-
-	while (!fResSet)
-	{
-		DemoCRMenu();
-
-		/* Wait for data on UART */
-		while (!XUartPs_IsReceiveData(UART_BASEADDR))
-		{}
-
-		/* Store the first character in the UART recieve FIFO and echo it */
-		userInput = XUartPs_ReadReg(UART_BASEADDR, XUARTPS_FIFO_OFFSET);
-		xil_printf("%c", userInput);
-		status = XST_SUCCESS;
-		switch (userInput)
-		{
-		case '1':
-			status = DisplayStop(&dispCtrl);
-			DisplaySetMode(&dispCtrl, &VMODE_640x480);
-			DisplayStart(&dispCtrl);
-			fResSet = 1;
-			break;
-		case '2':
-			status = DisplayStop(&dispCtrl);
-			DisplaySetMode(&dispCtrl, &VMODE_800x600);
-			DisplayStart(&dispCtrl);
-			fResSet = 1;
-			break;
-		case '3':
-			status = DisplayStop(&dispCtrl);
-			DisplaySetMode(&dispCtrl, &VMODE_1280x720);
-			DisplayStart(&dispCtrl);
-			fResSet = 1;
-			break;
-		case '4':
-			status = DisplayStop(&dispCtrl);
-			DisplaySetMode(&dispCtrl, &VMODE_1280x1024);
-			DisplayStart(&dispCtrl);
-			fResSet = 1;
-			break;
-		case '5':
-			status = DisplayStop(&dispCtrl);
-			DisplaySetMode(&dispCtrl, &VMODE_1920x1080);
-			DisplayStart(&dispCtrl);
-			fResSet = 1;
-			break;
-		case 'q':
-			fResSet = 1;
-			break;
-		default :
-			xil_printf("\n\rInvalid Selection");
-			TimerDelay(500000);
-		}
-		if (status == XST_DMA_ERROR)
-		{
-			xil_printf("\n\rWARNING: AXI VDMA Error detected and cleared\n\r");
-		}
-	}
-}
-
-
-
-/*
-void DemoPrintArray(u8 *frame, int *array, u32 anchor, int imgW, int imgH) {
-	int i, counter;
-	counter = 1;
-	for(i=0;i<imgH*imgW;i++) {
-		if(counter == imgW*3) {
-			counter = 1;
-			anchor+=DEMO_STRIDE;
-		}
-			frame[anchor + i] = array[i + 1];
-			frame[anchor + i + 1] = array[i + 2];
-			frame[anchor + i + 2] = array[i];
-
-
-			counter++;
-
-	}
-}*/
-
-void DemoCRMenu()
-{
-	xil_printf("\x1B[H"); //Set cursor to top left of terminal
-	xil_printf("\x1B[2J"); //Clear terminal
-	xil_printf("**************************************************\n\r");
-	xil_printf("*                ZYBO Video Demo                 *\n\r");
-	xil_printf("**************************************************\n\r");
-	xil_printf("*Current Resolution: %28s*\n\r", dispCtrl.vMode.label);
-	printf("*Pixel Clock Freq. (MHz): %23.3f*\n\r", dispCtrl.pxlFreq);
-	xil_printf("**************************************************\n\r");
-	xil_printf("\n\r");
-	xil_printf("1 - %s\n\r", VMODE_640x480.label);
-	xil_printf("2 - %s\n\r", VMODE_800x600.label);
-	xil_printf("3 - %s\n\r", VMODE_1280x720.label);
-	xil_printf("4 - %s\n\r", VMODE_1280x1024.label);
-	xil_printf("5 - %s\n\r", VMODE_1920x1080.label);
-	xil_printf("q - Quit (don't change resolution)\n\r");
-	xil_printf("\n\r");
-	xil_printf("Select a new resolution:");
 }
 
 void DemoInvertFrame(u8 *srcFrame, u8 *destFrame, u32 width, u32 height, u32 stride)

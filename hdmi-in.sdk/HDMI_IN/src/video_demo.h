@@ -34,10 +34,6 @@
 /*					Miscellaneous Declarations					*/
 /* ------------------------------------------------------------ */
 
-#define DEMO_PATTERN_0 0
-#define DEMO_PATTERN_1 1
-#define DEMO_PATTERN_2 2
-#define DEMO_PATTERN_3 3
 #define DEMO_MAX_FRAME (1920*1080*3)
 #define DEMO_STRIDE (1920 * 3)
 
@@ -58,12 +54,6 @@ struct Block {
 	int velocity;
 };
 
-enum Speed {
-	EQUILIBRIUM = 0,
-	VEL2 = 4,
-	VEL3 = 5
-};
-
 enum Velocity {
 	GROUND,
 	AIR
@@ -76,13 +66,9 @@ enum Velocity {
 /* ------------------------------------------------------------ */
 
 void DemoInitialize();
-void DemoRun();
 void DemoPrintMenu();
-void GameOptions();
-void DemoStartGame(u8 *frame, u32 width, u32 height);
-void DemoChangeRes();
-void DemoCRMenu();
-void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color);
+void DemoStartGame();
+void DemoPrintBlock(u8 *frame, struct Block *block, int color);
 void DemoPrintBackground(u8 *frame, int width, int height);
 void DemoInvertFrame(u8 *srcFrame, u8 *destFrame, u32 width, u32 height, u32 stride);
 void DemoPrintTest(u8 *frame, u32 width, u32 height, u32 stride, int pattern);
@@ -90,9 +76,9 @@ void DemoScaleFrame(u8 *srcFrame, u8 *destFrame, u32 srcWidth, u32 srcHeight, u3
 void DemoISR(void *callBackRef, void *pVideo);
 
 
-
-
-
+void DemoOverwriteJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW);
+int collisiondetect (struct Block *jumper, struct Block *platform);
+void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW);
 
 
 /* ------------------------------------------------------------ */
