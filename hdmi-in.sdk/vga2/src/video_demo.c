@@ -44,6 +44,8 @@
 #include "xil_exception.h"
 #include "xil_printf.h"
 #include "xtime_l.h"
+#include "interrupts.h"
+#include "game.h"
 
 /* ------------------------------------------------------------ */
 /*						   Defines				        		*/
@@ -57,27 +59,21 @@
 #define VID_GPIO_IRPT_ID XPS_FPGA4_INT_ID
 #define SCU_TIMER_ID XPAR_SCUTIMER_DEVICE_ID
 #define UART_BASEADDR XPAR_PS7_UART_1_BASEADDR
-#define jumperGRAVITY 3
-#define BTNS_DEVICE_ID		XPAR_AXI_GPIO_BTN_DEVICE_ID
-#define LEDS_DEVICE_ID		XPAR_AXI_GPIO_LED_DEVICE_ID
-#define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_BTN_IP2INTC_IRPT_INTR
-#define BTN_INT 			XGPIO_IR_CH1_MASK
-#define jumperStart (1920*3)*539+(1920*3)-(jumperBlock.width/2);
-void BTN_Intr_Handler(void *baseaddr_p);
-void TMR_Intr_Handler(void *InstancePtr, u8 TmrCtrNumber);
-int InterruptSystemSetup(XScuGic *XScuGicInstancePtr);
-int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr);
+
+
+
+
+
 /* ------------------------------------------------------------ */
 /*				Global Variables								*/
 /* ------------------------------------------------------------ */
-int btn_value;
+
 int nextFrame = 0;
-XGpio LEDInst, BTNInst;
-XScuGic INTCInst;
+
 DisplayCtrl dispCtrl;
 XAxiVdma vdma;
 VideoCapture videoCapt;
-INTC intc;
+
 
 char fRefresh; //flag used to trigger a refresh of the Menu on video detect
 /*
@@ -106,14 +102,9 @@ int main(void) {
 	//----------------------------------------------------
 	// INITIALIZE THE PERIPHERALS & SET DIRECTIONS OF GPIO
 	//----------------------------------------------------
-	// Initialise LEDs
-	status = XGpio_Initialize(&LEDInst, LEDS_DEVICE_ID);
-	if(status != XST_SUCCESS) return XST_FAILURE;
 	// Initialise Push Buttons
 	status = XGpio_Initialize(&BTNInst, BTNS_DEVICE_ID);
 	if(status != XST_SUCCESS) return XST_FAILURE;
-	// Set LEDs direction to outputs
-	XGpio_SetDataDirection(&LEDInst, 1, 0x00);
 	// Set all buttons direction to inputs
 	XGpio_SetDataDirection(&BTNInst, 1, 0xFF);
 	// Initialize interrupt controller
@@ -142,14 +133,14 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 	/**
 	 * Generate Platforms.
 	 */
-	int numberofplatforms = 10;
+
 	int random_x;
 	int random_y;
 	int hast = 5;
-	struct Block platformBlock[numberofplatforms];
-	struct Block *platform[numberofplatforms];
+	struct Block platformBlock[PLATFORM_AMOUNT];
+	struct Block *platform[PLATFORM_AMOUNT];
 	int i, j;
-	for(i = 0; i < numberofplatforms; i++) {
+	for(i = 0; i < PLATFORM_AMOUNT; i++) {
 		random_x = rand() % 990 + 0;
 		random_y = rand() % 5760 + 0;
 		platformBlock[i].anchor = DEMO_STRIDE*random_x+random_y;
@@ -184,8 +175,8 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 		}
 
 		//Generate platforms
-		for(j = 0; j < numberofplatforms; j++) {
-			DemoPrintBlock(frame, platform[j], platform[j]->anchor, 255);
+		for(j = 0; j < PLATFORM_AMOUNT; j++) {
+			GamePrintBlock(frame, platform[j], platform[j]->anchor, 255);
 			platformBlock[j].anchor+=hast;
 			platformBlock[j].floor+=hast;
 			if(platformBlock[j].floor >= DEMO_STRIDE) {
@@ -212,7 +203,7 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 
 			if(jumperBlock.velocity < 0) {
 
-				for(k = 0; k < numberofplatforms; k++) {
+				for(k = 0; k < PLATFORM_AMOUNT; k++) {
 
 					if((collisiondetect(jumper, platform[k]))==1) {
 
@@ -228,8 +219,8 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 
 
 
-		for(j = 0; j < numberofplatforms; j++) {
-					DemoPrintBlock(frame, platform[j], platform[j]->anchor, 128);
+		for(j = 0; j < PLATFORM_AMOUNT; j++) {
+					GamePrintBlock(frame, platform[j], platform[j]->anchor, 128);
 				}
 		//DemoPrintBlock(frame, jumper, jumperBlock.anchor, 0);
 		DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
@@ -279,7 +270,7 @@ void DemoPrintBackground(u8 *frame, int width, int height) {
 	Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
 }
 
-void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
+void GamePrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
 	block->anchor = anchor;
 	int i, j, cor;
 	cor = anchor;
@@ -608,44 +599,6 @@ void DemoISR(void *callBackRef, void *pVideo)
 /*				Interrupt										*/
 /* ------------------------------------------------------------ */
 
-int InterruptSystemSetup(XScuGic *XScuGicInstancePtr)
-{
-	// Enable interrupt
-	XGpio_InterruptEnable(&BTNInst, BTN_INT);
-	XGpio_InterruptGlobalEnable(&BTNInst);
-
-	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
-			 	 	 	 	 	 (Xil_ExceptionHandler)XScuGic_InterruptHandler,
-			 	 	 	 	 	 XScuGicInstancePtr);
-	Xil_ExceptionEnable();
-
-
-	return XST_SUCCESS;
-
-}
-
-
-
-int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr) {
-	XScuGic_Config *IntcConfig;
-	int status;
-	// Interrupt controller initialisation
-	IntcConfig = XScuGic_LookupConfig(DeviceId);
-	status = XScuGic_CfgInitialize(&INTCInst, IntcConfig, IntcConfig->CpuBaseAddress);
-	if(status != XST_SUCCESS) return XST_FAILURE;
-	// Call to interrupt setup
-	status = InterruptSystemSetup(&INTCInst);
-	if(status != XST_SUCCESS) return XST_FAILURE;
-	// Connect GPIO interrupt to handler
-	status = XScuGic_Connect(&INTCInst, INTC_GPIO_INTERRUPT_ID, (Xil_ExceptionHandler)BTN_Intr_Handler, (void *)GpioInstancePtr);
-	if(status != XST_SUCCESS) return XST_FAILURE;
-	// Enable GPIO interrupts interrupt
-	XGpio_InterruptEnable(GpioInstancePtr, 1);
-	XGpio_InterruptGlobalEnable(GpioInstancePtr);
-	// Enable GPIO and timer interrupts in the controller
-	XScuGic_Enable(&INTCInst, INTC_GPIO_INTERRUPT_ID);
-	return XST_SUCCESS;
-}
 
 
 
@@ -655,18 +608,4 @@ int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr) {
 
 
 
-void BTN_Intr_Handler(void *InstancePtr)
-{
-	// Disable GPIO interrupts
-	XGpio_InterruptDisable(&BTNInst, BTN_INT);
-	// Ignore additional button presses
-	if ((XGpio_InterruptGetStatus(&BTNInst) & BTN_INT) !=
-			BTN_INT) {
-			return;
-		}
-	btn_value = XGpio_DiscreteRead(&BTNInst, 1);
 
-    (void)XGpio_InterruptClear(&BTNInst, BTN_INT);
-    // Enable GPIO interrupts
-    XGpio_InterruptEnable(&BTNInst, BTN_INT);
-}

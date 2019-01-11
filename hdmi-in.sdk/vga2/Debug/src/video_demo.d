@@ -34,7 +34,8 @@ src/video_demo.o src/video_demo.o: ../src/video_demo.c \
  ../../vga2_bsp/ps7_cortexa9_0/include/xparameters.h \
  ../../vga2_bsp/ps7_cortexa9_0/include/xil_exception.h \
  ../../vga2_bsp/ps7_cortexa9_0/include/xil_printf.h \
- ../../vga2_bsp/ps7_cortexa9_0/include/xtime_l.h
+ ../../vga2_bsp/ps7_cortexa9_0/include/xtime_l.h ../src/interrupts.h \
+ ../src/game.h
 
 ../src/video_demo.h:
 
@@ -113,3 +114,7 @@ src/video_demo.o src/video_demo.o: ../src/video_demo.c \
 ../../vga2_bsp/ps7_cortexa9_0/include/xil_printf.h:
 
 ../../vga2_bsp/ps7_cortexa9_0/include/xtime_l.h:
+
+../src/interrupts.h:
+
+../src/game.h:

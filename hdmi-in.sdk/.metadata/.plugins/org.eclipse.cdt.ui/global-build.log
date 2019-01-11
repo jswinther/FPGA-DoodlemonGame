@@ -3441,3 +3441,1400 @@ arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
   67872	 122952	18688208	18879032	1201238	vga2.elf
 'Finished building: vga2.elf.size'
 ' '
+19:09:27 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:248:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:254:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67872	 122952	18688208	18879032	1201238	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+19:09:42 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:145:25: error: expected expression before '=' token
+ #define PLATFORM_AMOUNT = 10
+                         ^
+../src/video_demo.c:149:29: note: in expansion of macro 'PLATFORM_AMOUNT'
+  struct Block platformBlock[PLATFORM_AMOUNT];
+                             ^~~~~~~~~~~~~~~
+../src/video_demo.c:145:25: error: expected expression before '=' token
+ #define PLATFORM_AMOUNT = 10
+                         ^
+../src/video_demo.c:150:25: note: in expansion of macro 'PLATFORM_AMOUNT'
+  struct Block *platform[PLATFORM_AMOUNT];
+                         ^~~~~~~~~~~~~~~
+../src/video_demo.c:145:25: error: expected expression before '=' token
+ #define PLATFORM_AMOUNT = 10
+                         ^
+../src/video_demo.c:152:17: note: in expansion of macro 'PLATFORM_AMOUNT'
+  for(i = 0; i < PLATFORM_AMOUNT; i++) {
+                 ^~~~~~~~~~~~~~~
+../src/video_demo.c:145:25: error: expected expression before '=' token
+ #define PLATFORM_AMOUNT = 10
+                         ^
+../src/video_demo.c:187:18: note: in expansion of macro 'PLATFORM_AMOUNT'
+   for(j = 0; j < PLATFORM_AMOUNT; j++) {
+                  ^~~~~~~~~~~~~~~
+../src/video_demo.c:145:25: error: expected expression before '=' token
+ #define PLATFORM_AMOUNT = 10
+                         ^
+../src/video_demo.c:215:20: note: in expansion of macro 'PLATFORM_AMOUNT'
+     for(k = 0; k < PLATFORM_AMOUNT; k++) {
+                    ^~~~~~~~~~~~~~~
+../src/video_demo.c:145:25: error: expected expression before '=' token
+ #define PLATFORM_AMOUNT = 10
+                         ^
+../src/video_demo.c:231:18: note: in expansion of macro 'PLATFORM_AMOUNT'
+   for(j = 0; j < PLATFORM_AMOUNT; j++) {
+                  ^~~~~~~~~~~~~~~
+../src/video_demo.c:150:16: warning: unused variable 'platform' [-Wunused-variable]
+  struct Block *platform[PLATFORM_AMOUNT];
+                ^~~~~~~~
+../src/video_demo.c:149:15: warning: unused variable 'platformBlock' [-Wunused-variable]
+  struct Block platformBlock[PLATFORM_AMOUNT];
+               ^~~~~~~~~~~~~
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:248:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:254:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+19:09:54 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:65:25: error: expected expression before '=' token
+ #define PLATFORM_AMOUNT = 10
+                         ^
+../src/video_demo.c:152:29: note: in expansion of macro 'PLATFORM_AMOUNT'
+  struct Block platformBlock[PLATFORM_AMOUNT];
+                             ^~~~~~~~~~~~~~~
+../src/video_demo.c:65:25: error: expected expression before '=' token
+ #define PLATFORM_AMOUNT = 10
+                         ^
+../src/video_demo.c:153:25: note: in expansion of macro 'PLATFORM_AMOUNT'
+  struct Block *platform[PLATFORM_AMOUNT];
+                         ^~~~~~~~~~~~~~~
+../src/video_demo.c:65:25: error: expected expression before '=' token
+ #define PLATFORM_AMOUNT = 10
+                         ^
+../src/video_demo.c:155:17: note: in expansion of macro 'PLATFORM_AMOUNT'
+  for(i = 0; i < PLATFORM_AMOUNT; i++) {
+                 ^~~~~~~~~~~~~~~
+../src/video_demo.c:65:25: error: expected expression before '=' token
+ #define PLATFORM_AMOUNT = 10
+                         ^
+../src/video_demo.c:190:18: note: in expansion of macro 'PLATFORM_AMOUNT'
+   for(j = 0; j < PLATFORM_AMOUNT; j++) {
+                  ^~~~~~~~~~~~~~~
+../src/video_demo.c:65:25: error: expected expression before '=' token
+ #define PLATFORM_AMOUNT = 10
+                         ^
+../src/video_demo.c:218:20: note: in expansion of macro 'PLATFORM_AMOUNT'
+     for(k = 0; k < PLATFORM_AMOUNT; k++) {
+                    ^~~~~~~~~~~~~~~
+../src/video_demo.c:65:25: error: expected expression before '=' token
+ #define PLATFORM_AMOUNT = 10
+                         ^
+../src/video_demo.c:234:18: note: in expansion of macro 'PLATFORM_AMOUNT'
+   for(j = 0; j < PLATFORM_AMOUNT; j++) {
+                  ^~~~~~~~~~~~~~~
+../src/video_demo.c:153:16: warning: unused variable 'platform' [-Wunused-variable]
+  struct Block *platform[PLATFORM_AMOUNT];
+                ^~~~~~~~
+../src/video_demo.c:152:15: warning: unused variable 'platformBlock' [-Wunused-variable]
+  struct Block platformBlock[PLATFORM_AMOUNT];
+               ^~~~~~~~~~~~~
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:251:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:257:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+19:10:00 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:251:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:257:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67744	 122952	18688208	18878904	12011b8	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+19:11:07 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:251:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:257:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67744	 122952	18688208	18878904	12011b8	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+19:11:26 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:251:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:257:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67744	 122952	18688208	18878904	12011b8	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+19:11:32 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:251:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:257:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67744	 122952	18688208	18878904	12011b8	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+19:12:02 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/interrupts.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/interrupts.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/interrupts.d" -MT"src/interrupts.o" -o "src/interrupts.o" "../src/interrupts.c"
+'Finished building: ../src/interrupts.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/interrupts.o ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67744	 122952	18688208	18878904	12011b8	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+19:12:08 **** Clean-only build of configuration Debug for project vga2 ****
+make clean 
+rm -rf  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/interrupts.o ./src/video_demo.o  ./src/video_capture/video_capture.d  ./src/timer_ps/timer_ps.d  ./src/intc/intc.d  ./src/dynclk/dynclk.d  ./src/display_ctrl/display_ctrl.d  ./src/interrupts.d ./src/video_demo.d  vga2.elf.size  vga2.elf
+' '
+19:12:08 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_capture/video_capture.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_capture/video_capture.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_capture/video_capture.d" -MT"src/video_capture/video_capture.o" -o "src/video_capture/video_capture.o" "../src/video_capture/video_capture.c"
+'Finished building: ../src/video_capture/video_capture.c'
+' '
+'Building file: ../src/timer_ps/timer_ps.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/timer_ps/timer_ps.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/timer_ps/timer_ps.d" -MT"src/timer_ps/timer_ps.o" -o "src/timer_ps/timer_ps.o" "../src/timer_ps/timer_ps.c"
+'Finished building: ../src/timer_ps/timer_ps.c'
+' '
+'Building file: ../src/intc/intc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/intc/intc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/intc/intc.d" -MT"src/intc/intc.o" -o "src/intc/intc.o" "../src/intc/intc.c"
+'Finished building: ../src/intc/intc.c'
+' '
+'Building file: ../src/dynclk/dynclk.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dynclk/dynclk.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/dynclk/dynclk.d" -MT"src/dynclk/dynclk.o" -o "src/dynclk/dynclk.o" "../src/dynclk/dynclk.c"
+'Finished building: ../src/dynclk/dynclk.c'
+' '
+'Building file: ../src/display_ctrl/display_ctrl.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_ctrl/display_ctrl.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_ctrl/display_ctrl.d" -MT"src/display_ctrl/display_ctrl.o" -o "src/display_ctrl/display_ctrl.o" "../src/display_ctrl/display_ctrl.c"
+'Finished building: ../src/display_ctrl/display_ctrl.c'
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:251:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:257:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67744	 122952	18688208	18878904	12011b8	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+19:12:32 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+19:13:09 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:251:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:257:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/video_demo.o: In function `IntcInitFunction':
+C:\Users\Jonat\Documents\GitHub\3Ugers3Semester\hdmi-in.sdk\vga2\Debug/../src/video_demo.c:643: undefined reference to `BTN_Intr_Handler'
+C:\Users\Jonat\Documents\GitHub\3Ugers3Semester\hdmi-in.sdk\vga2\Debug/../src/video_demo.c:643: undefined reference to `BTN_Intr_Handler'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:46: vga2.elf] Error 1
+19:13:26 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:252:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:258:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/video_demo.o: In function `IntcInitFunction':
+C:\Users\Jonat\Documents\GitHub\3Ugers3Semester\hdmi-in.sdk\vga2\Debug/../src/video_demo.c:644: undefined reference to `BTN_Intr_Handler'
+C:\Users\Jonat\Documents\GitHub\3Ugers3Semester\hdmi-in.sdk\vga2\Debug/../src/video_demo.c:644: undefined reference to `BTN_Intr_Handler'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:46: vga2.elf] Error 1
+19:13:31 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+In file included from ../src/video_demo.c:47:0:
+../src/interrupts.h: In function 'BTN_Intr_Handler':
+../src/interrupts.h:14:26: error: 'BTNInst' undeclared (first use in this function)
+  XGpio_InterruptDisable(&BTNInst, BTN_INT);
+                          ^~~~~~~
+../src/interrupts.h:14:26: note: each undeclared identifier is reported only once for each function it appears in
+../src/interrupts.h:14:35: error: 'BTN_INT' undeclared (first use in this function)
+  XGpio_InterruptDisable(&BTNInst, BTN_INT);
+                                   ^~~~~~~
+../src/interrupts.h:20:2: error: 'btn_value' undeclared (first use in this function)
+  btn_value = XGpio_DiscreteRead(&BTNInst, 1);
+  ^~~~~~~~~
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:252:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:258:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+19:14:07 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+In file included from ../src/video_demo.c:47:0:
+../src/interrupts.h: In function 'BTN_Intr_Handler':
+../src/interrupts.h:38:26: error: 'BTNInst' undeclared (first use in this function)
+  XGpio_InterruptDisable(&BTNInst, BTN_INT);
+                          ^~~~~~~
+../src/interrupts.h:38:26: note: each undeclared identifier is reported only once for each function it appears in
+../src/interrupts.h:44:2: error: 'btn_value' undeclared (first use in this function)
+  btn_value = XGpio_DiscreteRead(&BTNInst, 1);
+  ^~~~~~~~~
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:252:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:258:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+19:14:19 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+In file included from ../src/video_demo.c:47:0:
+../src/interrupts.h: In function 'BTN_Intr_Handler':
+../src/interrupts.h:38:26: error: 'BTNInst' undeclared (first use in this function)
+  XGpio_InterruptDisable(&BTNInst, BTN_INT);
+                          ^~~~~~~
+../src/interrupts.h:38:26: note: each undeclared identifier is reported only once for each function it appears in
+../src/interrupts.h:44:2: error: 'btn_value' undeclared (first use in this function)
+  btn_value = XGpio_DiscreteRead(&BTNInst, 1);
+  ^~~~~~~~~
+../src/video_demo.c: In function 'main':
+../src/video_demo.c:114:29: error: 'LEDInst' undeclared (first use in this function); did you mean 'BTNInst'?
+  status = XGpio_Initialize(&LEDInst, LEDS_DEVICE_ID);
+                             ^~~~~~~
+                             BTNInst
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:252:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:258:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+19:14:33 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+In file included from ../src/video_demo.c:47:0:
+../src/interrupts.h: In function 'BTN_Intr_Handler':
+../src/interrupts.h:38:26: error: 'BTNInst' undeclared (first use in this function)
+  XGpio_InterruptDisable(&BTNInst, BTN_INT);
+                          ^~~~~~~
+../src/interrupts.h:38:26: note: each undeclared identifier is reported only once for each function it appears in
+../src/interrupts.h:44:2: error: 'btn_value' undeclared (first use in this function)
+  btn_value = XGpio_DiscreteRead(&BTNInst, 1);
+  ^~~~~~~~~
+../src/video_demo.c: In function 'main':
+../src/video_demo.c:117:26: error: 'LEDInst' undeclared (first use in this function); did you mean 'BTNInst'?
+  XGpio_SetDataDirection(&LEDInst, 1, 0x00);
+                          ^~~~~~~
+                          BTNInst
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:249:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:255:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+19:14:37 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+In file included from ../src/video_demo.c:47:0:
+../src/interrupts.h: In function 'BTN_Intr_Handler':
+../src/interrupts.h:38:26: error: 'BTNInst' undeclared (first use in this function)
+  XGpio_InterruptDisable(&BTNInst, BTN_INT);
+                          ^~~~~~~
+../src/interrupts.h:38:26: note: each undeclared identifier is reported only once for each function it appears in
+../src/interrupts.h:44:2: error: 'btn_value' undeclared (first use in this function)
+  btn_value = XGpio_DiscreteRead(&BTNInst, 1);
+  ^~~~~~~~~
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:247:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:253:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+19:14:58 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+In file included from ../src/video_demo.c:47:0:
+../src/interrupts.h: In function 'BTN_Intr_Handler':
+../src/interrupts.h:45:2: error: 'btn_value' undeclared (first use in this function)
+  btn_value = XGpio_DiscreteRead(&BTNInst, 1);
+  ^~~~~~~~~
+../src/interrupts.h:45:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:247:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:253:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+19:15:17 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+In file included from ../src/video_demo.c:47:0:
+../src/interrupts.h: In function 'BTN_Intr_Handler':
+../src/interrupts.h:47:2: error: 'btn_value' undeclared (first use in this function)
+  btn_value = XGpio_DiscreteRead(&BTNInst, 1);
+  ^~~~~~~~~
+../src/interrupts.h:47:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:247:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:253:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+19:15:20 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+In file included from ../src/video_demo.c:47:0:
+../src/interrupts.h: In function 'BTN_Intr_Handler':
+../src/interrupts.h:47:2: error: 'btn_value' undeclared (first use in this function)
+  btn_value = XGpio_DiscreteRead(&BTNInst, 1);
+  ^~~~~~~~~
+../src/interrupts.h:47:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:243:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:249:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+19:15:33 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:243:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:249:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67680	 122952	18688208	18878840	1201178	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+19:15:58 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:243:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:606:5: error: redefinition of 'InterruptSystemSetup'
+ int InterruptSystemSetup(XScuGic *XScuGicInstancePtr)
+     ^~~~~~~~~~~~~~~~~~~~
+In file included from ../src/video_demo.c:47:0:
+../src/interrupts.h:56:5: note: previous definition of 'InterruptSystemSetup' was here
+ int InterruptSystemSetup(XScuGic *XScuGicInstancePtr)
+     ^~~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:624:5: error: redefinition of 'IntcInitFunction'
+ int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr) {
+     ^~~~~~~~~~~~~~~~
+In file included from ../src/video_demo.c:47:0:
+../src/interrupts.h:74:5: note: previous definition of 'IntcInitFunction' was here
+ int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr) {
+     ^~~~~~~~~~~~~~~~
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:249:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+19:16:00 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:243:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:249:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67680	 122952	18688208	18878840	1201178	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+19:16:22 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:243:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:249:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67680	 122952	18688208	18878840	1201178	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+19:16:33 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:243:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:249:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67680	 122952	18688208	18878840	1201178	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+19:16:36 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:243:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:249:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67680	 122952	18688208	18878840	1201178	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+19:17:01 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+19:17:08 **** Clean-only build of configuration Debug for project vga2 ****
+make clean 
+rm -rf  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o  ./src/video_capture/video_capture.d  ./src/timer_ps/timer_ps.d  ./src/intc/intc.d  ./src/dynclk/dynclk.d  ./src/display_ctrl/display_ctrl.d  ./src/video_demo.d  vga2.elf.size  vga2.elf
+' '
+19:17:08 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_capture/video_capture.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_capture/video_capture.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_capture/video_capture.d" -MT"src/video_capture/video_capture.o" -o "src/video_capture/video_capture.o" "../src/video_capture/video_capture.c"
+'Finished building: ../src/video_capture/video_capture.c'
+' '
+'Building file: ../src/timer_ps/timer_ps.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/timer_ps/timer_ps.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/timer_ps/timer_ps.d" -MT"src/timer_ps/timer_ps.o" -o "src/timer_ps/timer_ps.o" "../src/timer_ps/timer_ps.c"
+'Finished building: ../src/timer_ps/timer_ps.c'
+' '
+'Building file: ../src/intc/intc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/intc/intc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/intc/intc.d" -MT"src/intc/intc.o" -o "src/intc/intc.o" "../src/intc/intc.c"
+'Finished building: ../src/intc/intc.c'
+' '
+'Building file: ../src/dynclk/dynclk.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dynclk/dynclk.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/dynclk/dynclk.d" -MT"src/dynclk/dynclk.o" -o "src/dynclk/dynclk.o" "../src/dynclk/dynclk.c"
+'Finished building: ../src/dynclk/dynclk.c'
+' '
+'Building file: ../src/display_ctrl/display_ctrl.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_ctrl/display_ctrl.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_ctrl/display_ctrl.d" -MT"src/display_ctrl/display_ctrl.o" -o "src/display_ctrl/display_ctrl.o" "../src/display_ctrl/display_ctrl.c"
+'Finished building: ../src/display_ctrl/display_ctrl.c'
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:243:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:249:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67680	 122952	18688208	18878840	1201178	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+19:17:32 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:239:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:245:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67680	 122952	18688208	18878840	1201178	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+19:17:56 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+19:18:07 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:239:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:245:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67680	 122952	18688208	18878840	1201178	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+19:18:46 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:121:23: error: 'jumperStart' undeclared (first use in this function); did you mean 'VideoStart'?
+  jumperBlock.anchor = jumperStart;
+                       ^~~~~~~~~~~
+                       VideoStart
+../src/video_demo.c:121:23: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:239:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:245:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+19:18:48 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+In file included from ../src/video_demo.c:48:0:
+../src/game.h:13:8: error: redefinition of 'struct Block'
+ struct Block {
+        ^~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:26:8: note: originally defined here
+ struct Block {
+        ^~~~~
+In file included from ../src/video_demo.c:48:0:
+../src/game.h:20:14: error: conflicting types for 'jumperBlock'
+ struct Block jumperBlock = {0, 100, 100, 0, 0};
+              ^~~~~~~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:33:14: note: previous definition of 'jumperBlock' was here
+ struct Block jumperBlock = {0, 100, 100, 0, 0};
+              ^~~~~~~~~~~
+In file included from ../src/video_demo.c:48:0:
+../src/game.h:21:15: error: conflicting types for 'jumper'
+ struct Block *jumper = &jumperBlock;
+               ^~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:34:15: note: previous definition of 'jumper' was here
+ struct Block *jumper = &jumperBlock;
+               ^~~~~~
+In file included from ../src/video_demo.c:48:0:
+../src/game.h:23:6: error: nested redefinition of 'enum Velocity'
+ enum Velocity {
+      ^~~~~~~~
+../src/game.h:23:6: error: redeclaration of 'enum Velocity'
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:36:6: note: originally defined here
+ enum Velocity {
+      ^~~~~~~~
+In file included from ../src/video_demo.c:48:0:
+../src/game.h:24:2: error: redeclaration of enumerator 'GROUND'
+  GROUND,
+  ^~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:37:2: note: previous definition of 'GROUND' was here
+  GROUND,
+  ^~~~~~
+In file included from ../src/video_demo.c:48:0:
+../src/game.h:25:2: error: redeclaration of enumerator 'AIR'
+  AIR
+  ^~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:38:2: note: previous definition of 'AIR' was here
+  AIR
+  ^~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:179:26: warning: passing argument 2 of 'DemoPrintBlock' from incompatible pointer type [-Wincompatible-pointer-types]
+    DemoPrintBlock(frame, platform[j], platform[j]->anchor, 255);
+                          ^~~~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:50:6: note: expected 'struct Block *' but argument is of type 'struct Block *'
+ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color);
+      ^~~~~~~~~~~~~~
+../src/video_demo.c:208:26: warning: passing argument 1 of 'collisiondetect' from incompatible pointer type [-Wincompatible-pointer-types]
+      if((collisiondetect(jumper, platform[k]))==1) {
+                          ^~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:58:5: note: expected 'struct Block *' but argument is of type 'struct Block *'
+ int collisiondetect (struct Block *jumper, struct Block *platform);
+     ^~~~~~~~~~~~~~~
+../src/video_demo.c:208:34: warning: passing argument 2 of 'collisiondetect' from incompatible pointer type [-Wincompatible-pointer-types]
+      if((collisiondetect(jumper, platform[k]))==1) {
+                                  ^~~~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:58:5: note: expected 'struct Block *' but argument is of type 'struct Block *'
+ int collisiondetect (struct Block *jumper, struct Block *platform);
+     ^~~~~~~~~~~~~~~
+../src/video_demo.c:223:28: warning: passing argument 2 of 'DemoPrintBlock' from incompatible pointer type [-Wincompatible-pointer-types]
+      DemoPrintBlock(frame, platform[j], platform[j]->anchor, 128);
+                            ^~~~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:50:6: note: expected 'struct Block *' but argument is of type 'struct Block *'
+ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color);
+      ^~~~~~~~~~~~~~
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:239:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:273:6: error: conflicting types for 'DemoPrintBlock'
+ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
+      ^~~~~~~~~~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:50:6: note: previous declaration of 'DemoPrintBlock' was here
+ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color);
+      ^~~~~~~~~~~~~~
+../src/video_demo.c:330:5: error: conflicting types for 'collisiondetect'
+ int collisiondetect (struct Block *jumper, struct Block *platform){
+     ^~~~~~~~~~~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:58:5: note: previous declaration of 'collisiondetect' was here
+ int collisiondetect (struct Block *jumper, struct Block *platform);
+     ^~~~~~~~~~~~~~~
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:245:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+19:18:59 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:37:39: warning: 'struct Block' declared inside parameter list will not be visible outside of this definition or declaration
+ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color);
+                                       ^~~~~
+../src/video_demo.h:45:29: warning: 'struct Block' declared inside parameter list will not be visible outside of this definition or declaration
+ int collisiondetect (struct Block *jumper, struct Block *platform);
+                             ^~~~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:179:26: warning: passing argument 2 of 'DemoPrintBlock' from incompatible pointer type [-Wincompatible-pointer-types]
+    DemoPrintBlock(frame, platform[j], platform[j]->anchor, 255);
+                          ^~~~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:37:6: note: expected 'struct Block *' but argument is of type 'struct Block *'
+ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color);
+      ^~~~~~~~~~~~~~
+../src/video_demo.c:208:26: warning: passing argument 1 of 'collisiondetect' from incompatible pointer type [-Wincompatible-pointer-types]
+      if((collisiondetect(jumper, platform[k]))==1) {
+                          ^~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:45:5: note: expected 'struct Block *' but argument is of type 'struct Block *'
+ int collisiondetect (struct Block *jumper, struct Block *platform);
+     ^~~~~~~~~~~~~~~
+../src/video_demo.c:208:34: warning: passing argument 2 of 'collisiondetect' from incompatible pointer type [-Wincompatible-pointer-types]
+      if((collisiondetect(jumper, platform[k]))==1) {
+                                  ^~~~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:45:5: note: expected 'struct Block *' but argument is of type 'struct Block *'
+ int collisiondetect (struct Block *jumper, struct Block *platform);
+     ^~~~~~~~~~~~~~~
+../src/video_demo.c:223:28: warning: passing argument 2 of 'DemoPrintBlock' from incompatible pointer type [-Wincompatible-pointer-types]
+      DemoPrintBlock(frame, platform[j], platform[j]->anchor, 128);
+                            ^~~~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:37:6: note: expected 'struct Block *' but argument is of type 'struct Block *'
+ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color);
+      ^~~~~~~~~~~~~~
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:239:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:273:6: error: conflicting types for 'DemoPrintBlock'
+ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
+      ^~~~~~~~~~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:37:6: note: previous declaration of 'DemoPrintBlock' was here
+ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color);
+      ^~~~~~~~~~~~~~
+../src/video_demo.c:330:5: error: conflicting types for 'collisiondetect'
+ int collisiondetect (struct Block *jumper, struct Block *platform){
+     ^~~~~~~~~~~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:45:5: note: previous declaration of 'collisiondetect' was here
+ int collisiondetect (struct Block *jumper, struct Block *platform);
+     ^~~~~~~~~~~~~~~
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:245:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+19:19:30 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:37:39: warning: 'struct Block' declared inside parameter list will not be visible outside of this definition or declaration
+ void GamePrintBlock(u8 *frame, struct Block *block, u32 anchor, int color);
+                                       ^~~~~
+../src/video_demo.h:45:29: warning: 'struct Block' declared inside parameter list will not be visible outside of this definition or declaration
+ int collisiondetect (struct Block *jumper, struct Block *platform);
+                             ^~~~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:179:26: warning: passing argument 2 of 'GamePrintBlock' from incompatible pointer type [-Wincompatible-pointer-types]
+    GamePrintBlock(frame, platform[j], platform[j]->anchor, 255);
+                          ^~~~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:37:6: note: expected 'struct Block *' but argument is of type 'struct Block *'
+ void GamePrintBlock(u8 *frame, struct Block *block, u32 anchor, int color);
+      ^~~~~~~~~~~~~~
+../src/video_demo.c:208:26: warning: passing argument 1 of 'collisiondetect' from incompatible pointer type [-Wincompatible-pointer-types]
+      if((collisiondetect(jumper, platform[k]))==1) {
+                          ^~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:45:5: note: expected 'struct Block *' but argument is of type 'struct Block *'
+ int collisiondetect (struct Block *jumper, struct Block *platform);
+     ^~~~~~~~~~~~~~~
+../src/video_demo.c:208:34: warning: passing argument 2 of 'collisiondetect' from incompatible pointer type [-Wincompatible-pointer-types]
+      if((collisiondetect(jumper, platform[k]))==1) {
+                                  ^~~~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:45:5: note: expected 'struct Block *' but argument is of type 'struct Block *'
+ int collisiondetect (struct Block *jumper, struct Block *platform);
+     ^~~~~~~~~~~~~~~
+../src/video_demo.c:223:28: warning: passing argument 2 of 'GamePrintBlock' from incompatible pointer type [-Wincompatible-pointer-types]
+      GamePrintBlock(frame, platform[j], platform[j]->anchor, 128);
+                            ^~~~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:37:6: note: expected 'struct Block *' but argument is of type 'struct Block *'
+ void GamePrintBlock(u8 *frame, struct Block *block, u32 anchor, int color);
+      ^~~~~~~~~~~~~~
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:239:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:273:6: error: conflicting types for 'GamePrintBlock'
+ void GamePrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
+      ^~~~~~~~~~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:37:6: note: previous declaration of 'GamePrintBlock' was here
+ void GamePrintBlock(u8 *frame, struct Block *block, u32 anchor, int color);
+      ^~~~~~~~~~~~~~
+../src/video_demo.c:330:5: error: conflicting types for 'collisiondetect'
+ int collisiondetect (struct Block *jumper, struct Block *platform){
+     ^~~~~~~~~~~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:45:5: note: previous declaration of 'collisiondetect' was here
+ int collisiondetect (struct Block *jumper, struct Block *platform);
+     ^~~~~~~~~~~~~~~
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:245:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+19:19:49 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:37:39: warning: 'struct Block' declared inside parameter list will not be visible outside of this definition or declaration
+ void GamePrintBlock(u8 *frame, struct Block *block, u32 anchor, int color);
+                                       ^~~~~
+../src/video_demo.h:45:29: warning: 'struct Block' declared inside parameter list will not be visible outside of this definition or declaration
+ int collisiondetect (struct Block *jumper, struct Block *platform);
+                             ^~~~~
+In file included from ../src/video_demo.c:48:0:
+../src/game.h:30:6: error: conflicting types for 'GamePrintBlock'
+ void GamePrintBlock(u8 *frame, struct Block *block, u32 anchor, int color);
+      ^~~~~~~~~~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:37:6: note: previous declaration of 'GamePrintBlock' was here
+ void GamePrintBlock(u8 *frame, struct Block *block, u32 anchor, int color);
+      ^~~~~~~~~~~~~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:208:26: warning: passing argument 1 of 'collisiondetect' from incompatible pointer type [-Wincompatible-pointer-types]
+      if((collisiondetect(jumper, platform[k]))==1) {
+                          ^~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:45:5: note: expected 'struct Block *' but argument is of type 'struct Block *'
+ int collisiondetect (struct Block *jumper, struct Block *platform);
+     ^~~~~~~~~~~~~~~
+../src/video_demo.c:208:34: warning: passing argument 2 of 'collisiondetect' from incompatible pointer type [-Wincompatible-pointer-types]
+      if((collisiondetect(jumper, platform[k]))==1) {
+                                  ^~~~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:45:5: note: expected 'struct Block *' but argument is of type 'struct Block *'
+ int collisiondetect (struct Block *jumper, struct Block *platform);
+     ^~~~~~~~~~~~~~~
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:239:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:273:6: error: conflicting types for 'GamePrintBlock'
+ void GamePrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
+      ^~~~~~~~~~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:37:6: note: previous declaration of 'GamePrintBlock' was here
+ void GamePrintBlock(u8 *frame, struct Block *block, u32 anchor, int color);
+      ^~~~~~~~~~~~~~
+../src/video_demo.c:330:5: error: conflicting types for 'collisiondetect'
+ int collisiondetect (struct Block *jumper, struct Block *platform){
+     ^~~~~~~~~~~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:45:5: note: previous declaration of 'collisiondetect' was here
+ int collisiondetect (struct Block *jumper, struct Block *platform);
+     ^~~~~~~~~~~~~~~
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:245:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+19:20:00 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:45:29: warning: 'struct Block' declared inside parameter list will not be visible outside of this definition or declaration
+ int collisiondetect (struct Block *jumper, struct Block *platform);
+                             ^~~~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:208:26: warning: passing argument 1 of 'collisiondetect' from incompatible pointer type [-Wincompatible-pointer-types]
+      if((collisiondetect(jumper, platform[k]))==1) {
+                          ^~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:45:5: note: expected 'struct Block *' but argument is of type 'struct Block *'
+ int collisiondetect (struct Block *jumper, struct Block *platform);
+     ^~~~~~~~~~~~~~~
+../src/video_demo.c:208:34: warning: passing argument 2 of 'collisiondetect' from incompatible pointer type [-Wincompatible-pointer-types]
+      if((collisiondetect(jumper, platform[k]))==1) {
+                                  ^~~~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:45:5: note: expected 'struct Block *' but argument is of type 'struct Block *'
+ int collisiondetect (struct Block *jumper, struct Block *platform);
+     ^~~~~~~~~~~~~~~
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:239:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:330:5: error: conflicting types for 'collisiondetect'
+ int collisiondetect (struct Block *jumper, struct Block *platform){
+     ^~~~~~~~~~~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:45:5: note: previous declaration of 'collisiondetect' was here
+ int collisiondetect (struct Block *jumper, struct Block *platform);
+     ^~~~~~~~~~~~~~~
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:245:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+19:20:44 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:45:29: warning: 'struct Block' declared inside parameter list will not be visible outside of this definition or declaration
+ int collisiondetect (struct Block *jumper, struct Block *platform);
+                             ^~~~~
+In file included from ../src/video_demo.c:48:0:
+../src/game.h:31:5: error: conflicting types for 'collisiondetect'
+ int collisiondetect (struct Block *jumper, struct Block *platform);
+     ^~~~~~~~~~~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:45:5: note: previous declaration of 'collisiondetect' was here
+ int collisiondetect (struct Block *jumper, struct Block *platform);
+     ^~~~~~~~~~~~~~~
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:239:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:330:5: error: conflicting types for 'collisiondetect'
+ int collisiondetect (struct Block *jumper, struct Block *platform){
+     ^~~~~~~~~~~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:45:5: note: previous declaration of 'collisiondetect' was here
+ int collisiondetect (struct Block *jumper, struct Block *platform);
+     ^~~~~~~~~~~~~~~
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:245:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+19:20:46 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:239:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:245:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67680	 122952	18688208	18878840	1201178	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+19:20:53 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:239:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:245:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67680	 122952	18688208	18878840	1201178	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+19:23:24 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:239:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:245:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67680	 122952	18688208	18878840	1201178	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+19:23:55 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+In file included from ../src/video_demo.c:48:0:
+../src/game.h:40:5: error: redefinition of 'jumperImg'
+ int jumperImg[] = {
+     ^~~~~~~~~
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:53:5: note: previous definition of 'jumperImg' was here
+ int jumperImg[] = {
+     ^~~~~~~~~
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:239:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:245:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+19:23:58 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:239:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:245:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67680	 122952	18688208	18878840	1201178	vga2.elf
+'Finished building: vga2.elf.size'
+' '

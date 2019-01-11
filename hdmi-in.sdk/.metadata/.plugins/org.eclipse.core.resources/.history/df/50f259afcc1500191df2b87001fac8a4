@@ -1,0 +1,27 @@
+/*
+ * interrupts.h
+ *
+ *  Created on: 11. jan. 2019
+ *      Author: Jonathan
+ */
+
+#ifndef SRC_INTERRUPTS_H_
+#define SRC_INTERRUPTS_H_
+
+void BTN_Intr_Handler(void *InstancePtr)
+{
+	// Disable GPIO interrupts
+	XGpio_InterruptDisable(&BTNInst, BTN_INT);
+	// Ignore additional button presses
+	if ((XGpio_InterruptGetStatus(&BTNInst) & BTN_INT) !=
+			BTN_INT) {
+			return;
+		}
+	btn_value = XGpio_DiscreteRead(&BTNInst, 1);
+
+    (void)XGpio_InterruptClear(&BTNInst, BTN_INT);
+    // Enable GPIO interrupts
+    XGpio_InterruptEnable(&BTNInst, BTN_INT);
+}
+
+#endif /* SRC_INTERRUPTS_H_ */

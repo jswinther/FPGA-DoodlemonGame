@@ -1,0 +1,611 @@
+/************************************************************************/
+/*																		*/
+/*	video_demo.c	--	ZYBO Video demonstration 						*/
+/*																		*/
+/************************************************************************/
+/*	Author: Sam Bobrowicz												*/
+/*	Copyright 2015, Digilent Inc.										*/
+/************************************************************************/
+/*  Module Description: 												*/
+/*																		*/
+/*		This file contains code for running a demonstration of the		*/
+/*		Video input and output capabilities on the ZYBO. It is a good	*/
+/*		example of how to properly use the display_ctrl and				*/
+/*		video_capture drivers.											*/
+/*																		*/
+/*																		*/
+/************************************************************************/
+/*  Revision History:													*/
+/* 																		*/
+/*		11/25/2015(SamB): Created										*/
+/*																		*/
+/************************************************************************/
+
+/* ------------------------------------------------------------ */
+/*				Include File Definitions						*/
+/* ------------------------------------------------------------ */
+#include "video_demo.h"
+#include "video_capture/video_capture.h"
+#include "display_ctrl/display_ctrl.h"
+#include "intc/intc.h"
+#include <stdio.h>
+#include "xuartps.h"
+#include "math.h"
+#include <ctype.h>
+#include <stdlib.h>
+#include "xil_types.h"
+#include "xil_cache.h"
+#include "timer_ps/timer_ps.h"
+#include "xparameters.h"
+#include "xscugic.h"
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xscugic.h"
+#include "xil_exception.h"
+#include "xil_printf.h"
+#include "xtime_l.h"
+#include "interrupts.h"
+
+/* ------------------------------------------------------------ */
+/*						   Defines				        		*/
+/* ------------------------------------------------------------ */
+#define DYNCLK_BASEADDR XPAR_AXI_DYNCLK_0_BASEADDR
+#define VGA_VDMA_ID XPAR_AXIVDMA_0_DEVICE_ID
+#define DISP_VTC_ID XPAR_VTC_0_DEVICE_ID
+#define VID_VTC_ID XPAR_VTC_1_DEVICE_ID
+#define VID_GPIO_ID XPAR_AXI_GPIO_VIDEO_DEVICE_ID
+#define VID_VTC_IRPT_ID XPS_FPGA3_INT_ID
+#define VID_GPIO_IRPT_ID XPS_FPGA4_INT_ID
+#define SCU_TIMER_ID XPAR_SCUTIMER_DEVICE_ID
+#define UART_BASEADDR XPAR_PS7_UART_1_BASEADDR
+#define jumperGRAVITY 3
+#define PLATFORM_AMOUNT 10
+
+
+#define jumperStart (1920*3)*539+(1920*3)-(jumperBlock.width/2);
+
+/* ------------------------------------------------------------ */
+/*				Global Variables								*/
+/* ------------------------------------------------------------ */
+
+int nextFrame = 0;
+
+DisplayCtrl dispCtrl;
+XAxiVdma vdma;
+VideoCapture videoCapt;
+
+
+char fRefresh; //flag used to trigger a refresh of the Menu on video detect
+/*
+ * Framebuffers for video data
+ */
+u8 frameBuf[DISPLAY_NUM_FRAMES][DEMO_MAX_FRAME];
+u8 *pFrames[DISPLAY_NUM_FRAMES]; //array of pointers to the frame buffers
+
+/*
+ * Interrupt vector table
+ */
+const ivt_t ivt[] = {
+	videoGpioIvt(VID_GPIO_IRPT_ID, &videoCapt),
+	videoVtcIvt(VID_VTC_IRPT_ID, &(videoCapt.vtc))
+};
+
+/* ------------------------------------------------------------ */
+/*						     Main								*/
+/* ------------------------------------------------------------ */
+
+int main(void) {
+	DemoInitialize();
+	DisplaySetMode(&dispCtrl, &VMODE_1920x1080);
+	DisplayStart(&dispCtrl);
+	int status;
+	//----------------------------------------------------
+	// INITIALIZE THE PERIPHERALS & SET DIRECTIONS OF GPIO
+	//----------------------------------------------------
+	// Initialise Push Buttons
+	status = XGpio_Initialize(&BTNInst, BTNS_DEVICE_ID);
+	if(status != XST_SUCCESS) return XST_FAILURE;
+	// Set all buttons direction to inputs
+	XGpio_SetDataDirection(&BTNInst, 1, 0xFF);
+	// Initialize interrupt controller
+	status = IntcInitFunction(INTC_DEVICE_ID, &BTNInst);
+	if(status != XST_SUCCESS) return XST_FAILURE;
+	DemoStartGame(dispCtrl.framePtr[nextFrame], dispCtrl.vMode.width, dispCtrl.vMode.height);
+	return 0;
+}
+
+/* ------------------------------------------------------------ */
+/*						     Game		    					*/
+/* ------------------------------------------------------------ */
+void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
+	jumperBlock.anchor = jumperStart;
+	jumperBlock.floor = DEMO_STRIDE - jumperBlock.anchor + jumperBlock.height;
+
+	/**
+	 * Print game background.
+	 */
+	DemoPrintBackground(frame, gameWidth, gameHeight);
+	/**
+	 * jumperMovement FSM.
+	 */
+	enum Velocity jumperVelocity = GROUND;
+
+	/**
+	 * Generate Platforms.
+	 */
+
+	int random_x;
+	int random_y;
+	int hast = 5;
+	struct Block platformBlock[PLATFORM_AMOUNT];
+	struct Block *platform[PLATFORM_AMOUNT];
+	int i, j;
+	for(i = 0; i < PLATFORM_AMOUNT; i++) {
+		random_x = rand() % 990 + 0;
+		random_y = rand() % 5760 + 0;
+		platformBlock[i].anchor = DEMO_STRIDE*random_x+random_y;
+		platformBlock[i].height = 160;
+		platformBlock[i].width = 24;
+		platformBlock[i].floor = random_y;
+		platform[i] = &platformBlock[i];
+	}
+
+
+	int counter = 0;
+	int k=0;
+	while(1) {
+		//Swap Frame buffer
+		FrameBufferSwap();
+		switch(btn_value) {
+		case 1:
+			jumperBlock.anchor += DEMO_STRIDE*6;
+			break;
+		case 2:
+			jumperBlock.anchor += DEMO_STRIDE*3;
+			break;
+		case 4:
+			jumperBlock.anchor -= DEMO_STRIDE*3;
+			break;
+		case 8:
+			jumperBlock.anchor -= DEMO_STRIDE*6;
+			break;
+		default:
+			break;
+
+		}
+
+		//Generate platforms
+		for(j = 0; j < PLATFORM_AMOUNT; j++) {
+			DemoPrintBlock(frame, platform[j], platform[j]->anchor, 255);
+			platformBlock[j].anchor+=hast;
+			platformBlock[j].floor+=hast;
+			if(platformBlock[j].floor >= DEMO_STRIDE) {
+				platformBlock[j].floor = 0;
+				platformBlock[j].anchor = DEMO_STRIDE*(rand() % 900 + 0);
+			}
+			DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+		}
+
+
+
+		switch(jumperVelocity) {
+		case GROUND:
+			counter = 0;
+			jumperBlock.velocity = 24;
+			jumperVelocity = AIR;
+			break;
+		case AIR:
+			if(counter%10==0) {
+				if(jumperBlock.velocity > -24)
+					jumperBlock.velocity-=jumperGRAVITY;
+			}
+			jumperBlock.anchor -= jumperBlock.velocity;
+
+			if(jumperBlock.velocity < 0) {
+
+				for(k = 0; k < PLATFORM_AMOUNT; k++) {
+
+					if((collisiondetect(jumper, platform[k]))==1) {
+
+						jumperVelocity = GROUND;
+
+					}
+				}
+			}
+			counter++;
+			break;
+		}
+
+
+
+
+		for(j = 0; j < PLATFORM_AMOUNT; j++) {
+					DemoPrintBlock(frame, platform[j], platform[j]->anchor, 128);
+				}
+		//DemoPrintBlock(frame, jumper, jumperBlock.anchor, 0);
+		DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+		Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
+
+		VideoStart(&videoCapt);
+		DisplayChangeFrame(&dispCtrl, *frame);
+		VideoStop(&videoCapt);
+
+	}
+}
+
+int GenerateGameImage() {
+	int width = dispCtrl.vMode.width;
+	int height = dispCtrl.vMode.height;
+	int image[width*height*3];
+	/*
+	 * Generate Platforms.
+	 */
+
+
+}
+
+
+
+
+
+
+void DemoPrintBackground(u8 *frame, int width, int height) {
+	int x, y, iPixelAddr;
+	for(x = 0; x < (width*3); x+=3) {
+
+					iPixelAddr = x;
+
+					for(y = 0; y < height; y++)
+					{
+						frame[iPixelAddr] = 255;
+						frame[iPixelAddr + 1] = 255;
+						frame[iPixelAddr + 2] = 255;
+						/*
+						 * This pattern is printed one vertical line at a time, so the address must be incremented
+						 * by the stride instead of just 1.
+						 */
+						iPixelAddr += DEMO_STRIDE;
+					}
+				}
+	Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
+}
+
+void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
+	block->anchor = anchor;
+	int i, j, cor;
+	cor = anchor;
+	for(i=0;i<block->height;i++) {
+		for(j=0;j<block->width;j+=3) {
+			frame[cor + j] = color;
+			frame[cor + j + 1] = color;
+			frame[cor + j + 2] = color;
+		}
+		cor = cor + DEMO_STRIDE;
+	}
+
+}
+
+void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+	int cor = anchor;
+	int arrayCounter = 0;
+	for(int i = 0; i < imgH; i++) {
+		for(int j = 0; j<imgW*3; j+=3) {
+			if (jumperImg[arrayCounter] != 255){
+			frame[cor + j + 1] = jumperImg[arrayCounter + 0];
+			frame[cor + j + 2] = jumperImg[arrayCounter + 1];
+			frame[cor + j + 0] = jumperImg[arrayCounter + 2];
+			arrayCounter += 3;
+			} else {
+				arrayCounter+=3;
+			}
+
+
+		}
+		cor = cor + DEMO_STRIDE;
+	}
+
+}
+
+void DemoOverwriteJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+	int cor = anchor;
+	int arrayCounter = 0;
+	for(int i = 0; i < imgH; i++) {
+		for(int j = 0; j<imgW*3; j+=3) {
+			if (jumperImg[arrayCounter] != 255){
+			frame[cor + j + 0] = 255;
+			frame[cor + j + 1] = 255;
+			frame[cor + j + 2] = 255;
+			arrayCounter += 3;
+			} else {
+				arrayCounter+=3;
+			}
+
+
+		}
+		cor = cor + DEMO_STRIDE;
+	}
+
+}
+
+int collisiondetect (struct Block *jumper, struct Block *platform){
+	int jumperw = jumper->width;
+	int jumperh = (jumper->height)*3;
+	int jumpera = jumper->anchor;
+	int jumperLC = (jumpera + jumperh) + (jumperw*DEMO_STRIDE);
+	int jumperRC = jumpera + jumperh;
+
+
+
+	int platformw = platform->height;
+	int platformh = platform->width;
+	int platforma = platform->anchor;
+	int platformLT = platforma + (platformw*DEMO_STRIDE);
+	int platformRT = platforma;
+	int g;
+	int singleStepHeight = 0;
+	for(int j = 0; j < platformh; j++){
+
+	for(g = platformRT + singleStepHeight; g <= platformLT; g+=DEMO_STRIDE) {
+
+			if(g == jumperLC || g == jumperRC) {
+				return 1;
+
+			}
+		}
+	singleStepHeight++;
+	}
+	return 0;
+}
+
+void FrameBufferSwap (){
+	nextFrame = dispCtrl.curFrame + 1;
+						if (nextFrame >= DISPLAY_NUM_FRAMES)
+						{
+							nextFrame = 0;
+						}
+
+}
+
+
+void DemoInitialize()
+{
+	int Status;
+	XAxiVdma_Config *vdmaConfig;
+	int i;
+
+	/*
+	 * Initialize an array of pointers to the 3 frame buffers
+	 */
+	for (i = 0; i < DISPLAY_NUM_FRAMES; i++)
+	{
+		pFrames[i] = frameBuf[i];
+	}
+
+	/*
+	 * Initialize a timer used for a simple delay
+	 */
+	TimerInitialize(SCU_TIMER_ID);
+
+	/*
+	 * Initialize VDMA driver
+	 */
+	vdmaConfig = XAxiVdma_LookupConfig(VGA_VDMA_ID);
+	if (!vdmaConfig)
+	{
+		xil_printf("No video DMA found for ID %d\r\n", VGA_VDMA_ID);
+		return;
+	}
+	Status = XAxiVdma_CfgInitialize(&vdma, vdmaConfig, vdmaConfig->BaseAddress);
+	if (Status != XST_SUCCESS)
+	{
+		xil_printf("VDMA Configuration Initialization failed %d\r\n", Status);
+		return;
+	}
+
+
+	/*
+	 * Initialize the Display controller and start it
+	 */
+	Status = DisplayInitialize(&dispCtrl, &vdma, DISP_VTC_ID, DYNCLK_BASEADDR, pFrames, DEMO_STRIDE);
+	if (Status != XST_SUCCESS)
+	{
+		xil_printf("Display Ctrl initialization failed during demo initialization%d\r\n", Status);
+		return;
+	}
+	Status = DisplayStart(&dispCtrl);
+	if (Status != XST_SUCCESS)
+	{
+		xil_printf("Couldn't start display during demo initialization%d\r\n", Status);
+		return;
+	}
+
+	/*
+	 * Initialize the Interrupt controller and start it.
+	 */
+	Status = fnInitInterruptController(&intc);
+	if(Status != XST_SUCCESS) {
+		xil_printf("Error initializing interrupts");
+		return;
+	}
+	fnEnableInterrupts(&intc, &ivt[0], sizeof(ivt)/sizeof(ivt[0]));
+
+	/*
+	 * Initialize the Video Capture device
+	 */
+	Status = VideoInitialize(&videoCapt, &intc, &vdma, VID_GPIO_ID, VID_VTC_ID, VID_VTC_IRPT_ID, pFrames, DEMO_STRIDE, DEMO_START_ON_DET);
+	if (Status != XST_SUCCESS)
+	{
+		xil_printf("Video Ctrl initialization failed during demo initialization%d\r\n", Status);
+		return;
+	}
+
+	/*
+	 * Set the Video Detect callback to trigger the menu to reset, displaying the new detected resolution
+	 */
+	VideoSetCallback(&videoCapt, DemoISR, &fRefresh);
+
+	DemoPrintBackground(dispCtrl.framePtr[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height);
+
+	return;
+}
+
+/*
+			2 - Change Display Framebuffer Index
+			nextFrame = dispCtrl.curFrame + 1;
+			if (nextFrame >= DISPLAY_NUM_FRAMES)
+			{
+				nextFrame = 0;
+			}
+			DisplayChangeFrame(&dispCtrl, nextFrame);
+
+			3 - Start/Stop Video stream into Video Framebuffer
+			if (videoCapt.state == VIDEO_STREAMING)
+				VideoStop(&videoCapt);
+			else
+				VideoStart(&videoCapt);
+
+			4 - Change Video Framebuffer Index
+			nextFrame = videoCapt.curFrame + 1;
+			if (nextFrame >= DISPLAY_NUM_FRAMES)
+			{
+				nextFrame = 0;
+			}
+			VideoChangeFrame(&videoCapt, nextFrame);
+
+			5 - Grab Video Frame and invert colors
+			nextFrame = videoCapt.curFrame + 1;
+			if (nextFrame >= DISPLAY_NUM_FRAMES)
+			{
+				nextFrame = 0;
+			}
+			VideoStop(&videoCapt);
+			DemoInvertFrame(pFrames[videoCapt.curFrame], pFrames[nextFrame], videoCapt.timing.HActiveVideo, videoCapt.timing.VActiveVideo, DEMO_STRIDE);
+			VideoStart(&videoCapt);
+			DisplayChangeFrame(&dispCtrl, nextFrame);
+
+			6 - Grab Video Frame and scale to Display resolution
+			nextFrame = videoCapt.curFrame + 1;
+			if (nextFrame >= DISPLAY_NUM_FRAMES)
+			{
+				nextFrame = 0;
+			}
+			VideoStop(&videoCapt);
+			DemoScaleFrame(pFrames[videoCapt.curFrame], pFrames[nextFrame], videoCapt.timing.HActiveVideo, videoCapt.timing.VActiveVideo, dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE);
+			VideoStart(&videoCapt);
+			DisplayChangeFrame(&dispCtrl, nextFrame);
+
+ */
+
+void DemoInvertFrame(u8 *srcFrame, u8 *destFrame, u32 width, u32 height, u32 stride)
+{
+	u32 xcoi, ycoi;
+	u32 lineStart = 0;
+	for(ycoi = 0; ycoi < height; ycoi++)
+	{
+		for(xcoi = 0; xcoi < (width * 3); xcoi+=3)
+		{
+			destFrame[xcoi + lineStart] = ~srcFrame[xcoi + lineStart];         //Red
+			destFrame[xcoi + lineStart + 1] = ~srcFrame[xcoi + lineStart + 1]; //Blue
+			destFrame[xcoi + lineStart + 2] = ~srcFrame[xcoi + lineStart + 2]; //Green
+		}
+		lineStart += stride;
+	}
+	/*
+	 * Flush the framebuffer memory range to ensure changes are written to the
+	 * actual memory, and therefore accessible by the VDMA.
+	 */
+	Xil_DCacheFlushRange((unsigned int) destFrame, DEMO_MAX_FRAME);
+}
+
+/*
+ * Bilinear interpolation algorithm. Assumes both frames have the same stride.
+ */
+void DemoScaleFrame(u8 *srcFrame, u8 *destFrame, u32 srcWidth, u32 srcHeight, u32 destWidth, u32 destHeight, u32 stride)
+{
+	float xInc, yInc; // Width/height of a destination frame pixel in the source frame coordinate system
+	float xcoSrc, ycoSrc; // Location of the destination pixel being operated on in the source frame coordinate system
+	float x1y1, x2y1, x1y2, x2y2; //Used to store the color data of the four nearest source pixels to the destination pixel
+	int ix1y1, ix2y1, ix1y2, ix2y2; //indexes into the source frame for the four nearest source pixels to the destination pixel
+	float xDist, yDist; //distances between destination pixel and x1y1 source pixels in source frame coordinate system
+
+	int xcoDest, ycoDest; // Location of the destination pixel being operated on in the destination coordinate system
+	int iy1; //Used to store the index of the first source pixel in the line with y1
+	int iDest; //index of the pixel data in the destination frame being operated on
+
+	int i;
+
+	xInc = ((float) srcWidth - 1.0) / ((float) destWidth);
+	yInc = ((float) srcHeight - 1.0) / ((float) destHeight);
+
+	ycoSrc = 0.0;
+	for (ycoDest = 0; ycoDest < destHeight; ycoDest++)
+	{
+		iy1 = ((int) ycoSrc) * stride;
+		yDist = ycoSrc - ((float) ((int) ycoSrc));
+
+		/*
+		 * Save some cycles in the loop below by presetting the destination
+		 * index to the first pixel in the current line
+		 */
+		iDest = ycoDest * stride;
+
+		xcoSrc = 0.0;
+		for (xcoDest = 0; xcoDest < destWidth; xcoDest++)
+		{
+			ix1y1 = iy1 + ((int) xcoSrc) * 3;
+			ix2y1 = ix1y1 + 3;
+			ix1y2 = ix1y1 + stride;
+			ix2y2 = ix1y1 + stride + 3;
+
+			xDist = xcoSrc - ((float) ((int) xcoSrc));
+
+			/*
+			 * For loop handles all three colors
+			 */
+			for (i = 0; i < 3; i++)
+			{
+				x1y1 = (float) srcFrame[ix1y1 + i];
+				x2y1 = (float) srcFrame[ix2y1 + i];
+				x1y2 = (float) srcFrame[ix1y2 + i];
+				x2y2 = (float) srcFrame[ix2y2 + i];
+
+				/*
+				 * Bilinear interpolation function
+				 */
+				destFrame[iDest] = (u8) ((1.0-yDist)*((1.0-xDist)*x1y1+xDist*x2y1) + yDist*((1.0-xDist)*x1y2+xDist*x2y2));
+				iDest++;
+			}
+			xcoSrc += xInc;
+		}
+		ycoSrc += yInc;
+	}
+
+	/*
+	 * Flush the framebuffer memory range to ensure changes are written to the
+	 * actual memory, and therefore accessible by the VDMA.
+	 */
+	Xil_DCacheFlushRange((unsigned int) destFrame, DEMO_MAX_FRAME);
+
+	return;
+}
+
+void DemoISR(void *callBackRef, void *pVideo)
+{
+	char *data = (char *) callBackRef;
+	*data = 1; //set fRefresh to 1
+}
+
+/* ------------------------------------------------------------ */
+/*				Interrupt										*/
+/* ------------------------------------------------------------ */
+
+
+
+
+
+
+
+
+
+
+
