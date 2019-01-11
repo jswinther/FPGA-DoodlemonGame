@@ -10585,3 +10585,1644 @@ make pre-build main-build
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for 'main-build'.
+08:33:44 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+08:36:21 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117848	 274368	18688960	19081176	12327d8	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+08:36:38 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+08:59:43 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'main':
+../src/video_demo.c:97:43: error: 'DisplayCtrl {aka struct <anonymous>}' has no member named 'nextFrame'; did you mean 'curFrame'?
+  DemoStartGame(dispCtrl.framePtr[dispCtrl.nextFrame], dispCtrl.vMode.width, dispCtrl.vMode.height);
+                                           ^~~~~~~~~
+                                           curFrame
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:277:5: error: 'nextFrame' undeclared (first use in this function)
+     nextFrame = dispCtrl.curFrame + 1;
+     ^~~~~~~~~
+../src/video_demo.c:277:5: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c:331:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:30:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+08:59:59 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'main':
+../src/video_demo.c:97:43: error: 'DisplayCtrl {aka struct <anonymous>}' has no member named 'nextFrame'; did you mean 'curFrame'?
+  DemoStartGame(dispCtrl.framePtr[dispCtrl.nextFrame], dispCtrl.vMode.width, dispCtrl.vMode.height);
+                                           ^~~~~~~~~
+                                           curFrame
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:277:5: error: 'nextFrame' undeclared (first use in this function)
+     nextFrame = dispCtrl.curFrame + 1;
+     ^~~~~~~~~
+../src/video_demo.c:277:5: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c:331:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:30:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+09:03:00 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'main':
+../src/video_demo.c:97:43: error: 'DisplayCtrl {aka struct <anonymous>}' has no member named 'nextFrame'; did you mean 'curFrame'?
+  DemoStartGame(dispCtrl.framePtr[dispCtrl.nextFrame], dispCtrl.vMode.width, dispCtrl.vMode.height);
+                                           ^~~~~~~~~
+                                           curFrame
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:331:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:30:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+09:03:19 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'main':
+../src/video_demo.c:97:34: error: 'nextFrame' undeclared (first use in this function)
+  DemoStartGame(dispCtrl.framePtr[nextFrame], dispCtrl.vMode.width, dispCtrl.vMode.height);
+                                  ^~~~~~~~~
+../src/video_demo.c:97:34: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:331:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:30:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+09:03:54 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:331:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:30:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/video_demo.o: In function `DemoChangeRes':
+C:\Users\manniche\Documents\GitHub\3Ugers3Semester\hdmi-in.sdk\HDMI_IN\Debug/../src/video_demo.c:555: undefined reference to `DemoCRMenu'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:46: HDMI_IN.elf] Error 1
+09:04:31 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:331:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:30:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117464	 274368	18688960	19080792	1232658	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+09:04:49 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+09:10:16 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:332:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:30:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117464	 274368	18688960	19080792	1232658	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+09:10:33 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+09:11:55 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/display_ctrl/display_ctrl.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_ctrl/display_ctrl.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_ctrl/display_ctrl.d" -MT"src/display_ctrl/display_ctrl.o" -o "src/display_ctrl/display_ctrl.o" "../src/display_ctrl/display_ctrl.c"
+'Finished building: ../src/display_ctrl/display_ctrl.c'
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:332:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:30:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117464	 274368	12468160	12859992	 c43a58	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+09:12:11 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+09:20:02 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'main':
+../src/video_demo.c:99:2: error: 'status' undeclared (first use in this function); did you mean 'XStatus'?
+  status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+  ^~~~~~
+  XStatus
+../src/video_demo.c:99:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c:99:11: warning: implicit declaration of function 'IntcInitFunction' [-Wimplicit-function-declaration]
+  status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+           ^~~~~~~~~~~~~~~~
+../src/video_demo.c:99:45: error: 'TMRInst' undeclared (first use in this function)
+  status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+                                             ^~~~~~~
+../src/video_demo.c:99:55: error: 'BTNInst' undeclared (first use in this function); did you mean 'TMRInst'?
+  status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+                                                       ^~~~~~~
+                                                       TMRInst
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:335:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:30:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:349:0: warning: "INTC_DEVICE_ID" redefined
+ #define INTC_DEVICE_ID   XPAR_PS7_SCUGIC_0_DEVICE_ID
+ 
+In file included from ../src/video_capture/video_capture.h:78:0,
+                 from ../src/video_demo.c:29:
+../src/video_capture/../intc/intc.h:74:0: note: this is the location of the previous definition
+  #define INTC_DEVICE_ID XPAR_SCUGIC_SINGLE_DEVICE_ID
+ 
+../src/video_demo.c:371:5: error: conflicting types for 'IntcInitFunction'
+ int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr);
+     ^~~~~~~~~~~~~~~~
+../src/video_demo.c:371:1: note: an argument type that has a default promotion can't match an empty parameter name list declaration
+ int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr);
+ ^~~
+../src/video_demo.c:99:11: note: previous implicit declaration of 'IntcInitFunction' was here
+  status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+           ^~~~~~~~~~~~~~~~
+../src/video_demo.c: In function 'IntcInitFunction':
+../src/video_demo.c:380:34: error: 'INTCInst' undeclared (first use in this function); did you mean 'BTNInst'?
+  status = XScuGic_CfgInitialize(&INTCInst, IntcConfig, IntcConfig->CpuBaseAddress);
+                                  ^~~~~~~~
+                                  BTNInst
+../src/video_demo.c:347:32: error: 'XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR' undeclared (first use in this function); did you mean 'XPAR_FABRIC_AXI_GPIO_VIDEO_IP2INTC_IRPT_INTR'?
+ #define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR
+                                ^
+../src/video_demo.c:347:32: note: in definition of macro 'INTC_GPIO_INTERRUPT_ID'
+ #define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:390:35: error: 'BTN_Intr_Handler' undeclared (first use in this function); did you mean 'XVtc_IntrHandler'?
+             (Xil_ExceptionHandler)BTN_Intr_Handler,
+                                   ^~~~~~~~~~~~~~~~
+                                   XVtc_IntrHandler
+../src/video_demo.c:376:10: warning: unused variable 'trig' [-Wunused-variable]
+  u8 pri, trig;
+          ^~~~
+../src/video_demo.c:376:5: warning: unused variable 'pri' [-Wunused-variable]
+  u8 pri, trig;
+     ^~~
+../src/video_demo.c: In function 'BTN_Intr_Handler':
+../src/video_demo.c:426:2: error: 'status' undeclared (first use in this function); did you mean 'XStatus'?
+  status = XGpio_Initialize(&BTNInst, BTNS_DEVICE_ID);
+  ^~~~~~
+  XStatus
+../src/video_demo.c:346:25: error: 'XPAR_AXI_GPIO_6_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_GPIO_SW_DEVICE_ID'?
+ #define BTNS_DEVICE_ID  XPAR_AXI_GPIO_6_DEVICE_ID
+                         ^
+../src/video_demo.c:426:38: note: in expansion of macro 'BTNS_DEVICE_ID'
+  status = XGpio_Initialize(&BTNInst, BTNS_DEVICE_ID);
+                                      ^~~~~~~~~~~~~~
+In file included from ../../HDMI_IN_bsp/ps7_cortexa9_0/include/xaxivdma.h:316:0,
+                 from ../src/video_capture/video_capture.h:75,
+                 from ../src/video_demo.c:29:
+../../HDMI_IN_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/video_demo.c:427:35: note: in expansion of macro 'XST_FAILURE'
+  if(status != XST_SUCCESS) return XST_FAILURE;
+                                   ^~~~~~~~~~~
+../src/video_demo.c:405:6: note: declared here
+ void BTN_Intr_Handler(void *baseaddr_p) {
+      ^~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+09:20:52 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'main':
+../src/video_demo.c:100:15: warning: implicit declaration of function 'IntcInitFunction' [-Wimplicit-function-declaration]
+  int status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+               ^~~~~~~~~~~~~~~~
+../src/video_demo.c:100:49: error: 'TMRInst' undeclared (first use in this function)
+  int status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+                                                 ^~~~~~~
+../src/video_demo.c:100:49: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c:100:59: error: 'BTNInst' undeclared (first use in this function); did you mean 'TMRInst'?
+  int status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+                                                           ^~~~~~~
+                                                           TMRInst
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:336:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:30:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:350:0: warning: "INTC_DEVICE_ID" redefined
+ #define INTC_DEVICE_ID   XPAR_PS7_SCUGIC_0_DEVICE_ID
+ 
+In file included from ../src/video_capture/video_capture.h:78:0,
+                 from ../src/video_demo.c:29:
+../src/video_capture/../intc/intc.h:74:0: note: this is the location of the previous definition
+  #define INTC_DEVICE_ID XPAR_SCUGIC_SINGLE_DEVICE_ID
+ 
+../src/video_demo.c:372:5: error: conflicting types for 'IntcInitFunction'
+ int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr);
+     ^~~~~~~~~~~~~~~~
+../src/video_demo.c:372:1: note: an argument type that has a default promotion can't match an empty parameter name list declaration
+ int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr);
+ ^~~
+../src/video_demo.c:100:15: note: previous implicit declaration of 'IntcInitFunction' was here
+  int status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+               ^~~~~~~~~~~~~~~~
+../src/video_demo.c: In function 'IntcInitFunction':
+../src/video_demo.c:381:34: error: 'INTCInst' undeclared (first use in this function); did you mean 'BTNInst'?
+  status = XScuGic_CfgInitialize(&INTCInst, IntcConfig, IntcConfig->CpuBaseAddress);
+                                  ^~~~~~~~
+                                  BTNInst
+../src/video_demo.c:348:32: error: 'XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR' undeclared (first use in this function); did you mean 'XPAR_FABRIC_AXI_GPIO_VIDEO_IP2INTC_IRPT_INTR'?
+ #define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR
+                                ^
+../src/video_demo.c:348:32: note: in definition of macro 'INTC_GPIO_INTERRUPT_ID'
+ #define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:391:35: error: 'BTN_Intr_Handler' undeclared (first use in this function); did you mean 'XVtc_IntrHandler'?
+             (Xil_ExceptionHandler)BTN_Intr_Handler,
+                                   ^~~~~~~~~~~~~~~~
+                                   XVtc_IntrHandler
+../src/video_demo.c:377:10: warning: unused variable 'trig' [-Wunused-variable]
+  u8 pri, trig;
+          ^~~~
+../src/video_demo.c:377:5: warning: unused variable 'pri' [-Wunused-variable]
+  u8 pri, trig;
+     ^~~
+../src/video_demo.c: In function 'BTN_Intr_Handler':
+../src/video_demo.c:427:2: error: 'status' undeclared (first use in this function); did you mean 'XStatus'?
+  status = XGpio_Initialize(&BTNInst, BTNS_DEVICE_ID);
+  ^~~~~~
+  XStatus
+../src/video_demo.c:347:25: error: 'XPAR_AXI_GPIO_6_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_GPIO_SW_DEVICE_ID'?
+ #define BTNS_DEVICE_ID  XPAR_AXI_GPIO_6_DEVICE_ID
+                         ^
+../src/video_demo.c:427:38: note: in expansion of macro 'BTNS_DEVICE_ID'
+  status = XGpio_Initialize(&BTNInst, BTNS_DEVICE_ID);
+                                      ^~~~~~~~~~~~~~
+In file included from ../../HDMI_IN_bsp/ps7_cortexa9_0/include/xaxivdma.h:316:0,
+                 from ../src/video_capture/video_capture.h:75,
+                 from ../src/video_demo.c:29:
+../../HDMI_IN_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/video_demo.c:428:35: note: in expansion of macro 'XST_FAILURE'
+  if(status != XST_SUCCESS) return XST_FAILURE;
+                                   ^~~~~~~~~~~
+../src/video_demo.c:406:6: note: declared here
+ void BTN_Intr_Handler(void *baseaddr_p) {
+      ^~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+09:24:05 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'main':
+../src/video_demo.c:100:15: warning: implicit declaration of function 'IntcInitFunction' [-Wimplicit-function-declaration]
+  int status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+               ^~~~~~~~~~~~~~~~
+../src/video_demo.c:100:49: error: 'TMRInst' undeclared (first use in this function)
+  int status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+                                                 ^~~~~~~
+../src/video_demo.c:100:49: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c:100:59: error: 'BTNInst' undeclared (first use in this function); did you mean 'TMRInst'?
+  int status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+                                                           ^~~~~~~
+                                                           TMRInst
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:329:21: error: 'nextframe' undeclared (first use in this function); did you mean 'nextFrame'?
+      DemoPrintBlock(nextframe, platform[j], platform[j]->anchor, 128);
+                     ^~~~~~~~~
+                     nextFrame
+../src/video_demo.c:336:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:30:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:350:0: warning: "INTC_DEVICE_ID" redefined
+ #define INTC_DEVICE_ID   XPAR_PS7_SCUGIC_0_DEVICE_ID
+ 
+In file included from ../src/video_capture/video_capture.h:78:0,
+                 from ../src/video_demo.c:29:
+../src/video_capture/../intc/intc.h:74:0: note: this is the location of the previous definition
+  #define INTC_DEVICE_ID XPAR_SCUGIC_SINGLE_DEVICE_ID
+ 
+../src/video_demo.c:372:5: error: conflicting types for 'IntcInitFunction'
+ int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr);
+     ^~~~~~~~~~~~~~~~
+../src/video_demo.c:372:1: note: an argument type that has a default promotion can't match an empty parameter name list declaration
+ int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr);
+ ^~~
+../src/video_demo.c:100:15: note: previous implicit declaration of 'IntcInitFunction' was here
+  int status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+               ^~~~~~~~~~~~~~~~
+../src/video_demo.c: In function 'IntcInitFunction':
+../src/video_demo.c:381:34: error: 'INTCInst' undeclared (first use in this function); did you mean 'BTNInst'?
+  status = XScuGic_CfgInitialize(&INTCInst, IntcConfig, IntcConfig->CpuBaseAddress);
+                                  ^~~~~~~~
+                                  BTNInst
+../src/video_demo.c:348:32: error: 'XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR' undeclared (first use in this function); did you mean 'XPAR_FABRIC_AXI_GPIO_VIDEO_IP2INTC_IRPT_INTR'?
+ #define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR
+                                ^
+../src/video_demo.c:348:32: note: in definition of macro 'INTC_GPIO_INTERRUPT_ID'
+ #define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:391:35: error: 'BTN_Intr_Handler' undeclared (first use in this function); did you mean 'XVtc_IntrHandler'?
+             (Xil_ExceptionHandler)BTN_Intr_Handler,
+                                   ^~~~~~~~~~~~~~~~
+                                   XVtc_IntrHandler
+../src/video_demo.c:377:10: warning: unused variable 'trig' [-Wunused-variable]
+  u8 pri, trig;
+          ^~~~
+../src/video_demo.c:377:5: warning: unused variable 'pri' [-Wunused-variable]
+  u8 pri, trig;
+     ^~~
+../src/video_demo.c: In function 'BTN_Intr_Handler':
+../src/video_demo.c:427:2: error: 'status' undeclared (first use in this function); did you mean 'XStatus'?
+  status = XGpio_Initialize(&BTNInst, BTNS_DEVICE_ID);
+  ^~~~~~
+  XStatus
+../src/video_demo.c:347:25: error: 'XPAR_AXI_GPIO_6_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_GPIO_SW_DEVICE_ID'?
+ #define BTNS_DEVICE_ID  XPAR_AXI_GPIO_6_DEVICE_ID
+                         ^
+../src/video_demo.c:427:38: note: in expansion of macro 'BTNS_DEVICE_ID'
+  status = XGpio_Initialize(&BTNInst, BTNS_DEVICE_ID);
+                                      ^~~~~~~~~~~~~~
+In file included from ../../HDMI_IN_bsp/ps7_cortexa9_0/include/xaxivdma.h:316:0,
+                 from ../src/video_capture/video_capture.h:75,
+                 from ../src/video_demo.c:29:
+../../HDMI_IN_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/video_demo.c:428:35: note: in expansion of macro 'XST_FAILURE'
+  if(status != XST_SUCCESS) return XST_FAILURE;
+                                   ^~~~~~~~~~~
+../src/video_demo.c:406:6: note: declared here
+ void BTN_Intr_Handler(void *baseaddr_p) {
+      ^~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+09:24:31 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'main':
+../src/video_demo.c:100:15: warning: implicit declaration of function 'IntcInitFunction' [-Wimplicit-function-declaration]
+  int status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+               ^~~~~~~~~~~~~~~~
+../src/video_demo.c:100:49: error: 'TMRInst' undeclared (first use in this function)
+  int status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+                                                 ^~~~~~~
+../src/video_demo.c:100:49: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c:100:59: error: 'BTNInst' undeclared (first use in this function); did you mean 'TMRInst'?
+  int status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+                                                           ^~~~~~~
+                                                           TMRInst
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:329:21: warning: passing argument 1 of 'DemoPrintBlock' makes pointer from integer without a cast [-Wint-conversion]
+      DemoPrintBlock(nextFrame, platform[j], platform[j]->anchor, 128);
+                     ^~~~~~~~~
+../src/video_demo.c:131:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'int'
+ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
+      ^~~~~~~~~~~~~~
+../src/video_demo.c:336:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:30:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:350:0: warning: "INTC_DEVICE_ID" redefined
+ #define INTC_DEVICE_ID   XPAR_PS7_SCUGIC_0_DEVICE_ID
+ 
+In file included from ../src/video_capture/video_capture.h:78:0,
+                 from ../src/video_demo.c:29:
+../src/video_capture/../intc/intc.h:74:0: note: this is the location of the previous definition
+  #define INTC_DEVICE_ID XPAR_SCUGIC_SINGLE_DEVICE_ID
+ 
+../src/video_demo.c:372:5: error: conflicting types for 'IntcInitFunction'
+ int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr);
+     ^~~~~~~~~~~~~~~~
+../src/video_demo.c:372:1: note: an argument type that has a default promotion can't match an empty parameter name list declaration
+ int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr);
+ ^~~
+../src/video_demo.c:100:15: note: previous implicit declaration of 'IntcInitFunction' was here
+  int status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+               ^~~~~~~~~~~~~~~~
+../src/video_demo.c: In function 'IntcInitFunction':
+../src/video_demo.c:381:34: error: 'INTCInst' undeclared (first use in this function); did you mean 'BTNInst'?
+  status = XScuGic_CfgInitialize(&INTCInst, IntcConfig, IntcConfig->CpuBaseAddress);
+                                  ^~~~~~~~
+                                  BTNInst
+../src/video_demo.c:348:32: error: 'XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR' undeclared (first use in this function); did you mean 'XPAR_FABRIC_AXI_GPIO_VIDEO_IP2INTC_IRPT_INTR'?
+ #define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR
+                                ^
+../src/video_demo.c:348:32: note: in definition of macro 'INTC_GPIO_INTERRUPT_ID'
+ #define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:391:35: error: 'BTN_Intr_Handler' undeclared (first use in this function); did you mean 'XVtc_IntrHandler'?
+             (Xil_ExceptionHandler)BTN_Intr_Handler,
+                                   ^~~~~~~~~~~~~~~~
+                                   XVtc_IntrHandler
+../src/video_demo.c:377:10: warning: unused variable 'trig' [-Wunused-variable]
+  u8 pri, trig;
+          ^~~~
+../src/video_demo.c:377:5: warning: unused variable 'pri' [-Wunused-variable]
+  u8 pri, trig;
+     ^~~
+../src/video_demo.c: In function 'BTN_Intr_Handler':
+../src/video_demo.c:427:2: error: 'status' undeclared (first use in this function); did you mean 'XStatus'?
+  status = XGpio_Initialize(&BTNInst, BTNS_DEVICE_ID);
+  ^~~~~~
+  XStatus
+../src/video_demo.c:347:25: error: 'XPAR_AXI_GPIO_6_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_GPIO_SW_DEVICE_ID'?
+ #define BTNS_DEVICE_ID  XPAR_AXI_GPIO_6_DEVICE_ID
+                         ^
+../src/video_demo.c:427:38: note: in expansion of macro 'BTNS_DEVICE_ID'
+  status = XGpio_Initialize(&BTNInst, BTNS_DEVICE_ID);
+                                      ^~~~~~~~~~~~~~
+In file included from ../../HDMI_IN_bsp/ps7_cortexa9_0/include/xaxivdma.h:316:0,
+                 from ../src/video_capture/video_capture.h:75,
+                 from ../src/video_demo.c:29:
+../../HDMI_IN_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/video_demo.c:428:35: note: in expansion of macro 'XST_FAILURE'
+  if(status != XST_SUCCESS) return XST_FAILURE;
+                                   ^~~~~~~~~~~
+../src/video_demo.c:406:6: note: declared here
+ void BTN_Intr_Handler(void *baseaddr_p) {
+      ^~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+09:25:15 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'main':
+../src/video_demo.c:100:15: warning: implicit declaration of function 'IntcInitFunction' [-Wimplicit-function-declaration]
+  int status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+               ^~~~~~~~~~~~~~~~
+../src/video_demo.c:100:49: error: 'TMRInst' undeclared (first use in this function)
+  int status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+                                                 ^~~~~~~
+../src/video_demo.c:100:49: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c:100:59: error: 'BTNInst' undeclared (first use in this function); did you mean 'TMRInst'?
+  int status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+                                                           ^~~~~~~
+                                                           TMRInst
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:329:21: warning: passing argument 1 of 'DemoPrintBlock' makes pointer from integer without a cast [-Wint-conversion]
+      DemoPrintBlock(nextFrame, platform[j], platform[j]->anchor, 128);
+                     ^~~~~~~~~
+../src/video_demo.c:131:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'int'
+ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
+      ^~~~~~~~~~~~~~
+../src/video_demo.c:332:19: warning: passing argument 1 of 'DemoPrintJumper' makes pointer from integer without a cast [-Wint-conversion]
+   DemoPrintJumper(nextFrame, jumperImg, jumperBlock.anchor, 150, 150);
+                   ^~~~~~~~~
+../src/video_demo.c:146:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'int'
+ void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:350:0: warning: "INTC_DEVICE_ID" redefined
+ #define INTC_DEVICE_ID   XPAR_PS7_SCUGIC_0_DEVICE_ID
+ 
+In file included from ../src/video_capture/video_capture.h:78:0,
+                 from ../src/video_demo.c:29:
+../src/video_capture/../intc/intc.h:74:0: note: this is the location of the previous definition
+  #define INTC_DEVICE_ID XPAR_SCUGIC_SINGLE_DEVICE_ID
+ 
+../src/video_demo.c:372:5: error: conflicting types for 'IntcInitFunction'
+ int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr);
+     ^~~~~~~~~~~~~~~~
+../src/video_demo.c:372:1: note: an argument type that has a default promotion can't match an empty parameter name list declaration
+ int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr);
+ ^~~
+../src/video_demo.c:100:15: note: previous implicit declaration of 'IntcInitFunction' was here
+  int status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+               ^~~~~~~~~~~~~~~~
+../src/video_demo.c: In function 'IntcInitFunction':
+../src/video_demo.c:381:34: error: 'INTCInst' undeclared (first use in this function); did you mean 'BTNInst'?
+  status = XScuGic_CfgInitialize(&INTCInst, IntcConfig, IntcConfig->CpuBaseAddress);
+                                  ^~~~~~~~
+                                  BTNInst
+../src/video_demo.c:348:32: error: 'XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR' undeclared (first use in this function); did you mean 'XPAR_FABRIC_AXI_GPIO_VIDEO_IP2INTC_IRPT_INTR'?
+ #define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR
+                                ^
+../src/video_demo.c:348:32: note: in definition of macro 'INTC_GPIO_INTERRUPT_ID'
+ #define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:391:35: error: 'BTN_Intr_Handler' undeclared (first use in this function); did you mean 'XVtc_IntrHandler'?
+             (Xil_ExceptionHandler)BTN_Intr_Handler,
+                                   ^~~~~~~~~~~~~~~~
+                                   XVtc_IntrHandler
+../src/video_demo.c:377:10: warning: unused variable 'trig' [-Wunused-variable]
+  u8 pri, trig;
+          ^~~~
+../src/video_demo.c:377:5: warning: unused variable 'pri' [-Wunused-variable]
+  u8 pri, trig;
+     ^~~
+../src/video_demo.c: In function 'BTN_Intr_Handler':
+../src/video_demo.c:427:2: error: 'status' undeclared (first use in this function); did you mean 'XStatus'?
+  status = XGpio_Initialize(&BTNInst, BTNS_DEVICE_ID);
+  ^~~~~~
+  XStatus
+../src/video_demo.c:347:25: error: 'XPAR_AXI_GPIO_6_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_GPIO_SW_DEVICE_ID'?
+ #define BTNS_DEVICE_ID  XPAR_AXI_GPIO_6_DEVICE_ID
+                         ^
+../src/video_demo.c:427:38: note: in expansion of macro 'BTNS_DEVICE_ID'
+  status = XGpio_Initialize(&BTNInst, BTNS_DEVICE_ID);
+                                      ^~~~~~~~~~~~~~
+In file included from ../../HDMI_IN_bsp/ps7_cortexa9_0/include/xaxivdma.h:316:0,
+                 from ../src/video_capture/video_capture.h:75,
+                 from ../src/video_demo.c:29:
+../../HDMI_IN_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/video_demo.c:428:35: note: in expansion of macro 'XST_FAILURE'
+  if(status != XST_SUCCESS) return XST_FAILURE;
+                                   ^~~~~~~~~~~
+../src/video_demo.c:406:6: note: declared here
+ void BTN_Intr_Handler(void *baseaddr_p) {
+      ^~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+09:25:21 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'main':
+../src/video_demo.c:100:15: warning: implicit declaration of function 'IntcInitFunction' [-Wimplicit-function-declaration]
+  int status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+               ^~~~~~~~~~~~~~~~
+../src/video_demo.c:100:49: error: 'TMRInst' undeclared (first use in this function)
+  int status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+                                                 ^~~~~~~
+../src/video_demo.c:100:49: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c:100:59: error: 'BTNInst' undeclared (first use in this function); did you mean 'TMRInst'?
+  int status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+                                                           ^~~~~~~
+                                                           TMRInst
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:329:21: warning: passing argument 1 of 'DemoPrintBlock' makes pointer from integer without a cast [-Wint-conversion]
+      DemoPrintBlock(nextFrame, platform[j], platform[j]->anchor, 128);
+                     ^~~~~~~~~
+../src/video_demo.c:131:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'int'
+ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
+      ^~~~~~~~~~~~~~
+../src/video_demo.c:332:19: warning: passing argument 1 of 'DemoPrintJumper' makes pointer from integer without a cast [-Wint-conversion]
+   DemoPrintJumper(nextFrame, jumperImg, jumperBlock.anchor, 150, 150);
+                   ^~~~~~~~~
+../src/video_demo.c:146:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'int'
+ void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:350:0: warning: "INTC_DEVICE_ID" redefined
+ #define INTC_DEVICE_ID   XPAR_PS7_SCUGIC_0_DEVICE_ID
+ 
+In file included from ../src/video_capture/video_capture.h:78:0,
+                 from ../src/video_demo.c:29:
+../src/video_capture/../intc/intc.h:74:0: note: this is the location of the previous definition
+  #define INTC_DEVICE_ID XPAR_SCUGIC_SINGLE_DEVICE_ID
+ 
+../src/video_demo.c:372:5: error: conflicting types for 'IntcInitFunction'
+ int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr);
+     ^~~~~~~~~~~~~~~~
+../src/video_demo.c:372:1: note: an argument type that has a default promotion can't match an empty parameter name list declaration
+ int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr);
+ ^~~
+../src/video_demo.c:100:15: note: previous implicit declaration of 'IntcInitFunction' was here
+  int status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+               ^~~~~~~~~~~~~~~~
+../src/video_demo.c: In function 'IntcInitFunction':
+../src/video_demo.c:381:34: error: 'INTCInst' undeclared (first use in this function); did you mean 'BTNInst'?
+  status = XScuGic_CfgInitialize(&INTCInst, IntcConfig, IntcConfig->CpuBaseAddress);
+                                  ^~~~~~~~
+                                  BTNInst
+../src/video_demo.c:348:32: error: 'XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR' undeclared (first use in this function); did you mean 'XPAR_FABRIC_AXI_GPIO_VIDEO_IP2INTC_IRPT_INTR'?
+ #define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR
+                                ^
+../src/video_demo.c:348:32: note: in definition of macro 'INTC_GPIO_INTERRUPT_ID'
+ #define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:391:35: error: 'BTN_Intr_Handler' undeclared (first use in this function); did you mean 'XVtc_IntrHandler'?
+             (Xil_ExceptionHandler)BTN_Intr_Handler,
+                                   ^~~~~~~~~~~~~~~~
+                                   XVtc_IntrHandler
+../src/video_demo.c:377:10: warning: unused variable 'trig' [-Wunused-variable]
+  u8 pri, trig;
+          ^~~~
+../src/video_demo.c:377:5: warning: unused variable 'pri' [-Wunused-variable]
+  u8 pri, trig;
+     ^~~
+../src/video_demo.c: In function 'BTN_Intr_Handler':
+../src/video_demo.c:427:2: error: 'status' undeclared (first use in this function); did you mean 'XStatus'?
+  status = XGpio_Initialize(&BTNInst, BTNS_DEVICE_ID);
+  ^~~~~~
+  XStatus
+../src/video_demo.c:347:25: error: 'XPAR_AXI_GPIO_6_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_GPIO_SW_DEVICE_ID'?
+ #define BTNS_DEVICE_ID  XPAR_AXI_GPIO_6_DEVICE_ID
+                         ^
+../src/video_demo.c:427:38: note: in expansion of macro 'BTNS_DEVICE_ID'
+  status = XGpio_Initialize(&BTNInst, BTNS_DEVICE_ID);
+                                      ^~~~~~~~~~~~~~
+In file included from ../../HDMI_IN_bsp/ps7_cortexa9_0/include/xaxivdma.h:316:0,
+                 from ../src/video_capture/video_capture.h:75,
+                 from ../src/video_demo.c:29:
+../../HDMI_IN_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/video_demo.c:428:35: note: in expansion of macro 'XST_FAILURE'
+  if(status != XST_SUCCESS) return XST_FAILURE;
+                                   ^~~~~~~~~~~
+../src/video_demo.c:406:6: note: declared here
+ void BTN_Intr_Handler(void *baseaddr_p) {
+      ^~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+09:26:07 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'main':
+../src/video_demo.c:100:15: warning: implicit declaration of function 'IntcInitFunction' [-Wimplicit-function-declaration]
+  int status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+               ^~~~~~~~~~~~~~~~
+../src/video_demo.c:100:49: error: 'TMRInst' undeclared (first use in this function)
+  int status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+                                                 ^~~~~~~
+../src/video_demo.c:100:49: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c:100:59: error: 'BTNInst' undeclared (first use in this function); did you mean 'TMRInst'?
+  int status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+                                                           ^~~~~~~
+                                                           TMRInst
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:329:21: warning: passing argument 1 of 'DemoPrintBlock' makes pointer from integer without a cast [-Wint-conversion]
+      DemoPrintBlock(nextFrame, platform[j], platform[j]->anchor, 128);
+                     ^~~~~~~~~
+../src/video_demo.c:131:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'int'
+ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
+      ^~~~~~~~~~~~~~
+../src/video_demo.c:332:19: warning: passing argument 1 of 'DemoPrintJumper' makes pointer from integer without a cast [-Wint-conversion]
+   DemoPrintJumper(nextFrame, jumperImg, jumperBlock.anchor, 150, 150);
+                   ^~~~~~~~~
+../src/video_demo.c:146:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'int'
+ void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+09:26:21 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:329:21: warning: passing argument 1 of 'DemoPrintBlock' makes pointer from integer without a cast [-Wint-conversion]
+      DemoPrintBlock(nextFrame, platform[j], platform[j]->anchor, 128);
+                     ^~~~~~~~~
+../src/video_demo.c:131:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'int'
+ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
+      ^~~~~~~~~~~~~~
+../src/video_demo.c:332:19: warning: passing argument 1 of 'DemoPrintJumper' makes pointer from integer without a cast [-Wint-conversion]
+   DemoPrintJumper(nextFrame, jumperImg, jumperBlock.anchor, 150, 150);
+                   ^~~~~~~~~
+../src/video_demo.c:146:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'int'
+ void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117528	 274368	12468160	12860056	 c43a98	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+09:26:40 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+09:29:00 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:283:19: warning: passing argument 1 of 'DemoPrintBlock' makes pointer from integer without a cast [-Wint-conversion]
+    DemoPrintBlock(dispCtrl.curFrame, platform[j], platform[j]->anchor, 255);
+                   ^~~~~~~~
+../src/video_demo.c:131:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 {aka long unsigned int}'
+ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
+      ^~~~~~~~~~~~~~
+../src/video_demo.c:290:24: warning: passing argument 1 of 'DemoOverwriteJumper' makes pointer from integer without a cast [-Wint-conversion]
+    DemoOverwriteJumper(dispCtrl.curFrame, jumperImg, jumperBlock.anchor, 150, 150);
+                        ^~~~~~~~
+../src/video_demo.c:167:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 {aka long unsigned int}'
+ void DemoOverwriteJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:329:21: warning: passing argument 1 of 'DemoPrintBlock' makes pointer from integer without a cast [-Wint-conversion]
+      DemoPrintBlock(nextFrame, platform[j], platform[j]->anchor, 128);
+                     ^~~~~~~~~
+../src/video_demo.c:131:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'int'
+ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
+      ^~~~~~~~~~~~~~
+../src/video_demo.c:332:19: warning: passing argument 1 of 'DemoPrintJumper' makes pointer from integer without a cast [-Wint-conversion]
+   DemoPrintJumper(nextFrame, jumperImg, jumperBlock.anchor, 150, 150);
+                   ^~~~~~~~~
+../src/video_demo.c:146:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'int'
+ void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117528	 274368	12468160	12860056	 c43a98	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+09:29:14 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+09:30:33 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:283:19: warning: passing argument 1 of 'DemoPrintBlock' makes pointer from integer without a cast [-Wint-conversion]
+    DemoPrintBlock(dispCtrl.curFrame, platform[j], platform[j]->anchor, 255);
+                   ^~~~~~~~
+../src/video_demo.c:131:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 {aka long unsigned int}'
+ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
+      ^~~~~~~~~~~~~~
+../src/video_demo.c:290:24: warning: passing argument 1 of 'DemoOverwriteJumper' makes pointer from integer without a cast [-Wint-conversion]
+    DemoOverwriteJumper(dispCtrl.curFrame, jumperImg, jumperBlock.anchor, 150, 150);
+                        ^~~~~~~~
+../src/video_demo.c:167:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 {aka long unsigned int}'
+ void DemoOverwriteJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:329:21: warning: passing argument 1 of 'DemoPrintBlock' makes pointer from integer without a cast [-Wint-conversion]
+      DemoPrintBlock(nextFrame, platform[j], platform[j]->anchor, 128);
+                     ^~~~~~~~~
+../src/video_demo.c:131:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'int'
+ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
+      ^~~~~~~~~~~~~~
+../src/video_demo.c:332:19: warning: passing argument 1 of 'DemoPrintJumper' makes pointer from integer without a cast [-Wint-conversion]
+   DemoPrintJumper(nextFrame, jumperImg, jumperBlock.anchor, 150, 150);
+                   ^~~~~~~~~
+../src/video_demo.c:146:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'int'
+ void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117592	 274368	12468160	12860120	 c43ad8	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+09:30:54 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+09:32:02 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:329:21: warning: passing argument 1 of 'DemoPrintBlock' makes pointer from integer without a cast [-Wint-conversion]
+      DemoPrintBlock(nextFrame, platform[j], platform[j]->anchor, 128);
+                     ^~~~~~~~~
+../src/video_demo.c:131:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'int'
+ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
+      ^~~~~~~~~~~~~~
+../src/video_demo.c:332:19: warning: passing argument 1 of 'DemoPrintJumper' makes pointer from integer without a cast [-Wint-conversion]
+   DemoPrintJumper(nextFrame, jumperImg, jumperBlock.anchor, 150, 150);
+                   ^~~~~~~~~
+../src/video_demo.c:146:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'int'
+ void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117528	 274368	12468160	12860056	 c43a98	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+09:36:52 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:283:19: warning: passing argument 1 of 'DemoPrintBlock' makes pointer from integer without a cast [-Wint-conversion]
+    DemoPrintBlock(nextFrame, platform[j], platform[j]->anchor, 255);
+                   ^~~~~~~~~
+../src/video_demo.c:131:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'int'
+ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
+      ^~~~~~~~~~~~~~
+../src/video_demo.c:290:24: warning: passing argument 1 of 'DemoOverwriteJumper' makes pointer from integer without a cast [-Wint-conversion]
+    DemoOverwriteJumper(nextFrame, jumperImg, jumperBlock.anchor, 150, 150);
+                        ^~~~~~~~~
+../src/video_demo.c:167:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'int'
+ void DemoOverwriteJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:325:21: warning: passing argument 1 of 'DemoPrintBlock' makes pointer from integer without a cast [-Wint-conversion]
+      DemoPrintBlock(nextFrame, platform[j], platform[j]->anchor, 128);
+                     ^~~~~~~~~
+../src/video_demo.c:131:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'int'
+ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
+      ^~~~~~~~~~~~~~
+../src/video_demo.c:328:19: warning: passing argument 1 of 'DemoPrintJumper' makes pointer from integer without a cast [-Wint-conversion]
+   DemoPrintJumper(nextFrame, jumperImg, jumperBlock.anchor, 150, 150);
+                   ^~~~~~~~~
+../src/video_demo.c:146:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'int'
+ void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117528	 274368	12468160	12860056	 c43a98	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+09:37:08 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+09:38:03 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:287:19: warning: passing argument 1 of 'DemoPrintBlock' makes pointer from integer without a cast [-Wint-conversion]
+    DemoPrintBlock(nextFrame, platform[j], platform[j]->anchor, 255);
+                   ^~~~~~~~~
+../src/video_demo.c:131:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'int'
+ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
+      ^~~~~~~~~~~~~~
+../src/video_demo.c:294:24: warning: passing argument 1 of 'DemoOverwriteJumper' makes pointer from integer without a cast [-Wint-conversion]
+    DemoOverwriteJumper(nextFrame, jumperImg, jumperBlock.anchor, 150, 150);
+                        ^~~~~~~~~
+../src/video_demo.c:167:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'int'
+ void DemoOverwriteJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:329:21: warning: passing argument 1 of 'DemoPrintBlock' makes pointer from integer without a cast [-Wint-conversion]
+      DemoPrintBlock(nextFrame, platform[j], platform[j]->anchor, 128);
+                     ^~~~~~~~~
+../src/video_demo.c:131:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'int'
+ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
+      ^~~~~~~~~~~~~~
+../src/video_demo.c:332:19: warning: passing argument 1 of 'DemoPrintJumper' makes pointer from integer without a cast [-Wint-conversion]
+   DemoPrintJumper(nextFrame, jumperImg, jumperBlock.anchor, 150, 150);
+                   ^~~~~~~~~
+../src/video_demo.c:146:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'int'
+ void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117528	 274368	12468160	12860056	 c43a98	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+09:38:22 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+09:45:44 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:287:19: warning: passing argument 1 of 'DemoPrintBlock' makes pointer from integer without a cast [-Wint-conversion]
+    DemoPrintBlock(nextFrame, platform[j], platform[j]->anchor, 255);
+                   ^~~~~~~~~
+../src/video_demo.c:131:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'int'
+ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
+      ^~~~~~~~~~~~~~
+../src/video_demo.c:294:24: warning: passing argument 1 of 'DemoOverwriteJumper' makes pointer from integer without a cast [-Wint-conversion]
+    DemoOverwriteJumper(dispCtrl.curFrame , jumperImg, jumperBlock.anchor, 150, 150);
+                        ^~~~~~~~
+../src/video_demo.c:167:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'u32 {aka long unsigned int}'
+ void DemoOverwriteJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:329:21: warning: passing argument 1 of 'DemoPrintBlock' makes pointer from integer without a cast [-Wint-conversion]
+      DemoPrintBlock(nextFrame, platform[j], platform[j]->anchor, 128);
+                     ^~~~~~~~~
+../src/video_demo.c:131:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'int'
+ void DemoPrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
+      ^~~~~~~~~~~~~~
+../src/video_demo.c:332:19: warning: passing argument 1 of 'DemoPrintJumper' makes pointer from integer without a cast [-Wint-conversion]
+   DemoPrintJumper(nextFrame, jumperImg, jumperBlock.anchor, 150, 150);
+                   ^~~~~~~~~
+../src/video_demo.c:146:6: note: expected 'u8 * {aka unsigned char *}' but argument is of type 'int'
+ void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117528	 274368	12468160	12860056	 c43a98	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+09:50:50 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'main':
+../src/video_demo.c:100:2: error: 'status' undeclared (first use in this function); did you mean 'XStatus'?
+  status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+  ^~~~~~
+  XStatus
+../src/video_demo.c:100:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c:100:11: warning: implicit declaration of function 'IntcInitFunction' [-Wimplicit-function-declaration]
+  status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+           ^~~~~~~~~~~~~~~~
+../src/video_demo.c:100:45: error: 'TMRInst' undeclared (first use in this function)
+  status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+                                             ^~~~~~~
+../src/video_demo.c:100:55: error: 'BTNInst' undeclared (first use in this function); did you mean 'TMRInst'?
+  status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+                                                       ^~~~~~~
+                                                       TMRInst
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:336:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:30:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:350:0: warning: "INTC_DEVICE_ID" redefined
+ #define INTC_DEVICE_ID   XPAR_PS7_SCUGIC_0_DEVICE_ID
+ 
+In file included from ../src/video_capture/video_capture.h:78:0,
+                 from ../src/video_demo.c:29:
+../src/video_capture/../intc/intc.h:74:0: note: this is the location of the previous definition
+  #define INTC_DEVICE_ID XPAR_SCUGIC_SINGLE_DEVICE_ID
+ 
+../src/video_demo.c:372:5: error: conflicting types for 'IntcInitFunction'
+ int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr);
+     ^~~~~~~~~~~~~~~~
+../src/video_demo.c:372:1: note: an argument type that has a default promotion can't match an empty parameter name list declaration
+ int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr);
+ ^~~
+../src/video_demo.c:100:11: note: previous implicit declaration of 'IntcInitFunction' was here
+  status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+           ^~~~~~~~~~~~~~~~
+../src/video_demo.c: In function 'IntcInitFunction':
+../src/video_demo.c:381:34: error: 'INTCInst' undeclared (first use in this function); did you mean 'BTNInst'?
+  status = XScuGic_CfgInitialize(&INTCInst, IntcConfig, IntcConfig->CpuBaseAddress);
+                                  ^~~~~~~~
+                                  BTNInst
+../src/video_demo.c:348:32: error: 'XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR' undeclared (first use in this function); did you mean 'XPAR_FABRIC_AXI_GPIO_VIDEO_IP2INTC_IRPT_INTR'?
+ #define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR
+                                ^
+../src/video_demo.c:348:32: note: in definition of macro 'INTC_GPIO_INTERRUPT_ID'
+ #define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:391:35: error: 'BTN_Intr_Handler' undeclared (first use in this function); did you mean 'XVtc_IntrHandler'?
+             (Xil_ExceptionHandler)BTN_Intr_Handler,
+                                   ^~~~~~~~~~~~~~~~
+                                   XVtc_IntrHandler
+../src/video_demo.c:377:10: warning: unused variable 'trig' [-Wunused-variable]
+  u8 pri, trig;
+          ^~~~
+../src/video_demo.c:377:5: warning: unused variable 'pri' [-Wunused-variable]
+  u8 pri, trig;
+     ^~~
+../src/video_demo.c: In function 'BTN_Intr_Handler':
+../src/video_demo.c:427:2: error: 'status' undeclared (first use in this function); did you mean 'XStatus'?
+  status = XGpio_Initialize(&BTNInst, BTNS_DEVICE_ID);
+  ^~~~~~
+  XStatus
+../src/video_demo.c:347:25: error: 'XPAR_AXI_GPIO_6_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_GPIO_SW_DEVICE_ID'?
+ #define BTNS_DEVICE_ID  XPAR_AXI_GPIO_6_DEVICE_ID
+                         ^
+../src/video_demo.c:427:38: note: in expansion of macro 'BTNS_DEVICE_ID'
+  status = XGpio_Initialize(&BTNInst, BTNS_DEVICE_ID);
+                                      ^~~~~~~~~~~~~~
+In file included from ../../HDMI_IN_bsp/ps7_cortexa9_0/include/xaxivdma.h:316:0,
+                 from ../src/video_capture/video_capture.h:75,
+                 from ../src/video_demo.c:29:
+../../HDMI_IN_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/video_demo.c:428:35: note: in expansion of macro 'XST_FAILURE'
+  if(status != XST_SUCCESS) return XST_FAILURE;
+                                   ^~~~~~~~~~~
+../src/video_demo.c:406:6: note: declared here
+ void BTN_Intr_Handler(void *baseaddr_p) {
+      ^~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+09:50:57 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:336:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:30:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:350:0: warning: "INTC_DEVICE_ID" redefined
+ #define INTC_DEVICE_ID   XPAR_PS7_SCUGIC_0_DEVICE_ID
+ 
+In file included from ../src/video_capture/video_capture.h:78:0,
+                 from ../src/video_demo.c:29:
+../src/video_capture/../intc/intc.h:74:0: note: this is the location of the previous definition
+  #define INTC_DEVICE_ID XPAR_SCUGIC_SINGLE_DEVICE_ID
+ 
+../src/video_demo.c: In function 'IntcInitFunction':
+../src/video_demo.c:381:34: error: 'INTCInst' undeclared (first use in this function); did you mean 'BTNInst'?
+  status = XScuGic_CfgInitialize(&INTCInst, IntcConfig, IntcConfig->CpuBaseAddress);
+                                  ^~~~~~~~
+                                  BTNInst
+../src/video_demo.c:381:34: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c:348:32: error: 'XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR' undeclared (first use in this function); did you mean 'XPAR_FABRIC_AXI_GPIO_VIDEO_IP2INTC_IRPT_INTR'?
+ #define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR
+                                ^
+../src/video_demo.c:348:32: note: in definition of macro 'INTC_GPIO_INTERRUPT_ID'
+ #define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:391:35: error: 'BTN_Intr_Handler' undeclared (first use in this function); did you mean 'XVtc_IntrHandler'?
+             (Xil_ExceptionHandler)BTN_Intr_Handler,
+                                   ^~~~~~~~~~~~~~~~
+                                   XVtc_IntrHandler
+../src/video_demo.c:377:10: warning: unused variable 'trig' [-Wunused-variable]
+  u8 pri, trig;
+          ^~~~
+../src/video_demo.c:377:5: warning: unused variable 'pri' [-Wunused-variable]
+  u8 pri, trig;
+     ^~~
+../src/video_demo.c: In function 'BTN_Intr_Handler':
+../src/video_demo.c:427:2: error: 'status' undeclared (first use in this function); did you mean 'XStatus'?
+  status = XGpio_Initialize(&BTNInst, BTNS_DEVICE_ID);
+  ^~~~~~
+  XStatus
+../src/video_demo.c:347:25: error: 'XPAR_AXI_GPIO_6_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_GPIO_SW_DEVICE_ID'?
+ #define BTNS_DEVICE_ID  XPAR_AXI_GPIO_6_DEVICE_ID
+                         ^
+../src/video_demo.c:427:38: note: in expansion of macro 'BTNS_DEVICE_ID'
+  status = XGpio_Initialize(&BTNInst, BTNS_DEVICE_ID);
+                                      ^~~~~~~~~~~~~~
+In file included from ../../HDMI_IN_bsp/ps7_cortexa9_0/include/xaxivdma.h:316:0,
+                 from ../src/video_capture/video_capture.h:75,
+                 from ../src/video_demo.c:29:
+../../HDMI_IN_bsp/ps7_cortexa9_0/include/xstatus.h:65:41: warning: 'return' with a value, in function returning void
+ #define XST_FAILURE                     1L
+                                         ^
+../src/video_demo.c:428:35: note: in expansion of macro 'XST_FAILURE'
+  if(status != XST_SUCCESS) return XST_FAILURE;
+                                   ^~~~~~~~~~~
+../src/video_demo.c:406:6: note: declared here
+ void BTN_Intr_Handler(void *baseaddr_p) {
+      ^~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+09:51:21 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:336:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:30:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117464	 274368	12468160	12859992	 c43a58	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+09:51:40 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+09:53:12 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:813:1: error: expected declaration or statement at end of input
+ }
+ ^
+At top level:
+../src/video_demo.c:809:6: warning: 'DemoISR' defined but not used [-Wunused-function]
+ void DemoISR(void *callBackRef, void *pVideo)
+      ^~~~~~~
+../src/video_demo.c:740:6: warning: 'DemoScaleFrame' defined but not used [-Wunused-function]
+ void DemoScaleFrame(u8 *srcFrame, u8 *destFrame, u32 srcWidth, u32 srcHeight, u32 destWidth, u32 destHeight, u32 stride)
+      ^~~~~~~~~~~~~~
+../src/video_demo.c:716:6: warning: 'DemoInvertFrame' defined but not used [-Wunused-function]
+ void DemoInvertFrame(u8 *srcFrame, u8 *destFrame, u32 width, u32 height, u32 stride)
+      ^~~~~~~~~~~~~~~
+../src/video_demo.c:645:6: warning: 'DemoChangeRes' defined but not used [-Wunused-function]
+ void DemoChangeRes()
+      ^~~~~~~~~~~~~
+../src/video_demo.c:616:6: warning: 'DemoPrintMenu' defined but not used [-Wunused-function]
+ void DemoPrintMenu()
+      ^~~~~~~~~~~~~
+../src/video_demo.c:527:6: warning: 'DemoRun' defined but not used [-Wunused-function]
+ void DemoRun() {
+      ^~~~~~~
+../src/video_demo.c:445:6: warning: 'DemoInitialize' defined but not used [-Wunused-function]
+ void DemoInitialize()
+      ^~~~~~~~~~~~~~
+../src/video_demo.c:440:6: warning: 'GameOptions' defined but not used [-Wunused-function]
+ void GameOptions() {
+      ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+09:55:07 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:336:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:30:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117464	 274368	12468160	12859992	 c43a58	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+09:57:01 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:336:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:30:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117464	 274368	12468160	12859992	 c43a58	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+10:21:04 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:336:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:30:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117464	 274368	12468160	12859992	 c43a58	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+10:21:57 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+10:32:36 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:336:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:30:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117464	 124368	12468160	12709992	 c1f068	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+10:33:48 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:336:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:30:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117464	 124368	12468160	12709992	 c1f068	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+10:34:05 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+10:35:47 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:336:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:30:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117464	 124368	12468160	12709992	 c1f068	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+10:36:05 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+10:38:21 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:336:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:30:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117464	 124368	12468160	12709992	 c1f068	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '
+10:38:38 **** Incremental Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+10:43:22 **** Auto Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:338:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:30:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: HDMI_IN.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../HDMI_IN_bsp/ps7_cortexa9_0/lib -o "HDMI_IN.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: HDMI_IN.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size HDMI_IN.elf  |tee "HDMI_IN.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 117464	 124368	12468160	12709992	 c1f068	HDMI_IN.elf
+'Finished building: HDMI_IN.elf.size'
+' '

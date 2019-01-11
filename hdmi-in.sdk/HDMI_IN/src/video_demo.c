@@ -54,6 +54,8 @@
 #define UART_BASEADDR XPAR_PS7_UART_1_BASEADDR
 #define jumperGRAVITY 3
 
+
+
 /* ------------------------------------------------------------ */
 /*				Global Variables								*/
 /* ------------------------------------------------------------ */
@@ -68,7 +70,7 @@ VideoCapture videoCapt;
 int flag;
 INTC intc;
 char fRefresh; //flag used to trigger a refresh of the Menu on video detect
-
+int nextFrame = 0;
 /*
  * Framebuffers for video data
  */
@@ -92,8 +94,13 @@ const ivt_t ivt[] = {
 int main(void)
 {
 	DemoInitialize();
-	DemoRun();
+	DisplaySetMode(&dispCtrl, &VMODE_1920x1080);
+	DisplayStart(&dispCtrl);
+	DemoStartGame(dispCtrl.framePtr[nextFrame], dispCtrl.vMode.width, dispCtrl.vMode.height);
+	//DemoRun();
 
+	//status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+	//if(status != XST_SUCCESS) return XST_FAILURE;
 
 	return 0;
 }
@@ -144,9 +151,9 @@ void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
 	for(int i = 0; i < imgH; i++) {
 		for(int j = 0; j<imgW*3; j+=3) {
 			if (jumperImg[arrayCounter] != 255){
-			frame[cor + j + 0] = jumperImg[arrayCounter + 0];
-			frame[cor + j + 1] = jumperImg[arrayCounter + 1];
-			frame[cor + j + 2] = jumperImg[arrayCounter + 2];
+			frame[cor + j + 1] = jumperImg[arrayCounter + 0];
+			frame[cor + j + 2] = jumperImg[arrayCounter + 1];
+			frame[cor + j + 0] = jumperImg[arrayCounter + 2];
 			arrayCounter += 3;
 			} else {
 				arrayCounter+=3;
@@ -213,12 +220,26 @@ int collisiondetect (struct Block *jumper, struct Block *platform){
 
 
 void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
+
+
+	/*
+	next frame framebuffer
+		nextFrame = dispCtrl.curFrame + 1;
+			if (nextFrame >= DISPLAY_NUM_FRAMES)
+			{
+				nextFrame = 0;
+			}
+			DisplayChangeFrame(&dispCtrl, nextFrame);
+
+	 */
+
+
 	/**
 		 * Generate Sprite.
 		 */
 		//struct Block overWriteBlock = {0, 150, 150, 0, 0};
 		//struct Block *overWrite = &overWriteBlock;
-		struct Block jumperBlock = {0, 150, 150, 0, 0};
+		struct Block jumperBlock = {0, 100, 100, 0, 0};
 		struct Block *jumper = &jumperBlock;
 		int jumperStart = DEMO_STRIDE*539+DEMO_STRIDE-(jumperBlock.width/2);
 		jumperBlock.anchor = jumperStart;
@@ -258,6 +279,13 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 	int k=0;
 	while(1) {
 
+				nextFrame = dispCtrl.curFrame + 1;
+					if (nextFrame >= DISPLAY_NUM_FRAMES)
+					{
+						nextFrame = 0;
+					}
+
+
 		for(j = 0; j < numberofplatforms; j++) {
 			DemoPrintBlock(frame, platform[j], platform[j]->anchor, 255);
 			platformBlock[j].anchor+=hast;
@@ -266,7 +294,7 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 				platformBlock[j].floor = 0;
 				platformBlock[j].anchor = DEMO_STRIDE*(rand() % 900 + 0);
 			}
-			DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 150, 150);
+			DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
 		}
 		switch(jumperVelocity) {
 		case GROUND:
@@ -298,15 +326,115 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 
 
 
-		//DemoPrintBlock(frame, overWrite, overWriteBlock.anchor, 255);
+
 		for(j = 0; j < numberofplatforms; j++) {
 					DemoPrintBlock(frame, platform[j], platform[j]->anchor, 128);
 				}
 		//DemoPrintBlock(frame, jumper, jumperBlock.anchor, 0);
-		DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 150, 150);
+		DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
 		Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
+
+		VideoStart(&videoCapt);
+		DisplayChangeFrame(&dispCtrl, frame);
+		VideoStop(&videoCapt);
+
 	}
 }
+
+
+/* Sæt ind i main.
+status = IntcInitFunction(INTC_DEVICE_ID, &TMRInst, &BTNInst);
+if(status != XST_SUCCESS) return XST_FAILURE;
+ */
+/*
+#define BTNS_DEVICE_ID		XPAR_AXI_GPIO_6_DEVICE_ID
+#define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_0_IP2INTC_IRPT_INTR
+#define BTN_INT 			XGPIO_IR_CH1_MASK
+#define INTC_DEVICE_ID 		XPAR_PS7_SCUGIC_0_DEVICE_ID
+
+XGpio BTNInst;
+int btn_value;
+struct Block jumperBlock = {0, 150, 150, 0, 0};
+struct Block *jumper = &jumperBlock;
+int InterruptSystemSetup(XScuGic *XScuGicInstancePtr);
+int InterruptSystemSetup(XScuGic *XScuGicInstancePtr)
+{
+	// Enable interrupt
+	XGpio_InterruptEnable(&BTNInst, BTN_INT);
+	XGpio_InterruptGlobalEnable(&BTNInst);
+
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+			 	 	 	 	 	 (Xil_ExceptionHandler)XScuGic_InterruptHandler,
+			 	 	 	 	 	 XScuGicInstancePtr);
+	Xil_ExceptionEnable();
+
+
+	return XST_SUCCESS;
+
+}
+int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr);
+int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr)
+{
+	XScuGic_Config *IntcConfig;
+	int status;
+	u8 pri, trig;
+
+	// Interrupt controller initialisation
+	IntcConfig = XScuGic_LookupConfig(DeviceId);
+	status = XScuGic_CfgInitialize(&INTCInst, IntcConfig, IntcConfig->CpuBaseAddress);
+	if(status != XST_SUCCESS) return XST_FAILURE;
+
+	// Call to interrupt setup
+	status = InterruptSystemSetup(&INTCInst);
+	if(status != XST_SUCCESS) return XST_FAILURE;
+
+	// Connect GPIO interrupt to handler
+	status = XScuGic_Connect(&INTCInst,
+					  	  	 INTC_GPIO_INTERRUPT_ID,
+					  	  	 (Xil_ExceptionHandler)BTN_Intr_Handler,
+					  	  	 (void *)GpioInstancePtr);
+	if(status != XST_SUCCESS) return XST_FAILURE;
+
+
+	// Enable GPIO interrupts interrupt
+	XGpio_InterruptEnable(GpioInstancePtr, 1);
+	XGpio_InterruptGlobalEnable(GpioInstancePtr);
+
+	// Enable GPIO and timer interrupts in the controller
+	XScuGic_Enable(&INTCInst, INTC_GPIO_INTERRUPT_ID);
+
+	return XST_SUCCESS;
+}
+void BTN_Intr_Handler(void *baseaddr_p);
+void BTN_Intr_Handler(void *baseaddr_p) {
+	XGpio_InterruptDisable(&BTNInst, BTN_INT);
+	if ((XGpio_InterruptGetStatus(&BTNInst) & BTN_INT) !=BTN_INT) {
+		return;
+	}
+	btn_value = XGpio_DiscreteRead(&BTNInst, 6);
+	switch(btn_value) {
+	case 1:
+		jumper->anchor += 6*DEMO_STRIDE;
+		break;
+	case 2:
+		jumper->anchor += 3*DEMO_STRIDE;
+		break;
+	case 4:
+		jumper->anchor -= 3*DEMO_STRIDE;
+		break;
+	case 8:
+		jumper->anchor -= 6*DEMO_STRIDE;
+	}
+	(void)XGpio_InterruptClear(&BTNInst, BTN_INT);
+	XGpio_InterruptEnable(&BTNInst, BTN_INT);
+	status = XGpio_Initialize(&BTNInst, BTNS_DEVICE_ID);
+	if(status != XST_SUCCESS) return XST_FAILURE;
+}
+*/
+
+
+
+
 
 void GameOptions() {
 	xil_printf("a - Move Left\n\r");
@@ -527,7 +655,7 @@ void DemoChangeRes()
 
 	while (!fResSet)
 	{
-		DemoCRMenu();
+		//DemoCRMenu();
 
 		/* Wait for data on UART */
 		while (!XUartPs_IsReceiveData(UART_BASEADDR))
@@ -583,47 +711,6 @@ void DemoChangeRes()
 	}
 }
 
-
-
-/*
-void DemoPrintArray(u8 *frame, int *array, u32 anchor, int imgW, int imgH) {
-	int i, counter;
-	counter = 1;
-	for(i=0;i<imgH*imgW;i++) {
-		if(counter == imgW*3) {
-			counter = 1;
-			anchor+=DEMO_STRIDE;
-		}
-			frame[anchor + i] = array[i + 1];
-			frame[anchor + i + 1] = array[i + 2];
-			frame[anchor + i + 2] = array[i];
-
-
-			counter++;
-
-	}
-}*/
-
-void DemoCRMenu()
-{
-	xil_printf("\x1B[H"); //Set cursor to top left of terminal
-	xil_printf("\x1B[2J"); //Clear terminal
-	xil_printf("**************************************************\n\r");
-	xil_printf("*                ZYBO Video Demo                 *\n\r");
-	xil_printf("**************************************************\n\r");
-	xil_printf("*Current Resolution: %28s*\n\r", dispCtrl.vMode.label);
-	printf("*Pixel Clock Freq. (MHz): %23.3f*\n\r", dispCtrl.pxlFreq);
-	xil_printf("**************************************************\n\r");
-	xil_printf("\n\r");
-	xil_printf("1 - %s\n\r", VMODE_640x480.label);
-	xil_printf("2 - %s\n\r", VMODE_800x600.label);
-	xil_printf("3 - %s\n\r", VMODE_1280x720.label);
-	xil_printf("4 - %s\n\r", VMODE_1280x1024.label);
-	xil_printf("5 - %s\n\r", VMODE_1920x1080.label);
-	xil_printf("q - Quit (don't change resolution)\n\r");
-	xil_printf("\n\r");
-	xil_printf("Select a new resolution:");
-}
 
 void DemoInvertFrame(u8 *srcFrame, u8 *destFrame, u32 width, u32 height, u32 stride)
 {
