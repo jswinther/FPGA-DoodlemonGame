@@ -1,15 +1,27 @@
 #-----------------------------------------------------------
-# Vivado v2018.3 (64-bit)
-# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
-# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Fri Jan 11 08:29:02 2019
-# Process ID: 2740
-# Current directory: C:/Users/manniche/Documents/GitHub/3Ugers3Semester
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8392 C:\Users\manniche\Documents\GitHub\3Ugers3Semester\hdmi-in.xpr
-# Log file: C:/Users/manniche/Documents/GitHub/3Ugers3Semester/vivado.log
-# Journal file: C:/Users/manniche/Documents/GitHub/3Ugers3Semester\vivado.jou
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Fri Dec 29 14:09:38 2017
+# Process ID: 2420
+# Current directory: C:/Users/Edward/AppData/Roaming/Xilinx/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7716
+# Log file: C:/Users/Edward/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file: C:/Users/Edward/AppData/Roaming/Xilinx/Vivado\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.xpr
-launch_sdk -workspace C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.sdk -hwspec C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.sdk/hdmi_in_wrapper.hdf
-launch_sdk -workspace C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.sdk -hwspec C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.sdk/hdmi_in_wrapper.hdf
+open_project C:/Programming/E17_02321/3w/vivado/hdmi-in/hdmi-in.xpr
+update_compile_order -fileset sources_1
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {hdmi_in_axi_gpio_video_0 hdmi_in_axi_mem_intercon_0 hdmi_in_rst_processing_system7_0_150M_0 hdmi_in_xlconstant_0_0 hdmi_in_v_vid_in_axi4s_0_0 hdmi_in_v_axi4s_vid_out_0_0 hdmi_in_axi_vdma_0_0 hdmi_in_processing_system7_0_axi_periph_0 hdmi_in_xlconcat_0_0 hdmi_in_proc_sys_reset_0_0 hdmi_in_axi_gpio_led_0 hdmi_in_axi_gpio_btn_0 hdmi_in_rst_processing_system7_0_100M_0 hdmi_in_axi_gpio_sw_0 hdmi_in_processing_system7_0_0}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {hdmi_in_axi_gpio_video_0 hdmi_in_axi_mem_intercon_0 hdmi_in_rst_processing_system7_0_150M_0 hdmi_in_xlconstant_0_0 hdmi_in_v_vid_in_axi4s_0_0 hdmi_in_v_axi4s_vid_out_0_0 hdmi_in_axi_vdma_0_0 hdmi_in_processing_system7_0_axi_periph_0 hdmi_in_xlconcat_0_0 hdmi_in_proc_sys_reset_0_0 hdmi_in_axi_gpio_led_0 hdmi_in_axi_gpio_btn_0 hdmi_in_rst_processing_system7_0_100M_0 hdmi_in_axi_gpio_sw_0 hdmi_in_processing_system7_0_0}] -no_script -sync -force -quiet
+validate_bd_design
+regenerate_bd_layout
+save_bd_design
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+file copy -force C:/Programming/E17_02321/3w/vivado/hdmi-in/hdmi-in.runs/impl_1/hdmi_in_wrapper.sysdef C:/Programming/E17_02321/3w/vivado/hdmi-in/hdmi-in.sdk/hdmi_in_wrapper.hdf
+
+launch_sdk -workspace C:/Programming/E17_02321/3w/vivado/hdmi-in/hdmi-in.sdk -hwspec C:/Programming/E17_02321/3w/vivado/hdmi-in/hdmi-in.sdk/hdmi_in_wrapper.hdf
+launch_sdk -workspace C:/Programming/E17_02321/3w/vivado/hdmi-in/hdmi-in.sdk -hwspec C:/Programming/E17_02321/3w/vivado/hdmi-in/hdmi-in.sdk/hdmi_in_wrapper.hdf
+archive_project C:/Programming/E17_02321/3w/vivado/hdmi-in_2017.2.xpr.zip -temp_dir C:/Programming/E17_02321/3w/tmp -force -exclude_run_results

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>hdmi_in_wrapper_hw_platform_1</name>
-	<comment>Created by SDK v2018.3</comment>
+	<comment>Created by SDK v2017.2</comment>
 	<projects>
+		<project>HDMI_IN</project>
+		<project>HDMI_IN_bsp</project>
 	</projects>
 	<buildSpec>
 	</buildSpec>
@@ -11,7 +13,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1547138959154</id>
+			<id>1547209280612</id>
 			<name></name>
 			<type>6</type>
 			<matcher>
@@ -20,7 +22,7 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1547138959201</id>
+			<id>1547209280652</id>
 			<name></name>
 			<type>6</type>
 			<matcher>
@@ -29,7 +31,7 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1547138959324</id>
+			<id>1547209281062</id>
 			<name></name>
 			<type>6</type>
 			<matcher>
