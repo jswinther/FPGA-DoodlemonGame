@@ -1,10 +1,10 @@
-// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2017.2.1 (win64) Build 1957588 Wed Aug  9 16:32:24 MDT 2017
-// Date        : Fri Jan 11 12:54:36 2019
-// Host        : DTU-980R762 running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+// Date        : Fri Jan 11 14:36:24 2019
+// Host        : DESKTOP-SHDFERO running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               M:/Documents/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_rst_processing_system7_0_150M_0/hdmi_in_rst_processing_system7_0_150M_0_sim_netlist.v
+//               C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_rst_processing_system7_0_150M_0/hdmi_in_rst_processing_system7_0_150M_0_sim_netlist.v
 // Design      : hdmi_in_rst_processing_system7_0_150M_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "hdmi_in_rst_processing_system7_0_150M_0,proc_sys_reset,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "proc_sys_reset,Vivado 2017.2" *) 
+(* CHECK_LICENSE_TYPE = "hdmi_in_rst_processing_system7_0_150M_0,proc_sys_reset,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "proc_sys_reset,Vivado 2018.3" *) 
 (* NotValidForBitStream *)
 module hdmi_in_rst_processing_system7_0_150M_0
    (slowest_sync_clk,
@@ -25,16 +25,16 @@ module hdmi_in_rst_processing_system7_0_150M_0
     peripheral_reset,
     interconnect_aresetn,
     peripheral_aresetn);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 clock CLK" *) input slowest_sync_clk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 ext_reset RST" *) input ext_reset_in;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 aux_reset RST" *) input aux_reset_in;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 dbg_reset RST" *) input mb_debug_sys_rst;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 clock CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clock, ASSOCIATED_RESET mb_reset:bus_struct_reset:interconnect_aresetn:peripheral_aresetn:peripheral_reset, FREQ_HZ 142857132, PHASE 0.000, CLK_DOMAIN hdmi_in_processing_system7_0_0_FCLK_CLK1, INSERT_VIP 0" *) input slowest_sync_clk;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 ext_reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME ext_reset, BOARD.ASSOCIATED_PARAM RESET_BOARD_INTERFACE, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input ext_reset_in;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 aux_reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME aux_reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input aux_reset_in;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 dbg_reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME dbg_reset, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input mb_debug_sys_rst;
   input dcm_locked;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 mb_rst RST" *) output mb_reset;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 bus_struct_reset RST" *) output [0:0]bus_struct_reset;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 peripheral_high_rst RST" *) output [0:0]peripheral_reset;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 interconnect_low_rst RST" *) output [0:0]interconnect_aresetn;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 peripheral_low_rst RST" *) output [0:0]peripheral_aresetn;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 mb_rst RST" *) (* x_interface_parameter = "XIL_INTERFACENAME mb_rst, POLARITY ACTIVE_HIGH, TYPE PROCESSOR, INSERT_VIP 0" *) output mb_reset;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 bus_struct_reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME bus_struct_reset, POLARITY ACTIVE_HIGH, TYPE INTERCONNECT, INSERT_VIP 0" *) output [0:0]bus_struct_reset;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 peripheral_high_rst RST" *) (* x_interface_parameter = "XIL_INTERFACENAME peripheral_high_rst, POLARITY ACTIVE_HIGH, TYPE PERIPHERAL, INSERT_VIP 0" *) output [0:0]peripheral_reset;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 interconnect_low_rst RST" *) (* x_interface_parameter = "XIL_INTERFACENAME interconnect_low_rst, POLARITY ACTIVE_LOW, TYPE INTERCONNECT, INSERT_VIP 0" *) output [0:0]interconnect_aresetn;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 peripheral_low_rst RST" *) (* x_interface_parameter = "XIL_INTERFACENAME peripheral_low_rst, POLARITY ACTIVE_LOW, TYPE PERIPHERAL, INSERT_VIP 0" *) output [0:0]peripheral_aresetn;
 
   wire aux_reset_in;
   wire [0:0]bus_struct_reset;
@@ -73,19 +73,19 @@ endmodule
 module hdmi_in_rst_processing_system7_0_150M_0_cdc_sync
    (lpf_asr_reg,
     scndry_out,
-    aux_reset_in,
     lpf_asr,
-    asr_lpf,
     p_1_in,
     p_2_in,
+    asr_lpf,
+    aux_reset_in,
     slowest_sync_clk);
   output lpf_asr_reg;
   output scndry_out;
-  input aux_reset_in;
   input lpf_asr;
-  input [0:0]asr_lpf;
   input p_1_in;
   input p_2_in;
+  input [0:0]asr_lpf;
+  input aux_reset_in;
   input slowest_sync_clk;
 
   wire asr_d1;
@@ -114,7 +114,7 @@ module hdmi_in_rst_processing_system7_0_150M_0_cdc_sync
         .R(1'b0));
   LUT1 #(
     .INIT(2'h1)) 
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1 
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1__0 
        (.I0(aux_reset_in),
         .O(asr_d1));
   (* ASYNC_REG *) 
@@ -154,10 +154,10 @@ module hdmi_in_rst_processing_system7_0_150M_0_cdc_sync
     .INIT(32'hEAAAAAA8)) 
     lpf_asr_i_1
        (.I0(lpf_asr),
-        .I1(asr_lpf),
-        .I2(scndry_out),
-        .I3(p_1_in),
-        .I4(p_2_in),
+        .I1(p_1_in),
+        .I2(p_2_in),
+        .I3(scndry_out),
+        .I4(asr_lpf),
         .O(lpf_asr_reg));
 endmodule
 
@@ -178,7 +178,7 @@ module hdmi_in_rst_processing_system7_0_150M_0_cdc_sync_0
   input ext_reset_in;
   input slowest_sync_clk;
 
-  wire \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1__0_n_0 ;
+  wire exr_d1;
   wire ext_reset_in;
   wire lpf_exr;
   wire lpf_exr_reg;
@@ -198,15 +198,15 @@ module hdmi_in_rst_processing_system7_0_150M_0_cdc_sync_0
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to 
        (.C(slowest_sync_clk),
         .CE(1'b1),
-        .D(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1__0_n_0 ),
+        .D(exr_d1),
         .Q(s_level_out_d1_cdc_to),
         .R(1'b0));
   LUT2 #(
     .INIT(4'hB)) 
-    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1__0 
+    \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1 
        (.I0(mb_debug_sys_rst),
         .I1(ext_reset_in),
-        .O(\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1__0_n_0 ));
+        .O(exr_d1));
   (* ASYNC_REG *) 
   (* XILINX_LEGACY_PRIM = "FDR" *) 
   (* box_type = "PRIMITIVE" *) 
@@ -244,10 +244,10 @@ module hdmi_in_rst_processing_system7_0_150M_0_cdc_sync_0
     .INIT(32'hEAAAAAA8)) 
     lpf_exr_i_1
        (.I0(lpf_exr),
-        .I1(p_3_out[0]),
-        .I2(scndry_out),
-        .I3(p_3_out[1]),
-        .I4(p_3_out[2]),
+        .I1(p_3_out[1]),
+        .I2(p_3_out[2]),
+        .I3(scndry_out),
+        .I4(p_3_out[0]),
         .O(lpf_exr_reg));
 endmodule
 
@@ -256,15 +256,15 @@ module hdmi_in_rst_processing_system7_0_150M_0_lpf
    (lpf_int,
     slowest_sync_clk,
     dcm_locked,
-    aux_reset_in,
     mb_debug_sys_rst,
-    ext_reset_in);
+    ext_reset_in,
+    aux_reset_in);
   output lpf_int;
   input slowest_sync_clk;
   input dcm_locked;
-  input aux_reset_in;
   input mb_debug_sys_rst;
   input ext_reset_in;
+  input aux_reset_in;
 
   wire \ACTIVE_LOW_AUX.ACT_LO_AUX_n_0 ;
   wire \ACTIVE_LOW_EXT.ACT_LO_EXT_n_0 ;
@@ -380,12 +380,12 @@ module hdmi_in_rst_processing_system7_0_150M_0_lpf
         .Q(lpf_exr),
         .R(1'b0));
   LUT4 #(
-    .INIT(16'hFFEF)) 
+    .INIT(16'hFFFD)) 
     lpf_int0
-       (.I0(Q),
-        .I1(lpf_asr),
-        .I2(dcm_locked),
-        .I3(lpf_exr),
+       (.I0(dcm_locked),
+        .I1(lpf_exr),
+        .I2(lpf_asr),
+        .I3(Q),
         .O(lpf_int0__0));
   FDRE #(
     .INIT(1'b0)) 
@@ -418,16 +418,17 @@ module hdmi_in_rst_processing_system7_0_150M_0_proc_sys_reset
   input mb_debug_sys_rst;
   input dcm_locked;
   output mb_reset;
-  (* equivalent_register_removal = "no" *) output [0:0]bus_struct_reset;
-  (* equivalent_register_removal = "no" *) output [0:0]peripheral_reset;
-  (* equivalent_register_removal = "no" *) output [0:0]interconnect_aresetn;
-  (* equivalent_register_removal = "no" *) output [0:0]peripheral_aresetn;
+  output [0:0]bus_struct_reset;
+  output [0:0]peripheral_reset;
+  output [0:0]interconnect_aresetn;
+  output [0:0]peripheral_aresetn;
 
-  wire Core;
+  wire Bsr_out;
+  wire MB_out;
+  wire Pr_out;
   wire SEQ_n_3;
   wire SEQ_n_4;
   wire aux_reset_in;
-  wire bsr;
   wire [0:0]bus_struct_reset;
   wire dcm_locked;
   wire ext_reset_in;
@@ -437,34 +438,42 @@ module hdmi_in_rst_processing_system7_0_150M_0_proc_sys_reset
   wire mb_reset;
   wire [0:0]peripheral_aresetn;
   wire [0:0]peripheral_reset;
-  wire pr;
   wire slowest_sync_clk;
 
-  (* equivalent_register_removal = "no" *) 
+  (* box_type = "PRIMITIVE" *) 
   FDRE #(
-    .INIT(1'b1)) 
-    \ACTIVE_LOW_BSR_OUT_DFF[0].interconnect_aresetn_reg[0] 
+    .INIT(1'b0),
+    .IS_C_INVERTED(1'b0),
+    .IS_D_INVERTED(1'b0),
+    .IS_R_INVERTED(1'b0)) 
+    \ACTIVE_LOW_BSR_OUT_DFF[0].FDRE_BSR_N 
        (.C(slowest_sync_clk),
         .CE(1'b1),
         .D(SEQ_n_3),
         .Q(interconnect_aresetn),
         .R(1'b0));
-  (* equivalent_register_removal = "no" *) 
+  (* box_type = "PRIMITIVE" *) 
   FDRE #(
-    .INIT(1'b1)) 
-    \ACTIVE_LOW_PR_OUT_DFF[0].peripheral_aresetn_reg[0] 
+    .INIT(1'b0),
+    .IS_C_INVERTED(1'b0),
+    .IS_D_INVERTED(1'b0),
+    .IS_R_INVERTED(1'b0)) 
+    \ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N 
        (.C(slowest_sync_clk),
         .CE(1'b1),
         .D(SEQ_n_4),
         .Q(peripheral_aresetn),
         .R(1'b0));
-  (* equivalent_register_removal = "no" *) 
+  (* box_type = "PRIMITIVE" *) 
   FDRE #(
-    .INIT(1'b0)) 
-    \BSR_OUT_DFF[0].bus_struct_reset_reg[0] 
+    .INIT(1'b1),
+    .IS_C_INVERTED(1'b0),
+    .IS_D_INVERTED(1'b0),
+    .IS_R_INVERTED(1'b0)) 
+    \BSR_OUT_DFF[0].FDRE_BSR 
        (.C(slowest_sync_clk),
         .CE(1'b1),
-        .D(bsr),
+        .D(Bsr_out),
         .Q(bus_struct_reset),
         .R(1'b0));
   hdmi_in_rst_processing_system7_0_150M_0_lpf EXT_LPF
@@ -474,58 +483,65 @@ module hdmi_in_rst_processing_system7_0_150M_0_proc_sys_reset
         .lpf_int(lpf_int),
         .mb_debug_sys_rst(mb_debug_sys_rst),
         .slowest_sync_clk(slowest_sync_clk));
-  (* equivalent_register_removal = "no" *) 
+  (* box_type = "PRIMITIVE" *) 
   FDRE #(
-    .INIT(1'b0)) 
-    \PR_OUT_DFF[0].peripheral_reset_reg[0] 
+    .INIT(1'b1),
+    .IS_C_INVERTED(1'b0),
+    .IS_D_INVERTED(1'b0),
+    .IS_R_INVERTED(1'b0)) 
+    FDRE_inst
        (.C(slowest_sync_clk),
         .CE(1'b1),
-        .D(pr),
+        .D(MB_out),
+        .Q(mb_reset),
+        .R(1'b0));
+  (* box_type = "PRIMITIVE" *) 
+  FDRE #(
+    .INIT(1'b1),
+    .IS_C_INVERTED(1'b0),
+    .IS_D_INVERTED(1'b0),
+    .IS_R_INVERTED(1'b0)) 
+    \PR_OUT_DFF[0].FDRE_PER 
+       (.C(slowest_sync_clk),
+        .CE(1'b1),
+        .D(Pr_out),
         .Q(peripheral_reset),
         .R(1'b0));
   hdmi_in_rst_processing_system7_0_150M_0_sequence_psr SEQ
-       (.\ACTIVE_LOW_BSR_OUT_DFF[0].interconnect_aresetn_reg[0] (SEQ_n_3),
-        .\ACTIVE_LOW_PR_OUT_DFF[0].peripheral_aresetn_reg[0] (SEQ_n_4),
-        .Core(Core),
-        .bsr(bsr),
+       (.Bsr_out(Bsr_out),
+        .MB_out(MB_out),
+        .Pr_out(Pr_out),
+        .bsr_reg_0(SEQ_n_3),
         .lpf_int(lpf_int),
-        .pr(pr),
+        .pr_reg_0(SEQ_n_4),
         .slowest_sync_clk(slowest_sync_clk));
-  FDRE #(
-    .INIT(1'b0)) 
-    mb_reset_reg
-       (.C(slowest_sync_clk),
-        .CE(1'b1),
-        .D(Core),
-        .Q(mb_reset),
-        .R(1'b0));
 endmodule
 
 (* ORIG_REF_NAME = "sequence_psr" *) 
 module hdmi_in_rst_processing_system7_0_150M_0_sequence_psr
-   (Core,
-    bsr,
-    pr,
-    \ACTIVE_LOW_BSR_OUT_DFF[0].interconnect_aresetn_reg[0] ,
-    \ACTIVE_LOW_PR_OUT_DFF[0].peripheral_aresetn_reg[0] ,
+   (MB_out,
+    Bsr_out,
+    Pr_out,
+    bsr_reg_0,
+    pr_reg_0,
     lpf_int,
     slowest_sync_clk);
-  output Core;
-  output bsr;
-  output pr;
-  output \ACTIVE_LOW_BSR_OUT_DFF[0].interconnect_aresetn_reg[0] ;
-  output \ACTIVE_LOW_PR_OUT_DFF[0].peripheral_aresetn_reg[0] ;
+  output MB_out;
+  output Bsr_out;
+  output Pr_out;
+  output bsr_reg_0;
+  output pr_reg_0;
   input lpf_int;
   input slowest_sync_clk;
 
-  wire \ACTIVE_LOW_BSR_OUT_DFF[0].interconnect_aresetn_reg[0] ;
-  wire \ACTIVE_LOW_PR_OUT_DFF[0].peripheral_aresetn_reg[0] ;
-  wire Core;
+  wire Bsr_out;
   wire Core_i_1_n_0;
-  wire bsr;
+  wire MB_out;
+  wire Pr_out;
   wire \bsr_dec_reg_n_0_[0] ;
   wire \bsr_dec_reg_n_0_[2] ;
   wire bsr_i_1_n_0;
+  wire bsr_reg_0;
   wire \core_dec[0]_i_1_n_0 ;
   wire \core_dec[2]_i_1_n_0 ;
   wire \core_dec_reg_n_0_[0] ;
@@ -535,11 +551,11 @@ module hdmi_in_rst_processing_system7_0_150M_0_sequence_psr
   wire p_0_in;
   wire [2:0]p_3_out;
   wire [2:0]p_5_out;
-  wire pr;
   wire pr_dec0__0;
   wire \pr_dec_reg_n_0_[0] ;
   wire \pr_dec_reg_n_0_[2] ;
   wire pr_i_1_n_0;
+  wire pr_reg_0;
   wire seq_clr;
   wire [5:0]seq_cnt;
   wire seq_cnt_en;
@@ -548,29 +564,29 @@ module hdmi_in_rst_processing_system7_0_150M_0_sequence_psr
   (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT1 #(
     .INIT(2'h1)) 
-    \ACTIVE_LOW_BSR_OUT_DFF[0].interconnect_aresetn[0]_i_1 
-       (.I0(bsr),
-        .O(\ACTIVE_LOW_BSR_OUT_DFF[0].interconnect_aresetn_reg[0] ));
+    \ACTIVE_LOW_BSR_OUT_DFF[0].FDRE_BSR_N_i_1 
+       (.I0(Bsr_out),
+        .O(bsr_reg_0));
   (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT1 #(
     .INIT(2'h1)) 
-    \ACTIVE_LOW_PR_OUT_DFF[0].peripheral_aresetn[0]_i_1 
-       (.I0(pr),
-        .O(\ACTIVE_LOW_PR_OUT_DFF[0].peripheral_aresetn_reg[0] ));
+    \ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_i_1 
+       (.I0(Pr_out),
+        .O(pr_reg_0));
   (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT2 #(
     .INIT(4'h2)) 
     Core_i_1
-       (.I0(Core),
+       (.I0(MB_out),
         .I1(p_0_in),
         .O(Core_i_1_n_0));
   FDSE #(
-    .INIT(1'b0)) 
+    .INIT(1'b1)) 
     Core_reg
        (.C(slowest_sync_clk),
         .CE(1'b1),
         .D(Core_i_1_n_0),
-        .Q(Core),
+        .Q(MB_out),
         .S(lpf_int));
   hdmi_in_rst_processing_system7_0_150M_0_upcnt_n SEQ_COUNTER
        (.Q(seq_cnt),
@@ -578,12 +594,12 @@ module hdmi_in_rst_processing_system7_0_150M_0_sequence_psr
         .seq_cnt_en(seq_cnt_en),
         .slowest_sync_clk(slowest_sync_clk));
   LUT4 #(
-    .INIT(16'h0804)) 
+    .INIT(16'h0090)) 
     \bsr_dec[0]_i_1 
        (.I0(seq_cnt_en),
-        .I1(seq_cnt[3]),
-        .I2(seq_cnt[5]),
-        .I3(seq_cnt[4]),
+        .I1(seq_cnt[4]),
+        .I2(seq_cnt[3]),
+        .I3(seq_cnt[5]),
         .O(p_5_out[0]));
   (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT2 #(
@@ -612,25 +628,25 @@ module hdmi_in_rst_processing_system7_0_150M_0_sequence_psr
   LUT2 #(
     .INIT(4'h2)) 
     bsr_i_1
-       (.I0(bsr),
+       (.I0(Bsr_out),
         .I1(\bsr_dec_reg_n_0_[2] ),
         .O(bsr_i_1_n_0));
   FDSE #(
-    .INIT(1'b0)) 
+    .INIT(1'b1)) 
     bsr_reg
        (.C(slowest_sync_clk),
         .CE(1'b1),
         .D(bsr_i_1_n_0),
-        .Q(bsr),
+        .Q(Bsr_out),
         .S(lpf_int));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT4 #(
-    .INIT(16'h8040)) 
+    .INIT(16'h9000)) 
     \core_dec[0]_i_1 
-       (.I0(seq_cnt[4]),
-        .I1(seq_cnt[3]),
-        .I2(seq_cnt[5]),
-        .I3(seq_cnt_en),
+       (.I0(seq_cnt_en),
+        .I1(seq_cnt[4]),
+        .I2(seq_cnt[3]),
+        .I3(seq_cnt[5]),
         .O(\core_dec[0]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT2 #(
@@ -667,7 +683,7 @@ module hdmi_in_rst_processing_system7_0_150M_0_sequence_psr
   LUT2 #(
     .INIT(4'h8)) 
     from_sys_i_1
-       (.I0(Core),
+       (.I0(MB_out),
         .I1(seq_cnt_en),
         .O(from_sys_i_1_n_0));
   FDSE #(
@@ -679,20 +695,20 @@ module hdmi_in_rst_processing_system7_0_150M_0_sequence_psr
         .Q(seq_cnt_en),
         .S(lpf_int));
   LUT4 #(
-    .INIT(16'h0210)) 
+    .INIT(16'h0018)) 
     pr_dec0
-       (.I0(seq_cnt[0]),
-        .I1(seq_cnt[1]),
+       (.I0(seq_cnt_en),
+        .I1(seq_cnt[0]),
         .I2(seq_cnt[2]),
-        .I3(seq_cnt_en),
+        .I3(seq_cnt[1]),
         .O(pr_dec0__0));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT4 #(
-    .INIT(16'h1080)) 
+    .INIT(16'h0480)) 
     \pr_dec[0]_i_1 
        (.I0(seq_cnt_en),
-        .I1(seq_cnt[5]),
-        .I2(seq_cnt[3]),
+        .I1(seq_cnt[3]),
+        .I2(seq_cnt[5]),
         .I3(seq_cnt[4]),
         .O(p_3_out[0]));
   LUT2 #(
@@ -721,16 +737,16 @@ module hdmi_in_rst_processing_system7_0_150M_0_sequence_psr
   LUT2 #(
     .INIT(4'h2)) 
     pr_i_1
-       (.I0(pr),
+       (.I0(Pr_out),
         .I1(\pr_dec_reg_n_0_[2] ),
         .O(pr_i_1_n_0));
   FDSE #(
-    .INIT(1'b0)) 
+    .INIT(1'b1)) 
     pr_reg
        (.C(slowest_sync_clk),
         .CE(1'b1),
         .D(pr_i_1_n_0),
-        .Q(pr),
+        .Q(Pr_out),
         .S(lpf_int));
   FDRE #(
     .INIT(1'b0)) 

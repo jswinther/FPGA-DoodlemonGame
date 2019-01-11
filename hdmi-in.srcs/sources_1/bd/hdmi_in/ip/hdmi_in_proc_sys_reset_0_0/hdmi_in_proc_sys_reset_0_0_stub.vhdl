@@ -1,10 +1,10 @@
--- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2017.2.1 (win64) Build 1957588 Wed Aug  9 16:32:24 MDT 2017
--- Date        : Fri Jan 11 12:53:37 2019
--- Host        : DTU-980R762 running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+-- Date        : Fri Jan 11 14:36:20 2019
+-- Host        : DESKTOP-SHDFERO running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               M:/Documents/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_proc_sys_reset_0_0/hdmi_in_proc_sys_reset_0_0_stub.vhdl
+--               C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_proc_sys_reset_0_0/hdmi_in_proc_sys_reset_0_0_stub.vhdl
 -- Design      : hdmi_in_proc_sys_reset_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z010clg400-1
@@ -34,6 +34,6 @@ attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
 attribute black_box_pad_pin of stub : architecture is "slowest_sync_clk,ext_reset_in,aux_reset_in,mb_debug_sys_rst,dcm_locked,mb_reset,bus_struct_reset[0:0],peripheral_reset[0:0],interconnect_aresetn[0:0],peripheral_aresetn[0:0]";
 attribute x_core_info : string;
-attribute x_core_info of stub : architecture is "proc_sys_reset,Vivado 2017.2";
+attribute x_core_info of stub : architecture is "proc_sys_reset,Vivado 2018.3";
 begin
 end;

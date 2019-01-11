@@ -1,10 +1,10 @@
-// Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2017.2.1 (win64) Build 1957588 Wed Aug  9 16:32:24 MDT 2017
-// Date        : Fri Jan 11 12:51:09 2019
-// Host        : DTU-980R762 running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+// Date        : Fri Jan 11 14:34:06 2019
+// Host        : DESKTOP-SHDFERO running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               M:/Documents/hdmi-in/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_dvi2rgb_0_0/hdmi_in_dvi2rgb_0_0_sim_netlist.v
+//               C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_dvi2rgb_0_0/hdmi_in_dvi2rgb_0_0_sim_netlist.v
 // Design      : hdmi_in_dvi2rgb_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,7 +12,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "hdmi_in_dvi2rgb_0_0,dvi2rgb,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "dvi2rgb,Vivado 2017.2" *) 
+(* CHECK_LICENSE_TYPE = "hdmi_in_dvi2rgb_0_0,dvi2rgb,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "dvi2rgb,Vivado 2018.3" *) 
 (* NotValidForBitStream *)
 module hdmi_in_dvi2rgb_0_0
    (TMDS_Clk_p,
@@ -34,25 +34,25 @@ module hdmi_in_dvi2rgb_0_0
     DDC_SCL_O,
     DDC_SCL_T,
     pRst_n);
-  (* x_interface_info = "digilentinc.com:interface:tmds:1.0 TMDS CLK_P" *) input TMDS_Clk_p;
+  (* x_interface_info = "digilentinc.com:interface:tmds:1.0 TMDS CLK_P" *) (* x_interface_parameter = "XIL_INTERFACENAME TMDS, BOARD.ASSOCIATED_PARAM TMDS_BOARD_INTERFACE" *) input TMDS_Clk_p;
   (* x_interface_info = "digilentinc.com:interface:tmds:1.0 TMDS CLK_N" *) input TMDS_Clk_n;
   (* x_interface_info = "digilentinc.com:interface:tmds:1.0 TMDS DATA_P" *) input [2:0]TMDS_Data_p;
   (* x_interface_info = "digilentinc.com:interface:tmds:1.0 TMDS DATA_N" *) input [2:0]TMDS_Data_n;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 RefClk CLK" *) input RefClk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 AsyncRst_n RST" *) input aRst_n;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 RefClk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME RefClk, FREQ_HZ 200000000, PHASE 0.000, CLK_DOMAIN hdmi_in_processing_system7_0_0_FCLK_CLK2" *) input RefClk;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 AsyncRst_n RST" *) (* x_interface_parameter = "XIL_INTERFACENAME AsyncRst_n, POLARITY ACTIVE_LOW" *) input aRst_n;
   (* x_interface_info = "xilinx.com:interface:vid_io:1.0 RGB DATA" *) output [23:0]vid_pData;
   (* x_interface_info = "xilinx.com:interface:vid_io:1.0 RGB ACTIVE_VIDEO" *) output vid_pVDE;
   (* x_interface_info = "xilinx.com:interface:vid_io:1.0 RGB HSYNC" *) output vid_pHSync;
   (* x_interface_info = "xilinx.com:interface:vid_io:1.0 RGB VSYNC" *) output vid_pVSync;
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 PixelClk CLK" *) output PixelClk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 PixelClk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME PixelClk, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN hdmi_in_dvi2rgb_0_0_PixelClk" *) output PixelClk;
   output aPixelClkLckd;
-  (* x_interface_info = "xilinx.com:interface:iic:1.0 DDC SDA_I" *) input DDC_SDA_I;
+  (* x_interface_info = "xilinx.com:interface:iic:1.0 DDC SDA_I" *) (* x_interface_parameter = "XIL_INTERFACENAME DDC, BOARD.ASSOCIATED_PARAM IIC_BOARD_INTERFACE" *) input DDC_SDA_I;
   (* x_interface_info = "xilinx.com:interface:iic:1.0 DDC SDA_O" *) output DDC_SDA_O;
   (* x_interface_info = "xilinx.com:interface:iic:1.0 DDC SDA_T" *) output DDC_SDA_T;
   (* x_interface_info = "xilinx.com:interface:iic:1.0 DDC SCL_I" *) input DDC_SCL_I;
   (* x_interface_info = "xilinx.com:interface:iic:1.0 DDC SCL_O" *) output DDC_SCL_O;
   (* x_interface_info = "xilinx.com:interface:iic:1.0 DDC SCL_T" *) output DDC_SCL_T;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 SyncRst_n RST" *) input pRst_n;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 SyncRst_n RST" *) (* x_interface_parameter = "XIL_INTERFACENAME SyncRst_n, POLARITY ACTIVE_LOW" *) input pRst_n;
 
   wire DDC_SCL_I;
   wire DDC_SCL_O;
@@ -109,496 +109,23 @@ endmodule
 
 (* ORIG_REF_NAME = "ChannelBond" *) 
 module hdmi_in_dvi2rgb_0_0_ChannelBond
-   (pAllVld_q,
-    pAllVldBgnFlag,
-    pMeRdy_int_reg_0,
+   (pMeRdy_int_reg_0,
     D,
     SR,
-    pAllVld,
-    rMMCM_LckdRisingFlag_reg,
-    pAllVldBgnFlag0,
-    pAligned_reg,
+    \pDataFIFO_reg[0]_0 ,
+    pRdEn_reg_0,
     pRdy_0,
     pRdy_1,
+    pAllVldBgnFlag,
+    pAllVld,
     pDataInRaw);
-  output pAllVld_q;
-  output pAllVldBgnFlag;
   output pMeRdy_int_reg_0;
   output [7:0]D;
   output [0:0]SR;
-  input pAllVld;
-  input rMMCM_LckdRisingFlag_reg;
-  input pAllVldBgnFlag0;
-  input pAligned_reg;
+  input \pDataFIFO_reg[0]_0 ;
+  input pRdEn_reg_0;
   input pRdy_0;
   input pRdy_1;
-  input [9:0]pDataInRaw;
-
-  wire [7:0]D;
-  wire [0:0]SR;
-  wire pAligned_reg;
-  wire pAllVld;
-  wire pAllVldBgnFlag;
-  wire pAllVldBgnFlag0;
-  wire pAllVld_q;
-  wire pBlnkBgnFlag;
-  wire pBlnkBgnFlag_i_1_n_0;
-  wire \pDataFIFO_reg_n_0_[9] ;
-  wire [8:0]pDataInBnd;
-  wire [9:0]pDataInRaw;
-  wire \pDataIn[7]_i_3__0_n_0 ;
-  wire \pDataIn[7]_i_4__0_n_0 ;
-  wire \pDataIn[7]_i_5_n_0 ;
-  wire pMeRdy_int_i_1_n_0;
-  wire pMeRdy_int_reg_0;
-  wire [4:0]pRdA;
-  wire \pRdA[0]_i_1_n_0 ;
-  wire \pRdA[1]_i_1_n_0 ;
-  wire \pRdA[2]_i_1_n_0 ;
-  wire \pRdA[3]_i_1_n_0 ;
-  wire \pRdA[4]_i_1_n_0 ;
-  wire pRdEn;
-  wire pRdEn_i_1_n_0;
-  wire pRdy_0;
-  wire pRdy_1;
-  wire pTokenFlag;
-  wire pTokenFlag0;
-  wire pTokenFlag_q;
-  wire [4:0]pWrA_reg__0;
-  wire [4:0]p_0_in__0;
-  wire [9:0]p_0_out__0;
-  wire rMMCM_LckdRisingFlag_reg;
-  wire [1:0]NLW_pFIFO_reg_0_31_0_5_DOD_UNCONNECTED;
-  wire [1:0]NLW_pFIFO_reg_0_31_6_9_DOC_UNCONNECTED;
-  wire [1:0]NLW_pFIFO_reg_0_31_6_9_DOD_UNCONNECTED;
-
-  FDRE pAllVldBgnFlag_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(pAllVldBgnFlag0),
-        .Q(pAllVldBgnFlag),
-        .R(1'b0));
-  FDRE pAllVld_q_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(pAllVld),
-        .Q(pAllVld_q),
-        .R(1'b0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    pBlnkBgnFlag_i_1
-       (.I0(pTokenFlag),
-        .I1(pTokenFlag_q),
-        .O(pBlnkBgnFlag_i_1_n_0));
-  FDRE pBlnkBgnFlag_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(pBlnkBgnFlag_i_1_n_0),
-        .Q(pBlnkBgnFlag),
-        .R(1'b0));
-  FDRE \pDataFIFO_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(p_0_out__0[0]),
-        .Q(pDataInBnd[0]),
-        .R(1'b0));
-  FDRE \pDataFIFO_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(p_0_out__0[1]),
-        .Q(pDataInBnd[1]),
-        .R(1'b0));
-  FDRE \pDataFIFO_reg[2] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(p_0_out__0[2]),
-        .Q(pDataInBnd[2]),
-        .R(1'b0));
-  FDRE \pDataFIFO_reg[3] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(p_0_out__0[3]),
-        .Q(pDataInBnd[3]),
-        .R(1'b0));
-  FDRE \pDataFIFO_reg[4] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(p_0_out__0[4]),
-        .Q(pDataInBnd[4]),
-        .R(1'b0));
-  FDRE \pDataFIFO_reg[5] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(p_0_out__0[5]),
-        .Q(pDataInBnd[5]),
-        .R(1'b0));
-  FDRE \pDataFIFO_reg[6] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(p_0_out__0[6]),
-        .Q(pDataInBnd[6]),
-        .R(1'b0));
-  FDRE \pDataFIFO_reg[7] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(p_0_out__0[7]),
-        .Q(pDataInBnd[7]),
-        .R(1'b0));
-  FDRE \pDataFIFO_reg[8] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(p_0_out__0[8]),
-        .Q(pDataInBnd[8]),
-        .R(1'b0));
-  FDRE \pDataFIFO_reg[9] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(p_0_out__0[9]),
-        .Q(\pDataFIFO_reg_n_0_[9] ),
-        .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair62" *) 
-  LUT3 #(
-    .INIT(8'h60)) 
-    \pDataIn[0]_i_1__0 
-       (.I0(\pDataFIFO_reg_n_0_[9] ),
-        .I1(pDataInBnd[0]),
-        .I2(\pDataIn[7]_i_3__0_n_0 ),
-        .O(D[0]));
-  (* SOFT_HLUTNM = "soft_lutpair62" *) 
-  LUT4 #(
-    .INIT(16'h2882)) 
-    \pDataIn[1]_i_1__0 
-       (.I0(\pDataIn[7]_i_3__0_n_0 ),
-        .I1(pDataInBnd[1]),
-        .I2(pDataInBnd[0]),
-        .I3(pDataInBnd[8]),
-        .O(D[1]));
-  (* SOFT_HLUTNM = "soft_lutpair61" *) 
-  LUT4 #(
-    .INIT(16'h2882)) 
-    \pDataIn[2]_i_1__0 
-       (.I0(\pDataIn[7]_i_3__0_n_0 ),
-        .I1(pDataInBnd[1]),
-        .I2(pDataInBnd[2]),
-        .I3(pDataInBnd[8]),
-        .O(D[2]));
-  (* SOFT_HLUTNM = "soft_lutpair61" *) 
-  LUT4 #(
-    .INIT(16'h2882)) 
-    \pDataIn[3]_i_1__0 
-       (.I0(\pDataIn[7]_i_3__0_n_0 ),
-        .I1(pDataInBnd[3]),
-        .I2(pDataInBnd[2]),
-        .I3(pDataInBnd[8]),
-        .O(D[3]));
-  LUT4 #(
-    .INIT(16'h2882)) 
-    \pDataIn[4]_i_1__0 
-       (.I0(\pDataIn[7]_i_3__0_n_0 ),
-        .I1(pDataInBnd[3]),
-        .I2(pDataInBnd[4]),
-        .I3(pDataInBnd[8]),
-        .O(D[4]));
-  (* SOFT_HLUTNM = "soft_lutpair59" *) 
-  LUT4 #(
-    .INIT(16'h2882)) 
-    \pDataIn[5]_i_1__0 
-       (.I0(\pDataIn[7]_i_3__0_n_0 ),
-        .I1(pDataInBnd[5]),
-        .I2(pDataInBnd[8]),
-        .I3(pDataInBnd[4]),
-        .O(D[5]));
-  (* SOFT_HLUTNM = "soft_lutpair59" *) 
-  LUT4 #(
-    .INIT(16'h2882)) 
-    \pDataIn[6]_i_1__0 
-       (.I0(\pDataIn[7]_i_3__0_n_0 ),
-        .I1(pDataInBnd[5]),
-        .I2(pDataInBnd[8]),
-        .I3(pDataInBnd[6]),
-        .O(D[6]));
-  (* SOFT_HLUTNM = "soft_lutpair63" *) 
-  LUT3 #(
-    .INIT(8'h7F)) 
-    \pDataIn[7]_i_1__0 
-       (.I0(pMeRdy_int_reg_0),
-        .I1(pRdy_0),
-        .I2(pRdy_1),
-        .O(SR));
-  (* SOFT_HLUTNM = "soft_lutpair60" *) 
-  LUT4 #(
-    .INIT(16'h2882)) 
-    \pDataIn[7]_i_2__0 
-       (.I0(\pDataIn[7]_i_3__0_n_0 ),
-        .I1(pDataInBnd[7]),
-        .I2(pDataInBnd[6]),
-        .I3(pDataInBnd[8]),
-        .O(D[7]));
-  LUT6 #(
-    .INIT(64'hFFFFFEFFFFFFFFBF)) 
-    \pDataIn[7]_i_3__0 
-       (.I0(\pDataIn[7]_i_4__0_n_0 ),
-        .I1(pDataInBnd[4]),
-        .I2(pDataInBnd[6]),
-        .I3(pDataInBnd[5]),
-        .I4(\pDataIn[7]_i_5_n_0 ),
-        .I5(pDataInBnd[7]),
-        .O(\pDataIn[7]_i_3__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFEBFFFFFFFFD7FF)) 
-    \pDataIn[7]_i_4__0 
-       (.I0(pDataInBnd[1]),
-        .I1(pDataInBnd[7]),
-        .I2(pDataInBnd[8]),
-        .I3(pDataInBnd[3]),
-        .I4(pDataInBnd[4]),
-        .I5(pDataInBnd[2]),
-        .O(\pDataIn[7]_i_4__0_n_0 ));
-  LUT2 #(
-    .INIT(4'h6)) 
-    \pDataIn[7]_i_5 
-       (.I0(pDataInBnd[1]),
-        .I1(pDataInBnd[0]),
-        .O(\pDataIn[7]_i_5_n_0 ));
-  (* METHODOLOGY_DRC_VIOS = "" *) 
-  RAM32M pFIFO_reg_0_31_0_5
-       (.ADDRA(pRdA),
-        .ADDRB(pRdA),
-        .ADDRC(pRdA),
-        .ADDRD(pWrA_reg__0),
-        .DIA(pDataInRaw[1:0]),
-        .DIB(pDataInRaw[3:2]),
-        .DIC(pDataInRaw[5:4]),
-        .DID({1'b0,1'b0}),
-        .DOA(p_0_out__0[1:0]),
-        .DOB(p_0_out__0[3:2]),
-        .DOC(p_0_out__0[5:4]),
-        .DOD(NLW_pFIFO_reg_0_31_0_5_DOD_UNCONNECTED[1:0]),
-        .WCLK(rMMCM_LckdRisingFlag_reg),
-        .WE(pAllVld));
-  (* METHODOLOGY_DRC_VIOS = "" *) 
-  RAM32M pFIFO_reg_0_31_6_9
-       (.ADDRA(pRdA),
-        .ADDRB(pRdA),
-        .ADDRC(pRdA),
-        .ADDRD(pWrA_reg__0),
-        .DIA(pDataInRaw[7:6]),
-        .DIB(pDataInRaw[9:8]),
-        .DIC({1'b0,1'b0}),
-        .DID({1'b0,1'b0}),
-        .DOA(p_0_out__0[7:6]),
-        .DOB(p_0_out__0[9:8]),
-        .DOC(NLW_pFIFO_reg_0_31_6_9_DOC_UNCONNECTED[1:0]),
-        .DOD(NLW_pFIFO_reg_0_31_6_9_DOD_UNCONNECTED[1:0]),
-        .WCLK(rMMCM_LckdRisingFlag_reg),
-        .WE(pAllVld));
-  (* SOFT_HLUTNM = "soft_lutpair63" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    pMeRdy_int_i_1
-       (.I0(pBlnkBgnFlag),
-        .I1(pMeRdy_int_reg_0),
-        .O(pMeRdy_int_i_1_n_0));
-  FDRE pMeRdy_int_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(pMeRdy_int_i_1_n_0),
-        .Q(pMeRdy_int_reg_0),
-        .R(pAligned_reg));
-  LUT1 #(
-    .INIT(2'h1)) 
-    \pRdA[0]_i_1 
-       (.I0(pRdA[0]),
-        .O(\pRdA[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
-  LUT2 #(
-    .INIT(4'h6)) 
-    \pRdA[1]_i_1 
-       (.I0(pRdA[0]),
-        .I1(pRdA[1]),
-        .O(\pRdA[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
-  LUT3 #(
-    .INIT(8'h6A)) 
-    \pRdA[2]_i_1 
-       (.I0(pRdA[2]),
-        .I1(pRdA[1]),
-        .I2(pRdA[0]),
-        .O(\pRdA[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair58" *) 
-  LUT4 #(
-    .INIT(16'h6AAA)) 
-    \pRdA[3]_i_1 
-       (.I0(pRdA[3]),
-        .I1(pRdA[0]),
-        .I2(pRdA[1]),
-        .I3(pRdA[2]),
-        .O(\pRdA[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair58" *) 
-  LUT5 #(
-    .INIT(32'h6AAAAAAA)) 
-    \pRdA[4]_i_1 
-       (.I0(pRdA[4]),
-        .I1(pRdA[2]),
-        .I2(pRdA[1]),
-        .I3(pRdA[0]),
-        .I4(pRdA[3]),
-        .O(\pRdA[4]_i_1_n_0 ));
-  FDRE \pRdA_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pRdEn),
-        .D(\pRdA[0]_i_1_n_0 ),
-        .Q(pRdA[0]),
-        .R(pAligned_reg));
-  FDRE \pRdA_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pRdEn),
-        .D(\pRdA[1]_i_1_n_0 ),
-        .Q(pRdA[1]),
-        .R(pAligned_reg));
-  FDRE \pRdA_reg[2] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pRdEn),
-        .D(\pRdA[2]_i_1_n_0 ),
-        .Q(pRdA[2]),
-        .R(pAligned_reg));
-  FDRE \pRdA_reg[3] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pRdEn),
-        .D(\pRdA[3]_i_1_n_0 ),
-        .Q(pRdA[3]),
-        .R(pAligned_reg));
-  FDRE \pRdA_reg[4] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pRdEn),
-        .D(\pRdA[4]_i_1_n_0 ),
-        .Q(pRdA[4]),
-        .R(pAligned_reg));
-  LUT6 #(
-    .INIT(64'hFBBBBBBBFAAAAAAA)) 
-    pRdEn_i_1
-       (.I0(pAllVldBgnFlag),
-        .I1(pBlnkBgnFlag),
-        .I2(pRdy_1),
-        .I3(pMeRdy_int_reg_0),
-        .I4(pRdy_0),
-        .I5(pRdEn),
-        .O(pRdEn_i_1_n_0));
-  FDRE pRdEn_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(pRdEn_i_1_n_0),
-        .Q(pRdEn),
-        .R(pAligned_reg));
-  (* SOFT_HLUTNM = "soft_lutpair60" *) 
-  LUT2 #(
-    .INIT(4'h7)) 
-    pTokenFlag_i_1__0
-       (.I0(pRdEn),
-        .I1(\pDataIn[7]_i_3__0_n_0 ),
-        .O(pTokenFlag0));
-  FDRE pTokenFlag_q_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(pTokenFlag),
-        .Q(pTokenFlag_q),
-        .R(1'b0));
-  FDRE pTokenFlag_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(pTokenFlag0),
-        .Q(pTokenFlag),
-        .R(1'b0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    \pWrA[0]_i_1 
-       (.I0(pWrA_reg__0[0]),
-        .O(p_0_in__0[0]));
-  (* SOFT_HLUTNM = "soft_lutpair64" *) 
-  LUT2 #(
-    .INIT(4'h6)) 
-    \pWrA[1]_i_1 
-       (.I0(pWrA_reg__0[0]),
-        .I1(pWrA_reg__0[1]),
-        .O(p_0_in__0[1]));
-  (* SOFT_HLUTNM = "soft_lutpair64" *) 
-  LUT3 #(
-    .INIT(8'h6A)) 
-    \pWrA[2]_i_1 
-       (.I0(pWrA_reg__0[2]),
-        .I1(pWrA_reg__0[1]),
-        .I2(pWrA_reg__0[0]),
-        .O(p_0_in__0[2]));
-  (* SOFT_HLUTNM = "soft_lutpair57" *) 
-  LUT4 #(
-    .INIT(16'h6AAA)) 
-    \pWrA[3]_i_1 
-       (.I0(pWrA_reg__0[3]),
-        .I1(pWrA_reg__0[0]),
-        .I2(pWrA_reg__0[1]),
-        .I3(pWrA_reg__0[2]),
-        .O(p_0_in__0[3]));
-  (* SOFT_HLUTNM = "soft_lutpair57" *) 
-  LUT5 #(
-    .INIT(32'h6AAAAAAA)) 
-    \pWrA[4]_i_2 
-       (.I0(pWrA_reg__0[4]),
-        .I1(pWrA_reg__0[2]),
-        .I2(pWrA_reg__0[1]),
-        .I3(pWrA_reg__0[0]),
-        .I4(pWrA_reg__0[3]),
-        .O(p_0_in__0[4]));
-  FDRE \pWrA_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(p_0_in__0[0]),
-        .Q(pWrA_reg__0[0]),
-        .R(pAligned_reg));
-  FDRE \pWrA_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(p_0_in__0[1]),
-        .Q(pWrA_reg__0[1]),
-        .R(pAligned_reg));
-  FDRE \pWrA_reg[2] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(p_0_in__0[2]),
-        .Q(pWrA_reg__0[2]),
-        .R(pAligned_reg));
-  FDRE \pWrA_reg[3] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(p_0_in__0[3]),
-        .Q(pWrA_reg__0[3]),
-        .R(pAligned_reg));
-  FDRE \pWrA_reg[4] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(p_0_in__0[4]),
-        .Q(pWrA_reg__0[4]),
-        .R(pAligned_reg));
-endmodule
-
-(* ORIG_REF_NAME = "ChannelBond" *) 
-module hdmi_in_dvi2rgb_0_0_ChannelBond_10
-   (pMeRdy_int_reg_0,
-    D,
-    \pDataIn_reg[7] ,
-    rMMCM_LckdRisingFlag_reg,
-    SR,
-    pRdy_2,
-    pRdy_0,
-    pAllVldBgnFlag,
-    pAllVld,
-    pDataInRaw);
-  output pMeRdy_int_reg_0;
-  output [7:0]D;
-  output [0:0]\pDataIn_reg[7] ;
-  input rMMCM_LckdRisingFlag_reg;
-  input [0:0]SR;
-  input pRdy_2;
-  input pRdy_0;
   input pAllVldBgnFlag;
   input pAllVld;
   input [9:0]pDataInRaw;
@@ -608,16 +135,550 @@ module hdmi_in_dvi2rgb_0_0_ChannelBond_10
   wire pAllVld;
   wire pAllVldBgnFlag;
   wire pBlnkBgnFlag;
-  wire pBlnkBgnFlag_i_1__0_n_0;
+  wire pBlnkBgnFlag0;
+  wire \pDataFIFO_reg[0]_0 ;
   wire \pDataFIFO_reg_n_0_[9] ;
   wire [8:0]pDataInBnd;
   wire [9:0]pDataInRaw;
-  wire \pDataIn[7]_i_3__1_n_0 ;
-  wire \pDataIn[7]_i_4__1_n_0 ;
-  wire \pDataIn[7]_i_5__0_n_0 ;
-  wire [0:0]\pDataIn_reg[7] ;
+  wire \pDataIn[0]_i_2__0_n_0 ;
+  wire \pDataIn[0]_i_3__0_n_0 ;
+  wire \pDataIn[0]_i_4__0_n_0 ;
+  wire \pDataIn[1]_i_2__0_n_0 ;
+  wire \pDataIn[3]_i_2__0_n_0 ;
+  wire \pDataIn[4]_i_2_n_0 ;
+  wire \pDataIn[5]_i_2__0_n_0 ;
+  wire \pDataIn[5]_i_3_n_0 ;
+  wire \pDataIn[7]_i_3_n_0 ;
   wire pMeRdy_int_i_1__1_n_0;
   wire pMeRdy_int_reg_0;
+  wire [4:0]pRdA;
+  wire \pRdA[0]_i_1_n_0 ;
+  wire \pRdA[1]_i_1_n_0 ;
+  wire \pRdA[2]_i_1_n_0 ;
+  wire \pRdA[3]_i_1_n_0 ;
+  wire \pRdA[4]_i_1_n_0 ;
+  wire pRdEn;
+  wire pRdEn_i_1_n_0;
+  wire pRdEn_reg_0;
+  wire pRdy_0;
+  wire pRdy_1;
+  wire pTokenFlag;
+  wire pTokenFlag0;
+  wire pTokenFlag_q;
+  wire [4:0]pWrA_reg;
+  wire [4:0]p_0_in__0;
+  wire [9:0]p_0_out__0;
+  wire [1:0]NLW_pFIFO_reg_0_31_0_5_DOD_UNCONNECTED;
+  wire [1:0]NLW_pFIFO_reg_0_31_6_9_DOC_UNCONNECTED;
+  wire [1:0]NLW_pFIFO_reg_0_31_6_9_DOD_UNCONNECTED;
+
+  LUT2 #(
+    .INIT(4'h2)) 
+    pBlnkBgnFlag_i_1
+       (.I0(pTokenFlag),
+        .I1(pTokenFlag_q),
+        .O(pBlnkBgnFlag0));
+  FDRE pBlnkBgnFlag_reg
+       (.C(\pDataFIFO_reg[0]_0 ),
+        .CE(1'b1),
+        .D(pBlnkBgnFlag0),
+        .Q(pBlnkBgnFlag),
+        .R(1'b0));
+  FDRE \pDataFIFO_reg[0] 
+       (.C(\pDataFIFO_reg[0]_0 ),
+        .CE(1'b1),
+        .D(p_0_out__0[0]),
+        .Q(pDataInBnd[0]),
+        .R(1'b0));
+  FDRE \pDataFIFO_reg[1] 
+       (.C(\pDataFIFO_reg[0]_0 ),
+        .CE(1'b1),
+        .D(p_0_out__0[1]),
+        .Q(pDataInBnd[1]),
+        .R(1'b0));
+  FDRE \pDataFIFO_reg[2] 
+       (.C(\pDataFIFO_reg[0]_0 ),
+        .CE(1'b1),
+        .D(p_0_out__0[2]),
+        .Q(pDataInBnd[2]),
+        .R(1'b0));
+  FDRE \pDataFIFO_reg[3] 
+       (.C(\pDataFIFO_reg[0]_0 ),
+        .CE(1'b1),
+        .D(p_0_out__0[3]),
+        .Q(pDataInBnd[3]),
+        .R(1'b0));
+  FDRE \pDataFIFO_reg[4] 
+       (.C(\pDataFIFO_reg[0]_0 ),
+        .CE(1'b1),
+        .D(p_0_out__0[4]),
+        .Q(pDataInBnd[4]),
+        .R(1'b0));
+  FDRE \pDataFIFO_reg[5] 
+       (.C(\pDataFIFO_reg[0]_0 ),
+        .CE(1'b1),
+        .D(p_0_out__0[5]),
+        .Q(pDataInBnd[5]),
+        .R(1'b0));
+  FDRE \pDataFIFO_reg[6] 
+       (.C(\pDataFIFO_reg[0]_0 ),
+        .CE(1'b1),
+        .D(p_0_out__0[6]),
+        .Q(pDataInBnd[6]),
+        .R(1'b0));
+  FDRE \pDataFIFO_reg[7] 
+       (.C(\pDataFIFO_reg[0]_0 ),
+        .CE(1'b1),
+        .D(p_0_out__0[7]),
+        .Q(pDataInBnd[7]),
+        .R(1'b0));
+  FDRE \pDataFIFO_reg[8] 
+       (.C(\pDataFIFO_reg[0]_0 ),
+        .CE(1'b1),
+        .D(p_0_out__0[8]),
+        .Q(pDataInBnd[8]),
+        .R(1'b0));
+  FDRE \pDataFIFO_reg[9] 
+       (.C(\pDataFIFO_reg[0]_0 ),
+        .CE(1'b1),
+        .D(p_0_out__0[9]),
+        .Q(\pDataFIFO_reg_n_0_[9] ),
+        .R(1'b0));
+  LUT6 #(
+    .INIT(64'h0000FEFEFF000000)) 
+    \pDataIn[0]_i_1__0 
+       (.I0(\pDataIn[0]_i_2__0_n_0 ),
+        .I1(\pDataIn[5]_i_3_n_0 ),
+        .I2(\pDataIn[0]_i_3__0_n_0 ),
+        .I3(\pDataIn[0]_i_4__0_n_0 ),
+        .I4(pDataInBnd[0]),
+        .I5(\pDataFIFO_reg_n_0_[9] ),
+        .O(D[0]));
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+  LUT2 #(
+    .INIT(4'hB)) 
+    \pDataIn[0]_i_2__0 
+       (.I0(pDataInBnd[5]),
+        .I1(pDataInBnd[4]),
+        .O(\pDataIn[0]_i_2__0_n_0 ));
+  LUT3 #(
+    .INIT(8'hDF)) 
+    \pDataIn[0]_i_3__0 
+       (.I0(pDataInBnd[6]),
+        .I1(pDataInBnd[7]),
+        .I2(pDataInBnd[8]),
+        .O(\pDataIn[0]_i_3__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair57" *) 
+  LUT3 #(
+    .INIT(8'hFB)) 
+    \pDataIn[0]_i_4__0 
+       (.I0(\pDataIn[1]_i_2__0_n_0 ),
+        .I1(pDataInBnd[1]),
+        .I2(pDataInBnd[8]),
+        .O(\pDataIn[0]_i_4__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair57" *) 
+  LUT4 #(
+    .INIT(16'h38C3)) 
+    \pDataIn[1]_i_1__0 
+       (.I0(\pDataIn[1]_i_2__0_n_0 ),
+        .I1(pDataInBnd[0]),
+        .I2(pDataInBnd[8]),
+        .I3(pDataInBnd[1]),
+        .O(D[1]));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFBFFFFFF)) 
+    \pDataIn[1]_i_2__0 
+       (.I0(pDataInBnd[6]),
+        .I1(pDataInBnd[7]),
+        .I2(pDataInBnd[4]),
+        .I3(pDataInBnd[5]),
+        .I4(pDataInBnd[3]),
+        .I5(pDataInBnd[2]),
+        .O(\pDataIn[1]_i_2__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  LUT5 #(
+    .INIT(32'h0FF0E00F)) 
+    \pDataIn[2]_i_1__0 
+       (.I0(\pDataIn[3]_i_2__0_n_0 ),
+        .I1(pDataInBnd[3]),
+        .I2(pDataInBnd[8]),
+        .I3(pDataInBnd[2]),
+        .I4(pDataInBnd[1]),
+        .O(D[2]));
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  LUT5 #(
+    .INIT(32'h0EF0F00F)) 
+    \pDataIn[3]_i_1__0 
+       (.I0(pDataInBnd[1]),
+        .I1(\pDataIn[3]_i_2__0_n_0 ),
+        .I2(pDataInBnd[3]),
+        .I3(pDataInBnd[8]),
+        .I4(pDataInBnd[2]),
+        .O(D[3]));
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
+  LUT5 #(
+    .INIT(32'hFFFFEFFF)) 
+    \pDataIn[3]_i_2__0 
+       (.I0(pDataInBnd[0]),
+        .I1(pDataInBnd[7]),
+        .I2(pDataInBnd[6]),
+        .I3(pDataInBnd[4]),
+        .I4(pDataInBnd[5]),
+        .O(\pDataIn[3]_i_2__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h00FEFF00FF0000FF)) 
+    \pDataIn[4]_i_1__0 
+       (.I0(pDataInBnd[5]),
+        .I1(\pDataIn[4]_i_2_n_0 ),
+        .I2(\pDataIn[5]_i_2__0_n_0 ),
+        .I3(pDataInBnd[3]),
+        .I4(pDataInBnd[8]),
+        .I5(pDataInBnd[4]),
+        .O(D[4]));
+  LUT2 #(
+    .INIT(4'hB)) 
+    \pDataIn[4]_i_2 
+       (.I0(pDataInBnd[1]),
+        .I1(pDataInBnd[2]),
+        .O(\pDataIn[4]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+  LUT5 #(
+    .INIT(32'h0EF0F00F)) 
+    \pDataIn[5]_i_1__0 
+       (.I0(\pDataIn[5]_i_2__0_n_0 ),
+        .I1(\pDataIn[5]_i_3_n_0 ),
+        .I2(pDataInBnd[5]),
+        .I3(pDataInBnd[4]),
+        .I4(pDataInBnd[8]),
+        .O(D[5]));
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
+  LUT3 #(
+    .INIT(8'hFD)) 
+    \pDataIn[5]_i_2__0 
+       (.I0(pDataInBnd[6]),
+        .I1(pDataInBnd[7]),
+        .I2(pDataInBnd[0]),
+        .O(\pDataIn[5]_i_2__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair58" *) 
+  LUT3 #(
+    .INIT(8'hFD)) 
+    \pDataIn[5]_i_3 
+       (.I0(pDataInBnd[2]),
+        .I1(pDataInBnd[1]),
+        .I2(pDataInBnd[3]),
+        .O(\pDataIn[5]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'h00FFFF00FD0000FF)) 
+    \pDataIn[6]_i_1 
+       (.I0(pDataInBnd[4]),
+        .I1(pDataInBnd[7]),
+        .I2(\pDataIn[7]_i_3_n_0 ),
+        .I3(pDataInBnd[8]),
+        .I4(pDataInBnd[6]),
+        .I5(pDataInBnd[5]),
+        .O(D[6]));
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \pDataIn[7]_i_1 
+       (.I0(pMeRdy_int_reg_0),
+        .I1(pRdy_0),
+        .I2(pRdy_1),
+        .O(SR));
+  LUT6 #(
+    .INIT(64'h3CC338C33CC33CC3)) 
+    \pDataIn[7]_i_2__0 
+       (.I0(\pDataIn[7]_i_3_n_0 ),
+        .I1(pDataInBnd[8]),
+        .I2(pDataInBnd[7]),
+        .I3(pDataInBnd[6]),
+        .I4(pDataInBnd[5]),
+        .I5(pDataInBnd[4]),
+        .O(D[7]));
+  (* SOFT_HLUTNM = "soft_lutpair58" *) 
+  LUT4 #(
+    .INIT(16'hFFEF)) 
+    \pDataIn[7]_i_3 
+       (.I0(pDataInBnd[3]),
+        .I1(pDataInBnd[1]),
+        .I2(pDataInBnd[2]),
+        .I3(pDataInBnd[0]),
+        .O(\pDataIn[7]_i_3_n_0 ));
+  (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_slice_begin = "0" *) 
+  (* ram_slice_end = "5" *) 
+  RAM32M pFIFO_reg_0_31_0_5
+       (.ADDRA(pRdA),
+        .ADDRB(pRdA),
+        .ADDRC(pRdA),
+        .ADDRD(pWrA_reg),
+        .DIA(pDataInRaw[1:0]),
+        .DIB(pDataInRaw[3:2]),
+        .DIC(pDataInRaw[5:4]),
+        .DID({1'b0,1'b0}),
+        .DOA(p_0_out__0[1:0]),
+        .DOB(p_0_out__0[3:2]),
+        .DOC(p_0_out__0[5:4]),
+        .DOD(NLW_pFIFO_reg_0_31_0_5_DOD_UNCONNECTED[1:0]),
+        .WCLK(\pDataFIFO_reg[0]_0 ),
+        .WE(pAllVld));
+  (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_slice_begin = "6" *) 
+  (* ram_slice_end = "9" *) 
+  RAM32M pFIFO_reg_0_31_6_9
+       (.ADDRA(pRdA),
+        .ADDRB(pRdA),
+        .ADDRC(pRdA),
+        .ADDRD(pWrA_reg),
+        .DIA(pDataInRaw[7:6]),
+        .DIB(pDataInRaw[9:8]),
+        .DIC({1'b0,1'b0}),
+        .DID({1'b0,1'b0}),
+        .DOA(p_0_out__0[7:6]),
+        .DOB(p_0_out__0[9:8]),
+        .DOC(NLW_pFIFO_reg_0_31_6_9_DOC_UNCONNECTED[1:0]),
+        .DOD(NLW_pFIFO_reg_0_31_6_9_DOD_UNCONNECTED[1:0]),
+        .WCLK(\pDataFIFO_reg[0]_0 ),
+        .WE(pAllVld));
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
+    pMeRdy_int_i_1__1
+       (.I0(pBlnkBgnFlag),
+        .I1(pMeRdy_int_reg_0),
+        .O(pMeRdy_int_i_1__1_n_0));
+  FDRE pMeRdy_int_reg
+       (.C(\pDataFIFO_reg[0]_0 ),
+        .CE(1'b1),
+        .D(pMeRdy_int_i_1__1_n_0),
+        .Q(pMeRdy_int_reg_0),
+        .R(pRdEn_reg_0));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \pRdA[0]_i_1 
+       (.I0(pRdA[0]),
+        .O(\pRdA[0]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pRdA[1]_i_1 
+       (.I0(pRdA[0]),
+        .I1(pRdA[1]),
+        .O(\pRdA[1]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
+  LUT3 #(
+    .INIT(8'h78)) 
+    \pRdA[2]_i_1 
+       (.I0(pRdA[1]),
+        .I1(pRdA[0]),
+        .I2(pRdA[2]),
+        .O(\pRdA[2]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair56" *) 
+  LUT4 #(
+    .INIT(16'h7F80)) 
+    \pRdA[3]_i_1 
+       (.I0(pRdA[2]),
+        .I1(pRdA[0]),
+        .I2(pRdA[1]),
+        .I3(pRdA[3]),
+        .O(\pRdA[3]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair56" *) 
+  LUT5 #(
+    .INIT(32'h7FFF8000)) 
+    \pRdA[4]_i_1 
+       (.I0(pRdA[3]),
+        .I1(pRdA[1]),
+        .I2(pRdA[0]),
+        .I3(pRdA[2]),
+        .I4(pRdA[4]),
+        .O(\pRdA[4]_i_1_n_0 ));
+  FDRE \pRdA_reg[0] 
+       (.C(\pDataFIFO_reg[0]_0 ),
+        .CE(pRdEn),
+        .D(\pRdA[0]_i_1_n_0 ),
+        .Q(pRdA[0]),
+        .R(pRdEn_reg_0));
+  FDRE \pRdA_reg[1] 
+       (.C(\pDataFIFO_reg[0]_0 ),
+        .CE(pRdEn),
+        .D(\pRdA[1]_i_1_n_0 ),
+        .Q(pRdA[1]),
+        .R(pRdEn_reg_0));
+  FDRE \pRdA_reg[2] 
+       (.C(\pDataFIFO_reg[0]_0 ),
+        .CE(pRdEn),
+        .D(\pRdA[2]_i_1_n_0 ),
+        .Q(pRdA[2]),
+        .R(pRdEn_reg_0));
+  FDRE \pRdA_reg[3] 
+       (.C(\pDataFIFO_reg[0]_0 ),
+        .CE(pRdEn),
+        .D(\pRdA[3]_i_1_n_0 ),
+        .Q(pRdA[3]),
+        .R(pRdEn_reg_0));
+  FDRE \pRdA_reg[4] 
+       (.C(\pDataFIFO_reg[0]_0 ),
+        .CE(pRdEn),
+        .D(\pRdA[4]_i_1_n_0 ),
+        .Q(pRdA[4]),
+        .R(pRdEn_reg_0));
+  LUT6 #(
+    .INIT(64'hEAAAFFFFEAAAEAAA)) 
+    pRdEn_i_1
+       (.I0(pAllVldBgnFlag),
+        .I1(pMeRdy_int_reg_0),
+        .I2(pRdy_0),
+        .I3(pRdy_1),
+        .I4(pBlnkBgnFlag),
+        .I5(pRdEn),
+        .O(pRdEn_i_1_n_0));
+  FDRE pRdEn_reg
+       (.C(\pDataFIFO_reg[0]_0 ),
+        .CE(1'b1),
+        .D(pRdEn_i_1_n_0),
+        .Q(pRdEn),
+        .R(pRdEn_reg_0));
+  LUT6 #(
+    .INIT(64'h5575FFFF55755575)) 
+    pTokenFlag_i_1__0
+       (.I0(pRdEn),
+        .I1(\pDataIn[5]_i_3_n_0 ),
+        .I2(pDataInBnd[8]),
+        .I3(\pDataIn[3]_i_2__0_n_0 ),
+        .I4(\pDataIn[0]_i_4__0_n_0 ),
+        .I5(pDataInBnd[0]),
+        .O(pTokenFlag0));
+  FDRE pTokenFlag_q_reg
+       (.C(\pDataFIFO_reg[0]_0 ),
+        .CE(1'b1),
+        .D(pTokenFlag),
+        .Q(pTokenFlag_q),
+        .R(1'b0));
+  FDRE pTokenFlag_reg
+       (.C(\pDataFIFO_reg[0]_0 ),
+        .CE(1'b1),
+        .D(pTokenFlag0),
+        .Q(pTokenFlag),
+        .R(1'b0));
+  LUT1 #(
+    .INIT(2'h1)) 
+    \pWrA[0]_i_1 
+       (.I0(pWrA_reg[0]),
+        .O(p_0_in__0[0]));
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pWrA[1]_i_1 
+       (.I0(pWrA_reg[0]),
+        .I1(pWrA_reg[1]),
+        .O(p_0_in__0[1]));
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
+  LUT3 #(
+    .INIT(8'h78)) 
+    \pWrA[2]_i_1 
+       (.I0(pWrA_reg[1]),
+        .I1(pWrA_reg[0]),
+        .I2(pWrA_reg[2]),
+        .O(p_0_in__0[2]));
+  (* SOFT_HLUTNM = "soft_lutpair55" *) 
+  LUT4 #(
+    .INIT(16'h7F80)) 
+    \pWrA[3]_i_1 
+       (.I0(pWrA_reg[2]),
+        .I1(pWrA_reg[0]),
+        .I2(pWrA_reg[1]),
+        .I3(pWrA_reg[3]),
+        .O(p_0_in__0[3]));
+  (* SOFT_HLUTNM = "soft_lutpair55" *) 
+  LUT5 #(
+    .INIT(32'h7FFF8000)) 
+    \pWrA[4]_i_2 
+       (.I0(pWrA_reg[3]),
+        .I1(pWrA_reg[1]),
+        .I2(pWrA_reg[0]),
+        .I3(pWrA_reg[2]),
+        .I4(pWrA_reg[4]),
+        .O(p_0_in__0[4]));
+  FDRE \pWrA_reg[0] 
+       (.C(\pDataFIFO_reg[0]_0 ),
+        .CE(1'b1),
+        .D(p_0_in__0[0]),
+        .Q(pWrA_reg[0]),
+        .R(pRdEn_reg_0));
+  FDRE \pWrA_reg[1] 
+       (.C(\pDataFIFO_reg[0]_0 ),
+        .CE(1'b1),
+        .D(p_0_in__0[1]),
+        .Q(pWrA_reg[1]),
+        .R(pRdEn_reg_0));
+  FDRE \pWrA_reg[2] 
+       (.C(\pDataFIFO_reg[0]_0 ),
+        .CE(1'b1),
+        .D(p_0_in__0[2]),
+        .Q(pWrA_reg[2]),
+        .R(pRdEn_reg_0));
+  FDRE \pWrA_reg[3] 
+       (.C(\pDataFIFO_reg[0]_0 ),
+        .CE(1'b1),
+        .D(p_0_in__0[3]),
+        .Q(pWrA_reg[3]),
+        .R(pRdEn_reg_0));
+  FDRE \pWrA_reg[4] 
+       (.C(\pDataFIFO_reg[0]_0 ),
+        .CE(1'b1),
+        .D(p_0_in__0[4]),
+        .Q(pWrA_reg[4]),
+        .R(pRdEn_reg_0));
+endmodule
+
+(* ORIG_REF_NAME = "ChannelBond" *) 
+module hdmi_in_dvi2rgb_0_0_ChannelBond_10
+   (pMeRdy_int_reg_0,
+    D,
+    pMeRdy_int_reg_1,
+    pTokenFlag_q_reg_0,
+    SR,
+    pRdy_2,
+    pRdy_0,
+    pAllVldBgnFlag,
+    pAllVld,
+    I33);
+  output pMeRdy_int_reg_0;
+  output [7:0]D;
+  output [0:0]pMeRdy_int_reg_1;
+  input pTokenFlag_q_reg_0;
+  input [0:0]SR;
+  input pRdy_2;
+  input pRdy_0;
+  input pAllVldBgnFlag;
+  input pAllVld;
+  input [9:0]I33;
+
+  wire [7:0]D;
+  wire [9:0]I33;
+  wire [0:0]SR;
+  wire pAllVld;
+  wire pAllVldBgnFlag;
+  wire pBlnkBgnFlag;
+  wire pBlnkBgnFlag0;
+  wire \pDataFIFO_reg_n_0_[9] ;
+  wire [8:0]pDataInBnd;
+  wire \pDataIn[0]_i_2__1_n_0 ;
+  wire \pDataIn[0]_i_3__1_n_0 ;
+  wire \pDataIn[0]_i_4__1_n_0 ;
+  wire \pDataIn[1]_i_2__1_n_0 ;
+  wire \pDataIn[3]_i_2__1_n_0 ;
+  wire \pDataIn[4]_i_2__0_n_0 ;
+  wire \pDataIn[5]_i_2__1_n_0 ;
+  wire \pDataIn[5]_i_3__0_n_0 ;
+  wire \pDataIn[7]_i_3__0_n_0 ;
+  wire pMeRdy_int_i_1__0_n_0;
+  wire pMeRdy_int_reg_0;
+  wire [0:0]pMeRdy_int_reg_1;
   wire [4:0]pRdA;
   wire \pRdA[0]_i_1__1_n_0 ;
   wire \pRdA[1]_i_1__1_n_0 ;
@@ -631,10 +692,14 @@ module hdmi_in_dvi2rgb_0_0_ChannelBond_10
   wire pTokenFlag;
   wire pTokenFlag0;
   wire pTokenFlag_q;
-  wire [4:0]pWrA_reg__0;
-  wire [4:0]p_0_in__0;
+  wire pTokenFlag_q_reg_0;
+  wire \pWrA_reg_n_0_[0] ;
+  wire \pWrA_reg_n_0_[1] ;
+  wire \pWrA_reg_n_0_[2] ;
+  wire \pWrA_reg_n_0_[3] ;
+  wire \pWrA_reg_n_0_[4] ;
+  wire [4:0]p_0_in;
   wire [9:0]p_0_out;
-  wire rMMCM_LckdRisingFlag_reg;
   wire [1:0]NLW_pFIFO_reg_0_31_0_5_DOD_UNCONNECTED;
   wire [1:0]NLW_pFIFO_reg_0_31_6_9_DOC_UNCONNECTED;
   wire [1:0]NLW_pFIFO_reg_0_31_6_9_DOD_UNCONNECTED;
@@ -644,222 +709,284 @@ module hdmi_in_dvi2rgb_0_0_ChannelBond_10
     pBlnkBgnFlag_i_1__0
        (.I0(pTokenFlag),
         .I1(pTokenFlag_q),
-        .O(pBlnkBgnFlag_i_1__0_n_0));
+        .O(pBlnkBgnFlag0));
   FDRE pBlnkBgnFlag_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pTokenFlag_q_reg_0),
         .CE(1'b1),
-        .D(pBlnkBgnFlag_i_1__0_n_0),
+        .D(pBlnkBgnFlag0),
         .Q(pBlnkBgnFlag),
         .R(1'b0));
   FDRE \pDataFIFO_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pTokenFlag_q_reg_0),
         .CE(1'b1),
         .D(p_0_out[0]),
         .Q(pDataInBnd[0]),
         .R(1'b0));
   FDRE \pDataFIFO_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pTokenFlag_q_reg_0),
         .CE(1'b1),
         .D(p_0_out[1]),
         .Q(pDataInBnd[1]),
         .R(1'b0));
   FDRE \pDataFIFO_reg[2] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pTokenFlag_q_reg_0),
         .CE(1'b1),
         .D(p_0_out[2]),
         .Q(pDataInBnd[2]),
         .R(1'b0));
   FDRE \pDataFIFO_reg[3] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pTokenFlag_q_reg_0),
         .CE(1'b1),
         .D(p_0_out[3]),
         .Q(pDataInBnd[3]),
         .R(1'b0));
   FDRE \pDataFIFO_reg[4] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pTokenFlag_q_reg_0),
         .CE(1'b1),
         .D(p_0_out[4]),
         .Q(pDataInBnd[4]),
         .R(1'b0));
   FDRE \pDataFIFO_reg[5] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pTokenFlag_q_reg_0),
         .CE(1'b1),
         .D(p_0_out[5]),
         .Q(pDataInBnd[5]),
         .R(1'b0));
   FDRE \pDataFIFO_reg[6] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pTokenFlag_q_reg_0),
         .CE(1'b1),
         .D(p_0_out[6]),
         .Q(pDataInBnd[6]),
         .R(1'b0));
   FDRE \pDataFIFO_reg[7] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pTokenFlag_q_reg_0),
         .CE(1'b1),
         .D(p_0_out[7]),
         .Q(pDataInBnd[7]),
         .R(1'b0));
   FDRE \pDataFIFO_reg[8] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pTokenFlag_q_reg_0),
         .CE(1'b1),
         .D(p_0_out[8]),
         .Q(pDataInBnd[8]),
         .R(1'b0));
   FDRE \pDataFIFO_reg[9] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pTokenFlag_q_reg_0),
         .CE(1'b1),
         .D(p_0_out[9]),
         .Q(\pDataFIFO_reg_n_0_[9] ),
         .R(1'b0));
+  LUT6 #(
+    .INIT(64'h0000FEFEFF000000)) 
+    \pDataIn[0]_i_1__1 
+       (.I0(\pDataIn[0]_i_2__1_n_0 ),
+        .I1(\pDataIn[5]_i_3__0_n_0 ),
+        .I2(\pDataIn[0]_i_3__1_n_0 ),
+        .I3(\pDataIn[0]_i_4__1_n_0 ),
+        .I4(pDataInBnd[0]),
+        .I5(\pDataFIFO_reg_n_0_[9] ),
+        .O(D[0]));
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  LUT2 #(
+    .INIT(4'hB)) 
+    \pDataIn[0]_i_2__1 
+       (.I0(pDataInBnd[5]),
+        .I1(pDataInBnd[4]),
+        .O(\pDataIn[0]_i_2__1_n_0 ));
+  LUT3 #(
+    .INIT(8'hDF)) 
+    \pDataIn[0]_i_3__1 
+       (.I0(pDataInBnd[6]),
+        .I1(pDataInBnd[7]),
+        .I2(pDataInBnd[8]),
+        .O(\pDataIn[0]_i_3__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  LUT3 #(
+    .INIT(8'hFB)) 
+    \pDataIn[0]_i_4__1 
+       (.I0(\pDataIn[1]_i_2__1_n_0 ),
+        .I1(pDataInBnd[1]),
+        .I2(pDataInBnd[8]),
+        .O(\pDataIn[0]_i_4__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  LUT4 #(
+    .INIT(16'h38C3)) 
+    \pDataIn[1]_i_1__1 
+       (.I0(\pDataIn[1]_i_2__1_n_0 ),
+        .I1(pDataInBnd[0]),
+        .I2(pDataInBnd[8]),
+        .I3(pDataInBnd[1]),
+        .O(D[1]));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFBFFFFFF)) 
+    \pDataIn[1]_i_2__1 
+       (.I0(pDataInBnd[6]),
+        .I1(pDataInBnd[7]),
+        .I2(pDataInBnd[4]),
+        .I3(pDataInBnd[5]),
+        .I4(pDataInBnd[3]),
+        .I5(pDataInBnd[2]),
+        .O(\pDataIn[1]_i_2__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  LUT5 #(
+    .INIT(32'h0FF0E00F)) 
+    \pDataIn[2]_i_1__1 
+       (.I0(\pDataIn[3]_i_2__1_n_0 ),
+        .I1(pDataInBnd[3]),
+        .I2(pDataInBnd[8]),
+        .I3(pDataInBnd[2]),
+        .I4(pDataInBnd[1]),
+        .O(D[2]));
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  LUT5 #(
+    .INIT(32'h0EF0F00F)) 
+    \pDataIn[3]_i_1__1 
+       (.I0(pDataInBnd[1]),
+        .I1(\pDataIn[3]_i_2__1_n_0 ),
+        .I2(pDataInBnd[3]),
+        .I3(pDataInBnd[8]),
+        .I4(pDataInBnd[2]),
+        .O(D[3]));
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  LUT5 #(
+    .INIT(32'hFFFFEFFF)) 
+    \pDataIn[3]_i_2__1 
+       (.I0(pDataInBnd[0]),
+        .I1(pDataInBnd[7]),
+        .I2(pDataInBnd[6]),
+        .I3(pDataInBnd[4]),
+        .I4(pDataInBnd[5]),
+        .O(\pDataIn[3]_i_2__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h00FEFF00FF0000FF)) 
+    \pDataIn[4]_i_1__1 
+       (.I0(pDataInBnd[5]),
+        .I1(\pDataIn[4]_i_2__0_n_0 ),
+        .I2(\pDataIn[5]_i_2__1_n_0 ),
+        .I3(pDataInBnd[3]),
+        .I4(pDataInBnd[8]),
+        .I5(pDataInBnd[4]),
+        .O(D[4]));
+  LUT2 #(
+    .INIT(4'hB)) 
+    \pDataIn[4]_i_2__0 
+       (.I0(pDataInBnd[1]),
+        .I1(pDataInBnd[2]),
+        .O(\pDataIn[4]_i_2__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  LUT5 #(
+    .INIT(32'h0EF0F00F)) 
+    \pDataIn[5]_i_1__1 
+       (.I0(\pDataIn[5]_i_2__1_n_0 ),
+        .I1(\pDataIn[5]_i_3__0_n_0 ),
+        .I2(pDataInBnd[5]),
+        .I3(pDataInBnd[4]),
+        .I4(pDataInBnd[8]),
+        .O(D[5]));
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  LUT3 #(
+    .INIT(8'hFD)) 
+    \pDataIn[5]_i_2__1 
+       (.I0(pDataInBnd[6]),
+        .I1(pDataInBnd[7]),
+        .I2(pDataInBnd[0]),
+        .O(\pDataIn[5]_i_2__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  LUT3 #(
+    .INIT(8'hFD)) 
+    \pDataIn[5]_i_3__0 
+       (.I0(pDataInBnd[2]),
+        .I1(pDataInBnd[1]),
+        .I2(pDataInBnd[3]),
+        .O(\pDataIn[5]_i_3__0_n_0 ));
+  LUT6 #(
+    .INIT(64'h00FFFF00FD0000FF)) 
+    \pDataIn[6]_i_1__0 
+       (.I0(pDataInBnd[4]),
+        .I1(pDataInBnd[7]),
+        .I2(\pDataIn[7]_i_3__0_n_0 ),
+        .I3(pDataInBnd[8]),
+        .I4(pDataInBnd[6]),
+        .I5(pDataInBnd[5]),
+        .O(D[6]));
   (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT3 #(
-    .INIT(8'h60)) 
-    \pDataIn[0]_i_1__1 
-       (.I0(\pDataFIFO_reg_n_0_[9] ),
-        .I1(pDataInBnd[0]),
-        .I2(\pDataIn[7]_i_3__1_n_0 ),
-        .O(D[0]));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
-  LUT4 #(
-    .INIT(16'h2882)) 
-    \pDataIn[1]_i_1__1 
-       (.I0(\pDataIn[7]_i_3__1_n_0 ),
-        .I1(pDataInBnd[1]),
-        .I2(pDataInBnd[0]),
-        .I3(pDataInBnd[8]),
-        .O(D[1]));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
-  LUT4 #(
-    .INIT(16'h2882)) 
-    \pDataIn[2]_i_1__1 
-       (.I0(\pDataIn[7]_i_3__1_n_0 ),
-        .I1(pDataInBnd[8]),
-        .I2(pDataInBnd[2]),
-        .I3(pDataInBnd[1]),
-        .O(D[2]));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
-  LUT4 #(
-    .INIT(16'h2882)) 
-    \pDataIn[3]_i_1__1 
-       (.I0(\pDataIn[7]_i_3__1_n_0 ),
-        .I1(pDataInBnd[8]),
-        .I2(pDataInBnd[2]),
-        .I3(pDataInBnd[3]),
-        .O(D[3]));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
-  LUT4 #(
-    .INIT(16'h2882)) 
-    \pDataIn[4]_i_1__1 
-       (.I0(\pDataIn[7]_i_3__1_n_0 ),
-        .I1(pDataInBnd[3]),
-        .I2(pDataInBnd[4]),
-        .I3(pDataInBnd[8]),
-        .O(D[4]));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
-  LUT4 #(
-    .INIT(16'h2882)) 
-    \pDataIn[5]_i_1__1 
-       (.I0(\pDataIn[7]_i_3__1_n_0 ),
-        .I1(pDataInBnd[5]),
-        .I2(pDataInBnd[8]),
-        .I3(pDataInBnd[4]),
-        .O(D[5]));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
-  LUT4 #(
-    .INIT(16'h2882)) 
-    \pDataIn[6]_i_1__1 
-       (.I0(\pDataIn[7]_i_3__1_n_0 ),
-        .I1(pDataInBnd[5]),
-        .I2(pDataInBnd[8]),
-        .I3(pDataInBnd[6]),
-        .O(D[6]));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
-  LUT3 #(
     .INIT(8'h7F)) 
-    \pDataIn[7]_i_1 
+    \pDataIn[7]_i_1__1 
        (.I0(pMeRdy_int_reg_0),
         .I1(pRdy_2),
         .I2(pRdy_0),
-        .O(\pDataIn_reg[7] ));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
-  LUT4 #(
-    .INIT(16'h2882)) 
+        .O(pMeRdy_int_reg_1));
+  LUT6 #(
+    .INIT(64'h3CC338C33CC33CC3)) 
     \pDataIn[7]_i_2__1 
-       (.I0(\pDataIn[7]_i_3__1_n_0 ),
-        .I1(pDataInBnd[7]),
-        .I2(pDataInBnd[6]),
-        .I3(pDataInBnd[8]),
+       (.I0(\pDataIn[7]_i_3__0_n_0 ),
+        .I1(pDataInBnd[8]),
+        .I2(pDataInBnd[7]),
+        .I3(pDataInBnd[6]),
+        .I4(pDataInBnd[5]),
+        .I5(pDataInBnd[4]),
         .O(D[7]));
-  LUT6 #(
-    .INIT(64'hFFFFFEFFFFEFFFFF)) 
-    \pDataIn[7]_i_3__1 
-       (.I0(\pDataIn[7]_i_4__1_n_0 ),
-        .I1(\pDataIn[7]_i_5__0_n_0 ),
-        .I2(pDataInBnd[6]),
-        .I3(pDataInBnd[7]),
-        .I4(pDataInBnd[4]),
-        .I5(pDataInBnd[5]),
-        .O(\pDataIn[7]_i_3__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFBDFFBDFFFFF)) 
-    \pDataIn[7]_i_4__1 
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  LUT4 #(
+    .INIT(16'hFFEF)) 
+    \pDataIn[7]_i_3__0 
        (.I0(pDataInBnd[3]),
-        .I1(pDataInBnd[4]),
-        .I2(pDataInBnd[1]),
-        .I3(pDataInBnd[2]),
-        .I4(pDataInBnd[7]),
-        .I5(pDataInBnd[8]),
-        .O(\pDataIn[7]_i_4__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
-  LUT2 #(
-    .INIT(4'h6)) 
-    \pDataIn[7]_i_5__0 
-       (.I0(pDataInBnd[1]),
-        .I1(pDataInBnd[0]),
-        .O(\pDataIn[7]_i_5__0_n_0 ));
+        .I1(pDataInBnd[1]),
+        .I2(pDataInBnd[2]),
+        .I3(pDataInBnd[0]),
+        .O(\pDataIn[7]_i_3__0_n_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_slice_begin = "0" *) 
+  (* ram_slice_end = "5" *) 
   RAM32M pFIFO_reg_0_31_0_5
        (.ADDRA(pRdA),
         .ADDRB(pRdA),
         .ADDRC(pRdA),
-        .ADDRD(pWrA_reg__0),
-        .DIA(pDataInRaw[1:0]),
-        .DIB(pDataInRaw[3:2]),
-        .DIC(pDataInRaw[5:4]),
+        .ADDRD({\pWrA_reg_n_0_[4] ,\pWrA_reg_n_0_[3] ,\pWrA_reg_n_0_[2] ,\pWrA_reg_n_0_[1] ,\pWrA_reg_n_0_[0] }),
+        .DIA(I33[1:0]),
+        .DIB(I33[3:2]),
+        .DIC(I33[5:4]),
         .DID({1'b0,1'b0}),
         .DOA(p_0_out[1:0]),
         .DOB(p_0_out[3:2]),
         .DOC(p_0_out[5:4]),
         .DOD(NLW_pFIFO_reg_0_31_0_5_DOD_UNCONNECTED[1:0]),
-        .WCLK(rMMCM_LckdRisingFlag_reg),
+        .WCLK(pTokenFlag_q_reg_0),
         .WE(pAllVld));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_slice_begin = "6" *) 
+  (* ram_slice_end = "9" *) 
   RAM32M pFIFO_reg_0_31_6_9
        (.ADDRA(pRdA),
         .ADDRB(pRdA),
         .ADDRC(pRdA),
-        .ADDRD(pWrA_reg__0),
-        .DIA(pDataInRaw[7:6]),
-        .DIB(pDataInRaw[9:8]),
+        .ADDRD({\pWrA_reg_n_0_[4] ,\pWrA_reg_n_0_[3] ,\pWrA_reg_n_0_[2] ,\pWrA_reg_n_0_[1] ,\pWrA_reg_n_0_[0] }),
+        .DIA(I33[7:6]),
+        .DIB(I33[9:8]),
         .DIC({1'b0,1'b0}),
         .DID({1'b0,1'b0}),
         .DOA(p_0_out[7:6]),
         .DOB(p_0_out[9:8]),
         .DOC(NLW_pFIFO_reg_0_31_6_9_DOC_UNCONNECTED[1:0]),
         .DOD(NLW_pFIFO_reg_0_31_6_9_DOD_UNCONNECTED[1:0]),
-        .WCLK(rMMCM_LckdRisingFlag_reg),
+        .WCLK(pTokenFlag_q_reg_0),
         .WE(pAllVld));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT2 #(
     .INIT(4'hE)) 
-    pMeRdy_int_i_1__1
+    pMeRdy_int_i_1__0
        (.I0(pBlnkBgnFlag),
         .I1(pMeRdy_int_reg_0),
-        .O(pMeRdy_int_i_1__1_n_0));
+        .O(pMeRdy_int_i_1__0_n_0));
   FDRE pMeRdy_int_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pTokenFlag_q_reg_0),
         .CE(1'b1),
-        .D(pMeRdy_int_i_1__1_n_0),
+        .D(pMeRdy_int_i_1__0_n_0),
         .Q(pMeRdy_int_reg_0),
         .R(SR));
   LUT1 #(
@@ -867,101 +994,104 @@ module hdmi_in_dvi2rgb_0_0_ChannelBond_10
     \pRdA[0]_i_1__1 
        (.I0(pRdA[0]),
         .O(\pRdA[0]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \pRdA[1]_i_1__1 
        (.I0(pRdA[0]),
         .I1(pRdA[1]),
         .O(\pRdA[1]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT3 #(
-    .INIT(8'h6A)) 
+    .INIT(8'h78)) 
     \pRdA[2]_i_1__1 
-       (.I0(pRdA[2]),
-        .I1(pRdA[1]),
-        .I2(pRdA[0]),
+       (.I0(pRdA[1]),
+        .I1(pRdA[0]),
+        .I2(pRdA[2]),
         .O(\pRdA[2]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT4 #(
-    .INIT(16'h6AAA)) 
+    .INIT(16'h7F80)) 
     \pRdA[3]_i_1__1 
-       (.I0(pRdA[3]),
+       (.I0(pRdA[2]),
         .I1(pRdA[0]),
         .I2(pRdA[1]),
-        .I3(pRdA[2]),
+        .I3(pRdA[3]),
         .O(\pRdA[3]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT5 #(
-    .INIT(32'h6AAAAAAA)) 
+    .INIT(32'h7FFF8000)) 
     \pRdA[4]_i_1__1 
-       (.I0(pRdA[4]),
-        .I1(pRdA[2]),
-        .I2(pRdA[1]),
-        .I3(pRdA[0]),
-        .I4(pRdA[3]),
+       (.I0(pRdA[3]),
+        .I1(pRdA[1]),
+        .I2(pRdA[0]),
+        .I3(pRdA[2]),
+        .I4(pRdA[4]),
         .O(\pRdA[4]_i_1__1_n_0 ));
   FDRE \pRdA_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pTokenFlag_q_reg_0),
         .CE(pRdEn),
         .D(\pRdA[0]_i_1__1_n_0 ),
         .Q(pRdA[0]),
         .R(SR));
   FDRE \pRdA_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pTokenFlag_q_reg_0),
         .CE(pRdEn),
         .D(\pRdA[1]_i_1__1_n_0 ),
         .Q(pRdA[1]),
         .R(SR));
   FDRE \pRdA_reg[2] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pTokenFlag_q_reg_0),
         .CE(pRdEn),
         .D(\pRdA[2]_i_1__1_n_0 ),
         .Q(pRdA[2]),
         .R(SR));
   FDRE \pRdA_reg[3] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pTokenFlag_q_reg_0),
         .CE(pRdEn),
         .D(\pRdA[3]_i_1__1_n_0 ),
         .Q(pRdA[3]),
         .R(SR));
   FDRE \pRdA_reg[4] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pTokenFlag_q_reg_0),
         .CE(pRdEn),
         .D(\pRdA[4]_i_1__1_n_0 ),
         .Q(pRdA[4]),
         .R(SR));
   LUT6 #(
-    .INIT(64'hFBBBBBBBFAAAAAAA)) 
+    .INIT(64'hEAAAFFFFEAAAEAAA)) 
     pRdEn_i_1__0
        (.I0(pAllVldBgnFlag),
-        .I1(pBlnkBgnFlag),
-        .I2(pRdy_0),
-        .I3(pMeRdy_int_reg_0),
-        .I4(pRdy_2),
+        .I1(pMeRdy_int_reg_0),
+        .I2(pRdy_2),
+        .I3(pRdy_0),
+        .I4(pBlnkBgnFlag),
         .I5(pRdEn),
         .O(pRdEn_i_1__0_n_0));
   FDRE pRdEn_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pTokenFlag_q_reg_0),
         .CE(1'b1),
         .D(pRdEn_i_1__0_n_0),
         .Q(pRdEn),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
-  LUT2 #(
-    .INIT(4'h7)) 
+  LUT6 #(
+    .INIT(64'h5575FFFF55755575)) 
     pTokenFlag_i_1__1
        (.I0(pRdEn),
-        .I1(\pDataIn[7]_i_3__1_n_0 ),
+        .I1(\pDataIn[5]_i_3__0_n_0 ),
+        .I2(pDataInBnd[8]),
+        .I3(\pDataIn[3]_i_2__1_n_0 ),
+        .I4(\pDataIn[0]_i_4__1_n_0 ),
+        .I5(pDataInBnd[0]),
         .O(pTokenFlag0));
   FDRE pTokenFlag_q_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pTokenFlag_q_reg_0),
         .CE(1'b1),
         .D(pTokenFlag),
         .Q(pTokenFlag_q),
         .R(1'b0));
   FDRE pTokenFlag_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pTokenFlag_q_reg_0),
         .CE(1'b1),
         .D(pTokenFlag0),
         .Q(pTokenFlag),
@@ -969,123 +1099,138 @@ module hdmi_in_dvi2rgb_0_0_ChannelBond_10
   LUT1 #(
     .INIT(2'h1)) 
     \pWrA[0]_i_1__0 
-       (.I0(pWrA_reg__0[0]),
-        .O(p_0_in__0[0]));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+       (.I0(\pWrA_reg_n_0_[0] ),
+        .O(p_0_in[0]));
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \pWrA[1]_i_1__0 
-       (.I0(pWrA_reg__0[0]),
-        .I1(pWrA_reg__0[1]),
-        .O(p_0_in__0[1]));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+       (.I0(\pWrA_reg_n_0_[0] ),
+        .I1(\pWrA_reg_n_0_[1] ),
+        .O(p_0_in[1]));
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT3 #(
-    .INIT(8'h6A)) 
+    .INIT(8'h78)) 
     \pWrA[2]_i_1__0 
-       (.I0(pWrA_reg__0[2]),
-        .I1(pWrA_reg__0[1]),
-        .I2(pWrA_reg__0[0]),
-        .O(p_0_in__0[2]));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+       (.I0(\pWrA_reg_n_0_[1] ),
+        .I1(\pWrA_reg_n_0_[0] ),
+        .I2(\pWrA_reg_n_0_[2] ),
+        .O(p_0_in[2]));
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT4 #(
-    .INIT(16'h6AAA)) 
+    .INIT(16'h7F80)) 
     \pWrA[3]_i_1__0 
-       (.I0(pWrA_reg__0[3]),
-        .I1(pWrA_reg__0[0]),
-        .I2(pWrA_reg__0[1]),
-        .I3(pWrA_reg__0[2]),
-        .O(p_0_in__0[3]));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+       (.I0(\pWrA_reg_n_0_[2] ),
+        .I1(\pWrA_reg_n_0_[0] ),
+        .I2(\pWrA_reg_n_0_[1] ),
+        .I3(\pWrA_reg_n_0_[3] ),
+        .O(p_0_in[3]));
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT5 #(
-    .INIT(32'h6AAAAAAA)) 
+    .INIT(32'h7FFF8000)) 
     \pWrA[4]_i_1__0 
-       (.I0(pWrA_reg__0[4]),
-        .I1(pWrA_reg__0[2]),
-        .I2(pWrA_reg__0[1]),
-        .I3(pWrA_reg__0[0]),
-        .I4(pWrA_reg__0[3]),
-        .O(p_0_in__0[4]));
+       (.I0(\pWrA_reg_n_0_[3] ),
+        .I1(\pWrA_reg_n_0_[1] ),
+        .I2(\pWrA_reg_n_0_[0] ),
+        .I3(\pWrA_reg_n_0_[2] ),
+        .I4(\pWrA_reg_n_0_[4] ),
+        .O(p_0_in[4]));
   FDRE \pWrA_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pTokenFlag_q_reg_0),
         .CE(1'b1),
-        .D(p_0_in__0[0]),
-        .Q(pWrA_reg__0[0]),
+        .D(p_0_in[0]),
+        .Q(\pWrA_reg_n_0_[0] ),
         .R(SR));
   FDRE \pWrA_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pTokenFlag_q_reg_0),
         .CE(1'b1),
-        .D(p_0_in__0[1]),
-        .Q(pWrA_reg__0[1]),
+        .D(p_0_in[1]),
+        .Q(\pWrA_reg_n_0_[1] ),
         .R(SR));
   FDRE \pWrA_reg[2] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pTokenFlag_q_reg_0),
         .CE(1'b1),
-        .D(p_0_in__0[2]),
-        .Q(pWrA_reg__0[2]),
+        .D(p_0_in[2]),
+        .Q(\pWrA_reg_n_0_[2] ),
         .R(SR));
   FDRE \pWrA_reg[3] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pTokenFlag_q_reg_0),
         .CE(1'b1),
-        .D(p_0_in__0[3]),
-        .Q(pWrA_reg__0[3]),
+        .D(p_0_in[3]),
+        .Q(\pWrA_reg_n_0_[3] ),
         .R(SR));
   FDRE \pWrA_reg[4] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pTokenFlag_q_reg_0),
         .CE(1'b1),
-        .D(p_0_in__0[4]),
-        .Q(pWrA_reg__0[4]),
+        .D(p_0_in[4]),
+        .Q(\pWrA_reg_n_0_[4] ),
         .R(SR));
 endmodule
 
 (* ORIG_REF_NAME = "ChannelBond" *) 
 module hdmi_in_dvi2rgb_0_0_ChannelBond_17
-   (pMeRdy_int_reg_0,
+   (pAllVld_q,
+    pAllVldBgnFlag,
+    pMeRdy_int_reg_0,
     D,
     pVde,
-    \pDataIn_reg[7] ,
-    pC1_reg,
-    pC0_reg,
-    rMMCM_LckdRisingFlag_reg,
-    pAligned_reg,
+    SR,
+    \pDataFIFO_reg[9]_0 ,
+    \pDataFIFO_reg[8]_0 ,
+    pAllVld,
+    \pDataFIFO_reg[0]_0 ,
+    pAllVldBgnFlag0,
+    pMeRdy_int_reg_1,
     pRdy_1,
     pRdy_2,
-    pAllVldBgnFlag,
     vid_pVSync,
     vid_pHSync,
-    pAllVld,
-    pDataInRaw);
+    I60);
+  output pAllVld_q;
+  output pAllVldBgnFlag;
   output pMeRdy_int_reg_0;
   output [7:0]D;
   output pVde;
-  output [0:0]\pDataIn_reg[7] ;
-  output pC1_reg;
-  output pC0_reg;
-  input rMMCM_LckdRisingFlag_reg;
-  input pAligned_reg;
+  output [0:0]SR;
+  output \pDataFIFO_reg[9]_0 ;
+  output \pDataFIFO_reg[8]_0 ;
+  input pAllVld;
+  input \pDataFIFO_reg[0]_0 ;
+  input pAllVldBgnFlag0;
+  input pMeRdy_int_reg_1;
   input pRdy_1;
   input pRdy_2;
-  input pAllVldBgnFlag;
   input vid_pVSync;
   input vid_pHSync;
-  input pAllVld;
-  input [9:0]pDataInRaw;
+  input [9:0]I60;
 
   wire [7:0]D;
-  wire pAligned_reg;
+  wire [9:0]I60;
+  wire [0:0]SR;
   wire pAllVld;
   wire pAllVldBgnFlag;
+  wire pAllVldBgnFlag0;
+  wire pAllVld_q;
   wire pBlnkBgnFlag;
-  wire pBlnkBgnFlag_i_1__1_n_0;
+  wire pBlnkBgnFlag0;
   wire pC0;
-  wire pC0_reg;
-  wire pC1_reg;
+  wire \pDataFIFO_reg[0]_0 ;
+  wire \pDataFIFO_reg[8]_0 ;
+  wire \pDataFIFO_reg[9]_0 ;
   wire \pDataFIFO_reg_n_0_[9] ;
   wire [8:0]pDataInBnd;
-  wire [9:0]pDataInRaw;
-  wire \pDataIn[7]_i_4_n_0 ;
-  wire [0:0]\pDataIn_reg[7] ;
-  wire pMeRdy_int_i_1__0_n_0;
+  wire \pDataIn[0]_i_2_n_0 ;
+  wire \pDataIn[0]_i_3_n_0 ;
+  wire \pDataIn[0]_i_4_n_0 ;
+  wire \pDataIn[1]_i_2_n_0 ;
+  wire \pDataIn[3]_i_2_n_0 ;
+  wire \pDataIn[4]_i_2__1_n_0 ;
+  wire \pDataIn[5]_i_2_n_0 ;
+  wire \pDataIn[5]_i_3__1_n_0 ;
+  wire \pDataIn[7]_i_3__1_n_0 ;
+  wire pMeRdy_int_i_1_n_0;
   wire pMeRdy_int_reg_0;
+  wire pMeRdy_int_reg_1;
   wire [4:0]pRdA;
   wire \pRdA[0]_i_1__0_n_0 ;
   wire \pRdA[1]_i_1__0_n_0 ;
@@ -1098,430 +1243,554 @@ module hdmi_in_dvi2rgb_0_0_ChannelBond_17
   wire pRdy_2;
   wire pTokenFlag;
   wire pTokenFlag0;
+  wire pTokenFlag_i_2_n_0;
   wire pTokenFlag_q;
   wire pVde;
-  wire [4:0]pWrA_reg__0;
-  wire [4:0]p_0_in__0;
+  wire pVde_i_2_n_0;
+  wire \pWrA_reg_n_0_[0] ;
+  wire \pWrA_reg_n_0_[1] ;
+  wire \pWrA_reg_n_0_[2] ;
+  wire \pWrA_reg_n_0_[3] ;
+  wire \pWrA_reg_n_0_[4] ;
+  wire [4:0]p_0_in;
   wire [9:0]p_0_out;
-  wire rMMCM_LckdRisingFlag_reg;
   wire vid_pHSync;
   wire vid_pVSync;
   wire [1:0]NLW_pFIFO_reg_0_31_0_5_DOD_UNCONNECTED;
   wire [1:0]NLW_pFIFO_reg_0_31_6_9_DOC_UNCONNECTED;
   wire [1:0]NLW_pFIFO_reg_0_31_6_9_DOD_UNCONNECTED;
 
+  FDRE pAllVldBgnFlag_reg
+       (.C(\pDataFIFO_reg[0]_0 ),
+        .CE(1'b1),
+        .D(pAllVldBgnFlag0),
+        .Q(pAllVldBgnFlag),
+        .R(1'b0));
+  FDRE pAllVld_q_reg
+       (.C(\pDataFIFO_reg[0]_0 ),
+        .CE(1'b1),
+        .D(pAllVld),
+        .Q(pAllVld_q),
+        .R(1'b0));
   LUT2 #(
     .INIT(4'h2)) 
     pBlnkBgnFlag_i_1__1
        (.I0(pTokenFlag),
         .I1(pTokenFlag_q),
-        .O(pBlnkBgnFlag_i_1__1_n_0));
+        .O(pBlnkBgnFlag0));
   FDRE pBlnkBgnFlag_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\pDataFIFO_reg[0]_0 ),
         .CE(1'b1),
-        .D(pBlnkBgnFlag_i_1__1_n_0),
+        .D(pBlnkBgnFlag0),
         .Q(pBlnkBgnFlag),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT3 #(
     .INIT(8'h74)) 
     pC0_i_1
        (.I0(pDataInBnd[8]),
         .I1(pC0),
         .I2(vid_pHSync),
-        .O(pC0_reg));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+        .O(\pDataFIFO_reg[8]_0 ));
+  LUT6 #(
+    .INIT(64'h11110F0011110000)) 
+    pC0_i_2
+       (.I0(\pDataIn[3]_i_2_n_0 ),
+        .I1(\pDataIn[5]_i_3__1_n_0 ),
+        .I2(\pDataIn[1]_i_2_n_0 ),
+        .I3(pDataInBnd[1]),
+        .I4(pDataInBnd[8]),
+        .I5(pDataInBnd[0]),
+        .O(pC0));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT4 #(
     .INIT(16'h6F60)) 
     pC1_i_1
-       (.I0(pDataInBnd[8]),
-        .I1(\pDataFIFO_reg_n_0_[9] ),
+       (.I0(\pDataFIFO_reg_n_0_[9] ),
+        .I1(pDataInBnd[8]),
         .I2(pC0),
         .I3(vid_pVSync),
-        .O(pC1_reg));
+        .O(\pDataFIFO_reg[9]_0 ));
   FDRE \pDataFIFO_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\pDataFIFO_reg[0]_0 ),
         .CE(1'b1),
         .D(p_0_out[0]),
         .Q(pDataInBnd[0]),
         .R(1'b0));
   FDRE \pDataFIFO_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\pDataFIFO_reg[0]_0 ),
         .CE(1'b1),
         .D(p_0_out[1]),
         .Q(pDataInBnd[1]),
         .R(1'b0));
   FDRE \pDataFIFO_reg[2] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\pDataFIFO_reg[0]_0 ),
         .CE(1'b1),
         .D(p_0_out[2]),
         .Q(pDataInBnd[2]),
         .R(1'b0));
   FDRE \pDataFIFO_reg[3] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\pDataFIFO_reg[0]_0 ),
         .CE(1'b1),
         .D(p_0_out[3]),
         .Q(pDataInBnd[3]),
         .R(1'b0));
   FDRE \pDataFIFO_reg[4] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\pDataFIFO_reg[0]_0 ),
         .CE(1'b1),
         .D(p_0_out[4]),
         .Q(pDataInBnd[4]),
         .R(1'b0));
   FDRE \pDataFIFO_reg[5] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\pDataFIFO_reg[0]_0 ),
         .CE(1'b1),
         .D(p_0_out[5]),
         .Q(pDataInBnd[5]),
         .R(1'b0));
   FDRE \pDataFIFO_reg[6] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\pDataFIFO_reg[0]_0 ),
         .CE(1'b1),
         .D(p_0_out[6]),
         .Q(pDataInBnd[6]),
         .R(1'b0));
   FDRE \pDataFIFO_reg[7] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\pDataFIFO_reg[0]_0 ),
         .CE(1'b1),
         .D(p_0_out[7]),
         .Q(pDataInBnd[7]),
         .R(1'b0));
   FDRE \pDataFIFO_reg[8] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\pDataFIFO_reg[0]_0 ),
         .CE(1'b1),
         .D(p_0_out[8]),
         .Q(pDataInBnd[8]),
         .R(1'b0));
   FDRE \pDataFIFO_reg[9] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\pDataFIFO_reg[0]_0 ),
         .CE(1'b1),
         .D(p_0_out[9]),
         .Q(\pDataFIFO_reg_n_0_[9] ),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT3 #(
-    .INIT(8'h06)) 
+  LUT6 #(
+    .INIT(64'h0000FEFEFF000000)) 
     \pDataIn[0]_i_1 
-       (.I0(pDataInBnd[0]),
-        .I1(\pDataFIFO_reg_n_0_[9] ),
-        .I2(pC0),
+       (.I0(\pDataIn[0]_i_2_n_0 ),
+        .I1(\pDataIn[5]_i_3__1_n_0 ),
+        .I2(\pDataIn[0]_i_3_n_0 ),
+        .I3(\pDataIn[0]_i_4_n_0 ),
+        .I4(pDataInBnd[0]),
+        .I5(\pDataFIFO_reg_n_0_[9] ),
         .O(D[0]));
   (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT4 #(
-    .INIT(16'h0069)) 
-    \pDataIn[1]_i_1 
-       (.I0(pDataInBnd[1]),
-        .I1(pDataInBnd[0]),
+  LUT2 #(
+    .INIT(4'hB)) 
+    \pDataIn[0]_i_2 
+       (.I0(pDataInBnd[5]),
+        .I1(pDataInBnd[4]),
+        .O(\pDataIn[0]_i_2_n_0 ));
+  LUT3 #(
+    .INIT(8'hDF)) 
+    \pDataIn[0]_i_3 
+       (.I0(pDataInBnd[6]),
+        .I1(pDataInBnd[7]),
         .I2(pDataInBnd[8]),
-        .I3(pC0),
-        .O(D[1]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT4 #(
-    .INIT(16'h0069)) 
-    \pDataIn[2]_i_1 
-       (.I0(pDataInBnd[2]),
+        .O(\pDataIn[0]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT3 #(
+    .INIT(8'hFB)) 
+    \pDataIn[0]_i_4 
+       (.I0(\pDataIn[1]_i_2_n_0 ),
         .I1(pDataInBnd[1]),
         .I2(pDataInBnd[8]),
-        .I3(pC0),
-        .O(D[2]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+        .O(\pDataIn[0]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT4 #(
-    .INIT(16'h0069)) 
-    \pDataIn[3]_i_1 
-       (.I0(pDataInBnd[2]),
-        .I1(pDataInBnd[3]),
+    .INIT(16'h38C3)) 
+    \pDataIn[1]_i_1 
+       (.I0(\pDataIn[1]_i_2_n_0 ),
+        .I1(pDataInBnd[0]),
         .I2(pDataInBnd[8]),
-        .I3(pC0),
-        .O(D[3]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT4 #(
-    .INIT(16'h1441)) 
-    \pDataIn[4]_i_1 
-       (.I0(pC0),
-        .I1(pDataInBnd[8]),
-        .I2(pDataInBnd[4]),
-        .I3(pDataInBnd[3]),
-        .O(D[4]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT4 #(
-    .INIT(16'h1441)) 
-    \pDataIn[5]_i_1 
-       (.I0(pC0),
-        .I1(pDataInBnd[8]),
+        .I3(pDataInBnd[1]),
+        .O(D[1]));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFBFFFFFF)) 
+    \pDataIn[1]_i_2 
+       (.I0(pDataInBnd[6]),
+        .I1(pDataInBnd[7]),
         .I2(pDataInBnd[4]),
         .I3(pDataInBnd[5]),
-        .O(D[5]));
+        .I4(pDataInBnd[3]),
+        .I5(pDataInBnd[2]),
+        .O(\pDataIn[1]_i_2_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT4 #(
-    .INIT(16'h0069)) 
-    \pDataIn[6]_i_1 
-       (.I0(pDataInBnd[5]),
-        .I1(pDataInBnd[6]),
+  LUT5 #(
+    .INIT(32'h0FF0E00F)) 
+    \pDataIn[2]_i_1 
+       (.I0(\pDataIn[3]_i_2_n_0 ),
+        .I1(pDataInBnd[3]),
         .I2(pDataInBnd[8]),
-        .I3(pC0),
-        .O(D[6]));
+        .I3(pDataInBnd[2]),
+        .I4(pDataInBnd[1]),
+        .O(D[2]));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT5 #(
+    .INIT(32'h0EF0F00F)) 
+    \pDataIn[3]_i_1 
+       (.I0(pDataInBnd[1]),
+        .I1(\pDataIn[3]_i_2_n_0 ),
+        .I2(pDataInBnd[3]),
+        .I3(pDataInBnd[8]),
+        .I4(pDataInBnd[2]),
+        .O(D[3]));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT5 #(
+    .INIT(32'hFFFFEFFF)) 
+    \pDataIn[3]_i_2 
+       (.I0(pDataInBnd[0]),
+        .I1(pDataInBnd[7]),
+        .I2(pDataInBnd[6]),
+        .I3(pDataInBnd[4]),
+        .I4(pDataInBnd[5]),
+        .O(\pDataIn[3]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'h00FEFF00FF0000FF)) 
+    \pDataIn[4]_i_1 
+       (.I0(pDataInBnd[5]),
+        .I1(\pDataIn[4]_i_2__1_n_0 ),
+        .I2(\pDataIn[5]_i_2_n_0 ),
+        .I3(pDataInBnd[3]),
+        .I4(pDataInBnd[8]),
+        .I5(pDataInBnd[4]),
+        .O(D[4]));
   (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  LUT2 #(
+    .INIT(4'hB)) 
+    \pDataIn[4]_i_2__1 
+       (.I0(pDataInBnd[1]),
+        .I1(pDataInBnd[2]),
+        .O(\pDataIn[4]_i_2__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT5 #(
+    .INIT(32'h0EF0F00F)) 
+    \pDataIn[5]_i_1 
+       (.I0(\pDataIn[5]_i_2_n_0 ),
+        .I1(\pDataIn[5]_i_3__1_n_0 ),
+        .I2(pDataInBnd[5]),
+        .I3(pDataInBnd[4]),
+        .I4(pDataInBnd[8]),
+        .O(D[5]));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT3 #(
+    .INIT(8'hFD)) 
+    \pDataIn[5]_i_2 
+       (.I0(pDataInBnd[6]),
+        .I1(pDataInBnd[7]),
+        .I2(pDataInBnd[0]),
+        .O(\pDataIn[5]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT3 #(
+    .INIT(8'hFD)) 
+    \pDataIn[5]_i_3__1 
+       (.I0(pDataInBnd[2]),
+        .I1(pDataInBnd[1]),
+        .I2(pDataInBnd[3]),
+        .O(\pDataIn[5]_i_3__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h00FFFF00FD0000FF)) 
+    \pDataIn[6]_i_1__1 
+       (.I0(pDataInBnd[4]),
+        .I1(pDataInBnd[7]),
+        .I2(\pDataIn[7]_i_3__1_n_0 ),
+        .I3(pDataInBnd[8]),
+        .I4(pDataInBnd[6]),
+        .I5(pDataInBnd[5]),
+        .O(D[6]));
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT3 #(
     .INIT(8'h7F)) 
-    \pDataIn[7]_i_1__1 
+    \pDataIn[7]_i_1__0 
        (.I0(pMeRdy_int_reg_0),
         .I1(pRdy_1),
         .I2(pRdy_2),
-        .O(\pDataIn_reg[7] ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT4 #(
-    .INIT(16'h0069)) 
-    \pDataIn[7]_i_2 
-       (.I0(pDataInBnd[7]),
-        .I1(pDataInBnd[6]),
-        .I2(pDataInBnd[8]),
-        .I3(pC0),
-        .O(D[7]));
+        .O(SR));
   LUT6 #(
-    .INIT(64'h0000000000100800)) 
-    \pDataIn[7]_i_3 
-       (.I0(pDataInBnd[2]),
-        .I1(pDataInBnd[4]),
-        .I2(pDataInBnd[3]),
+    .INIT(64'h3CC338C33CC33CC3)) 
+    \pDataIn[7]_i_2 
+       (.I0(\pDataIn[7]_i_3__1_n_0 ),
+        .I1(pDataInBnd[8]),
+        .I2(pDataInBnd[7]),
         .I3(pDataInBnd[6]),
         .I4(pDataInBnd[5]),
-        .I5(\pDataIn[7]_i_4_n_0 ),
-        .O(pC0));
-  LUT6 #(
-    .INIT(64'hFFBDFFFFFFFFBDFF)) 
-    \pDataIn[7]_i_4 
-       (.I0(pDataInBnd[2]),
+        .I5(pDataInBnd[4]),
+        .O(D[7]));
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  LUT4 #(
+    .INIT(16'hFFEF)) 
+    \pDataIn[7]_i_3__1 
+       (.I0(pDataInBnd[3]),
         .I1(pDataInBnd[1]),
-        .I2(pDataInBnd[0]),
-        .I3(pDataInBnd[7]),
-        .I4(pDataInBnd[6]),
-        .I5(pDataInBnd[8]),
-        .O(\pDataIn[7]_i_4_n_0 ));
+        .I2(pDataInBnd[2]),
+        .I3(pDataInBnd[0]),
+        .O(\pDataIn[7]_i_3__1_n_0 ));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_slice_begin = "0" *) 
+  (* ram_slice_end = "5" *) 
   RAM32M pFIFO_reg_0_31_0_5
        (.ADDRA(pRdA),
         .ADDRB(pRdA),
         .ADDRC(pRdA),
-        .ADDRD(pWrA_reg__0),
-        .DIA(pDataInRaw[1:0]),
-        .DIB(pDataInRaw[3:2]),
-        .DIC(pDataInRaw[5:4]),
+        .ADDRD({\pWrA_reg_n_0_[4] ,\pWrA_reg_n_0_[3] ,\pWrA_reg_n_0_[2] ,\pWrA_reg_n_0_[1] ,\pWrA_reg_n_0_[0] }),
+        .DIA(I60[1:0]),
+        .DIB(I60[3:2]),
+        .DIC(I60[5:4]),
         .DID({1'b0,1'b0}),
         .DOA(p_0_out[1:0]),
         .DOB(p_0_out[3:2]),
         .DOC(p_0_out[5:4]),
         .DOD(NLW_pFIFO_reg_0_31_0_5_DOD_UNCONNECTED[1:0]),
-        .WCLK(rMMCM_LckdRisingFlag_reg),
+        .WCLK(\pDataFIFO_reg[0]_0 ),
         .WE(pAllVld));
   (* METHODOLOGY_DRC_VIOS = "" *) 
+  (* ram_addr_begin = "0" *) 
+  (* ram_addr_end = "31" *) 
+  (* ram_slice_begin = "6" *) 
+  (* ram_slice_end = "9" *) 
   RAM32M pFIFO_reg_0_31_6_9
        (.ADDRA(pRdA),
         .ADDRB(pRdA),
         .ADDRC(pRdA),
-        .ADDRD(pWrA_reg__0),
-        .DIA(pDataInRaw[7:6]),
-        .DIB(pDataInRaw[9:8]),
+        .ADDRD({\pWrA_reg_n_0_[4] ,\pWrA_reg_n_0_[3] ,\pWrA_reg_n_0_[2] ,\pWrA_reg_n_0_[1] ,\pWrA_reg_n_0_[0] }),
+        .DIA(I60[7:6]),
+        .DIB(I60[9:8]),
         .DIC({1'b0,1'b0}),
         .DID({1'b0,1'b0}),
         .DOA(p_0_out[7:6]),
         .DOB(p_0_out[9:8]),
         .DOC(NLW_pFIFO_reg_0_31_6_9_DOC_UNCONNECTED[1:0]),
         .DOD(NLW_pFIFO_reg_0_31_6_9_DOD_UNCONNECTED[1:0]),
-        .WCLK(rMMCM_LckdRisingFlag_reg),
+        .WCLK(\pDataFIFO_reg[0]_0 ),
         .WE(pAllVld));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT2 #(
     .INIT(4'hE)) 
-    pMeRdy_int_i_1__0
+    pMeRdy_int_i_1
        (.I0(pBlnkBgnFlag),
         .I1(pMeRdy_int_reg_0),
-        .O(pMeRdy_int_i_1__0_n_0));
+        .O(pMeRdy_int_i_1_n_0));
   FDRE pMeRdy_int_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\pDataFIFO_reg[0]_0 ),
         .CE(1'b1),
-        .D(pMeRdy_int_i_1__0_n_0),
+        .D(pMeRdy_int_i_1_n_0),
         .Q(pMeRdy_int_reg_0),
-        .R(pAligned_reg));
+        .R(pMeRdy_int_reg_1));
   LUT1 #(
     .INIT(2'h1)) 
     \pRdA[0]_i_1__0 
        (.I0(pRdA[0]),
         .O(\pRdA[0]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \pRdA[1]_i_1__0 
        (.I0(pRdA[0]),
         .I1(pRdA[1]),
         .O(\pRdA[1]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT3 #(
-    .INIT(8'h6A)) 
+    .INIT(8'h78)) 
     \pRdA[2]_i_1__0 
-       (.I0(pRdA[2]),
-        .I1(pRdA[1]),
-        .I2(pRdA[0]),
+       (.I0(pRdA[1]),
+        .I1(pRdA[0]),
+        .I2(pRdA[2]),
         .O(\pRdA[2]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT4 #(
-    .INIT(16'h6AAA)) 
+    .INIT(16'h7F80)) 
     \pRdA[3]_i_1__0 
-       (.I0(pRdA[3]),
+       (.I0(pRdA[2]),
         .I1(pRdA[0]),
         .I2(pRdA[1]),
-        .I3(pRdA[2]),
+        .I3(pRdA[3]),
         .O(\pRdA[3]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT5 #(
-    .INIT(32'h6AAAAAAA)) 
+    .INIT(32'h7FFF8000)) 
     \pRdA[4]_i_1__0 
-       (.I0(pRdA[4]),
-        .I1(pRdA[2]),
-        .I2(pRdA[1]),
-        .I3(pRdA[0]),
-        .I4(pRdA[3]),
+       (.I0(pRdA[3]),
+        .I1(pRdA[1]),
+        .I2(pRdA[0]),
+        .I3(pRdA[2]),
+        .I4(pRdA[4]),
         .O(\pRdA[4]_i_1__0_n_0 ));
   FDRE \pRdA_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\pDataFIFO_reg[0]_0 ),
         .CE(pRdEn),
         .D(\pRdA[0]_i_1__0_n_0 ),
         .Q(pRdA[0]),
-        .R(pAligned_reg));
+        .R(pMeRdy_int_reg_1));
   FDRE \pRdA_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\pDataFIFO_reg[0]_0 ),
         .CE(pRdEn),
         .D(\pRdA[1]_i_1__0_n_0 ),
         .Q(pRdA[1]),
-        .R(pAligned_reg));
+        .R(pMeRdy_int_reg_1));
   FDRE \pRdA_reg[2] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\pDataFIFO_reg[0]_0 ),
         .CE(pRdEn),
         .D(\pRdA[2]_i_1__0_n_0 ),
         .Q(pRdA[2]),
-        .R(pAligned_reg));
+        .R(pMeRdy_int_reg_1));
   FDRE \pRdA_reg[3] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\pDataFIFO_reg[0]_0 ),
         .CE(pRdEn),
         .D(\pRdA[3]_i_1__0_n_0 ),
         .Q(pRdA[3]),
-        .R(pAligned_reg));
+        .R(pMeRdy_int_reg_1));
   FDRE \pRdA_reg[4] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\pDataFIFO_reg[0]_0 ),
         .CE(pRdEn),
         .D(\pRdA[4]_i_1__0_n_0 ),
         .Q(pRdA[4]),
-        .R(pAligned_reg));
+        .R(pMeRdy_int_reg_1));
   LUT6 #(
-    .INIT(64'hFBBBBBBBFAAAAAAA)) 
+    .INIT(64'hEAAAFFFFEAAAEAAA)) 
     pRdEn_i_1__1
        (.I0(pAllVldBgnFlag),
-        .I1(pBlnkBgnFlag),
-        .I2(pRdy_2),
-        .I3(pMeRdy_int_reg_0),
-        .I4(pRdy_1),
+        .I1(pMeRdy_int_reg_0),
+        .I2(pRdy_1),
+        .I3(pRdy_2),
+        .I4(pBlnkBgnFlag),
         .I5(pRdEn),
         .O(pRdEn_i_1__1_n_0));
   FDRE pRdEn_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\pDataFIFO_reg[0]_0 ),
         .CE(1'b1),
         .D(pRdEn_i_1__1_n_0),
         .Q(pRdEn),
-        .R(pAligned_reg));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
-  LUT2 #(
-    .INIT(4'hB)) 
+        .R(pMeRdy_int_reg_1));
+  LUT6 #(
+    .INIT(64'hDDDDDFDDDDDDDDDD)) 
     pTokenFlag_i_1
-       (.I0(pC0),
-        .I1(pRdEn),
+       (.I0(pRdEn),
+        .I1(pTokenFlag_i_2_n_0),
+        .I2(\pDataIn[1]_i_2_n_0 ),
+        .I3(pDataInBnd[1]),
+        .I4(pDataInBnd[8]),
+        .I5(pDataInBnd[0]),
         .O(pTokenFlag0));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT5 #(
+    .INIT(32'h00000200)) 
+    pTokenFlag_i_2
+       (.I0(pDataInBnd[2]),
+        .I1(pDataInBnd[1]),
+        .I2(pDataInBnd[3]),
+        .I3(pDataInBnd[8]),
+        .I4(\pDataIn[3]_i_2_n_0 ),
+        .O(pTokenFlag_i_2_n_0));
   FDRE pTokenFlag_q_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\pDataFIFO_reg[0]_0 ),
         .CE(1'b1),
         .D(pTokenFlag),
         .Q(pTokenFlag_q),
         .R(1'b0));
   FDRE pTokenFlag_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\pDataFIFO_reg[0]_0 ),
         .CE(1'b1),
         .D(pTokenFlag0),
         .Q(pTokenFlag),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
-  LUT1 #(
-    .INIT(2'h1)) 
+  LUT6 #(
+    .INIT(64'hFFF0BFBFFFFFBFBF)) 
     pVde_i_1
-       (.I0(pC0),
+       (.I0(pVde_i_2_n_0),
+        .I1(pDataInBnd[2]),
+        .I2(pDataInBnd[8]),
+        .I3(\pDataIn[1]_i_2_n_0 ),
+        .I4(pDataInBnd[1]),
+        .I5(pDataInBnd[0]),
         .O(pVde));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFBF)) 
+    pVde_i_2
+       (.I0(pDataInBnd[5]),
+        .I1(pDataInBnd[4]),
+        .I2(pDataInBnd[6]),
+        .I3(pDataInBnd[7]),
+        .I4(pDataInBnd[0]),
+        .I5(pDataInBnd[3]),
+        .O(pVde_i_2_n_0));
   LUT1 #(
     .INIT(2'h1)) 
     \pWrA[0]_i_1__1 
-       (.I0(pWrA_reg__0[0]),
-        .O(p_0_in__0[0]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+       (.I0(\pWrA_reg_n_0_[0] ),
+        .O(p_0_in[0]));
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \pWrA[1]_i_1__1 
-       (.I0(pWrA_reg__0[0]),
-        .I1(pWrA_reg__0[1]),
-        .O(p_0_in__0[1]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+       (.I0(\pWrA_reg_n_0_[0] ),
+        .I1(\pWrA_reg_n_0_[1] ),
+        .O(p_0_in[1]));
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT3 #(
-    .INIT(8'h6A)) 
+    .INIT(8'h78)) 
     \pWrA[2]_i_1__1 
-       (.I0(pWrA_reg__0[2]),
-        .I1(pWrA_reg__0[1]),
-        .I2(pWrA_reg__0[0]),
-        .O(p_0_in__0[2]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+       (.I0(\pWrA_reg_n_0_[1] ),
+        .I1(\pWrA_reg_n_0_[0] ),
+        .I2(\pWrA_reg_n_0_[2] ),
+        .O(p_0_in[2]));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT4 #(
-    .INIT(16'h6AAA)) 
+    .INIT(16'h7F80)) 
     \pWrA[3]_i_1__1 
-       (.I0(pWrA_reg__0[3]),
-        .I1(pWrA_reg__0[0]),
-        .I2(pWrA_reg__0[1]),
-        .I3(pWrA_reg__0[2]),
-        .O(p_0_in__0[3]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+       (.I0(\pWrA_reg_n_0_[2] ),
+        .I1(\pWrA_reg_n_0_[0] ),
+        .I2(\pWrA_reg_n_0_[1] ),
+        .I3(\pWrA_reg_n_0_[3] ),
+        .O(p_0_in[3]));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT5 #(
-    .INIT(32'h6AAAAAAA)) 
+    .INIT(32'h7FFF8000)) 
     \pWrA[4]_i_1__1 
-       (.I0(pWrA_reg__0[4]),
-        .I1(pWrA_reg__0[2]),
-        .I2(pWrA_reg__0[1]),
-        .I3(pWrA_reg__0[0]),
-        .I4(pWrA_reg__0[3]),
-        .O(p_0_in__0[4]));
+       (.I0(\pWrA_reg_n_0_[3] ),
+        .I1(\pWrA_reg_n_0_[1] ),
+        .I2(\pWrA_reg_n_0_[0] ),
+        .I3(\pWrA_reg_n_0_[2] ),
+        .I4(\pWrA_reg_n_0_[4] ),
+        .O(p_0_in[4]));
   FDRE \pWrA_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\pDataFIFO_reg[0]_0 ),
         .CE(1'b1),
-        .D(p_0_in__0[0]),
-        .Q(pWrA_reg__0[0]),
-        .R(pAligned_reg));
+        .D(p_0_in[0]),
+        .Q(\pWrA_reg_n_0_[0] ),
+        .R(pMeRdy_int_reg_1));
   FDRE \pWrA_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\pDataFIFO_reg[0]_0 ),
         .CE(1'b1),
-        .D(p_0_in__0[1]),
-        .Q(pWrA_reg__0[1]),
-        .R(pAligned_reg));
+        .D(p_0_in[1]),
+        .Q(\pWrA_reg_n_0_[1] ),
+        .R(pMeRdy_int_reg_1));
   FDRE \pWrA_reg[2] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\pDataFIFO_reg[0]_0 ),
         .CE(1'b1),
-        .D(p_0_in__0[2]),
-        .Q(pWrA_reg__0[2]),
-        .R(pAligned_reg));
+        .D(p_0_in[2]),
+        .Q(\pWrA_reg_n_0_[2] ),
+        .R(pMeRdy_int_reg_1));
   FDRE \pWrA_reg[3] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\pDataFIFO_reg[0]_0 ),
         .CE(1'b1),
-        .D(p_0_in__0[3]),
-        .Q(pWrA_reg__0[3]),
-        .R(pAligned_reg));
+        .D(p_0_in[3]),
+        .Q(\pWrA_reg_n_0_[3] ),
+        .R(pMeRdy_int_reg_1));
   FDRE \pWrA_reg[4] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\pDataFIFO_reg[0]_0 ),
         .CE(1'b1),
-        .D(p_0_in__0[4]),
-        .Q(pWrA_reg__0[4]),
-        .R(pAligned_reg));
+        .D(p_0_in[4]),
+        .Q(\pWrA_reg_n_0_[4] ),
+        .R(pMeRdy_int_reg_1));
 endmodule
 
 (* ORIG_REF_NAME = "EEPROM_8b" *) 
@@ -1538,9 +1807,17 @@ module hdmi_in_dvi2rgb_0_0_EEPROM_8b
   wire DDC_SCL_I;
   wire DDC_SDA_I;
   wire DDC_SDA_T;
+  wire \FSM_onehot_sState_reg_n_0_[0] ;
+  wire \FSM_onehot_sState_reg_n_0_[1] ;
+  wire \FSM_onehot_sState_reg_n_0_[2] ;
+  wire \FSM_onehot_sState_reg_n_0_[3] ;
+  wire I2C_SlaveController_n_1;
   wire I2C_SlaveController_n_10;
   wire I2C_SlaveController_n_11;
+  wire I2C_SlaveController_n_12;
+  wire I2C_SlaveController_n_13;
   wire I2C_SlaveController_n_2;
+  wire I2C_SlaveController_n_3;
   wire I2C_SlaveController_n_4;
   wire I2C_SlaveController_n_5;
   wire I2C_SlaveController_n_6;
@@ -1550,8 +1827,7 @@ module hdmi_in_dvi2rgb_0_0_EEPROM_8b
   wire RefClk;
   wire [6:0]sAddr;
   wire [6:0]sAddr_0;
-  wire \sAddr_rep[3]_i_2_n_0 ;
-  wire \sAddr_rep[4]_i_2_n_0 ;
+  wire \sAddr_rep[5]_i_2_n_0 ;
   wire \sAddr_rep[6]_i_3_n_0 ;
   wire [7:0]sI2C_DataOut;
   wire \sI2C_DataOut[0]_i_2_n_0 ;
@@ -1578,142 +1854,170 @@ module hdmi_in_dvi2rgb_0_0_EEPROM_8b
   wire \sI2C_DataOut_reg[5]_i_1_n_0 ;
   wire \sI2C_DataOut_reg[6]_i_1_n_0 ;
   wire \sI2C_DataOut_reg[7]_i_1_n_0 ;
-  wire sI2C_Done;
-  wire sI2C_End;
-  wire [1:0]sState;
-  wire \sState[0]_i_1_n_0 ;
-  wire \sState[1]_i_1_n_0 ;
 
+  (* FSM_ENCODED_STATES = "stregaddress:0100,stwrite:1000,stread:0010,stidle:0001" *) 
+  FDRE #(
+    .INIT(1'b1)) 
+    \FSM_onehot_sState_reg[0] 
+       (.C(RefClk),
+        .CE(I2C_SlaveController_n_3),
+        .D(I2C_SlaveController_n_4),
+        .Q(\FSM_onehot_sState_reg_n_0_[0] ),
+        .R(1'b0));
+  (* FSM_ENCODED_STATES = "stregaddress:0100,stwrite:1000,stread:0010,stidle:0001" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \FSM_onehot_sState_reg[1] 
+       (.C(RefClk),
+        .CE(I2C_SlaveController_n_3),
+        .D(I2C_SlaveController_n_13),
+        .Q(\FSM_onehot_sState_reg_n_0_[1] ),
+        .R(1'b0));
+  (* FSM_ENCODED_STATES = "stregaddress:0100,stwrite:1000,stread:0010,stidle:0001" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \FSM_onehot_sState_reg[2] 
+       (.C(RefClk),
+        .CE(I2C_SlaveController_n_3),
+        .D(I2C_SlaveController_n_12),
+        .Q(\FSM_onehot_sState_reg_n_0_[2] ),
+        .R(1'b0));
+  (* FSM_ENCODED_STATES = "stregaddress:0100,stwrite:1000,stread:0010,stidle:0001" *) 
+  FDRE #(
+    .INIT(1'b0)) 
+    \FSM_onehot_sState_reg[3] 
+       (.C(RefClk),
+        .CE(I2C_SlaveController_n_3),
+        .D(I2C_SlaveController_n_2),
+        .Q(\FSM_onehot_sState_reg_n_0_[3] ),
+        .R(1'b0));
   hdmi_in_dvi2rgb_0_0_TWI_SlaveCtl I2C_SlaveController
        (.D({I2C_SlaveController_n_5,I2C_SlaveController_n_6,I2C_SlaveController_n_7,I2C_SlaveController_n_8,I2C_SlaveController_n_9,I2C_SlaveController_n_10,I2C_SlaveController_n_11}),
         .DDC_SCL_I(DDC_SCL_I),
         .DDC_SDA_I(DDC_SDA_I),
         .DDC_SDA_T(DDC_SDA_T),
-        .E(I2C_SlaveController_n_4),
+        .E(I2C_SlaveController_n_1),
+        .END_O_reg_0(I2C_SlaveController_n_3),
+        .END_O_reg_1(I2C_SlaveController_n_4),
+        .\FSM_onehot_sState_reg[0] (I2C_SlaveController_n_12),
+        .\FSM_onehot_sState_reg[0]_0 (I2C_SlaveController_n_13),
+        .\FSM_onehot_sState_reg[0]_1 (\FSM_onehot_sState_reg_n_0_[0] ),
+        .\FSM_onehot_sState_reg[3] (I2C_SlaveController_n_2),
+        .\FSM_onehot_sState_reg[3]_0 (\FSM_onehot_sState_reg_n_0_[3] ),
         .Q(sI2C_DataOut),
         .RefClk(RefClk),
-        .rd_wrn_reg_0(I2C_SlaveController_n_2),
-        .\sAddr_reg[3] (\sAddr_rep[4]_i_2_n_0 ),
-        .\sAddr_reg[4] (\sAddr_rep[6]_i_3_n_0 ),
+        .\sAddr_reg[0] (\FSM_onehot_sState_reg_n_0_[1] ),
+        .\sAddr_reg[0]_0 (\FSM_onehot_sState_reg_n_0_[2] ),
+        .\sAddr_reg[4] (\sAddr_rep[5]_i_2_n_0 ),
         .\sAddr_reg[6] (sAddr),
-        .sI2C_Done(sI2C_Done),
-        .sI2C_End(sI2C_End),
-        .sState(sState),
-        .\sState_reg[0] (\sAddr_rep[3]_i_2_n_0 ));
+        .\sAddr_reg[6]_0 (\sAddr_rep[6]_i_3_n_0 ));
   FDRE \sAddr_reg[0] 
        (.C(RefClk),
-        .CE(I2C_SlaveController_n_4),
+        .CE(I2C_SlaveController_n_1),
         .D(I2C_SlaveController_n_11),
         .Q(sAddr[0]),
         .R(1'b0));
   FDRE \sAddr_reg[1] 
        (.C(RefClk),
-        .CE(I2C_SlaveController_n_4),
+        .CE(I2C_SlaveController_n_1),
         .D(I2C_SlaveController_n_10),
         .Q(sAddr[1]),
         .R(1'b0));
   FDRE \sAddr_reg[2] 
        (.C(RefClk),
-        .CE(I2C_SlaveController_n_4),
+        .CE(I2C_SlaveController_n_1),
         .D(I2C_SlaveController_n_9),
         .Q(sAddr[2]),
         .R(1'b0));
   FDRE \sAddr_reg[3] 
        (.C(RefClk),
-        .CE(I2C_SlaveController_n_4),
+        .CE(I2C_SlaveController_n_1),
         .D(I2C_SlaveController_n_8),
         .Q(sAddr[3]),
         .R(1'b0));
   FDRE \sAddr_reg[4] 
        (.C(RefClk),
-        .CE(I2C_SlaveController_n_4),
+        .CE(I2C_SlaveController_n_1),
         .D(I2C_SlaveController_n_7),
         .Q(sAddr[4]),
         .R(1'b0));
   FDRE \sAddr_reg[5] 
        (.C(RefClk),
-        .CE(I2C_SlaveController_n_4),
+        .CE(I2C_SlaveController_n_1),
         .D(I2C_SlaveController_n_6),
         .Q(sAddr[5]),
         .R(1'b0));
   FDRE \sAddr_reg[6] 
        (.C(RefClk),
-        .CE(I2C_SlaveController_n_4),
+        .CE(I2C_SlaveController_n_1),
         .D(I2C_SlaveController_n_5),
         .Q(sAddr[6]),
         .R(1'b0));
   (* equivalent_register_removal = "no" *) 
   FDRE \sAddr_reg_rep[0] 
        (.C(RefClk),
-        .CE(I2C_SlaveController_n_4),
+        .CE(I2C_SlaveController_n_1),
         .D(I2C_SlaveController_n_11),
         .Q(sAddr_0[0]),
         .R(1'b0));
   (* equivalent_register_removal = "no" *) 
   FDRE \sAddr_reg_rep[1] 
        (.C(RefClk),
-        .CE(I2C_SlaveController_n_4),
+        .CE(I2C_SlaveController_n_1),
         .D(I2C_SlaveController_n_10),
         .Q(sAddr_0[1]),
         .R(1'b0));
   (* equivalent_register_removal = "no" *) 
   FDRE \sAddr_reg_rep[2] 
        (.C(RefClk),
-        .CE(I2C_SlaveController_n_4),
+        .CE(I2C_SlaveController_n_1),
         .D(I2C_SlaveController_n_9),
         .Q(sAddr_0[2]),
         .R(1'b0));
   (* equivalent_register_removal = "no" *) 
   FDRE \sAddr_reg_rep[3] 
        (.C(RefClk),
-        .CE(I2C_SlaveController_n_4),
+        .CE(I2C_SlaveController_n_1),
         .D(I2C_SlaveController_n_8),
         .Q(sAddr_0[3]),
         .R(1'b0));
   (* equivalent_register_removal = "no" *) 
   FDRE \sAddr_reg_rep[4] 
        (.C(RefClk),
-        .CE(I2C_SlaveController_n_4),
+        .CE(I2C_SlaveController_n_1),
         .D(I2C_SlaveController_n_7),
         .Q(sAddr_0[4]),
         .R(1'b0));
   (* equivalent_register_removal = "no" *) 
   FDRE \sAddr_reg_rep[5] 
        (.C(RefClk),
-        .CE(I2C_SlaveController_n_4),
+        .CE(I2C_SlaveController_n_1),
         .D(I2C_SlaveController_n_6),
         .Q(sAddr_0[5]),
         .R(1'b0));
   (* equivalent_register_removal = "no" *) 
   FDRE \sAddr_reg_rep[6] 
        (.C(RefClk),
-        .CE(I2C_SlaveController_n_4),
+        .CE(I2C_SlaveController_n_1),
         .D(I2C_SlaveController_n_5),
         .Q(sAddr_0[6]),
         .R(1'b0));
-  LUT2 #(
-    .INIT(4'h8)) 
-    \sAddr_rep[3]_i_2 
-       (.I0(sState[0]),
-        .I1(sState[1]),
-        .O(\sAddr_rep[3]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair93" *) 
-  LUT4 #(
-    .INIT(16'h8000)) 
-    \sAddr_rep[4]_i_2 
-       (.I0(sAddr[3]),
+  (* SOFT_HLUTNM = "soft_lutpair97" *) 
+  LUT3 #(
+    .INIT(8'h80)) 
+    \sAddr_rep[5]_i_2 
+       (.I0(sAddr[2]),
         .I1(sAddr[1]),
         .I2(sAddr[0]),
-        .I3(sAddr[2]),
-        .O(\sAddr_rep[4]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair93" *) 
+        .O(\sAddr_rep[5]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair97" *) 
   LUT5 #(
     .INIT(32'h80000000)) 
     \sAddr_rep[6]_i_3 
        (.I0(sAddr[4]),
         .I1(sAddr[2]),
-        .I2(sAddr[0]),
-        .I3(sAddr[1]),
+        .I2(sAddr[1]),
+        .I3(sAddr[0]),
         .I4(sAddr[3]),
         .O(\sAddr_rep[6]_i_3_n_0 ));
   LUT6 #(
@@ -1964,48 +2268,17 @@ module hdmi_in_dvi2rgb_0_0_EEPROM_8b
         .I1(\sI2C_DataOut[7]_i_3_n_0 ),
         .O(\sI2C_DataOut_reg[7]_i_1_n_0 ),
         .S(sAddr_0[3]));
-  (* SOFT_HLUTNM = "soft_lutpair92" *) 
-  LUT4 #(
-    .INIT(16'h024E)) 
-    \sState[0]_i_1 
-       (.I0(sI2C_Done),
-        .I1(sState[0]),
-        .I2(sState[1]),
-        .I3(sI2C_End),
-        .O(\sState[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair92" *) 
-  LUT5 #(
-    .INIT(32'h0004FF04)) 
-    \sState[1]_i_1 
-       (.I0(I2C_SlaveController_n_2),
-        .I1(sI2C_Done),
-        .I2(sState[0]),
-        .I3(sState[1]),
-        .I4(sI2C_End),
-        .O(\sState[1]_i_1_n_0 ));
-  FDRE \sState_reg[0] 
-       (.C(RefClk),
-        .CE(1'b1),
-        .D(\sState[0]_i_1_n_0 ),
-        .Q(sState[0]),
-        .R(1'b0));
-  FDRE \sState_reg[1] 
-       (.C(RefClk),
-        .CE(1'b1),
-        .D(\sState[1]_i_1_n_0 ),
-        .Q(sState[1]),
-        .R(1'b0));
 endmodule
 
 (* ORIG_REF_NAME = "GlitchFilter" *) 
 module hdmi_in_dvi2rgb_0_0_GlitchFilter
-   (\Filter.sOut_reg_0 ,
-    dScl_reg,
+   (\Filter.sIn_q_reg_0 ,
+    \Filter.sOut_reg_0 ,
     out,
     RefClk,
     SS);
+  output \Filter.sIn_q_reg_0 ;
   output \Filter.sOut_reg_0 ;
-  output dScl_reg;
   input [0:0]out;
   input RefClk;
   input [0:0]SS;
@@ -2015,28 +2288,28 @@ module hdmi_in_dvi2rgb_0_0_GlitchFilter
   wire \Filter.cntPeriods[3]_i_2__0_n_0 ;
   wire \Filter.cntPeriods[3]_i_3__0_n_0 ;
   wire [3:0]\Filter.cntPeriods_reg__0 ;
+  wire \Filter.sIn_q_reg_0 ;
   wire \Filter.sOut_i_1__0_n_0 ;
   wire \Filter.sOut_reg_0 ;
   wire RefClk;
   wire [0:0]SS;
-  wire dScl_reg;
   wire [0:0]out;
   wire [0:0]p_0_in__0;
 
-  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  (* SOFT_HLUTNM = "soft_lutpair77" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \Filter.cntPeriods[0]_i_1__0 
        (.I0(\Filter.cntPeriods_reg__0 [0]),
         .O(p_0_in__0));
-  (* SOFT_HLUTNM = "soft_lutpair85" *) 
+  (* SOFT_HLUTNM = "soft_lutpair78" *) 
   LUT2 #(
     .INIT(4'h9)) 
     \Filter.cntPeriods[1]_i_1__0 
        (.I0(\Filter.cntPeriods_reg__0 [0]),
         .I1(\Filter.cntPeriods_reg__0 [1]),
         .O(\Filter.cntPeriods[1]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair85" *) 
+  (* SOFT_HLUTNM = "soft_lutpair78" *) 
   LUT3 #(
     .INIT(8'hE1)) 
     \Filter.cntPeriods[2]_i_1__0 
@@ -2052,7 +2325,7 @@ module hdmi_in_dvi2rgb_0_0_GlitchFilter
         .I2(\Filter.cntPeriods_reg__0 [2]),
         .I3(\Filter.cntPeriods_reg__0 [3]),
         .O(\Filter.cntPeriods[3]_i_2__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  (* SOFT_HLUTNM = "soft_lutpair77" *) 
   LUT4 #(
     .INIT(16'hFE01)) 
     \Filter.cntPeriods[3]_i_3__0 
@@ -2097,23 +2370,23 @@ module hdmi_in_dvi2rgb_0_0_GlitchFilter
        (.C(RefClk),
         .CE(1'b1),
         .D(out),
-        .Q(\Filter.sOut_reg_0 ),
+        .Q(\Filter.sIn_q_reg_0 ),
         .R(1'b0));
   LUT6 #(
     .INIT(64'hFFFFFFFE00000002)) 
     \Filter.sOut_i_1__0 
-       (.I0(\Filter.sOut_reg_0 ),
+       (.I0(\Filter.sIn_q_reg_0 ),
         .I1(\Filter.cntPeriods_reg__0 [3]),
         .I2(\Filter.cntPeriods_reg__0 [2]),
         .I3(\Filter.cntPeriods_reg__0 [0]),
         .I4(\Filter.cntPeriods_reg__0 [1]),
-        .I5(dScl_reg),
+        .I5(\Filter.sOut_reg_0 ),
         .O(\Filter.sOut_i_1__0_n_0 ));
   FDRE \Filter.sOut_reg 
        (.C(RefClk),
         .CE(1'b1),
         .D(\Filter.sOut_i_1__0_n_0 ),
-        .Q(dScl_reg),
+        .Q(\Filter.sOut_reg_0 ),
         .R(1'b0));
 endmodule
 
@@ -2143,20 +2416,20 @@ module hdmi_in_dvi2rgb_0_0_GlitchFilter_6
   wire sIn_q;
   wire sOut;
 
-  (* SOFT_HLUTNM = "soft_lutpair86" *) 
+  (* SOFT_HLUTNM = "soft_lutpair79" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \Filter.cntPeriods[0]_i_1 
        (.I0(\Filter.cntPeriods_reg__0 [0]),
         .O(p_0_in));
-  (* SOFT_HLUTNM = "soft_lutpair87" *) 
+  (* SOFT_HLUTNM = "soft_lutpair80" *) 
   LUT2 #(
     .INIT(4'h9)) 
     \Filter.cntPeriods[1]_i_1 
        (.I0(\Filter.cntPeriods_reg__0 [0]),
         .I1(\Filter.cntPeriods_reg__0 [1]),
         .O(\Filter.cntPeriods[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair87" *) 
+  (* SOFT_HLUTNM = "soft_lutpair80" *) 
   LUT3 #(
     .INIT(8'hE1)) 
     \Filter.cntPeriods[2]_i_1 
@@ -2172,7 +2445,7 @@ module hdmi_in_dvi2rgb_0_0_GlitchFilter_6
         .I2(\Filter.cntPeriods_reg__0 [2]),
         .I3(\Filter.cntPeriods_reg__0 [3]),
         .O(\Filter.cntPeriods[3]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair86" *) 
+  (* SOFT_HLUTNM = "soft_lutpair79" *) 
   LUT4 #(
     .INIT(16'hFE01)) 
     \Filter.cntPeriods[3]_i_3 
@@ -2243,24 +2516,24 @@ module hdmi_in_dvi2rgb_0_0_InputSERDES
     pDataInRaw,
     TMDS_Data_p,
     TMDS_Data_n,
-    rMMCM_LckdRisingFlag_reg,
+    \pIDLY_CNT_Q_reg[4] ,
     pIDLY_CE,
     pIDLY_INC,
     pIDLY_LD,
     pBitslip,
-    \rMMCM_Reset_q_reg[0] ,
+    \pDataQ_reg[8] ,
     CLKB,
     out);
   output [4:0]D;
   output [9:0]pDataInRaw;
   input [0:0]TMDS_Data_p;
   input [0:0]TMDS_Data_n;
-  input rMMCM_LckdRisingFlag_reg;
+  input \pIDLY_CNT_Q_reg[4] ;
   input pIDLY_CE;
   input pIDLY_INC;
   input pIDLY_LD;
   input pBitslip;
-  input \rMMCM_Reset_q_reg[0] ;
+  input \pDataQ_reg[8] ;
   input CLKB;
   input [0:0]out;
 
@@ -2273,11 +2546,11 @@ module hdmi_in_dvi2rgb_0_0_InputSERDES
   wire [0:0]out;
   wire pBitslip;
   wire [9:0]pDataInRaw;
+  wire \pDataQ_reg[8] ;
   wire pIDLY_CE;
+  wire \pIDLY_CNT_Q_reg[4] ;
   wire pIDLY_INC;
   wire pIDLY_LD;
-  wire rMMCM_LckdRisingFlag_reg;
-  wire \rMMCM_Reset_q_reg[0] ;
   wire sDataIn;
   wire sDataInDly;
   wire NLW_DeserializerMaster_O_UNCONNECTED;
@@ -2321,9 +2594,9 @@ module hdmi_in_dvi2rgb_0_0_InputSERDES
        (.BITSLIP(pBitslip),
         .CE1(1'b1),
         .CE2(1'b1),
-        .CLK(\rMMCM_Reset_q_reg[0] ),
+        .CLK(\pDataQ_reg[8] ),
         .CLKB(CLKB),
-        .CLKDIV(rMMCM_LckdRisingFlag_reg),
+        .CLKDIV(\pIDLY_CNT_Q_reg[4] ),
         .CLKDIVP(1'b0),
         .D(1'b0),
         .DDLY(sDataInDly),
@@ -2376,9 +2649,9 @@ module hdmi_in_dvi2rgb_0_0_InputSERDES
        (.BITSLIP(pBitslip),
         .CE1(1'b1),
         .CE2(1'b1),
-        .CLK(\rMMCM_Reset_q_reg[0] ),
+        .CLK(\pDataQ_reg[8] ),
         .CLKB(CLKB),
-        .CLKDIV(rMMCM_LckdRisingFlag_reg),
+        .CLKDIV(\pIDLY_CNT_Q_reg[4] ),
         .CLKDIVP(1'b0),
         .D(1'b0),
         .DDLY(1'b0),
@@ -2423,7 +2696,7 @@ module hdmi_in_dvi2rgb_0_0_InputSERDES
     .REFCLK_FREQUENCY(200.000000),
     .SIGNAL_PATTERN("DATA")) 
     InputDelay
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\pIDLY_CNT_Q_reg[4] ),
         .CE(pIDLY_CE),
         .CINVCTRL(1'b0),
         .CNTVALUEIN({1'b0,1'b0,1'b0,1'b0,1'b0}),
@@ -2440,44 +2713,44 @@ endmodule
 (* ORIG_REF_NAME = "InputSERDES" *) 
 module hdmi_in_dvi2rgb_0_0_InputSERDES_11
    (D,
-    pDataInRaw,
+    I33,
     TMDS_Data_p,
     TMDS_Data_n,
-    rMMCM_LckdRisingFlag_reg,
+    \pDataQ_reg[1] ,
     pIDLY_CE,
     pIDLY_INC,
     pIDLY_LD,
     pBitslip,
-    \rMMCM_Reset_q_reg[0] ,
+    \pDataQ_reg[1]_0 ,
     CLKB,
     AS);
   output [4:0]D;
-  output [9:0]pDataInRaw;
+  output [9:0]I33;
   input [0:0]TMDS_Data_p;
   input [0:0]TMDS_Data_n;
-  input rMMCM_LckdRisingFlag_reg;
+  input \pDataQ_reg[1] ;
   input pIDLY_CE;
   input pIDLY_INC;
   input pIDLY_LD;
   input pBitslip;
-  input \rMMCM_Reset_q_reg[0] ;
+  input \pDataQ_reg[1]_0 ;
   input CLKB;
   input [0:0]AS;
 
   wire [0:0]AS;
   wire CLKB;
   wire [4:0]D;
+  wire [9:0]I33;
   wire [0:0]TMDS_Data_n;
   wire [0:0]TMDS_Data_p;
   wire icascade1;
   wire icascade2;
   wire pBitslip;
-  wire [9:0]pDataInRaw;
+  wire \pDataQ_reg[1] ;
+  wire \pDataQ_reg[1]_0 ;
   wire pIDLY_CE;
   wire pIDLY_INC;
   wire pIDLY_LD;
-  wire rMMCM_LckdRisingFlag_reg;
-  wire \rMMCM_Reset_q_reg[0] ;
   wire sDataIn;
   wire sDataInDly;
   wire NLW_DeserializerMaster_O_UNCONNECTED;
@@ -2521,9 +2794,9 @@ module hdmi_in_dvi2rgb_0_0_InputSERDES_11
        (.BITSLIP(pBitslip),
         .CE1(1'b1),
         .CE2(1'b1),
-        .CLK(\rMMCM_Reset_q_reg[0] ),
+        .CLK(\pDataQ_reg[1]_0 ),
         .CLKB(CLKB),
-        .CLKDIV(rMMCM_LckdRisingFlag_reg),
+        .CLKDIV(\pDataQ_reg[1] ),
         .CLKDIVP(1'b0),
         .D(1'b0),
         .DDLY(sDataInDly),
@@ -2533,14 +2806,14 @@ module hdmi_in_dvi2rgb_0_0_InputSERDES_11
         .OCLK(1'b0),
         .OCLKB(1'b0),
         .OFB(1'b0),
-        .Q1(pDataInRaw[9]),
-        .Q2(pDataInRaw[8]),
-        .Q3(pDataInRaw[7]),
-        .Q4(pDataInRaw[6]),
-        .Q5(pDataInRaw[5]),
-        .Q6(pDataInRaw[4]),
-        .Q7(pDataInRaw[3]),
-        .Q8(pDataInRaw[2]),
+        .Q1(I33[9]),
+        .Q2(I33[8]),
+        .Q3(I33[7]),
+        .Q4(I33[6]),
+        .Q5(I33[5]),
+        .Q6(I33[4]),
+        .Q7(I33[3]),
+        .Q8(I33[2]),
         .RST(AS),
         .SHIFTIN1(1'b0),
         .SHIFTIN2(1'b0),
@@ -2576,9 +2849,9 @@ module hdmi_in_dvi2rgb_0_0_InputSERDES_11
        (.BITSLIP(pBitslip),
         .CE1(1'b1),
         .CE2(1'b1),
-        .CLK(\rMMCM_Reset_q_reg[0] ),
+        .CLK(\pDataQ_reg[1]_0 ),
         .CLKB(CLKB),
-        .CLKDIV(rMMCM_LckdRisingFlag_reg),
+        .CLKDIV(\pDataQ_reg[1] ),
         .CLKDIVP(1'b0),
         .D(1'b0),
         .DDLY(1'b0),
@@ -2590,8 +2863,8 @@ module hdmi_in_dvi2rgb_0_0_InputSERDES_11
         .OFB(1'b0),
         .Q1(NLW_DeserializerSlave_Q1_UNCONNECTED),
         .Q2(NLW_DeserializerSlave_Q2_UNCONNECTED),
-        .Q3(pDataInRaw[1]),
-        .Q4(pDataInRaw[0]),
+        .Q3(I33[1]),
+        .Q4(I33[0]),
         .Q5(NLW_DeserializerSlave_Q5_UNCONNECTED),
         .Q6(NLW_DeserializerSlave_Q6_UNCONNECTED),
         .Q7(NLW_DeserializerSlave_Q7_UNCONNECTED),
@@ -2623,7 +2896,7 @@ module hdmi_in_dvi2rgb_0_0_InputSERDES_11
     .REFCLK_FREQUENCY(200.000000),
     .SIGNAL_PATTERN("DATA")) 
     InputDelay
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\pDataQ_reg[1] ),
         .CE(pIDLY_CE),
         .CINVCTRL(1'b0),
         .CNTVALUEIN({1'b0,1'b0,1'b0,1'b0,1'b0}),
@@ -2640,44 +2913,44 @@ endmodule
 (* ORIG_REF_NAME = "InputSERDES" *) 
 module hdmi_in_dvi2rgb_0_0_InputSERDES_18
    (D,
-    pDataInRaw,
+    I60,
     TMDS_Data_p,
     TMDS_Data_n,
-    rMMCM_LckdRisingFlag_reg,
+    \pIDLY_CNT_Q_reg[4] ,
     pIDLY_CE,
     pIDLY_INC,
     pIDLY_LD,
     pBitslip,
-    \rMMCM_Reset_q_reg[0] ,
+    \pDataQ_reg[8] ,
     CLKB,
     AS);
   output [4:0]D;
-  output [9:0]pDataInRaw;
+  output [9:0]I60;
   input [0:0]TMDS_Data_p;
   input [0:0]TMDS_Data_n;
-  input rMMCM_LckdRisingFlag_reg;
+  input \pIDLY_CNT_Q_reg[4] ;
   input pIDLY_CE;
   input pIDLY_INC;
   input pIDLY_LD;
   input pBitslip;
-  input \rMMCM_Reset_q_reg[0] ;
+  input \pDataQ_reg[8] ;
   input CLKB;
   input [0:0]AS;
 
   wire [0:0]AS;
   wire CLKB;
   wire [4:0]D;
+  wire [9:0]I60;
   wire [0:0]TMDS_Data_n;
   wire [0:0]TMDS_Data_p;
   wire icascade1;
   wire icascade2;
   wire pBitslip;
-  wire [9:0]pDataInRaw;
+  wire \pDataQ_reg[8] ;
   wire pIDLY_CE;
+  wire \pIDLY_CNT_Q_reg[4] ;
   wire pIDLY_INC;
   wire pIDLY_LD;
-  wire rMMCM_LckdRisingFlag_reg;
-  wire \rMMCM_Reset_q_reg[0] ;
   wire sDataIn;
   wire sDataInDly;
   wire NLW_DeserializerMaster_O_UNCONNECTED;
@@ -2721,9 +2994,9 @@ module hdmi_in_dvi2rgb_0_0_InputSERDES_18
        (.BITSLIP(pBitslip),
         .CE1(1'b1),
         .CE2(1'b1),
-        .CLK(\rMMCM_Reset_q_reg[0] ),
+        .CLK(\pDataQ_reg[8] ),
         .CLKB(CLKB),
-        .CLKDIV(rMMCM_LckdRisingFlag_reg),
+        .CLKDIV(\pIDLY_CNT_Q_reg[4] ),
         .CLKDIVP(1'b0),
         .D(1'b0),
         .DDLY(sDataInDly),
@@ -2733,14 +3006,14 @@ module hdmi_in_dvi2rgb_0_0_InputSERDES_18
         .OCLK(1'b0),
         .OCLKB(1'b0),
         .OFB(1'b0),
-        .Q1(pDataInRaw[9]),
-        .Q2(pDataInRaw[8]),
-        .Q3(pDataInRaw[7]),
-        .Q4(pDataInRaw[6]),
-        .Q5(pDataInRaw[5]),
-        .Q6(pDataInRaw[4]),
-        .Q7(pDataInRaw[3]),
-        .Q8(pDataInRaw[2]),
+        .Q1(I60[9]),
+        .Q2(I60[8]),
+        .Q3(I60[7]),
+        .Q4(I60[6]),
+        .Q5(I60[5]),
+        .Q6(I60[4]),
+        .Q7(I60[3]),
+        .Q8(I60[2]),
         .RST(AS),
         .SHIFTIN1(1'b0),
         .SHIFTIN2(1'b0),
@@ -2776,9 +3049,9 @@ module hdmi_in_dvi2rgb_0_0_InputSERDES_18
        (.BITSLIP(pBitslip),
         .CE1(1'b1),
         .CE2(1'b1),
-        .CLK(\rMMCM_Reset_q_reg[0] ),
+        .CLK(\pDataQ_reg[8] ),
         .CLKB(CLKB),
-        .CLKDIV(rMMCM_LckdRisingFlag_reg),
+        .CLKDIV(\pIDLY_CNT_Q_reg[4] ),
         .CLKDIVP(1'b0),
         .D(1'b0),
         .DDLY(1'b0),
@@ -2790,8 +3063,8 @@ module hdmi_in_dvi2rgb_0_0_InputSERDES_18
         .OFB(1'b0),
         .Q1(NLW_DeserializerSlave_Q1_UNCONNECTED),
         .Q2(NLW_DeserializerSlave_Q2_UNCONNECTED),
-        .Q3(pDataInRaw[1]),
-        .Q4(pDataInRaw[0]),
+        .Q3(I60[1]),
+        .Q4(I60[0]),
         .Q5(NLW_DeserializerSlave_Q5_UNCONNECTED),
         .Q6(NLW_DeserializerSlave_Q6_UNCONNECTED),
         .Q7(NLW_DeserializerSlave_Q7_UNCONNECTED),
@@ -2823,7 +3096,7 @@ module hdmi_in_dvi2rgb_0_0_InputSERDES_18
     .REFCLK_FREQUENCY(200.000000),
     .SIGNAL_PATTERN("DATA")) 
     InputDelay
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\pIDLY_CNT_Q_reg[4] ),
         .CE(pIDLY_CE),
         .CINVCTRL(1'b0),
         .CNTVALUEIN({1'b0,1'b0,1'b0,1'b0,1'b0}),
@@ -2839,64 +3112,52 @@ endmodule
 
 (* ORIG_REF_NAME = "PhaseAlign" *) 
 module hdmi_in_dvi2rgb_0_0_PhaseAlign
-   (pIDLY_CE,
+   (pIDLY_LD,
+    pIDLY_CE,
     pIDLY_INC,
-    pIDLY_LD,
     pVld_2,
-    pAlignErr_q_reg,
-    iIn_q_reg,
-    pAllVldBgnFlag0,
-    pBitslip_reg,
-    rMMCM_LckdRisingFlag_reg,
+    pError_reg_0,
+    \pState_reg[1]_0 ,
+    pBitslip0,
+    pError_reg_1,
     out,
-    pVld_1,
-    pVld_0,
-    pAllVld_q,
     pAlignErr_q,
+    SS,
     D,
-    pIDLY_CE_reg_0,
-    SR);
+    \pIDLY_CNT_Q_reg[4]_0 );
+  output pIDLY_LD;
   output pIDLY_CE;
   output pIDLY_INC;
-  output pIDLY_LD;
   output pVld_2;
-  output pAlignErr_q_reg;
-  output iIn_q_reg;
-  output pAllVldBgnFlag0;
-  output pBitslip_reg;
-  input rMMCM_LckdRisingFlag_reg;
+  output pError_reg_0;
+  output \pState_reg[1]_0 ;
+  output pBitslip0;
+  input pError_reg_1;
   input [0:0]out;
-  input pVld_1;
-  input pVld_0;
-  input pAllVld_q;
   input pAlignErr_q;
+  input [0:0]SS;
   input [8:0]D;
-  input [4:0]pIDLY_CE_reg_0;
-  input [0:0]SR;
+  input [4:0]\pIDLY_CNT_Q_reg[4]_0 ;
 
   wire [8:0]D;
-  wire [0:0]SR;
+  wire [0:0]SS;
   wire iIn_q_i_2_n_0;
-  wire iIn_q_reg;
   wire [0:0]out;
   wire pAlignErr_q;
-  wire pAlignErr_q_reg;
-  wire pAligned;
-  wire pAligned_i_2_n_0;
-  wire pAllVldBgnFlag0;
-  wire pAllVld_q;
-  wire pBitslip_reg;
+  wire pAligned_i_1_n_0;
+  wire pBitslip0;
   wire pBlankBegin;
   wire pBlankBegin0;
   wire \pCenterTap[0]_i_1_n_0 ;
   wire \pCenterTap[1]_i_1_n_0 ;
   wire \pCenterTap[2]_i_1_n_0 ;
   wire \pCenterTap[3]_i_1_n_0 ;
+  wire \pCenterTap[3]_i_2_n_0 ;
   wire \pCenterTap[4]_i_1_n_0 ;
   wire \pCenterTap[5]_i_1_n_0 ;
   wire \pCenterTap[5]_i_2_n_0 ;
   wire \pCenterTap[5]_i_3_n_0 ;
-  wire \pCenterTap[5]_i_5_n_0 ;
+  wire \pCenterTap[5]_i_4_n_0 ;
   wire \pCenterTap_reg_n_0_[0] ;
   wire \pCenterTap_reg_n_0_[1] ;
   wire \pCenterTap_reg_n_0_[2] ;
@@ -2904,8 +3165,6 @@ module hdmi_in_dvi2rgb_0_0_PhaseAlign
   wire \pCenterTap_reg_n_0_[4] ;
   wire \pCenterTap_reg_n_0_[5] ;
   wire \pCtlTknCnt[6]_i_3_n_0 ;
-  wire \pCtlTknCnt[6]_i_4_n_0 ;
-  wire \pCtlTknCnt[6]_i_5_n_0 ;
   wire [6:0]pCtlTknCnt_reg__0;
   wire pCtlTknOvf_i_1_n_0;
   wire pCtlTknOvf_reg_n_0;
@@ -2921,140 +3180,106 @@ module hdmi_in_dvi2rgb_0_0_PhaseAlign
   wire \pDelayWaitCnt[1]_i_1_n_0 ;
   wire \pDelayWaitCnt[1]_i_2_n_0 ;
   wire \pDelayWaitCnt[1]_i_3_n_0 ;
-  wire \pDelayWaitCnt[1]_i_4_n_0 ;
-  wire pDelayWaitOvf;
   wire pDelayWaitOvf_i_1_n_0;
-  wire pError;
-  wire \pEyeOpenCnt[0]_i_1_n_0 ;
-  wire \pEyeOpenCnt[1]_i_1_n_0 ;
-  wire \pEyeOpenCnt[2]_i_1_n_0 ;
-  wire \pEyeOpenCnt[3]_i_1_n_0 ;
-  wire \pEyeOpenCnt[4]_i_1_n_0 ;
-  wire \pEyeOpenCnt[4]_i_2_n_0 ;
+  wire pDelayWaitOvf_i_2_n_0;
+  wire pDelayWaitOvf_reg_n_0;
+  wire pError_i_1_n_0;
+  wire pError_reg_0;
+  wire pError_reg_1;
+  wire \pEyeOpenCnt[4]_i_4_n_0 ;
+  wire \pEyeOpenCnt[4]_i_5_n_0 ;
   wire \pEyeOpenCnt_reg_n_0_[0] ;
   wire \pEyeOpenCnt_reg_n_0_[1] ;
   wire \pEyeOpenCnt_reg_n_0_[2] ;
   wire \pEyeOpenCnt_reg_n_0_[3] ;
   wire \pEyeOpenCnt_reg_n_0_[4] ;
+  wire pEyeOpenEn;
   wire pEyeOpenRst;
-  wire pFoundEyeFlag;
   wire pFoundEyeFlag_i_1_n_0;
   wire pFoundEyeFlag_i_2_n_0;
-  wire pFoundEyeFlag_i_3_n_0;
-  wire pFoundEyeFlag_i_4_n_0;
-  wire pFoundEyeFlag_i_5_n_0;
-  wire pFoundJtrFlag;
+  wire pFoundEyeFlag_reg_n_0;
   wire pFoundJtrFlag_i_1_n_0;
   wire pFoundJtrFlag_i_2_n_0;
+  wire pFoundJtrFlag_reg_n_0;
   wire pIDLY_CE;
-  wire pIDLY_CE_0;
-  wire pIDLY_CE_i_2_n_0;
-  wire pIDLY_CE_i_3_n_0;
-  wire [4:0]pIDLY_CE_reg_0;
+  wire pIDLY_CE_i_1_n_0;
+  wire [4:0]\pIDLY_CNT_Q_reg[4]_0 ;
   wire \pIDLY_CNT_Q_reg_n_0_[0] ;
   wire \pIDLY_CNT_Q_reg_n_0_[1] ;
   wire \pIDLY_CNT_Q_reg_n_0_[2] ;
   wire \pIDLY_CNT_Q_reg_n_0_[3] ;
   wire \pIDLY_CNT_Q_reg_n_0_[4] ;
   wire pIDLY_INC;
-  wire pIDLY_INC_2;
   wire pIDLY_INC_i_1_n_0;
+  wire pIDLY_INC_i_2_n_0;
   wire pIDLY_LD;
-  wire pIDLY_LD_1;
+  wire pIDLY_LD_i_1_n_0;
+  wire pIDLY_LD_i_2_n_0;
   wire [10:0]pState;
-  wire pStateNxt__0_n_0;
-  wire pStateNxt__1_n_0;
-  wire pStateNxt__2_n_0;
-  wire pStateNxt__3_n_0;
-  wire pStateNxt__4;
-  wire pStateNxt_n_0;
-  wire \pState[0]_i_1_n_0 ;
-  wire \pState[10]_i_2_n_0 ;
+  wire [10:0]pStateNxt;
+  wire \pStateNxt_inferred__8/i___0_n_0 ;
+  wire \pStateNxt_inferred__8/i___1_n_0 ;
+  wire \pStateNxt_inferred__8/i___2_n_0 ;
+  wire \pStateNxt_inferred__8/i___3_n_0 ;
+  wire \pStateNxt_inferred__8/i__n_0 ;
+  wire \pState[10]_i_1_n_0 ;
   wire \pState[10]_i_3_n_0 ;
-  wire \pState[10]_i_4__0_n_0 ;
+  wire \pState[10]_i_4_n_0 ;
   wire \pState[10]_i_5_n_0 ;
-  wire \pState[10]_i_6_n_0 ;
-  wire \pState[1]_i_1_n_0 ;
-  wire \pState[2]_i_1_n_0 ;
-  wire \pState[3]_i_1_n_0 ;
-  wire \pState[4]_i_1_n_0 ;
-  wire \pState[5]_i_1_n_0 ;
   wire \pState[5]_i_2_n_0 ;
-  wire \pState[6]_i_1_n_0 ;
-  wire \pState[7]_i_1_n_0 ;
-  wire \pState[8]_i_1_n_0 ;
-  wire \pState[9]_i_1_n_0 ;
+  wire \pState_reg[1]_0 ;
+  wire \pState_reg_n_0_[4] ;
   wire pTknFlag;
   wire pTknFlag0;
   wire pTknFlagQ;
   wire pTknFlag_i_2_n_0;
   wire pTknFlag_i_3_n_0;
-  wire pVld_0;
-  wire pVld_1;
   wire pVld_2;
   wire [6:0]p_0_in;
-  wire rMMCM_LckdRisingFlag_reg;
+  wire [4:0]plusOp;
 
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFEEF)) 
+    .INIT(64'hFFFFFFFFFFFFFFEB)) 
     iIn_q_i_1
        (.I0(iIn_q_i_2_n_0),
-        .I1(pState[3]),
+        .I1(pState[1]),
         .I2(pState[2]),
-        .I3(pState[1]),
-        .I4(pState[0]),
-        .I5(pState[4]),
-        .O(iIn_q_reg));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
-    iIn_q_i_2
-       (.I0(pState[7]),
-        .I1(pState[5]),
-        .I2(pState[10]),
         .I3(pState[9]),
-        .I4(pState[6]),
-        .I5(pState[8]),
+        .I4(pState[10]),
+        .I5(\pState[10]_i_5_n_0 ),
+        .O(\pState_reg[1]_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    iIn_q_i_2
+       (.I0(\pState_reg_n_0_[4] ),
+        .I1(pState[0]),
+        .I2(pState[3]),
+        .I3(pState[5]),
+        .I4(pState[7]),
         .O(iIn_q_i_2_n_0));
   LUT6 #(
-    .INIT(64'h0000000000001000)) 
+    .INIT(64'h0000010000000000)) 
     pAligned_i_1
        (.I0(pState[6]),
         .I1(pState[8]),
-        .I2(pAligned_i_2_n_0),
+        .I2(pState[10]),
         .I3(pState[9]),
-        .I4(pState[0]),
-        .I5(pState[10]),
-        .O(pAligned));
-  LUT6 #(
-    .INIT(64'h0000000000000001)) 
-    pAligned_i_2
-       (.I0(pState[2]),
-        .I1(pState[1]),
-        .I2(pState[3]),
-        .I3(pState[4]),
-        .I4(pState[7]),
-        .I5(pState[5]),
-        .O(pAligned_i_2_n_0));
+        .I4(pState[1]),
+        .I5(\pDelayWaitCnt[1]_i_3_n_0 ),
+        .O(pAligned_i_1_n_0));
   FDRE pAligned_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
-        .D(pAligned),
+        .D(pAligned_i_1_n_0),
         .Q(pVld_2),
         .R(1'b0));
-  LUT4 #(
-    .INIT(16'h0080)) 
-    pAllVldBgnFlag_i_1
-       (.I0(pVld_1),
-        .I1(pVld_2),
-        .I2(pVld_0),
-        .I3(pAllVld_q),
-        .O(pAllVldBgnFlag0));
   LUT2 #(
     .INIT(4'h2)) 
     pBitslip_i_1
-       (.I0(pAlignErr_q_reg),
+       (.I0(pError_reg_0),
         .I1(pAlignErr_q),
-        .O(pBitslip_reg));
+        .O(pBitslip0));
   LUT2 #(
     .INIT(4'h2)) 
     pBlankBegin_i_1
@@ -3062,360 +3287,341 @@ module hdmi_in_dvi2rgb_0_0_PhaseAlign
         .I1(pTknFlagQ),
         .O(pBlankBegin0));
   FDRE pBlankBegin_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
         .D(pBlankBegin0),
         .Q(pBlankBegin),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair79" *) 
-  LUT3 #(
-    .INIT(8'hF6)) 
+  LUT4 #(
+    .INIT(16'hFF62)) 
     \pCenterTap[0]_i_1 
        (.I0(\pCenterTap_reg_n_0_[0] ),
-        .I1(\pCenterTap[5]_i_3_n_0 ),
-        .I2(pEyeOpenRst),
+        .I1(pEyeOpenEn),
+        .I2(\pCenterTap[5]_i_3_n_0 ),
+        .I3(pEyeOpenRst),
         .O(\pCenterTap[0]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'h8BB8)) 
-    \pCenterTap[1]_i_1 
-       (.I0(\pIDLY_CNT_Q_reg_n_0_[0] ),
-        .I1(pEyeOpenRst),
-        .I2(\pCenterTap_reg_n_0_[1] ),
-        .I3(\pCenterTap_reg_n_0_[0] ),
-        .O(\pCenterTap[1]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'h8BB8B8B8)) 
-    \pCenterTap[2]_i_1 
-       (.I0(\pIDLY_CNT_Q_reg_n_0_[1] ),
-        .I1(pEyeOpenRst),
-        .I2(\pCenterTap_reg_n_0_[2] ),
+    .INIT(32'h88F8F888)) 
+    \pCenterTap[1]_i_1 
+       (.I0(pEyeOpenRst),
+        .I1(\pIDLY_CNT_Q_reg_n_0_[0] ),
+        .I2(\pCenterTap[5]_i_3_n_0 ),
         .I3(\pCenterTap_reg_n_0_[1] ),
         .I4(\pCenterTap_reg_n_0_[0] ),
-        .O(\pCenterTap[2]_i_1_n_0 ));
+        .O(\pCenterTap[1]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h8BBBBBBBB8888888)) 
-    \pCenterTap[3]_i_1 
-       (.I0(\pIDLY_CNT_Q_reg_n_0_[2] ),
-        .I1(pEyeOpenRst),
-        .I2(\pCenterTap_reg_n_0_[0] ),
+    .INIT(64'h88F8F8F8F8888888)) 
+    \pCenterTap[2]_i_1 
+       (.I0(pEyeOpenRst),
+        .I1(\pIDLY_CNT_Q_reg_n_0_[1] ),
+        .I2(\pCenterTap[5]_i_3_n_0 ),
         .I3(\pCenterTap_reg_n_0_[1] ),
-        .I4(\pCenterTap_reg_n_0_[2] ),
-        .I5(\pCenterTap_reg_n_0_[3] ),
+        .I4(\pCenterTap_reg_n_0_[0] ),
+        .I5(\pCenterTap_reg_n_0_[2] ),
+        .O(\pCenterTap[2]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'hF88888F8)) 
+    \pCenterTap[3]_i_1 
+       (.I0(pEyeOpenRst),
+        .I1(\pIDLY_CNT_Q_reg_n_0_[2] ),
+        .I2(\pCenterTap[5]_i_3_n_0 ),
+        .I3(\pCenterTap[3]_i_2_n_0 ),
+        .I4(\pCenterTap_reg_n_0_[3] ),
         .O(\pCenterTap[3]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'h8BB8)) 
+  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \pCenterTap[3]_i_2 
+       (.I0(\pCenterTap_reg_n_0_[1] ),
+        .I1(\pCenterTap_reg_n_0_[0] ),
+        .I2(\pCenterTap_reg_n_0_[2] ),
+        .O(\pCenterTap[3]_i_2_n_0 ));
+  LUT5 #(
+    .INIT(32'hF88888F8)) 
     \pCenterTap[4]_i_1 
-       (.I0(\pIDLY_CNT_Q_reg_n_0_[3] ),
-        .I1(pEyeOpenRst),
-        .I2(\pCenterTap_reg_n_0_[4] ),
-        .I3(\pCenterTap[5]_i_5_n_0 ),
+       (.I0(pEyeOpenRst),
+        .I1(\pIDLY_CNT_Q_reg_n_0_[3] ),
+        .I2(\pCenterTap[5]_i_3_n_0 ),
+        .I3(\pCenterTap[5]_i_4_n_0 ),
+        .I4(\pCenterTap_reg_n_0_[4] ),
         .O(\pCenterTap[4]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hE)) 
     \pCenterTap[5]_i_1 
-       (.I0(\pCenterTap[5]_i_3_n_0 ),
+       (.I0(pEyeOpenEn),
         .I1(pEyeOpenRst),
         .O(\pCenterTap[5]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h8BB8B8B8)) 
+  LUT6 #(
+    .INIT(64'hF8F888F88888F888)) 
     \pCenterTap[5]_i_2 
-       (.I0(\pIDLY_CNT_Q_reg_n_0_[4] ),
-        .I1(pEyeOpenRst),
-        .I2(\pCenterTap_reg_n_0_[5] ),
-        .I3(\pCenterTap[5]_i_5_n_0 ),
-        .I4(\pCenterTap_reg_n_0_[4] ),
+       (.I0(pEyeOpenRst),
+        .I1(\pIDLY_CNT_Q_reg_n_0_[4] ),
+        .I2(\pCenterTap[5]_i_3_n_0 ),
+        .I3(\pCenterTap_reg_n_0_[4] ),
+        .I4(\pCenterTap[5]_i_4_n_0 ),
+        .I5(\pCenterTap_reg_n_0_[5] ),
         .O(\pCenterTap[5]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h0000000000000004)) 
+    .INIT(64'hFFFFFFFFFFFFFFD9)) 
     \pCenterTap[5]_i_3 
-       (.I0(iIn_q_i_2_n_0),
-        .I1(pState[3]),
-        .I2(pState[4]),
-        .I3(pState[0]),
-        .I4(pState[1]),
+       (.I0(pState[0]),
+        .I1(\pState_reg_n_0_[4] ),
+        .I2(pFoundEyeFlag_reg_n_0),
+        .I3(\pEyeOpenCnt[4]_i_5_n_0 ),
+        .I4(\pEyeOpenCnt[4]_i_4_n_0 ),
         .I5(pState[2]),
         .O(\pCenterTap[5]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000000000310)) 
-    \pCenterTap[5]_i_4 
-       (.I0(pFoundEyeFlag),
-        .I1(pFoundJtrFlag_i_2_n_0),
-        .I2(pState[4]),
-        .I3(pState[0]),
-        .I4(pState[3]),
-        .I5(iIn_q_i_2_n_0),
-        .O(pEyeOpenRst));
+  (* SOFT_HLUTNM = "soft_lutpair71" *) 
   LUT4 #(
-    .INIT(16'h8000)) 
-    \pCenterTap[5]_i_5 
-       (.I0(\pCenterTap_reg_n_0_[3] ),
-        .I1(\pCenterTap_reg_n_0_[2] ),
+    .INIT(16'h7FFF)) 
+    \pCenterTap[5]_i_4 
+       (.I0(\pCenterTap_reg_n_0_[2] ),
+        .I1(\pCenterTap_reg_n_0_[0] ),
         .I2(\pCenterTap_reg_n_0_[1] ),
-        .I3(\pCenterTap_reg_n_0_[0] ),
-        .O(\pCenterTap[5]_i_5_n_0 ));
+        .I3(\pCenterTap_reg_n_0_[3] ),
+        .O(\pCenterTap[5]_i_4_n_0 ));
   FDRE \pCenterTap_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
         .D(\pCenterTap[0]_i_1_n_0 ),
         .Q(\pCenterTap_reg_n_0_[0] ),
         .R(1'b0));
   FDRE \pCenterTap_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(\pCenterTap[5]_i_1_n_0 ),
         .D(\pCenterTap[1]_i_1_n_0 ),
         .Q(\pCenterTap_reg_n_0_[1] ),
         .R(1'b0));
   FDRE \pCenterTap_reg[2] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(\pCenterTap[5]_i_1_n_0 ),
         .D(\pCenterTap[2]_i_1_n_0 ),
         .Q(\pCenterTap_reg_n_0_[2] ),
         .R(1'b0));
   FDRE \pCenterTap_reg[3] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(\pCenterTap[5]_i_1_n_0 ),
         .D(\pCenterTap[3]_i_1_n_0 ),
         .Q(\pCenterTap_reg_n_0_[3] ),
         .R(1'b0));
   FDRE \pCenterTap_reg[4] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(\pCenterTap[5]_i_1_n_0 ),
         .D(\pCenterTap[4]_i_1_n_0 ),
         .Q(\pCenterTap_reg_n_0_[4] ),
         .R(1'b0));
   FDRE \pCenterTap_reg[5] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(\pCenterTap[5]_i_1_n_0 ),
         .D(\pCenterTap[5]_i_2_n_0 ),
         .Q(\pCenterTap_reg_n_0_[5] ),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair82" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \pCtlTknCnt[0]_i_1 
        (.I0(pCtlTknCnt_reg__0[0]),
         .O(p_0_in[0]));
-  (* SOFT_HLUTNM = "soft_lutpair82" *) 
+  (* SOFT_HLUTNM = "soft_lutpair73" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \pCtlTknCnt[1]_i_1 
        (.I0(pCtlTknCnt_reg__0[0]),
         .I1(pCtlTknCnt_reg__0[1]),
         .O(p_0_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair75" *) 
+  (* SOFT_HLUTNM = "soft_lutpair73" *) 
   LUT3 #(
-    .INIT(8'h6A)) 
+    .INIT(8'h78)) 
     \pCtlTknCnt[2]_i_1 
-       (.I0(pCtlTknCnt_reg__0[2]),
-        .I1(pCtlTknCnt_reg__0[0]),
-        .I2(pCtlTknCnt_reg__0[1]),
-        .O(p_0_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair75" *) 
-  LUT4 #(
-    .INIT(16'h7F80)) 
-    \pCtlTknCnt[3]_i_1 
        (.I0(pCtlTknCnt_reg__0[1]),
         .I1(pCtlTknCnt_reg__0[0]),
         .I2(pCtlTknCnt_reg__0[2]),
+        .O(p_0_in[2]));
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+  LUT4 #(
+    .INIT(16'h7F80)) 
+    \pCtlTknCnt[3]_i_1 
+       (.I0(pCtlTknCnt_reg__0[2]),
+        .I1(pCtlTknCnt_reg__0[0]),
+        .I2(pCtlTknCnt_reg__0[1]),
         .I3(pCtlTknCnt_reg__0[3]),
         .O(p_0_in[3]));
-  (* SOFT_HLUTNM = "soft_lutpair72" *) 
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
   LUT5 #(
-    .INIT(32'h6AAAAAAA)) 
+    .INIT(32'h7FFF8000)) 
     \pCtlTknCnt[4]_i_1 
-       (.I0(pCtlTknCnt_reg__0[4]),
+       (.I0(pCtlTknCnt_reg__0[3]),
         .I1(pCtlTknCnt_reg__0[1]),
         .I2(pCtlTknCnt_reg__0[0]),
         .I3(pCtlTknCnt_reg__0[2]),
-        .I4(pCtlTknCnt_reg__0[3]),
+        .I4(pCtlTknCnt_reg__0[4]),
         .O(p_0_in[4]));
   LUT6 #(
-    .INIT(64'h6AAAAAAAAAAAAAAA)) 
+    .INIT(64'h7FFFFFFF80000000)) 
     \pCtlTknCnt[5]_i_1 
-       (.I0(pCtlTknCnt_reg__0[5]),
-        .I1(pCtlTknCnt_reg__0[3]),
-        .I2(pCtlTknCnt_reg__0[2]),
-        .I3(pCtlTknCnt_reg__0[0]),
-        .I4(pCtlTknCnt_reg__0[1]),
-        .I5(pCtlTknCnt_reg__0[4]),
-        .O(p_0_in[5]));
-  LUT5 #(
-    .INIT(32'hFFFFFFEF)) 
-    \pCtlTknCnt[6]_i_1 
-       (.I0(\pCtlTknCnt[6]_i_3_n_0 ),
-        .I1(pState[1]),
-        .I2(pState[2]),
-        .I3(pState[10]),
-        .I4(\pCtlTknCnt[6]_i_4_n_0 ),
-        .O(pCtlTknRst));
-  LUT4 #(
-    .INIT(16'h6AAA)) 
-    \pCtlTknCnt[6]_i_2 
-       (.I0(pCtlTknCnt_reg__0[6]),
-        .I1(pCtlTknCnt_reg__0[4]),
-        .I2(\pCtlTknCnt[6]_i_5_n_0 ),
-        .I3(pCtlTknCnt_reg__0[5]),
-        .O(p_0_in[6]));
-  (* SOFT_HLUTNM = "soft_lutpair77" *) 
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \pCtlTknCnt[6]_i_3 
-       (.I0(pState[5]),
-        .I1(pState[0]),
-        .I2(pState[4]),
-        .I3(pState[3]),
-        .O(\pCtlTknCnt[6]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair76" *) 
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \pCtlTknCnt[6]_i_4 
-       (.I0(pState[8]),
-        .I1(pState[6]),
-        .I2(pState[9]),
-        .I3(pState[7]),
-        .O(\pCtlTknCnt[6]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair72" *) 
-  LUT4 #(
-    .INIT(16'h8000)) 
-    \pCtlTknCnt[6]_i_5 
-       (.I0(pCtlTknCnt_reg__0[3]),
+       (.I0(pCtlTknCnt_reg__0[4]),
         .I1(pCtlTknCnt_reg__0[2]),
         .I2(pCtlTknCnt_reg__0[0]),
         .I3(pCtlTknCnt_reg__0[1]),
-        .O(\pCtlTknCnt[6]_i_5_n_0 ));
+        .I4(pCtlTknCnt_reg__0[3]),
+        .I5(pCtlTknCnt_reg__0[5]),
+        .O(p_0_in[5]));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFD)) 
+    \pCtlTknCnt[6]_i_1 
+       (.I0(pState[2]),
+        .I1(pState[1]),
+        .I2(pState[9]),
+        .I3(pState[10]),
+        .I4(\pState[10]_i_5_n_0 ),
+        .I5(iIn_q_i_2_n_0),
+        .O(pCtlTknRst));
+  LUT2 #(
+    .INIT(4'h9)) 
+    \pCtlTknCnt[6]_i_2 
+       (.I0(\pCtlTknCnt[6]_i_3_n_0 ),
+        .I1(pCtlTknCnt_reg__0[6]),
+        .O(p_0_in[6]));
+  LUT6 #(
+    .INIT(64'h7FFFFFFFFFFFFFFF)) 
+    \pCtlTknCnt[6]_i_3 
+       (.I0(pCtlTknCnt_reg__0[4]),
+        .I1(pCtlTknCnt_reg__0[2]),
+        .I2(pCtlTknCnt_reg__0[0]),
+        .I3(pCtlTknCnt_reg__0[1]),
+        .I4(pCtlTknCnt_reg__0[3]),
+        .I5(pCtlTknCnt_reg__0[5]),
+        .O(\pCtlTknCnt[6]_i_3_n_0 ));
   FDRE \pCtlTknCnt_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
         .D(p_0_in[0]),
         .Q(pCtlTknCnt_reg__0[0]),
         .R(pCtlTknRst));
   FDRE \pCtlTknCnt_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
         .D(p_0_in[1]),
         .Q(pCtlTknCnt_reg__0[1]),
         .R(pCtlTknRst));
   FDRE \pCtlTknCnt_reg[2] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
         .D(p_0_in[2]),
         .Q(pCtlTknCnt_reg__0[2]),
         .R(pCtlTknRst));
   FDRE \pCtlTknCnt_reg[3] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
         .D(p_0_in[3]),
         .Q(pCtlTknCnt_reg__0[3]),
         .R(pCtlTknRst));
   FDRE \pCtlTknCnt_reg[4] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
         .D(p_0_in[4]),
         .Q(pCtlTknCnt_reg__0[4]),
         .R(pCtlTknRst));
   FDRE \pCtlTknCnt_reg[5] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
         .D(p_0_in[5]),
         .Q(pCtlTknCnt_reg__0[5]),
         .R(pCtlTknRst));
   FDRE \pCtlTknCnt_reg[6] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
         .D(p_0_in[6]),
         .Q(pCtlTknCnt_reg__0[6]),
         .R(pCtlTknRst));
-  LUT6 #(
-    .INIT(64'hB888888888888888)) 
+  LUT4 #(
+    .INIT(16'hF044)) 
     pCtlTknOvf_i_1
-       (.I0(pCtlTknOvf_reg_n_0),
-        .I1(pCtlTknRst),
-        .I2(pCtlTknCnt_reg__0[6]),
-        .I3(pCtlTknCnt_reg__0[4]),
-        .I4(\pCtlTknCnt[6]_i_5_n_0 ),
-        .I5(pCtlTknCnt_reg__0[5]),
+       (.I0(\pCtlTknCnt[6]_i_3_n_0 ),
+        .I1(pCtlTknCnt_reg__0[6]),
+        .I2(pCtlTknOvf_reg_n_0),
+        .I3(pCtlTknRst),
         .O(pCtlTknOvf_i_1_n_0));
   FDRE pCtlTknOvf_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
         .D(pCtlTknOvf_i_1_n_0),
         .Q(pCtlTknOvf_reg_n_0),
         .R(1'b0));
   FDRE \pDataQ_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
         .D(D[0]),
         .Q(pDataQ[0]),
         .R(1'b0));
   FDRE \pDataQ_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
         .D(D[1]),
         .Q(pDataQ[1]),
         .R(1'b0));
   FDRE \pDataQ_reg[2] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
         .D(D[2]),
         .Q(pDataQ[2]),
         .R(1'b0));
   FDRE \pDataQ_reg[3] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
         .D(D[3]),
         .Q(pDataQ[3]),
         .R(1'b0));
   FDRE \pDataQ_reg[4] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
         .D(D[4]),
         .Q(pDataQ[4]),
         .R(1'b0));
   FDRE \pDataQ_reg[5] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
         .D(D[5]),
         .Q(pDataQ[5]),
         .R(1'b0));
   FDRE \pDataQ_reg[6] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
         .D(D[6]),
         .Q(pDataQ[6]),
         .R(1'b0));
   FDRE \pDataQ_reg[7] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
         .D(D[7]),
         .Q(pDataQ[7]),
         .R(1'b0));
   FDRE \pDataQ_reg[8] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
         .D(D[8]),
         .Q(pDataQ[8]),
         .R(1'b0));
   LUT5 #(
-    .INIT(32'h41000041)) 
+    .INIT(32'h82000082)) 
     pDelayCenter_i_1
        (.I0(pDelayCenter_i_2_n_0),
-        .I1(\pIDLY_CNT_Q_reg_n_0_[4] ),
-        .I2(\pCenterTap_reg_n_0_[5] ),
+        .I1(\pCenterTap_reg_n_0_[5] ),
+        .I2(\pIDLY_CNT_Q_reg_n_0_[4] ),
         .I3(\pCenterTap_reg_n_0_[4] ),
         .I4(\pIDLY_CNT_Q_reg_n_0_[3] ),
         .O(pDelayCenter_i_1_n_0));
   LUT6 #(
-    .INIT(64'h6FF6FFFFFFFF6FF6)) 
+    .INIT(64'h9009000000009009)) 
     pDelayCenter_i_2
-       (.I0(\pIDLY_CNT_Q_reg_n_0_[1] ),
-        .I1(\pCenterTap_reg_n_0_[2] ),
-        .I2(\pIDLY_CNT_Q_reg_n_0_[2] ),
-        .I3(\pCenterTap_reg_n_0_[3] ),
-        .I4(\pCenterTap_reg_n_0_[1] ),
-        .I5(\pIDLY_CNT_Q_reg_n_0_[0] ),
+       (.I0(\pCenterTap_reg_n_0_[3] ),
+        .I1(\pIDLY_CNT_Q_reg_n_0_[2] ),
+        .I2(\pCenterTap_reg_n_0_[2] ),
+        .I3(\pIDLY_CNT_Q_reg_n_0_[1] ),
+        .I4(\pIDLY_CNT_Q_reg_n_0_[0] ),
+        .I5(\pCenterTap_reg_n_0_[1] ),
         .O(pDelayCenter_i_2_n_0));
   FDRE pDelayCenter_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
         .D(pDelayCenter_i_1_n_0),
         .Q(pDelayCenter),
@@ -3423,624 +3629,621 @@ module hdmi_in_dvi2rgb_0_0_PhaseAlign
   LUT5 #(
     .INIT(32'h00000001)) 
     pDelayOvf_i_1
-       (.I0(\pIDLY_CNT_Q_reg_n_0_[1] ),
-        .I1(\pIDLY_CNT_Q_reg_n_0_[0] ),
-        .I2(\pIDLY_CNT_Q_reg_n_0_[4] ),
-        .I3(\pIDLY_CNT_Q_reg_n_0_[3] ),
-        .I4(\pIDLY_CNT_Q_reg_n_0_[2] ),
+       (.I0(\pIDLY_CNT_Q_reg_n_0_[0] ),
+        .I1(\pIDLY_CNT_Q_reg_n_0_[1] ),
+        .I2(\pIDLY_CNT_Q_reg_n_0_[2] ),
+        .I3(\pIDLY_CNT_Q_reg_n_0_[4] ),
+        .I4(\pIDLY_CNT_Q_reg_n_0_[3] ),
         .O(pDelayOvf_i_1_n_0));
   FDRE pDelayOvf_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
         .D(pDelayOvf_i_1_n_0),
         .Q(pDelayOvf),
         .R(1'b0));
-  LUT2 #(
-    .INIT(4'h1)) 
+  (* SOFT_HLUTNM = "soft_lutpair69" *) 
+  LUT5 #(
+    .INIT(32'h01100000)) 
     \pDelayWaitCnt[0]_i_1 
        (.I0(pDelayWaitCnt[0]),
         .I1(\pDelayWaitCnt[1]_i_2_n_0 ),
+        .I2(pState[6]),
+        .I3(pState[8]),
+        .I4(\pDelayWaitCnt[1]_i_3_n_0 ),
         .O(\pDelayWaitCnt[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair73" *) 
-  LUT3 #(
-    .INIT(8'h06)) 
+  LUT6 #(
+    .INIT(64'h0006060000000000)) 
     \pDelayWaitCnt[1]_i_1 
        (.I0(pDelayWaitCnt[1]),
         .I1(pDelayWaitCnt[0]),
         .I2(\pDelayWaitCnt[1]_i_2_n_0 ),
+        .I3(pState[6]),
+        .I4(pState[8]),
+        .I5(\pDelayWaitCnt[1]_i_3_n_0 ),
         .O(\pDelayWaitCnt[1]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFF9)) 
+  (* SOFT_HLUTNM = "soft_lutpair67" *) 
+  LUT3 #(
+    .INIT(8'hFE)) 
     \pDelayWaitCnt[1]_i_2 
-       (.I0(pState[6]),
-        .I1(pState[8]),
-        .I2(\pDelayWaitCnt[1]_i_3_n_0 ),
-        .I3(pState[3]),
-        .I4(\pDelayWaitCnt[1]_i_4_n_0 ),
-        .I5(pFoundEyeFlag_i_3_n_0),
-        .O(\pDelayWaitCnt[1]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair81" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    \pDelayWaitCnt[1]_i_3 
-       (.I0(pState[5]),
-        .I1(pState[7]),
-        .O(\pDelayWaitCnt[1]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair78" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    \pDelayWaitCnt[1]_i_4 
        (.I0(pState[10]),
         .I1(pState[9]),
-        .O(\pDelayWaitCnt[1]_i_4_n_0 ));
+        .I2(pState[1]),
+        .O(\pDelayWaitCnt[1]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000000000000001)) 
+    \pDelayWaitCnt[1]_i_3 
+       (.I0(pState[7]),
+        .I1(pState[5]),
+        .I2(pState[3]),
+        .I3(pState[0]),
+        .I4(\pState_reg_n_0_[4] ),
+        .I5(pState[2]),
+        .O(\pDelayWaitCnt[1]_i_3_n_0 ));
   FDRE \pDelayWaitCnt_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
         .D(\pDelayWaitCnt[0]_i_1_n_0 ),
         .Q(pDelayWaitCnt[0]),
         .R(1'b0));
   FDRE \pDelayWaitCnt_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
         .D(\pDelayWaitCnt[1]_i_1_n_0 ),
         .Q(pDelayWaitCnt[1]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair73" *) 
-  LUT4 #(
-    .INIT(16'h88B8)) 
+  LUT6 #(
+    .INIT(64'hF2FFFFFF02000000)) 
     pDelayWaitOvf_i_1
-       (.I0(pDelayWaitOvf),
-        .I1(\pDelayWaitCnt[1]_i_2_n_0 ),
-        .I2(pDelayWaitCnt[1]),
-        .I3(pDelayWaitCnt[0]),
+       (.I0(pDelayWaitCnt[1]),
+        .I1(pDelayWaitCnt[0]),
+        .I2(\pDelayWaitCnt[1]_i_2_n_0 ),
+        .I3(pDelayWaitOvf_i_2_n_0),
+        .I4(\pDelayWaitCnt[1]_i_3_n_0 ),
+        .I5(pDelayWaitOvf_reg_n_0),
         .O(pDelayWaitOvf_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    pDelayWaitOvf_i_2
+       (.I0(pState[6]),
+        .I1(pState[8]),
+        .O(pDelayWaitOvf_i_2_n_0));
   FDRE pDelayWaitOvf_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
         .D(pDelayWaitOvf_i_1_n_0),
-        .Q(pDelayWaitOvf),
+        .Q(pDelayWaitOvf_reg_n_0),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'h0000000000100000)) 
+    .INIT(64'h0000010000000000)) 
     pError_i_1
        (.I0(pState[6]),
         .I1(pState[8]),
-        .I2(pAligned_i_2_n_0),
-        .I3(pState[0]),
-        .I4(pState[10]),
-        .I5(pState[9]),
-        .O(pError));
-  FDRE pError_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(pError),
-        .Q(pAlignErr_q_reg),
-        .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair79" *) 
-  LUT3 #(
-    .INIT(8'h06)) 
-    \pEyeOpenCnt[0]_i_1 
-       (.I0(\pCenterTap[5]_i_3_n_0 ),
-        .I1(\pEyeOpenCnt_reg_n_0_[0] ),
-        .I2(pEyeOpenRst),
-        .O(\pEyeOpenCnt[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair67" *) 
-  LUT4 #(
-    .INIT(16'h006A)) 
-    \pEyeOpenCnt[1]_i_1 
-       (.I0(\pEyeOpenCnt_reg_n_0_[1] ),
-        .I1(\pCenterTap[5]_i_3_n_0 ),
-        .I2(\pEyeOpenCnt_reg_n_0_[0] ),
-        .I3(pEyeOpenRst),
-        .O(\pEyeOpenCnt[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair67" *) 
-  LUT5 #(
-    .INIT(32'h00006CCC)) 
-    \pEyeOpenCnt[2]_i_1 
-       (.I0(\pCenterTap[5]_i_3_n_0 ),
-        .I1(\pEyeOpenCnt_reg_n_0_[2] ),
-        .I2(\pEyeOpenCnt_reg_n_0_[1] ),
-        .I3(\pEyeOpenCnt_reg_n_0_[0] ),
-        .I4(pEyeOpenRst),
-        .O(\pEyeOpenCnt[2]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h000000006AAAAAAA)) 
-    \pEyeOpenCnt[3]_i_1 
-       (.I0(\pEyeOpenCnt_reg_n_0_[3] ),
-        .I1(\pEyeOpenCnt_reg_n_0_[0] ),
-        .I2(\pEyeOpenCnt_reg_n_0_[1] ),
-        .I3(\pEyeOpenCnt_reg_n_0_[2] ),
-        .I4(\pCenterTap[5]_i_3_n_0 ),
-        .I5(pEyeOpenRst),
-        .O(\pEyeOpenCnt[3]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'h0078)) 
-    \pEyeOpenCnt[4]_i_1 
-       (.I0(\pEyeOpenCnt[4]_i_2_n_0 ),
-        .I1(\pEyeOpenCnt_reg_n_0_[3] ),
-        .I2(\pEyeOpenCnt_reg_n_0_[4] ),
-        .I3(pEyeOpenRst),
-        .O(\pEyeOpenCnt[4]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0400000000000000)) 
-    \pEyeOpenCnt[4]_i_2 
-       (.I0(pFoundEyeFlag_i_3_n_0),
-        .I1(pState[3]),
-        .I2(iIn_q_i_2_n_0),
-        .I3(\pEyeOpenCnt_reg_n_0_[2] ),
-        .I4(\pEyeOpenCnt_reg_n_0_[1] ),
-        .I5(\pEyeOpenCnt_reg_n_0_[0] ),
-        .O(\pEyeOpenCnt[4]_i_2_n_0 ));
-  FDRE \pEyeOpenCnt_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(\pEyeOpenCnt[0]_i_1_n_0 ),
-        .Q(\pEyeOpenCnt_reg_n_0_[0] ),
-        .R(1'b0));
-  FDRE \pEyeOpenCnt_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(\pEyeOpenCnt[1]_i_1_n_0 ),
-        .Q(\pEyeOpenCnt_reg_n_0_[1] ),
-        .R(1'b0));
-  FDRE \pEyeOpenCnt_reg[2] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(\pEyeOpenCnt[2]_i_1_n_0 ),
-        .Q(\pEyeOpenCnt_reg_n_0_[2] ),
-        .R(1'b0));
-  FDRE \pEyeOpenCnt_reg[3] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(\pEyeOpenCnt[3]_i_1_n_0 ),
-        .Q(\pEyeOpenCnt_reg_n_0_[3] ),
-        .R(1'b0));
-  FDRE \pEyeOpenCnt_reg[4] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(\pEyeOpenCnt[4]_i_1_n_0 ),
-        .Q(\pEyeOpenCnt_reg_n_0_[4] ),
-        .R(1'b0));
-  LUT6 #(
-    .INIT(64'hFFFFBBFB0000AA0A)) 
-    pFoundEyeFlag_i_1
-       (.I0(pFoundEyeFlag_i_2_n_0),
-        .I1(pState[0]),
-        .I2(pFoundEyeFlag_i_3_n_0),
-        .I3(pFoundEyeFlag_i_4_n_0),
-        .I4(iIn_q_i_2_n_0),
-        .I5(pFoundEyeFlag),
-        .O(pFoundEyeFlag_i_1_n_0));
-  LUT6 #(
-    .INIT(64'h0000050008000000)) 
-    pFoundEyeFlag_i_2
-       (.I0(\pEyeOpenCnt_reg_n_0_[0] ),
-        .I1(pFoundJtrFlag),
-        .I2(pFoundEyeFlag_i_5_n_0),
-        .I3(pState[3]),
-        .I4(\pEyeOpenCnt_reg_n_0_[1] ),
-        .I5(\pEyeOpenCnt_reg_n_0_[4] ),
-        .O(pFoundEyeFlag_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair74" *) 
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    pFoundEyeFlag_i_3
-       (.I0(pState[4]),
-        .I1(pState[0]),
-        .I2(pState[1]),
-        .I3(pState[2]),
-        .O(pFoundEyeFlag_i_3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair74" *) 
-  LUT4 #(
-    .INIT(16'h0001)) 
-    pFoundEyeFlag_i_4
-       (.I0(pState[4]),
-        .I1(pState[3]),
-        .I2(pState[1]),
-        .I3(pState[2]),
-        .O(pFoundEyeFlag_i_4_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair71" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    pFoundEyeFlag_i_5
-       (.I0(\pEyeOpenCnt_reg_n_0_[2] ),
-        .I1(\pEyeOpenCnt_reg_n_0_[3] ),
-        .O(pFoundEyeFlag_i_5_n_0));
-  FDRE pFoundEyeFlag_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(pFoundEyeFlag_i_1_n_0),
-        .Q(pFoundEyeFlag),
-        .R(1'b0));
-  LUT6 #(
-    .INIT(64'hAAAAAAAAAAABA8AA)) 
-    pFoundJtrFlag_i_1
-       (.I0(pFoundJtrFlag),
-        .I1(iIn_q_i_2_n_0),
-        .I2(pState[3]),
-        .I3(pState[0]),
-        .I4(pState[4]),
-        .I5(pFoundJtrFlag_i_2_n_0),
-        .O(pFoundJtrFlag_i_1_n_0));
-  LUT2 #(
-    .INIT(4'hE)) 
-    pFoundJtrFlag_i_2
-       (.I0(pState[2]),
-        .I1(pState[1]),
-        .O(pFoundJtrFlag_i_2_n_0));
-  FDRE pFoundJtrFlag_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(pFoundJtrFlag_i_1_n_0),
-        .Q(pFoundJtrFlag),
-        .R(1'b0));
-  LUT6 #(
-    .INIT(64'hAAAAAABAAAAAAAAA)) 
-    pIDLY_CE_i_1
-       (.I0(pIDLY_CE_i_2_n_0),
-        .I1(pIDLY_CE_i_3_n_0),
-        .I2(pState[7]),
-        .I3(pState[0]),
-        .I4(pState[5]),
-        .I5(pFoundEyeFlag_i_4_n_0),
-        .O(pIDLY_CE_0));
-  LUT5 #(
-    .INIT(32'h00000200)) 
-    pIDLY_CE_i_2
-       (.I0(pFoundEyeFlag_i_4_n_0),
-        .I1(pState[10]),
-        .I2(pState[0]),
-        .I3(pState[5]),
-        .I4(\pCtlTknCnt[6]_i_4_n_0 ),
-        .O(pIDLY_CE_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair76" *) 
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    pIDLY_CE_i_3
-       (.I0(pState[8]),
-        .I1(pState[6]),
         .I2(pState[9]),
         .I3(pState[10]),
-        .O(pIDLY_CE_i_3_n_0));
-  FDRE pIDLY_CE_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+        .I4(pState[1]),
+        .I5(\pDelayWaitCnt[1]_i_3_n_0 ),
+        .O(pError_i_1_n_0));
+  FDRE pError_reg
+       (.C(pError_reg_1),
         .CE(1'b1),
-        .D(pIDLY_CE_0),
+        .D(pError_i_1_n_0),
+        .Q(pError_reg_0),
+        .R(1'b0));
+  (* SOFT_HLUTNM = "soft_lutpair75" *) 
+  LUT1 #(
+    .INIT(2'h1)) 
+    \pEyeOpenCnt[0]_i_1 
+       (.I0(\pEyeOpenCnt_reg_n_0_[0] ),
+        .O(plusOp[0]));
+  (* SOFT_HLUTNM = "soft_lutpair75" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    \pEyeOpenCnt[1]_i_1 
+       (.I0(\pEyeOpenCnt_reg_n_0_[0] ),
+        .I1(\pEyeOpenCnt_reg_n_0_[1] ),
+        .O(plusOp[1]));
+  (* SOFT_HLUTNM = "soft_lutpair70" *) 
+  LUT3 #(
+    .INIT(8'h78)) 
+    \pEyeOpenCnt[2]_i_1 
+       (.I0(\pEyeOpenCnt_reg_n_0_[1] ),
+        .I1(\pEyeOpenCnt_reg_n_0_[0] ),
+        .I2(\pEyeOpenCnt_reg_n_0_[2] ),
+        .O(plusOp[2]));
+  (* SOFT_HLUTNM = "soft_lutpair70" *) 
+  LUT4 #(
+    .INIT(16'h7F80)) 
+    \pEyeOpenCnt[3]_i_1 
+       (.I0(\pEyeOpenCnt_reg_n_0_[2] ),
+        .I1(\pEyeOpenCnt_reg_n_0_[0] ),
+        .I2(\pEyeOpenCnt_reg_n_0_[1] ),
+        .I3(\pEyeOpenCnt_reg_n_0_[3] ),
+        .O(plusOp[3]));
+  LUT6 #(
+    .INIT(64'h0000000100030000)) 
+    \pEyeOpenCnt[4]_i_1 
+       (.I0(pFoundEyeFlag_reg_n_0),
+        .I1(pState[2]),
+        .I2(\pEyeOpenCnt[4]_i_4_n_0 ),
+        .I3(\pEyeOpenCnt[4]_i_5_n_0 ),
+        .I4(pState[0]),
+        .I5(\pState_reg_n_0_[4] ),
+        .O(pEyeOpenRst));
+  LUT6 #(
+    .INIT(64'h0000000000000010)) 
+    \pEyeOpenCnt[4]_i_2 
+       (.I0(pState[5]),
+        .I1(pState[7]),
+        .I2(pState[3]),
+        .I3(pIDLY_LD_i_2_n_0),
+        .I4(pState[0]),
+        .I5(\pState_reg_n_0_[4] ),
+        .O(pEyeOpenEn));
+  (* SOFT_HLUTNM = "soft_lutpair62" *) 
+  LUT5 #(
+    .INIT(32'h7FFF8000)) 
+    \pEyeOpenCnt[4]_i_3 
+       (.I0(\pEyeOpenCnt_reg_n_0_[3] ),
+        .I1(\pEyeOpenCnt_reg_n_0_[1] ),
+        .I2(\pEyeOpenCnt_reg_n_0_[0] ),
+        .I3(\pEyeOpenCnt_reg_n_0_[2] ),
+        .I4(\pEyeOpenCnt_reg_n_0_[4] ),
+        .O(plusOp[4]));
+  (* SOFT_HLUTNM = "soft_lutpair67" *) 
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    \pEyeOpenCnt[4]_i_4 
+       (.I0(pState[1]),
+        .I1(pState[9]),
+        .I2(pState[10]),
+        .I3(pState[8]),
+        .I4(pState[6]),
+        .O(\pEyeOpenCnt[4]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
+  LUT3 #(
+    .INIT(8'hFE)) 
+    \pEyeOpenCnt[4]_i_5 
+       (.I0(pState[7]),
+        .I1(pState[5]),
+        .I2(pState[3]),
+        .O(\pEyeOpenCnt[4]_i_5_n_0 ));
+  FDRE \pEyeOpenCnt_reg[0] 
+       (.C(pError_reg_1),
+        .CE(pEyeOpenEn),
+        .D(plusOp[0]),
+        .Q(\pEyeOpenCnt_reg_n_0_[0] ),
+        .R(pEyeOpenRst));
+  FDRE \pEyeOpenCnt_reg[1] 
+       (.C(pError_reg_1),
+        .CE(pEyeOpenEn),
+        .D(plusOp[1]),
+        .Q(\pEyeOpenCnt_reg_n_0_[1] ),
+        .R(pEyeOpenRst));
+  FDRE \pEyeOpenCnt_reg[2] 
+       (.C(pError_reg_1),
+        .CE(pEyeOpenEn),
+        .D(plusOp[2]),
+        .Q(\pEyeOpenCnt_reg_n_0_[2] ),
+        .R(pEyeOpenRst));
+  FDRE \pEyeOpenCnt_reg[3] 
+       (.C(pError_reg_1),
+        .CE(pEyeOpenEn),
+        .D(plusOp[3]),
+        .Q(\pEyeOpenCnt_reg_n_0_[3] ),
+        .R(pEyeOpenRst));
+  FDRE \pEyeOpenCnt_reg[4] 
+       (.C(pError_reg_1),
+        .CE(pEyeOpenEn),
+        .D(plusOp[4]),
+        .Q(\pEyeOpenCnt_reg_n_0_[4] ),
+        .R(pEyeOpenRst));
+  LUT5 #(
+    .INIT(32'h0000EAFA)) 
+    pFoundEyeFlag_i_1
+       (.I0(pFoundEyeFlag_reg_n_0),
+        .I1(pFoundEyeFlag_i_2_n_0),
+        .I2(pEyeOpenEn),
+        .I3(\pState[5]_i_2_n_0 ),
+        .I4(pIDLY_LD_i_1_n_0),
+        .O(pFoundEyeFlag_i_1_n_0));
+  LUT6 #(
+    .INIT(64'h0000000000000080)) 
+    pFoundEyeFlag_i_2
+       (.I0(\pEyeOpenCnt_reg_n_0_[0] ),
+        .I1(\pEyeOpenCnt_reg_n_0_[1] ),
+        .I2(pFoundJtrFlag_reg_n_0),
+        .I3(\pEyeOpenCnt_reg_n_0_[4] ),
+        .I4(\pEyeOpenCnt_reg_n_0_[3] ),
+        .I5(\pEyeOpenCnt_reg_n_0_[2] ),
+        .O(pFoundEyeFlag_i_2_n_0));
+  FDRE pFoundEyeFlag_reg
+       (.C(pError_reg_1),
+        .CE(1'b1),
+        .D(pFoundEyeFlag_i_1_n_0),
+        .Q(pFoundEyeFlag_reg_n_0),
+        .R(1'b0));
+  LUT4 #(
+    .INIT(16'hFB10)) 
+    pFoundJtrFlag_i_1
+       (.I0(pFoundJtrFlag_i_2_n_0),
+        .I1(pState[0]),
+        .I2(\pState_reg_n_0_[4] ),
+        .I3(pFoundJtrFlag_reg_n_0),
+        .O(pFoundJtrFlag_i_1_n_0));
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    pFoundJtrFlag_i_2
+       (.I0(pState[2]),
+        .I1(\pEyeOpenCnt[4]_i_4_n_0 ),
+        .I2(pState[3]),
+        .I3(pState[5]),
+        .I4(pState[7]),
+        .O(pFoundJtrFlag_i_2_n_0));
+  FDRE pFoundJtrFlag_reg
+       (.C(pError_reg_1),
+        .CE(1'b1),
+        .D(pFoundJtrFlag_i_1_n_0),
+        .Q(pFoundJtrFlag_reg_n_0),
+        .R(1'b0));
+  LUT6 #(
+    .INIT(64'h0000000100010000)) 
+    pIDLY_CE_i_1
+       (.I0(pIDLY_LD_i_2_n_0),
+        .I1(pState[0]),
+        .I2(\pState_reg_n_0_[4] ),
+        .I3(pState[3]),
+        .I4(pState[5]),
+        .I5(pState[7]),
+        .O(pIDLY_CE_i_1_n_0));
+  FDRE pIDLY_CE_reg
+       (.C(pError_reg_1),
+        .CE(1'b1),
+        .D(pIDLY_CE_i_1_n_0),
         .Q(pIDLY_CE),
         .R(1'b0));
   FDRE \pIDLY_CNT_Q_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
-        .D(pIDLY_CE_reg_0[0]),
+        .D(\pIDLY_CNT_Q_reg[4]_0 [0]),
         .Q(\pIDLY_CNT_Q_reg_n_0_[0] ),
         .R(1'b0));
   FDRE \pIDLY_CNT_Q_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
-        .D(pIDLY_CE_reg_0[1]),
+        .D(\pIDLY_CNT_Q_reg[4]_0 [1]),
         .Q(\pIDLY_CNT_Q_reg_n_0_[1] ),
         .R(1'b0));
   FDRE \pIDLY_CNT_Q_reg[2] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
-        .D(pIDLY_CE_reg_0[2]),
+        .D(\pIDLY_CNT_Q_reg[4]_0 [2]),
         .Q(\pIDLY_CNT_Q_reg_n_0_[2] ),
         .R(1'b0));
   FDRE \pIDLY_CNT_Q_reg[3] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
-        .D(pIDLY_CE_reg_0[3]),
+        .D(\pIDLY_CNT_Q_reg[4]_0 [3]),
         .Q(\pIDLY_CNT_Q_reg_n_0_[3] ),
         .R(1'b0));
   FDRE \pIDLY_CNT_Q_reg[4] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
-        .D(pIDLY_CE_reg_0[4]),
+        .D(\pIDLY_CNT_Q_reg[4]_0 [4]),
         .Q(\pIDLY_CNT_Q_reg_n_0_[4] ),
         .R(1'b0));
-  LUT3 #(
-    .INIT(8'hF4)) 
+  LUT4 #(
+    .INIT(16'hBF20)) 
     pIDLY_INC_i_1
-       (.I0(pIDLY_INC_2),
-        .I1(pIDLY_INC),
-        .I2(pIDLY_CE_i_2_n_0),
+       (.I0(pState[5]),
+        .I1(pState[7]),
+        .I2(pIDLY_INC_i_2_n_0),
+        .I3(pIDLY_INC),
         .O(pIDLY_INC_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair70" *) 
   LUT5 #(
-    .INIT(32'h00000200)) 
+    .INIT(32'h00000001)) 
     pIDLY_INC_i_2
-       (.I0(pFoundEyeFlag_i_4_n_0),
-        .I1(pState[5]),
+       (.I0(\pEyeOpenCnt[4]_i_4_n_0 ),
+        .I1(pState[2]),
         .I2(pState[0]),
-        .I3(pState[7]),
-        .I4(pIDLY_CE_i_3_n_0),
-        .O(pIDLY_INC_2));
+        .I3(\pState_reg_n_0_[4] ),
+        .I4(pState[3]),
+        .O(pIDLY_INC_i_2_n_0));
   FDRE pIDLY_INC_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
         .D(pIDLY_INC_i_1_n_0),
         .Q(pIDLY_INC),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair70" *) 
-  LUT5 #(
-    .INIT(32'h00001000)) 
+  LUT6 #(
+    .INIT(64'h0000000000000004)) 
     pIDLY_LD_i_1
-       (.I0(pState[5]),
-        .I1(pState[7]),
-        .I2(pFoundEyeFlag_i_4_n_0),
-        .I3(pState[0]),
-        .I4(pIDLY_CE_i_3_n_0),
-        .O(pIDLY_LD_1));
-  FDRE pIDLY_LD_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.I0(\pState_reg_n_0_[4] ),
+        .I1(pState[0]),
+        .I2(pState[7]),
+        .I3(pState[5]),
+        .I4(pState[3]),
+        .I5(pIDLY_LD_i_2_n_0),
+        .O(pIDLY_LD_i_1_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    pIDLY_LD_i_2
+       (.I0(pState[6]),
+        .I1(pState[8]),
+        .I2(pState[10]),
+        .I3(pState[9]),
+        .I4(pState[1]),
+        .I5(pState[2]),
+        .O(pIDLY_LD_i_2_n_0));
+  FDSE pIDLY_LD_reg
+       (.C(pError_reg_1),
         .CE(1'b1),
-        .D(pIDLY_LD_1),
+        .D(1'b0),
         .Q(pIDLY_LD),
-        .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+        .S(pIDLY_LD_i_1_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair64" *) 
   LUT5 #(
     .INIT(32'h00010116)) 
-    pStateNxt
+    \pStateNxt_inferred__8/i_ 
        (.I0(pState[0]),
         .I1(pState[1]),
         .I2(pState[2]),
         .I3(pState[3]),
-        .I4(pState[4]),
-        .O(pStateNxt_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair66" *) 
+        .I4(\pState_reg_n_0_[4] ),
+        .O(\pStateNxt_inferred__8/i__n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair64" *) 
   LUT5 #(
     .INIT(32'hFFFEFEE8)) 
-    pStateNxt__0
+    \pStateNxt_inferred__8/i___0 
        (.I0(pState[0]),
         .I1(pState[1]),
         .I2(pState[2]),
         .I3(pState[3]),
-        .I4(pState[4]),
-        .O(pStateNxt__0_n_0));
+        .I4(\pState_reg_n_0_[4] ),
+        .O(\pStateNxt_inferred__8/i___0_n_0 ));
   LUT6 #(
     .INIT(64'h0000000100010116)) 
-    pStateNxt__1
+    \pStateNxt_inferred__8/i___1 
        (.I0(pState[5]),
         .I1(pState[6]),
         .I2(pState[7]),
         .I3(pState[8]),
         .I4(pState[9]),
         .I5(pState[10]),
-        .O(pStateNxt__1_n_0));
+        .O(\pStateNxt_inferred__8/i___1_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFEFFFEFEE8)) 
-    pStateNxt__2
+    \pStateNxt_inferred__8/i___2 
        (.I0(pState[5]),
         .I1(pState[6]),
         .I2(pState[7]),
         .I3(pState[8]),
         .I4(pState[9]),
         .I5(pState[10]),
-        .O(pStateNxt__2_n_0));
+        .O(\pStateNxt_inferred__8/i___2_n_0 ));
   LUT4 #(
     .INIT(16'h0012)) 
-    pStateNxt__3
-       (.I0(pStateNxt_n_0),
-        .I1(pStateNxt__0_n_0),
-        .I2(pStateNxt__1_n_0),
-        .I3(pStateNxt__2_n_0),
-        .O(pStateNxt__3_n_0));
+    \pStateNxt_inferred__8/i___3 
+       (.I0(\pStateNxt_inferred__8/i__n_0 ),
+        .I1(\pStateNxt_inferred__8/i___0_n_0 ),
+        .I2(\pStateNxt_inferred__8/i___1_n_0 ),
+        .I3(\pStateNxt_inferred__8/i___2_n_0 ),
+        .O(\pStateNxt_inferred__8/i___3_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
     \pState[0]_i_1 
-       (.I0(pStateNxt__3_n_0),
-        .O(\pState[0]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFFEEEA)) 
+       (.I0(\pStateNxt_inferred__8/i___3_n_0 ),
+        .O(pStateNxt[0]));
+  LUT6 #(
+    .INIT(64'hFFFFFFFEFFFEFEEE)) 
     \pState[10]_i_1 
        (.I0(\pState[10]_i_3_n_0 ),
-        .I1(\pState[10]_i_4__0_n_0 ),
-        .I2(pState[7]),
-        .I3(pState[8]),
-        .I4(\pState[10]_i_5_n_0 ),
-        .O(pStateNxt__4));
-  (* SOFT_HLUTNM = "soft_lutpair80" *) 
+        .I1(\pState[10]_i_4_n_0 ),
+        .I2(\pState[10]_i_5_n_0 ),
+        .I3(pState[10]),
+        .I4(pState[9]),
+        .I5(pState[1]),
+        .O(\pState[10]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair72" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \pState[10]_i_2 
-       (.I0(pStateNxt__3_n_0),
+       (.I0(pDelayOvf),
         .I1(pState[6]),
-        .I2(pDelayOvf),
-        .O(\pState[10]_i_2_n_0 ));
+        .I2(\pStateNxt_inferred__8/i___3_n_0 ),
+        .O(pStateNxt[10]));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFAF8888)) 
+    .INIT(64'hFFFFFFEBFFEBEBEB)) 
     \pState[10]_i_3 
-       (.I0(pIDLY_CE_i_3_n_0),
-        .I1(pState[1]),
-        .I2(pTknFlagQ),
-        .I3(pCtlTknOvf_reg_n_0),
-        .I4(pState[2]),
-        .I5(\pCtlTknCnt[6]_i_3_n_0 ),
+       (.I0(iIn_q_i_2_n_0),
+        .I1(\pEyeOpenCnt[4]_i_4_n_0 ),
+        .I2(pState[2]),
+        .I3(pDelayWaitOvf_reg_n_0),
+        .I4(pState[8]),
+        .I5(pState[6]),
         .O(\pState[10]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair78" *) 
-  LUT4 #(
-    .INIT(16'hFFF8)) 
-    \pState[10]_i_4__0 
-       (.I0(pState[9]),
-        .I1(pState[10]),
-        .I2(pState[7]),
-        .I3(pState[6]),
-        .O(\pState[10]_i_4__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFF55005455)) 
+    .INIT(64'hFFFF0C0FAEAF0C0F)) 
+    \pState[10]_i_4 
+       (.I0(pBlankBegin),
+        .I1(pCtlTknOvf_reg_n_0),
+        .I2(\pEyeOpenCnt[4]_i_4_n_0 ),
+        .I3(pTknFlagQ),
+        .I4(pState[1]),
+        .I5(out),
+        .O(\pState[10]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair69" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
     \pState[10]_i_5 
-       (.I0(pIDLY_CE_i_3_n_0),
-        .I1(out),
-        .I2(pBlankBegin),
-        .I3(pState[1]),
-        .I4(pState[2]),
-        .I5(\pState[10]_i_6_n_0 ),
+       (.I0(pState[6]),
+        .I1(pState[8]),
         .O(\pState[10]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'hFEFEFEFEFEFEFEC0)) 
-    \pState[10]_i_6 
-       (.I0(pDelayWaitOvf),
-        .I1(pState[9]),
-        .I2(pState[10]),
-        .I3(pState[7]),
-        .I4(pState[6]),
-        .I5(pState[8]),
-        .O(\pState[10]_i_6_n_0 ));
-  LUT6 #(
-    .INIT(64'hAA08AAAAAA08AA08)) 
+    .INIT(64'hFFFF4F4400000000)) 
     \pState[1]_i_1 
-       (.I0(pStateNxt__3_n_0),
+       (.I0(pTknFlagQ),
         .I1(pState[2]),
-        .I2(pTknFlagQ),
-        .I3(pState[0]),
-        .I4(pDelayOvf),
-        .I5(pState[6]),
-        .O(\pState[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair69" *) 
+        .I2(pDelayOvf),
+        .I3(pState[6]),
+        .I4(pState[0]),
+        .I5(\pStateNxt_inferred__8/i___3_n_0 ),
+        .O(pStateNxt[1]));
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \pState[2]_i_1 
-       (.I0(pStateNxt__3_n_0),
+       (.I0(pBlankBegin),
         .I1(pState[1]),
-        .I2(pBlankBegin),
-        .O(\pState[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair80" *) 
+        .I2(\pStateNxt_inferred__8/i___3_n_0 ),
+        .O(pStateNxt[2]));
+  (* SOFT_HLUTNM = "soft_lutpair72" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \pState[3]_i_1 
-       (.I0(pStateNxt__3_n_0),
-        .I1(pTknFlagQ),
-        .I2(pState[2]),
-        .O(\pState[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair69" *) 
+       (.I0(pTknFlagQ),
+        .I1(pState[2]),
+        .I2(\pStateNxt_inferred__8/i___3_n_0 ),
+        .O(pStateNxt[3]));
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
   LUT5 #(
-    .INIT(32'h08AA0808)) 
+    .INIT(32'h4040F040)) 
     \pState[4]_i_1 
-       (.I0(pStateNxt__3_n_0),
+       (.I0(\pState[5]_i_2_n_0 ),
         .I1(pState[3]),
-        .I2(\pState[5]_i_2_n_0 ),
-        .I3(pBlankBegin),
-        .I4(pState[1]),
-        .O(\pState[4]_i_1_n_0 ));
+        .I2(\pStateNxt_inferred__8/i___3_n_0 ),
+        .I3(pState[1]),
+        .I4(pBlankBegin),
+        .O(pStateNxt[4]));
   LUT5 #(
-    .INIT(32'h80AA8080)) 
+    .INIT(32'hF2002200)) 
     \pState[5]_i_1 
-       (.I0(pStateNxt__3_n_0),
-        .I1(\pState[5]_i_2_n_0 ),
-        .I2(pState[3]),
-        .I3(pFoundEyeFlag),
-        .I4(pState[4]),
-        .O(\pState[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+       (.I0(\pState_reg_n_0_[4] ),
+        .I1(pFoundEyeFlag_reg_n_0),
+        .I2(\pState[5]_i_2_n_0 ),
+        .I3(\pStateNxt_inferred__8/i___3_n_0 ),
+        .I4(pState[3]),
+        .O(pStateNxt[5]));
+  (* SOFT_HLUTNM = "soft_lutpair62" *) 
   LUT5 #(
-    .INIT(32'hFFFFFFEF)) 
+    .INIT(32'hFFFFFEFF)) 
     \pState[5]_i_2 
-       (.I0(\pEyeOpenCnt_reg_n_0_[3] ),
+       (.I0(\pEyeOpenCnt_reg_n_0_[0] ),
         .I1(\pEyeOpenCnt_reg_n_0_[2] ),
-        .I2(\pEyeOpenCnt_reg_n_0_[4] ),
-        .I3(\pEyeOpenCnt_reg_n_0_[1] ),
-        .I4(\pEyeOpenCnt_reg_n_0_[0] ),
+        .I2(\pEyeOpenCnt_reg_n_0_[3] ),
+        .I3(\pEyeOpenCnt_reg_n_0_[4] ),
+        .I4(\pEyeOpenCnt_reg_n_0_[1] ),
         .O(\pState[5]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair77" *) 
+  (* SOFT_HLUTNM = "soft_lutpair74" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \pState[6]_i_1 
-       (.I0(pStateNxt__3_n_0),
+       (.I0(\pStateNxt_inferred__8/i___3_n_0 ),
         .I1(pState[5]),
-        .O(\pState[6]_i_1_n_0 ));
+        .O(pStateNxt[6]));
   (* SOFT_HLUTNM = "soft_lutpair68" *) 
   LUT5 #(
-    .INIT(32'hAA080808)) 
+    .INIT(32'hF0202020)) 
     \pState[7]_i_1 
-       (.I0(pStateNxt__3_n_0),
-        .I1(pState[8]),
-        .I2(pDelayCenter),
-        .I3(pFoundEyeFlag),
-        .I4(pState[4]),
-        .O(\pState[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair81" *) 
+       (.I0(pState[8]),
+        .I1(pDelayCenter),
+        .I2(\pStateNxt_inferred__8/i___3_n_0 ),
+        .I3(\pState_reg_n_0_[4] ),
+        .I4(pFoundEyeFlag_reg_n_0),
+        .O(pStateNxt[7]));
+  (* SOFT_HLUTNM = "soft_lutpair74" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \pState[8]_i_1 
-       (.I0(pStateNxt__3_n_0),
+       (.I0(\pStateNxt_inferred__8/i___3_n_0 ),
         .I1(pState[7]),
-        .O(\pState[8]_i_1_n_0 ));
+        .O(pStateNxt[8]));
   (* SOFT_HLUTNM = "soft_lutpair68" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \pState[9]_i_1 
-       (.I0(pStateNxt__3_n_0),
+       (.I0(pDelayCenter),
         .I1(pState[8]),
-        .I2(pDelayCenter),
-        .O(\pState[9]_i_1_n_0 ));
+        .I2(\pStateNxt_inferred__8/i___3_n_0 ),
+        .O(pStateNxt[9]));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDSE \pState_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[0]_i_1_n_0 ),
+       (.C(pError_reg_1),
+        .CE(\pState[10]_i_1_n_0 ),
+        .D(pStateNxt[0]),
         .Q(pState[0]),
-        .S(SR));
+        .S(SS));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDRE \pState_reg[10] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[10]_i_2_n_0 ),
+       (.C(pError_reg_1),
+        .CE(\pState[10]_i_1_n_0 ),
+        .D(pStateNxt[10]),
         .Q(pState[10]),
-        .R(SR));
+        .R(SS));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDRE \pState_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[1]_i_1_n_0 ),
+       (.C(pError_reg_1),
+        .CE(\pState[10]_i_1_n_0 ),
+        .D(pStateNxt[1]),
         .Q(pState[1]),
-        .R(SR));
+        .R(SS));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDRE \pState_reg[2] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[2]_i_1_n_0 ),
+       (.C(pError_reg_1),
+        .CE(\pState[10]_i_1_n_0 ),
+        .D(pStateNxt[2]),
         .Q(pState[2]),
-        .R(SR));
+        .R(SS));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDRE \pState_reg[3] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[3]_i_1_n_0 ),
+       (.C(pError_reg_1),
+        .CE(\pState[10]_i_1_n_0 ),
+        .D(pStateNxt[3]),
         .Q(pState[3]),
-        .R(SR));
+        .R(SS));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDRE \pState_reg[4] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[4]_i_1_n_0 ),
-        .Q(pState[4]),
-        .R(SR));
+       (.C(pError_reg_1),
+        .CE(\pState[10]_i_1_n_0 ),
+        .D(pStateNxt[4]),
+        .Q(\pState_reg_n_0_[4] ),
+        .R(SS));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDRE \pState_reg[5] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[5]_i_1_n_0 ),
+       (.C(pError_reg_1),
+        .CE(\pState[10]_i_1_n_0 ),
+        .D(pStateNxt[5]),
         .Q(pState[5]),
-        .R(SR));
+        .R(SS));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDRE \pState_reg[6] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[6]_i_1_n_0 ),
+       (.C(pError_reg_1),
+        .CE(\pState[10]_i_1_n_0 ),
+        .D(pStateNxt[6]),
         .Q(pState[6]),
-        .R(SR));
+        .R(SS));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDRE \pState_reg[7] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[7]_i_1_n_0 ),
+       (.C(pError_reg_1),
+        .CE(\pState[10]_i_1_n_0 ),
+        .D(pStateNxt[7]),
         .Q(pState[7]),
-        .R(SR));
+        .R(SS));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDRE \pState_reg[8] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[8]_i_1_n_0 ),
+       (.C(pError_reg_1),
+        .CE(\pState[10]_i_1_n_0 ),
+        .D(pStateNxt[8]),
         .Q(pState[8]),
-        .R(SR));
+        .R(SS));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDRE \pState_reg[9] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[9]_i_1_n_0 ),
+       (.C(pError_reg_1),
+        .CE(\pState[10]_i_1_n_0 ),
+        .D(pStateNxt[9]),
         .Q(pState[9]),
-        .R(SR));
+        .R(SS));
   FDRE pTknFlagQ_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
         .D(pTknFlag),
         .Q(pTknFlagQ),
@@ -4075,7 +4278,7 @@ module hdmi_in_dvi2rgb_0_0_PhaseAlign
         .I5(pDataQ[6]),
         .O(pTknFlag_i_3_n_0));
   FDRE pTknFlag_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pError_reg_1),
         .CE(1'b1),
         .D(pTknFlag0),
         .Q(pTknFlag),
@@ -4084,60 +4287,59 @@ endmodule
 
 (* ORIG_REF_NAME = "PhaseAlign" *) 
 module hdmi_in_dvi2rgb_0_0_PhaseAlign_12
-   (pIDLY_CE,
+   (pVld_1,
+    pIDLY_CE,
     pIDLY_INC,
     pIDLY_LD,
-    pVld_1,
-    pAlignErr_q_reg,
-    iIn_q_reg,
-    pMeRdy_int_reg,
-    pBitslip_reg,
-    rMMCM_LckdRisingFlag_reg,
-    out,
+    pError_reg_0,
+    pAligned_reg_0,
+    \pState_reg[1]_0 ,
+    pBitslip0,
+    pIDLY_LD_reg_0,
     pVld_2,
     pVld_0,
+    out,
     pAlignErr_q,
+    SS,
     D,
-    pIDLY_CE_reg_0,
-    SS);
+    \pIDLY_CNT_Q_reg[4]_0 );
+  output pVld_1;
   output pIDLY_CE;
   output pIDLY_INC;
   output pIDLY_LD;
-  output pVld_1;
-  output pAlignErr_q_reg;
-  output iIn_q_reg;
-  output pMeRdy_int_reg;
-  output pBitslip_reg;
-  input rMMCM_LckdRisingFlag_reg;
-  input [0:0]out;
+  output pError_reg_0;
+  output pAligned_reg_0;
+  output \pState_reg[1]_0 ;
+  output pBitslip0;
+  input pIDLY_LD_reg_0;
   input pVld_2;
   input pVld_0;
+  input [0:0]out;
   input pAlignErr_q;
-  input [8:0]D;
-  input [4:0]pIDLY_CE_reg_0;
   input [0:0]SS;
+  input [8:0]D;
+  input [4:0]\pIDLY_CNT_Q_reg[4]_0 ;
 
   wire [8:0]D;
   wire [0:0]SS;
   wire iIn_q_i_2__0_n_0;
-  wire iIn_q_reg;
   wire [0:0]out;
   wire pAlignErr_q;
-  wire pAlignErr_q_reg;
-  wire pAligned;
-  wire pAligned_i_2__0_n_0;
-  wire pBitslip_reg;
+  wire pAligned_i_1__0_n_0;
+  wire pAligned_reg_0;
+  wire pBitslip0;
   wire pBlankBegin;
   wire pBlankBegin0;
   wire \pCenterTap[0]_i_1_n_0 ;
   wire \pCenterTap[1]_i_1__0_n_0 ;
   wire \pCenterTap[2]_i_1__0_n_0 ;
   wire \pCenterTap[3]_i_1__0_n_0 ;
+  wire \pCenterTap[3]_i_2__0_n_0 ;
   wire \pCenterTap[4]_i_1__0_n_0 ;
   wire \pCenterTap[5]_i_1__0_n_0 ;
   wire \pCenterTap[5]_i_2__0_n_0 ;
   wire \pCenterTap[5]_i_3__0_n_0 ;
-  wire \pCenterTap[5]_i_5__0_n_0 ;
+  wire \pCenterTap[5]_i_4__0_n_0 ;
   wire \pCenterTap_reg_n_0_[0] ;
   wire \pCenterTap_reg_n_0_[1] ;
   wire \pCenterTap_reg_n_0_[2] ;
@@ -4145,9 +4347,6 @@ module hdmi_in_dvi2rgb_0_0_PhaseAlign_12
   wire \pCenterTap_reg_n_0_[4] ;
   wire \pCenterTap_reg_n_0_[5] ;
   wire \pCtlTknCnt[6]_i_3__0_n_0 ;
-  wire \pCtlTknCnt[6]_i_4__0_n_0 ;
-  wire \pCtlTknCnt[6]_i_5__0_n_0 ;
-  wire \pCtlTknCnt[6]_i_6_n_0 ;
   wire [6:0]pCtlTknCnt_reg__0;
   wire pCtlTknOvf_i_1__0_n_0;
   wire pCtlTknOvf_reg_n_0;
@@ -4166,75 +4365,61 @@ module hdmi_in_dvi2rgb_0_0_PhaseAlign_12
   wire pDelayCenter_reg_n_0;
   wire pDelayOvf_i_1__0_n_0;
   wire pDelayOvf_reg_n_0;
-  wire [1:0]pDelayWaitCnt;
   wire \pDelayWaitCnt[0]_i_1_n_0 ;
   wire \pDelayWaitCnt[1]_i_1_n_0 ;
   wire \pDelayWaitCnt[1]_i_2__0_n_0 ;
-  wire \pDelayWaitCnt[1]_i_3__1_n_0 ;
+  wire \pDelayWaitCnt[1]_i_3__0_n_0 ;
+  wire \pDelayWaitCnt_reg_n_0_[0] ;
+  wire \pDelayWaitCnt_reg_n_0_[1] ;
   wire pDelayWaitOvf_i_1__0_n_0;
+  wire pDelayWaitOvf_i_2__0_n_0;
   wire pDelayWaitOvf_reg_n_0;
-  wire pError;
-  wire \pEyeOpenCnt[0]_i_1__0_n_0 ;
-  wire \pEyeOpenCnt[1]_i_1__0_n_0 ;
-  wire \pEyeOpenCnt[2]_i_1__0_n_0 ;
-  wire \pEyeOpenCnt[3]_i_1__0_n_0 ;
-  wire \pEyeOpenCnt[4]_i_1__0_n_0 ;
-  wire \pEyeOpenCnt[4]_i_2__0_n_0 ;
+  wire pError_i_1__0_n_0;
+  wire pError_reg_0;
+  wire \pEyeOpenCnt[4]_i_4__0_n_0 ;
+  wire \pEyeOpenCnt[4]_i_5__0_n_0 ;
+  wire \pEyeOpenCnt[4]_i_6_n_0 ;
   wire \pEyeOpenCnt_reg_n_0_[0] ;
   wire \pEyeOpenCnt_reg_n_0_[1] ;
   wire \pEyeOpenCnt_reg_n_0_[2] ;
   wire \pEyeOpenCnt_reg_n_0_[3] ;
   wire \pEyeOpenCnt_reg_n_0_[4] ;
+  wire pEyeOpenEn;
   wire pEyeOpenRst;
-  wire pFoundEyeFlag;
   wire pFoundEyeFlag_i_1__0_n_0;
   wire pFoundEyeFlag_i_2__0_n_0;
-  wire pFoundEyeFlag_i_3__0_n_0;
-  wire pFoundEyeFlag_i_4__0_n_0;
-  wire pFoundEyeFlag_i_5__0_n_0;
-  wire pFoundJtrFlag;
+  wire pFoundEyeFlag_reg_n_0;
   wire pFoundJtrFlag_i_1__0_n_0;
   wire pFoundJtrFlag_i_2__0_n_0;
+  wire pFoundJtrFlag_reg_n_0;
   wire pIDLY_CE;
-  wire pIDLY_CE_0;
-  wire pIDLY_CE_i_2__0_n_0;
-  wire [4:0]pIDLY_CE_reg_0;
+  wire pIDLY_CE_i_1__0_n_0;
+  wire [4:0]\pIDLY_CNT_Q_reg[4]_0 ;
   wire \pIDLY_CNT_Q_reg_n_0_[0] ;
   wire \pIDLY_CNT_Q_reg_n_0_[1] ;
   wire \pIDLY_CNT_Q_reg_n_0_[2] ;
   wire \pIDLY_CNT_Q_reg_n_0_[3] ;
   wire \pIDLY_CNT_Q_reg_n_0_[4] ;
   wire pIDLY_INC;
-  wire pIDLY_INC_2;
   wire pIDLY_INC_i_1__0_n_0;
+  wire pIDLY_INC_i_2__0_n_0;
   wire pIDLY_LD;
-  wire pIDLY_LD_1;
-  wire pMeRdy_int_reg;
+  wire pIDLY_LD_i_1__0_n_0;
+  wire pIDLY_LD_reg_0;
   wire [10:0]pState;
-  wire pStateNxt__0_n_0;
-  wire pStateNxt__1_n_0;
-  wire pStateNxt__2_n_0;
-  wire pStateNxt__3_n_0;
-  wire pStateNxt__4;
-  wire pStateNxt_n_0;
-  wire \pState[0]_i_1__0_n_0 ;
-  wire \pState[10]_i_2__0_n_0 ;
+  wire [10:0]pStateNxt;
+  wire \pStateNxt_inferred__8/i___0_n_0 ;
+  wire \pStateNxt_inferred__8/i___1_n_0 ;
+  wire \pStateNxt_inferred__8/i___2_n_0 ;
+  wire \pStateNxt_inferred__8/i___3_n_0 ;
+  wire \pStateNxt_inferred__8/i__n_0 ;
+  wire \pState[10]_i_1__0_n_0 ;
   wire \pState[10]_i_3__0_n_0 ;
-  wire \pState[10]_i_4_n_0 ;
+  wire \pState[10]_i_4__0_n_0 ;
   wire \pState[10]_i_5__0_n_0 ;
-  wire \pState[10]_i_6__0_n_0 ;
-  wire \pState[10]_i_7_n_0 ;
-  wire \pState[10]_i_8_n_0 ;
-  wire \pState[1]_i_1__0_n_0 ;
-  wire \pState[2]_i_1__0_n_0 ;
-  wire \pState[3]_i_1__0_n_0 ;
-  wire \pState[4]_i_1__0_n_0 ;
-  wire \pState[5]_i_1__0_n_0 ;
   wire \pState[5]_i_2__0_n_0 ;
-  wire \pState[6]_i_1__0_n_0 ;
-  wire \pState[7]_i_1__0_n_0 ;
-  wire \pState[8]_i_1__0_n_0 ;
-  wire \pState[9]_i_1__0_n_0 ;
+  wire \pState_reg[1]_0 ;
+  wire \pState_reg_n_0_[4] ;
   wire pTknFlag;
   wire pTknFlag0;
   wire pTknFlagQ;
@@ -4243,61 +4428,51 @@ module hdmi_in_dvi2rgb_0_0_PhaseAlign_12
   wire pVld_0;
   wire pVld_1;
   wire pVld_2;
-  wire [6:0]p_0_in;
-  wire rMMCM_LckdRisingFlag_reg;
+  wire [6:0]p_0_in__0;
+  wire [4:0]plusOp;
 
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFEEF)) 
+    .INIT(64'hFFFFFFFFFFFFFFEB)) 
     iIn_q_i_1__0
        (.I0(iIn_q_i_2__0_n_0),
-        .I1(pState[3]),
+        .I1(pState[1]),
         .I2(pState[2]),
-        .I3(pState[1]),
-        .I4(pState[0]),
-        .I5(pState[4]),
-        .O(iIn_q_reg));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
-    iIn_q_i_2__0
-       (.I0(pState[7]),
-        .I1(pState[5]),
-        .I2(pState[6]),
-        .I3(pState[8]),
+        .I3(pState[9]),
         .I4(pState[10]),
-        .I5(pState[9]),
+        .I5(\pState[10]_i_5__0_n_0 ),
+        .O(\pState_reg[1]_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    iIn_q_i_2__0
+       (.I0(\pState_reg_n_0_[4] ),
+        .I1(pState[0]),
+        .I2(pState[3]),
+        .I3(pState[5]),
+        .I4(pState[7]),
         .O(iIn_q_i_2__0_n_0));
   LUT6 #(
-    .INIT(64'h0000000000001000)) 
+    .INIT(64'h0000010000000000)) 
     pAligned_i_1__0
        (.I0(pState[6]),
         .I1(pState[8]),
-        .I2(pAligned_i_2__0_n_0),
+        .I2(pState[10]),
         .I3(pState[9]),
-        .I4(pState[0]),
-        .I5(pState[10]),
-        .O(pAligned));
-  LUT6 #(
-    .INIT(64'h0000000000000001)) 
-    pAligned_i_2__0
-       (.I0(pState[3]),
-        .I1(pState[1]),
-        .I2(pState[2]),
-        .I3(pState[4]),
-        .I4(pState[7]),
-        .I5(pState[5]),
-        .O(pAligned_i_2__0_n_0));
+        .I4(pState[1]),
+        .I5(\pDelayWaitCnt[1]_i_3__0_n_0 ),
+        .O(pAligned_i_1__0_n_0));
   FDRE pAligned_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(pAligned),
+        .D(pAligned_i_1__0_n_0),
         .Q(pVld_1),
         .R(1'b0));
   LUT2 #(
     .INIT(4'h2)) 
     pBitslip_i_1__0
-       (.I0(pAlignErr_q_reg),
+       (.I0(pError_reg_0),
         .I1(pAlignErr_q),
-        .O(pBitslip_reg));
+        .O(pBitslip0));
   LUT2 #(
     .INIT(4'h2)) 
     pBlankBegin_i_1__0
@@ -4305,364 +4480,341 @@ module hdmi_in_dvi2rgb_0_0_PhaseAlign_12
         .I1(pTknFlagQ),
         .O(pBlankBegin0));
   FDRE pBlankBegin_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(pBlankBegin0),
         .Q(pBlankBegin),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair54" *) 
-  LUT3 #(
-    .INIT(8'hF6)) 
+  LUT4 #(
+    .INIT(16'hFF62)) 
     \pCenterTap[0]_i_1 
        (.I0(\pCenterTap_reg_n_0_[0] ),
-        .I1(\pCenterTap[5]_i_3__0_n_0 ),
-        .I2(pEyeOpenRst),
+        .I1(pEyeOpenEn),
+        .I2(\pCenterTap[5]_i_3__0_n_0 ),
+        .I3(pEyeOpenRst),
         .O(\pCenterTap[0]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'h8BB8)) 
-    \pCenterTap[1]_i_1__0 
-       (.I0(\pIDLY_CNT_Q_reg_n_0_[0] ),
-        .I1(pEyeOpenRst),
-        .I2(\pCenterTap_reg_n_0_[1] ),
-        .I3(\pCenterTap_reg_n_0_[0] ),
-        .O(\pCenterTap[1]_i_1__0_n_0 ));
   LUT5 #(
-    .INIT(32'h8BB8B8B8)) 
-    \pCenterTap[2]_i_1__0 
-       (.I0(\pIDLY_CNT_Q_reg_n_0_[1] ),
-        .I1(pEyeOpenRst),
-        .I2(\pCenterTap_reg_n_0_[2] ),
+    .INIT(32'h88F8F888)) 
+    \pCenterTap[1]_i_1__0 
+       (.I0(pEyeOpenRst),
+        .I1(\pIDLY_CNT_Q_reg_n_0_[0] ),
+        .I2(\pCenterTap[5]_i_3__0_n_0 ),
         .I3(\pCenterTap_reg_n_0_[1] ),
         .I4(\pCenterTap_reg_n_0_[0] ),
-        .O(\pCenterTap[2]_i_1__0_n_0 ));
+        .O(\pCenterTap[1]_i_1__0_n_0 ));
   LUT6 #(
-    .INIT(64'h8BBBBBBBB8888888)) 
-    \pCenterTap[3]_i_1__0 
-       (.I0(\pIDLY_CNT_Q_reg_n_0_[2] ),
-        .I1(pEyeOpenRst),
-        .I2(\pCenterTap_reg_n_0_[0] ),
+    .INIT(64'h88F8F8F8F8888888)) 
+    \pCenterTap[2]_i_1__0 
+       (.I0(pEyeOpenRst),
+        .I1(\pIDLY_CNT_Q_reg_n_0_[1] ),
+        .I2(\pCenterTap[5]_i_3__0_n_0 ),
         .I3(\pCenterTap_reg_n_0_[1] ),
-        .I4(\pCenterTap_reg_n_0_[2] ),
-        .I5(\pCenterTap_reg_n_0_[3] ),
+        .I4(\pCenterTap_reg_n_0_[0] ),
+        .I5(\pCenterTap_reg_n_0_[2] ),
+        .O(\pCenterTap[2]_i_1__0_n_0 ));
+  LUT5 #(
+    .INIT(32'hF88888F8)) 
+    \pCenterTap[3]_i_1__0 
+       (.I0(pEyeOpenRst),
+        .I1(\pIDLY_CNT_Q_reg_n_0_[2] ),
+        .I2(\pCenterTap[5]_i_3__0_n_0 ),
+        .I3(\pCenterTap[3]_i_2__0_n_0 ),
+        .I4(\pCenterTap_reg_n_0_[3] ),
         .O(\pCenterTap[3]_i_1__0_n_0 ));
-  LUT4 #(
-    .INIT(16'h8BB8)) 
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \pCenterTap[3]_i_2__0 
+       (.I0(\pCenterTap_reg_n_0_[1] ),
+        .I1(\pCenterTap_reg_n_0_[0] ),
+        .I2(\pCenterTap_reg_n_0_[2] ),
+        .O(\pCenterTap[3]_i_2__0_n_0 ));
+  LUT5 #(
+    .INIT(32'hF88888F8)) 
     \pCenterTap[4]_i_1__0 
-       (.I0(\pIDLY_CNT_Q_reg_n_0_[3] ),
-        .I1(pEyeOpenRst),
-        .I2(\pCenterTap_reg_n_0_[4] ),
-        .I3(\pCenterTap[5]_i_5__0_n_0 ),
+       (.I0(pEyeOpenRst),
+        .I1(\pIDLY_CNT_Q_reg_n_0_[3] ),
+        .I2(\pCenterTap[5]_i_3__0_n_0 ),
+        .I3(\pCenterTap[5]_i_4__0_n_0 ),
+        .I4(\pCenterTap_reg_n_0_[4] ),
         .O(\pCenterTap[4]_i_1__0_n_0 ));
   LUT2 #(
     .INIT(4'hE)) 
     \pCenterTap[5]_i_1__0 
-       (.I0(\pCenterTap[5]_i_3__0_n_0 ),
+       (.I0(pEyeOpenEn),
         .I1(pEyeOpenRst),
         .O(\pCenterTap[5]_i_1__0_n_0 ));
-  LUT5 #(
-    .INIT(32'h8BB8B8B8)) 
+  LUT6 #(
+    .INIT(64'hF8F888F88888F888)) 
     \pCenterTap[5]_i_2__0 
-       (.I0(\pIDLY_CNT_Q_reg_n_0_[4] ),
-        .I1(pEyeOpenRst),
-        .I2(\pCenterTap_reg_n_0_[5] ),
-        .I3(\pCenterTap[5]_i_5__0_n_0 ),
-        .I4(\pCenterTap_reg_n_0_[4] ),
+       (.I0(pEyeOpenRst),
+        .I1(\pIDLY_CNT_Q_reg_n_0_[4] ),
+        .I2(\pCenterTap[5]_i_3__0_n_0 ),
+        .I3(\pCenterTap_reg_n_0_[4] ),
+        .I4(\pCenterTap[5]_i_4__0_n_0 ),
+        .I5(\pCenterTap_reg_n_0_[5] ),
         .O(\pCenterTap[5]_i_2__0_n_0 ));
   LUT6 #(
-    .INIT(64'h0000000000000004)) 
+    .INIT(64'hFFFFFFFFFFFFFFD9)) 
     \pCenterTap[5]_i_3__0 
-       (.I0(iIn_q_i_2__0_n_0),
-        .I1(pState[3]),
-        .I2(pState[4]),
-        .I3(pState[0]),
-        .I4(pState[1]),
+       (.I0(pState[0]),
+        .I1(\pState_reg_n_0_[4] ),
+        .I2(pFoundEyeFlag_reg_n_0),
+        .I3(\pEyeOpenCnt[4]_i_5__0_n_0 ),
+        .I4(\pEyeOpenCnt[4]_i_4__0_n_0 ),
         .I5(pState[2]),
         .O(\pCenterTap[5]_i_3__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000000000310)) 
-    \pCenterTap[5]_i_4__0 
-       (.I0(pFoundEyeFlag),
-        .I1(pFoundJtrFlag_i_2__0_n_0),
-        .I2(pState[4]),
-        .I3(pState[0]),
-        .I4(pState[3]),
-        .I5(iIn_q_i_2__0_n_0),
-        .O(pEyeOpenRst));
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT4 #(
-    .INIT(16'h8000)) 
-    \pCenterTap[5]_i_5__0 
-       (.I0(\pCenterTap_reg_n_0_[3] ),
-        .I1(\pCenterTap_reg_n_0_[2] ),
+    .INIT(16'h7FFF)) 
+    \pCenterTap[5]_i_4__0 
+       (.I0(\pCenterTap_reg_n_0_[2] ),
+        .I1(\pCenterTap_reg_n_0_[0] ),
         .I2(\pCenterTap_reg_n_0_[1] ),
-        .I3(\pCenterTap_reg_n_0_[0] ),
-        .O(\pCenterTap[5]_i_5__0_n_0 ));
+        .I3(\pCenterTap_reg_n_0_[3] ),
+        .O(\pCenterTap[5]_i_4__0_n_0 ));
   FDRE \pCenterTap_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(\pCenterTap[0]_i_1_n_0 ),
         .Q(\pCenterTap_reg_n_0_[0] ),
         .R(1'b0));
   FDRE \pCenterTap_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(\pCenterTap[5]_i_1__0_n_0 ),
         .D(\pCenterTap[1]_i_1__0_n_0 ),
         .Q(\pCenterTap_reg_n_0_[1] ),
         .R(1'b0));
   FDRE \pCenterTap_reg[2] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(\pCenterTap[5]_i_1__0_n_0 ),
         .D(\pCenterTap[2]_i_1__0_n_0 ),
         .Q(\pCenterTap_reg_n_0_[2] ),
         .R(1'b0));
   FDRE \pCenterTap_reg[3] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(\pCenterTap[5]_i_1__0_n_0 ),
         .D(\pCenterTap[3]_i_1__0_n_0 ),
         .Q(\pCenterTap_reg_n_0_[3] ),
         .R(1'b0));
   FDRE \pCenterTap_reg[4] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(\pCenterTap[5]_i_1__0_n_0 ),
         .D(\pCenterTap[4]_i_1__0_n_0 ),
         .Q(\pCenterTap_reg_n_0_[4] ),
         .R(1'b0));
   FDRE \pCenterTap_reg[5] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(\pCenterTap[5]_i_1__0_n_0 ),
         .D(\pCenterTap[5]_i_2__0_n_0 ),
         .Q(\pCenterTap_reg_n_0_[5] ),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair55" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \pCtlTknCnt[0]_i_1__0 
        (.I0(pCtlTknCnt_reg__0[0]),
-        .O(p_0_in[0]));
-  (* SOFT_HLUTNM = "soft_lutpair55" *) 
+        .O(p_0_in__0[0]));
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \pCtlTknCnt[1]_i_1__0 
        (.I0(pCtlTknCnt_reg__0[0]),
         .I1(pCtlTknCnt_reg__0[1]),
-        .O(p_0_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+        .O(p_0_in__0[1]));
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
   LUT3 #(
-    .INIT(8'h6A)) 
+    .INIT(8'h78)) 
     \pCtlTknCnt[2]_i_1__0 
-       (.I0(pCtlTknCnt_reg__0[2]),
+       (.I0(pCtlTknCnt_reg__0[1]),
         .I1(pCtlTknCnt_reg__0[0]),
-        .I2(pCtlTknCnt_reg__0[1]),
-        .O(p_0_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+        .I2(pCtlTknCnt_reg__0[2]),
+        .O(p_0_in__0[2]));
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT4 #(
-    .INIT(16'h6AAA)) 
+    .INIT(16'h7F80)) 
     \pCtlTknCnt[3]_i_1__0 
-       (.I0(pCtlTknCnt_reg__0[3]),
-        .I1(pCtlTknCnt_reg__0[1]),
-        .I2(pCtlTknCnt_reg__0[0]),
-        .I3(pCtlTknCnt_reg__0[2]),
-        .O(p_0_in[3]));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
-  LUT5 #(
-    .INIT(32'h7FFF8000)) 
-    \pCtlTknCnt[4]_i_1__0 
        (.I0(pCtlTknCnt_reg__0[2]),
         .I1(pCtlTknCnt_reg__0[0]),
         .I2(pCtlTknCnt_reg__0[1]),
         .I3(pCtlTknCnt_reg__0[3]),
+        .O(p_0_in__0[3]));
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  LUT5 #(
+    .INIT(32'h7FFF8000)) 
+    \pCtlTknCnt[4]_i_1__0 
+       (.I0(pCtlTknCnt_reg__0[3]),
+        .I1(pCtlTknCnt_reg__0[1]),
+        .I2(pCtlTknCnt_reg__0[0]),
+        .I3(pCtlTknCnt_reg__0[2]),
         .I4(pCtlTknCnt_reg__0[4]),
-        .O(p_0_in[4]));
+        .O(p_0_in__0[4]));
   LUT6 #(
-    .INIT(64'h6AAAAAAAAAAAAAAA)) 
+    .INIT(64'h7FFFFFFF80000000)) 
     \pCtlTknCnt[5]_i_1__0 
-       (.I0(pCtlTknCnt_reg__0[5]),
+       (.I0(pCtlTknCnt_reg__0[4]),
         .I1(pCtlTknCnt_reg__0[2]),
         .I2(pCtlTknCnt_reg__0[0]),
         .I3(pCtlTknCnt_reg__0[1]),
         .I4(pCtlTknCnt_reg__0[3]),
-        .I5(pCtlTknCnt_reg__0[4]),
-        .O(p_0_in[5]));
+        .I5(pCtlTknCnt_reg__0[5]),
+        .O(p_0_in__0[5]));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFB)) 
+    .INIT(64'hFFFFFFFFFFFFFFFD)) 
     \pCtlTknCnt[6]_i_1__0 
-       (.I0(\pCtlTknCnt[6]_i_3__0_n_0 ),
-        .I1(pState[2]),
-        .I2(pState[1]),
-        .I3(\pCtlTknCnt[6]_i_4__0_n_0 ),
-        .I4(pState[4]),
-        .I5(\pCtlTknCnt[6]_i_5__0_n_0 ),
-        .O(pCtlTknRst));
-  LUT3 #(
-    .INIT(8'h6A)) 
-    \pCtlTknCnt[6]_i_2__0 
-       (.I0(pCtlTknCnt_reg__0[6]),
-        .I1(\pCtlTknCnt[6]_i_6_n_0 ),
-        .I2(pCtlTknCnt_reg__0[5]),
-        .O(p_0_in[6]));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \pCtlTknCnt[6]_i_3__0 
-       (.I0(pState[7]),
-        .I1(pState[8]),
+       (.I0(pState[2]),
+        .I1(pState[1]),
         .I2(pState[9]),
-        .I3(pState[6]),
-        .O(\pCtlTknCnt[6]_i_3__0_n_0 ));
+        .I3(pState[10]),
+        .I4(\pState[10]_i_5__0_n_0 ),
+        .I5(iIn_q_i_2__0_n_0),
+        .O(pCtlTknRst));
   LUT2 #(
-    .INIT(4'hE)) 
-    \pCtlTknCnt[6]_i_4__0 
-       (.I0(pState[3]),
-        .I1(pState[5]),
-        .O(\pCtlTknCnt[6]_i_4__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    \pCtlTknCnt[6]_i_5__0 
-       (.I0(pState[0]),
-        .I1(pState[10]),
-        .O(\pCtlTknCnt[6]_i_5__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
-  LUT5 #(
-    .INIT(32'h80000000)) 
-    \pCtlTknCnt[6]_i_6 
+    .INIT(4'h9)) 
+    \pCtlTknCnt[6]_i_2__0 
+       (.I0(\pCtlTknCnt[6]_i_3__0_n_0 ),
+        .I1(pCtlTknCnt_reg__0[6]),
+        .O(p_0_in__0[6]));
+  LUT6 #(
+    .INIT(64'h7FFFFFFFFFFFFFFF)) 
+    \pCtlTknCnt[6]_i_3__0 
        (.I0(pCtlTknCnt_reg__0[4]),
-        .I1(pCtlTknCnt_reg__0[3]),
-        .I2(pCtlTknCnt_reg__0[1]),
-        .I3(pCtlTknCnt_reg__0[0]),
-        .I4(pCtlTknCnt_reg__0[2]),
-        .O(\pCtlTknCnt[6]_i_6_n_0 ));
+        .I1(pCtlTknCnt_reg__0[2]),
+        .I2(pCtlTknCnt_reg__0[0]),
+        .I3(pCtlTknCnt_reg__0[1]),
+        .I4(pCtlTknCnt_reg__0[3]),
+        .I5(pCtlTknCnt_reg__0[5]),
+        .O(\pCtlTknCnt[6]_i_3__0_n_0 ));
   FDRE \pCtlTknCnt_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(p_0_in[0]),
+        .D(p_0_in__0[0]),
         .Q(pCtlTknCnt_reg__0[0]),
         .R(pCtlTknRst));
   FDRE \pCtlTknCnt_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(p_0_in[1]),
+        .D(p_0_in__0[1]),
         .Q(pCtlTknCnt_reg__0[1]),
         .R(pCtlTknRst));
   FDRE \pCtlTknCnt_reg[2] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(p_0_in[2]),
+        .D(p_0_in__0[2]),
         .Q(pCtlTknCnt_reg__0[2]),
         .R(pCtlTknRst));
   FDRE \pCtlTknCnt_reg[3] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(p_0_in[3]),
+        .D(p_0_in__0[3]),
         .Q(pCtlTknCnt_reg__0[3]),
         .R(pCtlTknRst));
   FDRE \pCtlTknCnt_reg[4] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(p_0_in[4]),
+        .D(p_0_in__0[4]),
         .Q(pCtlTknCnt_reg__0[4]),
         .R(pCtlTknRst));
   FDRE \pCtlTknCnt_reg[5] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(p_0_in[5]),
+        .D(p_0_in__0[5]),
         .Q(pCtlTknCnt_reg__0[5]),
         .R(pCtlTknRst));
   FDRE \pCtlTknCnt_reg[6] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(p_0_in[6]),
+        .D(p_0_in__0[6]),
         .Q(pCtlTknCnt_reg__0[6]),
         .R(pCtlTknRst));
-  LUT5 #(
-    .INIT(32'hB8888888)) 
+  LUT4 #(
+    .INIT(16'hF044)) 
     pCtlTknOvf_i_1__0
-       (.I0(pCtlTknOvf_reg_n_0),
-        .I1(pCtlTknRst),
-        .I2(pCtlTknCnt_reg__0[6]),
-        .I3(\pCtlTknCnt[6]_i_6_n_0 ),
-        .I4(pCtlTknCnt_reg__0[5]),
+       (.I0(\pCtlTknCnt[6]_i_3__0_n_0 ),
+        .I1(pCtlTknCnt_reg__0[6]),
+        .I2(pCtlTknOvf_reg_n_0),
+        .I3(pCtlTknRst),
         .O(pCtlTknOvf_i_1__0_n_0));
   FDRE pCtlTknOvf_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(pCtlTknOvf_i_1__0_n_0),
         .Q(pCtlTknOvf_reg_n_0),
         .R(1'b0));
   FDRE \pDataQ_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(D[0]),
         .Q(\pDataQ_reg_n_0_[0] ),
         .R(1'b0));
   FDRE \pDataQ_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(D[1]),
         .Q(\pDataQ_reg_n_0_[1] ),
         .R(1'b0));
   FDRE \pDataQ_reg[2] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(D[2]),
         .Q(\pDataQ_reg_n_0_[2] ),
         .R(1'b0));
   FDRE \pDataQ_reg[3] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(D[3]),
         .Q(\pDataQ_reg_n_0_[3] ),
         .R(1'b0));
   FDRE \pDataQ_reg[4] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(D[4]),
         .Q(\pDataQ_reg_n_0_[4] ),
         .R(1'b0));
   FDRE \pDataQ_reg[5] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(D[5]),
         .Q(\pDataQ_reg_n_0_[5] ),
         .R(1'b0));
   FDRE \pDataQ_reg[6] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(D[6]),
         .Q(\pDataQ_reg_n_0_[6] ),
         .R(1'b0));
   FDRE \pDataQ_reg[7] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(D[7]),
         .Q(\pDataQ_reg_n_0_[7] ),
         .R(1'b0));
   FDRE \pDataQ_reg[8] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(D[8]),
         .Q(\pDataQ_reg_n_0_[8] ),
         .R(1'b0));
   LUT5 #(
-    .INIT(32'h00009009)) 
+    .INIT(32'h82000082)) 
     pDelayCenter_i_1__0
-       (.I0(\pIDLY_CNT_Q_reg_n_0_[4] ),
+       (.I0(pDelayCenter_i_2__0_n_0),
         .I1(\pCenterTap_reg_n_0_[5] ),
-        .I2(\pIDLY_CNT_Q_reg_n_0_[3] ),
+        .I2(\pIDLY_CNT_Q_reg_n_0_[4] ),
         .I3(\pCenterTap_reg_n_0_[4] ),
-        .I4(pDelayCenter_i_2__0_n_0),
+        .I4(\pIDLY_CNT_Q_reg_n_0_[3] ),
         .O(pDelayCenter_i_1__0_n_0));
   LUT6 #(
-    .INIT(64'h6FF6FFFFFFFF6FF6)) 
+    .INIT(64'h9009000000009009)) 
     pDelayCenter_i_2__0
-       (.I0(\pIDLY_CNT_Q_reg_n_0_[1] ),
-        .I1(\pCenterTap_reg_n_0_[2] ),
-        .I2(\pIDLY_CNT_Q_reg_n_0_[2] ),
-        .I3(\pCenterTap_reg_n_0_[3] ),
-        .I4(\pCenterTap_reg_n_0_[1] ),
-        .I5(\pIDLY_CNT_Q_reg_n_0_[0] ),
+       (.I0(\pCenterTap_reg_n_0_[3] ),
+        .I1(\pIDLY_CNT_Q_reg_n_0_[2] ),
+        .I2(\pCenterTap_reg_n_0_[2] ),
+        .I3(\pIDLY_CNT_Q_reg_n_0_[1] ),
+        .I4(\pIDLY_CNT_Q_reg_n_0_[0] ),
+        .I5(\pCenterTap_reg_n_0_[1] ),
         .O(pDelayCenter_i_2__0_n_0));
   FDRE pDelayCenter_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(pDelayCenter_i_1__0_n_0),
         .Q(pDelayCenter_reg_n_0),
@@ -4670,630 +4822,621 @@ module hdmi_in_dvi2rgb_0_0_PhaseAlign_12
   LUT5 #(
     .INIT(32'h00000001)) 
     pDelayOvf_i_1__0
-       (.I0(\pIDLY_CNT_Q_reg_n_0_[1] ),
-        .I1(\pIDLY_CNT_Q_reg_n_0_[0] ),
-        .I2(\pIDLY_CNT_Q_reg_n_0_[4] ),
-        .I3(\pIDLY_CNT_Q_reg_n_0_[3] ),
-        .I4(\pIDLY_CNT_Q_reg_n_0_[2] ),
+       (.I0(\pIDLY_CNT_Q_reg_n_0_[0] ),
+        .I1(\pIDLY_CNT_Q_reg_n_0_[1] ),
+        .I2(\pIDLY_CNT_Q_reg_n_0_[2] ),
+        .I3(\pIDLY_CNT_Q_reg_n_0_[4] ),
+        .I4(\pIDLY_CNT_Q_reg_n_0_[3] ),
         .O(pDelayOvf_i_1__0_n_0));
   FDRE pDelayOvf_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(pDelayOvf_i_1__0_n_0),
         .Q(pDelayOvf_reg_n_0),
         .R(1'b0));
-  LUT2 #(
-    .INIT(4'h1)) 
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
+  LUT5 #(
+    .INIT(32'h01100000)) 
     \pDelayWaitCnt[0]_i_1 
-       (.I0(pDelayWaitCnt[0]),
+       (.I0(\pDelayWaitCnt_reg_n_0_[0] ),
         .I1(\pDelayWaitCnt[1]_i_2__0_n_0 ),
+        .I2(pState[6]),
+        .I3(pState[8]),
+        .I4(\pDelayWaitCnt[1]_i_3__0_n_0 ),
         .O(\pDelayWaitCnt[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
-  LUT3 #(
-    .INIT(8'h06)) 
-    \pDelayWaitCnt[1]_i_1 
-       (.I0(pDelayWaitCnt[1]),
-        .I1(pDelayWaitCnt[0]),
-        .I2(\pDelayWaitCnt[1]_i_2__0_n_0 ),
-        .O(\pDelayWaitCnt[1]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFEB)) 
+    .INIT(64'h0006060000000000)) 
+    \pDelayWaitCnt[1]_i_1 
+       (.I0(\pDelayWaitCnt_reg_n_0_[1] ),
+        .I1(\pDelayWaitCnt_reg_n_0_[0] ),
+        .I2(\pDelayWaitCnt[1]_i_2__0_n_0 ),
+        .I3(pState[6]),
+        .I4(pState[8]),
+        .I5(\pDelayWaitCnt[1]_i_3__0_n_0 ),
+        .O(\pDelayWaitCnt[1]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  LUT3 #(
+    .INIT(8'hFE)) 
     \pDelayWaitCnt[1]_i_2__0 
-       (.I0(\pDelayWaitCnt[1]_i_3__1_n_0 ),
-        .I1(pState[6]),
-        .I2(pState[8]),
-        .I3(pState[3]),
-        .I4(pState[1]),
-        .I5(pState[2]),
+       (.I0(pState[10]),
+        .I1(pState[9]),
+        .I2(pState[1]),
         .O(\pDelayWaitCnt[1]_i_2__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
-    \pDelayWaitCnt[1]_i_3__1 
-       (.I0(pState[5]),
-        .I1(pState[7]),
-        .I2(pState[10]),
-        .I3(pState[9]),
-        .I4(pState[4]),
-        .I5(pState[0]),
-        .O(\pDelayWaitCnt[1]_i_3__1_n_0 ));
+    .INIT(64'h0000000000000001)) 
+    \pDelayWaitCnt[1]_i_3__0 
+       (.I0(pState[7]),
+        .I1(pState[5]),
+        .I2(pState[3]),
+        .I3(pState[0]),
+        .I4(\pState_reg_n_0_[4] ),
+        .I5(pState[2]),
+        .O(\pDelayWaitCnt[1]_i_3__0_n_0 ));
   FDRE \pDelayWaitCnt_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(\pDelayWaitCnt[0]_i_1_n_0 ),
-        .Q(pDelayWaitCnt[0]),
+        .Q(\pDelayWaitCnt_reg_n_0_[0] ),
         .R(1'b0));
   FDRE \pDelayWaitCnt_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(\pDelayWaitCnt[1]_i_1_n_0 ),
-        .Q(pDelayWaitCnt[1]),
+        .Q(\pDelayWaitCnt_reg_n_0_[1] ),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
-  LUT4 #(
-    .INIT(16'h88B8)) 
+  LUT6 #(
+    .INIT(64'hF2FFFFFF02000000)) 
     pDelayWaitOvf_i_1__0
-       (.I0(pDelayWaitOvf_reg_n_0),
-        .I1(\pDelayWaitCnt[1]_i_2__0_n_0 ),
-        .I2(pDelayWaitCnt[1]),
-        .I3(pDelayWaitCnt[0]),
+       (.I0(\pDelayWaitCnt_reg_n_0_[1] ),
+        .I1(\pDelayWaitCnt_reg_n_0_[0] ),
+        .I2(\pDelayWaitCnt[1]_i_2__0_n_0 ),
+        .I3(pDelayWaitOvf_i_2__0_n_0),
+        .I4(\pDelayWaitCnt[1]_i_3__0_n_0 ),
+        .I5(pDelayWaitOvf_reg_n_0),
         .O(pDelayWaitOvf_i_1__0_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    pDelayWaitOvf_i_2__0
+       (.I0(pState[6]),
+        .I1(pState[8]),
+        .O(pDelayWaitOvf_i_2__0_n_0));
   FDRE pDelayWaitOvf_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(pDelayWaitOvf_i_1__0_n_0),
         .Q(pDelayWaitOvf_reg_n_0),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'h0000000000100000)) 
+    .INIT(64'h0000010000000000)) 
     pError_i_1__0
        (.I0(pState[6]),
         .I1(pState[8]),
-        .I2(pAligned_i_2__0_n_0),
-        .I3(pState[0]),
-        .I4(pState[10]),
-        .I5(pState[9]),
-        .O(pError));
+        .I2(pState[9]),
+        .I3(pState[10]),
+        .I4(pState[1]),
+        .I5(\pDelayWaitCnt[1]_i_3__0_n_0 ),
+        .O(pError_i_1__0_n_0));
   FDRE pError_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(pError),
-        .Q(pAlignErr_q_reg),
+        .D(pError_i_1__0_n_0),
+        .Q(pError_reg_0),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair54" *) 
-  LUT3 #(
-    .INIT(8'h06)) 
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  LUT1 #(
+    .INIT(2'h1)) 
     \pEyeOpenCnt[0]_i_1__0 
-       (.I0(\pCenterTap[5]_i_3__0_n_0 ),
-        .I1(\pEyeOpenCnt_reg_n_0_[0] ),
-        .I2(pEyeOpenRst),
-        .O(\pEyeOpenCnt[0]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
-  LUT4 #(
-    .INIT(16'h0078)) 
+       (.I0(\pEyeOpenCnt_reg_n_0_[0] ),
+        .O(plusOp[0]));
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
     \pEyeOpenCnt[1]_i_1__0 
-       (.I0(\pCenterTap[5]_i_3__0_n_0 ),
+       (.I0(\pEyeOpenCnt_reg_n_0_[0] ),
+        .I1(\pEyeOpenCnt_reg_n_0_[1] ),
+        .O(plusOp[1]));
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
+  LUT3 #(
+    .INIT(8'h78)) 
+    \pEyeOpenCnt[2]_i_1__0 
+       (.I0(\pEyeOpenCnt_reg_n_0_[1] ),
+        .I1(\pEyeOpenCnt_reg_n_0_[0] ),
+        .I2(\pEyeOpenCnt_reg_n_0_[2] ),
+        .O(plusOp[2]));
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
+  LUT4 #(
+    .INIT(16'h7F80)) 
+    \pEyeOpenCnt[3]_i_1__0 
+       (.I0(\pEyeOpenCnt_reg_n_0_[2] ),
         .I1(\pEyeOpenCnt_reg_n_0_[0] ),
         .I2(\pEyeOpenCnt_reg_n_0_[1] ),
-        .I3(pEyeOpenRst),
-        .O(\pEyeOpenCnt[1]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+        .I3(\pEyeOpenCnt_reg_n_0_[3] ),
+        .O(plusOp[3]));
+  LUT6 #(
+    .INIT(64'h0000000100030000)) 
+    \pEyeOpenCnt[4]_i_1__0 
+       (.I0(pFoundEyeFlag_reg_n_0),
+        .I1(pState[2]),
+        .I2(\pEyeOpenCnt[4]_i_4__0_n_0 ),
+        .I3(\pEyeOpenCnt[4]_i_5__0_n_0 ),
+        .I4(pState[0]),
+        .I5(\pState_reg_n_0_[4] ),
+        .O(pEyeOpenRst));
+  LUT6 #(
+    .INIT(64'h0000000000000010)) 
+    \pEyeOpenCnt[4]_i_2__0 
+       (.I0(pState[5]),
+        .I1(pState[7]),
+        .I2(pState[3]),
+        .I3(\pEyeOpenCnt[4]_i_6_n_0 ),
+        .I4(pState[0]),
+        .I5(\pState_reg_n_0_[4] ),
+        .O(pEyeOpenEn));
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT5 #(
-    .INIT(32'h00007F80)) 
-    \pEyeOpenCnt[2]_i_1__0 
-       (.I0(\pCenterTap[5]_i_3__0_n_0 ),
+    .INIT(32'h7FFF8000)) 
+    \pEyeOpenCnt[4]_i_3__0 
+       (.I0(\pEyeOpenCnt_reg_n_0_[3] ),
         .I1(\pEyeOpenCnt_reg_n_0_[1] ),
         .I2(\pEyeOpenCnt_reg_n_0_[0] ),
         .I3(\pEyeOpenCnt_reg_n_0_[2] ),
-        .I4(pEyeOpenRst),
-        .O(\pEyeOpenCnt[2]_i_1__0_n_0 ));
+        .I4(\pEyeOpenCnt_reg_n_0_[4] ),
+        .O(plusOp[4]));
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    \pEyeOpenCnt[4]_i_4__0 
+       (.I0(pState[1]),
+        .I1(pState[9]),
+        .I2(pState[10]),
+        .I3(pState[8]),
+        .I4(pState[6]),
+        .O(\pEyeOpenCnt[4]_i_4__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  LUT3 #(
+    .INIT(8'hFE)) 
+    \pEyeOpenCnt[4]_i_5__0 
+       (.I0(pState[7]),
+        .I1(pState[5]),
+        .I2(pState[3]),
+        .O(\pEyeOpenCnt[4]_i_5__0_n_0 ));
   LUT6 #(
-    .INIT(64'h000000006AAAAAAA)) 
-    \pEyeOpenCnt[3]_i_1__0 
-       (.I0(\pEyeOpenCnt_reg_n_0_[3] ),
-        .I1(\pEyeOpenCnt_reg_n_0_[2] ),
-        .I2(\pEyeOpenCnt_reg_n_0_[0] ),
-        .I3(\pEyeOpenCnt_reg_n_0_[1] ),
-        .I4(\pCenterTap[5]_i_3__0_n_0 ),
-        .I5(pEyeOpenRst),
-        .O(\pEyeOpenCnt[3]_i_1__0_n_0 ));
-  LUT4 #(
-    .INIT(16'h0078)) 
-    \pEyeOpenCnt[4]_i_1__0 
-       (.I0(\pEyeOpenCnt[4]_i_2__0_n_0 ),
-        .I1(\pEyeOpenCnt_reg_n_0_[3] ),
-        .I2(\pEyeOpenCnt_reg_n_0_[4] ),
-        .I3(pEyeOpenRst),
-        .O(\pEyeOpenCnt[4]_i_1__0_n_0 ));
-  LUT6 #(
-    .INIT(64'h0400000000000000)) 
-    \pEyeOpenCnt[4]_i_2__0 
-       (.I0(pFoundEyeFlag_i_3__0_n_0),
-        .I1(pState[3]),
-        .I2(iIn_q_i_2__0_n_0),
-        .I3(\pEyeOpenCnt_reg_n_0_[1] ),
-        .I4(\pEyeOpenCnt_reg_n_0_[0] ),
-        .I5(\pEyeOpenCnt_reg_n_0_[2] ),
-        .O(\pEyeOpenCnt[4]_i_2__0_n_0 ));
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    \pEyeOpenCnt[4]_i_6 
+       (.I0(pState[6]),
+        .I1(pState[8]),
+        .I2(pState[10]),
+        .I3(pState[9]),
+        .I4(pState[1]),
+        .I5(pState[2]),
+        .O(\pEyeOpenCnt[4]_i_6_n_0 ));
   FDRE \pEyeOpenCnt_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(\pEyeOpenCnt[0]_i_1__0_n_0 ),
+       (.C(pIDLY_LD_reg_0),
+        .CE(pEyeOpenEn),
+        .D(plusOp[0]),
         .Q(\pEyeOpenCnt_reg_n_0_[0] ),
-        .R(1'b0));
+        .R(pEyeOpenRst));
   FDRE \pEyeOpenCnt_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(\pEyeOpenCnt[1]_i_1__0_n_0 ),
+       (.C(pIDLY_LD_reg_0),
+        .CE(pEyeOpenEn),
+        .D(plusOp[1]),
         .Q(\pEyeOpenCnt_reg_n_0_[1] ),
-        .R(1'b0));
+        .R(pEyeOpenRst));
   FDRE \pEyeOpenCnt_reg[2] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(\pEyeOpenCnt[2]_i_1__0_n_0 ),
+       (.C(pIDLY_LD_reg_0),
+        .CE(pEyeOpenEn),
+        .D(plusOp[2]),
         .Q(\pEyeOpenCnt_reg_n_0_[2] ),
-        .R(1'b0));
+        .R(pEyeOpenRst));
   FDRE \pEyeOpenCnt_reg[3] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(\pEyeOpenCnt[3]_i_1__0_n_0 ),
+       (.C(pIDLY_LD_reg_0),
+        .CE(pEyeOpenEn),
+        .D(plusOp[3]),
         .Q(\pEyeOpenCnt_reg_n_0_[3] ),
-        .R(1'b0));
+        .R(pEyeOpenRst));
   FDRE \pEyeOpenCnt_reg[4] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(\pEyeOpenCnt[4]_i_1__0_n_0 ),
+       (.C(pIDLY_LD_reg_0),
+        .CE(pEyeOpenEn),
+        .D(plusOp[4]),
         .Q(\pEyeOpenCnt_reg_n_0_[4] ),
-        .R(1'b0));
-  LUT6 #(
-    .INIT(64'hFFFFBBFB0000AA0A)) 
+        .R(pEyeOpenRst));
+  LUT5 #(
+    .INIT(32'h0000EAFA)) 
     pFoundEyeFlag_i_1__0
-       (.I0(pFoundEyeFlag_i_2__0_n_0),
-        .I1(pState[0]),
-        .I2(pFoundEyeFlag_i_3__0_n_0),
-        .I3(pFoundEyeFlag_i_4__0_n_0),
-        .I4(iIn_q_i_2__0_n_0),
-        .I5(pFoundEyeFlag),
+       (.I0(pFoundEyeFlag_reg_n_0),
+        .I1(pFoundEyeFlag_i_2__0_n_0),
+        .I2(pEyeOpenEn),
+        .I3(\pState[5]_i_2__0_n_0 ),
+        .I4(pIDLY_LD_i_1__0_n_0),
         .O(pFoundEyeFlag_i_1__0_n_0));
   LUT6 #(
-    .INIT(64'h0000030008000000)) 
+    .INIT(64'h0000000000000080)) 
     pFoundEyeFlag_i_2__0
-       (.I0(pFoundJtrFlag),
-        .I1(\pEyeOpenCnt_reg_n_0_[0] ),
-        .I2(pFoundEyeFlag_i_5__0_n_0),
-        .I3(pState[3]),
-        .I4(\pEyeOpenCnt_reg_n_0_[1] ),
-        .I5(\pEyeOpenCnt_reg_n_0_[4] ),
+       (.I0(\pEyeOpenCnt_reg_n_0_[0] ),
+        .I1(\pEyeOpenCnt_reg_n_0_[1] ),
+        .I2(pFoundJtrFlag_reg_n_0),
+        .I3(\pEyeOpenCnt_reg_n_0_[4] ),
+        .I4(\pEyeOpenCnt_reg_n_0_[3] ),
+        .I5(\pEyeOpenCnt_reg_n_0_[2] ),
         .O(pFoundEyeFlag_i_2__0_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    pFoundEyeFlag_i_3__0
-       (.I0(pState[4]),
-        .I1(pState[0]),
-        .I2(pState[1]),
-        .I3(pState[2]),
-        .O(pFoundEyeFlag_i_3__0_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
-  LUT4 #(
-    .INIT(16'h0001)) 
-    pFoundEyeFlag_i_4__0
-       (.I0(pState[4]),
-        .I1(pState[2]),
-        .I2(pState[1]),
-        .I3(pState[3]),
-        .O(pFoundEyeFlag_i_4__0_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    pFoundEyeFlag_i_5__0
-       (.I0(\pEyeOpenCnt_reg_n_0_[2] ),
-        .I1(\pEyeOpenCnt_reg_n_0_[3] ),
-        .O(pFoundEyeFlag_i_5__0_n_0));
   FDRE pFoundEyeFlag_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(pFoundEyeFlag_i_1__0_n_0),
-        .Q(pFoundEyeFlag),
+        .Q(pFoundEyeFlag_reg_n_0),
         .R(1'b0));
-  LUT6 #(
-    .INIT(64'hAAAAAAAAAAABA8AA)) 
+  LUT4 #(
+    .INIT(16'hFB10)) 
     pFoundJtrFlag_i_1__0
-       (.I0(pFoundJtrFlag),
-        .I1(iIn_q_i_2__0_n_0),
-        .I2(pState[3]),
-        .I3(pState[0]),
-        .I4(pState[4]),
-        .I5(pFoundJtrFlag_i_2__0_n_0),
+       (.I0(pFoundJtrFlag_i_2__0_n_0),
+        .I1(pState[0]),
+        .I2(\pState_reg_n_0_[4] ),
+        .I3(pFoundJtrFlag_reg_n_0),
         .O(pFoundJtrFlag_i_1__0_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
     pFoundJtrFlag_i_2__0
        (.I0(pState[2]),
-        .I1(pState[1]),
+        .I1(\pEyeOpenCnt[4]_i_4__0_n_0 ),
+        .I2(pState[3]),
+        .I3(pState[5]),
+        .I4(pState[7]),
         .O(pFoundJtrFlag_i_2__0_n_0));
   FDRE pFoundJtrFlag_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(pFoundJtrFlag_i_1__0_n_0),
-        .Q(pFoundJtrFlag),
+        .Q(pFoundJtrFlag_reg_n_0),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'hAAAAABAAAAAAAAAA)) 
+    .INIT(64'h0000000100010000)) 
     pIDLY_CE_i_1__0
-       (.I0(pIDLY_CE_i_2__0_n_0),
-        .I1(\pState[10]_i_3__0_n_0 ),
-        .I2(pState[0]),
-        .I3(pState[7]),
+       (.I0(\pEyeOpenCnt[4]_i_6_n_0 ),
+        .I1(pState[0]),
+        .I2(\pState_reg_n_0_[4] ),
+        .I3(pState[3]),
         .I4(pState[5]),
-        .I5(pFoundEyeFlag_i_4__0_n_0),
-        .O(pIDLY_CE_0));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
-  LUT5 #(
-    .INIT(32'h00000200)) 
-    pIDLY_CE_i_2__0
-       (.I0(pFoundEyeFlag_i_4__0_n_0),
-        .I1(pState[10]),
-        .I2(pState[0]),
-        .I3(pState[5]),
-        .I4(\pCtlTknCnt[6]_i_3__0_n_0 ),
-        .O(pIDLY_CE_i_2__0_n_0));
+        .I5(pState[7]),
+        .O(pIDLY_CE_i_1__0_n_0));
   FDRE pIDLY_CE_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(pIDLY_CE_0),
+        .D(pIDLY_CE_i_1__0_n_0),
         .Q(pIDLY_CE),
         .R(1'b0));
   FDRE \pIDLY_CNT_Q_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(pIDLY_CE_reg_0[0]),
+        .D(\pIDLY_CNT_Q_reg[4]_0 [0]),
         .Q(\pIDLY_CNT_Q_reg_n_0_[0] ),
         .R(1'b0));
   FDRE \pIDLY_CNT_Q_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(pIDLY_CE_reg_0[1]),
+        .D(\pIDLY_CNT_Q_reg[4]_0 [1]),
         .Q(\pIDLY_CNT_Q_reg_n_0_[1] ),
         .R(1'b0));
   FDRE \pIDLY_CNT_Q_reg[2] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(pIDLY_CE_reg_0[2]),
+        .D(\pIDLY_CNT_Q_reg[4]_0 [2]),
         .Q(\pIDLY_CNT_Q_reg_n_0_[2] ),
         .R(1'b0));
   FDRE \pIDLY_CNT_Q_reg[3] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(pIDLY_CE_reg_0[3]),
+        .D(\pIDLY_CNT_Q_reg[4]_0 [3]),
         .Q(\pIDLY_CNT_Q_reg_n_0_[3] ),
         .R(1'b0));
   FDRE \pIDLY_CNT_Q_reg[4] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(pIDLY_CE_reg_0[4]),
+        .D(\pIDLY_CNT_Q_reg[4]_0 [4]),
         .Q(\pIDLY_CNT_Q_reg_n_0_[4] ),
         .R(1'b0));
-  LUT3 #(
-    .INIT(8'hF4)) 
+  LUT4 #(
+    .INIT(16'hBF20)) 
     pIDLY_INC_i_1__0
-       (.I0(pIDLY_INC_2),
-        .I1(pIDLY_INC),
-        .I2(pIDLY_CE_i_2__0_n_0),
+       (.I0(pState[5]),
+        .I1(pState[7]),
+        .I2(pIDLY_INC_i_2__0_n_0),
+        .I3(pIDLY_INC),
         .O(pIDLY_INC_i_1__0_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT5 #(
-    .INIT(32'h00000020)) 
+    .INIT(32'h00000001)) 
     pIDLY_INC_i_2__0
-       (.I0(pFoundEyeFlag_i_4__0_n_0),
-        .I1(pState[5]),
-        .I2(pState[7]),
-        .I3(pState[0]),
-        .I4(\pState[10]_i_3__0_n_0 ),
-        .O(pIDLY_INC_2));
+       (.I0(\pEyeOpenCnt[4]_i_4__0_n_0 ),
+        .I1(pState[2]),
+        .I2(pState[0]),
+        .I3(\pState_reg_n_0_[4] ),
+        .I4(pState[3]),
+        .O(pIDLY_INC_i_2__0_n_0));
   FDRE pIDLY_INC_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(pIDLY_INC_i_1__0_n_0),
         .Q(pIDLY_INC),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
-  LUT5 #(
-    .INIT(32'h00001000)) 
+  LUT6 #(
+    .INIT(64'h0000000000000004)) 
     pIDLY_LD_i_1__0
-       (.I0(pState[5]),
-        .I1(pState[7]),
-        .I2(pFoundEyeFlag_i_4__0_n_0),
-        .I3(pState[0]),
-        .I4(\pState[10]_i_3__0_n_0 ),
-        .O(pIDLY_LD_1));
+       (.I0(\pState_reg_n_0_[4] ),
+        .I1(pState[0]),
+        .I2(pState[7]),
+        .I3(pState[5]),
+        .I4(pState[3]),
+        .I5(\pEyeOpenCnt[4]_i_6_n_0 ),
+        .O(pIDLY_LD_i_1__0_n_0));
   FDRE pIDLY_LD_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(pIDLY_LD_1),
+        .D(pIDLY_LD_i_1__0_n_0),
         .Q(pIDLY_LD),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT5 #(
     .INIT(32'h00010116)) 
-    pStateNxt
+    \pStateNxt_inferred__8/i_ 
        (.I0(pState[0]),
         .I1(pState[1]),
         .I2(pState[2]),
         .I3(pState[3]),
-        .I4(pState[4]),
-        .O(pStateNxt_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+        .I4(\pState_reg_n_0_[4] ),
+        .O(\pStateNxt_inferred__8/i__n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT5 #(
     .INIT(32'hFFFEFEE8)) 
-    pStateNxt__0
+    \pStateNxt_inferred__8/i___0 
        (.I0(pState[0]),
         .I1(pState[1]),
         .I2(pState[2]),
         .I3(pState[3]),
-        .I4(pState[4]),
-        .O(pStateNxt__0_n_0));
+        .I4(\pState_reg_n_0_[4] ),
+        .O(\pStateNxt_inferred__8/i___0_n_0 ));
   LUT6 #(
     .INIT(64'h0000000100010116)) 
-    pStateNxt__1
+    \pStateNxt_inferred__8/i___1 
        (.I0(pState[5]),
         .I1(pState[6]),
         .I2(pState[7]),
         .I3(pState[8]),
         .I4(pState[9]),
         .I5(pState[10]),
-        .O(pStateNxt__1_n_0));
+        .O(\pStateNxt_inferred__8/i___1_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFEFFFEFEE8)) 
-    pStateNxt__2
+    \pStateNxt_inferred__8/i___2 
        (.I0(pState[5]),
         .I1(pState[6]),
         .I2(pState[7]),
         .I3(pState[8]),
         .I4(pState[9]),
         .I5(pState[10]),
-        .O(pStateNxt__2_n_0));
+        .O(\pStateNxt_inferred__8/i___2_n_0 ));
   LUT4 #(
     .INIT(16'h0012)) 
-    pStateNxt__3
-       (.I0(pStateNxt_n_0),
-        .I1(pStateNxt__0_n_0),
-        .I2(pStateNxt__1_n_0),
-        .I3(pStateNxt__2_n_0),
-        .O(pStateNxt__3_n_0));
+    \pStateNxt_inferred__8/i___3 
+       (.I0(\pStateNxt_inferred__8/i__n_0 ),
+        .I1(\pStateNxt_inferred__8/i___0_n_0 ),
+        .I2(\pStateNxt_inferred__8/i___1_n_0 ),
+        .I3(\pStateNxt_inferred__8/i___2_n_0 ),
+        .O(\pStateNxt_inferred__8/i___3_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
     \pState[0]_i_1__0 
-       (.I0(pStateNxt__3_n_0),
-        .O(\pState[0]_i_1__0_n_0 ));
+       (.I0(\pStateNxt_inferred__8/i___3_n_0 ),
+        .O(pStateNxt[0]));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFA8)) 
+    .INIT(64'hFFFFFFFEFFFEFEEE)) 
     \pState[10]_i_1__0 
        (.I0(\pState[10]_i_3__0_n_0 ),
-        .I1(pState[2]),
-        .I2(pState[1]),
-        .I3(\pState[10]_i_4_n_0 ),
-        .I4(\pState[10]_i_5__0_n_0 ),
-        .I5(\pState[10]_i_6__0_n_0 ),
-        .O(pStateNxt__4));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+        .I1(\pState[10]_i_4__0_n_0 ),
+        .I2(\pState[10]_i_5__0_n_0 ),
+        .I3(pState[10]),
+        .I4(pState[9]),
+        .I5(pState[1]),
+        .O(\pState[10]_i_1__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \pState[10]_i_2__0 
-       (.I0(pStateNxt__3_n_0),
+       (.I0(pDelayOvf_reg_n_0),
         .I1(pState[6]),
-        .I2(pDelayOvf_reg_n_0),
-        .O(\pState[10]_i_2__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
-  LUT4 #(
-    .INIT(16'hFFFE)) 
+        .I2(\pStateNxt_inferred__8/i___3_n_0 ),
+        .O(pStateNxt[10]));
+  LUT6 #(
+    .INIT(64'hFFFFFFEBFFEBEBEB)) 
     \pState[10]_i_3__0 
-       (.I0(pState[9]),
-        .I1(pState[10]),
-        .I2(pState[8]),
-        .I3(pState[6]),
+       (.I0(iIn_q_i_2__0_n_0),
+        .I1(\pEyeOpenCnt[4]_i_4__0_n_0 ),
+        .I2(pState[2]),
+        .I3(pDelayWaitOvf_reg_n_0),
+        .I4(pState[8]),
+        .I5(pState[6]),
         .O(\pState[10]_i_3__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFECFC)) 
-    \pState[10]_i_4 
-       (.I0(pCtlTknOvf_reg_n_0),
-        .I1(\pState[10]_i_7_n_0 ),
-        .I2(pState[2]),
+    .INIT(64'hFFFF0C0FAEAF0C0F)) 
+    \pState[10]_i_4__0 
+       (.I0(pBlankBegin),
+        .I1(pCtlTknOvf_reg_n_0),
+        .I2(\pEyeOpenCnt[4]_i_4__0_n_0 ),
         .I3(pTknFlagQ),
-        .I4(pState[3]),
-        .I5(pState[5]),
-        .O(\pState[10]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
-  LUT5 #(
-    .INIT(32'hFAF8F8F8)) 
-    \pState[10]_i_5__0 
-       (.I0(pState[8]),
-        .I1(pState[6]),
-        .I2(pState[7]),
-        .I3(pState[10]),
-        .I4(pState[9]),
-        .O(\pState[10]_i_5__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hBBABBBABBBABBAAB)) 
-    \pState[10]_i_6__0 
-       (.I0(\pState[10]_i_8_n_0 ),
-        .I1(\pState[10]_i_3__0_n_0 ),
-        .I2(pState[2]),
-        .I3(pState[1]),
-        .I4(pBlankBegin),
+        .I4(pState[1]),
         .I5(out),
-        .O(\pState[10]_i_6__0_n_0 ));
+        .O(\pState[10]_i_4__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT2 #(
     .INIT(4'hE)) 
-    \pState[10]_i_7 
-       (.I0(pState[0]),
-        .I1(pState[4]),
-        .O(\pState[10]_i_7_n_0 ));
+    \pState[10]_i_5__0 
+       (.I0(pState[6]),
+        .I1(pState[8]),
+        .O(\pState[10]_i_5__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFEFEFEFEFEFEFEC0)) 
-    \pState[10]_i_8 
-       (.I0(pDelayWaitOvf_reg_n_0),
-        .I1(pState[9]),
-        .I2(pState[10]),
-        .I3(pState[7]),
-        .I4(pState[6]),
-        .I5(pState[8]),
-        .O(\pState[10]_i_8_n_0 ));
-  LUT6 #(
-    .INIT(64'hAA08AAAAAA08AA08)) 
+    .INIT(64'hFFFF4F4400000000)) 
     \pState[1]_i_1__0 
-       (.I0(pStateNxt__3_n_0),
+       (.I0(pTknFlagQ),
         .I1(pState[2]),
-        .I2(pTknFlagQ),
-        .I3(pState[0]),
-        .I4(pDelayOvf_reg_n_0),
-        .I5(pState[6]),
-        .O(\pState[1]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
+        .I2(pDelayOvf_reg_n_0),
+        .I3(pState[6]),
+        .I4(pState[0]),
+        .I5(\pStateNxt_inferred__8/i___3_n_0 ),
+        .O(pStateNxt[1]));
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \pState[2]_i_1__0 
-       (.I0(pStateNxt__3_n_0),
+       (.I0(pBlankBegin),
         .I1(pState[1]),
-        .I2(pBlankBegin),
-        .O(\pState[2]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair53" *) 
+        .I2(\pStateNxt_inferred__8/i___3_n_0 ),
+        .O(pStateNxt[2]));
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \pState[3]_i_1__0 
-       (.I0(pStateNxt__3_n_0),
-        .I1(pTknFlagQ),
-        .I2(pState[2]),
-        .O(\pState[3]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
+       (.I0(pTknFlagQ),
+        .I1(pState[2]),
+        .I2(\pStateNxt_inferred__8/i___3_n_0 ),
+        .O(pStateNxt[3]));
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
   LUT5 #(
-    .INIT(32'h08AA0808)) 
+    .INIT(32'h4040F040)) 
     \pState[4]_i_1__0 
-       (.I0(pStateNxt__3_n_0),
+       (.I0(\pState[5]_i_2__0_n_0 ),
         .I1(pState[3]),
-        .I2(\pState[5]_i_2__0_n_0 ),
-        .I3(pBlankBegin),
-        .I4(pState[1]),
-        .O(\pState[4]_i_1__0_n_0 ));
+        .I2(\pStateNxt_inferred__8/i___3_n_0 ),
+        .I3(pState[1]),
+        .I4(pBlankBegin),
+        .O(pStateNxt[4]));
   LUT5 #(
-    .INIT(32'h80AA8080)) 
+    .INIT(32'hF2002200)) 
     \pState[5]_i_1__0 
-       (.I0(pStateNxt__3_n_0),
-        .I1(\pState[5]_i_2__0_n_0 ),
-        .I2(pState[3]),
-        .I3(pFoundEyeFlag),
-        .I4(pState[4]),
-        .O(\pState[5]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
+       (.I0(\pState_reg_n_0_[4] ),
+        .I1(pFoundEyeFlag_reg_n_0),
+        .I2(\pState[5]_i_2__0_n_0 ),
+        .I3(\pStateNxt_inferred__8/i___3_n_0 ),
+        .I4(pState[3]),
+        .O(pStateNxt[5]));
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT5 #(
-    .INIT(32'hFFFFFFEF)) 
+    .INIT(32'hFFFFFEFF)) 
     \pState[5]_i_2__0 
-       (.I0(\pEyeOpenCnt_reg_n_0_[3] ),
+       (.I0(\pEyeOpenCnt_reg_n_0_[0] ),
         .I1(\pEyeOpenCnt_reg_n_0_[2] ),
-        .I2(\pEyeOpenCnt_reg_n_0_[4] ),
-        .I3(\pEyeOpenCnt_reg_n_0_[1] ),
-        .I4(\pEyeOpenCnt_reg_n_0_[0] ),
+        .I2(\pEyeOpenCnt_reg_n_0_[3] ),
+        .I3(\pEyeOpenCnt_reg_n_0_[4] ),
+        .I4(\pEyeOpenCnt_reg_n_0_[1] ),
         .O(\pState[5]_i_2__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \pState[6]_i_1__0 
-       (.I0(pStateNxt__3_n_0),
+       (.I0(\pStateNxt_inferred__8/i___3_n_0 ),
         .I1(pState[5]),
-        .O(\pState[6]_i_1__0_n_0 ));
+        .O(pStateNxt[6]));
   (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT5 #(
-    .INIT(32'hAA080808)) 
+    .INIT(32'hF0202020)) 
     \pState[7]_i_1__0 
-       (.I0(pStateNxt__3_n_0),
-        .I1(pState[8]),
-        .I2(pDelayCenter_reg_n_0),
-        .I3(pFoundEyeFlag),
-        .I4(pState[4]),
-        .O(\pState[7]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+       (.I0(pState[8]),
+        .I1(pDelayCenter_reg_n_0),
+        .I2(\pStateNxt_inferred__8/i___3_n_0 ),
+        .I3(\pState_reg_n_0_[4] ),
+        .I4(pFoundEyeFlag_reg_n_0),
+        .O(pStateNxt[7]));
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \pState[8]_i_1__0 
-       (.I0(pStateNxt__3_n_0),
+       (.I0(\pStateNxt_inferred__8/i___3_n_0 ),
         .I1(pState[7]),
-        .O(\pState[8]_i_1__0_n_0 ));
+        .O(pStateNxt[8]));
   (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \pState[9]_i_1__0 
-       (.I0(pStateNxt__3_n_0),
+       (.I0(pDelayCenter_reg_n_0),
         .I1(pState[8]),
-        .I2(pDelayCenter_reg_n_0),
-        .O(\pState[9]_i_1__0_n_0 ));
+        .I2(\pStateNxt_inferred__8/i___3_n_0 ),
+        .O(pStateNxt[9]));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDSE \pState_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[0]_i_1__0_n_0 ),
+       (.C(pIDLY_LD_reg_0),
+        .CE(\pState[10]_i_1__0_n_0 ),
+        .D(pStateNxt[0]),
         .Q(pState[0]),
         .S(SS));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDRE \pState_reg[10] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[10]_i_2__0_n_0 ),
+       (.C(pIDLY_LD_reg_0),
+        .CE(\pState[10]_i_1__0_n_0 ),
+        .D(pStateNxt[10]),
         .Q(pState[10]),
         .R(SS));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDRE \pState_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[1]_i_1__0_n_0 ),
+       (.C(pIDLY_LD_reg_0),
+        .CE(\pState[10]_i_1__0_n_0 ),
+        .D(pStateNxt[1]),
         .Q(pState[1]),
         .R(SS));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDRE \pState_reg[2] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[2]_i_1__0_n_0 ),
+       (.C(pIDLY_LD_reg_0),
+        .CE(\pState[10]_i_1__0_n_0 ),
+        .D(pStateNxt[2]),
         .Q(pState[2]),
         .R(SS));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDRE \pState_reg[3] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[3]_i_1__0_n_0 ),
+       (.C(pIDLY_LD_reg_0),
+        .CE(\pState[10]_i_1__0_n_0 ),
+        .D(pStateNxt[3]),
         .Q(pState[3]),
         .R(SS));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDRE \pState_reg[4] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[4]_i_1__0_n_0 ),
-        .Q(pState[4]),
+       (.C(pIDLY_LD_reg_0),
+        .CE(\pState[10]_i_1__0_n_0 ),
+        .D(pStateNxt[4]),
+        .Q(\pState_reg_n_0_[4] ),
         .R(SS));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDRE \pState_reg[5] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[5]_i_1__0_n_0 ),
+       (.C(pIDLY_LD_reg_0),
+        .CE(\pState[10]_i_1__0_n_0 ),
+        .D(pStateNxt[5]),
         .Q(pState[5]),
         .R(SS));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDRE \pState_reg[6] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[6]_i_1__0_n_0 ),
+       (.C(pIDLY_LD_reg_0),
+        .CE(\pState[10]_i_1__0_n_0 ),
+        .D(pStateNxt[6]),
         .Q(pState[6]),
         .R(SS));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDRE \pState_reg[7] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[7]_i_1__0_n_0 ),
+       (.C(pIDLY_LD_reg_0),
+        .CE(\pState[10]_i_1__0_n_0 ),
+        .D(pStateNxt[7]),
         .Q(pState[7]),
         .R(SS));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDRE \pState_reg[8] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[8]_i_1__0_n_0 ),
+       (.C(pIDLY_LD_reg_0),
+        .CE(\pState[10]_i_1__0_n_0 ),
+        .D(pStateNxt[8]),
         .Q(pState[8]),
         .R(SS));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDRE \pState_reg[9] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[9]_i_1__0_n_0 ),
+       (.C(pIDLY_LD_reg_0),
+        .CE(\pState[10]_i_1__0_n_0 ),
+        .D(pStateNxt[9]),
         .Q(pState[9]),
         .R(SS));
   FDRE pTknFlagQ_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(pTknFlag),
         .Q(pTknFlagQ),
@@ -5328,7 +5471,7 @@ module hdmi_in_dvi2rgb_0_0_PhaseAlign_12
         .I5(\pDataQ_reg_n_0_[6] ),
         .O(pTknFlag_i_3__0_n_0));
   FDRE pTknFlag_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(pTknFlag0),
         .Q(pTknFlag),
@@ -5339,66 +5482,70 @@ module hdmi_in_dvi2rgb_0_0_PhaseAlign_12
        (.I0(pVld_1),
         .I1(pVld_2),
         .I2(pVld_0),
-        .O(pMeRdy_int_reg));
+        .O(pAligned_reg_0));
 endmodule
 
 (* ORIG_REF_NAME = "PhaseAlign" *) 
 module hdmi_in_dvi2rgb_0_0_PhaseAlign_19
-   (pIDLY_CE,
+   (pVld_0,
+    pIDLY_CE,
     pIDLY_INC,
     pIDLY_LD,
-    pVld_0,
-    pAlignErr_q_reg,
-    iIn_q_reg,
+    pError_reg_0,
+    pAllVldBgnFlag0,
     pAllVld,
-    pBitslip_reg,
-    rMMCM_LckdRisingFlag_reg,
-    out,
+    \pState_reg[1]_0 ,
+    pBitslip0,
+    pIDLY_LD_reg_0,
     pVld_2,
     pVld_1,
+    pAllVld_q,
+    out,
     pAlignErr_q,
+    SS,
     D,
-    pIDLY_CE_reg_0,
-    SS);
+    \pIDLY_CNT_Q_reg[4]_0 );
+  output pVld_0;
   output pIDLY_CE;
   output pIDLY_INC;
   output pIDLY_LD;
-  output pVld_0;
-  output pAlignErr_q_reg;
-  output iIn_q_reg;
+  output pError_reg_0;
+  output pAllVldBgnFlag0;
   output pAllVld;
-  output pBitslip_reg;
-  input rMMCM_LckdRisingFlag_reg;
-  input [0:0]out;
+  output \pState_reg[1]_0 ;
+  output pBitslip0;
+  input pIDLY_LD_reg_0;
   input pVld_2;
   input pVld_1;
+  input pAllVld_q;
+  input [0:0]out;
   input pAlignErr_q;
-  input [8:0]D;
-  input [4:0]pIDLY_CE_reg_0;
   input [0:0]SS;
+  input [8:0]D;
+  input [4:0]\pIDLY_CNT_Q_reg[4]_0 ;
 
   wire [8:0]D;
   wire [0:0]SS;
   wire iIn_q_i_2__1_n_0;
-  wire iIn_q_reg;
   wire [0:0]out;
   wire pAlignErr_q;
-  wire pAlignErr_q_reg;
-  wire pAligned;
-  wire pAligned_i_2__1_n_0;
+  wire pAligned_i_1__1_n_0;
   wire pAllVld;
-  wire pBitslip_reg;
+  wire pAllVldBgnFlag0;
+  wire pAllVld_q;
+  wire pBitslip0;
   wire pBlankBegin;
   wire pBlankBegin0;
   wire \pCenterTap[0]_i_1_n_0 ;
   wire \pCenterTap[1]_i_1__1_n_0 ;
   wire \pCenterTap[2]_i_1__1_n_0 ;
   wire \pCenterTap[3]_i_1__1_n_0 ;
+  wire \pCenterTap[3]_i_2__1_n_0 ;
   wire \pCenterTap[4]_i_1__1_n_0 ;
   wire \pCenterTap[5]_i_1__1_n_0 ;
   wire \pCenterTap[5]_i_2__1_n_0 ;
   wire \pCenterTap[5]_i_3__1_n_0 ;
-  wire \pCenterTap[5]_i_5__1_n_0 ;
+  wire \pCenterTap[5]_i_4__1_n_0 ;
   wire \pCenterTap_reg_n_0_[0] ;
   wire \pCenterTap_reg_n_0_[1] ;
   wire \pCenterTap_reg_n_0_[2] ;
@@ -5406,8 +5553,6 @@ module hdmi_in_dvi2rgb_0_0_PhaseAlign_19
   wire \pCenterTap_reg_n_0_[4] ;
   wire \pCenterTap_reg_n_0_[5] ;
   wire \pCtlTknCnt[6]_i_3__1_n_0 ;
-  wire \pCtlTknCnt[6]_i_4__1_n_0 ;
-  wire \pCtlTknCnt[6]_i_5__1_n_0 ;
   wire [6:0]pCtlTknCnt_reg__0;
   wire pCtlTknOvf_i_1__1_n_0;
   wire pCtlTknOvf_reg_n_0;
@@ -5426,74 +5571,61 @@ module hdmi_in_dvi2rgb_0_0_PhaseAlign_19
   wire pDelayCenter_reg_n_0;
   wire pDelayOvf_i_1__1_n_0;
   wire pDelayOvf_reg_n_0;
-  wire [1:0]pDelayWaitCnt;
   wire \pDelayWaitCnt[0]_i_1_n_0 ;
   wire \pDelayWaitCnt[1]_i_1_n_0 ;
   wire \pDelayWaitCnt[1]_i_2__1_n_0 ;
-  wire \pDelayWaitCnt[1]_i_3__0_n_0 ;
-  wire \pDelayWaitCnt[1]_i_4__0_n_0 ;
+  wire \pDelayWaitCnt[1]_i_3__1_n_0 ;
+  wire \pDelayWaitCnt_reg_n_0_[0] ;
+  wire \pDelayWaitCnt_reg_n_0_[1] ;
   wire pDelayWaitOvf_i_1__1_n_0;
+  wire pDelayWaitOvf_i_2__1_n_0;
   wire pDelayWaitOvf_reg_n_0;
-  wire pError;
-  wire \pEyeOpenCnt[0]_i_1__1_n_0 ;
-  wire \pEyeOpenCnt[1]_i_1__1_n_0 ;
-  wire \pEyeOpenCnt[2]_i_1__1_n_0 ;
-  wire \pEyeOpenCnt[3]_i_1__1_n_0 ;
-  wire \pEyeOpenCnt[4]_i_1__1_n_0 ;
-  wire \pEyeOpenCnt[4]_i_2__1_n_0 ;
+  wire pError_i_1__1_n_0;
+  wire pError_reg_0;
+  wire \pEyeOpenCnt[4]_i_4__1_n_0 ;
+  wire \pEyeOpenCnt[4]_i_5__1_n_0 ;
+  wire \pEyeOpenCnt[4]_i_6__0_n_0 ;
   wire \pEyeOpenCnt_reg_n_0_[0] ;
   wire \pEyeOpenCnt_reg_n_0_[1] ;
   wire \pEyeOpenCnt_reg_n_0_[2] ;
   wire \pEyeOpenCnt_reg_n_0_[3] ;
   wire \pEyeOpenCnt_reg_n_0_[4] ;
+  wire pEyeOpenEn;
   wire pEyeOpenRst;
-  wire pFoundEyeFlag;
   wire pFoundEyeFlag_i_1__1_n_0;
   wire pFoundEyeFlag_i_2__1_n_0;
-  wire pFoundEyeFlag_i_3__1_n_0;
-  wire pFoundEyeFlag_i_4__1_n_0;
-  wire pFoundEyeFlag_i_5__1_n_0;
-  wire pFoundJtrFlag;
+  wire pFoundEyeFlag_reg_n_0;
   wire pFoundJtrFlag_i_1__1_n_0;
   wire pFoundJtrFlag_i_2__1_n_0;
+  wire pFoundJtrFlag_reg_n_0;
   wire pIDLY_CE;
-  wire pIDLY_CE_0;
-  wire pIDLY_CE_i_2__1_n_0;
-  wire pIDLY_CE_i_3__0_n_0;
-  wire [4:0]pIDLY_CE_reg_0;
+  wire pIDLY_CE_i_1__1_n_0;
+  wire [4:0]\pIDLY_CNT_Q_reg[4]_0 ;
   wire \pIDLY_CNT_Q_reg_n_0_[0] ;
   wire \pIDLY_CNT_Q_reg_n_0_[1] ;
   wire \pIDLY_CNT_Q_reg_n_0_[2] ;
   wire \pIDLY_CNT_Q_reg_n_0_[3] ;
   wire \pIDLY_CNT_Q_reg_n_0_[4] ;
   wire pIDLY_INC;
-  wire pIDLY_INC_2;
   wire pIDLY_INC_i_1__1_n_0;
+  wire pIDLY_INC_i_2__1_n_0;
   wire pIDLY_LD;
-  wire pIDLY_LD_1;
+  wire pIDLY_LD_i_1__1_n_0;
+  wire pIDLY_LD_reg_0;
   wire [10:0]pState;
-  wire pStateNxt__0_n_0;
-  wire pStateNxt__1_n_0;
-  wire pStateNxt__2_n_0;
-  wire pStateNxt__3_n_0;
-  wire pStateNxt__4;
-  wire pStateNxt_n_0;
-  wire \pState[0]_i_1__1_n_0 ;
-  wire \pState[10]_i_2__1_n_0 ;
+  wire [10:0]pStateNxt;
+  wire \pStateNxt_inferred__8/i___0_n_0 ;
+  wire \pStateNxt_inferred__8/i___1_n_0 ;
+  wire \pStateNxt_inferred__8/i___2_n_0 ;
+  wire \pStateNxt_inferred__8/i___3_n_0 ;
+  wire \pStateNxt_inferred__8/i__n_0 ;
+  wire \pState[10]_i_1__1_n_0 ;
   wire \pState[10]_i_3__1_n_0 ;
   wire \pState[10]_i_4__1_n_0 ;
   wire \pState[10]_i_5__1_n_0 ;
-  wire \pState[10]_i_6__1_n_0 ;
-  wire \pState[1]_i_1__1_n_0 ;
-  wire \pState[2]_i_1__1_n_0 ;
-  wire \pState[3]_i_1__1_n_0 ;
-  wire \pState[4]_i_1__1_n_0 ;
-  wire \pState[5]_i_1__1_n_0 ;
   wire \pState[5]_i_2__1_n_0 ;
-  wire \pState[6]_i_1__1_n_0 ;
-  wire \pState[7]_i_1__1_n_0 ;
-  wire \pState[8]_i_1__1_n_0 ;
-  wire \pState[9]_i_1__1_n_0 ;
+  wire \pState_reg[1]_0 ;
+  wire \pState_reg_n_0_[4] ;
   wire pTknFlag;
   wire pTknFlag0;
   wire pTknFlagQ;
@@ -5502,61 +5634,58 @@ module hdmi_in_dvi2rgb_0_0_PhaseAlign_19
   wire pVld_0;
   wire pVld_1;
   wire pVld_2;
-  wire [6:0]p_0_in;
-  wire rMMCM_LckdRisingFlag_reg;
+  wire [6:0]p_0_in__0;
+  wire [4:0]plusOp;
 
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFEEF)) 
+    .INIT(64'hFFFFFFFFFFFFFFEB)) 
     iIn_q_i_1__1
        (.I0(iIn_q_i_2__1_n_0),
-        .I1(pState[3]),
+        .I1(pState[1]),
         .I2(pState[2]),
-        .I3(pState[1]),
-        .I4(pState[0]),
-        .I5(pState[4]),
-        .O(iIn_q_reg));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
-    iIn_q_i_2__1
-       (.I0(pState[7]),
-        .I1(pState[5]),
-        .I2(pState[10]),
         .I3(pState[9]),
-        .I4(pState[6]),
-        .I5(pState[8]),
+        .I4(pState[10]),
+        .I5(\pState[10]_i_5__1_n_0 ),
+        .O(\pState_reg[1]_0 ));
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    iIn_q_i_2__1
+       (.I0(\pState_reg_n_0_[4] ),
+        .I1(pState[0]),
+        .I2(pState[3]),
+        .I3(pState[5]),
+        .I4(pState[7]),
         .O(iIn_q_i_2__1_n_0));
   LUT6 #(
-    .INIT(64'h0000000000001000)) 
+    .INIT(64'h0000010000000000)) 
     pAligned_i_1__1
        (.I0(pState[6]),
         .I1(pState[8]),
-        .I2(pAligned_i_2__1_n_0),
+        .I2(pState[10]),
         .I3(pState[9]),
-        .I4(pState[0]),
-        .I5(pState[10]),
-        .O(pAligned));
-  LUT6 #(
-    .INIT(64'h0000000000000001)) 
-    pAligned_i_2__1
-       (.I0(pState[3]),
-        .I1(pState[4]),
-        .I2(pState[2]),
-        .I3(pState[1]),
-        .I4(pState[7]),
-        .I5(pState[5]),
-        .O(pAligned_i_2__1_n_0));
+        .I4(pState[1]),
+        .I5(\pDelayWaitCnt[1]_i_3__1_n_0 ),
+        .O(pAligned_i_1__1_n_0));
   FDRE pAligned_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(pAligned),
+        .D(pAligned_i_1__1_n_0),
         .Q(pVld_0),
         .R(1'b0));
+  LUT4 #(
+    .INIT(16'h0080)) 
+    pAllVldBgnFlag_i_1
+       (.I0(pVld_0),
+        .I1(pVld_2),
+        .I2(pVld_1),
+        .I3(pAllVld_q),
+        .O(pAllVldBgnFlag0));
   LUT2 #(
     .INIT(4'h2)) 
     pBitslip_i_1__1
-       (.I0(pAlignErr_q_reg),
+       (.I0(pError_reg_0),
         .I1(pAlignErr_q),
-        .O(pBitslip_reg));
+        .O(pBitslip0));
   LUT2 #(
     .INIT(4'h2)) 
     pBlankBegin_i_1__1
@@ -5564,359 +5693,341 @@ module hdmi_in_dvi2rgb_0_0_PhaseAlign_19
         .I1(pTknFlagQ),
         .O(pBlankBegin0));
   FDRE pBlankBegin_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(pBlankBegin0),
         .Q(pBlankBegin),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
-  LUT3 #(
-    .INIT(8'hF6)) 
+  LUT4 #(
+    .INIT(16'hFF62)) 
     \pCenterTap[0]_i_1 
        (.I0(\pCenterTap_reg_n_0_[0] ),
-        .I1(\pCenterTap[5]_i_3__1_n_0 ),
-        .I2(pEyeOpenRst),
+        .I1(pEyeOpenEn),
+        .I2(\pCenterTap[5]_i_3__1_n_0 ),
+        .I3(pEyeOpenRst),
         .O(\pCenterTap[0]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'h8BB8)) 
-    \pCenterTap[1]_i_1__1 
-       (.I0(\pIDLY_CNT_Q_reg_n_0_[0] ),
-        .I1(pEyeOpenRst),
-        .I2(\pCenterTap_reg_n_0_[1] ),
-        .I3(\pCenterTap_reg_n_0_[0] ),
-        .O(\pCenterTap[1]_i_1__1_n_0 ));
   LUT5 #(
-    .INIT(32'h8BB8B8B8)) 
-    \pCenterTap[2]_i_1__1 
-       (.I0(\pIDLY_CNT_Q_reg_n_0_[1] ),
-        .I1(pEyeOpenRst),
-        .I2(\pCenterTap_reg_n_0_[2] ),
+    .INIT(32'h88F8F888)) 
+    \pCenterTap[1]_i_1__1 
+       (.I0(pEyeOpenRst),
+        .I1(\pIDLY_CNT_Q_reg_n_0_[0] ),
+        .I2(\pCenterTap[5]_i_3__1_n_0 ),
         .I3(\pCenterTap_reg_n_0_[1] ),
         .I4(\pCenterTap_reg_n_0_[0] ),
-        .O(\pCenterTap[2]_i_1__1_n_0 ));
+        .O(\pCenterTap[1]_i_1__1_n_0 ));
   LUT6 #(
-    .INIT(64'h8BBBBBBBB8888888)) 
-    \pCenterTap[3]_i_1__1 
-       (.I0(\pIDLY_CNT_Q_reg_n_0_[2] ),
-        .I1(pEyeOpenRst),
-        .I2(\pCenterTap_reg_n_0_[0] ),
+    .INIT(64'h88F8F8F8F8888888)) 
+    \pCenterTap[2]_i_1__1 
+       (.I0(pEyeOpenRst),
+        .I1(\pIDLY_CNT_Q_reg_n_0_[1] ),
+        .I2(\pCenterTap[5]_i_3__1_n_0 ),
         .I3(\pCenterTap_reg_n_0_[1] ),
-        .I4(\pCenterTap_reg_n_0_[2] ),
-        .I5(\pCenterTap_reg_n_0_[3] ),
+        .I4(\pCenterTap_reg_n_0_[0] ),
+        .I5(\pCenterTap_reg_n_0_[2] ),
+        .O(\pCenterTap[2]_i_1__1_n_0 ));
+  LUT5 #(
+    .INIT(32'hF88888F8)) 
+    \pCenterTap[3]_i_1__1 
+       (.I0(pEyeOpenRst),
+        .I1(\pIDLY_CNT_Q_reg_n_0_[2] ),
+        .I2(\pCenterTap[5]_i_3__1_n_0 ),
+        .I3(\pCenterTap[3]_i_2__1_n_0 ),
+        .I4(\pCenterTap_reg_n_0_[3] ),
         .O(\pCenterTap[3]_i_1__1_n_0 ));
-  LUT4 #(
-    .INIT(16'h8BB8)) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  LUT3 #(
+    .INIT(8'h7F)) 
+    \pCenterTap[3]_i_2__1 
+       (.I0(\pCenterTap_reg_n_0_[1] ),
+        .I1(\pCenterTap_reg_n_0_[0] ),
+        .I2(\pCenterTap_reg_n_0_[2] ),
+        .O(\pCenterTap[3]_i_2__1_n_0 ));
+  LUT5 #(
+    .INIT(32'hF88888F8)) 
     \pCenterTap[4]_i_1__1 
-       (.I0(\pIDLY_CNT_Q_reg_n_0_[3] ),
-        .I1(pEyeOpenRst),
-        .I2(\pCenterTap_reg_n_0_[4] ),
-        .I3(\pCenterTap[5]_i_5__1_n_0 ),
+       (.I0(pEyeOpenRst),
+        .I1(\pIDLY_CNT_Q_reg_n_0_[3] ),
+        .I2(\pCenterTap[5]_i_3__1_n_0 ),
+        .I3(\pCenterTap[5]_i_4__1_n_0 ),
+        .I4(\pCenterTap_reg_n_0_[4] ),
         .O(\pCenterTap[4]_i_1__1_n_0 ));
   LUT2 #(
     .INIT(4'hE)) 
     \pCenterTap[5]_i_1__1 
-       (.I0(\pCenterTap[5]_i_3__1_n_0 ),
+       (.I0(pEyeOpenEn),
         .I1(pEyeOpenRst),
         .O(\pCenterTap[5]_i_1__1_n_0 ));
-  LUT5 #(
-    .INIT(32'h8BB8B8B8)) 
+  LUT6 #(
+    .INIT(64'hF8F888F88888F888)) 
     \pCenterTap[5]_i_2__1 
-       (.I0(\pIDLY_CNT_Q_reg_n_0_[4] ),
-        .I1(pEyeOpenRst),
-        .I2(\pCenterTap_reg_n_0_[5] ),
-        .I3(\pCenterTap[5]_i_5__1_n_0 ),
-        .I4(\pCenterTap_reg_n_0_[4] ),
+       (.I0(pEyeOpenRst),
+        .I1(\pIDLY_CNT_Q_reg_n_0_[4] ),
+        .I2(\pCenterTap[5]_i_3__1_n_0 ),
+        .I3(\pCenterTap_reg_n_0_[4] ),
+        .I4(\pCenterTap[5]_i_4__1_n_0 ),
+        .I5(\pCenterTap_reg_n_0_[5] ),
         .O(\pCenterTap[5]_i_2__1_n_0 ));
   LUT6 #(
-    .INIT(64'h0000000000000004)) 
+    .INIT(64'hFFFFFFFFFFFFFFD9)) 
     \pCenterTap[5]_i_3__1 
-       (.I0(iIn_q_i_2__1_n_0),
-        .I1(pState[3]),
-        .I2(pState[4]),
-        .I3(pState[0]),
-        .I4(pState[1]),
+       (.I0(pState[0]),
+        .I1(\pState_reg_n_0_[4] ),
+        .I2(pFoundEyeFlag_reg_n_0),
+        .I3(\pEyeOpenCnt[4]_i_5__1_n_0 ),
+        .I4(\pEyeOpenCnt[4]_i_4__1_n_0 ),
         .I5(pState[2]),
         .O(\pCenterTap[5]_i_3__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000000000C40)) 
-    \pCenterTap[5]_i_4__1 
-       (.I0(pFoundEyeFlag),
-        .I1(pFoundJtrFlag_i_2__1_n_0),
-        .I2(pState[4]),
-        .I3(pState[0]),
-        .I4(pState[3]),
-        .I5(iIn_q_i_2__1_n_0),
-        .O(pEyeOpenRst));
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT4 #(
-    .INIT(16'h8000)) 
-    \pCenterTap[5]_i_5__1 
-       (.I0(\pCenterTap_reg_n_0_[3] ),
-        .I1(\pCenterTap_reg_n_0_[2] ),
+    .INIT(16'h7FFF)) 
+    \pCenterTap[5]_i_4__1 
+       (.I0(\pCenterTap_reg_n_0_[2] ),
+        .I1(\pCenterTap_reg_n_0_[0] ),
         .I2(\pCenterTap_reg_n_0_[1] ),
-        .I3(\pCenterTap_reg_n_0_[0] ),
-        .O(\pCenterTap[5]_i_5__1_n_0 ));
+        .I3(\pCenterTap_reg_n_0_[3] ),
+        .O(\pCenterTap[5]_i_4__1_n_0 ));
   FDRE \pCenterTap_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(\pCenterTap[0]_i_1_n_0 ),
         .Q(\pCenterTap_reg_n_0_[0] ),
         .R(1'b0));
   FDRE \pCenterTap_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(\pCenterTap[5]_i_1__1_n_0 ),
         .D(\pCenterTap[1]_i_1__1_n_0 ),
         .Q(\pCenterTap_reg_n_0_[1] ),
         .R(1'b0));
   FDRE \pCenterTap_reg[2] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(\pCenterTap[5]_i_1__1_n_0 ),
         .D(\pCenterTap[2]_i_1__1_n_0 ),
         .Q(\pCenterTap_reg_n_0_[2] ),
         .R(1'b0));
   FDRE \pCenterTap_reg[3] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(\pCenterTap[5]_i_1__1_n_0 ),
         .D(\pCenterTap[3]_i_1__1_n_0 ),
         .Q(\pCenterTap_reg_n_0_[3] ),
         .R(1'b0));
   FDRE \pCenterTap_reg[4] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(\pCenterTap[5]_i_1__1_n_0 ),
         .D(\pCenterTap[4]_i_1__1_n_0 ),
         .Q(\pCenterTap_reg_n_0_[4] ),
         .R(1'b0));
   FDRE \pCenterTap_reg[5] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(\pCenterTap[5]_i_1__1_n_0 ),
         .D(\pCenterTap[5]_i_2__1_n_0 ),
         .Q(\pCenterTap_reg_n_0_[5] ),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \pCtlTknCnt[0]_i_1__1 
        (.I0(pCtlTknCnt_reg__0[0]),
-        .O(p_0_in[0]));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+        .O(p_0_in__0[0]));
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \pCtlTknCnt[1]_i_1__1 
        (.I0(pCtlTknCnt_reg__0[0]),
         .I1(pCtlTknCnt_reg__0[1]),
-        .O(p_0_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+        .O(p_0_in__0[1]));
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT3 #(
-    .INIT(8'h6A)) 
+    .INIT(8'h78)) 
     \pCtlTknCnt[2]_i_1__1 
-       (.I0(pCtlTknCnt_reg__0[2]),
+       (.I0(pCtlTknCnt_reg__0[1]),
         .I1(pCtlTknCnt_reg__0[0]),
-        .I2(pCtlTknCnt_reg__0[1]),
-        .O(p_0_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
-  LUT4 #(
-    .INIT(16'h6AAA)) 
-    \pCtlTknCnt[3]_i_1__1 
-       (.I0(pCtlTknCnt_reg__0[3]),
-        .I1(pCtlTknCnt_reg__0[1]),
-        .I2(pCtlTknCnt_reg__0[0]),
-        .I3(pCtlTknCnt_reg__0[2]),
-        .O(p_0_in[3]));
+        .I2(pCtlTknCnt_reg__0[2]),
+        .O(p_0_in__0[2]));
   (* SOFT_HLUTNM = "soft_lutpair17" *) 
-  LUT5 #(
-    .INIT(32'h7FFF8000)) 
-    \pCtlTknCnt[4]_i_1__1 
+  LUT4 #(
+    .INIT(16'h7F80)) 
+    \pCtlTknCnt[3]_i_1__1 
        (.I0(pCtlTknCnt_reg__0[2]),
         .I1(pCtlTknCnt_reg__0[0]),
         .I2(pCtlTknCnt_reg__0[1]),
         .I3(pCtlTknCnt_reg__0[3]),
+        .O(p_0_in__0[3]));
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  LUT5 #(
+    .INIT(32'h7FFF8000)) 
+    \pCtlTknCnt[4]_i_1__1 
+       (.I0(pCtlTknCnt_reg__0[3]),
+        .I1(pCtlTknCnt_reg__0[1]),
+        .I2(pCtlTknCnt_reg__0[0]),
+        .I3(pCtlTknCnt_reg__0[2]),
         .I4(pCtlTknCnt_reg__0[4]),
-        .O(p_0_in[4]));
+        .O(p_0_in__0[4]));
   LUT6 #(
-    .INIT(64'h6AAAAAAAAAAAAAAA)) 
+    .INIT(64'h7FFFFFFF80000000)) 
     \pCtlTknCnt[5]_i_1__1 
-       (.I0(pCtlTknCnt_reg__0[5]),
+       (.I0(pCtlTknCnt_reg__0[4]),
         .I1(pCtlTknCnt_reg__0[2]),
         .I2(pCtlTknCnt_reg__0[0]),
         .I3(pCtlTknCnt_reg__0[1]),
         .I4(pCtlTknCnt_reg__0[3]),
-        .I5(pCtlTknCnt_reg__0[4]),
-        .O(p_0_in[5]));
-  LUT5 #(
-    .INIT(32'hFFFFFFEF)) 
+        .I5(pCtlTknCnt_reg__0[5]),
+        .O(p_0_in__0[5]));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFD)) 
     \pCtlTknCnt[6]_i_1__1 
-       (.I0(\pCtlTknCnt[6]_i_3__1_n_0 ),
+       (.I0(pState[2]),
         .I1(pState[1]),
-        .I2(pState[2]),
-        .I3(pState[10]),
-        .I4(\pCtlTknCnt[6]_i_4__1_n_0 ),
-        .O(pCtlTknRst));
-  LUT3 #(
-    .INIT(8'h6A)) 
-    \pCtlTknCnt[6]_i_2__1 
-       (.I0(pCtlTknCnt_reg__0[6]),
-        .I1(\pCtlTknCnt[6]_i_5__1_n_0 ),
-        .I2(pCtlTknCnt_reg__0[5]),
-        .O(p_0_in[6]));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \pCtlTknCnt[6]_i_3__1 
-       (.I0(pState[5]),
-        .I1(pState[0]),
-        .I2(pState[4]),
-        .I3(pState[3]),
-        .O(\pCtlTknCnt[6]_i_3__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \pCtlTknCnt[6]_i_4__1 
-       (.I0(pState[8]),
-        .I1(pState[6]),
         .I2(pState[9]),
-        .I3(pState[7]),
-        .O(\pCtlTknCnt[6]_i_4__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
-  LUT5 #(
-    .INIT(32'h80000000)) 
-    \pCtlTknCnt[6]_i_5__1 
+        .I3(pState[10]),
+        .I4(\pState[10]_i_5__1_n_0 ),
+        .I5(iIn_q_i_2__1_n_0),
+        .O(pCtlTknRst));
+  LUT2 #(
+    .INIT(4'h9)) 
+    \pCtlTknCnt[6]_i_2__1 
+       (.I0(\pCtlTknCnt[6]_i_3__1_n_0 ),
+        .I1(pCtlTknCnt_reg__0[6]),
+        .O(p_0_in__0[6]));
+  LUT6 #(
+    .INIT(64'h7FFFFFFFFFFFFFFF)) 
+    \pCtlTknCnt[6]_i_3__1 
        (.I0(pCtlTknCnt_reg__0[4]),
-        .I1(pCtlTknCnt_reg__0[3]),
-        .I2(pCtlTknCnt_reg__0[1]),
-        .I3(pCtlTknCnt_reg__0[0]),
-        .I4(pCtlTknCnt_reg__0[2]),
-        .O(\pCtlTknCnt[6]_i_5__1_n_0 ));
+        .I1(pCtlTknCnt_reg__0[2]),
+        .I2(pCtlTknCnt_reg__0[0]),
+        .I3(pCtlTknCnt_reg__0[1]),
+        .I4(pCtlTknCnt_reg__0[3]),
+        .I5(pCtlTknCnt_reg__0[5]),
+        .O(\pCtlTknCnt[6]_i_3__1_n_0 ));
   FDRE \pCtlTknCnt_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(p_0_in[0]),
+        .D(p_0_in__0[0]),
         .Q(pCtlTknCnt_reg__0[0]),
         .R(pCtlTknRst));
   FDRE \pCtlTknCnt_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(p_0_in[1]),
+        .D(p_0_in__0[1]),
         .Q(pCtlTknCnt_reg__0[1]),
         .R(pCtlTknRst));
   FDRE \pCtlTknCnt_reg[2] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(p_0_in[2]),
+        .D(p_0_in__0[2]),
         .Q(pCtlTknCnt_reg__0[2]),
         .R(pCtlTknRst));
   FDRE \pCtlTknCnt_reg[3] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(p_0_in[3]),
+        .D(p_0_in__0[3]),
         .Q(pCtlTknCnt_reg__0[3]),
         .R(pCtlTknRst));
   FDRE \pCtlTknCnt_reg[4] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(p_0_in[4]),
+        .D(p_0_in__0[4]),
         .Q(pCtlTknCnt_reg__0[4]),
         .R(pCtlTknRst));
   FDRE \pCtlTknCnt_reg[5] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(p_0_in[5]),
+        .D(p_0_in__0[5]),
         .Q(pCtlTknCnt_reg__0[5]),
         .R(pCtlTknRst));
   FDRE \pCtlTknCnt_reg[6] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(p_0_in[6]),
+        .D(p_0_in__0[6]),
         .Q(pCtlTknCnt_reg__0[6]),
         .R(pCtlTknRst));
-  LUT5 #(
-    .INIT(32'hB8888888)) 
+  LUT4 #(
+    .INIT(16'hF044)) 
     pCtlTknOvf_i_1__1
-       (.I0(pCtlTknOvf_reg_n_0),
-        .I1(pCtlTknRst),
-        .I2(pCtlTknCnt_reg__0[6]),
-        .I3(\pCtlTknCnt[6]_i_5__1_n_0 ),
-        .I4(pCtlTknCnt_reg__0[5]),
+       (.I0(\pCtlTknCnt[6]_i_3__1_n_0 ),
+        .I1(pCtlTknCnt_reg__0[6]),
+        .I2(pCtlTknOvf_reg_n_0),
+        .I3(pCtlTknRst),
         .O(pCtlTknOvf_i_1__1_n_0));
   FDRE pCtlTknOvf_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(pCtlTknOvf_i_1__1_n_0),
         .Q(pCtlTknOvf_reg_n_0),
         .R(1'b0));
   FDRE \pDataQ_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(D[0]),
         .Q(\pDataQ_reg_n_0_[0] ),
         .R(1'b0));
   FDRE \pDataQ_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(D[1]),
         .Q(\pDataQ_reg_n_0_[1] ),
         .R(1'b0));
   FDRE \pDataQ_reg[2] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(D[2]),
         .Q(\pDataQ_reg_n_0_[2] ),
         .R(1'b0));
   FDRE \pDataQ_reg[3] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(D[3]),
         .Q(\pDataQ_reg_n_0_[3] ),
         .R(1'b0));
   FDRE \pDataQ_reg[4] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(D[4]),
         .Q(\pDataQ_reg_n_0_[4] ),
         .R(1'b0));
   FDRE \pDataQ_reg[5] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(D[5]),
         .Q(\pDataQ_reg_n_0_[5] ),
         .R(1'b0));
   FDRE \pDataQ_reg[6] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(D[6]),
         .Q(\pDataQ_reg_n_0_[6] ),
         .R(1'b0));
   FDRE \pDataQ_reg[7] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(D[7]),
         .Q(\pDataQ_reg_n_0_[7] ),
         .R(1'b0));
   FDRE \pDataQ_reg[8] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(D[8]),
         .Q(\pDataQ_reg_n_0_[8] ),
         .R(1'b0));
   LUT5 #(
-    .INIT(32'h41000041)) 
+    .INIT(32'h82000082)) 
     pDelayCenter_i_1__1
        (.I0(pDelayCenter_i_2__1_n_0),
-        .I1(\pIDLY_CNT_Q_reg_n_0_[4] ),
-        .I2(\pCenterTap_reg_n_0_[5] ),
+        .I1(\pCenterTap_reg_n_0_[5] ),
+        .I2(\pIDLY_CNT_Q_reg_n_0_[4] ),
         .I3(\pCenterTap_reg_n_0_[4] ),
         .I4(\pIDLY_CNT_Q_reg_n_0_[3] ),
         .O(pDelayCenter_i_1__1_n_0));
   LUT6 #(
-    .INIT(64'h6FF6FFFFFFFF6FF6)) 
+    .INIT(64'h9009000000009009)) 
     pDelayCenter_i_2__1
-       (.I0(\pCenterTap_reg_n_0_[1] ),
-        .I1(\pIDLY_CNT_Q_reg_n_0_[0] ),
-        .I2(\pIDLY_CNT_Q_reg_n_0_[1] ),
-        .I3(\pCenterTap_reg_n_0_[2] ),
-        .I4(\pIDLY_CNT_Q_reg_n_0_[2] ),
-        .I5(\pCenterTap_reg_n_0_[3] ),
+       (.I0(\pCenterTap_reg_n_0_[3] ),
+        .I1(\pIDLY_CNT_Q_reg_n_0_[2] ),
+        .I2(\pCenterTap_reg_n_0_[2] ),
+        .I3(\pIDLY_CNT_Q_reg_n_0_[1] ),
+        .I4(\pIDLY_CNT_Q_reg_n_0_[0] ),
+        .I5(\pCenterTap_reg_n_0_[1] ),
         .O(pDelayCenter_i_2__1_n_0));
   FDRE pDelayCenter_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(pDelayCenter_i_1__1_n_0),
         .Q(pDelayCenter_reg_n_0),
@@ -5924,183 +6035,224 @@ module hdmi_in_dvi2rgb_0_0_PhaseAlign_19
   LUT5 #(
     .INIT(32'h00000001)) 
     pDelayOvf_i_1__1
-       (.I0(\pIDLY_CNT_Q_reg_n_0_[1] ),
-        .I1(\pIDLY_CNT_Q_reg_n_0_[0] ),
-        .I2(\pIDLY_CNT_Q_reg_n_0_[4] ),
-        .I3(\pIDLY_CNT_Q_reg_n_0_[3] ),
-        .I4(\pIDLY_CNT_Q_reg_n_0_[2] ),
+       (.I0(\pIDLY_CNT_Q_reg_n_0_[0] ),
+        .I1(\pIDLY_CNT_Q_reg_n_0_[1] ),
+        .I2(\pIDLY_CNT_Q_reg_n_0_[2] ),
+        .I3(\pIDLY_CNT_Q_reg_n_0_[4] ),
+        .I4(\pIDLY_CNT_Q_reg_n_0_[3] ),
         .O(pDelayOvf_i_1__1_n_0));
   FDRE pDelayOvf_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(pDelayOvf_i_1__1_n_0),
         .Q(pDelayOvf_reg_n_0),
         .R(1'b0));
-  LUT2 #(
-    .INIT(4'h1)) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  LUT5 #(
+    .INIT(32'h01100000)) 
     \pDelayWaitCnt[0]_i_1 
-       (.I0(pDelayWaitCnt[0]),
+       (.I0(\pDelayWaitCnt_reg_n_0_[0] ),
         .I1(\pDelayWaitCnt[1]_i_2__1_n_0 ),
+        .I2(pState[6]),
+        .I3(pState[8]),
+        .I4(\pDelayWaitCnt[1]_i_3__1_n_0 ),
         .O(\pDelayWaitCnt[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
-  LUT3 #(
-    .INIT(8'h06)) 
-    \pDelayWaitCnt[1]_i_1 
-       (.I0(pDelayWaitCnt[1]),
-        .I1(pDelayWaitCnt[0]),
-        .I2(\pDelayWaitCnt[1]_i_2__1_n_0 ),
-        .O(\pDelayWaitCnt[1]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFEFFFEFFFF)) 
+    .INIT(64'h0006060000000000)) 
+    \pDelayWaitCnt[1]_i_1 
+       (.I0(\pDelayWaitCnt_reg_n_0_[1] ),
+        .I1(\pDelayWaitCnt_reg_n_0_[0] ),
+        .I2(\pDelayWaitCnt[1]_i_2__1_n_0 ),
+        .I3(pState[6]),
+        .I4(pState[8]),
+        .I5(\pDelayWaitCnt[1]_i_3__1_n_0 ),
+        .O(\pDelayWaitCnt[1]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  LUT3 #(
+    .INIT(8'hFE)) 
     \pDelayWaitCnt[1]_i_2__1 
-       (.I0(pState[3]),
-        .I1(\pDelayWaitCnt[1]_i_3__0_n_0 ),
-        .I2(pFoundEyeFlag_i_3__1_n_0),
-        .I3(\pDelayWaitCnt[1]_i_4__0_n_0 ),
-        .I4(pState[6]),
-        .I5(pState[8]),
-        .O(\pDelayWaitCnt[1]_i_2__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    \pDelayWaitCnt[1]_i_3__0 
        (.I0(pState[10]),
         .I1(pState[9]),
-        .O(\pDelayWaitCnt[1]_i_3__0_n_0 ));
-  LUT2 #(
-    .INIT(4'hE)) 
-    \pDelayWaitCnt[1]_i_4__0 
-       (.I0(pState[5]),
-        .I1(pState[7]),
-        .O(\pDelayWaitCnt[1]_i_4__0_n_0 ));
+        .I2(pState[1]),
+        .O(\pDelayWaitCnt[1]_i_2__1_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000000000000001)) 
+    \pDelayWaitCnt[1]_i_3__1 
+       (.I0(pState[7]),
+        .I1(pState[5]),
+        .I2(pState[3]),
+        .I3(pState[0]),
+        .I4(\pState_reg_n_0_[4] ),
+        .I5(pState[2]),
+        .O(\pDelayWaitCnt[1]_i_3__1_n_0 ));
   FDRE \pDelayWaitCnt_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(\pDelayWaitCnt[0]_i_1_n_0 ),
-        .Q(pDelayWaitCnt[0]),
+        .Q(\pDelayWaitCnt_reg_n_0_[0] ),
         .R(1'b0));
   FDRE \pDelayWaitCnt_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(\pDelayWaitCnt[1]_i_1_n_0 ),
-        .Q(pDelayWaitCnt[1]),
+        .Q(\pDelayWaitCnt_reg_n_0_[1] ),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
-  LUT4 #(
-    .INIT(16'h88B8)) 
+  LUT6 #(
+    .INIT(64'hF2FFFFFF02000000)) 
     pDelayWaitOvf_i_1__1
-       (.I0(pDelayWaitOvf_reg_n_0),
-        .I1(\pDelayWaitCnt[1]_i_2__1_n_0 ),
-        .I2(pDelayWaitCnt[1]),
-        .I3(pDelayWaitCnt[0]),
+       (.I0(\pDelayWaitCnt_reg_n_0_[1] ),
+        .I1(\pDelayWaitCnt_reg_n_0_[0] ),
+        .I2(\pDelayWaitCnt[1]_i_2__1_n_0 ),
+        .I3(pDelayWaitOvf_i_2__1_n_0),
+        .I4(\pDelayWaitCnt[1]_i_3__1_n_0 ),
+        .I5(pDelayWaitOvf_reg_n_0),
         .O(pDelayWaitOvf_i_1__1_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    pDelayWaitOvf_i_2__1
+       (.I0(pState[6]),
+        .I1(pState[8]),
+        .O(pDelayWaitOvf_i_2__1_n_0));
   FDRE pDelayWaitOvf_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(pDelayWaitOvf_i_1__1_n_0),
         .Q(pDelayWaitOvf_reg_n_0),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'h0000000000100000)) 
+    .INIT(64'h0000010000000000)) 
     pError_i_1__1
        (.I0(pState[6]),
         .I1(pState[8]),
-        .I2(pAligned_i_2__1_n_0),
-        .I3(pState[0]),
-        .I4(pState[10]),
-        .I5(pState[9]),
-        .O(pError));
+        .I2(pState[9]),
+        .I3(pState[10]),
+        .I4(pState[1]),
+        .I5(\pDelayWaitCnt[1]_i_3__1_n_0 ),
+        .O(pError_i_1__1_n_0));
   FDRE pError_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(pError),
-        .Q(pAlignErr_q_reg),
+        .D(pError_i_1__1_n_0),
+        .Q(pError_reg_0),
         .R(1'b0));
   (* SOFT_HLUTNM = "soft_lutpair25" *) 
-  LUT3 #(
-    .INIT(8'h06)) 
+  LUT1 #(
+    .INIT(2'h1)) 
     \pEyeOpenCnt[0]_i_1__1 
-       (.I0(\pCenterTap[5]_i_3__1_n_0 ),
-        .I1(\pEyeOpenCnt_reg_n_0_[0] ),
-        .I2(pEyeOpenRst),
-        .O(\pEyeOpenCnt[0]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
-  LUT4 #(
-    .INIT(16'h0078)) 
+       (.I0(\pEyeOpenCnt_reg_n_0_[0] ),
+        .O(plusOp[0]));
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
     \pEyeOpenCnt[1]_i_1__1 
-       (.I0(\pCenterTap[5]_i_3__1_n_0 ),
+       (.I0(\pEyeOpenCnt_reg_n_0_[0] ),
+        .I1(\pEyeOpenCnt_reg_n_0_[1] ),
+        .O(plusOp[1]));
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  LUT3 #(
+    .INIT(8'h78)) 
+    \pEyeOpenCnt[2]_i_1__1 
+       (.I0(\pEyeOpenCnt_reg_n_0_[1] ),
+        .I1(\pEyeOpenCnt_reg_n_0_[0] ),
+        .I2(\pEyeOpenCnt_reg_n_0_[2] ),
+        .O(plusOp[2]));
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  LUT4 #(
+    .INIT(16'h7F80)) 
+    \pEyeOpenCnt[3]_i_1__1 
+       (.I0(\pEyeOpenCnt_reg_n_0_[2] ),
         .I1(\pEyeOpenCnt_reg_n_0_[0] ),
         .I2(\pEyeOpenCnt_reg_n_0_[1] ),
-        .I3(pEyeOpenRst),
-        .O(\pEyeOpenCnt[1]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+        .I3(\pEyeOpenCnt_reg_n_0_[3] ),
+        .O(plusOp[3]));
+  LUT6 #(
+    .INIT(64'h0000000100030000)) 
+    \pEyeOpenCnt[4]_i_1__1 
+       (.I0(pFoundEyeFlag_reg_n_0),
+        .I1(pState[2]),
+        .I2(\pEyeOpenCnt[4]_i_4__1_n_0 ),
+        .I3(\pEyeOpenCnt[4]_i_5__1_n_0 ),
+        .I4(pState[0]),
+        .I5(\pState_reg_n_0_[4] ),
+        .O(pEyeOpenRst));
+  LUT6 #(
+    .INIT(64'h0000000000000010)) 
+    \pEyeOpenCnt[4]_i_2__1 
+       (.I0(pState[5]),
+        .I1(pState[7]),
+        .I2(pState[3]),
+        .I3(\pEyeOpenCnt[4]_i_6__0_n_0 ),
+        .I4(pState[0]),
+        .I5(\pState_reg_n_0_[4] ),
+        .O(pEyeOpenEn));
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT5 #(
-    .INIT(32'h00007F80)) 
-    \pEyeOpenCnt[2]_i_1__1 
-       (.I0(\pCenterTap[5]_i_3__1_n_0 ),
+    .INIT(32'h7FFF8000)) 
+    \pEyeOpenCnt[4]_i_3__1 
+       (.I0(\pEyeOpenCnt_reg_n_0_[3] ),
         .I1(\pEyeOpenCnt_reg_n_0_[1] ),
         .I2(\pEyeOpenCnt_reg_n_0_[0] ),
         .I3(\pEyeOpenCnt_reg_n_0_[2] ),
-        .I4(pEyeOpenRst),
-        .O(\pEyeOpenCnt[2]_i_1__1_n_0 ));
+        .I4(\pEyeOpenCnt_reg_n_0_[4] ),
+        .O(plusOp[4]));
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
+    \pEyeOpenCnt[4]_i_4__1 
+       (.I0(pState[1]),
+        .I1(pState[9]),
+        .I2(pState[10]),
+        .I3(pState[8]),
+        .I4(pState[6]),
+        .O(\pEyeOpenCnt[4]_i_4__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  LUT3 #(
+    .INIT(8'hFE)) 
+    \pEyeOpenCnt[4]_i_5__1 
+       (.I0(pState[7]),
+        .I1(pState[5]),
+        .I2(pState[3]),
+        .O(\pEyeOpenCnt[4]_i_5__1_n_0 ));
   LUT6 #(
-    .INIT(64'h000000006AAAAAAA)) 
-    \pEyeOpenCnt[3]_i_1__1 
-       (.I0(\pEyeOpenCnt_reg_n_0_[3] ),
-        .I1(\pEyeOpenCnt_reg_n_0_[2] ),
-        .I2(\pEyeOpenCnt_reg_n_0_[0] ),
-        .I3(\pEyeOpenCnt_reg_n_0_[1] ),
-        .I4(\pCenterTap[5]_i_3__1_n_0 ),
-        .I5(pEyeOpenRst),
-        .O(\pEyeOpenCnt[3]_i_1__1_n_0 ));
-  LUT4 #(
-    .INIT(16'h0078)) 
-    \pEyeOpenCnt[4]_i_1__1 
-       (.I0(\pEyeOpenCnt[4]_i_2__1_n_0 ),
-        .I1(\pEyeOpenCnt_reg_n_0_[3] ),
-        .I2(\pEyeOpenCnt_reg_n_0_[4] ),
-        .I3(pEyeOpenRst),
-        .O(\pEyeOpenCnt[4]_i_1__1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0400000000000000)) 
-    \pEyeOpenCnt[4]_i_2__1 
-       (.I0(pFoundEyeFlag_i_3__1_n_0),
-        .I1(pState[3]),
-        .I2(iIn_q_i_2__1_n_0),
-        .I3(\pEyeOpenCnt_reg_n_0_[1] ),
-        .I4(\pEyeOpenCnt_reg_n_0_[0] ),
-        .I5(\pEyeOpenCnt_reg_n_0_[2] ),
-        .O(\pEyeOpenCnt[4]_i_2__1_n_0 ));
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
+    \pEyeOpenCnt[4]_i_6__0 
+       (.I0(pState[6]),
+        .I1(pState[8]),
+        .I2(pState[10]),
+        .I3(pState[9]),
+        .I4(pState[1]),
+        .I5(pState[2]),
+        .O(\pEyeOpenCnt[4]_i_6__0_n_0 ));
   FDRE \pEyeOpenCnt_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(\pEyeOpenCnt[0]_i_1__1_n_0 ),
+       (.C(pIDLY_LD_reg_0),
+        .CE(pEyeOpenEn),
+        .D(plusOp[0]),
         .Q(\pEyeOpenCnt_reg_n_0_[0] ),
-        .R(1'b0));
+        .R(pEyeOpenRst));
   FDRE \pEyeOpenCnt_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(\pEyeOpenCnt[1]_i_1__1_n_0 ),
+       (.C(pIDLY_LD_reg_0),
+        .CE(pEyeOpenEn),
+        .D(plusOp[1]),
         .Q(\pEyeOpenCnt_reg_n_0_[1] ),
-        .R(1'b0));
+        .R(pEyeOpenRst));
   FDRE \pEyeOpenCnt_reg[2] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(\pEyeOpenCnt[2]_i_1__1_n_0 ),
+       (.C(pIDLY_LD_reg_0),
+        .CE(pEyeOpenEn),
+        .D(plusOp[2]),
         .Q(\pEyeOpenCnt_reg_n_0_[2] ),
-        .R(1'b0));
+        .R(pEyeOpenRst));
   FDRE \pEyeOpenCnt_reg[3] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(\pEyeOpenCnt[3]_i_1__1_n_0 ),
+       (.C(pIDLY_LD_reg_0),
+        .CE(pEyeOpenEn),
+        .D(plusOp[3]),
         .Q(\pEyeOpenCnt_reg_n_0_[3] ),
-        .R(1'b0));
+        .R(pEyeOpenRst));
   FDRE \pEyeOpenCnt_reg[4] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(1'b1),
-        .D(\pEyeOpenCnt[4]_i_1__1_n_0 ),
+       (.C(pIDLY_LD_reg_0),
+        .CE(pEyeOpenEn),
+        .D(plusOp[4]),
         .Q(\pEyeOpenCnt_reg_n_0_[4] ),
-        .R(1'b0));
+        .R(pEyeOpenRst));
   LUT3 #(
     .INIT(8'h80)) 
     pFIFO_reg_0_31_0_5_i_1
@@ -6108,447 +6260,404 @@ module hdmi_in_dvi2rgb_0_0_PhaseAlign_19
         .I1(pVld_2),
         .I2(pVld_1),
         .O(pAllVld));
-  LUT6 #(
-    .INIT(64'hFFFFBBFB0000AA0A)) 
+  LUT5 #(
+    .INIT(32'h0000EAFA)) 
     pFoundEyeFlag_i_1__1
-       (.I0(pFoundEyeFlag_i_2__1_n_0),
-        .I1(pState[0]),
-        .I2(pFoundEyeFlag_i_3__1_n_0),
-        .I3(pFoundEyeFlag_i_4__1_n_0),
-        .I4(iIn_q_i_2__1_n_0),
-        .I5(pFoundEyeFlag),
+       (.I0(pFoundEyeFlag_reg_n_0),
+        .I1(pFoundEyeFlag_i_2__1_n_0),
+        .I2(pEyeOpenEn),
+        .I3(\pState[5]_i_2__1_n_0 ),
+        .I4(pIDLY_LD_i_1__1_n_0),
         .O(pFoundEyeFlag_i_1__1_n_0));
   LUT6 #(
-    .INIT(64'h0000030008000000)) 
+    .INIT(64'h0000000000000080)) 
     pFoundEyeFlag_i_2__1
-       (.I0(pFoundJtrFlag),
-        .I1(\pEyeOpenCnt_reg_n_0_[0] ),
-        .I2(pFoundEyeFlag_i_5__1_n_0),
-        .I3(pState[3]),
-        .I4(\pEyeOpenCnt_reg_n_0_[1] ),
-        .I5(\pEyeOpenCnt_reg_n_0_[4] ),
+       (.I0(\pEyeOpenCnt_reg_n_0_[0] ),
+        .I1(\pEyeOpenCnt_reg_n_0_[1] ),
+        .I2(pFoundJtrFlag_reg_n_0),
+        .I3(\pEyeOpenCnt_reg_n_0_[4] ),
+        .I4(\pEyeOpenCnt_reg_n_0_[3] ),
+        .I5(\pEyeOpenCnt_reg_n_0_[2] ),
         .O(pFoundEyeFlag_i_2__1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    pFoundEyeFlag_i_3__1
-       (.I0(pState[4]),
-        .I1(pState[0]),
-        .I2(pState[1]),
-        .I3(pState[2]),
-        .O(pFoundEyeFlag_i_3__1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
-  LUT4 #(
-    .INIT(16'h0001)) 
-    pFoundEyeFlag_i_4__1
-       (.I0(pState[1]),
-        .I1(pState[2]),
-        .I2(pState[4]),
-        .I3(pState[3]),
-        .O(pFoundEyeFlag_i_4__1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    pFoundEyeFlag_i_5__1
-       (.I0(\pEyeOpenCnt_reg_n_0_[2] ),
-        .I1(\pEyeOpenCnt_reg_n_0_[3] ),
-        .O(pFoundEyeFlag_i_5__1_n_0));
   FDRE pFoundEyeFlag_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(pFoundEyeFlag_i_1__1_n_0),
-        .Q(pFoundEyeFlag),
+        .Q(pFoundEyeFlag_reg_n_0),
         .R(1'b0));
-  LUT6 #(
-    .INIT(64'hAAABA8AAAAAAAAAA)) 
+  LUT4 #(
+    .INIT(16'hFB10)) 
     pFoundJtrFlag_i_1__1
-       (.I0(pFoundJtrFlag),
-        .I1(iIn_q_i_2__1_n_0),
-        .I2(pState[3]),
-        .I3(pState[0]),
-        .I4(pState[4]),
-        .I5(pFoundJtrFlag_i_2__1_n_0),
+       (.I0(pFoundJtrFlag_i_2__1_n_0),
+        .I1(pState[0]),
+        .I2(\pState_reg_n_0_[4] ),
+        .I3(pFoundJtrFlag_reg_n_0),
         .O(pFoundJtrFlag_i_1__1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
-  LUT2 #(
-    .INIT(4'h1)) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  LUT5 #(
+    .INIT(32'hFFFFFFFE)) 
     pFoundJtrFlag_i_2__1
        (.I0(pState[2]),
-        .I1(pState[1]),
+        .I1(\pEyeOpenCnt[4]_i_4__1_n_0 ),
+        .I2(pState[3]),
+        .I3(pState[5]),
+        .I4(pState[7]),
         .O(pFoundJtrFlag_i_2__1_n_0));
   FDRE pFoundJtrFlag_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(pFoundJtrFlag_i_1__1_n_0),
-        .Q(pFoundJtrFlag),
+        .Q(pFoundJtrFlag_reg_n_0),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'hAAAAAABAAAAAAAAA)) 
+    .INIT(64'h0000000100010000)) 
     pIDLY_CE_i_1__1
-       (.I0(pIDLY_CE_i_2__1_n_0),
-        .I1(pIDLY_CE_i_3__0_n_0),
-        .I2(pState[7]),
-        .I3(pState[0]),
+       (.I0(\pEyeOpenCnt[4]_i_6__0_n_0 ),
+        .I1(pState[0]),
+        .I2(\pState_reg_n_0_[4] ),
+        .I3(pState[3]),
         .I4(pState[5]),
-        .I5(pFoundEyeFlag_i_4__1_n_0),
-        .O(pIDLY_CE_0));
-  LUT5 #(
-    .INIT(32'h00000200)) 
-    pIDLY_CE_i_2__1
-       (.I0(pFoundEyeFlag_i_4__1_n_0),
-        .I1(pState[10]),
-        .I2(pState[0]),
-        .I3(pState[5]),
-        .I4(\pCtlTknCnt[6]_i_4__1_n_0 ),
-        .O(pIDLY_CE_i_2__1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    pIDLY_CE_i_3__0
-       (.I0(pState[8]),
-        .I1(pState[6]),
-        .I2(pState[9]),
-        .I3(pState[10]),
-        .O(pIDLY_CE_i_3__0_n_0));
+        .I5(pState[7]),
+        .O(pIDLY_CE_i_1__1_n_0));
   FDRE pIDLY_CE_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(pIDLY_CE_0),
+        .D(pIDLY_CE_i_1__1_n_0),
         .Q(pIDLY_CE),
         .R(1'b0));
   FDRE \pIDLY_CNT_Q_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(pIDLY_CE_reg_0[0]),
+        .D(\pIDLY_CNT_Q_reg[4]_0 [0]),
         .Q(\pIDLY_CNT_Q_reg_n_0_[0] ),
         .R(1'b0));
   FDRE \pIDLY_CNT_Q_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(pIDLY_CE_reg_0[1]),
+        .D(\pIDLY_CNT_Q_reg[4]_0 [1]),
         .Q(\pIDLY_CNT_Q_reg_n_0_[1] ),
         .R(1'b0));
   FDRE \pIDLY_CNT_Q_reg[2] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(pIDLY_CE_reg_0[2]),
+        .D(\pIDLY_CNT_Q_reg[4]_0 [2]),
         .Q(\pIDLY_CNT_Q_reg_n_0_[2] ),
         .R(1'b0));
   FDRE \pIDLY_CNT_Q_reg[3] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(pIDLY_CE_reg_0[3]),
+        .D(\pIDLY_CNT_Q_reg[4]_0 [3]),
         .Q(\pIDLY_CNT_Q_reg_n_0_[3] ),
         .R(1'b0));
   FDRE \pIDLY_CNT_Q_reg[4] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(pIDLY_CE_reg_0[4]),
+        .D(\pIDLY_CNT_Q_reg[4]_0 [4]),
         .Q(\pIDLY_CNT_Q_reg_n_0_[4] ),
         .R(1'b0));
-  LUT3 #(
-    .INIT(8'hF4)) 
+  LUT4 #(
+    .INIT(16'hBF20)) 
     pIDLY_INC_i_1__1
-       (.I0(pIDLY_INC_2),
-        .I1(pIDLY_INC),
-        .I2(pIDLY_CE_i_2__1_n_0),
+       (.I0(pState[5]),
+        .I1(pState[7]),
+        .I2(pIDLY_INC_i_2__1_n_0),
+        .I3(pIDLY_INC),
         .O(pIDLY_INC_i_1__1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT5 #(
-    .INIT(32'h00000200)) 
+    .INIT(32'h00000001)) 
     pIDLY_INC_i_2__1
-       (.I0(pFoundEyeFlag_i_4__1_n_0),
-        .I1(pState[5]),
+       (.I0(\pEyeOpenCnt[4]_i_4__1_n_0 ),
+        .I1(pState[2]),
         .I2(pState[0]),
-        .I3(pState[7]),
-        .I4(pIDLY_CE_i_3__0_n_0),
-        .O(pIDLY_INC_2));
+        .I3(\pState_reg_n_0_[4] ),
+        .I4(pState[3]),
+        .O(pIDLY_INC_i_2__1_n_0));
   FDRE pIDLY_INC_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(pIDLY_INC_i_1__1_n_0),
         .Q(pIDLY_INC),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
-  LUT5 #(
-    .INIT(32'h00001000)) 
+  LUT6 #(
+    .INIT(64'h0000000000000004)) 
     pIDLY_LD_i_1__1
-       (.I0(pState[5]),
-        .I1(pState[7]),
-        .I2(pFoundEyeFlag_i_4__1_n_0),
-        .I3(pState[0]),
-        .I4(pIDLY_CE_i_3__0_n_0),
-        .O(pIDLY_LD_1));
+       (.I0(\pState_reg_n_0_[4] ),
+        .I1(pState[0]),
+        .I2(pState[7]),
+        .I3(pState[5]),
+        .I4(pState[3]),
+        .I5(\pEyeOpenCnt[4]_i_6__0_n_0 ),
+        .O(pIDLY_LD_i_1__1_n_0));
   FDRE pIDLY_LD_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
-        .D(pIDLY_LD_1),
+        .D(pIDLY_LD_i_1__1_n_0),
         .Q(pIDLY_LD),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT5 #(
     .INIT(32'h00010116)) 
-    pStateNxt
+    \pStateNxt_inferred__8/i_ 
        (.I0(pState[0]),
         .I1(pState[1]),
         .I2(pState[2]),
         .I3(pState[3]),
-        .I4(pState[4]),
-        .O(pStateNxt_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+        .I4(\pState_reg_n_0_[4] ),
+        .O(\pStateNxt_inferred__8/i__n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT5 #(
     .INIT(32'hFFFEFEE8)) 
-    pStateNxt__0
+    \pStateNxt_inferred__8/i___0 
        (.I0(pState[0]),
         .I1(pState[1]),
         .I2(pState[2]),
         .I3(pState[3]),
-        .I4(pState[4]),
-        .O(pStateNxt__0_n_0));
+        .I4(\pState_reg_n_0_[4] ),
+        .O(\pStateNxt_inferred__8/i___0_n_0 ));
   LUT6 #(
     .INIT(64'h0000000100010116)) 
-    pStateNxt__1
+    \pStateNxt_inferred__8/i___1 
        (.I0(pState[5]),
         .I1(pState[6]),
         .I2(pState[7]),
         .I3(pState[8]),
         .I4(pState[9]),
         .I5(pState[10]),
-        .O(pStateNxt__1_n_0));
+        .O(\pStateNxt_inferred__8/i___1_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFEFFFEFEE8)) 
-    pStateNxt__2
+    \pStateNxt_inferred__8/i___2 
        (.I0(pState[5]),
         .I1(pState[6]),
         .I2(pState[7]),
         .I3(pState[8]),
         .I4(pState[9]),
         .I5(pState[10]),
-        .O(pStateNxt__2_n_0));
+        .O(\pStateNxt_inferred__8/i___2_n_0 ));
   LUT4 #(
     .INIT(16'h0012)) 
-    pStateNxt__3
-       (.I0(pStateNxt_n_0),
-        .I1(pStateNxt__0_n_0),
-        .I2(pStateNxt__1_n_0),
-        .I3(pStateNxt__2_n_0),
-        .O(pStateNxt__3_n_0));
+    \pStateNxt_inferred__8/i___3 
+       (.I0(\pStateNxt_inferred__8/i__n_0 ),
+        .I1(\pStateNxt_inferred__8/i___0_n_0 ),
+        .I2(\pStateNxt_inferred__8/i___1_n_0 ),
+        .I3(\pStateNxt_inferred__8/i___2_n_0 ),
+        .O(\pStateNxt_inferred__8/i___3_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
     \pState[0]_i_1__1 
-       (.I0(pStateNxt__3_n_0),
-        .O(\pState[0]_i_1__1_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFFEEEA)) 
+       (.I0(\pStateNxt_inferred__8/i___3_n_0 ),
+        .O(pStateNxt[0]));
+  LUT6 #(
+    .INIT(64'hFFFFFFFEFFFEFEEE)) 
     \pState[10]_i_1__1 
        (.I0(\pState[10]_i_3__1_n_0 ),
         .I1(\pState[10]_i_4__1_n_0 ),
-        .I2(pState[7]),
-        .I3(pState[8]),
-        .I4(\pState[10]_i_5__1_n_0 ),
-        .O(pStateNxt__4));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+        .I2(\pState[10]_i_5__1_n_0 ),
+        .I3(pState[10]),
+        .I4(pState[9]),
+        .I5(pState[1]),
+        .O(\pState[10]_i_1__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \pState[10]_i_2__1 
-       (.I0(pStateNxt__3_n_0),
+       (.I0(pDelayOvf_reg_n_0),
         .I1(pState[6]),
-        .I2(pDelayOvf_reg_n_0),
-        .O(\pState[10]_i_2__1_n_0 ));
+        .I2(\pStateNxt_inferred__8/i___3_n_0 ),
+        .O(pStateNxt[10]));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFCF8888)) 
+    .INIT(64'hFFFFFFEBFFEBEBEB)) 
     \pState[10]_i_3__1 
-       (.I0(pState[1]),
-        .I1(pIDLY_CE_i_3__0_n_0),
-        .I2(pTknFlagQ),
-        .I3(pCtlTknOvf_reg_n_0),
-        .I4(pState[2]),
-        .I5(\pCtlTknCnt[6]_i_3__1_n_0 ),
+       (.I0(iIn_q_i_2__1_n_0),
+        .I1(\pEyeOpenCnt[4]_i_4__1_n_0 ),
+        .I2(pState[2]),
+        .I3(pDelayWaitOvf_reg_n_0),
+        .I4(pState[8]),
+        .I5(pState[6]),
         .O(\pState[10]_i_3__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
-  LUT4 #(
-    .INIT(16'hFFF8)) 
-    \pState[10]_i_4__1 
-       (.I0(pState[9]),
-        .I1(pState[10]),
-        .I2(pState[7]),
-        .I3(pState[6]),
-        .O(\pState[10]_i_4__1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFF55005455)) 
+    .INIT(64'hFFFF0C0FAEAF0C0F)) 
+    \pState[10]_i_4__1 
+       (.I0(pBlankBegin),
+        .I1(pCtlTknOvf_reg_n_0),
+        .I2(\pEyeOpenCnt[4]_i_4__1_n_0 ),
+        .I3(pTknFlagQ),
+        .I4(pState[1]),
+        .I5(out),
+        .O(\pState[10]_i_4__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
     \pState[10]_i_5__1 
-       (.I0(pIDLY_CE_i_3__0_n_0),
-        .I1(out),
-        .I2(pBlankBegin),
-        .I3(pState[1]),
-        .I4(pState[2]),
-        .I5(\pState[10]_i_6__1_n_0 ),
+       (.I0(pState[6]),
+        .I1(pState[8]),
         .O(\pState[10]_i_5__1_n_0 ));
   LUT6 #(
-    .INIT(64'hFEFEFEFEFEFEFEC0)) 
-    \pState[10]_i_6__1 
-       (.I0(pDelayWaitOvf_reg_n_0),
-        .I1(pState[9]),
-        .I2(pState[10]),
-        .I3(pState[7]),
-        .I4(pState[6]),
-        .I5(pState[8]),
-        .O(\pState[10]_i_6__1_n_0 ));
-  LUT6 #(
-    .INIT(64'hAA08AAAAAA08AA08)) 
+    .INIT(64'hFFFF4F4400000000)) 
     \pState[1]_i_1__1 
-       (.I0(pStateNxt__3_n_0),
+       (.I0(pTknFlagQ),
         .I1(pState[2]),
-        .I2(pTknFlagQ),
-        .I3(pState[0]),
-        .I4(pDelayOvf_reg_n_0),
-        .I5(pState[6]),
-        .O(\pState[1]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+        .I2(pDelayOvf_reg_n_0),
+        .I3(pState[6]),
+        .I4(pState[0]),
+        .I5(\pStateNxt_inferred__8/i___3_n_0 ),
+        .O(pStateNxt[1]));
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \pState[2]_i_1__1 
-       (.I0(pStateNxt__3_n_0),
+       (.I0(pBlankBegin),
         .I1(pState[1]),
-        .I2(pBlankBegin),
-        .O(\pState[2]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+        .I2(\pStateNxt_inferred__8/i___3_n_0 ),
+        .O(pStateNxt[2]));
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \pState[3]_i_1__1 
-       (.I0(pStateNxt__3_n_0),
-        .I1(pTknFlagQ),
-        .I2(pState[2]),
-        .O(\pState[3]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+       (.I0(pTknFlagQ),
+        .I1(pState[2]),
+        .I2(\pStateNxt_inferred__8/i___3_n_0 ),
+        .O(pStateNxt[3]));
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT5 #(
-    .INIT(32'h08AA0808)) 
+    .INIT(32'h4040F040)) 
     \pState[4]_i_1__1 
-       (.I0(pStateNxt__3_n_0),
+       (.I0(\pState[5]_i_2__1_n_0 ),
         .I1(pState[3]),
-        .I2(\pState[5]_i_2__1_n_0 ),
-        .I3(pBlankBegin),
-        .I4(pState[1]),
-        .O(\pState[4]_i_1__1_n_0 ));
+        .I2(\pStateNxt_inferred__8/i___3_n_0 ),
+        .I3(pState[1]),
+        .I4(pBlankBegin),
+        .O(pStateNxt[4]));
   LUT5 #(
-    .INIT(32'h80AA8080)) 
+    .INIT(32'hF2002200)) 
     \pState[5]_i_1__1 
-       (.I0(pStateNxt__3_n_0),
-        .I1(\pState[5]_i_2__1_n_0 ),
-        .I2(pState[3]),
-        .I3(pFoundEyeFlag),
-        .I4(pState[4]),
-        .O(\pState[5]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+       (.I0(\pState_reg_n_0_[4] ),
+        .I1(pFoundEyeFlag_reg_n_0),
+        .I2(\pState[5]_i_2__1_n_0 ),
+        .I3(\pStateNxt_inferred__8/i___3_n_0 ),
+        .I4(pState[3]),
+        .O(pStateNxt[5]));
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT5 #(
-    .INIT(32'hFFFFFFEF)) 
+    .INIT(32'hFFFFFEFF)) 
     \pState[5]_i_2__1 
-       (.I0(\pEyeOpenCnt_reg_n_0_[3] ),
+       (.I0(\pEyeOpenCnt_reg_n_0_[0] ),
         .I1(\pEyeOpenCnt_reg_n_0_[2] ),
-        .I2(\pEyeOpenCnt_reg_n_0_[4] ),
-        .I3(\pEyeOpenCnt_reg_n_0_[1] ),
-        .I4(\pEyeOpenCnt_reg_n_0_[0] ),
+        .I2(\pEyeOpenCnt_reg_n_0_[3] ),
+        .I3(\pEyeOpenCnt_reg_n_0_[4] ),
+        .I4(\pEyeOpenCnt_reg_n_0_[1] ),
         .O(\pState[5]_i_2__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \pState[6]_i_1__1 
-       (.I0(pStateNxt__3_n_0),
+       (.I0(\pStateNxt_inferred__8/i___3_n_0 ),
         .I1(pState[5]),
-        .O(\pState[6]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+        .O(pStateNxt[6]));
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT5 #(
-    .INIT(32'hAA080808)) 
+    .INIT(32'hF0202020)) 
     \pState[7]_i_1__1 
-       (.I0(pStateNxt__3_n_0),
-        .I1(pState[8]),
-        .I2(pDelayCenter_reg_n_0),
-        .I3(pFoundEyeFlag),
-        .I4(pState[4]),
-        .O(\pState[7]_i_1__1_n_0 ));
+       (.I0(pState[8]),
+        .I1(pDelayCenter_reg_n_0),
+        .I2(\pStateNxt_inferred__8/i___3_n_0 ),
+        .I3(\pState_reg_n_0_[4] ),
+        .I4(pFoundEyeFlag_reg_n_0),
+        .O(pStateNxt[7]));
   (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \pState[8]_i_1__1 
-       (.I0(pStateNxt__3_n_0),
+       (.I0(\pStateNxt_inferred__8/i___3_n_0 ),
         .I1(pState[7]),
-        .O(\pState[8]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+        .O(pStateNxt[8]));
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \pState[9]_i_1__1 
-       (.I0(pStateNxt__3_n_0),
+       (.I0(pDelayCenter_reg_n_0),
         .I1(pState[8]),
-        .I2(pDelayCenter_reg_n_0),
-        .O(\pState[9]_i_1__1_n_0 ));
+        .I2(\pStateNxt_inferred__8/i___3_n_0 ),
+        .O(pStateNxt[9]));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDSE \pState_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[0]_i_1__1_n_0 ),
+       (.C(pIDLY_LD_reg_0),
+        .CE(\pState[10]_i_1__1_n_0 ),
+        .D(pStateNxt[0]),
         .Q(pState[0]),
         .S(SS));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDRE \pState_reg[10] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[10]_i_2__1_n_0 ),
+       (.C(pIDLY_LD_reg_0),
+        .CE(\pState[10]_i_1__1_n_0 ),
+        .D(pStateNxt[10]),
         .Q(pState[10]),
         .R(SS));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDRE \pState_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[1]_i_1__1_n_0 ),
+       (.C(pIDLY_LD_reg_0),
+        .CE(\pState[10]_i_1__1_n_0 ),
+        .D(pStateNxt[1]),
         .Q(pState[1]),
         .R(SS));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDRE \pState_reg[2] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[2]_i_1__1_n_0 ),
+       (.C(pIDLY_LD_reg_0),
+        .CE(\pState[10]_i_1__1_n_0 ),
+        .D(pStateNxt[2]),
         .Q(pState[2]),
         .R(SS));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDRE \pState_reg[3] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[3]_i_1__1_n_0 ),
+       (.C(pIDLY_LD_reg_0),
+        .CE(\pState[10]_i_1__1_n_0 ),
+        .D(pStateNxt[3]),
         .Q(pState[3]),
         .R(SS));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDRE \pState_reg[4] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[4]_i_1__1_n_0 ),
-        .Q(pState[4]),
+       (.C(pIDLY_LD_reg_0),
+        .CE(\pState[10]_i_1__1_n_0 ),
+        .D(pStateNxt[4]),
+        .Q(\pState_reg_n_0_[4] ),
         .R(SS));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDRE \pState_reg[5] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[5]_i_1__1_n_0 ),
+       (.C(pIDLY_LD_reg_0),
+        .CE(\pState[10]_i_1__1_n_0 ),
+        .D(pStateNxt[5]),
         .Q(pState[5]),
         .R(SS));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDRE \pState_reg[6] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[6]_i_1__1_n_0 ),
+       (.C(pIDLY_LD_reg_0),
+        .CE(\pState[10]_i_1__1_n_0 ),
+        .D(pStateNxt[6]),
         .Q(pState[6]),
         .R(SS));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDRE \pState_reg[7] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[7]_i_1__1_n_0 ),
+       (.C(pIDLY_LD_reg_0),
+        .CE(\pState[10]_i_1__1_n_0 ),
+        .D(pStateNxt[7]),
         .Q(pState[7]),
         .R(SS));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDRE \pState_reg[8] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[8]_i_1__1_n_0 ),
+       (.C(pIDLY_LD_reg_0),
+        .CE(\pState[10]_i_1__1_n_0 ),
+        .D(pStateNxt[8]),
         .Q(pState[8]),
         .R(SS));
+  (* FSM_ENCODED_STATES = "dlyincst:00000100000,alignerrorst:10000000000,resetst:00000000001,dlytstcenterst:00100000000,eyeopenst:00000001000,tokenst:00000000100,dlydecst:00010000000,dlytstovfst:00001000000,idlest:00000000010,jtrzonest:00000010000,alignedst:01000000000" *) 
   FDRE \pState_reg[9] 
-       (.C(rMMCM_LckdRisingFlag_reg),
-        .CE(pStateNxt__4),
-        .D(\pState[9]_i_1__1_n_0 ),
+       (.C(pIDLY_LD_reg_0),
+        .CE(\pState[10]_i_1__1_n_0 ),
+        .D(pStateNxt[9]),
         .Q(pState[9]),
         .R(SS));
   FDRE pTknFlagQ_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(pTknFlag),
         .Q(pTknFlagQ),
@@ -6583,7 +6692,7 @@ module hdmi_in_dvi2rgb_0_0_PhaseAlign_19
         .I5(\pDataQ_reg_n_0_[6] ),
         .O(pTknFlag_i_3__1_n_0));
   FDRE pTknFlag_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(pIDLY_LD_reg_0),
         .CE(1'b1),
         .D(pTknFlag0),
         .Q(pTknFlag),
@@ -6594,20 +6703,20 @@ endmodule
 module hdmi_in_dvi2rgb_0_0_ResetBridge
    (out,
     in0,
-    rMMCM_LckdRisingFlag_reg);
+    \oSyncStages_reg[1] );
   output [0:0]out;
   input in0;
-  input rMMCM_LckdRisingFlag_reg;
+  input \oSyncStages_reg[1] ;
 
   (* RTL_KEEP = "true" *) wire aRst_int;
+  wire \oSyncStages_reg[1] ;
   wire [0:0]out;
-  wire rMMCM_LckdRisingFlag_reg;
 
   assign aRst_int = in0;
   hdmi_in_dvi2rgb_0_0_SyncAsync_5 SyncAsyncx
        (.AS(aRst_int),
-        .out(out),
-        .rMMCM_LckdRisingFlag_reg(rMMCM_LckdRisingFlag_reg));
+        .\oSyncStages_reg[1]_0 (\oSyncStages_reg[1] ),
+        .out(out));
 endmodule
 
 (* ORIG_REF_NAME = "ResetBridge" *) 
@@ -6615,14 +6724,14 @@ module hdmi_in_dvi2rgb_0_0_ResetBridge_2
    (SS,
     rDlyRst_reg,
     aRst_n,
-    E,
     RST,
+    E,
     RefClk);
   output [0:0]SS;
   output rDlyRst_reg;
   input aRst_n;
-  input [0:0]E;
   input RST;
+  input [0:0]E;
   input RefClk;
 
   wire [0:0]E;
@@ -6790,14 +6899,14 @@ endmodule
 module hdmi_in_dvi2rgb_0_0_SyncAsync_4
    (SS,
     rDlyRst_reg,
-    E,
     RST,
+    E,
     RefClk,
     AS);
   output [0:0]SS;
   output rDlyRst_reg;
-  input [0:0]E;
   input RST;
+  input [0:0]E;
   input RefClk;
   input [0:0]AS;
 
@@ -6832,8 +6941,8 @@ module hdmi_in_dvi2rgb_0_0_SyncAsync_4
   LUT3 #(
     .INIT(8'hF8)) 
     rDlyRst_i_1
-       (.I0(E),
-        .I1(RST),
+       (.I0(RST),
+        .I1(E),
         .I2(oSyncStages[1]),
         .O(rDlyRst_reg));
 endmodule
@@ -6841,15 +6950,15 @@ endmodule
 (* ORIG_REF_NAME = "SyncAsync" *) 
 module hdmi_in_dvi2rgb_0_0_SyncAsync_5
    (out,
-    rMMCM_LckdRisingFlag_reg,
+    \oSyncStages_reg[1]_0 ,
     AS);
   output [0:0]out;
-  input rMMCM_LckdRisingFlag_reg;
+  input \oSyncStages_reg[1]_0 ;
   input [0:0]AS;
 
   wire [0:0]AS;
   (* async_reg = "true" *) wire [1:0]oSyncStages;
-  wire rMMCM_LckdRisingFlag_reg;
+  wire \oSyncStages_reg[1]_0 ;
 
   assign out[0] = oSyncStages[1];
   (* ASYNC_REG *) 
@@ -6857,7 +6966,7 @@ module hdmi_in_dvi2rgb_0_0_SyncAsync_5
   FDPE #(
     .INIT(1'b1)) 
     \oSyncStages_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\oSyncStages_reg[1]_0 ),
         .CE(1'b1),
         .D(1'b0),
         .PRE(AS),
@@ -6867,7 +6976,7 @@ module hdmi_in_dvi2rgb_0_0_SyncAsync_5
   FDPE #(
     .INIT(1'b1)) 
     \oSyncStages_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\oSyncStages_reg[1]_0 ),
         .CE(1'b1),
         .D(oSyncStages[0]),
         .PRE(AS),
@@ -6878,17 +6987,17 @@ endmodule
 module hdmi_in_dvi2rgb_0_0_SyncAsync_7
    (out,
     SS,
-    \Filter.sIn_q_reg ,
+    \Filter.cntPeriods_reg[1] ,
     RefClk,
     DDC_SCL_I);
   output [0:0]out;
   output [0:0]SS;
-  input \Filter.sIn_q_reg ;
+  input \Filter.cntPeriods_reg[1] ;
   input RefClk;
   input DDC_SCL_I;
 
   wire DDC_SCL_I;
-  wire \Filter.sIn_q_reg ;
+  wire \Filter.cntPeriods_reg[1] ;
   wire RefClk;
   wire [0:0]SS;
   (* async_reg = "true" *) wire [1:0]oSyncStages;
@@ -6898,7 +7007,7 @@ module hdmi_in_dvi2rgb_0_0_SyncAsync_7
     .INIT(4'h6)) 
     \Filter.cntPeriods[3]_i_1__0 
        (.I0(oSyncStages[1]),
-        .I1(\Filter.sIn_q_reg ),
+        .I1(\Filter.cntPeriods_reg[1] ),
         .O(SS));
   (* ASYNC_REG *) 
   (* KEEP = "yes" *) 
@@ -7012,24 +7121,24 @@ endmodule
 (* ORIG_REF_NAME = "SyncAsync" *) 
 module hdmi_in_dvi2rgb_0_0_SyncAsync__parameterized0
    (D,
-    rMMCM_LckdRisingFlag_reg,
-    rMMCM_LckdFallingFlag_reg,
-    Q,
+    rMMCM_LckdRisingFlag0,
+    rMMCM_LckdFallingFlag0,
     RefClk,
-    \rMMCM_Reset_q_reg[0] );
+    \oSyncStages_reg[0]_0 ,
+    Q);
   output [0:0]D;
-  output rMMCM_LckdRisingFlag_reg;
-  output rMMCM_LckdFallingFlag_reg;
-  input [0:0]Q;
+  output rMMCM_LckdRisingFlag0;
+  output rMMCM_LckdFallingFlag0;
   input RefClk;
-  input [0:0]\rMMCM_Reset_q_reg[0] ;
+  input [0:0]\oSyncStages_reg[0]_0 ;
+  input [0:0]Q;
 
   wire [0:0]Q;
   wire RefClk;
   (* async_reg = "true" *) wire [1:0]oSyncStages;
-  wire rMMCM_LckdFallingFlag_reg;
-  wire rMMCM_LckdRisingFlag_reg;
-  wire [0:0]\rMMCM_Reset_q_reg[0] ;
+  wire [0:0]\oSyncStages_reg[0]_0 ;
+  wire rMMCM_LckdFallingFlag0;
+  wire rMMCM_LckdRisingFlag0;
 
   assign D[0] = oSyncStages[1];
   (* ASYNC_REG *) 
@@ -7039,7 +7148,7 @@ module hdmi_in_dvi2rgb_0_0_SyncAsync__parameterized0
     \oSyncStages_reg[0] 
        (.C(RefClk),
         .CE(1'b1),
-        .D(\rMMCM_Reset_q_reg[0] ),
+        .D(\oSyncStages_reg[0]_0 ),
         .Q(oSyncStages[0]),
         .R(1'b0));
   (* ASYNC_REG *) 
@@ -7057,30 +7166,30 @@ module hdmi_in_dvi2rgb_0_0_SyncAsync__parameterized0
     rMMCM_LckdFallingFlag_i_1
        (.I0(Q),
         .I1(oSyncStages[1]),
-        .O(rMMCM_LckdFallingFlag_reg));
+        .O(rMMCM_LckdFallingFlag0));
   LUT2 #(
     .INIT(4'h2)) 
     rMMCM_LckdRisingFlag_i_1
        (.I0(oSyncStages[1]),
         .I1(Q),
-        .O(rMMCM_LckdRisingFlag_reg));
+        .O(rMMCM_LckdRisingFlag0));
 endmodule
 
 (* ORIG_REF_NAME = "SyncAsync" *) 
 module hdmi_in_dvi2rgb_0_0_SyncAsync__parameterized1
    (out,
-    rMMCM_LckdRisingFlag_reg,
     \oSyncStages_reg[1]_0 ,
+    \oSyncStages_reg[1]_1 ,
     D);
   output [0:0]out;
-  input rMMCM_LckdRisingFlag_reg;
-  input [0:0]\oSyncStages_reg[1]_0 ;
+  input \oSyncStages_reg[1]_0 ;
+  input [0:0]\oSyncStages_reg[1]_1 ;
   input [0:0]D;
 
   wire [0:0]D;
   (* async_reg = "true" *) wire [1:0]oSyncStages;
-  wire [0:0]\oSyncStages_reg[1]_0 ;
-  wire rMMCM_LckdRisingFlag_reg;
+  wire \oSyncStages_reg[1]_0 ;
+  wire [0:0]\oSyncStages_reg[1]_1 ;
 
   assign out[0] = oSyncStages[1];
   (* ASYNC_REG *) 
@@ -7088,9 +7197,9 @@ module hdmi_in_dvi2rgb_0_0_SyncAsync__parameterized1
   FDCE #(
     .INIT(1'b0)) 
     \oSyncStages_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\oSyncStages_reg[1]_0 ),
         .CE(1'b1),
-        .CLR(\oSyncStages_reg[1]_0 ),
+        .CLR(\oSyncStages_reg[1]_1 ),
         .D(D),
         .Q(oSyncStages[0]));
   (* ASYNC_REG *) 
@@ -7098,9 +7207,9 @@ module hdmi_in_dvi2rgb_0_0_SyncAsync__parameterized1
   FDCE #(
     .INIT(1'b0)) 
     \oSyncStages_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\oSyncStages_reg[1]_0 ),
         .CE(1'b1),
-        .CLR(\oSyncStages_reg[1]_0 ),
+        .CLR(\oSyncStages_reg[1]_1 ),
         .D(oSyncStages[0]),
         .Q(oSyncStages[1]));
 endmodule
@@ -7108,18 +7217,18 @@ endmodule
 (* ORIG_REF_NAME = "SyncAsync" *) 
 module hdmi_in_dvi2rgb_0_0_SyncAsync__parameterized1_16
    (out,
-    rMMCM_LckdRisingFlag_reg,
+    \oSyncStages_reg[1]_0 ,
     AS,
     D);
   output [0:0]out;
-  input rMMCM_LckdRisingFlag_reg;
+  input \oSyncStages_reg[1]_0 ;
   input [0:0]AS;
   input [0:0]D;
 
   wire [0:0]AS;
   wire [0:0]D;
   (* async_reg = "true" *) wire [1:0]oSyncStages;
-  wire rMMCM_LckdRisingFlag_reg;
+  wire \oSyncStages_reg[1]_0 ;
 
   assign out[0] = oSyncStages[1];
   (* ASYNC_REG *) 
@@ -7127,7 +7236,7 @@ module hdmi_in_dvi2rgb_0_0_SyncAsync__parameterized1_16
   FDCE #(
     .INIT(1'b0)) 
     \oSyncStages_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\oSyncStages_reg[1]_0 ),
         .CE(1'b1),
         .CLR(AS),
         .D(D),
@@ -7137,7 +7246,7 @@ module hdmi_in_dvi2rgb_0_0_SyncAsync__parameterized1_16
   FDCE #(
     .INIT(1'b0)) 
     \oSyncStages_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\oSyncStages_reg[1]_0 ),
         .CE(1'b1),
         .CLR(AS),
         .D(oSyncStages[0]),
@@ -7147,18 +7256,18 @@ endmodule
 (* ORIG_REF_NAME = "SyncAsync" *) 
 module hdmi_in_dvi2rgb_0_0_SyncAsync__parameterized1_23
    (out,
-    rMMCM_LckdRisingFlag_reg,
+    \oSyncStages_reg[1]_0 ,
     AS,
     D);
   output [0:0]out;
-  input rMMCM_LckdRisingFlag_reg;
+  input \oSyncStages_reg[1]_0 ;
   input [0:0]AS;
   input [0:0]D;
 
   wire [0:0]AS;
   wire [0:0]D;
   (* async_reg = "true" *) wire [1:0]oSyncStages;
-  wire rMMCM_LckdRisingFlag_reg;
+  wire \oSyncStages_reg[1]_0 ;
 
   assign out[0] = oSyncStages[1];
   (* ASYNC_REG *) 
@@ -7166,7 +7275,7 @@ module hdmi_in_dvi2rgb_0_0_SyncAsync__parameterized1_23
   FDCE #(
     .INIT(1'b0)) 
     \oSyncStages_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\oSyncStages_reg[1]_0 ),
         .CE(1'b1),
         .CLR(AS),
         .D(D),
@@ -7176,7 +7285,7 @@ module hdmi_in_dvi2rgb_0_0_SyncAsync__parameterized1_23
   FDCE #(
     .INIT(1'b0)) 
     \oSyncStages_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(\oSyncStages_reg[1]_0 ),
         .CE(1'b1),
         .CLR(AS),
         .D(oSyncStages[0]),
@@ -7186,89 +7295,111 @@ endmodule
 (* ORIG_REF_NAME = "SyncBase" *) 
 module hdmi_in_dvi2rgb_0_0_SyncBase
    (out,
-    iIn_q_reg_0,
-    iIn_q_reg_1,
-    iIn_q_reg_2,
-    iIn_q_reg_3,
+    rTimeoutCnt_reg_14_sp_1,
+    rTimeoutCnt_reg_21_sp_1,
+    rTimeoutCnt_reg_3_sp_1,
+    rTimeoutCnt_reg_20_sp_1,
+    rTimeoutCnt_reg_8_sp_1,
+    rTimeoutCnt_reg_10_sp_1,
     RefClk,
     \oSyncStages_reg[1] ,
     rTimeoutCnt_reg,
-    rMMCM_LckdRisingFlag_reg);
+    \oSyncStages_reg[1]_0 );
   output [0:0]out;
-  output iIn_q_reg_0;
-  output iIn_q_reg_1;
-  output iIn_q_reg_2;
-  output iIn_q_reg_3;
+  output rTimeoutCnt_reg_14_sp_1;
+  output rTimeoutCnt_reg_21_sp_1;
+  output rTimeoutCnt_reg_3_sp_1;
+  output rTimeoutCnt_reg_20_sp_1;
+  output rTimeoutCnt_reg_8_sp_1;
+  output rTimeoutCnt_reg_10_sp_1;
   input RefClk;
   input [0:0]\oSyncStages_reg[1] ;
   input [23:0]rTimeoutCnt_reg;
-  input rMMCM_LckdRisingFlag_reg;
+  input \oSyncStages_reg[1]_0 ;
 
   wire RefClk;
   wire iIn_q;
-  wire iIn_q_reg_0;
-  wire iIn_q_reg_1;
-  wire iIn_q_reg_2;
-  wire iIn_q_reg_3;
   wire [0:0]\oSyncStages_reg[1] ;
+  wire \oSyncStages_reg[1]_0 ;
   wire [0:0]out;
   wire p_0_out;
-  wire rMMCM_LckdRisingFlag_reg;
   wire [23:0]rTimeoutCnt_reg;
+  wire rTimeoutCnt_reg_10_sn_1;
+  wire rTimeoutCnt_reg_14_sn_1;
+  wire rTimeoutCnt_reg_20_sn_1;
+  wire rTimeoutCnt_reg_21_sn_1;
+  wire rTimeoutCnt_reg_3_sn_1;
+  wire rTimeoutCnt_reg_8_sn_1;
 
+  assign rTimeoutCnt_reg_10_sp_1 = rTimeoutCnt_reg_10_sn_1;
+  assign rTimeoutCnt_reg_14_sp_1 = rTimeoutCnt_reg_14_sn_1;
+  assign rTimeoutCnt_reg_20_sp_1 = rTimeoutCnt_reg_20_sn_1;
+  assign rTimeoutCnt_reg_21_sp_1 = rTimeoutCnt_reg_21_sn_1;
+  assign rTimeoutCnt_reg_3_sp_1 = rTimeoutCnt_reg_3_sn_1;
+  assign rTimeoutCnt_reg_8_sp_1 = rTimeoutCnt_reg_8_sn_1;
   hdmi_in_dvi2rgb_0_0_SyncAsync__parameterized1 SyncAsyncx
        (.D(iIn_q),
-        .\oSyncStages_reg[1]_0 (\oSyncStages_reg[1] ),
-        .out(out),
-        .rMMCM_LckdRisingFlag_reg(rMMCM_LckdRisingFlag_reg));
-  LUT4 #(
-    .INIT(16'h4000)) 
-    iIn_q_i_1__2
-       (.I0(iIn_q_reg_0),
-        .I1(iIn_q_reg_1),
-        .I2(iIn_q_reg_2),
-        .I3(iIn_q_reg_3),
-        .O(p_0_out));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFBF)) 
-    iIn_q_i_2__2
-       (.I0(rTimeoutCnt_reg[7]),
-        .I1(rTimeoutCnt_reg[20]),
-        .I2(rTimeoutCnt_reg[23]),
-        .I3(rTimeoutCnt_reg[13]),
-        .I4(rTimeoutCnt_reg[8]),
-        .I5(rTimeoutCnt_reg[11]),
-        .O(iIn_q_reg_0));
+        .\oSyncStages_reg[1]_0 (\oSyncStages_reg[1]_0 ),
+        .\oSyncStages_reg[1]_1 (\oSyncStages_reg[1] ),
+        .out(out));
   LUT6 #(
     .INIT(64'h0000000000000001)) 
+    iIn_q_i_1__2
+       (.I0(rTimeoutCnt_reg_14_sn_1),
+        .I1(rTimeoutCnt_reg_21_sn_1),
+        .I2(rTimeoutCnt_reg_3_sn_1),
+        .I3(rTimeoutCnt_reg_20_sn_1),
+        .I4(rTimeoutCnt_reg_8_sn_1),
+        .I5(rTimeoutCnt_reg_10_sn_1),
+        .O(p_0_out));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    iIn_q_i_2__2
+       (.I0(rTimeoutCnt_reg[14]),
+        .I1(rTimeoutCnt_reg[16]),
+        .I2(rTimeoutCnt_reg[11]),
+        .I3(rTimeoutCnt_reg[13]),
+        .O(rTimeoutCnt_reg_14_sn_1));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
     iIn_q_i_3
-       (.I0(rTimeoutCnt_reg[22]),
-        .I1(rTimeoutCnt_reg[18]),
-        .I2(rTimeoutCnt_reg[21]),
-        .I3(rTimeoutCnt_reg[14]),
-        .I4(rTimeoutCnt_reg[16]),
-        .I5(rTimeoutCnt_reg[17]),
-        .O(iIn_q_reg_1));
-  LUT6 #(
-    .INIT(64'h8000000000000000)) 
+       (.I0(rTimeoutCnt_reg[21]),
+        .I1(rTimeoutCnt_reg[22]),
+        .I2(rTimeoutCnt_reg[17]),
+        .I3(rTimeoutCnt_reg[18]),
+        .O(rTimeoutCnt_reg_21_sn_1));
+  LUT4 #(
+    .INIT(16'h7FFF)) 
     iIn_q_i_4
-       (.I0(rTimeoutCnt_reg[12]),
-        .I1(rTimeoutCnt_reg[15]),
-        .I2(rTimeoutCnt_reg[19]),
-        .I3(rTimeoutCnt_reg[10]),
-        .I4(rTimeoutCnt_reg[6]),
-        .I5(rTimeoutCnt_reg[9]),
-        .O(iIn_q_reg_2));
-  LUT6 #(
-    .INIT(64'h8000000000000000)) 
-    iIn_q_i_5
        (.I0(rTimeoutCnt_reg[3]),
-        .I1(rTimeoutCnt_reg[4]),
-        .I2(rTimeoutCnt_reg[5]),
+        .I1(rTimeoutCnt_reg[15]),
+        .I2(rTimeoutCnt_reg[1]),
         .I3(rTimeoutCnt_reg[2]),
-        .I4(rTimeoutCnt_reg[0]),
-        .I5(rTimeoutCnt_reg[1]),
-        .O(iIn_q_reg_3));
+        .O(rTimeoutCnt_reg_3_sn_1));
+  LUT4 #(
+    .INIT(16'h7FFF)) 
+    iIn_q_i_5
+       (.I0(rTimeoutCnt_reg[20]),
+        .I1(rTimeoutCnt_reg[19]),
+        .I2(rTimeoutCnt_reg[23]),
+        .I3(rTimeoutCnt_reg[0]),
+        .O(rTimeoutCnt_reg_20_sn_1));
+  LUT4 #(
+    .INIT(16'hEFFF)) 
+    iIn_q_i_6
+       (.I0(rTimeoutCnt_reg[8]),
+        .I1(rTimeoutCnt_reg[7]),
+        .I2(rTimeoutCnt_reg[12]),
+        .I3(rTimeoutCnt_reg[9]),
+        .O(rTimeoutCnt_reg_8_sn_1));
+  LUT4 #(
+    .INIT(16'h7FFF)) 
+    iIn_q_i_7
+       (.I0(rTimeoutCnt_reg[10]),
+        .I1(rTimeoutCnt_reg[6]),
+        .I2(rTimeoutCnt_reg[4]),
+        .I3(rTimeoutCnt_reg[5]),
+        .O(rTimeoutCnt_reg_10_sn_1));
   FDCE iIn_q_reg
        (.C(RefClk),
         .CE(1'b1),
@@ -7280,89 +7411,111 @@ endmodule
 (* ORIG_REF_NAME = "SyncBase" *) 
 module hdmi_in_dvi2rgb_0_0_SyncBase_13
    (out,
-    iIn_q_reg_0,
-    iIn_q_reg_1,
-    iIn_q_reg_2,
-    iIn_q_reg_3,
+    rTimeoutCnt_reg_14_sp_1,
+    rTimeoutCnt_reg_21_sp_1,
+    rTimeoutCnt_reg_3_sp_1,
+    rTimeoutCnt_reg_20_sp_1,
+    rTimeoutCnt_reg_8_sp_1,
+    rTimeoutCnt_reg_10_sp_1,
     RefClk,
     AS,
     rTimeoutCnt_reg,
-    rMMCM_LckdRisingFlag_reg);
+    \oSyncStages_reg[1] );
   output [0:0]out;
-  output iIn_q_reg_0;
-  output iIn_q_reg_1;
-  output iIn_q_reg_2;
-  output iIn_q_reg_3;
+  output rTimeoutCnt_reg_14_sp_1;
+  output rTimeoutCnt_reg_21_sp_1;
+  output rTimeoutCnt_reg_3_sp_1;
+  output rTimeoutCnt_reg_20_sp_1;
+  output rTimeoutCnt_reg_8_sp_1;
+  output rTimeoutCnt_reg_10_sp_1;
   input RefClk;
   input [0:0]AS;
   input [23:0]rTimeoutCnt_reg;
-  input rMMCM_LckdRisingFlag_reg;
+  input \oSyncStages_reg[1] ;
 
   wire [0:0]AS;
   wire RefClk;
   wire iIn_q_i_1__3_n_0;
-  wire iIn_q_reg_0;
-  wire iIn_q_reg_1;
-  wire iIn_q_reg_2;
-  wire iIn_q_reg_3;
   wire iIn_q_reg_n_0;
+  wire \oSyncStages_reg[1] ;
   wire [0:0]out;
-  wire rMMCM_LckdRisingFlag_reg;
   wire [23:0]rTimeoutCnt_reg;
+  wire rTimeoutCnt_reg_10_sn_1;
+  wire rTimeoutCnt_reg_14_sn_1;
+  wire rTimeoutCnt_reg_20_sn_1;
+  wire rTimeoutCnt_reg_21_sn_1;
+  wire rTimeoutCnt_reg_3_sn_1;
+  wire rTimeoutCnt_reg_8_sn_1;
 
+  assign rTimeoutCnt_reg_10_sp_1 = rTimeoutCnt_reg_10_sn_1;
+  assign rTimeoutCnt_reg_14_sp_1 = rTimeoutCnt_reg_14_sn_1;
+  assign rTimeoutCnt_reg_20_sp_1 = rTimeoutCnt_reg_20_sn_1;
+  assign rTimeoutCnt_reg_21_sp_1 = rTimeoutCnt_reg_21_sn_1;
+  assign rTimeoutCnt_reg_3_sp_1 = rTimeoutCnt_reg_3_sn_1;
+  assign rTimeoutCnt_reg_8_sp_1 = rTimeoutCnt_reg_8_sn_1;
   hdmi_in_dvi2rgb_0_0_SyncAsync__parameterized1_16 SyncAsyncx
        (.AS(AS),
         .D(iIn_q_reg_n_0),
-        .out(out),
-        .rMMCM_LckdRisingFlag_reg(rMMCM_LckdRisingFlag_reg));
-  LUT4 #(
-    .INIT(16'h4000)) 
-    iIn_q_i_1__3
-       (.I0(iIn_q_reg_0),
-        .I1(iIn_q_reg_1),
-        .I2(iIn_q_reg_2),
-        .I3(iIn_q_reg_3),
-        .O(iIn_q_i_1__3_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFBF)) 
-    iIn_q_i_2__3
-       (.I0(rTimeoutCnt_reg[7]),
-        .I1(rTimeoutCnt_reg[20]),
-        .I2(rTimeoutCnt_reg[23]),
-        .I3(rTimeoutCnt_reg[13]),
-        .I4(rTimeoutCnt_reg[8]),
-        .I5(rTimeoutCnt_reg[11]),
-        .O(iIn_q_reg_0));
+        .\oSyncStages_reg[1]_0 (\oSyncStages_reg[1] ),
+        .out(out));
   LUT6 #(
     .INIT(64'h0000000000000001)) 
+    iIn_q_i_1__3
+       (.I0(rTimeoutCnt_reg_14_sn_1),
+        .I1(rTimeoutCnt_reg_21_sn_1),
+        .I2(rTimeoutCnt_reg_3_sn_1),
+        .I3(rTimeoutCnt_reg_20_sn_1),
+        .I4(rTimeoutCnt_reg_8_sn_1),
+        .I5(rTimeoutCnt_reg_10_sn_1),
+        .O(iIn_q_i_1__3_n_0));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    iIn_q_i_2__3
+       (.I0(rTimeoutCnt_reg[14]),
+        .I1(rTimeoutCnt_reg[16]),
+        .I2(rTimeoutCnt_reg[11]),
+        .I3(rTimeoutCnt_reg[13]),
+        .O(rTimeoutCnt_reg_14_sn_1));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
     iIn_q_i_3__0
-       (.I0(rTimeoutCnt_reg[22]),
-        .I1(rTimeoutCnt_reg[18]),
-        .I2(rTimeoutCnt_reg[21]),
-        .I3(rTimeoutCnt_reg[14]),
-        .I4(rTimeoutCnt_reg[16]),
-        .I5(rTimeoutCnt_reg[17]),
-        .O(iIn_q_reg_1));
-  LUT6 #(
-    .INIT(64'h8000000000000000)) 
+       (.I0(rTimeoutCnt_reg[21]),
+        .I1(rTimeoutCnt_reg[22]),
+        .I2(rTimeoutCnt_reg[17]),
+        .I3(rTimeoutCnt_reg[18]),
+        .O(rTimeoutCnt_reg_21_sn_1));
+  LUT4 #(
+    .INIT(16'h7FFF)) 
     iIn_q_i_4__0
-       (.I0(rTimeoutCnt_reg[12]),
-        .I1(rTimeoutCnt_reg[15]),
-        .I2(rTimeoutCnt_reg[19]),
-        .I3(rTimeoutCnt_reg[10]),
-        .I4(rTimeoutCnt_reg[6]),
-        .I5(rTimeoutCnt_reg[9]),
-        .O(iIn_q_reg_2));
-  LUT6 #(
-    .INIT(64'h8000000000000000)) 
-    iIn_q_i_5__0
        (.I0(rTimeoutCnt_reg[3]),
-        .I1(rTimeoutCnt_reg[4]),
-        .I2(rTimeoutCnt_reg[5]),
+        .I1(rTimeoutCnt_reg[15]),
+        .I2(rTimeoutCnt_reg[1]),
         .I3(rTimeoutCnt_reg[2]),
-        .I4(rTimeoutCnt_reg[0]),
-        .I5(rTimeoutCnt_reg[1]),
-        .O(iIn_q_reg_3));
+        .O(rTimeoutCnt_reg_3_sn_1));
+  LUT4 #(
+    .INIT(16'h7FFF)) 
+    iIn_q_i_5__0
+       (.I0(rTimeoutCnt_reg[20]),
+        .I1(rTimeoutCnt_reg[19]),
+        .I2(rTimeoutCnt_reg[23]),
+        .I3(rTimeoutCnt_reg[0]),
+        .O(rTimeoutCnt_reg_20_sn_1));
+  LUT4 #(
+    .INIT(16'hEFFF)) 
+    iIn_q_i_6__0
+       (.I0(rTimeoutCnt_reg[8]),
+        .I1(rTimeoutCnt_reg[7]),
+        .I2(rTimeoutCnt_reg[12]),
+        .I3(rTimeoutCnt_reg[9]),
+        .O(rTimeoutCnt_reg_8_sn_1));
+  LUT4 #(
+    .INIT(16'h7FFF)) 
+    iIn_q_i_7__0
+       (.I0(rTimeoutCnt_reg[10]),
+        .I1(rTimeoutCnt_reg[6]),
+        .I2(rTimeoutCnt_reg[4]),
+        .I3(rTimeoutCnt_reg[5]),
+        .O(rTimeoutCnt_reg_10_sn_1));
   FDCE iIn_q_reg
        (.C(RefClk),
         .CE(1'b1),
@@ -7374,89 +7527,111 @@ endmodule
 (* ORIG_REF_NAME = "SyncBase" *) 
 module hdmi_in_dvi2rgb_0_0_SyncBase_20
    (out,
-    iIn_q_reg_0,
-    iIn_q_reg_1,
-    iIn_q_reg_2,
-    iIn_q_reg_3,
+    rTimeoutCnt_reg_14_sp_1,
+    rTimeoutCnt_reg_21_sp_1,
+    rTimeoutCnt_reg_3_sp_1,
+    rTimeoutCnt_reg_20_sp_1,
+    rTimeoutCnt_reg_8_sp_1,
+    rTimeoutCnt_reg_10_sp_1,
     RefClk,
     AS,
     rTimeoutCnt_reg,
-    rMMCM_LckdRisingFlag_reg);
+    \oSyncStages_reg[1] );
   output [0:0]out;
-  output iIn_q_reg_0;
-  output iIn_q_reg_1;
-  output iIn_q_reg_2;
-  output iIn_q_reg_3;
+  output rTimeoutCnt_reg_14_sp_1;
+  output rTimeoutCnt_reg_21_sp_1;
+  output rTimeoutCnt_reg_3_sp_1;
+  output rTimeoutCnt_reg_20_sp_1;
+  output rTimeoutCnt_reg_8_sp_1;
+  output rTimeoutCnt_reg_10_sp_1;
   input RefClk;
   input [0:0]AS;
   input [23:0]rTimeoutCnt_reg;
-  input rMMCM_LckdRisingFlag_reg;
+  input \oSyncStages_reg[1] ;
 
   wire [0:0]AS;
   wire RefClk;
   wire iIn_q_i_1__4_n_0;
-  wire iIn_q_reg_0;
-  wire iIn_q_reg_1;
-  wire iIn_q_reg_2;
-  wire iIn_q_reg_3;
   wire iIn_q_reg_n_0;
+  wire \oSyncStages_reg[1] ;
   wire [0:0]out;
-  wire rMMCM_LckdRisingFlag_reg;
   wire [23:0]rTimeoutCnt_reg;
+  wire rTimeoutCnt_reg_10_sn_1;
+  wire rTimeoutCnt_reg_14_sn_1;
+  wire rTimeoutCnt_reg_20_sn_1;
+  wire rTimeoutCnt_reg_21_sn_1;
+  wire rTimeoutCnt_reg_3_sn_1;
+  wire rTimeoutCnt_reg_8_sn_1;
 
+  assign rTimeoutCnt_reg_10_sp_1 = rTimeoutCnt_reg_10_sn_1;
+  assign rTimeoutCnt_reg_14_sp_1 = rTimeoutCnt_reg_14_sn_1;
+  assign rTimeoutCnt_reg_20_sp_1 = rTimeoutCnt_reg_20_sn_1;
+  assign rTimeoutCnt_reg_21_sp_1 = rTimeoutCnt_reg_21_sn_1;
+  assign rTimeoutCnt_reg_3_sp_1 = rTimeoutCnt_reg_3_sn_1;
+  assign rTimeoutCnt_reg_8_sp_1 = rTimeoutCnt_reg_8_sn_1;
   hdmi_in_dvi2rgb_0_0_SyncAsync__parameterized1_23 SyncAsyncx
        (.AS(AS),
         .D(iIn_q_reg_n_0),
-        .out(out),
-        .rMMCM_LckdRisingFlag_reg(rMMCM_LckdRisingFlag_reg));
-  LUT4 #(
-    .INIT(16'h4000)) 
-    iIn_q_i_1__4
-       (.I0(iIn_q_reg_0),
-        .I1(iIn_q_reg_1),
-        .I2(iIn_q_reg_2),
-        .I3(iIn_q_reg_3),
-        .O(iIn_q_i_1__4_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFBF)) 
-    iIn_q_i_2__4
-       (.I0(rTimeoutCnt_reg[7]),
-        .I1(rTimeoutCnt_reg[20]),
-        .I2(rTimeoutCnt_reg[23]),
-        .I3(rTimeoutCnt_reg[13]),
-        .I4(rTimeoutCnt_reg[8]),
-        .I5(rTimeoutCnt_reg[11]),
-        .O(iIn_q_reg_0));
+        .\oSyncStages_reg[1]_0 (\oSyncStages_reg[1] ),
+        .out(out));
   LUT6 #(
     .INIT(64'h0000000000000001)) 
+    iIn_q_i_1__4
+       (.I0(rTimeoutCnt_reg_14_sn_1),
+        .I1(rTimeoutCnt_reg_21_sn_1),
+        .I2(rTimeoutCnt_reg_3_sn_1),
+        .I3(rTimeoutCnt_reg_20_sn_1),
+        .I4(rTimeoutCnt_reg_8_sn_1),
+        .I5(rTimeoutCnt_reg_10_sn_1),
+        .O(iIn_q_i_1__4_n_0));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    iIn_q_i_2__4
+       (.I0(rTimeoutCnt_reg[14]),
+        .I1(rTimeoutCnt_reg[16]),
+        .I2(rTimeoutCnt_reg[11]),
+        .I3(rTimeoutCnt_reg[13]),
+        .O(rTimeoutCnt_reg_14_sn_1));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
     iIn_q_i_3__1
-       (.I0(rTimeoutCnt_reg[22]),
-        .I1(rTimeoutCnt_reg[18]),
-        .I2(rTimeoutCnt_reg[21]),
-        .I3(rTimeoutCnt_reg[14]),
-        .I4(rTimeoutCnt_reg[16]),
-        .I5(rTimeoutCnt_reg[17]),
-        .O(iIn_q_reg_1));
-  LUT6 #(
-    .INIT(64'h8000000000000000)) 
+       (.I0(rTimeoutCnt_reg[21]),
+        .I1(rTimeoutCnt_reg[22]),
+        .I2(rTimeoutCnt_reg[17]),
+        .I3(rTimeoutCnt_reg[18]),
+        .O(rTimeoutCnt_reg_21_sn_1));
+  LUT4 #(
+    .INIT(16'h7FFF)) 
     iIn_q_i_4__1
-       (.I0(rTimeoutCnt_reg[12]),
-        .I1(rTimeoutCnt_reg[15]),
-        .I2(rTimeoutCnt_reg[19]),
-        .I3(rTimeoutCnt_reg[10]),
-        .I4(rTimeoutCnt_reg[6]),
-        .I5(rTimeoutCnt_reg[9]),
-        .O(iIn_q_reg_2));
-  LUT6 #(
-    .INIT(64'h8000000000000000)) 
-    iIn_q_i_5__1
        (.I0(rTimeoutCnt_reg[3]),
-        .I1(rTimeoutCnt_reg[4]),
-        .I2(rTimeoutCnt_reg[5]),
+        .I1(rTimeoutCnt_reg[15]),
+        .I2(rTimeoutCnt_reg[1]),
         .I3(rTimeoutCnt_reg[2]),
-        .I4(rTimeoutCnt_reg[0]),
-        .I5(rTimeoutCnt_reg[1]),
-        .O(iIn_q_reg_3));
+        .O(rTimeoutCnt_reg_3_sn_1));
+  LUT4 #(
+    .INIT(16'h7FFF)) 
+    iIn_q_i_5__1
+       (.I0(rTimeoutCnt_reg[20]),
+        .I1(rTimeoutCnt_reg[19]),
+        .I2(rTimeoutCnt_reg[23]),
+        .I3(rTimeoutCnt_reg[0]),
+        .O(rTimeoutCnt_reg_20_sn_1));
+  LUT4 #(
+    .INIT(16'hEFFF)) 
+    iIn_q_i_6__1
+       (.I0(rTimeoutCnt_reg[8]),
+        .I1(rTimeoutCnt_reg[7]),
+        .I2(rTimeoutCnt_reg[12]),
+        .I3(rTimeoutCnt_reg[9]),
+        .O(rTimeoutCnt_reg_8_sn_1));
+  LUT4 #(
+    .INIT(16'h7FFF)) 
+    iIn_q_i_7__1
+       (.I0(rTimeoutCnt_reg[10]),
+        .I1(rTimeoutCnt_reg[6]),
+        .I2(rTimeoutCnt_reg[4]),
+        .I3(rTimeoutCnt_reg[5]),
+        .O(rTimeoutCnt_reg_10_sn_1));
   FDCE iIn_q_reg
        (.C(RefClk),
         .CE(1'b1),
@@ -7468,22 +7643,22 @@ endmodule
 (* ORIG_REF_NAME = "SyncBase" *) 
 module hdmi_in_dvi2rgb_0_0_SyncBase__parameterized0
    (out,
-    \pState_reg[3] ,
-    rMMCM_LckdRisingFlag_reg,
+    iIn_q_reg_0,
+    iIn_q_reg_1,
     \oSyncStages_reg[1] ,
     RefClk);
   output [0:0]out;
-  input \pState_reg[3] ;
-  input rMMCM_LckdRisingFlag_reg;
+  input iIn_q_reg_0;
+  input iIn_q_reg_1;
   input [0:0]\oSyncStages_reg[1] ;
   input RefClk;
 
   wire RefClk;
+  wire iIn_q_reg_0;
+  wire iIn_q_reg_1;
   wire iIn_q_reg_n_0;
   wire [0:0]\oSyncStages_reg[1] ;
   wire [0:0]out;
-  wire \pState_reg[3] ;
-  wire rMMCM_LckdRisingFlag_reg;
 
   hdmi_in_dvi2rgb_0_0_SyncAsync_9 SyncAsyncx
        (.D(iIn_q_reg_n_0),
@@ -7491,9 +7666,9 @@ module hdmi_in_dvi2rgb_0_0_SyncBase__parameterized0
         .\oSyncStages_reg[1]_0 (\oSyncStages_reg[1] ),
         .out(out));
   FDPE iIn_q_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg_1),
         .CE(1'b1),
-        .D(\pState_reg[3] ),
+        .D(iIn_q_reg_0),
         .PRE(\oSyncStages_reg[1] ),
         .Q(iIn_q_reg_n_0));
 endmodule
@@ -7501,22 +7676,22 @@ endmodule
 (* ORIG_REF_NAME = "SyncBase" *) 
 module hdmi_in_dvi2rgb_0_0_SyncBase__parameterized0_14
    (out,
-    \pState_reg[3] ,
-    rMMCM_LckdRisingFlag_reg,
+    iIn_q_reg_0,
+    iIn_q_reg_1,
     AS,
     RefClk);
   output [0:0]out;
-  input \pState_reg[3] ;
-  input rMMCM_LckdRisingFlag_reg;
+  input iIn_q_reg_0;
+  input iIn_q_reg_1;
   input [0:0]AS;
   input RefClk;
 
   wire [0:0]AS;
   wire RefClk;
+  wire iIn_q_reg_0;
+  wire iIn_q_reg_1;
   wire iIn_q_reg_n_0;
   wire [0:0]out;
-  wire \pState_reg[3] ;
-  wire rMMCM_LckdRisingFlag_reg;
 
   hdmi_in_dvi2rgb_0_0_SyncAsync_15 SyncAsyncx
        (.AS(AS),
@@ -7524,9 +7699,9 @@ module hdmi_in_dvi2rgb_0_0_SyncBase__parameterized0_14
         .RefClk(RefClk),
         .out(out));
   FDPE iIn_q_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg_1),
         .CE(1'b1),
-        .D(\pState_reg[3] ),
+        .D(iIn_q_reg_0),
         .PRE(AS),
         .Q(iIn_q_reg_n_0));
 endmodule
@@ -7534,22 +7709,22 @@ endmodule
 (* ORIG_REF_NAME = "SyncBase" *) 
 module hdmi_in_dvi2rgb_0_0_SyncBase__parameterized0_21
    (out,
-    \pState_reg[3] ,
-    rMMCM_LckdRisingFlag_reg,
+    iIn_q_reg_0,
+    iIn_q_reg_1,
     AS,
     RefClk);
   output [0:0]out;
-  input \pState_reg[3] ;
-  input rMMCM_LckdRisingFlag_reg;
+  input iIn_q_reg_0;
+  input iIn_q_reg_1;
   input [0:0]AS;
   input RefClk;
 
   wire [0:0]AS;
   wire RefClk;
+  wire iIn_q_reg_0;
+  wire iIn_q_reg_1;
   wire iIn_q_reg_n_0;
   wire [0:0]out;
-  wire \pState_reg[3] ;
-  wire rMMCM_LckdRisingFlag_reg;
 
   hdmi_in_dvi2rgb_0_0_SyncAsync_22 SyncAsyncx
        (.AS(AS),
@@ -7557,25 +7732,25 @@ module hdmi_in_dvi2rgb_0_0_SyncBase__parameterized0_21
         .RefClk(RefClk),
         .out(out));
   FDPE iIn_q_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg_1),
         .CE(1'b1),
-        .D(\pState_reg[3] ),
+        .D(iIn_q_reg_0),
         .PRE(AS),
         .Q(iIn_q_reg_n_0));
 endmodule
 
 (* ORIG_REF_NAME = "TMDS_Clocking" *) 
 module hdmi_in_dvi2rgb_0_0_TMDS_Clocking
-   (\pDataQ_reg[8] ,
-    PixelClk,
+   (\rMMCM_Reset_q_reg[0]_0 ,
+    rMMCM_LckdRisingFlag_reg_0,
     aPixelClkLckd,
     in0,
     RefClk,
     TMDS_Clk_p,
     TMDS_Clk_n,
     aRst_n);
-  output \pDataQ_reg[8] ;
-  output PixelClk;
+  output \rMMCM_Reset_q_reg[0]_0 ;
+  output rMMCM_LckdRisingFlag_reg_0;
   output aPixelClkLckd;
   output in0;
   input RefClk;
@@ -7588,9 +7763,6 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Clocking
   wire CLK_OUT_5x_hdmi_clk;
   wire CLR;
   wire LockLostReset_n_1;
-  wire MMCM_LockSync_n_1;
-  wire MMCM_LockSync_n_2;
-  wire PixelClk;
   wire RST;
   wire RefClk;
   wire TMDS_Clk_n;
@@ -7600,7 +7772,6 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Clocking
   wire aPixelClkLckd;
   wire aRst_n;
   wire in0;
-  wire \pDataQ_reg[8] ;
   wire p_0_in;
   wire [0:0]rDlyRstCnt0;
   wire \rDlyRstCnt[1]_i_1_n_0 ;
@@ -7611,10 +7782,14 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Clocking
   wire [4:0]rDlyRstCnt_reg__0;
   wire rLockLostRst;
   wire rMMCM_LckdFallingFlag;
+  wire rMMCM_LckdFallingFlag0;
+  wire rMMCM_LckdRisingFlag0;
+  wire rMMCM_LckdRisingFlag_reg_0;
   wire rMMCM_Locked;
   wire \rMMCM_Locked_q_reg_n_0_[0] ;
   wire [1:0]rMMCM_Reset_q;
   wire \rMMCM_Reset_q[0]_i_1_n_0 ;
+  wire \rMMCM_Reset_q_reg[0]_0 ;
   wire rRdyRst;
   wire NLW_DVI_ClkGenerator_CLKFBOUTB_UNCONNECTED;
   wire NLW_DVI_ClkGenerator_CLKFBSTOPPED_UNCONNECTED;
@@ -7743,9 +7918,9 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Clocking
        (.D(rMMCM_Locked),
         .Q(p_0_in),
         .RefClk(RefClk),
-        .rMMCM_LckdFallingFlag_reg(MMCM_LockSync_n_2),
-        .rMMCM_LckdRisingFlag_reg(MMCM_LockSync_n_1),
-        .\rMMCM_Reset_q_reg[0] (aMMCM_Locked));
+        .\oSyncStages_reg[0]_0 (aMMCM_Locked),
+        .rMMCM_LckdFallingFlag0(rMMCM_LckdFallingFlag0),
+        .rMMCM_LckdRisingFlag0(rMMCM_LckdRisingFlag0));
   (* box_type = "PRIMITIVE" *) 
   BUFR #(
     .BUFR_DIVIDE("5"),
@@ -7754,7 +7929,7 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Clocking
        (.CE(1'b1),
         .CLR(CLR),
         .I(CLK_OUT_5x_hdmi_clk),
-        .O(PixelClk));
+        .O(rMMCM_LckdRisingFlag_reg_0));
   hdmi_in_dvi2rgb_0_0_ResetBridge_3 RdyLostReset
        (.RefClk(RefClk),
         .aDlyLckd(aDlyLckd),
@@ -7762,7 +7937,7 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Clocking
   (* box_type = "PRIMITIVE" *) 
   BUFIO SerialClkBuffer
        (.I(CLK_OUT_5x_hdmi_clk),
-        .O(\pDataQ_reg[8] ));
+        .O(\rMMCM_Reset_q_reg[0]_0 ));
   FDCE aLocked_reg
        (.C(RefClk),
         .CE(1'b1),
@@ -7779,14 +7954,14 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Clocking
     \rDlyRstCnt[0]_i_1 
        (.I0(rDlyRstCnt_reg__0[0]),
         .O(rDlyRstCnt0));
-  (* SOFT_HLUTNM = "soft_lutpair95" *) 
+  (* SOFT_HLUTNM = "soft_lutpair99" *) 
   LUT2 #(
     .INIT(4'h9)) 
     \rDlyRstCnt[1]_i_1 
        (.I0(rDlyRstCnt_reg__0[0]),
         .I1(rDlyRstCnt_reg__0[1]),
         .O(\rDlyRstCnt[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair95" *) 
+  (* SOFT_HLUTNM = "soft_lutpair99" *) 
   LUT3 #(
     .INIT(8'hE1)) 
     \rDlyRstCnt[2]_i_1 
@@ -7794,7 +7969,7 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Clocking
         .I1(rDlyRstCnt_reg__0[0]),
         .I2(rDlyRstCnt_reg__0[2]),
         .O(\rDlyRstCnt[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair94" *) 
+  (* SOFT_HLUTNM = "soft_lutpair98" *) 
   LUT4 #(
     .INIT(16'hFE01)) 
     \rDlyRstCnt[3]_i_1 
@@ -7812,7 +7987,7 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Clocking
         .I3(rDlyRstCnt_reg__0[3]),
         .I4(rDlyRstCnt_reg__0[4]),
         .O(\rDlyRstCnt[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair94" *) 
+  (* SOFT_HLUTNM = "soft_lutpair98" *) 
   LUT5 #(
     .INIT(32'hFFFE0001)) 
     \rDlyRstCnt[4]_i_2 
@@ -7871,13 +8046,13 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Clocking
   FDRE rMMCM_LckdFallingFlag_reg
        (.C(RefClk),
         .CE(1'b1),
-        .D(MMCM_LockSync_n_2),
+        .D(rMMCM_LckdFallingFlag0),
         .Q(rMMCM_LckdFallingFlag),
         .R(1'b0));
   FDRE rMMCM_LckdRisingFlag_reg
        (.C(RefClk),
         .CE(1'b1),
-        .D(MMCM_LockSync_n_1),
+        .D(rMMCM_LckdRisingFlag0),
         .Q(CLR),
         .R(1'b0));
   FDRE \rMMCM_Locked_q_reg[0] 
@@ -7914,85 +8089,87 @@ endmodule
 
 (* ORIG_REF_NAME = "TMDS_Decoder" *) 
 module hdmi_in_dvi2rgb_0_0_TMDS_Decoder
-   (vid_pVDE,
+   (pAllVld,
+    pAllVldBgnFlag,
+    vid_pVDE,
     pVld_0,
     pRdy_0,
     vid_pHSync,
     vid_pVSync,
-    pAllVld,
-    \pDataIn_reg[7]_0 ,
     vid_pData,
     TMDS_Data_p,
     TMDS_Data_n,
-    rMMCM_LckdRisingFlag_reg,
-    \rMMCM_Reset_q_reg[0] ,
+    iIn_q_reg,
+    \pDataQ_reg[8] ,
     CLKB,
     AS,
     RefClk,
-    SR,
-    pAligned_reg,
+    pMeRdy_int_reg,
     pVld_2,
     pVld_1,
     pRdy_1,
     pRdy_2,
-    pRst_n,
-    pAllVldBgnFlag);
+    pRst_n);
+  output pAllVld;
+  output pAllVldBgnFlag;
   output vid_pVDE;
   output pVld_0;
   output pRdy_0;
   output vid_pHSync;
   output vid_pVSync;
-  output pAllVld;
-  output [0:0]\pDataIn_reg[7]_0 ;
   output [7:0]vid_pData;
   input [0:0]TMDS_Data_p;
   input [0:0]TMDS_Data_n;
-  input rMMCM_LckdRisingFlag_reg;
-  input \rMMCM_Reset_q_reg[0] ;
+  input iIn_q_reg;
+  input \pDataQ_reg[8] ;
   input CLKB;
   input [0:0]AS;
   input RefClk;
-  input [0:0]SR;
-  input pAligned_reg;
+  input pMeRdy_int_reg;
   input pVld_2;
   input pVld_1;
   input pRdy_1;
   input pRdy_2;
   input pRst_n;
-  input pAllVldBgnFlag;
 
   wire [0:0]AS;
   wire CLKB;
-  wire ChannelBondX_n_11;
   wire ChannelBondX_n_12;
+  wire ChannelBondX_n_13;
+  wire ChannelBondX_n_14;
   wire PhaseAlignX_n_4;
-  wire PhaseAlignX_n_5;
   wire PhaseAlignX_n_7;
   wire RefClk;
-  wire [0:0]SR;
   wire SyncBaseOvf_n_1;
   wire SyncBaseOvf_n_2;
   wire SyncBaseOvf_n_3;
   wire SyncBaseOvf_n_4;
+  wire SyncBaseOvf_n_5;
+  wire SyncBaseOvf_n_6;
   wire [0:0]TMDS_Data_n;
   wire [0:0]TMDS_Data_p;
+  wire iIn_q_reg;
   wire pAlignErr_q;
   wire pAlignRst_i_1__1_n_0;
   wire pAlignRst_reg_n_0;
-  wire pAligned_reg;
   wire pAllVld;
   wire pAllVldBgnFlag;
+  wire pAllVldBgnFlag0;
+  wire pAllVld_q;
   wire pBitslip;
-  wire [1:0]pBitslipCnt;
+  wire pBitslip0;
   wire \pBitslipCnt[0]_i_1_n_0 ;
   wire \pBitslipCnt[1]_i_1_n_0 ;
+  wire \pBitslipCnt_reg_n_0_[0] ;
+  wire \pBitslipCnt_reg_n_0_[1] ;
   wire [7:0]pDataIn;
   wire [9:0]pDataInRaw;
-  wire [0:0]\pDataIn_reg[7]_0 ;
+  wire \pDataQ_reg[8] ;
   wire pIDLY_CE;
   wire [4:0]pIDLY_CNT;
   wire pIDLY_INC;
   wire pIDLY_LD;
+  wire pMeRdy_int_reg;
   wire pRdy_0;
   wire pRdy_1;
   wire pRdy_2;
@@ -8002,33 +8179,8 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder
   wire pVld_0;
   wire pVld_1;
   wire pVld_2;
-  wire rMMCM_LckdRisingFlag_reg;
-  wire \rMMCM_Reset_q_reg[0] ;
   wire \rTimeoutCnt[0]_i_1__1_n_0 ;
   wire \rTimeoutCnt[0]_i_3__1_n_0 ;
-  wire \rTimeoutCnt[0]_i_4__1_n_0 ;
-  wire \rTimeoutCnt[0]_i_5__1_n_0 ;
-  wire \rTimeoutCnt[0]_i_6__1_n_0 ;
-  wire \rTimeoutCnt[12]_i_2__1_n_0 ;
-  wire \rTimeoutCnt[12]_i_3__1_n_0 ;
-  wire \rTimeoutCnt[12]_i_4__1_n_0 ;
-  wire \rTimeoutCnt[12]_i_5__1_n_0 ;
-  wire \rTimeoutCnt[16]_i_2__1_n_0 ;
-  wire \rTimeoutCnt[16]_i_3__1_n_0 ;
-  wire \rTimeoutCnt[16]_i_4__1_n_0 ;
-  wire \rTimeoutCnt[16]_i_5__1_n_0 ;
-  wire \rTimeoutCnt[20]_i_2__1_n_0 ;
-  wire \rTimeoutCnt[20]_i_3__1_n_0 ;
-  wire \rTimeoutCnt[20]_i_4__1_n_0 ;
-  wire \rTimeoutCnt[20]_i_5__1_n_0 ;
-  wire \rTimeoutCnt[4]_i_2__1_n_0 ;
-  wire \rTimeoutCnt[4]_i_3__1_n_0 ;
-  wire \rTimeoutCnt[4]_i_4__1_n_0 ;
-  wire \rTimeoutCnt[4]_i_5__1_n_0 ;
-  wire \rTimeoutCnt[8]_i_2__1_n_0 ;
-  wire \rTimeoutCnt[8]_i_3__1_n_0 ;
-  wire \rTimeoutCnt[8]_i_4__1_n_0 ;
-  wire \rTimeoutCnt[8]_i_5__1_n_0 ;
   wire [23:0]rTimeoutCnt_reg;
   wire \rTimeoutCnt_reg[0]_i_2__1_n_0 ;
   wire \rTimeoutCnt_reg[0]_i_2__1_n_1 ;
@@ -8086,68 +8238,74 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder
 
   hdmi_in_dvi2rgb_0_0_ChannelBond_17 ChannelBondX
        (.D(pDataIn),
-        .pAligned_reg(pAligned_reg),
+        .I60(pDataInRaw),
+        .SR(ChannelBondX_n_12),
         .pAllVld(pAllVld),
         .pAllVldBgnFlag(pAllVldBgnFlag),
-        .pC0_reg(ChannelBondX_n_12),
-        .pC1_reg(ChannelBondX_n_11),
-        .pDataInRaw(pDataInRaw),
-        .\pDataIn_reg[7] (\pDataIn_reg[7]_0 ),
+        .pAllVldBgnFlag0(pAllVldBgnFlag0),
+        .pAllVld_q(pAllVld_q),
+        .\pDataFIFO_reg[0]_0 (iIn_q_reg),
+        .\pDataFIFO_reg[8]_0 (ChannelBondX_n_14),
+        .\pDataFIFO_reg[9]_0 (ChannelBondX_n_13),
         .pMeRdy_int_reg_0(pRdy_0),
+        .pMeRdy_int_reg_1(pMeRdy_int_reg),
         .pRdy_1(pRdy_1),
         .pRdy_2(pRdy_2),
         .pVde(pVde),
-        .rMMCM_LckdRisingFlag_reg(rMMCM_LckdRisingFlag_reg),
         .vid_pHSync(vid_pHSync),
         .vid_pVSync(vid_pVSync));
   hdmi_in_dvi2rgb_0_0_InputSERDES_18 InputSERDES_X
        (.AS(AS),
         .CLKB(CLKB),
         .D(pIDLY_CNT),
+        .I60(pDataInRaw),
         .TMDS_Data_n(TMDS_Data_n),
         .TMDS_Data_p(TMDS_Data_p),
         .pBitslip(pBitslip),
-        .pDataInRaw(pDataInRaw),
+        .\pDataQ_reg[8] (\pDataQ_reg[8] ),
         .pIDLY_CE(pIDLY_CE),
+        .\pIDLY_CNT_Q_reg[4] (iIn_q_reg),
         .pIDLY_INC(pIDLY_INC),
-        .pIDLY_LD(pIDLY_LD),
-        .rMMCM_LckdRisingFlag_reg(rMMCM_LckdRisingFlag_reg),
-        .\rMMCM_Reset_q_reg[0] (\rMMCM_Reset_q_reg[0] ));
+        .pIDLY_LD(pIDLY_LD));
   hdmi_in_dvi2rgb_0_0_PhaseAlign_19 PhaseAlignX
        (.D(pDataInRaw[8:0]),
         .SS(pAlignRst_reg_n_0),
-        .iIn_q_reg(PhaseAlignX_n_5),
         .out(pTimeoutOvf),
         .pAlignErr_q(pAlignErr_q),
-        .pAlignErr_q_reg(PhaseAlignX_n_4),
         .pAllVld(pAllVld),
-        .pBitslip_reg(PhaseAlignX_n_7),
+        .pAllVldBgnFlag0(pAllVldBgnFlag0),
+        .pAllVld_q(pAllVld_q),
+        .pBitslip0(pBitslip0),
+        .pError_reg_0(PhaseAlignX_n_4),
         .pIDLY_CE(pIDLY_CE),
-        .pIDLY_CE_reg_0(pIDLY_CNT),
+        .\pIDLY_CNT_Q_reg[4]_0 (pIDLY_CNT),
         .pIDLY_INC(pIDLY_INC),
         .pIDLY_LD(pIDLY_LD),
+        .pIDLY_LD_reg_0(iIn_q_reg),
+        .\pState_reg[1]_0 (PhaseAlignX_n_7),
         .pVld_0(pVld_0),
         .pVld_1(pVld_1),
-        .pVld_2(pVld_2),
-        .rMMCM_LckdRisingFlag_reg(rMMCM_LckdRisingFlag_reg));
+        .pVld_2(pVld_2));
   hdmi_in_dvi2rgb_0_0_SyncBase_20 SyncBaseOvf
        (.AS(AS),
         .RefClk(RefClk),
-        .iIn_q_reg_0(SyncBaseOvf_n_1),
-        .iIn_q_reg_1(SyncBaseOvf_n_2),
-        .iIn_q_reg_2(SyncBaseOvf_n_3),
-        .iIn_q_reg_3(SyncBaseOvf_n_4),
+        .\oSyncStages_reg[1] (iIn_q_reg),
         .out(pTimeoutOvf),
-        .rMMCM_LckdRisingFlag_reg(rMMCM_LckdRisingFlag_reg),
-        .rTimeoutCnt_reg(rTimeoutCnt_reg));
+        .rTimeoutCnt_reg(rTimeoutCnt_reg),
+        .rTimeoutCnt_reg_10_sp_1(SyncBaseOvf_n_6),
+        .rTimeoutCnt_reg_14_sp_1(SyncBaseOvf_n_1),
+        .rTimeoutCnt_reg_20_sp_1(SyncBaseOvf_n_4),
+        .rTimeoutCnt_reg_21_sp_1(SyncBaseOvf_n_2),
+        .rTimeoutCnt_reg_3_sp_1(SyncBaseOvf_n_3),
+        .rTimeoutCnt_reg_8_sp_1(SyncBaseOvf_n_5));
   hdmi_in_dvi2rgb_0_0_SyncBase__parameterized0_21 SyncBaseRst
        (.AS(AS),
         .RefClk(RefClk),
-        .out(rTimeoutRst),
-        .\pState_reg[3] (PhaseAlignX_n_5),
-        .rMMCM_LckdRisingFlag_reg(rMMCM_LckdRisingFlag_reg));
+        .iIn_q_reg_0(PhaseAlignX_n_7),
+        .iIn_q_reg_1(iIn_q_reg),
+        .out(rTimeoutRst));
   FDRE pAlignErr_q_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(PhaseAlignX_n_4),
         .Q(pAlignErr_q),
@@ -8157,248 +8315,135 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder
     pAlignRst_i_1__1
        (.I0(pRst_n),
         .I1(pBitslip),
-        .I2(pBitslipCnt[1]),
-        .I3(pBitslipCnt[0]),
+        .I2(\pBitslipCnt_reg_n_0_[1] ),
+        .I3(\pBitslipCnt_reg_n_0_[0] ),
         .I4(pAlignRst_reg_n_0),
         .O(pAlignRst_i_1__1_n_0));
   FDPE pAlignRst_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(pAlignRst_i_1__1_n_0),
         .PRE(AS),
         .Q(pAlignRst_reg_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT3 #(
     .INIT(8'h04)) 
     \pBitslipCnt[0]_i_1 
-       (.I0(pBitslipCnt[0]),
-        .I1(pBitslipCnt[1]),
+       (.I0(\pBitslipCnt_reg_n_0_[0] ),
+        .I1(\pBitslipCnt_reg_n_0_[1] ),
         .I2(pBitslip),
         .O(\pBitslipCnt[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT3 #(
     .INIT(8'hF8)) 
     \pBitslipCnt[1]_i_1 
-       (.I0(pBitslipCnt[0]),
-        .I1(pBitslipCnt[1]),
+       (.I0(\pBitslipCnt_reg_n_0_[0] ),
+        .I1(\pBitslipCnt_reg_n_0_[1] ),
         .I2(pBitslip),
         .O(\pBitslipCnt[1]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \pBitslipCnt_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(\pBitslipCnt[0]_i_1_n_0 ),
-        .Q(pBitslipCnt[0]),
+        .Q(\pBitslipCnt_reg_n_0_[0] ),
         .R(1'b0));
   FDRE #(
     .INIT(1'b1)) 
     \pBitslipCnt_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(\pBitslipCnt[1]_i_1_n_0 ),
-        .Q(pBitslipCnt[1]),
+        .Q(\pBitslipCnt_reg_n_0_[1] ),
         .R(1'b0));
   FDRE pBitslip_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
-        .D(PhaseAlignX_n_7),
+        .D(pBitslip0),
         .Q(pBitslip),
         .R(1'b0));
   FDRE pC0_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
-        .D(ChannelBondX_n_12),
+        .D(ChannelBondX_n_14),
         .Q(vid_pHSync),
-        .R(SR));
+        .R(ChannelBondX_n_12));
   FDRE pC1_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
-        .D(ChannelBondX_n_11),
+        .D(ChannelBondX_n_13),
         .Q(vid_pVSync),
-        .R(SR));
+        .R(ChannelBondX_n_12));
   FDRE \pDataIn_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(pDataIn[0]),
         .Q(vid_pData[0]),
-        .R(SR));
+        .R(ChannelBondX_n_12));
   FDRE \pDataIn_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(pDataIn[1]),
         .Q(vid_pData[1]),
-        .R(SR));
+        .R(ChannelBondX_n_12));
   FDRE \pDataIn_reg[2] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(pDataIn[2]),
         .Q(vid_pData[2]),
-        .R(SR));
+        .R(ChannelBondX_n_12));
   FDRE \pDataIn_reg[3] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(pDataIn[3]),
         .Q(vid_pData[3]),
-        .R(SR));
+        .R(ChannelBondX_n_12));
   FDRE \pDataIn_reg[4] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(pDataIn[4]),
         .Q(vid_pData[4]),
-        .R(SR));
+        .R(ChannelBondX_n_12));
   FDRE \pDataIn_reg[5] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(pDataIn[5]),
         .Q(vid_pData[5]),
-        .R(SR));
+        .R(ChannelBondX_n_12));
   FDRE \pDataIn_reg[6] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(pDataIn[6]),
         .Q(vid_pData[6]),
-        .R(SR));
+        .R(ChannelBondX_n_12));
   FDRE \pDataIn_reg[7] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(pDataIn[7]),
         .Q(vid_pData[7]),
-        .R(SR));
+        .R(ChannelBondX_n_12));
   FDRE pVde_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(pVde),
         .Q(vid_pVDE),
-        .R(SR));
-  LUT4 #(
-    .INIT(16'hBFFF)) 
+        .R(ChannelBondX_n_12));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
     \rTimeoutCnt[0]_i_1__1 
        (.I0(SyncBaseOvf_n_1),
         .I1(SyncBaseOvf_n_2),
         .I2(SyncBaseOvf_n_3),
         .I3(SyncBaseOvf_n_4),
+        .I4(SyncBaseOvf_n_5),
+        .I5(SyncBaseOvf_n_6),
         .O(\rTimeoutCnt[0]_i_1__1_n_0 ));
   LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[0]_i_3__1 
-       (.I0(rTimeoutCnt_reg[3]),
-        .O(\rTimeoutCnt[0]_i_3__1_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[0]_i_4__1 
-       (.I0(rTimeoutCnt_reg[2]),
-        .O(\rTimeoutCnt[0]_i_4__1_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[0]_i_5__1 
-       (.I0(rTimeoutCnt_reg[1]),
-        .O(\rTimeoutCnt[0]_i_5__1_n_0 ));
-  LUT1 #(
     .INIT(2'h1)) 
-    \rTimeoutCnt[0]_i_6__1 
+    \rTimeoutCnt[0]_i_3__1 
        (.I0(rTimeoutCnt_reg[0]),
-        .O(\rTimeoutCnt[0]_i_6__1_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[12]_i_2__1 
-       (.I0(rTimeoutCnt_reg[15]),
-        .O(\rTimeoutCnt[12]_i_2__1_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[12]_i_3__1 
-       (.I0(rTimeoutCnt_reg[14]),
-        .O(\rTimeoutCnt[12]_i_3__1_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[12]_i_4__1 
-       (.I0(rTimeoutCnt_reg[13]),
-        .O(\rTimeoutCnt[12]_i_4__1_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[12]_i_5__1 
-       (.I0(rTimeoutCnt_reg[12]),
-        .O(\rTimeoutCnt[12]_i_5__1_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[16]_i_2__1 
-       (.I0(rTimeoutCnt_reg[19]),
-        .O(\rTimeoutCnt[16]_i_2__1_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[16]_i_3__1 
-       (.I0(rTimeoutCnt_reg[18]),
-        .O(\rTimeoutCnt[16]_i_3__1_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[16]_i_4__1 
-       (.I0(rTimeoutCnt_reg[17]),
-        .O(\rTimeoutCnt[16]_i_4__1_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[16]_i_5__1 
-       (.I0(rTimeoutCnt_reg[16]),
-        .O(\rTimeoutCnt[16]_i_5__1_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[20]_i_2__1 
-       (.I0(rTimeoutCnt_reg[23]),
-        .O(\rTimeoutCnt[20]_i_2__1_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[20]_i_3__1 
-       (.I0(rTimeoutCnt_reg[22]),
-        .O(\rTimeoutCnt[20]_i_3__1_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[20]_i_4__1 
-       (.I0(rTimeoutCnt_reg[21]),
-        .O(\rTimeoutCnt[20]_i_4__1_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[20]_i_5__1 
-       (.I0(rTimeoutCnt_reg[20]),
-        .O(\rTimeoutCnt[20]_i_5__1_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[4]_i_2__1 
-       (.I0(rTimeoutCnt_reg[7]),
-        .O(\rTimeoutCnt[4]_i_2__1_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[4]_i_3__1 
-       (.I0(rTimeoutCnt_reg[6]),
-        .O(\rTimeoutCnt[4]_i_3__1_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[4]_i_4__1 
-       (.I0(rTimeoutCnt_reg[5]),
-        .O(\rTimeoutCnt[4]_i_4__1_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[4]_i_5__1 
-       (.I0(rTimeoutCnt_reg[4]),
-        .O(\rTimeoutCnt[4]_i_5__1_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[8]_i_2__1 
-       (.I0(rTimeoutCnt_reg[11]),
-        .O(\rTimeoutCnt[8]_i_2__1_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[8]_i_3__1 
-       (.I0(rTimeoutCnt_reg[10]),
-        .O(\rTimeoutCnt[8]_i_3__1_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[8]_i_4__1 
-       (.I0(rTimeoutCnt_reg[9]),
-        .O(\rTimeoutCnt[8]_i_4__1_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[8]_i_5__1 
-       (.I0(rTimeoutCnt_reg[8]),
-        .O(\rTimeoutCnt[8]_i_5__1_n_0 ));
+        .O(\rTimeoutCnt[0]_i_3__1_n_0 ));
   FDRE \rTimeoutCnt_reg[0] 
        (.C(RefClk),
         .CE(\rTimeoutCnt[0]_i_1__1_n_0 ),
@@ -8411,7 +8456,7 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b1}),
         .O({\rTimeoutCnt_reg[0]_i_2__1_n_4 ,\rTimeoutCnt_reg[0]_i_2__1_n_5 ,\rTimeoutCnt_reg[0]_i_2__1_n_6 ,\rTimeoutCnt_reg[0]_i_2__1_n_7 }),
-        .S({\rTimeoutCnt[0]_i_3__1_n_0 ,\rTimeoutCnt[0]_i_4__1_n_0 ,\rTimeoutCnt[0]_i_5__1_n_0 ,\rTimeoutCnt[0]_i_6__1_n_0 }));
+        .S({rTimeoutCnt_reg[3:1],\rTimeoutCnt[0]_i_3__1_n_0 }));
   FDRE \rTimeoutCnt_reg[10] 
        (.C(RefClk),
         .CE(\rTimeoutCnt[0]_i_1__1_n_0 ),
@@ -8436,7 +8481,7 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O({\rTimeoutCnt_reg[12]_i_1__1_n_4 ,\rTimeoutCnt_reg[12]_i_1__1_n_5 ,\rTimeoutCnt_reg[12]_i_1__1_n_6 ,\rTimeoutCnt_reg[12]_i_1__1_n_7 }),
-        .S({\rTimeoutCnt[12]_i_2__1_n_0 ,\rTimeoutCnt[12]_i_3__1_n_0 ,\rTimeoutCnt[12]_i_4__1_n_0 ,\rTimeoutCnt[12]_i_5__1_n_0 }));
+        .S(rTimeoutCnt_reg[15:12]));
   FDRE \rTimeoutCnt_reg[13] 
        (.C(RefClk),
         .CE(\rTimeoutCnt[0]_i_1__1_n_0 ),
@@ -8467,7 +8512,7 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O({\rTimeoutCnt_reg[16]_i_1__1_n_4 ,\rTimeoutCnt_reg[16]_i_1__1_n_5 ,\rTimeoutCnt_reg[16]_i_1__1_n_6 ,\rTimeoutCnt_reg[16]_i_1__1_n_7 }),
-        .S({\rTimeoutCnt[16]_i_2__1_n_0 ,\rTimeoutCnt[16]_i_3__1_n_0 ,\rTimeoutCnt[16]_i_4__1_n_0 ,\rTimeoutCnt[16]_i_5__1_n_0 }));
+        .S(rTimeoutCnt_reg[19:16]));
   FDRE \rTimeoutCnt_reg[17] 
        (.C(RefClk),
         .CE(\rTimeoutCnt[0]_i_1__1_n_0 ),
@@ -8504,7 +8549,7 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O({\rTimeoutCnt_reg[20]_i_1__1_n_4 ,\rTimeoutCnt_reg[20]_i_1__1_n_5 ,\rTimeoutCnt_reg[20]_i_1__1_n_6 ,\rTimeoutCnt_reg[20]_i_1__1_n_7 }),
-        .S({\rTimeoutCnt[20]_i_2__1_n_0 ,\rTimeoutCnt[20]_i_3__1_n_0 ,\rTimeoutCnt[20]_i_4__1_n_0 ,\rTimeoutCnt[20]_i_5__1_n_0 }));
+        .S(rTimeoutCnt_reg[23:20]));
   FDRE \rTimeoutCnt_reg[21] 
        (.C(RefClk),
         .CE(\rTimeoutCnt[0]_i_1__1_n_0 ),
@@ -8547,7 +8592,7 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O({\rTimeoutCnt_reg[4]_i_1__1_n_4 ,\rTimeoutCnt_reg[4]_i_1__1_n_5 ,\rTimeoutCnt_reg[4]_i_1__1_n_6 ,\rTimeoutCnt_reg[4]_i_1__1_n_7 }),
-        .S({\rTimeoutCnt[4]_i_2__1_n_0 ,\rTimeoutCnt[4]_i_3__1_n_0 ,\rTimeoutCnt[4]_i_4__1_n_0 ,\rTimeoutCnt[4]_i_5__1_n_0 }));
+        .S(rTimeoutCnt_reg[7:4]));
   FDRE \rTimeoutCnt_reg[5] 
        (.C(RefClk),
         .CE(\rTimeoutCnt[0]_i_1__1_n_0 ),
@@ -8578,7 +8623,7 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O({\rTimeoutCnt_reg[8]_i_1__1_n_4 ,\rTimeoutCnt_reg[8]_i_1__1_n_5 ,\rTimeoutCnt_reg[8]_i_1__1_n_6 ,\rTimeoutCnt_reg[8]_i_1__1_n_7 }),
-        .S({\rTimeoutCnt[8]_i_2__1_n_0 ,\rTimeoutCnt[8]_i_3__1_n_0 ,\rTimeoutCnt[8]_i_4__1_n_0 ,\rTimeoutCnt[8]_i_5__1_n_0 }));
+        .S(rTimeoutCnt_reg[11:8]));
   FDRE \rTimeoutCnt_reg[9] 
        (.C(RefClk),
         .CE(\rTimeoutCnt[0]_i_1__1_n_0 ),
@@ -8589,15 +8634,14 @@ endmodule
 
 (* ORIG_REF_NAME = "TMDS_Decoder" *) 
 module hdmi_in_dvi2rgb_0_0_TMDS_Decoder_0
-   (pMeRdy_int_reg,
+   (pAligned_reg,
     pRdy_1,
     pVld_1,
-    SR,
     vid_pData,
     TMDS_Data_p,
     TMDS_Data_n,
-    rMMCM_LckdRisingFlag_reg,
-    \rMMCM_Reset_q_reg[0] ,
+    iIn_q_reg,
+    \pDataQ_reg[1] ,
     CLKB,
     AS,
     RefClk,
@@ -8605,19 +8649,17 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder_0
     pVld_0,
     pRdy_2,
     pRdy_0,
-    pRst_n,
     pAllVldBgnFlag,
-    pAllVld,
-    pMeRdy_int_reg_0);
-  output pMeRdy_int_reg;
+    pRst_n,
+    pAllVld);
+  output pAligned_reg;
   output pRdy_1;
   output pVld_1;
-  output [0:0]SR;
   output [7:0]vid_pData;
   input [0:0]TMDS_Data_p;
   input [0:0]TMDS_Data_n;
-  input rMMCM_LckdRisingFlag_reg;
-  input \rMMCM_Reset_q_reg[0] ;
+  input iIn_q_reg;
+  input \pDataQ_reg[1] ;
   input CLKB;
   input [0:0]AS;
   input RefClk;
@@ -8625,41 +8667,44 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder_0
   input pVld_0;
   input pRdy_2;
   input pRdy_0;
-  input pRst_n;
   input pAllVldBgnFlag;
+  input pRst_n;
   input pAllVld;
-  input [0:0]pMeRdy_int_reg_0;
 
   wire [0:0]AS;
   wire CLKB;
+  wire ChannelBondX_n_9;
   wire PhaseAlignX_n_4;
-  wire PhaseAlignX_n_5;
-  wire PhaseAlignX_n_7;
+  wire PhaseAlignX_n_6;
   wire RefClk;
-  wire [0:0]SR;
   wire SyncBaseOvf_n_1;
   wire SyncBaseOvf_n_2;
   wire SyncBaseOvf_n_3;
   wire SyncBaseOvf_n_4;
+  wire SyncBaseOvf_n_5;
+  wire SyncBaseOvf_n_6;
   wire [0:0]TMDS_Data_n;
   wire [0:0]TMDS_Data_p;
+  wire iIn_q_reg;
   wire pAlignErr_q;
   wire pAlignRst_i_1__0_n_0;
   wire pAlignRst_reg_n_0;
+  wire pAligned_reg;
   wire pAllVld;
   wire pAllVldBgnFlag;
   wire pBitslip;
-  wire [1:0]pBitslipCnt;
+  wire pBitslip0;
   wire \pBitslipCnt[0]_i_1_n_0 ;
   wire \pBitslipCnt[1]_i_1_n_0 ;
+  wire \pBitslipCnt_reg_n_0_[0] ;
+  wire \pBitslipCnt_reg_n_0_[1] ;
   wire [7:0]pDataIn;
   wire [9:0]pDataInRaw;
+  wire \pDataQ_reg[1] ;
   wire pIDLY_CE;
   wire [4:0]pIDLY_CNT;
   wire pIDLY_INC;
   wire pIDLY_LD;
-  wire pMeRdy_int_reg;
-  wire [0:0]pMeRdy_int_reg_0;
   wire pRdy_0;
   wire pRdy_1;
   wire pRdy_2;
@@ -8668,33 +8713,8 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder_0
   wire pVld_0;
   wire pVld_1;
   wire pVld_2;
-  wire rMMCM_LckdRisingFlag_reg;
-  wire \rMMCM_Reset_q_reg[0] ;
   wire \rTimeoutCnt[0]_i_1__0_n_0 ;
   wire \rTimeoutCnt[0]_i_3__0_n_0 ;
-  wire \rTimeoutCnt[0]_i_4__0_n_0 ;
-  wire \rTimeoutCnt[0]_i_5__0_n_0 ;
-  wire \rTimeoutCnt[0]_i_6__0_n_0 ;
-  wire \rTimeoutCnt[12]_i_2__0_n_0 ;
-  wire \rTimeoutCnt[12]_i_3__0_n_0 ;
-  wire \rTimeoutCnt[12]_i_4__0_n_0 ;
-  wire \rTimeoutCnt[12]_i_5__0_n_0 ;
-  wire \rTimeoutCnt[16]_i_2__0_n_0 ;
-  wire \rTimeoutCnt[16]_i_3__0_n_0 ;
-  wire \rTimeoutCnt[16]_i_4__0_n_0 ;
-  wire \rTimeoutCnt[16]_i_5__0_n_0 ;
-  wire \rTimeoutCnt[20]_i_2__0_n_0 ;
-  wire \rTimeoutCnt[20]_i_3__0_n_0 ;
-  wire \rTimeoutCnt[20]_i_4__0_n_0 ;
-  wire \rTimeoutCnt[20]_i_5__0_n_0 ;
-  wire \rTimeoutCnt[4]_i_2__0_n_0 ;
-  wire \rTimeoutCnt[4]_i_3__0_n_0 ;
-  wire \rTimeoutCnt[4]_i_4__0_n_0 ;
-  wire \rTimeoutCnt[4]_i_5__0_n_0 ;
-  wire \rTimeoutCnt[8]_i_2__0_n_0 ;
-  wire \rTimeoutCnt[8]_i_3__0_n_0 ;
-  wire \rTimeoutCnt[8]_i_4__0_n_0 ;
-  wire \rTimeoutCnt[8]_i_5__0_n_0 ;
   wire [23:0]rTimeoutCnt_reg;
   wire \rTimeoutCnt_reg[0]_i_2__0_n_0 ;
   wire \rTimeoutCnt_reg[0]_i_2__0_n_1 ;
@@ -8749,63 +8769,65 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder_0
 
   hdmi_in_dvi2rgb_0_0_ChannelBond_10 ChannelBondX
        (.D(pDataIn),
-        .SR(pMeRdy_int_reg),
+        .I33(pDataInRaw),
+        .SR(pAligned_reg),
         .pAllVld(pAllVld),
         .pAllVldBgnFlag(pAllVldBgnFlag),
-        .pDataInRaw(pDataInRaw),
-        .\pDataIn_reg[7] (SR),
         .pMeRdy_int_reg_0(pRdy_1),
+        .pMeRdy_int_reg_1(ChannelBondX_n_9),
         .pRdy_0(pRdy_0),
         .pRdy_2(pRdy_2),
-        .rMMCM_LckdRisingFlag_reg(rMMCM_LckdRisingFlag_reg));
+        .pTokenFlag_q_reg_0(iIn_q_reg));
   hdmi_in_dvi2rgb_0_0_InputSERDES_11 InputSERDES_X
        (.AS(AS),
         .CLKB(CLKB),
         .D(pIDLY_CNT),
+        .I33(pDataInRaw),
         .TMDS_Data_n(TMDS_Data_n),
         .TMDS_Data_p(TMDS_Data_p),
         .pBitslip(pBitslip),
-        .pDataInRaw(pDataInRaw),
+        .\pDataQ_reg[1] (iIn_q_reg),
+        .\pDataQ_reg[1]_0 (\pDataQ_reg[1] ),
         .pIDLY_CE(pIDLY_CE),
         .pIDLY_INC(pIDLY_INC),
-        .pIDLY_LD(pIDLY_LD),
-        .rMMCM_LckdRisingFlag_reg(rMMCM_LckdRisingFlag_reg),
-        .\rMMCM_Reset_q_reg[0] (\rMMCM_Reset_q_reg[0] ));
+        .pIDLY_LD(pIDLY_LD));
   hdmi_in_dvi2rgb_0_0_PhaseAlign_12 PhaseAlignX
        (.D(pDataInRaw[8:0]),
         .SS(pAlignRst_reg_n_0),
-        .iIn_q_reg(PhaseAlignX_n_5),
         .out(pTimeoutOvf),
         .pAlignErr_q(pAlignErr_q),
-        .pAlignErr_q_reg(PhaseAlignX_n_4),
-        .pBitslip_reg(PhaseAlignX_n_7),
+        .pAligned_reg_0(pAligned_reg),
+        .pBitslip0(pBitslip0),
+        .pError_reg_0(PhaseAlignX_n_4),
         .pIDLY_CE(pIDLY_CE),
-        .pIDLY_CE_reg_0(pIDLY_CNT),
+        .\pIDLY_CNT_Q_reg[4]_0 (pIDLY_CNT),
         .pIDLY_INC(pIDLY_INC),
         .pIDLY_LD(pIDLY_LD),
-        .pMeRdy_int_reg(pMeRdy_int_reg),
+        .pIDLY_LD_reg_0(iIn_q_reg),
+        .\pState_reg[1]_0 (PhaseAlignX_n_6),
         .pVld_0(pVld_0),
         .pVld_1(pVld_1),
-        .pVld_2(pVld_2),
-        .rMMCM_LckdRisingFlag_reg(rMMCM_LckdRisingFlag_reg));
+        .pVld_2(pVld_2));
   hdmi_in_dvi2rgb_0_0_SyncBase_13 SyncBaseOvf
        (.AS(AS),
         .RefClk(RefClk),
-        .iIn_q_reg_0(SyncBaseOvf_n_1),
-        .iIn_q_reg_1(SyncBaseOvf_n_2),
-        .iIn_q_reg_2(SyncBaseOvf_n_3),
-        .iIn_q_reg_3(SyncBaseOvf_n_4),
+        .\oSyncStages_reg[1] (iIn_q_reg),
         .out(pTimeoutOvf),
-        .rMMCM_LckdRisingFlag_reg(rMMCM_LckdRisingFlag_reg),
-        .rTimeoutCnt_reg(rTimeoutCnt_reg));
+        .rTimeoutCnt_reg(rTimeoutCnt_reg),
+        .rTimeoutCnt_reg_10_sp_1(SyncBaseOvf_n_6),
+        .rTimeoutCnt_reg_14_sp_1(SyncBaseOvf_n_1),
+        .rTimeoutCnt_reg_20_sp_1(SyncBaseOvf_n_4),
+        .rTimeoutCnt_reg_21_sp_1(SyncBaseOvf_n_2),
+        .rTimeoutCnt_reg_3_sp_1(SyncBaseOvf_n_3),
+        .rTimeoutCnt_reg_8_sp_1(SyncBaseOvf_n_5));
   hdmi_in_dvi2rgb_0_0_SyncBase__parameterized0_14 SyncBaseRst
        (.AS(AS),
         .RefClk(RefClk),
-        .out(rTimeoutRst),
-        .\pState_reg[3] (PhaseAlignX_n_5),
-        .rMMCM_LckdRisingFlag_reg(rMMCM_LckdRisingFlag_reg));
+        .iIn_q_reg_0(PhaseAlignX_n_6),
+        .iIn_q_reg_1(iIn_q_reg),
+        .out(rTimeoutRst));
   FDRE pAlignErr_q_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(PhaseAlignX_n_4),
         .Q(pAlignErr_q),
@@ -8815,230 +8837,117 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder_0
     pAlignRst_i_1__0
        (.I0(pRst_n),
         .I1(pBitslip),
-        .I2(pBitslipCnt[1]),
-        .I3(pBitslipCnt[0]),
+        .I2(\pBitslipCnt_reg_n_0_[1] ),
+        .I3(\pBitslipCnt_reg_n_0_[0] ),
         .I4(pAlignRst_reg_n_0),
         .O(pAlignRst_i_1__0_n_0));
   FDPE pAlignRst_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(pAlignRst_i_1__0_n_0),
         .PRE(AS),
         .Q(pAlignRst_reg_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair56" *) 
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT3 #(
     .INIT(8'h04)) 
     \pBitslipCnt[0]_i_1 
-       (.I0(pBitslipCnt[0]),
-        .I1(pBitslipCnt[1]),
+       (.I0(\pBitslipCnt_reg_n_0_[0] ),
+        .I1(\pBitslipCnt_reg_n_0_[1] ),
         .I2(pBitslip),
         .O(\pBitslipCnt[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair56" *) 
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT3 #(
     .INIT(8'hF8)) 
     \pBitslipCnt[1]_i_1 
-       (.I0(pBitslipCnt[0]),
-        .I1(pBitslipCnt[1]),
+       (.I0(\pBitslipCnt_reg_n_0_[0] ),
+        .I1(\pBitslipCnt_reg_n_0_[1] ),
         .I2(pBitslip),
         .O(\pBitslipCnt[1]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \pBitslipCnt_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(\pBitslipCnt[0]_i_1_n_0 ),
-        .Q(pBitslipCnt[0]),
+        .Q(\pBitslipCnt_reg_n_0_[0] ),
         .R(1'b0));
   FDRE #(
     .INIT(1'b1)) 
     \pBitslipCnt_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(\pBitslipCnt[1]_i_1_n_0 ),
-        .Q(pBitslipCnt[1]),
+        .Q(\pBitslipCnt_reg_n_0_[1] ),
         .R(1'b0));
   FDRE pBitslip_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
-        .D(PhaseAlignX_n_7),
+        .D(pBitslip0),
         .Q(pBitslip),
         .R(1'b0));
   FDRE \pDataIn_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(pDataIn[0]),
         .Q(vid_pData[0]),
-        .R(pMeRdy_int_reg_0));
+        .R(ChannelBondX_n_9));
   FDRE \pDataIn_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(pDataIn[1]),
         .Q(vid_pData[1]),
-        .R(pMeRdy_int_reg_0));
+        .R(ChannelBondX_n_9));
   FDRE \pDataIn_reg[2] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(pDataIn[2]),
         .Q(vid_pData[2]),
-        .R(pMeRdy_int_reg_0));
+        .R(ChannelBondX_n_9));
   FDRE \pDataIn_reg[3] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(pDataIn[3]),
         .Q(vid_pData[3]),
-        .R(pMeRdy_int_reg_0));
+        .R(ChannelBondX_n_9));
   FDRE \pDataIn_reg[4] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(pDataIn[4]),
         .Q(vid_pData[4]),
-        .R(pMeRdy_int_reg_0));
+        .R(ChannelBondX_n_9));
   FDRE \pDataIn_reg[5] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(pDataIn[5]),
         .Q(vid_pData[5]),
-        .R(pMeRdy_int_reg_0));
+        .R(ChannelBondX_n_9));
   FDRE \pDataIn_reg[6] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(pDataIn[6]),
         .Q(vid_pData[6]),
-        .R(pMeRdy_int_reg_0));
+        .R(ChannelBondX_n_9));
   FDRE \pDataIn_reg[7] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(pDataIn[7]),
         .Q(vid_pData[7]),
-        .R(pMeRdy_int_reg_0));
-  LUT4 #(
-    .INIT(16'hBFFF)) 
+        .R(ChannelBondX_n_9));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
     \rTimeoutCnt[0]_i_1__0 
        (.I0(SyncBaseOvf_n_1),
         .I1(SyncBaseOvf_n_2),
         .I2(SyncBaseOvf_n_3),
         .I3(SyncBaseOvf_n_4),
+        .I4(SyncBaseOvf_n_5),
+        .I5(SyncBaseOvf_n_6),
         .O(\rTimeoutCnt[0]_i_1__0_n_0 ));
   LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[0]_i_3__0 
-       (.I0(rTimeoutCnt_reg[3]),
-        .O(\rTimeoutCnt[0]_i_3__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[0]_i_4__0 
-       (.I0(rTimeoutCnt_reg[2]),
-        .O(\rTimeoutCnt[0]_i_4__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[0]_i_5__0 
-       (.I0(rTimeoutCnt_reg[1]),
-        .O(\rTimeoutCnt[0]_i_5__0_n_0 ));
-  LUT1 #(
     .INIT(2'h1)) 
-    \rTimeoutCnt[0]_i_6__0 
+    \rTimeoutCnt[0]_i_3__0 
        (.I0(rTimeoutCnt_reg[0]),
-        .O(\rTimeoutCnt[0]_i_6__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[12]_i_2__0 
-       (.I0(rTimeoutCnt_reg[15]),
-        .O(\rTimeoutCnt[12]_i_2__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[12]_i_3__0 
-       (.I0(rTimeoutCnt_reg[14]),
-        .O(\rTimeoutCnt[12]_i_3__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[12]_i_4__0 
-       (.I0(rTimeoutCnt_reg[13]),
-        .O(\rTimeoutCnt[12]_i_4__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[12]_i_5__0 
-       (.I0(rTimeoutCnt_reg[12]),
-        .O(\rTimeoutCnt[12]_i_5__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[16]_i_2__0 
-       (.I0(rTimeoutCnt_reg[19]),
-        .O(\rTimeoutCnt[16]_i_2__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[16]_i_3__0 
-       (.I0(rTimeoutCnt_reg[18]),
-        .O(\rTimeoutCnt[16]_i_3__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[16]_i_4__0 
-       (.I0(rTimeoutCnt_reg[17]),
-        .O(\rTimeoutCnt[16]_i_4__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[16]_i_5__0 
-       (.I0(rTimeoutCnt_reg[16]),
-        .O(\rTimeoutCnt[16]_i_5__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[20]_i_2__0 
-       (.I0(rTimeoutCnt_reg[23]),
-        .O(\rTimeoutCnt[20]_i_2__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[20]_i_3__0 
-       (.I0(rTimeoutCnt_reg[22]),
-        .O(\rTimeoutCnt[20]_i_3__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[20]_i_4__0 
-       (.I0(rTimeoutCnt_reg[21]),
-        .O(\rTimeoutCnt[20]_i_4__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[20]_i_5__0 
-       (.I0(rTimeoutCnt_reg[20]),
-        .O(\rTimeoutCnt[20]_i_5__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[4]_i_2__0 
-       (.I0(rTimeoutCnt_reg[7]),
-        .O(\rTimeoutCnt[4]_i_2__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[4]_i_3__0 
-       (.I0(rTimeoutCnt_reg[6]),
-        .O(\rTimeoutCnt[4]_i_3__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[4]_i_4__0 
-       (.I0(rTimeoutCnt_reg[5]),
-        .O(\rTimeoutCnt[4]_i_4__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[4]_i_5__0 
-       (.I0(rTimeoutCnt_reg[4]),
-        .O(\rTimeoutCnt[4]_i_5__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[8]_i_2__0 
-       (.I0(rTimeoutCnt_reg[11]),
-        .O(\rTimeoutCnt[8]_i_2__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[8]_i_3__0 
-       (.I0(rTimeoutCnt_reg[10]),
-        .O(\rTimeoutCnt[8]_i_3__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[8]_i_4__0 
-       (.I0(rTimeoutCnt_reg[9]),
-        .O(\rTimeoutCnt[8]_i_4__0_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[8]_i_5__0 
-       (.I0(rTimeoutCnt_reg[8]),
-        .O(\rTimeoutCnt[8]_i_5__0_n_0 ));
+        .O(\rTimeoutCnt[0]_i_3__0_n_0 ));
   FDRE \rTimeoutCnt_reg[0] 
        (.C(RefClk),
         .CE(\rTimeoutCnt[0]_i_1__0_n_0 ),
@@ -9051,7 +8960,7 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder_0
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b1}),
         .O({\rTimeoutCnt_reg[0]_i_2__0_n_4 ,\rTimeoutCnt_reg[0]_i_2__0_n_5 ,\rTimeoutCnt_reg[0]_i_2__0_n_6 ,\rTimeoutCnt_reg[0]_i_2__0_n_7 }),
-        .S({\rTimeoutCnt[0]_i_3__0_n_0 ,\rTimeoutCnt[0]_i_4__0_n_0 ,\rTimeoutCnt[0]_i_5__0_n_0 ,\rTimeoutCnt[0]_i_6__0_n_0 }));
+        .S({rTimeoutCnt_reg[3:1],\rTimeoutCnt[0]_i_3__0_n_0 }));
   FDRE \rTimeoutCnt_reg[10] 
        (.C(RefClk),
         .CE(\rTimeoutCnt[0]_i_1__0_n_0 ),
@@ -9076,7 +8985,7 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder_0
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O({\rTimeoutCnt_reg[12]_i_1__0_n_4 ,\rTimeoutCnt_reg[12]_i_1__0_n_5 ,\rTimeoutCnt_reg[12]_i_1__0_n_6 ,\rTimeoutCnt_reg[12]_i_1__0_n_7 }),
-        .S({\rTimeoutCnt[12]_i_2__0_n_0 ,\rTimeoutCnt[12]_i_3__0_n_0 ,\rTimeoutCnt[12]_i_4__0_n_0 ,\rTimeoutCnt[12]_i_5__0_n_0 }));
+        .S(rTimeoutCnt_reg[15:12]));
   FDRE \rTimeoutCnt_reg[13] 
        (.C(RefClk),
         .CE(\rTimeoutCnt[0]_i_1__0_n_0 ),
@@ -9107,7 +9016,7 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder_0
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O({\rTimeoutCnt_reg[16]_i_1__0_n_4 ,\rTimeoutCnt_reg[16]_i_1__0_n_5 ,\rTimeoutCnt_reg[16]_i_1__0_n_6 ,\rTimeoutCnt_reg[16]_i_1__0_n_7 }),
-        .S({\rTimeoutCnt[16]_i_2__0_n_0 ,\rTimeoutCnt[16]_i_3__0_n_0 ,\rTimeoutCnt[16]_i_4__0_n_0 ,\rTimeoutCnt[16]_i_5__0_n_0 }));
+        .S(rTimeoutCnt_reg[19:16]));
   FDRE \rTimeoutCnt_reg[17] 
        (.C(RefClk),
         .CE(\rTimeoutCnt[0]_i_1__0_n_0 ),
@@ -9144,7 +9053,7 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder_0
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O({\rTimeoutCnt_reg[20]_i_1__0_n_4 ,\rTimeoutCnt_reg[20]_i_1__0_n_5 ,\rTimeoutCnt_reg[20]_i_1__0_n_6 ,\rTimeoutCnt_reg[20]_i_1__0_n_7 }),
-        .S({\rTimeoutCnt[20]_i_2__0_n_0 ,\rTimeoutCnt[20]_i_3__0_n_0 ,\rTimeoutCnt[20]_i_4__0_n_0 ,\rTimeoutCnt[20]_i_5__0_n_0 }));
+        .S(rTimeoutCnt_reg[23:20]));
   FDRE \rTimeoutCnt_reg[21] 
        (.C(RefClk),
         .CE(\rTimeoutCnt[0]_i_1__0_n_0 ),
@@ -9187,7 +9096,7 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder_0
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O({\rTimeoutCnt_reg[4]_i_1__0_n_4 ,\rTimeoutCnt_reg[4]_i_1__0_n_5 ,\rTimeoutCnt_reg[4]_i_1__0_n_6 ,\rTimeoutCnt_reg[4]_i_1__0_n_7 }),
-        .S({\rTimeoutCnt[4]_i_2__0_n_0 ,\rTimeoutCnt[4]_i_3__0_n_0 ,\rTimeoutCnt[4]_i_4__0_n_0 ,\rTimeoutCnt[4]_i_5__0_n_0 }));
+        .S(rTimeoutCnt_reg[7:4]));
   FDRE \rTimeoutCnt_reg[5] 
        (.C(RefClk),
         .CE(\rTimeoutCnt[0]_i_1__0_n_0 ),
@@ -9218,7 +9127,7 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder_0
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O({\rTimeoutCnt_reg[8]_i_1__0_n_4 ,\rTimeoutCnt_reg[8]_i_1__0_n_5 ,\rTimeoutCnt_reg[8]_i_1__0_n_6 ,\rTimeoutCnt_reg[8]_i_1__0_n_7 }),
-        .S({\rTimeoutCnt[8]_i_2__0_n_0 ,\rTimeoutCnt[8]_i_3__0_n_0 ,\rTimeoutCnt[8]_i_4__0_n_0 ,\rTimeoutCnt[8]_i_5__0_n_0 }));
+        .S(rTimeoutCnt_reg[11:8]));
   FDRE \rTimeoutCnt_reg[9] 
        (.C(RefClk),
         .CE(\rTimeoutCnt[0]_i_1__0_n_0 ),
@@ -9229,114 +9138,80 @@ endmodule
 
 (* ORIG_REF_NAME = "TMDS_Decoder" *) 
 module hdmi_in_dvi2rgb_0_0_TMDS_Decoder_1
-   (pAllVldBgnFlag,
-    pVld_2,
+   (pVld_2,
     pRdy_2,
-    SR,
     vid_pData,
     TMDS_Data_p,
     TMDS_Data_n,
-    rMMCM_LckdRisingFlag_reg,
-    \rMMCM_Reset_q_reg[0] ,
+    iIn_q_reg,
+    \pDataQ_reg[8] ,
     CLKB,
     out,
     RefClk,
-    pAllVld,
-    pAligned_reg,
-    pVld_1,
-    pVld_0,
+    pRdEn_reg,
     pRdy_0,
     pRdy_1,
+    pAllVldBgnFlag,
     pRst_n,
-    pMeRdy_int_reg);
-  output pAllVldBgnFlag;
+    pAllVld);
   output pVld_2;
   output pRdy_2;
-  output [0:0]SR;
   output [7:0]vid_pData;
   input [0:0]TMDS_Data_p;
   input [0:0]TMDS_Data_n;
-  input rMMCM_LckdRisingFlag_reg;
-  input \rMMCM_Reset_q_reg[0] ;
+  input iIn_q_reg;
+  input \pDataQ_reg[8] ;
   input CLKB;
   input [0:0]out;
   input RefClk;
-  input pAllVld;
-  input pAligned_reg;
-  input pVld_1;
-  input pVld_0;
+  input pRdEn_reg;
   input pRdy_0;
   input pRdy_1;
+  input pAllVldBgnFlag;
   input pRst_n;
-  input [0:0]pMeRdy_int_reg;
+  input pAllVld;
 
   wire CLKB;
+  wire ChannelBondX_n_9;
   wire PhaseAlignX_n_4;
   wire PhaseAlignX_n_5;
-  wire PhaseAlignX_n_7;
   wire RefClk;
-  wire [0:0]SR;
   wire SyncBaseOvf_n_1;
   wire SyncBaseOvf_n_2;
   wire SyncBaseOvf_n_3;
   wire SyncBaseOvf_n_4;
+  wire SyncBaseOvf_n_5;
+  wire SyncBaseOvf_n_6;
   wire [0:0]TMDS_Data_n;
   wire [0:0]TMDS_Data_p;
+  wire iIn_q_reg;
   wire [0:0]out;
   wire pAlignErr_q;
-  wire pAlignRst;
   wire pAlignRst_i_1_n_0;
-  wire pAligned_reg;
+  wire pAlignRst_reg_n_0;
   wire pAllVld;
   wire pAllVldBgnFlag;
-  wire pAllVldBgnFlag0;
-  wire pAllVld_q;
   wire pBitslip;
+  wire pBitslip0;
   wire [1:0]pBitslipCnt;
   wire \pBitslipCnt[0]_i_1_n_0 ;
   wire \pBitslipCnt[1]_i_1_n_0 ;
   wire [7:0]pDataIn;
   wire [9:0]pDataInRaw;
+  wire \pDataQ_reg[8] ;
   wire pIDLY_CE;
   wire [4:0]pIDLY_CNT;
   wire pIDLY_INC;
   wire pIDLY_LD;
-  wire [0:0]pMeRdy_int_reg;
+  wire pRdEn_reg;
   wire pRdy_0;
   wire pRdy_1;
   wire pRdy_2;
   wire pRst_n;
   wire pTimeoutOvf;
-  wire pVld_0;
-  wire pVld_1;
   wire pVld_2;
-  wire rMMCM_LckdRisingFlag_reg;
-  wire \rMMCM_Reset_q_reg[0] ;
   wire \rTimeoutCnt[0]_i_1_n_0 ;
   wire \rTimeoutCnt[0]_i_3_n_0 ;
-  wire \rTimeoutCnt[0]_i_4_n_0 ;
-  wire \rTimeoutCnt[0]_i_5_n_0 ;
-  wire \rTimeoutCnt[0]_i_6_n_0 ;
-  wire \rTimeoutCnt[12]_i_2_n_0 ;
-  wire \rTimeoutCnt[12]_i_3_n_0 ;
-  wire \rTimeoutCnt[12]_i_4_n_0 ;
-  wire \rTimeoutCnt[12]_i_5_n_0 ;
-  wire \rTimeoutCnt[16]_i_2_n_0 ;
-  wire \rTimeoutCnt[16]_i_3_n_0 ;
-  wire \rTimeoutCnt[16]_i_4_n_0 ;
-  wire \rTimeoutCnt[16]_i_5_n_0 ;
-  wire \rTimeoutCnt[20]_i_2_n_0 ;
-  wire \rTimeoutCnt[20]_i_3_n_0 ;
-  wire \rTimeoutCnt[20]_i_4_n_0 ;
-  wire \rTimeoutCnt[20]_i_5_n_0 ;
-  wire \rTimeoutCnt[4]_i_2_n_0 ;
-  wire \rTimeoutCnt[4]_i_3_n_0 ;
-  wire \rTimeoutCnt[4]_i_4_n_0 ;
-  wire \rTimeoutCnt[4]_i_5_n_0 ;
-  wire \rTimeoutCnt[8]_i_2_n_0 ;
-  wire \rTimeoutCnt[8]_i_3_n_0 ;
-  wire \rTimeoutCnt[8]_i_4_n_0 ;
-  wire \rTimeoutCnt[8]_i_5_n_0 ;
   wire [23:0]rTimeoutCnt_reg;
   wire \rTimeoutCnt_reg[0]_i_2_n_0 ;
   wire \rTimeoutCnt_reg[0]_i_2_n_1 ;
@@ -9391,17 +9266,15 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder_1
 
   hdmi_in_dvi2rgb_0_0_ChannelBond ChannelBondX
        (.D(pDataIn),
-        .SR(SR),
-        .pAligned_reg(pAligned_reg),
+        .SR(ChannelBondX_n_9),
         .pAllVld(pAllVld),
         .pAllVldBgnFlag(pAllVldBgnFlag),
-        .pAllVldBgnFlag0(pAllVldBgnFlag0),
-        .pAllVld_q(pAllVld_q),
+        .\pDataFIFO_reg[0]_0 (iIn_q_reg),
         .pDataInRaw(pDataInRaw),
         .pMeRdy_int_reg_0(pRdy_2),
+        .pRdEn_reg_0(pRdEn_reg),
         .pRdy_0(pRdy_0),
-        .pRdy_1(pRdy_1),
-        .rMMCM_LckdRisingFlag_reg(rMMCM_LckdRisingFlag_reg));
+        .pRdy_1(pRdy_1));
   hdmi_in_dvi2rgb_0_0_InputSERDES InputSERDES_X
        (.CLKB(CLKB),
         .D(pIDLY_CNT),
@@ -9410,47 +9283,45 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder_1
         .out(out),
         .pBitslip(pBitslip),
         .pDataInRaw(pDataInRaw),
+        .\pDataQ_reg[8] (\pDataQ_reg[8] ),
         .pIDLY_CE(pIDLY_CE),
+        .\pIDLY_CNT_Q_reg[4] (iIn_q_reg),
         .pIDLY_INC(pIDLY_INC),
-        .pIDLY_LD(pIDLY_LD),
-        .rMMCM_LckdRisingFlag_reg(rMMCM_LckdRisingFlag_reg),
-        .\rMMCM_Reset_q_reg[0] (\rMMCM_Reset_q_reg[0] ));
+        .pIDLY_LD(pIDLY_LD));
   hdmi_in_dvi2rgb_0_0_PhaseAlign PhaseAlignX
        (.D(pDataInRaw[8:0]),
-        .SR(pAlignRst),
-        .iIn_q_reg(PhaseAlignX_n_5),
+        .SS(pAlignRst_reg_n_0),
         .out(pTimeoutOvf),
         .pAlignErr_q(pAlignErr_q),
-        .pAlignErr_q_reg(PhaseAlignX_n_4),
-        .pAllVldBgnFlag0(pAllVldBgnFlag0),
-        .pAllVld_q(pAllVld_q),
-        .pBitslip_reg(PhaseAlignX_n_7),
+        .pBitslip0(pBitslip0),
+        .pError_reg_0(PhaseAlignX_n_4),
+        .pError_reg_1(iIn_q_reg),
         .pIDLY_CE(pIDLY_CE),
-        .pIDLY_CE_reg_0(pIDLY_CNT),
+        .\pIDLY_CNT_Q_reg[4]_0 (pIDLY_CNT),
         .pIDLY_INC(pIDLY_INC),
         .pIDLY_LD(pIDLY_LD),
-        .pVld_0(pVld_0),
-        .pVld_1(pVld_1),
-        .pVld_2(pVld_2),
-        .rMMCM_LckdRisingFlag_reg(rMMCM_LckdRisingFlag_reg));
+        .\pState_reg[1]_0 (PhaseAlignX_n_5),
+        .pVld_2(pVld_2));
   hdmi_in_dvi2rgb_0_0_SyncBase SyncBaseOvf
        (.RefClk(RefClk),
-        .iIn_q_reg_0(SyncBaseOvf_n_1),
-        .iIn_q_reg_1(SyncBaseOvf_n_2),
-        .iIn_q_reg_2(SyncBaseOvf_n_3),
-        .iIn_q_reg_3(SyncBaseOvf_n_4),
         .\oSyncStages_reg[1] (out),
+        .\oSyncStages_reg[1]_0 (iIn_q_reg),
         .out(pTimeoutOvf),
-        .rMMCM_LckdRisingFlag_reg(rMMCM_LckdRisingFlag_reg),
-        .rTimeoutCnt_reg(rTimeoutCnt_reg));
+        .rTimeoutCnt_reg(rTimeoutCnt_reg),
+        .rTimeoutCnt_reg_10_sp_1(SyncBaseOvf_n_6),
+        .rTimeoutCnt_reg_14_sp_1(SyncBaseOvf_n_1),
+        .rTimeoutCnt_reg_20_sp_1(SyncBaseOvf_n_4),
+        .rTimeoutCnt_reg_21_sp_1(SyncBaseOvf_n_2),
+        .rTimeoutCnt_reg_3_sp_1(SyncBaseOvf_n_3),
+        .rTimeoutCnt_reg_8_sp_1(SyncBaseOvf_n_5));
   hdmi_in_dvi2rgb_0_0_SyncBase__parameterized0 SyncBaseRst
        (.RefClk(RefClk),
+        .iIn_q_reg_0(PhaseAlignX_n_5),
+        .iIn_q_reg_1(iIn_q_reg),
         .\oSyncStages_reg[1] (out),
-        .out(rTimeoutRst),
-        .\pState_reg[3] (PhaseAlignX_n_5),
-        .rMMCM_LckdRisingFlag_reg(rMMCM_LckdRisingFlag_reg));
+        .out(rTimeoutRst));
   FDRE pAlignErr_q_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(PhaseAlignX_n_4),
         .Q(pAlignErr_q),
@@ -9462,15 +9333,15 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder_1
         .I1(pBitslip),
         .I2(pBitslipCnt[1]),
         .I3(pBitslipCnt[0]),
-        .I4(pAlignRst),
+        .I4(pAlignRst_reg_n_0),
         .O(pAlignRst_i_1_n_0));
   FDPE pAlignRst_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(pAlignRst_i_1_n_0),
         .PRE(out),
-        .Q(pAlignRst));
-  (* SOFT_HLUTNM = "soft_lutpair83" *) 
+        .Q(pAlignRst_reg_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair76" *) 
   LUT3 #(
     .INIT(8'h04)) 
     \pBitslipCnt[0]_i_1 
@@ -9478,7 +9349,7 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder_1
         .I1(pBitslipCnt[1]),
         .I2(pBitslip),
         .O(\pBitslipCnt[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair83" *) 
+  (* SOFT_HLUTNM = "soft_lutpair76" *) 
   LUT3 #(
     .INIT(8'hF8)) 
     \pBitslipCnt[1]_i_1 
@@ -9489,7 +9360,7 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder_1
   FDRE #(
     .INIT(1'b0)) 
     \pBitslipCnt_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(\pBitslipCnt[0]_i_1_n_0 ),
         .Q(pBitslipCnt[0]),
@@ -9497,193 +9368,80 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder_1
   FDRE #(
     .INIT(1'b1)) 
     \pBitslipCnt_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(\pBitslipCnt[1]_i_1_n_0 ),
         .Q(pBitslipCnt[1]),
         .R(1'b0));
   FDRE pBitslip_reg
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
-        .D(PhaseAlignX_n_7),
+        .D(pBitslip0),
         .Q(pBitslip),
         .R(1'b0));
   FDRE \pDataIn_reg[0] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(pDataIn[0]),
         .Q(vid_pData[0]),
-        .R(pMeRdy_int_reg));
+        .R(ChannelBondX_n_9));
   FDRE \pDataIn_reg[1] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(pDataIn[1]),
         .Q(vid_pData[1]),
-        .R(pMeRdy_int_reg));
+        .R(ChannelBondX_n_9));
   FDRE \pDataIn_reg[2] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(pDataIn[2]),
         .Q(vid_pData[2]),
-        .R(pMeRdy_int_reg));
+        .R(ChannelBondX_n_9));
   FDRE \pDataIn_reg[3] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(pDataIn[3]),
         .Q(vid_pData[3]),
-        .R(pMeRdy_int_reg));
+        .R(ChannelBondX_n_9));
   FDRE \pDataIn_reg[4] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(pDataIn[4]),
         .Q(vid_pData[4]),
-        .R(pMeRdy_int_reg));
+        .R(ChannelBondX_n_9));
   FDRE \pDataIn_reg[5] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(pDataIn[5]),
         .Q(vid_pData[5]),
-        .R(pMeRdy_int_reg));
+        .R(ChannelBondX_n_9));
   FDRE \pDataIn_reg[6] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(pDataIn[6]),
         .Q(vid_pData[6]),
-        .R(pMeRdy_int_reg));
+        .R(ChannelBondX_n_9));
   FDRE \pDataIn_reg[7] 
-       (.C(rMMCM_LckdRisingFlag_reg),
+       (.C(iIn_q_reg),
         .CE(1'b1),
         .D(pDataIn[7]),
         .Q(vid_pData[7]),
-        .R(pMeRdy_int_reg));
-  LUT4 #(
-    .INIT(16'hBFFF)) 
+        .R(ChannelBondX_n_9));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
     \rTimeoutCnt[0]_i_1 
        (.I0(SyncBaseOvf_n_1),
         .I1(SyncBaseOvf_n_2),
         .I2(SyncBaseOvf_n_3),
         .I3(SyncBaseOvf_n_4),
+        .I4(SyncBaseOvf_n_5),
+        .I5(SyncBaseOvf_n_6),
         .O(\rTimeoutCnt[0]_i_1_n_0 ));
   LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[0]_i_3 
-       (.I0(rTimeoutCnt_reg[3]),
-        .O(\rTimeoutCnt[0]_i_3_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[0]_i_4 
-       (.I0(rTimeoutCnt_reg[2]),
-        .O(\rTimeoutCnt[0]_i_4_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[0]_i_5 
-       (.I0(rTimeoutCnt_reg[1]),
-        .O(\rTimeoutCnt[0]_i_5_n_0 ));
-  LUT1 #(
     .INIT(2'h1)) 
-    \rTimeoutCnt[0]_i_6 
+    \rTimeoutCnt[0]_i_3 
        (.I0(rTimeoutCnt_reg[0]),
-        .O(\rTimeoutCnt[0]_i_6_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[12]_i_2 
-       (.I0(rTimeoutCnt_reg[15]),
-        .O(\rTimeoutCnt[12]_i_2_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[12]_i_3 
-       (.I0(rTimeoutCnt_reg[14]),
-        .O(\rTimeoutCnt[12]_i_3_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[12]_i_4 
-       (.I0(rTimeoutCnt_reg[13]),
-        .O(\rTimeoutCnt[12]_i_4_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[12]_i_5 
-       (.I0(rTimeoutCnt_reg[12]),
-        .O(\rTimeoutCnt[12]_i_5_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[16]_i_2 
-       (.I0(rTimeoutCnt_reg[19]),
-        .O(\rTimeoutCnt[16]_i_2_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[16]_i_3 
-       (.I0(rTimeoutCnt_reg[18]),
-        .O(\rTimeoutCnt[16]_i_3_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[16]_i_4 
-       (.I0(rTimeoutCnt_reg[17]),
-        .O(\rTimeoutCnt[16]_i_4_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[16]_i_5 
-       (.I0(rTimeoutCnt_reg[16]),
-        .O(\rTimeoutCnt[16]_i_5_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[20]_i_2 
-       (.I0(rTimeoutCnt_reg[23]),
-        .O(\rTimeoutCnt[20]_i_2_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[20]_i_3 
-       (.I0(rTimeoutCnt_reg[22]),
-        .O(\rTimeoutCnt[20]_i_3_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[20]_i_4 
-       (.I0(rTimeoutCnt_reg[21]),
-        .O(\rTimeoutCnt[20]_i_4_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[20]_i_5 
-       (.I0(rTimeoutCnt_reg[20]),
-        .O(\rTimeoutCnt[20]_i_5_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[4]_i_2 
-       (.I0(rTimeoutCnt_reg[7]),
-        .O(\rTimeoutCnt[4]_i_2_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[4]_i_3 
-       (.I0(rTimeoutCnt_reg[6]),
-        .O(\rTimeoutCnt[4]_i_3_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[4]_i_4 
-       (.I0(rTimeoutCnt_reg[5]),
-        .O(\rTimeoutCnt[4]_i_4_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[4]_i_5 
-       (.I0(rTimeoutCnt_reg[4]),
-        .O(\rTimeoutCnt[4]_i_5_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[8]_i_2 
-       (.I0(rTimeoutCnt_reg[11]),
-        .O(\rTimeoutCnt[8]_i_2_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[8]_i_3 
-       (.I0(rTimeoutCnt_reg[10]),
-        .O(\rTimeoutCnt[8]_i_3_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[8]_i_4 
-       (.I0(rTimeoutCnt_reg[9]),
-        .O(\rTimeoutCnt[8]_i_4_n_0 ));
-  LUT1 #(
-    .INIT(2'h2)) 
-    \rTimeoutCnt[8]_i_5 
-       (.I0(rTimeoutCnt_reg[8]),
-        .O(\rTimeoutCnt[8]_i_5_n_0 ));
+        .O(\rTimeoutCnt[0]_i_3_n_0 ));
   FDRE \rTimeoutCnt_reg[0] 
        (.C(RefClk),
         .CE(\rTimeoutCnt[0]_i_1_n_0 ),
@@ -9696,7 +9454,7 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder_1
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b1}),
         .O({\rTimeoutCnt_reg[0]_i_2_n_4 ,\rTimeoutCnt_reg[0]_i_2_n_5 ,\rTimeoutCnt_reg[0]_i_2_n_6 ,\rTimeoutCnt_reg[0]_i_2_n_7 }),
-        .S({\rTimeoutCnt[0]_i_3_n_0 ,\rTimeoutCnt[0]_i_4_n_0 ,\rTimeoutCnt[0]_i_5_n_0 ,\rTimeoutCnt[0]_i_6_n_0 }));
+        .S({rTimeoutCnt_reg[3:1],\rTimeoutCnt[0]_i_3_n_0 }));
   FDRE \rTimeoutCnt_reg[10] 
        (.C(RefClk),
         .CE(\rTimeoutCnt[0]_i_1_n_0 ),
@@ -9721,7 +9479,7 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder_1
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O({\rTimeoutCnt_reg[12]_i_1_n_4 ,\rTimeoutCnt_reg[12]_i_1_n_5 ,\rTimeoutCnt_reg[12]_i_1_n_6 ,\rTimeoutCnt_reg[12]_i_1_n_7 }),
-        .S({\rTimeoutCnt[12]_i_2_n_0 ,\rTimeoutCnt[12]_i_3_n_0 ,\rTimeoutCnt[12]_i_4_n_0 ,\rTimeoutCnt[12]_i_5_n_0 }));
+        .S(rTimeoutCnt_reg[15:12]));
   FDRE \rTimeoutCnt_reg[13] 
        (.C(RefClk),
         .CE(\rTimeoutCnt[0]_i_1_n_0 ),
@@ -9752,7 +9510,7 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder_1
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O({\rTimeoutCnt_reg[16]_i_1_n_4 ,\rTimeoutCnt_reg[16]_i_1_n_5 ,\rTimeoutCnt_reg[16]_i_1_n_6 ,\rTimeoutCnt_reg[16]_i_1_n_7 }),
-        .S({\rTimeoutCnt[16]_i_2_n_0 ,\rTimeoutCnt[16]_i_3_n_0 ,\rTimeoutCnt[16]_i_4_n_0 ,\rTimeoutCnt[16]_i_5_n_0 }));
+        .S(rTimeoutCnt_reg[19:16]));
   FDRE \rTimeoutCnt_reg[17] 
        (.C(RefClk),
         .CE(\rTimeoutCnt[0]_i_1_n_0 ),
@@ -9789,7 +9547,7 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder_1
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O({\rTimeoutCnt_reg[20]_i_1_n_4 ,\rTimeoutCnt_reg[20]_i_1_n_5 ,\rTimeoutCnt_reg[20]_i_1_n_6 ,\rTimeoutCnt_reg[20]_i_1_n_7 }),
-        .S({\rTimeoutCnt[20]_i_2_n_0 ,\rTimeoutCnt[20]_i_3_n_0 ,\rTimeoutCnt[20]_i_4_n_0 ,\rTimeoutCnt[20]_i_5_n_0 }));
+        .S(rTimeoutCnt_reg[23:20]));
   FDRE \rTimeoutCnt_reg[21] 
        (.C(RefClk),
         .CE(\rTimeoutCnt[0]_i_1_n_0 ),
@@ -9832,7 +9590,7 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder_1
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O({\rTimeoutCnt_reg[4]_i_1_n_4 ,\rTimeoutCnt_reg[4]_i_1_n_5 ,\rTimeoutCnt_reg[4]_i_1_n_6 ,\rTimeoutCnt_reg[4]_i_1_n_7 }),
-        .S({\rTimeoutCnt[4]_i_2_n_0 ,\rTimeoutCnt[4]_i_3_n_0 ,\rTimeoutCnt[4]_i_4_n_0 ,\rTimeoutCnt[4]_i_5_n_0 }));
+        .S(rTimeoutCnt_reg[7:4]));
   FDRE \rTimeoutCnt_reg[5] 
        (.C(RefClk),
         .CE(\rTimeoutCnt[0]_i_1_n_0 ),
@@ -9863,7 +9621,7 @@ module hdmi_in_dvi2rgb_0_0_TMDS_Decoder_1
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O({\rTimeoutCnt_reg[8]_i_1_n_4 ,\rTimeoutCnt_reg[8]_i_1_n_5 ,\rTimeoutCnt_reg[8]_i_1_n_6 ,\rTimeoutCnt_reg[8]_i_1_n_7 }),
-        .S({\rTimeoutCnt[8]_i_2_n_0 ,\rTimeoutCnt[8]_i_3_n_0 ,\rTimeoutCnt[8]_i_4_n_0 ,\rTimeoutCnt[8]_i_5_n_0 }));
+        .S(rTimeoutCnt_reg[11:8]));
   FDRE \rTimeoutCnt_reg[9] 
        (.C(RefClk),
         .CE(\rTimeoutCnt[0]_i_1_n_0 ),
@@ -9874,34 +9632,42 @@ endmodule
 
 (* ORIG_REF_NAME = "TWI_SlaveCtl" *) 
 module hdmi_in_dvi2rgb_0_0_TWI_SlaveCtl
-   (sI2C_End,
-    sI2C_Done,
-    rd_wrn_reg_0,
-    DDC_SDA_T,
+   (DDC_SDA_T,
     E,
+    \FSM_onehot_sState_reg[3] ,
+    END_O_reg_0,
+    END_O_reg_1,
     D,
+    \FSM_onehot_sState_reg[0] ,
+    \FSM_onehot_sState_reg[0]_0 ,
     RefClk,
     Q,
-    sState,
+    \sAddr_reg[0] ,
+    \sAddr_reg[0]_0 ,
+    \FSM_onehot_sState_reg[3]_0 ,
+    \FSM_onehot_sState_reg[0]_1 ,
     \sAddr_reg[6] ,
-    \sState_reg[0] ,
-    \sAddr_reg[3] ,
     \sAddr_reg[4] ,
+    \sAddr_reg[6]_0 ,
     DDC_SDA_I,
     DDC_SCL_I);
-  output sI2C_End;
-  output sI2C_Done;
-  output rd_wrn_reg_0;
   output DDC_SDA_T;
   output [0:0]E;
+  output \FSM_onehot_sState_reg[3] ;
+  output END_O_reg_0;
+  output END_O_reg_1;
   output [6:0]D;
+  output \FSM_onehot_sState_reg[0] ;
+  output \FSM_onehot_sState_reg[0]_0 ;
   input RefClk;
   input [7:0]Q;
-  input [1:0]sState;
+  input \sAddr_reg[0] ;
+  input \sAddr_reg[0]_0 ;
+  input \FSM_onehot_sState_reg[3]_0 ;
+  input \FSM_onehot_sState_reg[0]_1 ;
   input [6:0]\sAddr_reg[6] ;
-  input \sState_reg[0] ;
-  input \sAddr_reg[3] ;
   input \sAddr_reg[4] ;
+  input \sAddr_reg[6]_0 ;
   input DDC_SDA_I;
   input DDC_SCL_I;
 
@@ -9910,26 +9676,39 @@ module hdmi_in_dvi2rgb_0_0_TWI_SlaveCtl
   wire DDC_SDA_I;
   wire DDC_SDA_T;
   wire DONE_O_i_2_n_0;
-  wire DONE_O_i_4_n_0;
+  wire DONE_O_i_3_n_0;
   wire [0:0]E;
   wire END_O_i_2_n_0;
+  wire END_O_reg_0;
+  wire END_O_reg_1;
   wire \FSM_gray_state[0]_i_1_n_0 ;
-  wire \FSM_gray_state[0]_i_2_n_0 ;
   wire \FSM_gray_state[0]_i_3_n_0 ;
   wire \FSM_gray_state[0]_i_4_n_0 ;
+  wire \FSM_gray_state[0]_i_5_n_0 ;
+  wire \FSM_gray_state[0]_i_6_n_0 ;
+  wire \FSM_gray_state[0]_i_7_n_0 ;
   wire \FSM_gray_state[1]_i_1_n_0 ;
   wire \FSM_gray_state[1]_i_2_n_0 ;
   wire \FSM_gray_state[1]_i_3_n_0 ;
   wire \FSM_gray_state[1]_i_4_n_0 ;
   wire \FSM_gray_state[1]_i_5_n_0 ;
   wire \FSM_gray_state[1]_i_6_n_0 ;
+  wire \FSM_gray_state[1]_i_7_n_0 ;
+  wire \FSM_gray_state[2]_i_10_n_0 ;
   wire \FSM_gray_state[2]_i_1_n_0 ;
   wire \FSM_gray_state[2]_i_2_n_0 ;
   wire \FSM_gray_state[2]_i_3_n_0 ;
   wire \FSM_gray_state[2]_i_4_n_0 ;
   wire \FSM_gray_state[2]_i_5_n_0 ;
   wire \FSM_gray_state[2]_i_6_n_0 ;
+  wire \FSM_gray_state[2]_i_7_n_0 ;
   wire \FSM_gray_state[2]_i_8_n_0 ;
+  wire \FSM_gray_state[2]_i_9_n_0 ;
+  wire \FSM_onehot_sState_reg[0] ;
+  wire \FSM_onehot_sState_reg[0]_0 ;
+  wire \FSM_onehot_sState_reg[0]_1 ;
+  wire \FSM_onehot_sState_reg[3] ;
+  wire \FSM_onehot_sState_reg[3]_0 ;
   wire GlitchF_SCL_n_0;
   wire GlitchF_SCL_n_1;
   wire [7:0]Q;
@@ -9940,10 +9719,7 @@ module hdmi_in_dvi2rgb_0_0_TWI_SlaveCtl
   wire \bitCount[1]_i_1_n_0 ;
   wire \bitCount[2]_i_1_n_0 ;
   wire \bitCount[2]_i_2_n_0 ;
-  wire bitCount__1;
-  wire \bitCount_reg_n_0_[0] ;
-  wire \bitCount_reg_n_0_[1] ;
-  wire \bitCount_reg_n_0_[2] ;
+  wire [2:0]bitCount_reg__0;
   wire dScl;
   wire dSda;
   wire \dataByte[0]_i_1_n_0 ;
@@ -9955,85 +9731,68 @@ module hdmi_in_dvi2rgb_0_0_TWI_SlaveCtl
   wire \dataByte[6]_i_1_n_0 ;
   wire \dataByte[7]_i_1_n_0 ;
   wire \dataByte[7]_i_2_n_0 ;
+  wire \dataByte[7]_i_3_n_0 ;
   wire \dataByte[7]_i_4_n_0 ;
   wire \dataByte[7]_i_5_n_0 ;
-  wire \dataByte[7]_i_6_n_0 ;
-  wire \dataByte_reg_n_0_[0] ;
-  wire \dataByte_reg_n_0_[1] ;
-  wire \dataByte_reg_n_0_[2] ;
-  wire \dataByte_reg_n_0_[3] ;
-  wire \dataByte_reg_n_0_[4] ;
-  wire \dataByte_reg_n_0_[5] ;
-  wire \dataByte_reg_n_0_[6] ;
   wire \dataByte_reg_n_0_[7] ;
   wire ddScl;
   wire ddSda;
-  wire fStart;
-  wire fStop;
   wire iDone;
   wire iEnd;
-  wire p_15_in;
-  wire rd_wrn0;
+  wire [0:0]nstate__0;
   wire rd_wrn_i_1_n_0;
-  wire rd_wrn_i_2_n_0;
-  wire rd_wrn_reg_0;
-  wire \sAddr_reg[3] ;
+  wire \sAddr_reg[0] ;
+  wire \sAddr_reg[0]_0 ;
   wire \sAddr_reg[4] ;
   wire [6:0]\sAddr_reg[6] ;
+  wire \sAddr_reg[6]_0 ;
+  wire [6:0]sI2C_DataIn;
   wire sI2C_Done;
   wire sI2C_End;
+  wire sI2C_RdWrn;
   wire sIn_q;
   wire sOut;
   wire sScl;
   wire sSda;
-  wire [1:0]sState;
-  wire \sState_reg[0] ;
-  (* RTL_KEEP = "yes" *) wire [2:0]state;
+  wire [2:0]state;
 
   LUT4 #(
-    .INIT(16'hFD7D)) 
+    .INIT(16'hFFE3)) 
     DDC_SDA_T_INST_0
-       (.I0(state[1]),
+       (.I0(\dataByte_reg_n_0_[7] ),
         .I1(state[2]),
         .I2(state[0]),
-        .I3(\dataByte_reg_n_0_[7] ),
+        .I3(state[1]),
         .O(DDC_SDA_T));
   LUT6 #(
-    .INIT(64'hAAAAAAAAAAAAAAEA)) 
+    .INIT(64'h00000030CC44CC74)) 
     DONE_O_i_1
        (.I0(DONE_O_i_2_n_0),
-        .I1(rd_wrn0),
-        .I2(DONE_O_i_4_n_0),
-        .I3(\dataByte_reg_n_0_[0] ),
-        .I4(\dataByte_reg_n_0_[1] ),
-        .I5(\dataByte_reg_n_0_[2] ),
+        .I1(state[1]),
+        .I2(state[0]),
+        .I3(state[2]),
+        .I4(DONE_O_i_3_n_0),
+        .I5(\FSM_gray_state[0]_i_5_n_0 ),
         .O(iDone));
-  LUT6 #(
-    .INIT(64'h2008000000000000)) 
+  (* SOFT_HLUTNM = "soft_lutpair85" *) 
+  LUT4 #(
+    .INIT(16'hFFFE)) 
     DONE_O_i_2
-       (.I0(bitCount__1),
-        .I1(dScl),
-        .I2(ddScl),
-        .I3(state[0]),
-        .I4(state[2]),
-        .I5(state[1]),
+       (.I0(sI2C_DataIn[2]),
+        .I1(sI2C_DataIn[0]),
+        .I2(sI2C_DataIn[1]),
+        .I3(\FSM_gray_state[2]_i_7_n_0 ),
         .O(DONE_O_i_2_n_0));
-  LUT4 #(
-    .INIT(16'h0200)) 
+  (* SOFT_HLUTNM = "soft_lutpair81" *) 
+  LUT5 #(
+    .INIT(32'hFFFEFFFF)) 
     DONE_O_i_3
-       (.I0(rd_wrn_i_2_n_0),
-        .I1(state[2]),
-        .I2(state[1]),
-        .I3(state[0]),
-        .O(rd_wrn0));
-  LUT4 #(
-    .INIT(16'h0400)) 
-    DONE_O_i_4
-       (.I0(\dataByte_reg_n_0_[5] ),
-        .I1(\dataByte_reg_n_0_[6] ),
-        .I2(\dataByte_reg_n_0_[3] ),
-        .I3(\dataByte_reg_n_0_[4] ),
-        .O(DONE_O_i_4_n_0));
+       (.I0(bitCount_reg__0[0]),
+        .I1(bitCount_reg__0[1]),
+        .I2(bitCount_reg__0[2]),
+        .I3(dScl),
+        .I4(ddScl),
+        .O(DONE_O_i_3_n_0));
   FDRE DONE_O_reg
        (.C(RefClk),
         .CE(1'b1),
@@ -10041,20 +9800,21 @@ module hdmi_in_dvi2rgb_0_0_TWI_SlaveCtl
         .Q(sI2C_Done),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'h10FF0000FF000000)) 
+    .INIT(64'h4488448844884C88)) 
     END_O_i_1
-       (.I0(ddScl),
-        .I1(state[1]),
-        .I2(END_O_i_2_n_0),
+       (.I0(dSda),
+        .I1(dScl),
+        .I2(ddScl),
         .I3(ddSda),
-        .I4(dScl),
-        .I5(dSda),
+        .I4(state[0]),
+        .I5(END_O_i_2_n_0),
         .O(iEnd));
+  (* SOFT_HLUTNM = "soft_lutpair84" *) 
   LUT2 #(
-    .INIT(4'h2)) 
+    .INIT(4'hB)) 
     END_O_i_2
        (.I0(state[2]),
-        .I1(state[0]),
+        .I1(state[1]),
         .O(END_O_i_2_n_0));
   FDRE END_O_reg
        (.C(RefClk),
@@ -10063,205 +9823,298 @@ module hdmi_in_dvi2rgb_0_0_TWI_SlaveCtl
         .Q(sI2C_End),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'hBABABAFFBABABA00)) 
+    .INIT(64'hABABAAABA8A8AAA8)) 
     \FSM_gray_state[0]_i_1 
-       (.I0(\FSM_gray_state[0]_i_2_n_0 ),
+       (.I0(nstate__0),
         .I1(\FSM_gray_state[0]_i_3_n_0 ),
-        .I2(\FSM_gray_state[1]_i_2_n_0 ),
-        .I3(\FSM_gray_state[1]_i_5_n_0 ),
-        .I4(\FSM_gray_state[2]_i_5_n_0 ),
+        .I2(\FSM_gray_state[0]_i_4_n_0 ),
+        .I3(state[1]),
+        .I4(\FSM_gray_state[0]_i_5_n_0 ),
         .I5(state[0]),
         .O(\FSM_gray_state[0]_i_1_n_0 ));
-  LUT3 #(
-    .INIT(8'h01)) 
+  LUT6 #(
+    .INIT(64'h00D10101D1FDDDDD)) 
     \FSM_gray_state[0]_i_2 
        (.I0(state[0]),
-        .I1(state[1]),
-        .I2(state[2]),
-        .O(\FSM_gray_state[0]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'h000000000000FFEF)) 
-    \FSM_gray_state[0]_i_3 
-       (.I0(\FSM_gray_state[1]_i_6_n_0 ),
-        .I1(\dataByte_reg_n_0_[3] ),
-        .I2(\dataByte_reg_n_0_[4] ),
-        .I3(\dataByte_reg_n_0_[2] ),
-        .I4(\FSM_gray_state[0]_i_4_n_0 ),
-        .I5(END_O_i_2_n_0),
-        .O(\FSM_gray_state[0]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'h4444F44444444444)) 
-    \FSM_gray_state[0]_i_4 
-       (.I0(state[0]),
-        .I1(rd_wrn_reg_0),
-        .I2(dScl),
-        .I3(ddSda),
-        .I4(dSda),
-        .I5(state[1]),
-        .O(\FSM_gray_state[0]_i_4_n_0 ));
-  LUT6 #(
-    .INIT(64'h8A8A8AFF8A8A8A00)) 
-    \FSM_gray_state[1]_i_1 
-       (.I0(\FSM_gray_state[1]_i_2_n_0 ),
-        .I1(\FSM_gray_state[1]_i_3_n_0 ),
-        .I2(\FSM_gray_state[1]_i_4_n_0 ),
-        .I3(\FSM_gray_state[1]_i_5_n_0 ),
-        .I4(\FSM_gray_state[2]_i_5_n_0 ),
-        .I5(state[1]),
-        .O(\FSM_gray_state[1]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'hEFEE0FFF)) 
-    \FSM_gray_state[1]_i_2 
-       (.I0(state[0]),
-        .I1(state[1]),
-        .I2(dSda),
-        .I3(dScl),
-        .I4(ddSda),
-        .O(\FSM_gray_state[1]_i_2_n_0 ));
-  LUT5 #(
-    .INIT(32'h00000200)) 
-    \FSM_gray_state[1]_i_3 
-       (.I0(state[0]),
-        .I1(\FSM_gray_state[1]_i_6_n_0 ),
-        .I2(\dataByte_reg_n_0_[3] ),
-        .I3(\dataByte_reg_n_0_[4] ),
-        .I4(\dataByte_reg_n_0_[2] ),
-        .O(\FSM_gray_state[1]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFF010F0FF)) 
-    \FSM_gray_state[1]_i_4 
-       (.I0(sState[0]),
-        .I1(sState[1]),
-        .I2(state[0]),
-        .I3(state[2]),
-        .I4(state[1]),
-        .I5(fStart),
-        .O(\FSM_gray_state[1]_i_4_n_0 ));
-  LUT6 #(
-    .INIT(64'hBBBABBBBBBBAAAAA)) 
-    \FSM_gray_state[1]_i_5 
-       (.I0(\FSM_gray_state[2]_i_4_n_0 ),
-        .I1(\dataByte[7]_i_6_n_0 ),
-        .I2(rd_wrn_i_2_n_0),
-        .I3(fStop),
-        .I4(state[0]),
-        .I5(fStart),
-        .O(\FSM_gray_state[1]_i_5_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFEFF)) 
-    \FSM_gray_state[1]_i_6 
-       (.I0(state[1]),
         .I1(state[2]),
-        .I2(\dataByte_reg_n_0_[5] ),
-        .I3(\dataByte_reg_n_0_[6] ),
-        .I4(\dataByte_reg_n_0_[1] ),
-        .I5(\dataByte_reg_n_0_[0] ),
-        .O(\FSM_gray_state[1]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair91" *) 
-  LUT3 #(
-    .INIT(8'h40)) 
-    \FSM_gray_state[1]_i_7 
-       (.I0(ddSda),
-        .I1(dScl),
-        .I2(dSda),
-        .O(fStop));
-  LUT5 #(
-    .INIT(32'hAAABAAA8)) 
-    \FSM_gray_state[2]_i_1 
-       (.I0(\FSM_gray_state[2]_i_2_n_0 ),
-        .I1(\FSM_gray_state[2]_i_3_n_0 ),
-        .I2(\FSM_gray_state[2]_i_4_n_0 ),
-        .I3(\FSM_gray_state[2]_i_5_n_0 ),
-        .I4(state[2]),
-        .O(\FSM_gray_state[2]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hB70000B700000700)) 
-    \FSM_gray_state[2]_i_2 
-       (.I0(dSda),
-        .I1(dScl),
-        .I2(ddSda),
-        .I3(state[2]),
-        .I4(state[0]),
-        .I5(state[1]),
-        .O(\FSM_gray_state[2]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'h00000000FF402040)) 
-    \FSM_gray_state[2]_i_3 
-       (.I0(dSda),
-        .I1(ddSda),
-        .I2(dScl),
-        .I3(state[0]),
-        .I4(rd_wrn_i_2_n_0),
-        .I5(\dataByte[7]_i_6_n_0 ),
-        .O(\FSM_gray_state[2]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'h0660666606600000)) 
-    \FSM_gray_state[2]_i_4 
-       (.I0(state[2]),
-        .I1(state[1]),
         .I2(ddSda),
         .I3(dSda),
         .I4(dScl),
-        .I5(ddScl),
-        .O(\FSM_gray_state[2]_i_4_n_0 ));
+        .I5(state[1]),
+        .O(nstate__0));
   LUT6 #(
-    .INIT(64'h5555555501400000)) 
-    \FSM_gray_state[2]_i_5 
-       (.I0(\FSM_gray_state[2]_i_6_n_0 ),
-        .I1(state[0]),
-        .I2(ddScl),
-        .I3(dScl),
-        .I4(bitCount__1),
-        .I5(\FSM_gray_state[2]_i_8_n_0 ),
-        .O(\FSM_gray_state[2]_i_5_n_0 ));
-  LUT2 #(
-    .INIT(4'h7)) 
-    \FSM_gray_state[2]_i_6 
+    .INIT(64'h0405000104050405)) 
+    \FSM_gray_state[0]_i_3 
        (.I0(state[2]),
+        .I1(state[0]),
+        .I2(state[1]),
+        .I3(\FSM_gray_state[0]_i_6_n_0 ),
+        .I4(\FSM_gray_state[2]_i_8_n_0 ),
+        .I5(DONE_O_i_3_n_0),
+        .O(\FSM_gray_state[0]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'hF0FC2028F0FCA0A8)) 
+    \FSM_gray_state[0]_i_4 
+       (.I0(\FSM_gray_state[0]_i_7_n_0 ),
         .I1(state[1]),
-        .O(\FSM_gray_state[2]_i_6_n_0 ));
+        .I2(state[2]),
+        .I3(\FSM_gray_state[2]_i_6_n_0 ),
+        .I4(\FSM_gray_state[2]_i_8_n_0 ),
+        .I5(state[0]),
+        .O(\FSM_gray_state[0]_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFEFFFFFFFFFFFF)) 
+    \FSM_gray_state[0]_i_5 
+       (.I0(bitCount_reg__0[2]),
+        .I1(bitCount_reg__0[1]),
+        .I2(bitCount_reg__0[0]),
+        .I3(ddScl),
+        .I4(dScl),
+        .I5(state[0]),
+        .O(\FSM_gray_state[0]_i_5_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair88" *) 
   LUT3 #(
-    .INIT(8'h01)) 
-    \FSM_gray_state[2]_i_7 
-       (.I0(\bitCount_reg_n_0_[0] ),
-        .I1(\bitCount_reg_n_0_[1] ),
-        .I2(\bitCount_reg_n_0_[2] ),
-        .O(bitCount__1));
-  (* SOFT_HLUTNM = "soft_lutpair90" *) 
-  LUT3 #(
-    .INIT(8'h48)) 
-    \FSM_gray_state[2]_i_8 
-       (.I0(dSda),
-        .I1(dScl),
+    .INIT(8'hDF)) 
+    \FSM_gray_state[0]_i_6 
+       (.I0(dScl),
+        .I1(dSda),
         .I2(ddSda),
+        .O(\FSM_gray_state[0]_i_6_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair81" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \FSM_gray_state[0]_i_7 
+       (.I0(ddScl),
+        .I1(dScl),
+        .O(\FSM_gray_state[0]_i_7_n_0 ));
+  LUT6 #(
+    .INIT(64'hCCAAFFFAAAAA000A)) 
+    \FSM_gray_state[1]_i_1 
+       (.I0(\FSM_gray_state[1]_i_2_n_0 ),
+        .I1(\FSM_gray_state[1]_i_3_n_0 ),
+        .I2(\FSM_gray_state[2]_i_4_n_0 ),
+        .I3(state[2]),
+        .I4(\FSM_gray_state[2]_i_5_n_0 ),
+        .I5(state[1]),
+        .O(\FSM_gray_state[1]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hAAAE0000AAAEAAAE)) 
+    \FSM_gray_state[1]_i_2 
+       (.I0(\FSM_gray_state[1]_i_4_n_0 ),
+        .I1(\FSM_gray_state[2]_i_6_n_0 ),
+        .I2(\FSM_gray_state[2]_i_7_n_0 ),
+        .I3(\FSM_gray_state[1]_i_5_n_0 ),
+        .I4(\FSM_gray_state[1]_i_6_n_0 ),
+        .I5(\FSM_gray_state[1]_i_7_n_0 ),
+        .O(\FSM_gray_state[1]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair87" *) 
+  LUT4 #(
+    .INIT(16'hBF20)) 
+    \FSM_gray_state[1]_i_3 
+       (.I0(ddSda),
+        .I1(dSda),
+        .I2(dScl),
+        .I3(state[0]),
+        .O(\FSM_gray_state[1]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'h2F2B3F2F2F2F2F2F)) 
+    \FSM_gray_state[1]_i_4 
+       (.I0(state[2]),
+        .I1(state[0]),
+        .I2(state[1]),
+        .I3(ddSda),
+        .I4(dSda),
+        .I5(dScl),
+        .O(\FSM_gray_state[1]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair92" *) 
+  LUT3 #(
+    .INIT(8'hFE)) 
+    \FSM_gray_state[1]_i_5 
+       (.I0(sI2C_DataIn[1]),
+        .I1(sI2C_DataIn[0]),
+        .I2(sI2C_DataIn[2]),
+        .O(\FSM_gray_state[1]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'h8F8FFF8F8F8F8F8F)) 
+    \FSM_gray_state[1]_i_6 
+       (.I0(state[1]),
+        .I1(state[0]),
+        .I2(state[2]),
+        .I3(ddSda),
+        .I4(dSda),
+        .I5(dScl),
+        .O(\FSM_gray_state[1]_i_6_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair88" *) 
+  LUT4 #(
+    .INIT(16'hAAEA)) 
+    \FSM_gray_state[1]_i_7 
+       (.I0(sI2C_RdWrn),
+        .I1(dScl),
+        .I2(dSda),
+        .I3(ddSda),
+        .O(\FSM_gray_state[1]_i_7_n_0 ));
+  LUT6 #(
+    .INIT(64'hF0F0F8F8FFFF00F8)) 
+    \FSM_gray_state[2]_i_1 
+       (.I0(state[1]),
+        .I1(\FSM_gray_state[2]_i_2_n_0 ),
+        .I2(\FSM_gray_state[2]_i_3_n_0 ),
+        .I3(\FSM_gray_state[2]_i_4_n_0 ),
+        .I4(state[2]),
+        .I5(\FSM_gray_state[2]_i_5_n_0 ),
+        .O(\FSM_gray_state[2]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'hA22AAA2A0000FFFF)) 
+    \FSM_gray_state[2]_i_10 
+       (.I0(state[0]),
+        .I1(dScl),
+        .I2(dSda),
+        .I3(ddSda),
+        .I4(state[2]),
+        .I5(state[1]),
+        .O(\FSM_gray_state[2]_i_10_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair85" *) 
+  LUT5 #(
+    .INIT(32'h00000002)) 
+    \FSM_gray_state[2]_i_2 
+       (.I0(\FSM_gray_state[2]_i_6_n_0 ),
+        .I1(\FSM_gray_state[2]_i_7_n_0 ),
+        .I2(sI2C_DataIn[1]),
+        .I3(sI2C_DataIn[0]),
+        .I4(sI2C_DataIn[2]),
+        .O(\FSM_gray_state[2]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'h4500450001004500)) 
+    \FSM_gray_state[2]_i_3 
+       (.I0(\FSM_gray_state[2]_i_8_n_0 ),
+        .I1(state[1]),
+        .I2(sI2C_RdWrn),
+        .I3(state[2]),
+        .I4(\FSM_gray_state[2]_i_9_n_0 ),
+        .I5(state[0]),
+        .O(\FSM_gray_state[2]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFA22AFFFFF3FF)) 
+    \FSM_gray_state[2]_i_4 
+       (.I0(DONE_O_i_3_n_0),
+        .I1(dScl),
+        .I2(dSda),
+        .I3(ddSda),
+        .I4(state[1]),
+        .I5(state[0]),
+        .O(\FSM_gray_state[2]_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'h4F4F4F4F444F4444)) 
+    \FSM_gray_state[2]_i_5 
+       (.I0(\FSM_gray_state[0]_i_5_n_0 ),
+        .I1(state[1]),
+        .I2(\FSM_gray_state[2]_i_10_n_0 ),
+        .I3(dScl),
+        .I4(ddScl),
+        .I5(\FSM_gray_state[2]_i_8_n_0 ),
+        .O(\FSM_gray_state[2]_i_5_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair87" *) 
+  LUT4 #(
+    .INIT(16'hAA2A)) 
+    \FSM_gray_state[2]_i_6 
+       (.I0(state[0]),
+        .I1(dScl),
+        .I2(dSda),
+        .I3(ddSda),
+        .O(\FSM_gray_state[2]_i_6_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFDF)) 
+    \FSM_gray_state[2]_i_7 
+       (.I0(sI2C_DataIn[6]),
+        .I1(sI2C_DataIn[3]),
+        .I2(sI2C_DataIn[4]),
+        .I3(sI2C_DataIn[5]),
+        .O(\FSM_gray_state[2]_i_7_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair91" *) 
+  LUT3 #(
+    .INIT(8'h60)) 
+    \FSM_gray_state[2]_i_8 
+       (.I0(ddSda),
+        .I1(dSda),
+        .I2(dScl),
         .O(\FSM_gray_state[2]_i_8_n_0 ));
-  (* KEEP = "yes" *) 
+  (* SOFT_HLUTNM = "soft_lutpair96" *) 
+  LUT3 #(
+    .INIT(8'h01)) 
+    \FSM_gray_state[2]_i_9 
+       (.I0(\sAddr_reg[0] ),
+        .I1(\FSM_onehot_sState_reg[3]_0 ),
+        .I2(\sAddr_reg[0]_0 ),
+        .O(\FSM_gray_state[2]_i_9_n_0 ));
+  (* FSM_ENCODED_STATES = "stsack:100,stwrite:111,stturnaround:110,stread:001,stidle:000,stmack:010,staddress:011" *) 
   FDRE \FSM_gray_state_reg[0] 
        (.C(RefClk),
         .CE(1'b1),
         .D(\FSM_gray_state[0]_i_1_n_0 ),
         .Q(state[0]),
         .R(1'b0));
-  (* KEEP = "yes" *) 
+  (* FSM_ENCODED_STATES = "stsack:100,stwrite:111,stturnaround:110,stread:001,stidle:000,stmack:010,staddress:011" *) 
   FDRE \FSM_gray_state_reg[1] 
        (.C(RefClk),
         .CE(1'b1),
         .D(\FSM_gray_state[1]_i_1_n_0 ),
         .Q(state[1]),
         .R(1'b0));
-  (* KEEP = "yes" *) 
+  (* FSM_ENCODED_STATES = "stsack:100,stwrite:111,stturnaround:110,stread:001,stidle:000,stmack:010,staddress:011" *) 
   FDRE \FSM_gray_state_reg[2] 
        (.C(RefClk),
         .CE(1'b1),
         .D(\FSM_gray_state[2]_i_1_n_0 ),
         .Q(state[2]),
         .R(1'b0));
+  (* SOFT_HLUTNM = "soft_lutpair90" *) 
+  LUT4 #(
+    .INIT(16'hAAA8)) 
+    \FSM_onehot_sState[0]_i_1 
+       (.I0(sI2C_End),
+        .I1(\sAddr_reg[0]_0 ),
+        .I2(\FSM_onehot_sState_reg[3]_0 ),
+        .I3(\sAddr_reg[0] ),
+        .O(END_O_reg_1));
+  (* SOFT_HLUTNM = "soft_lutpair89" *) 
+  LUT4 #(
+    .INIT(16'h8F88)) 
+    \FSM_onehot_sState[1]_i_1 
+       (.I0(\FSM_onehot_sState_reg[0]_1 ),
+        .I1(sI2C_RdWrn),
+        .I2(sI2C_End),
+        .I3(\sAddr_reg[0] ),
+        .O(\FSM_onehot_sState_reg[0]_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair89" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \FSM_onehot_sState[2]_i_1 
+       (.I0(\FSM_onehot_sState_reg[0]_1 ),
+        .I1(sI2C_RdWrn),
+        .O(\FSM_onehot_sState_reg[0] ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFCAAA8AAA8)) 
+    \FSM_onehot_sState[3]_i_1 
+       (.I0(sI2C_End),
+        .I1(\sAddr_reg[0]_0 ),
+        .I2(\FSM_onehot_sState_reg[3]_0 ),
+        .I3(\sAddr_reg[0] ),
+        .I4(\FSM_onehot_sState_reg[0]_1 ),
+        .I5(sI2C_Done),
+        .O(END_O_reg_0));
+  (* SOFT_HLUTNM = "soft_lutpair90" *) 
+  LUT3 #(
+    .INIT(8'h0E)) 
+    \FSM_onehot_sState[3]_i_2 
+       (.I0(\FSM_onehot_sState_reg[3]_0 ),
+        .I1(\sAddr_reg[0]_0 ),
+        .I2(sI2C_End),
+        .O(\FSM_onehot_sState_reg[3] ));
   hdmi_in_dvi2rgb_0_0_GlitchFilter GlitchF_SCL
-       (.\Filter.sOut_reg_0 (GlitchF_SCL_n_0),
+       (.\Filter.sIn_q_reg_0 (GlitchF_SCL_n_0),
+        .\Filter.sOut_reg_0 (GlitchF_SCL_n_1),
         .RefClk(RefClk),
         .SS(SyncSCL_n_1),
-        .dScl_reg(GlitchF_SCL_n_1),
         .out(sScl));
   hdmi_in_dvi2rgb_0_0_GlitchFilter_6 GlitchF_SDA
        (.RefClk(RefClk),
@@ -10271,7 +10124,7 @@ module hdmi_in_dvi2rgb_0_0_TWI_SlaveCtl
         .sOut(sOut));
   hdmi_in_dvi2rgb_0_0_SyncAsync_7 SyncSCL
        (.DDC_SCL_I(DDC_SCL_I),
-        .\Filter.sIn_q_reg (GlitchF_SCL_n_0),
+        .\Filter.cntPeriods_reg[1] (GlitchF_SCL_n_0),
         .RefClk(RefClk),
         .SS(SyncSCL_n_1),
         .out(sScl));
@@ -10281,41 +10134,41 @@ module hdmi_in_dvi2rgb_0_0_TWI_SlaveCtl
         .SS(SyncSDA_n_1),
         .out(sSda),
         .sIn_q(sIn_q));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFF666F)) 
+  LUT3 #(
+    .INIT(8'h6F)) 
     \bitCount[0]_i_1 
-       (.I0(\bitCount_reg_n_0_[0] ),
-        .I1(\dataByte[7]_i_5_n_0 ),
-        .I2(\dataByte[7]_i_6_n_0 ),
-        .I3(state[0]),
-        .I4(fStart),
-        .I5(\dataByte[7]_i_4_n_0 ),
+       (.I0(bitCount_reg__0[0]),
+        .I1(\bitCount[2]_i_2_n_0 ),
+        .I2(\dataByte[7]_i_3_n_0 ),
         .O(\bitCount[0]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFA6)) 
+  (* SOFT_HLUTNM = "soft_lutpair83" *) 
+  LUT4 #(
+    .INIT(16'hA6FF)) 
     \bitCount[1]_i_1 
-       (.I0(\bitCount_reg_n_0_[1] ),
-        .I1(\dataByte[7]_i_5_n_0 ),
-        .I2(\bitCount_reg_n_0_[0] ),
-        .I3(\FSM_gray_state[0]_i_2_n_0 ),
-        .I4(fStart),
-        .I5(\dataByte[7]_i_4_n_0 ),
+       (.I0(bitCount_reg__0[1]),
+        .I1(\bitCount[2]_i_2_n_0 ),
+        .I2(bitCount_reg__0[0]),
+        .I3(\dataByte[7]_i_3_n_0 ),
         .O(\bitCount[1]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFA6)) 
+  (* SOFT_HLUTNM = "soft_lutpair83" *) 
+  LUT5 #(
+    .INIT(32'hAAA6FFFF)) 
     \bitCount[2]_i_1 
-       (.I0(\bitCount_reg_n_0_[2] ),
-        .I1(\dataByte[7]_i_5_n_0 ),
-        .I2(\bitCount[2]_i_2_n_0 ),
-        .I3(\FSM_gray_state[0]_i_2_n_0 ),
-        .I4(fStart),
-        .I5(\dataByte[7]_i_4_n_0 ),
+       (.I0(bitCount_reg__0[2]),
+        .I1(\bitCount[2]_i_2_n_0 ),
+        .I2(bitCount_reg__0[1]),
+        .I3(bitCount_reg__0[0]),
+        .I4(\dataByte[7]_i_3_n_0 ),
         .O(\bitCount[2]_i_1_n_0 ));
-  LUT2 #(
-    .INIT(4'hE)) 
+  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  LUT5 #(
+    .INIT(32'h30040000)) 
     \bitCount[2]_i_2 
-       (.I0(\bitCount_reg_n_0_[1] ),
-        .I1(\bitCount_reg_n_0_[0] ),
+       (.I0(state[2]),
+        .I1(ddScl),
+        .I2(dScl),
+        .I3(state[1]),
+        .I4(state[0]),
         .O(\bitCount[2]_i_2_n_0 ));
   FDRE #(
     .INIT(1'b1)) 
@@ -10323,7 +10176,7 @@ module hdmi_in_dvi2rgb_0_0_TWI_SlaveCtl
        (.C(RefClk),
         .CE(1'b1),
         .D(\bitCount[0]_i_1_n_0 ),
-        .Q(\bitCount_reg_n_0_[0] ),
+        .Q(bitCount_reg__0[0]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b1)) 
@@ -10331,7 +10184,7 @@ module hdmi_in_dvi2rgb_0_0_TWI_SlaveCtl
        (.C(RefClk),
         .CE(1'b1),
         .D(\bitCount[1]_i_1_n_0 ),
-        .Q(\bitCount_reg_n_0_[1] ),
+        .Q(bitCount_reg__0[1]),
         .R(1'b0));
   FDRE #(
     .INIT(1'b1)) 
@@ -10339,7 +10192,7 @@ module hdmi_in_dvi2rgb_0_0_TWI_SlaveCtl
        (.C(RefClk),
         .CE(1'b1),
         .D(\bitCount[2]_i_1_n_0 ),
-        .Q(\bitCount_reg_n_0_[2] ),
+        .Q(bitCount_reg__0[2]),
         .R(1'b0));
   FDRE dScl_reg
        (.C(RefClk),
@@ -10353,177 +10206,148 @@ module hdmi_in_dvi2rgb_0_0_TWI_SlaveCtl
         .D(sOut),
         .Q(dSda),
         .R(1'b0));
-  LUT6 #(
-    .INIT(64'hABABABAAA8A8A8AA)) 
+  (* SOFT_HLUTNM = "soft_lutpair91" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
     \dataByte[0]_i_1 
-       (.I0(Q[0]),
-        .I1(\dataByte[7]_i_4_n_0 ),
-        .I2(fStart),
-        .I3(state[0]),
-        .I4(\dataByte[7]_i_6_n_0 ),
-        .I5(dSda),
+       (.I0(dSda),
+        .I1(\dataByte[7]_i_3_n_0 ),
+        .I2(Q[0]),
         .O(\dataByte[0]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hABABABAAA8A8A8AA)) 
+  (* SOFT_HLUTNM = "soft_lutpair93" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
     \dataByte[1]_i_1 
-       (.I0(Q[1]),
-        .I1(\dataByte[7]_i_4_n_0 ),
-        .I2(fStart),
-        .I3(state[0]),
-        .I4(\dataByte[7]_i_6_n_0 ),
-        .I5(\dataByte_reg_n_0_[0] ),
+       (.I0(sI2C_DataIn[0]),
+        .I1(\dataByte[7]_i_3_n_0 ),
+        .I2(Q[1]),
         .O(\dataByte[1]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hABABABAAA8A8A8AA)) 
+  (* SOFT_HLUTNM = "soft_lutpair92" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
     \dataByte[2]_i_1 
-       (.I0(Q[2]),
-        .I1(\dataByte[7]_i_4_n_0 ),
-        .I2(fStart),
-        .I3(state[0]),
-        .I4(\dataByte[7]_i_6_n_0 ),
-        .I5(\dataByte_reg_n_0_[1] ),
+       (.I0(sI2C_DataIn[1]),
+        .I1(\dataByte[7]_i_3_n_0 ),
+        .I2(Q[2]),
         .O(\dataByte[2]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hABABABAAA8A8A8AA)) 
+  (* SOFT_HLUTNM = "soft_lutpair93" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
     \dataByte[3]_i_1 
-       (.I0(Q[3]),
-        .I1(\dataByte[7]_i_4_n_0 ),
-        .I2(fStart),
-        .I3(state[0]),
-        .I4(\dataByte[7]_i_6_n_0 ),
-        .I5(\dataByte_reg_n_0_[2] ),
+       (.I0(sI2C_DataIn[2]),
+        .I1(\dataByte[7]_i_3_n_0 ),
+        .I2(Q[3]),
         .O(\dataByte[3]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hABABABAAA8A8A8AA)) 
+  (* SOFT_HLUTNM = "soft_lutpair94" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
     \dataByte[4]_i_1 
-       (.I0(Q[4]),
-        .I1(\dataByte[7]_i_4_n_0 ),
-        .I2(fStart),
-        .I3(state[0]),
-        .I4(\dataByte[7]_i_6_n_0 ),
-        .I5(\dataByte_reg_n_0_[3] ),
+       (.I0(sI2C_DataIn[3]),
+        .I1(\dataByte[7]_i_3_n_0 ),
+        .I2(Q[4]),
         .O(\dataByte[4]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hABABABAAA8A8A8AA)) 
+  (* SOFT_HLUTNM = "soft_lutpair94" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
     \dataByte[5]_i_1 
-       (.I0(Q[5]),
-        .I1(\dataByte[7]_i_4_n_0 ),
-        .I2(fStart),
-        .I3(state[0]),
-        .I4(\dataByte[7]_i_6_n_0 ),
-        .I5(\dataByte_reg_n_0_[4] ),
+       (.I0(sI2C_DataIn[4]),
+        .I1(\dataByte[7]_i_3_n_0 ),
+        .I2(Q[5]),
         .O(\dataByte[5]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hABABABAAA8A8A8AA)) 
+  (* SOFT_HLUTNM = "soft_lutpair95" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
     \dataByte[6]_i_1 
-       (.I0(Q[6]),
-        .I1(\dataByte[7]_i_4_n_0 ),
-        .I2(fStart),
-        .I3(state[0]),
-        .I4(\dataByte[7]_i_6_n_0 ),
-        .I5(\dataByte_reg_n_0_[5] ),
+       (.I0(sI2C_DataIn[5]),
+        .I1(\dataByte[7]_i_3_n_0 ),
+        .I2(Q[6]),
         .O(\dataByte[6]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFF01)) 
+    .INIT(64'h00800280FFFFFFFF)) 
     \dataByte[7]_i_1 
-       (.I0(state[2]),
-        .I1(state[1]),
-        .I2(state[0]),
-        .I3(fStart),
-        .I4(\dataByte[7]_i_4_n_0 ),
-        .I5(\dataByte[7]_i_5_n_0 ),
-        .O(\dataByte[7]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hABABABAAA8A8A8AA)) 
-    \dataByte[7]_i_2 
-       (.I0(Q[7]),
-        .I1(\dataByte[7]_i_4_n_0 ),
-        .I2(fStart),
-        .I3(state[0]),
-        .I4(\dataByte[7]_i_6_n_0 ),
-        .I5(\dataByte_reg_n_0_[6] ),
-        .O(\dataByte[7]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair90" *) 
-  LUT3 #(
-    .INIT(8'h08)) 
-    \dataByte[7]_i_3 
-       (.I0(dScl),
-        .I1(ddSda),
-        .I2(dSda),
-        .O(fStart));
-  LUT6 #(
-    .INIT(64'h000000C000440000)) 
-    \dataByte[7]_i_4 
-       (.I0(ddSda),
-        .I1(p_15_in),
-        .I2(rd_wrn_reg_0),
-        .I3(state[0]),
-        .I4(state[2]),
-        .I5(state[1]),
-        .O(\dataByte[7]_i_4_n_0 ));
-  LUT5 #(
-    .INIT(32'h00804200)) 
-    \dataByte[7]_i_5 
        (.I0(state[0]),
         .I1(state[1]),
-        .I2(state[2]),
-        .I3(dScl),
-        .I4(ddScl),
-        .O(\dataByte[7]_i_5_n_0 ));
-  LUT2 #(
-    .INIT(4'hE)) 
-    \dataByte[7]_i_6 
-       (.I0(state[2]),
-        .I1(state[1]),
-        .O(\dataByte[7]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair91" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \dataByte[7]_i_7 
+        .I2(dScl),
+        .I3(ddScl),
+        .I4(state[2]),
+        .I5(\dataByte[7]_i_3_n_0 ),
+        .O(\dataByte[7]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair95" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \dataByte[7]_i_2 
+       (.I0(sI2C_DataIn[6]),
+        .I1(\dataByte[7]_i_3_n_0 ),
+        .I2(Q[7]),
+        .O(\dataByte[7]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'hFD000000FD00FD00)) 
+    \dataByte[7]_i_3 
        (.I0(ddScl),
         .I1(dScl),
-        .O(p_15_in));
+        .I2(\dataByte[7]_i_4_n_0 ),
+        .I3(\FSM_gray_state[0]_i_6_n_0 ),
+        .I4(state[2]),
+        .I5(\dataByte[7]_i_5_n_0 ),
+        .O(\dataByte[7]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair82" *) 
+  LUT5 #(
+    .INIT(32'hFEF3FEFF)) 
+    \dataByte[7]_i_4 
+       (.I0(ddSda),
+        .I1(state[2]),
+        .I2(state[0]),
+        .I3(state[1]),
+        .I4(sI2C_RdWrn),
+        .O(\dataByte[7]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair82" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
+    \dataByte[7]_i_5 
+       (.I0(state[1]),
+        .I1(state[0]),
+        .O(\dataByte[7]_i_5_n_0 ));
   FDRE \dataByte_reg[0] 
        (.C(RefClk),
         .CE(\dataByte[7]_i_1_n_0 ),
         .D(\dataByte[0]_i_1_n_0 ),
-        .Q(\dataByte_reg_n_0_[0] ),
+        .Q(sI2C_DataIn[0]),
         .R(1'b0));
   FDRE \dataByte_reg[1] 
        (.C(RefClk),
         .CE(\dataByte[7]_i_1_n_0 ),
         .D(\dataByte[1]_i_1_n_0 ),
-        .Q(\dataByte_reg_n_0_[1] ),
+        .Q(sI2C_DataIn[1]),
         .R(1'b0));
   FDRE \dataByte_reg[2] 
        (.C(RefClk),
         .CE(\dataByte[7]_i_1_n_0 ),
         .D(\dataByte[2]_i_1_n_0 ),
-        .Q(\dataByte_reg_n_0_[2] ),
+        .Q(sI2C_DataIn[2]),
         .R(1'b0));
   FDRE \dataByte_reg[3] 
        (.C(RefClk),
         .CE(\dataByte[7]_i_1_n_0 ),
         .D(\dataByte[3]_i_1_n_0 ),
-        .Q(\dataByte_reg_n_0_[3] ),
+        .Q(sI2C_DataIn[3]),
         .R(1'b0));
   FDRE \dataByte_reg[4] 
        (.C(RefClk),
         .CE(\dataByte[7]_i_1_n_0 ),
         .D(\dataByte[4]_i_1_n_0 ),
-        .Q(\dataByte_reg_n_0_[4] ),
+        .Q(sI2C_DataIn[4]),
         .R(1'b0));
   FDRE \dataByte_reg[5] 
        (.C(RefClk),
         .CE(\dataByte[7]_i_1_n_0 ),
         .D(\dataByte[5]_i_1_n_0 ),
-        .Q(\dataByte_reg_n_0_[5] ),
+        .Q(sI2C_DataIn[5]),
         .R(1'b0));
   FDRE \dataByte_reg[6] 
        (.C(RefClk),
         .CE(\dataByte[7]_i_1_n_0 ),
         .D(\dataByte[6]_i_1_n_0 ),
-        .Q(\dataByte_reg_n_0_[6] ),
+        .Q(sI2C_DataIn[6]),
         .R(1'b0));
   FDRE \dataByte_reg[7] 
        (.C(RefClk),
@@ -10543,104 +10367,92 @@ module hdmi_in_dvi2rgb_0_0_TWI_SlaveCtl
         .D(dSda),
         .Q(ddSda),
         .R(1'b0));
-  LUT6 #(
-    .INIT(64'hFFFBFFFF00080000)) 
+  LUT5 #(
+    .INIT(32'hFFFB0008)) 
     rd_wrn_i_1
        (.I0(dSda),
-        .I1(rd_wrn_i_2_n_0),
+        .I1(state[1]),
         .I2(state[2]),
-        .I3(state[1]),
-        .I4(state[0]),
-        .I5(rd_wrn_reg_0),
+        .I3(\FSM_gray_state[0]_i_5_n_0 ),
+        .I4(sI2C_RdWrn),
         .O(rd_wrn_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair88" *) 
-  LUT5 #(
-    .INIT(32'h00010000)) 
-    rd_wrn_i_2
-       (.I0(\bitCount_reg_n_0_[2] ),
-        .I1(\bitCount_reg_n_0_[1] ),
-        .I2(\bitCount_reg_n_0_[0] ),
-        .I3(ddScl),
-        .I4(dScl),
-        .O(rd_wrn_i_2_n_0));
   FDRE rd_wrn_reg
        (.C(RefClk),
         .CE(1'b1),
         .D(rd_wrn_i_1_n_0),
-        .Q(rd_wrn_reg_0),
+        .Q(sI2C_RdWrn),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair89" *) 
-  LUT4 #(
-    .INIT(16'h80BF)) 
+  (* SOFT_HLUTNM = "soft_lutpair86" *) 
+  LUT3 #(
+    .INIT(8'hA3)) 
     \sAddr_rep[0]_i_1 
-       (.I0(\dataByte_reg_n_0_[0] ),
-        .I1(sState[0]),
-        .I2(sState[1]),
-        .I3(\sAddr_reg[6] [0]),
-        .O(D[0]));
-  LUT5 #(
-    .INIT(32'hF6660666)) 
-    \sAddr_rep[1]_i_1 
-       (.I0(\sAddr_reg[6] [1]),
+       (.I0(sI2C_DataIn[0]),
         .I1(\sAddr_reg[6] [0]),
-        .I2(sState[0]),
-        .I3(sState[1]),
-        .I4(\dataByte_reg_n_0_[1] ),
-        .O(D[1]));
-  LUT6 #(
-    .INIT(64'hFF6A6A6A006A6A6A)) 
-    \sAddr_rep[2]_i_1 
-       (.I0(\sAddr_reg[6] [2]),
-        .I1(\sAddr_reg[6] [1]),
+        .I2(\sAddr_reg[0]_0 ),
+        .O(D[0]));
+  (* SOFT_HLUTNM = "soft_lutpair86" *) 
+  LUT4 #(
+    .INIT(16'h8BB8)) 
+    \sAddr_rep[1]_i_1 
+       (.I0(sI2C_DataIn[1]),
+        .I1(\sAddr_reg[0]_0 ),
         .I2(\sAddr_reg[6] [0]),
-        .I3(sState[0]),
-        .I4(sState[1]),
-        .I5(\dataByte_reg_n_0_[2] ),
+        .I3(\sAddr_reg[6] [1]),
+        .O(D[1]));
+  LUT5 #(
+    .INIT(32'h8BBBB888)) 
+    \sAddr_rep[2]_i_1 
+       (.I0(sI2C_DataIn[2]),
+        .I1(\sAddr_reg[0]_0 ),
+        .I2(\sAddr_reg[6] [0]),
+        .I3(\sAddr_reg[6] [1]),
+        .I4(\sAddr_reg[6] [2]),
         .O(D[2]));
   LUT6 #(
-    .INIT(64'hFFFF6AAA00006AAA)) 
+    .INIT(64'h8BB8B8B8B8B8B8B8)) 
     \sAddr_rep[3]_i_1 
-       (.I0(\sAddr_reg[6] [3]),
-        .I1(\sAddr_reg[6] [1]),
-        .I2(\sAddr_reg[6] [0]),
-        .I3(\sAddr_reg[6] [2]),
-        .I4(\sState_reg[0] ),
-        .I5(\dataByte_reg_n_0_[3] ),
+       (.I0(sI2C_DataIn[3]),
+        .I1(\sAddr_reg[0]_0 ),
+        .I2(\sAddr_reg[6] [3]),
+        .I3(\sAddr_reg[6] [0]),
+        .I4(\sAddr_reg[6] [1]),
+        .I5(\sAddr_reg[6] [2]),
         .O(D[3]));
   LUT5 #(
-    .INIT(32'hF6660666)) 
+    .INIT(32'h8BB8B8B8)) 
     \sAddr_rep[4]_i_1 
-       (.I0(\sAddr_reg[6] [4]),
-        .I1(\sAddr_reg[3] ),
-        .I2(sState[0]),
-        .I3(sState[1]),
-        .I4(\dataByte_reg_n_0_[4] ),
+       (.I0(sI2C_DataIn[4]),
+        .I1(\sAddr_reg[0]_0 ),
+        .I2(\sAddr_reg[6] [4]),
+        .I3(\sAddr_reg[4] ),
+        .I4(\sAddr_reg[6] [3]),
         .O(D[4]));
-  LUT5 #(
-    .INIT(32'hF6660666)) 
+  LUT6 #(
+    .INIT(64'h8BB8B8B8B8B8B8B8)) 
     \sAddr_rep[5]_i_1 
-       (.I0(\sAddr_reg[6] [5]),
-        .I1(\sAddr_reg[4] ),
-        .I2(sState[0]),
-        .I3(sState[1]),
-        .I4(\dataByte_reg_n_0_[5] ),
+       (.I0(sI2C_DataIn[5]),
+        .I1(\sAddr_reg[0]_0 ),
+        .I2(\sAddr_reg[6] [5]),
+        .I3(\sAddr_reg[6] [3]),
+        .I4(\sAddr_reg[4] ),
+        .I5(\sAddr_reg[6] [4]),
         .O(D[5]));
-  (* SOFT_HLUTNM = "soft_lutpair89" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
+  (* SOFT_HLUTNM = "soft_lutpair96" *) 
+  LUT3 #(
+    .INIT(8'hA8)) 
     \sAddr_rep[6]_i_1 
        (.I0(sI2C_Done),
-        .I1(sState[0]),
+        .I1(\sAddr_reg[0] ),
+        .I2(\sAddr_reg[0]_0 ),
         .O(E));
-  LUT6 #(
-    .INIT(64'hFF6A6A6A006A6A6A)) 
+  LUT5 #(
+    .INIT(32'h8BB8B8B8)) 
     \sAddr_rep[6]_i_2 
-       (.I0(\sAddr_reg[6] [6]),
-        .I1(\sAddr_reg[4] ),
-        .I2(\sAddr_reg[6] [5]),
-        .I3(sState[0]),
-        .I4(sState[1]),
-        .I5(\dataByte_reg_n_0_[6] ),
+       (.I0(sI2C_DataIn[6]),
+        .I1(\sAddr_reg[0]_0 ),
+        .I2(\sAddr_reg[6] [6]),
+        .I3(\sAddr_reg[6]_0 ),
+        .I4(\sAddr_reg[6] [5]),
         .O(D[6]));
 endmodule
 
@@ -10699,10 +10511,7 @@ module hdmi_in_dvi2rgb_0_0_dvi2rgb
   wire DDC_SCL_I;
   wire DDC_SDA_I;
   wire DDC_SDA_T;
-  wire \DataDecoders[0].DecoderX_n_6 ;
   wire \DataDecoders[1].DecoderX_n_0 ;
-  wire \DataDecoders[1].DecoderX_n_3 ;
-  wire \DataDecoders[2].DecoderX_n_3 ;
   wire PixelClk;
   wire RefClk;
   wire SerialClk;
@@ -10734,13 +10543,13 @@ module hdmi_in_dvi2rgb_0_0_dvi2rgb
        (.AS(pLockLostRst),
         .CLKB(SerialClk),
         .RefClk(RefClk),
-        .SR(\DataDecoders[2].DecoderX_n_3 ),
         .TMDS_Data_n(TMDS_Data_n[0]),
         .TMDS_Data_p(TMDS_Data_p[0]),
-        .pAligned_reg(\DataDecoders[1].DecoderX_n_0 ),
+        .iIn_q_reg(PixelClk),
         .pAllVld(pAllVld),
         .pAllVldBgnFlag(\ChannelBondX/pAllVldBgnFlag ),
-        .\pDataIn_reg[7]_0 (\DataDecoders[0].DecoderX_n_6 ),
+        .\pDataQ_reg[8] (SerialClk),
+        .pMeRdy_int_reg(\DataDecoders[1].DecoderX_n_0 ),
         .pRdy_0(pRdy_0),
         .pRdy_1(pRdy_1),
         .pRdy_2(pRdy_2),
@@ -10748,8 +10557,6 @@ module hdmi_in_dvi2rgb_0_0_dvi2rgb
         .pVld_0(pVld_0),
         .pVld_1(pVld_1),
         .pVld_2(pVld_2),
-        .rMMCM_LckdRisingFlag_reg(PixelClk),
-        .\rMMCM_Reset_q_reg[0] (SerialClk),
         .vid_pData(vid_pData[15:8]),
         .vid_pHSync(vid_pHSync),
         .vid_pVDE(vid_pVDE),
@@ -10758,13 +10565,13 @@ module hdmi_in_dvi2rgb_0_0_dvi2rgb
        (.AS(pLockLostRst),
         .CLKB(SerialClk),
         .RefClk(RefClk),
-        .SR(\DataDecoders[1].DecoderX_n_3 ),
         .TMDS_Data_n(TMDS_Data_n[1]),
         .TMDS_Data_p(TMDS_Data_p[1]),
+        .iIn_q_reg(PixelClk),
+        .pAligned_reg(\DataDecoders[1].DecoderX_n_0 ),
         .pAllVld(pAllVld),
         .pAllVldBgnFlag(\ChannelBondX/pAllVldBgnFlag ),
-        .pMeRdy_int_reg(\DataDecoders[1].DecoderX_n_0 ),
-        .pMeRdy_int_reg_0(\DataDecoders[0].DecoderX_n_6 ),
+        .\pDataQ_reg[1] (SerialClk),
         .pRdy_0(pRdy_0),
         .pRdy_1(pRdy_1),
         .pRdy_2(pRdy_2),
@@ -10772,29 +10579,23 @@ module hdmi_in_dvi2rgb_0_0_dvi2rgb
         .pVld_0(pVld_0),
         .pVld_1(pVld_1),
         .pVld_2(pVld_2),
-        .rMMCM_LckdRisingFlag_reg(PixelClk),
-        .\rMMCM_Reset_q_reg[0] (SerialClk),
         .vid_pData(vid_pData[7:0]));
   hdmi_in_dvi2rgb_0_0_TMDS_Decoder_1 \DataDecoders[2].DecoderX 
        (.CLKB(SerialClk),
         .RefClk(RefClk),
-        .SR(\DataDecoders[2].DecoderX_n_3 ),
         .TMDS_Data_n(TMDS_Data_n[2]),
         .TMDS_Data_p(TMDS_Data_p[2]),
+        .iIn_q_reg(PixelClk),
         .out(pLockLostRst),
-        .pAligned_reg(\DataDecoders[1].DecoderX_n_0 ),
         .pAllVld(pAllVld),
         .pAllVldBgnFlag(\ChannelBondX/pAllVldBgnFlag ),
-        .pMeRdy_int_reg(\DataDecoders[1].DecoderX_n_3 ),
+        .\pDataQ_reg[8] (SerialClk),
+        .pRdEn_reg(\DataDecoders[1].DecoderX_n_0 ),
         .pRdy_0(pRdy_0),
         .pRdy_1(pRdy_1),
         .pRdy_2(pRdy_2),
         .pRst_n(pRst_n),
-        .pVld_0(pVld_0),
-        .pVld_1(pVld_1),
         .pVld_2(pVld_2),
-        .rMMCM_LckdRisingFlag_reg(PixelClk),
-        .\rMMCM_Reset_q_reg[0] (SerialClk),
         .vid_pData(vid_pData[23:16]));
   GND GND
        (.G(\<const0> ));
@@ -10805,17 +10606,17 @@ module hdmi_in_dvi2rgb_0_0_dvi2rgb
         .RefClk(RefClk));
   hdmi_in_dvi2rgb_0_0_ResetBridge LockLostReset
        (.in0(TMDS_ClockingX_n_3),
-        .out(pLockLostRst),
-        .rMMCM_LckdRisingFlag_reg(PixelClk));
+        .\oSyncStages_reg[1] (PixelClk),
+        .out(pLockLostRst));
   hdmi_in_dvi2rgb_0_0_TMDS_Clocking TMDS_ClockingX
-       (.PixelClk(PixelClk),
-        .RefClk(RefClk),
+       (.RefClk(RefClk),
         .TMDS_Clk_n(TMDS_Clk_n),
         .TMDS_Clk_p(TMDS_Clk_p),
         .aPixelClkLckd(aPixelClkLckd),
         .aRst_n(aRst_n),
         .in0(TMDS_ClockingX_n_3),
-        .\pDataQ_reg[8] (SerialClk));
+        .rMMCM_LckdRisingFlag_reg_0(PixelClk),
+        .\rMMCM_Reset_q_reg[0]_0 (SerialClk));
   VCC VCC
        (.P(\<const1> ));
 endmodule

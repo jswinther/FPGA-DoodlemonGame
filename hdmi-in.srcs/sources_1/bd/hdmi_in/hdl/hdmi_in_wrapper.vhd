@@ -1,8 +1,8 @@
---Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+--Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2017.2.1 (win64) Build 1957588 Wed Aug  9 16:32:24 MDT 2017
---Date        : Fri Jan 11 12:48:55 2019
---Host        : DTU-980R762 running 64-bit major release  (build 9200)
+--Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+--Date        : Fri Jan 11 14:31:51 2019
+--Host        : DESKTOP-SHDFERO running 64-bit major release  (build 9200)
 --Command     : generate_target hdmi_in_wrapper.bd
 --Design      : hdmi_in_wrapper
 --Purpose     : IP block netlist
@@ -13,6 +13,8 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity hdmi_in_wrapper is
   port (
+    DDC_scl_io : inout STD_LOGIC;
+    DDC_sda_io : inout STD_LOGIC;
     DDR_addr : inout STD_LOGIC_VECTOR ( 14 downto 0 );
     DDR_ba : inout STD_LOGIC_VECTOR ( 2 downto 0 );
     DDR_cas_n : inout STD_LOGIC;
@@ -35,16 +37,14 @@ entity hdmi_in_wrapper is
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     HDMI_OEN : out STD_LOGIC_VECTOR ( 0 to 0 );
+    IIC_0_scl_io : inout STD_LOGIC;
+    IIC_0_sda_io : inout STD_LOGIC;
     TMDS_clk_n : in STD_LOGIC;
     TMDS_clk_p : in STD_LOGIC;
     TMDS_data_n : in STD_LOGIC_VECTOR ( 2 downto 0 );
     TMDS_data_p : in STD_LOGIC_VECTOR ( 2 downto 0 );
     btns_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    ddc_scl_io : inout STD_LOGIC;
-    ddc_sda_io : inout STD_LOGIC;
     hdmi_hpd_tri_o : out STD_LOGIC_VECTOR ( 0 to 0 );
-    iic_0_scl_io : inout STD_LOGIC;
-    iic_0_sda_io : inout STD_LOGIC;
     leds_4bits_tri_io : inout STD_LOGIC_VECTOR ( 3 downto 0 );
     sws_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
     vga_b : out STD_LOGIC_VECTOR ( 4 downto 0 );
@@ -117,18 +117,18 @@ architecture STRUCTURE of hdmi_in_wrapper is
     IO : inout STD_LOGIC
   );
   end component IOBUF;
-  signal ddc_scl_i : STD_LOGIC;
-  signal ddc_scl_o : STD_LOGIC;
-  signal ddc_scl_t : STD_LOGIC;
-  signal ddc_sda_i : STD_LOGIC;
-  signal ddc_sda_o : STD_LOGIC;
-  signal ddc_sda_t : STD_LOGIC;
-  signal iic_0_scl_i : STD_LOGIC;
-  signal iic_0_scl_o : STD_LOGIC;
-  signal iic_0_scl_t : STD_LOGIC;
-  signal iic_0_sda_i : STD_LOGIC;
-  signal iic_0_sda_o : STD_LOGIC;
-  signal iic_0_sda_t : STD_LOGIC;
+  signal DDC_scl_i : STD_LOGIC;
+  signal DDC_scl_o : STD_LOGIC;
+  signal DDC_scl_t : STD_LOGIC;
+  signal DDC_sda_i : STD_LOGIC;
+  signal DDC_sda_o : STD_LOGIC;
+  signal DDC_sda_t : STD_LOGIC;
+  signal IIC_0_scl_i : STD_LOGIC;
+  signal IIC_0_scl_o : STD_LOGIC;
+  signal IIC_0_scl_t : STD_LOGIC;
+  signal IIC_0_sda_i : STD_LOGIC;
+  signal IIC_0_sda_o : STD_LOGIC;
+  signal IIC_0_sda_t : STD_LOGIC;
   signal leds_4bits_tri_i_0 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal leds_4bits_tri_i_1 : STD_LOGIC_VECTOR ( 1 to 1 );
   signal leds_4bits_tri_i_2 : STD_LOGIC_VECTOR ( 2 to 2 );
@@ -146,28 +146,42 @@ architecture STRUCTURE of hdmi_in_wrapper is
   signal leds_4bits_tri_t_2 : STD_LOGIC_VECTOR ( 2 to 2 );
   signal leds_4bits_tri_t_3 : STD_LOGIC_VECTOR ( 3 to 3 );
 begin
-ddc_scl_iobuf: component IOBUF
+DDC_scl_iobuf: component IOBUF
      port map (
-      I => ddc_scl_o,
-      IO => ddc_scl_io,
-      O => ddc_scl_i,
-      T => ddc_scl_t
+      I => DDC_scl_o,
+      IO => DDC_scl_io,
+      O => DDC_scl_i,
+      T => DDC_scl_t
     );
-ddc_sda_iobuf: component IOBUF
+DDC_sda_iobuf: component IOBUF
      port map (
-      I => ddc_sda_o,
-      IO => ddc_sda_io,
-      O => ddc_sda_i,
-      T => ddc_sda_t
+      I => DDC_sda_o,
+      IO => DDC_sda_io,
+      O => DDC_sda_i,
+      T => DDC_sda_t
+    );
+IIC_0_scl_iobuf: component IOBUF
+     port map (
+      I => IIC_0_scl_o,
+      IO => IIC_0_scl_io,
+      O => IIC_0_scl_i,
+      T => IIC_0_scl_t
+    );
+IIC_0_sda_iobuf: component IOBUF
+     port map (
+      I => IIC_0_sda_o,
+      IO => IIC_0_sda_io,
+      O => IIC_0_sda_i,
+      T => IIC_0_sda_t
     );
 hdmi_in_i: component hdmi_in
      port map (
-      DDC_scl_i => ddc_scl_i,
-      DDC_scl_o => ddc_scl_o,
-      DDC_scl_t => ddc_scl_t,
-      DDC_sda_i => ddc_sda_i,
-      DDC_sda_o => ddc_sda_o,
-      DDC_sda_t => ddc_sda_t,
+      DDC_scl_i => DDC_scl_i,
+      DDC_scl_o => DDC_scl_o,
+      DDC_scl_t => DDC_scl_t,
+      DDC_sda_i => DDC_sda_i,
+      DDC_sda_o => DDC_sda_o,
+      DDC_sda_t => DDC_sda_t,
       DDR_addr(14 downto 0) => DDR_addr(14 downto 0),
       DDR_ba(2 downto 0) => DDR_ba(2 downto 0),
       DDR_cas_n => DDR_cas_n,
@@ -190,12 +204,12 @@ hdmi_in_i: component hdmi_in
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
       HDMI_OEN(0) => HDMI_OEN(0),
-      IIC_0_scl_i => iic_0_scl_i,
-      IIC_0_scl_o => iic_0_scl_o,
-      IIC_0_scl_t => iic_0_scl_t,
-      IIC_0_sda_i => iic_0_sda_i,
-      IIC_0_sda_o => iic_0_sda_o,
-      IIC_0_sda_t => iic_0_sda_t,
+      IIC_0_scl_i => IIC_0_scl_i,
+      IIC_0_scl_o => IIC_0_scl_o,
+      IIC_0_scl_t => IIC_0_scl_t,
+      IIC_0_sda_i => IIC_0_sda_i,
+      IIC_0_sda_o => IIC_0_sda_o,
+      IIC_0_sda_t => IIC_0_sda_t,
       TMDS_clk_n => TMDS_clk_n,
       TMDS_clk_p => TMDS_clk_p,
       TMDS_data_n(2 downto 0) => TMDS_data_n(2 downto 0),
@@ -220,20 +234,6 @@ hdmi_in_i: component hdmi_in
       vga_hs => vga_hs,
       vga_r(4 downto 0) => vga_r(4 downto 0),
       vga_vs => vga_vs
-    );
-iic_0_scl_iobuf: component IOBUF
-     port map (
-      I => iic_0_scl_o,
-      IO => iic_0_scl_io,
-      O => iic_0_scl_i,
-      T => iic_0_scl_t
-    );
-iic_0_sda_iobuf: component IOBUF
-     port map (
-      I => iic_0_sda_o,
-      IO => iic_0_sda_io,
-      O => iic_0_sda_i,
-      T => iic_0_sda_t
     );
 leds_4bits_tri_iobuf_0: component IOBUF
      port map (

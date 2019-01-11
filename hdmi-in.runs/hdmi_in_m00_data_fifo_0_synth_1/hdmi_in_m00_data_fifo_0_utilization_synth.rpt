@@ -1,8 +1,8 @@
-Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2017.2.1 (win64) Build 1957588 Wed Aug  9 16:32:24 MDT 2017
-| Date         : Fri Jan 11 12:59:14 2019
-| Host         : DTU-980R762 running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Jan 11 14:50:54 2019
+| Host         : DESKTOP-SHDFERO running 64-bit major release  (build 9200)
 | Command      : report_utilization -file hdmi_in_m00_data_fifo_0_utilization_synth.rpt -pb hdmi_in_m00_data_fifo_0_utilization_synth.pb
 | Design       : hdmi_in_m00_data_fifo_0
 | Device       : 7z010clg400-1
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                |  344 |     0 |     17600 |  1.95 |
-|   LUT as Logic             |  256 |     0 |     17600 |  1.45 |
-|   LUT as Memory            |   88 |     0 |      6000 |  1.47 |
+| Slice LUTs*                |  322 |     0 |     17600 |  1.83 |
+|   LUT as Logic             |  233 |     0 |     17600 |  1.32 |
+|   LUT as Memory            |   89 |     0 |      6000 |  1.48 |
 |     LUT as Distributed RAM |   88 |     0 |           |       |
-|     LUT as Shift Register  |    0 |     0 |           |       |
-| Slice Registers            |  866 |     0 |     35200 |  2.46 |
-|   Register as Flip Flop    |  866 |     0 |     35200 |  2.46 |
+|     LUT as Shift Register  |    1 |     0 |           |       |
+| Slice Registers            |  796 |     0 |     35200 |  2.26 |
+|   Register as Flip Flop    |  796 |     0 |     35200 |  2.26 |
 |   Register as Latch        |    0 |     0 |     35200 |  0.00 |
 | F7 Muxes                   |    0 |     0 |      8800 |  0.00 |
 | F8 Muxes                   |    0 |     0 |      4400 |  0.00 |
@@ -56,10 +56,10 @@ Table of Contents
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 136   |          Yes |           - |          Set |
-| 53    |          Yes |           - |        Reset |
-| 10    |          Yes |         Set |            - |
-| 667   |          Yes |       Reset |            - |
+| 48    |          Yes |           - |          Set |
+| 51    |          Yes |           - |        Reset |
+| 6     |          Yes |         Set |            - |
+| 691   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -150,20 +150,21 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  667 |        Flop & Latch |
-| FDPE     |  136 |        Flop & Latch |
+| FDRE     |  691 |        Flop & Latch |
 | RAMD32   |  132 |  Distributed Memory |
-| LUT4     |   77 |                 LUT |
-| LUT2     |   73 |                 LUT |
-| FDCE     |   53 |        Flop & Latch |
+| LUT4     |   75 |                 LUT |
+| FDCE     |   51 |        Flop & Latch |
+| FDPE     |   48 |        Flop & Latch |
+| LUT2     |   46 |                 LUT |
 | RAMS32   |   44 |  Distributed Memory |
-| LUT5     |   43 |                 LUT |
-| LUT3     |   34 |                 LUT |
-| LUT6     |   33 |                 LUT |
+| LUT6     |   40 |                 LUT |
+| LUT5     |   40 |                 LUT |
+| LUT3     |   35 |                 LUT |
 | LUT1     |   29 |                 LUT |
 | CARRY4   |   27 |          CarryLogic |
-| FDSE     |   10 |        Flop & Latch |
+| FDSE     |    6 |        Flop & Latch |
 | RAMB36E1 |    2 |        Block Memory |
+| SRL16E   |    1 |  Distributed Memory |
 | RAMB18E1 |    1 |        Block Memory |
 +----------+------+---------------------+
 

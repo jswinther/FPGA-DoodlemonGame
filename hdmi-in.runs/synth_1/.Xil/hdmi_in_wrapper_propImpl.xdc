@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:M:/Documents/hdmi-in/hdmi-in.srcs/constrs_1/imports/constraints/ZYBO_Master.xdc rfile:../../../hdmi-in.srcs/constrs_1/imports/constraints/ZYBO_Master.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/constrs_1/imports/constraints/ZYBO_Master.xdc rfile:../../../hdmi-in.srcs/constrs_1/imports/constraints/ZYBO_Master.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:94 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN N18 [get_ports iic_0_scl_io]
 set_property src_info {type:XDC file:1 line:98 export:INPUT save:INPUT read:READ} [current_design]

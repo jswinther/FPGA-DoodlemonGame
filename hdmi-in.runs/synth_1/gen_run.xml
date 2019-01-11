@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1547207390">
-  <File Type="RDS-PROPCONSTRS" Name="hdmi_in_wrapper_drc_synth.rpt"/>
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1547214307">
   <File Type="PA-TCL" Name="hdmi_in_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="hdmi_in_wrapper_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="hdmi_in_wrapper_reports.tcl"/>
   <File Type="RDS-RDS" Name="hdmi_in_wrapper.vds"/>
   <File Type="RDS-UTIL" Name="hdmi_in_wrapper_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="hdmi_in_wrapper_utilization_synth.pb"/>
@@ -53,40 +54,45 @@
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
   <Strategy Version="1" Minor="2">
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2015"/>
     <Step Id="synth_design">
-      <Option Id="FlattenHierarchy">1</Option>
-      <Option Id="Directive">0</Option>
       <Option Id="FsmExtraction">0</Option>
+      <Option Id="Directive">0</Option>
+      <Option Id="FlattenHierarchy">1</Option>
     </Step>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="hdmi_in_dvi2rgb_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="hdmi_in_axi_dynclk_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_s00_regslice_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_v_tc_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="hdmi_in_rgb2vga_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="hdmi_in_rst_processing_system7_0_150M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="hdmi_in_axi_gpio_sw_0"/>
   <BlockFileSet Type="BlockSrcs" Name="hdmi_in_xlconcat_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="hdmi_in_axi_gpio_btn_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_s01_regslice_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_m00_data_fifo_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_v_tc_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_axi_vdma_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="hdmi_in_axi_gpio_video_0"/>
   <BlockFileSet Type="BlockSrcs" Name="hdmi_in_axi_gpio_led_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_axi_vdma_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="hdmi_in_proc_sys_reset_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="hdmi_in_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="hdmi_in_rst_processing_system7_0_100M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="hdmi_in_v_axi4s_vid_out_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_m00_data_fifo_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_s01_regslice_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_v_tc_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_s00_regslice_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_v_tc_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="hdmi_in_v_vid_in_axi4s_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_xlconstant_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_xbar_1"/>
   <BlockFileSet Type="BlockSrcs" Name="hdmi_in_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_auto_pc_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_m00_regslice_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_auto_pc_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_auto_us_df_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_xbar_1"/>
   <BlockFileSet Type="BlockSrcs" Name="hdmi_in_s00_data_fifo_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_auto_us_df_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_m00_regslice_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_auto_pc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="hdmi_in_auto_pc_1"/>
 </GenRun>
