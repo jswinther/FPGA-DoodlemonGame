@@ -128,7 +128,7 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 	/**
 	 * jumperMovement FSM.
 	 */
-
+	enum Velocity jumperVelocity = GROUND;
 
 	/**
 	 * Generate Platforms.
@@ -232,6 +232,21 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 
 	}
 }
+
+int GenerateGameImage() {
+	int width = dispCtrl.vMode.width;
+	int height = dispCtrl.vMode.height;
+	int image[width*height*3];
+	/*
+	 * Generate Platforms.
+	 */
+
+
+}
+
+
+
+
 
 
 void DemoPrintBackground(u8 *frame, int width, int height) {

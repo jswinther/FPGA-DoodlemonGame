@@ -24,7 +24,7 @@ enum Velocity {
 	GROUND,
 	AIR
 };
-enum Velocity jumperVelocity = GROUND;
+
 #define jumperStart (1920*3)*539+(1920*3)-(jumperBlock.width/2);
 
 void GamePrintBlock(u8 *frame, struct Block *block, u32 anchor, int color);
