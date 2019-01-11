@@ -217,6 +217,15 @@ int collisiondetect (struct Block *jumper, struct Block *platform){
 	return 0;
 }
 
+void FrameBufferSwap (){
+	nextFrame = dispCtrl.curFrame + 1;
+						if (nextFrame >= DISPLAY_NUM_FRAMES)
+						{
+							nextFrame = 0;
+						}
+
+}
+
 
 
 void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
@@ -278,14 +287,11 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 	int counter = 0;
 	int k=0;
 	while(1) {
-
-				nextFrame = dispCtrl.curFrame + 1;
-					if (nextFrame >= DISPLAY_NUM_FRAMES)
-					{
-						nextFrame = 0;
-					}
+		//Swap Frame buffer
+		FrameBufferSwap();
 
 
+		//Generate platforms
 		for(j = 0; j < numberofplatforms; j++) {
 			DemoPrintBlock(frame, platform[j], platform[j]->anchor, 255);
 			platformBlock[j].anchor+=hast;
@@ -296,6 +302,9 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 			}
 			DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
 		}
+
+
+
 		switch(jumperVelocity) {
 		case GROUND:
 			counter = 0;
