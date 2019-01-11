@@ -1509,3 +1509,1935 @@ make pre-build main-build
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for 'main-build'.
+16:45:00 **** Build of project HDMI_IN_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/axivdma_v6_3/src"
+make -C ps7_cortexa9_0/libsrc/axivdma_v6_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/iicps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/vtc_v7_2/src"
+make -C ps7_cortexa9_0/libsrc/vtc_v7_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/axivdma_v6_3/src"
+make -C ps7_cortexa9_0/libsrc/axivdma_v6_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling axivdma"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/iicps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling iicps"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling scugic"
+xscugic_g.c:53:2: warning: missing initializer for field 'HandlerTable' of 'XScuGic_Config {aka struct <anonymous>}' [-Wmissing-field-initializers]
+  }
+  ^
+In file included from xscugic_g.c:41:0:
+xscugic.h:218:27: note: 'HandlerTable' declared here
+  XScuGic_VectorTableEntry HandlerTable[XSCUGIC_MAX_NUM_INTR_INPUTS];/**<
+                           ^~~~~~~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling sdps"
+xsdps.c: In function 'XSdPs_FrameCmd':
+xsdps.c:1189:11: warning: this statement may fall through [-Wimplicit-fallthrough=]
+    RetVal |= RESP_R1 | (u32)XSDPS_DAT_PRESENT_SEL_MASK;
+xsdps.c:1190:3: note: here
+   case ACMD41:
+   ^~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/vtc_v7_2/src"
+make -C ps7_cortexa9_0/libsrc/vtc_v7_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling video timing controller"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+16:45:30 **** Build of configuration Debug for project HDMI_IN ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_capture/video_capture.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_capture/video_capture.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_capture/video_capture.d" -MT"src/video_capture/video_capture.o" -o "src/video_capture/video_capture.o" "../src/video_capture/video_capture.c"
+'Finished building: ../src/video_capture/video_capture.c'
+' '
+'Building file: ../src/timer_ps/timer_ps.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/timer_ps/timer_ps.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/timer_ps/timer_ps.d" -MT"src/timer_ps/timer_ps.o" -o "src/timer_ps/timer_ps.o" "../src/timer_ps/timer_ps.c"
+'Finished building: ../src/timer_ps/timer_ps.c'
+' '
+'Building file: ../src/intc/intc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/intc/intc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/intc/intc.d" -MT"src/intc/intc.o" -o "src/intc/intc.o" "../src/intc/intc.c"
+'Finished building: ../src/intc/intc.c'
+' '
+'Building file: ../src/dynclk/dynclk.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dynclk/dynclk.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/dynclk/dynclk.d" -MT"src/dynclk/dynclk.o" -o "src/dynclk/dynclk.o" "../src/dynclk/dynclk.c"
+'Finished building: ../src/dynclk/dynclk.c'
+' '
+'Building file: ../src/display_ctrl/display_ctrl.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_ctrl/display_ctrl.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_ctrl/display_ctrl.d" -MT"src/display_ctrl/display_ctrl.o" -o "src/display_ctrl/display_ctrl.o" "../src/display_ctrl/display_ctrl.c"
+'Finished building: ../src/display_ctrl/display_ctrl.c'
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../HDMI_IN_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'IntcInitFunction':
+../src/video_demo.c:66:32: error: 'XPAR_FABRIC_AXI_GPIO_BTN_IP2INTC_IRPT_INTR' undeclared (first use in this function); did you mean 'XPAR_FABRIC_AXI_GPIO_VIDEO_IP2INTC_IRPT_INTR'?
+ #define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_BTN_IP2INTC_IRPT_INTR
+                                ^
+../src/video_demo.c:66:32: note: in definition of macro 'INTC_GPIO_INTERRUPT_ID'
+ #define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_BTN_IP2INTC_IRPT_INTR
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:66:32: note: each undeclared identifier is reported only once for each function it appears in
+ #define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_BTN_IP2INTC_IRPT_INTR
+                                ^
+../src/video_demo.c:66:32: note: in definition of macro 'INTC_GPIO_INTERRUPT_ID'
+ #define INTC_GPIO_INTERRUPT_ID XPAR_FABRIC_AXI_GPIO_BTN_IP2INTC_IRPT_INTR
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:188:10: warning: unused variable 'trig' [-Wunused-variable]
+  u8 pri, trig;
+          ^~~~
+../src/video_demo.c:188:5: warning: unused variable 'pri' [-Wunused-variable]
+  u8 pri, trig;
+     ^~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:463:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:30:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+16:45:34 **** Build of project VGA_out_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/axivdma_v6_3/src"
+make -C ps7_cortexa9_0/libsrc/axivdma_v6_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/iicps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/vtc_v7_2/src"
+make -C ps7_cortexa9_0/libsrc/vtc_v7_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/axivdma_v6_3/src"
+make -C ps7_cortexa9_0/libsrc/axivdma_v6_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling axivdma"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/iicps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling iicps"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling scugic"
+xscugic_g.c:53:2: warning: missing initializer for field 'HandlerTable' of 'XScuGic_Config {aka struct <anonymous>}' [-Wmissing-field-initializers]
+  }
+  ^
+In file included from xscugic_g.c:41:0:
+xscugic.h:218:27: note: 'HandlerTable' declared here
+  XScuGic_VectorTableEntry HandlerTable[XSCUGIC_MAX_NUM_INTR_INPUTS];/**<
+                           ^~~~~~~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling sdps"
+xsdps.c: In function 'XSdPs_FrameCmd':
+xsdps.c:1189:11: warning: this statement may fall through [-Wimplicit-fallthrough=]
+    RetVal |= RESP_R1 | (u32)XSDPS_DAT_PRESENT_SEL_MASK;
+xsdps.c:1190:3: note: here
+   case ACMD41:
+   ^~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/vtc_v7_2/src"
+make -C ps7_cortexa9_0/libsrc/vtc_v7_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling video timing controller"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+16:46:02 **** Build of configuration Debug for project VGA_out ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_capture/video_capture.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_capture/video_capture.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VGA_out_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_capture/video_capture.d" -MT"src/video_capture/video_capture.o" -o "src/video_capture/video_capture.o" "../src/video_capture/video_capture.c"
+'Finished building: ../src/video_capture/video_capture.c'
+' '
+'Building file: ../src/timer_ps/timer_ps.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/timer_ps/timer_ps.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VGA_out_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/timer_ps/timer_ps.d" -MT"src/timer_ps/timer_ps.o" -o "src/timer_ps/timer_ps.o" "../src/timer_ps/timer_ps.c"
+'Finished building: ../src/timer_ps/timer_ps.c'
+' '
+'Building file: ../src/intc/intc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/intc/intc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VGA_out_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/intc/intc.d" -MT"src/intc/intc.o" -o "src/intc/intc.o" "../src/intc/intc.c"
+'Finished building: ../src/intc/intc.c'
+' '
+'Building file: ../src/dynclk/dynclk.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dynclk/dynclk.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VGA_out_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/dynclk/dynclk.d" -MT"src/dynclk/dynclk.o" -o "src/dynclk/dynclk.o" "../src/dynclk/dynclk.c"
+'Finished building: ../src/dynclk/dynclk.c'
+' '
+'Building file: ../src/display_ctrl/display_ctrl.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_ctrl/display_ctrl.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VGA_out_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_ctrl/display_ctrl.d" -MT"src/display_ctrl/display_ctrl.o" -o "src/display_ctrl/display_ctrl.o" "../src/display_ctrl/display_ctrl.c"
+'Finished building: ../src/display_ctrl/display_ctrl.c'
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../VGA_out_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'IntcInitFunction':
+../src/video_demo.c:188:10: warning: unused variable 'trig' [-Wunused-variable]
+  u8 pri, trig;
+          ^~~~
+../src/video_demo.c:188:5: warning: unused variable 'pri' [-Wunused-variable]
+  u8 pri, trig;
+     ^~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:463:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:30:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: VGA_out.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../VGA_out_bsp/ps7_cortexa9_0/lib -o "VGA_out.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: VGA_out.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size VGA_out.elf  |tee "VGA_out.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118168	 124368	18689024	18931560	120df68	VGA_out.elf
+'Finished building: VGA_out.elf.size'
+' '
+16:46:05 **** Build of project vga2_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/axivdma_v6_3/src"
+make -C ps7_cortexa9_0/libsrc/axivdma_v6_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/iicps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/vtc_v7_2/src"
+make -C ps7_cortexa9_0/libsrc/vtc_v7_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/axivdma_v6_3/src"
+make -C ps7_cortexa9_0/libsrc/axivdma_v6_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling axivdma"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/iicps_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling iicps"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling scugic"
+xscugic_g.c:53:2: warning: missing initializer for field 'HandlerTable' of 'XScuGic_Config {aka struct <anonymous>}' [-Wmissing-field-initializers]
+  }
+  ^
+In file included from xscugic_g.c:41:0:
+xscugic.h:218:27: note: 'HandlerTable' declared here
+  XScuGic_VectorTableEntry HandlerTable[XSCUGIC_MAX_NUM_INTR_INPUTS];/**<
+                           ^~~~~~~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling sdps"
+xsdps.c: In function 'XSdPs_FrameCmd':
+xsdps.c:1189:11: warning: this statement may fall through [-Wimplicit-fallthrough=]
+    RetVal |= RESP_R1 | (u32)XSDPS_DAT_PRESENT_SEL_MASK;
+xsdps.c:1190:3: note: here
+   case ACMD41:
+   ^~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_3/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/vtc_v7_2/src"
+make -C ps7_cortexa9_0/libsrc/vtc_v7_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling video timing controller"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+16:46:33 **** Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_capture/video_capture.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_capture/video_capture.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_capture/video_capture.d" -MT"src/video_capture/video_capture.o" -o "src/video_capture/video_capture.o" "../src/video_capture/video_capture.c"
+'Finished building: ../src/video_capture/video_capture.c'
+' '
+'Building file: ../src/timer_ps/timer_ps.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/timer_ps/timer_ps.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/timer_ps/timer_ps.d" -MT"src/timer_ps/timer_ps.o" -o "src/timer_ps/timer_ps.o" "../src/timer_ps/timer_ps.c"
+'Finished building: ../src/timer_ps/timer_ps.c'
+' '
+'Building file: ../src/intc/intc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/intc/intc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/intc/intc.d" -MT"src/intc/intc.o" -o "src/intc/intc.o" "../src/intc/intc.c"
+'Finished building: ../src/intc/intc.c'
+' '
+'Building file: ../src/dynclk/dynclk.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dynclk/dynclk.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/dynclk/dynclk.d" -MT"src/dynclk/dynclk.o" -o "src/dynclk/dynclk.o" "../src/dynclk/dynclk.c"
+'Finished building: ../src/dynclk/dynclk.c'
+' '
+'Building file: ../src/display_ctrl/display_ctrl.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_ctrl/display_ctrl.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_ctrl/display_ctrl.d" -MT"src/display_ctrl/display_ctrl.o" -o "src/display_ctrl/display_ctrl.o" "../src/display_ctrl/display_ctrl.c"
+'Finished building: ../src/display_ctrl/display_ctrl.c'
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'IntcInitFunction':
+../src/video_demo.c:171:10: warning: unused variable 'trig' [-Wunused-variable]
+  u8 pri, trig;
+          ^~~~
+../src/video_demo.c:171:5: warning: unused variable 'pri' [-Wunused-variable]
+  u8 pri, trig;
+     ^~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:461:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:30:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118408	 124384	18689024	18931816	120e068	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+18:05:05 **** Clean-only build of configuration Debug for project vga2 ****
+make clean 
+rm -rf  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o  ./src/video_capture/video_capture.d  ./src/timer_ps/timer_ps.d  ./src/intc/intc.d  ./src/dynclk/dynclk.d  ./src/display_ctrl/display_ctrl.d  ./src/video_demo.d  vga2.elf.size  vga2.elf
+' '
+18:05:05 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_capture/video_capture.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_capture/video_capture.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_capture/video_capture.d" -MT"src/video_capture/video_capture.o" -o "src/video_capture/video_capture.o" "../src/video_capture/video_capture.c"
+'Finished building: ../src/video_capture/video_capture.c'
+' '
+'Building file: ../src/timer_ps/timer_ps.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/timer_ps/timer_ps.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/timer_ps/timer_ps.d" -MT"src/timer_ps/timer_ps.o" -o "src/timer_ps/timer_ps.o" "../src/timer_ps/timer_ps.c"
+'Finished building: ../src/timer_ps/timer_ps.c'
+' '
+'Building file: ../src/intc/intc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/intc/intc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/intc/intc.d" -MT"src/intc/intc.o" -o "src/intc/intc.o" "../src/intc/intc.c"
+'Finished building: ../src/intc/intc.c'
+' '
+'Building file: ../src/dynclk/dynclk.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dynclk/dynclk.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/dynclk/dynclk.d" -MT"src/dynclk/dynclk.o" -o "src/dynclk/dynclk.o" "../src/dynclk/dynclk.c"
+'Finished building: ../src/dynclk/dynclk.c'
+' '
+'Building file: ../src/display_ctrl/display_ctrl.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_ctrl/display_ctrl.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_ctrl/display_ctrl.d" -MT"src/display_ctrl/display_ctrl.o" -o "src/display_ctrl/display_ctrl.o" "../src/display_ctrl/display_ctrl.c"
+'Finished building: ../src/display_ctrl/display_ctrl.c'
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c:80:14: error: redefinition of 'jumperBlock'
+ struct Block jumperBlock = {0, 100, 100, 0, 0};
+              ^~~~~~~~~~~
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:60:14: note: previous definition of 'jumperBlock' was here
+ struct Block jumperBlock = {0, 100, 100, 0, 0};
+              ^~~~~~~~~~~
+../src/video_demo.c:81:17: error: redefinition of 'jumper'
+   struct Block *jumper = &jumperBlock;
+                 ^~~~~~
+In file included from ../src/video_demo.c:28:0:
+../src/video_demo.h:61:15: note: previous definition of 'jumper' was here
+ struct Block *jumper = &jumperBlock;
+               ^~~~~~
+../src/video_demo.c: In function 'IntcInitFunction':
+../src/video_demo.c:171:10: warning: unused variable 'trig' [-Wunused-variable]
+  u8 pri, trig;
+          ^~~~
+../src/video_demo.c:171:5: warning: unused variable 'pri' [-Wunused-variable]
+  u8 pri, trig;
+     ^~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:461:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:30:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+18:05:08 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'IntcInitFunction':
+../src/video_demo.c:169:10: warning: unused variable 'trig' [-Wunused-variable]
+  u8 pri, trig;
+          ^~~~
+../src/video_demo.c:169:5: warning: unused variable 'pri' [-Wunused-variable]
+  u8 pri, trig;
+     ^~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:459:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:29:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118408	 124384	18689024	18931816	120e068	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+18:05:52 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'IntcInitFunction':
+../src/video_demo.c:164:10: warning: unused variable 'trig' [-Wunused-variable]
+  u8 pri, trig;
+          ^~~~
+../src/video_demo.c:164:5: warning: unused variable 'pri' [-Wunused-variable]
+  u8 pri, trig;
+     ^~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:454:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:29:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118408	 124384	18688992	18931784	120e048	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+18:06:28 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'IntcInitFunction':
+../src/video_demo.c:156:10: warning: unused variable 'trig' [-Wunused-variable]
+  u8 pri, trig;
+          ^~~~
+../src/video_demo.c:156:5: warning: unused variable 'pri' [-Wunused-variable]
+  u8 pri, trig;
+     ^~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:446:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:29:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118408	 124384	18688992	18931784	120e048	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+18:11:25 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'IntcInitFunction':
+../src/video_demo.c:159:10: warning: unused variable 'trig' [-Wunused-variable]
+  u8 pri, trig;
+          ^~~~
+../src/video_demo.c:159:5: warning: unused variable 'pri' [-Wunused-variable]
+  u8 pri, trig;
+     ^~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:449:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:29:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118368	 124384	18688992	18931744	120e020	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+18:12:00 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:190:3: warning: implicit declaration of function 'FrameBufferSwap' [-Wimplicit-function-declaration]
+   FrameBufferSwap();
+   ^~~~~~~~~~~~~~~
+../src/video_demo.c:218:4: warning: implicit declaration of function 'DemoOverwriteJumper' [-Wimplicit-function-declaration]
+    DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+    ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:240:10: warning: implicit declaration of function 'collisiondetect' [-Wimplicit-function-declaration]
+      if((collisiondetect(jumper, platform[k]))==1) {
+          ^~~~~~~~~~~~~~~
+../src/video_demo.c:258:3: warning: implicit declaration of function 'DemoPrintJumper'; did you mean 'DemoPrintTest'? [-Wimplicit-function-declaration]
+   DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+   ^~~~~~~~~~~~~~~
+   DemoPrintTest
+../src/video_demo.c:262:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:29:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+../src/video_demo.c: In function 'IntcInitFunction':
+../src/video_demo.c:294:10: warning: unused variable 'trig' [-Wunused-variable]
+  u8 pri, trig;
+          ^~~~
+../src/video_demo.c:294:5: warning: unused variable 'pri' [-Wunused-variable]
+  u8 pri, trig;
+     ^~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:370:6: warning: conflicting types for 'DemoPrintJumper'
+ void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~
+../src/video_demo.c:258:3: note: previous implicit declaration of 'DemoPrintJumper' was here
+   DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+   ^~~~~~~~~~~~~~~
+../src/video_demo.c:391:6: warning: conflicting types for 'DemoOverwriteJumper'
+ void DemoOverwriteJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:218:4: note: previous implicit declaration of 'DemoOverwriteJumper' was here
+    DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+    ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:442:6: warning: conflicting types for 'FrameBufferSwap'
+ void FrameBufferSwap (){
+      ^~~~~~~~~~~~~~~
+../src/video_demo.c:190:3: note: previous implicit declaration of 'FrameBufferSwap' was here
+   FrameBufferSwap();
+   ^~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118368	 124384	18688992	18931744	120e020	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+18:13:53 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:190:3: warning: implicit declaration of function 'FrameBufferSwap' [-Wimplicit-function-declaration]
+   FrameBufferSwap();
+   ^~~~~~~~~~~~~~~
+../src/video_demo.c:218:4: warning: implicit declaration of function 'DemoOverwriteJumper' [-Wimplicit-function-declaration]
+    DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+    ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:240:10: warning: implicit declaration of function 'collisiondetect' [-Wimplicit-function-declaration]
+      if((collisiondetect(jumper, platform[k]))==1) {
+          ^~~~~~~~~~~~~~~
+../src/video_demo.c:258:3: warning: implicit declaration of function 'DemoPrintJumper'; did you mean 'DemoPrintTest'? [-Wimplicit-function-declaration]
+   DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+   ^~~~~~~~~~~~~~~
+   DemoPrintTest
+../src/video_demo.c:262:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:29:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:304:6: warning: conflicting types for 'DemoPrintJumper'
+ void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~
+../src/video_demo.c:258:3: note: previous implicit declaration of 'DemoPrintJumper' was here
+   DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+   ^~~~~~~~~~~~~~~
+../src/video_demo.c:325:6: warning: conflicting types for 'DemoOverwriteJumper'
+ void DemoOverwriteJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:218:4: note: previous implicit declaration of 'DemoOverwriteJumper' was here
+    DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+    ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c: In function 'IntcInitFunction':
+../src/video_demo.c:400:10: warning: unused variable 'trig' [-Wunused-variable]
+  u8 pri, trig;
+          ^~~~
+../src/video_demo.c:400:5: warning: unused variable 'pri' [-Wunused-variable]
+  u8 pri, trig;
+     ^~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:442:6: warning: conflicting types for 'FrameBufferSwap'
+ void FrameBufferSwap (){
+      ^~~~~~~~~~~~~~~
+../src/video_demo.c:190:3: note: previous implicit declaration of 'FrameBufferSwap' was here
+   FrameBufferSwap();
+   ^~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118368	 124384	18688992	18931744	120e020	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+18:14:10 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:89:26: error: unknown type name 'XScuGic'
+ int InterruptSystemSetup(XScuGic *XScuGicInstancePtr);
+                          ^~~~~~~
+../src/video_demo.h:90:36: error: unknown type name 'XGpio'
+ int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr);
+                                    ^~~~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:190:3: warning: implicit declaration of function 'FrameBufferSwap' [-Wimplicit-function-declaration]
+   FrameBufferSwap();
+   ^~~~~~~~~~~~~~~
+../src/video_demo.c:218:4: warning: implicit declaration of function 'DemoOverwriteJumper' [-Wimplicit-function-declaration]
+    DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+    ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:240:10: warning: implicit declaration of function 'collisiondetect' [-Wimplicit-function-declaration]
+      if((collisiondetect(jumper, platform[k]))==1) {
+          ^~~~~~~~~~~~~~~
+../src/video_demo.c:258:3: warning: implicit declaration of function 'DemoPrintJumper'; did you mean 'DemoPrintTest'? [-Wimplicit-function-declaration]
+   DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+   ^~~~~~~~~~~~~~~
+   DemoPrintTest
+../src/video_demo.c:262:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:29:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:304:6: warning: conflicting types for 'DemoPrintJumper'
+ void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~
+../src/video_demo.c:258:3: note: previous implicit declaration of 'DemoPrintJumper' was here
+   DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+   ^~~~~~~~~~~~~~~
+../src/video_demo.c:325:6: warning: conflicting types for 'DemoOverwriteJumper'
+ void DemoOverwriteJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:218:4: note: previous implicit declaration of 'DemoOverwriteJumper' was here
+    DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+    ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c: In function 'IntcInitFunction':
+../src/video_demo.c:400:10: warning: unused variable 'trig' [-Wunused-variable]
+  u8 pri, trig;
+          ^~~~
+../src/video_demo.c:400:5: warning: unused variable 'pri' [-Wunused-variable]
+  u8 pri, trig;
+     ^~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:442:6: warning: conflicting types for 'FrameBufferSwap'
+ void FrameBufferSwap (){
+      ^~~~~~~~~~~~~~~
+../src/video_demo.c:190:3: note: previous implicit declaration of 'FrameBufferSwap' was here
+   FrameBufferSwap();
+   ^~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+18:15:01 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:89:26: error: unknown type name 'XScuGic'
+ int InterruptSystemSetup(XScuGic *XScuGicInstancePtr);
+                          ^~~~~~~
+../src/video_demo.h:90:36: error: unknown type name 'XGpio'
+ int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr);
+                                    ^~~~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:190:3: warning: implicit declaration of function 'FrameBufferSwap' [-Wimplicit-function-declaration]
+   FrameBufferSwap();
+   ^~~~~~~~~~~~~~~
+../src/video_demo.c:218:4: warning: implicit declaration of function 'DemoOverwriteJumper' [-Wimplicit-function-declaration]
+    DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+    ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:240:10: warning: implicit declaration of function 'collisiondetect' [-Wimplicit-function-declaration]
+      if((collisiondetect(jumper, platform[k]))==1) {
+          ^~~~~~~~~~~~~~~
+../src/video_demo.c:258:3: warning: implicit declaration of function 'DemoPrintJumper'; did you mean 'DemoPrintTest'? [-Wimplicit-function-declaration]
+   DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+   ^~~~~~~~~~~~~~~
+   DemoPrintTest
+../src/video_demo.c:262:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:29:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:304:6: warning: conflicting types for 'DemoPrintJumper'
+ void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~
+../src/video_demo.c:258:3: note: previous implicit declaration of 'DemoPrintJumper' was here
+   DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+   ^~~~~~~~~~~~~~~
+../src/video_demo.c:325:6: warning: conflicting types for 'DemoOverwriteJumper'
+ void DemoOverwriteJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:218:4: note: previous implicit declaration of 'DemoOverwriteJumper' was here
+    DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+    ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c: In function 'IntcInitFunction':
+../src/video_demo.c:400:10: warning: unused variable 'trig' [-Wunused-variable]
+  u8 pri, trig;
+          ^~~~
+../src/video_demo.c:400:5: warning: unused variable 'pri' [-Wunused-variable]
+  u8 pri, trig;
+     ^~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:442:6: warning: conflicting types for 'FrameBufferSwap'
+ void FrameBufferSwap (){
+      ^~~~~~~~~~~~~~~
+../src/video_demo.c:190:3: note: previous implicit declaration of 'FrameBufferSwap' was here
+   FrameBufferSwap();
+   ^~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+18:15:15 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:89:26: error: unknown type name 'XScuGic'
+ int InterruptSystemSetup(XScuGic *XScuGicInstancePtr);
+                          ^~~~~~~
+../src/video_demo.h:90:36: error: unknown type name 'XGpio'
+ int IntcInitFunction(u16 DeviceId, XGpio *GpioInstancePtr);
+                                    ^~~~~
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:189:3: warning: implicit declaration of function 'FrameBufferSwap' [-Wimplicit-function-declaration]
+   FrameBufferSwap();
+   ^~~~~~~~~~~~~~~
+../src/video_demo.c:217:4: warning: implicit declaration of function 'DemoOverwriteJumper' [-Wimplicit-function-declaration]
+    DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+    ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:239:10: warning: implicit declaration of function 'collisiondetect' [-Wimplicit-function-declaration]
+      if((collisiondetect(jumper, platform[k]))==1) {
+          ^~~~~~~~~~~~~~~
+../src/video_demo.c:257:3: warning: implicit declaration of function 'DemoPrintJumper'; did you mean 'DemoPrintTest'? [-Wimplicit-function-declaration]
+   DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+   ^~~~~~~~~~~~~~~
+   DemoPrintTest
+../src/video_demo.c:261:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:29:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:303:6: warning: conflicting types for 'DemoPrintJumper'
+ void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~
+../src/video_demo.c:257:3: note: previous implicit declaration of 'DemoPrintJumper' was here
+   DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+   ^~~~~~~~~~~~~~~
+../src/video_demo.c:324:6: warning: conflicting types for 'DemoOverwriteJumper'
+ void DemoOverwriteJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:217:4: note: previous implicit declaration of 'DemoOverwriteJumper' was here
+    DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+    ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c: In function 'IntcInitFunction':
+../src/video_demo.c:399:10: warning: unused variable 'trig' [-Wunused-variable]
+  u8 pri, trig;
+          ^~~~
+../src/video_demo.c:399:5: warning: unused variable 'pri' [-Wunused-variable]
+  u8 pri, trig;
+     ^~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:441:6: warning: conflicting types for 'FrameBufferSwap'
+ void FrameBufferSwap (){
+      ^~~~~~~~~~~~~~~
+../src/video_demo.c:189:3: note: previous implicit declaration of 'FrameBufferSwap' was here
+   FrameBufferSwap();
+   ^~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+18:15:20 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:189:3: warning: implicit declaration of function 'FrameBufferSwap' [-Wimplicit-function-declaration]
+   FrameBufferSwap();
+   ^~~~~~~~~~~~~~~
+../src/video_demo.c:217:4: warning: implicit declaration of function 'DemoOverwriteJumper' [-Wimplicit-function-declaration]
+    DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+    ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:239:10: warning: implicit declaration of function 'collisiondetect' [-Wimplicit-function-declaration]
+      if((collisiondetect(jumper, platform[k]))==1) {
+          ^~~~~~~~~~~~~~~
+../src/video_demo.c:257:3: warning: implicit declaration of function 'DemoPrintJumper'; did you mean 'DemoPrintTest'? [-Wimplicit-function-declaration]
+   DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+   ^~~~~~~~~~~~~~~
+   DemoPrintTest
+../src/video_demo.c:261:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:29:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:303:6: warning: conflicting types for 'DemoPrintJumper'
+ void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~
+../src/video_demo.c:257:3: note: previous implicit declaration of 'DemoPrintJumper' was here
+   DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+   ^~~~~~~~~~~~~~~
+../src/video_demo.c:324:6: warning: conflicting types for 'DemoOverwriteJumper'
+ void DemoOverwriteJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:217:4: note: previous implicit declaration of 'DemoOverwriteJumper' was here
+    DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+    ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c: In function 'IntcInitFunction':
+../src/video_demo.c:399:10: warning: unused variable 'trig' [-Wunused-variable]
+  u8 pri, trig;
+          ^~~~
+../src/video_demo.c:399:5: warning: unused variable 'pri' [-Wunused-variable]
+  u8 pri, trig;
+     ^~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:441:6: warning: conflicting types for 'FrameBufferSwap'
+ void FrameBufferSwap (){
+      ^~~~~~~~~~~~~~~
+../src/video_demo.c:189:3: note: previous implicit declaration of 'FrameBufferSwap' was here
+   FrameBufferSwap();
+   ^~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118368	 124384	18688992	18931744	120e020	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+18:19:06 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:189:3: warning: implicit declaration of function 'FrameBufferSwap' [-Wimplicit-function-declaration]
+   FrameBufferSwap();
+   ^~~~~~~~~~~~~~~
+../src/video_demo.c:217:4: warning: implicit declaration of function 'DemoOverwriteJumper' [-Wimplicit-function-declaration]
+    DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+    ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:239:10: warning: implicit declaration of function 'collisiondetect' [-Wimplicit-function-declaration]
+      if((collisiondetect(jumper, platform[k]))==1) {
+          ^~~~~~~~~~~~~~~
+../src/video_demo.c:257:3: warning: implicit declaration of function 'DemoPrintJumper'; did you mean 'DemoPrintTest'? [-Wimplicit-function-declaration]
+   DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+   ^~~~~~~~~~~~~~~
+   DemoPrintTest
+../src/video_demo.c:261:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:29:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:303:6: warning: conflicting types for 'DemoPrintJumper'
+ void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~
+../src/video_demo.c:257:3: note: previous implicit declaration of 'DemoPrintJumper' was here
+   DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+   ^~~~~~~~~~~~~~~
+../src/video_demo.c:324:6: warning: conflicting types for 'DemoOverwriteJumper'
+ void DemoOverwriteJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:217:4: note: previous implicit declaration of 'DemoOverwriteJumper' was here
+    DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+    ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:424:6: warning: conflicting types for 'FrameBufferSwap'
+ void FrameBufferSwap (){
+      ^~~~~~~~~~~~~~~
+../src/video_demo.c:189:3: note: previous implicit declaration of 'FrameBufferSwap' was here
+   FrameBufferSwap();
+   ^~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118368	 124384	18688992	18931744	120e020	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+18:20:00 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:189:3: warning: implicit declaration of function 'FrameBufferSwap' [-Wimplicit-function-declaration]
+   FrameBufferSwap();
+   ^~~~~~~~~~~~~~~
+../src/video_demo.c:217:4: warning: implicit declaration of function 'DemoOverwriteJumper' [-Wimplicit-function-declaration]
+    DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+    ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:239:10: warning: implicit declaration of function 'collisiondetect' [-Wimplicit-function-declaration]
+      if((collisiondetect(jumper, platform[k]))==1) {
+          ^~~~~~~~~~~~~~~
+../src/video_demo.c:257:3: warning: implicit declaration of function 'DemoPrintJumper'; did you mean 'DemoPrintTest'? [-Wimplicit-function-declaration]
+   DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+   ^~~~~~~~~~~~~~~
+   DemoPrintTest
+../src/video_demo.c:261:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:29:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:303:6: warning: conflicting types for 'DemoPrintJumper'
+ void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~
+../src/video_demo.c:257:3: note: previous implicit declaration of 'DemoPrintJumper' was here
+   DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+   ^~~~~~~~~~~~~~~
+../src/video_demo.c:324:6: warning: conflicting types for 'DemoOverwriteJumper'
+ void DemoOverwriteJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:217:4: note: previous implicit declaration of 'DemoOverwriteJumper' was here
+    DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+    ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:375:6: warning: conflicting types for 'FrameBufferSwap'
+ void FrameBufferSwap (){
+      ^~~~~~~~~~~~~~~
+../src/video_demo.c:189:3: note: previous implicit declaration of 'FrameBufferSwap' was here
+   FrameBufferSwap();
+   ^~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 118368	 124384	18688992	18931744	120e020	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+18:24:29 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:189:3: warning: implicit declaration of function 'FrameBufferSwap' [-Wimplicit-function-declaration]
+   FrameBufferSwap();
+   ^~~~~~~~~~~~~~~
+../src/video_demo.c:217:4: warning: implicit declaration of function 'DemoOverwriteJumper' [-Wimplicit-function-declaration]
+    DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+    ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:239:10: warning: implicit declaration of function 'collisiondetect' [-Wimplicit-function-declaration]
+      if((collisiondetect(jumper, platform[k]))==1) {
+          ^~~~~~~~~~~~~~~
+../src/video_demo.c:257:3: warning: implicit declaration of function 'DemoPrintJumper'; did you mean 'DemoPrintTest'? [-Wimplicit-function-declaration]
+   DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+   ^~~~~~~~~~~~~~~
+   DemoPrintTest
+../src/video_demo.c:261:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:29:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:303:6: warning: conflicting types for 'DemoPrintJumper'
+ void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~
+../src/video_demo.c:257:3: note: previous implicit declaration of 'DemoPrintJumper' was here
+   DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+   ^~~~~~~~~~~~~~~
+../src/video_demo.c:324:6: warning: conflicting types for 'DemoOverwriteJumper'
+ void DemoOverwriteJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:217:4: note: previous implicit declaration of 'DemoOverwriteJumper' was here
+    DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+    ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:375:6: warning: conflicting types for 'FrameBufferSwap'
+ void FrameBufferSwap (){
+      ^~~~~~~~~~~~~~~
+../src/video_demo.c:189:3: note: previous implicit declaration of 'FrameBufferSwap' was here
+   FrameBufferSwap();
+   ^~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 116440	 124384	18688992	18929816	120d898	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+18:25:06 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:189:3: warning: implicit declaration of function 'FrameBufferSwap' [-Wimplicit-function-declaration]
+   FrameBufferSwap();
+   ^~~~~~~~~~~~~~~
+../src/video_demo.c:217:4: warning: implicit declaration of function 'DemoOverwriteJumper' [-Wimplicit-function-declaration]
+    DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+    ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:239:10: warning: implicit declaration of function 'collisiondetect' [-Wimplicit-function-declaration]
+      if((collisiondetect(jumper, platform[k]))==1) {
+          ^~~~~~~~~~~~~~~
+../src/video_demo.c:257:3: warning: implicit declaration of function 'DemoPrintJumper'; did you mean 'DemoPrintTest'? [-Wimplicit-function-declaration]
+   DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+   ^~~~~~~~~~~~~~~
+   DemoPrintTest
+../src/video_demo.c:261:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:29:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:303:6: warning: conflicting types for 'DemoPrintJumper'
+ void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~
+../src/video_demo.c:257:3: note: previous implicit declaration of 'DemoPrintJumper' was here
+   DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+   ^~~~~~~~~~~~~~~
+../src/video_demo.c:324:6: warning: conflicting types for 'DemoOverwriteJumper'
+ void DemoOverwriteJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:217:4: note: previous implicit declaration of 'DemoOverwriteJumper' was here
+    DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+    ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:375:6: warning: conflicting types for 'FrameBufferSwap'
+ void FrameBufferSwap (){
+      ^~~~~~~~~~~~~~~
+../src/video_demo.c:189:3: note: previous implicit declaration of 'FrameBufferSwap' was here
+   FrameBufferSwap();
+   ^~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67680	 122952	18688208	18878840	1201178	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+18:25:41 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:217:4: warning: implicit declaration of function 'DemoOverwriteJumper' [-Wimplicit-function-declaration]
+    DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+    ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:239:10: warning: implicit declaration of function 'collisiondetect' [-Wimplicit-function-declaration]
+      if((collisiondetect(jumper, platform[k]))==1) {
+          ^~~~~~~~~~~~~~~
+../src/video_demo.c:257:3: warning: implicit declaration of function 'DemoPrintJumper'; did you mean 'DemoPrintTest'? [-Wimplicit-function-declaration]
+   DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+   ^~~~~~~~~~~~~~~
+   DemoPrintTest
+../src/video_demo.c:261:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:29:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:303:6: warning: conflicting types for 'DemoPrintJumper'
+ void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~
+../src/video_demo.c:257:3: note: previous implicit declaration of 'DemoPrintJumper' was here
+   DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+   ^~~~~~~~~~~~~~~
+../src/video_demo.c:324:6: warning: conflicting types for 'DemoOverwriteJumper'
+ void DemoOverwriteJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~~~~~
+../src/video_demo.c:217:4: note: previous implicit declaration of 'DemoOverwriteJumper' was here
+    DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+    ^~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67680	 122952	18688208	18878840	1201178	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+18:26:17 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:239:10: warning: implicit declaration of function 'collisiondetect' [-Wimplicit-function-declaration]
+      if((collisiondetect(jumper, platform[k]))==1) {
+          ^~~~~~~~~~~~~~~
+../src/video_demo.c:257:3: warning: implicit declaration of function 'DemoPrintJumper'; did you mean 'DemoPrintTest'? [-Wimplicit-function-declaration]
+   DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+   ^~~~~~~~~~~~~~~
+   DemoPrintTest
+../src/video_demo.c:261:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:29:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:303:6: warning: conflicting types for 'DemoPrintJumper'
+ void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~
+../src/video_demo.c:257:3: note: previous implicit declaration of 'DemoPrintJumper' was here
+   DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+   ^~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67680	 122952	18688208	18878840	1201178	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+18:27:15 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:257:3: warning: implicit declaration of function 'DemoPrintJumper'; did you mean 'DemoPrintTest'? [-Wimplicit-function-declaration]
+   DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+   ^~~~~~~~~~~~~~~
+   DemoPrintTest
+../src/video_demo.c:261:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:29:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+../src/video_demo.c: At top level:
+../src/video_demo.c:303:6: warning: conflicting types for 'DemoPrintJumper'
+ void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+      ^~~~~~~~~~~~~~~
+../src/video_demo.c:257:3: note: previous implicit declaration of 'DemoPrintJumper' was here
+   DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
+   ^~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67680	 122952	18688208	18878840	1201178	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+18:27:34 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:261:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, frame);
+                                 ^~~~~
+In file included from ../src/video_demo.c:29:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 * {aka unsigned char *}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67680	 122952	18688208	18878840	1201178	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+18:28:11 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:261:33: warning: passing argument 2 of 'DisplayChangeFrame' makes integer from pointer without a cast [-Wint-conversion]
+   DisplayChangeFrame(&dispCtrl, &frame);
+                                 ^
+In file included from ../src/video_demo.c:29:0:
+../src/display_ctrl/display_ctrl.h:103:5: note: expected 'u32 {aka long unsigned int}' but argument is of type 'u8 ** {aka unsigned char **}'
+ int DisplayChangeFrame(DisplayCtrl *dispPtr, u32 frameIndex);
+     ^~~~~~~~~~~~~~~~~~
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67680	 122952	18688208	18878840	1201178	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+18:28:25 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67680	 122952	18688208	18878840	1201178	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+18:29:08 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67680	 122952	18688208	18878840	1201178	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+18:30:32 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+In file included from ../src/video_demo.c:27:0:
+../src/video_demo.h:38:21: error: initializer element is not constant
+ #define DEMO_STRIDE (1920 * 3)
+                     ^
+../src/video_demo.c:80:19: note: in expansion of macro 'DEMO_STRIDE'
+ int jumperStart = DEMO_STRIDE*539+DEMO_STRIDE-(jumperBlock.width/2);
+                   ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+18:31:04 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c:80:19: error: initializer element is not constant
+ int jumperStart = (DEMO_STRIDE)*539+DEMO_STRIDE-(jumperBlock.width/2);
+                   ^
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+18:31:20 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:80:21: error: expected expression before '=' token
+ #define jumperStart = (DEMO_STRIDE)*539+DEMO_STRIDE-(jumperBlock.width/2);
+                     ^
+../src/video_demo.c:133:24: note: in expansion of macro 'jumperStart'
+   jumperBlock.anchor = jumperStart;
+                        ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+18:31:32 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:65:21: error: expected expression before '=' token
+ #define jumperStart = (DEMO_STRIDE)*539+DEMO_STRIDE-(jumperBlock.width/2);
+                     ^
+../src/video_demo.c:134:24: note: in expansion of macro 'jumperStart'
+   jumperBlock.anchor = jumperStart;
+                        ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+18:31:53 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:65:21: error: expected expression before '=' token
+ #define jumperStart = (1920*3)*539+DEMO_STRIDE-(jumperBlock.width/2);
+                     ^
+../src/video_demo.c:134:24: note: in expansion of macro 'jumperStart'
+   jumperBlock.anchor = jumperStart;
+                        ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+18:32:05 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'DemoStartGame':
+../src/video_demo.c:65:21: error: expected expression before '=' token
+ #define jumperStart = (1920*3)*539+(1920*3)-(jumperBlock.width/2);
+                     ^
+../src/video_demo.c:134:24: note: in expansion of macro 'jumperStart'
+   jumperBlock.anchor = jumperStart;
+                        ^~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+18:32:58 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67680	 122952	18688208	18878840	1201178	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+18:35:09 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67680	 122952	18688208	18878840	1201178	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+18:36:23 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67680	 122952	18688208	18878840	1201178	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+18:37:17 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67680	 122952	18688208	18878840	1201178	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+18:37:45 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67680	 122952	18688208	18878840	1201178	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+18:40:09 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67680	 122952	18688208	18878840	1201178	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+18:40:16 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67680	 122952	18688208	18878840	1201178	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+18:44:54 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:247:6: warning: unused variable 'height' [-Wunused-variable]
+  int height = dispCtrl.vMode.height;
+      ^~~~~~
+../src/video_demo.c:246:6: warning: unused variable 'width' [-Wunused-variable]
+  int width = dispCtrl.vMode.width;
+      ^~~~~
+../src/video_demo.c:249:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67744	 122952	18688208	18878904	12011b8	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+18:46:24 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:252:8: error: 'i' undeclared (first use in this function)
+  for ( i = 0;  i < width*height*3; ++ i) {
+        ^
+../src/video_demo.c:252:8: note: each undeclared identifier is reported only once for each function it appears in
+../src/video_demo.c:257:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
+18:46:31 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:257:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67808	 122952	18688208	18878968	12011f8	vga2.elf
+'Finished building: vga2.elf.size'
+' '
+18:52:00 **** Auto Build of configuration Debug for project vga2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c: In function 'GenerateGameImage':
+../src/video_demo.c:248:6: warning: unused variable 'image' [-Wunused-variable]
+  int image[width*height*3];
+      ^~~~~
+../src/video_demo.c:254:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/video_demo.c'
+' '
+'Building target: vga2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../vga2_bsp/ps7_cortexa9_0/lib -o "vga2.elf"  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/intc/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/video_demo.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: vga2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size vga2.elf  |tee "vga2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  67872	 122952	18688208	18879032	1201238	vga2.elf
+'Finished building: vga2.elf.size'
+' '

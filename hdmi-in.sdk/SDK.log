@@ -548,3 +548,9 @@ con
 15:13:38 INFO  : Registering command handlers for SDK TCF services
 15:13:40 INFO  : Processing command line option -hwspec C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.sdk/hdmi_in_wrapper.hdf.
 15:13:40 INFO  : Checking for hwspec changes in the project hdmi_in_wrapper_hw_platform_0.
+16:44:59 INFO  : Registering command handlers for SDK TCF services
+16:45:00 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\Jonat\Documents\GitHub\3Ugers3Semester\hdmi-in.sdk\temp_xsdb_launch_script.tcl
+16:45:03 INFO  : XSCT server has started successfully.
+16:45:03 INFO  : Successfully done setting XSCT server connection channel  
+16:45:04 INFO  : Successfully done setting SDK workspace  
+16:45:04 INFO  : Processing command line option -hwspec C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.sdk/hdmi_in_wrapper.hdf.

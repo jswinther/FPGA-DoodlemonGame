@@ -1,1 +1,5 @@
 1547210139237	Delete resource 'hdmi_in_wrapper_hw_platform_0'
+1547226640620	Delete resource 'HDMI_IN'
+1547226647877	Delete resource 'HDMI_IN_bsp'
+1547226657217	Delete resource 'VGA_out'
+1547226668323	Delete resource 'VGA_out_bsp'
