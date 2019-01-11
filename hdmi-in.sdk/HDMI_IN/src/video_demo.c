@@ -55,7 +55,11 @@
 
 
 
-
+#define jumperGRAVITY 3
+#define PLATFORM_AMOUNT 10
+#define PLATFORM_VELOCITY 5
+#define PLATFORM_WIDTH 24
+#define PLATFORM_HEIGHT 160
 
 /* ------------------------------------------------------------ */
 /*				Global Variables								*/
@@ -126,7 +130,10 @@ void DemoStartGame() {
 	}
 	DisplayChangeFrame(&dispCtrl, nextFrame);
 	 */
+
+
 	/*
+
 	3 - Start/Stop Video stream into Video Framebuffer
 
 	if (videoCapt.state == VIDEO_STREAMING)
@@ -134,7 +141,9 @@ void DemoStartGame() {
 	else
 		VideoStart(&videoCapt);
 	 */
+
 	/*
+
 	4 - Change Video Framebuffer Index
 
 	nextFrame = videoCapt.curFrame + 1;
@@ -144,8 +153,11 @@ void DemoStartGame() {
 	}
 	VideoChangeFrame(&videoCapt, nextFrame);
 	 */
+
 	/*
+
 	5 - Grab Video Frame and invert colors
+
 	nextFrame = videoCapt.curFrame + 1;
 	if (nextFrame >= DISPLAY_NUM_FRAMES)
 	{
@@ -156,8 +168,11 @@ void DemoStartGame() {
 	VideoStart(&videoCapt);
 	DisplayChangeFrame(&dispCtrl, nextFrame);
 	 */
+
 	/*
+
 	6 - Grab Video Frame and scale to Display resolution
+
 	nextFrame = videoCapt.curFrame + 1;
 	if (nextFrame >= DISPLAY_NUM_FRAMES)
 	{
@@ -167,101 +182,28 @@ void DemoStartGame() {
 	DemoScaleFrame(pFrames[videoCapt.curFrame], pFrames[nextFrame], videoCapt.timing.HActiveVideo, videoCapt.timing.VActiveVideo, dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE);
 	VideoStart(&videoCapt);
 	DisplayChangeFrame(&dispCtrl, nextFrame);
+
 	 */
+
 
 	/* ------------------------------------------------------------ */
 	/*			    End of Menu and DemoRun() Cases.		    	*/
 	/* ------------------------------------------------------------ */
 
+	/**
+	* Print game background.
+	*/
 	DemoPrintBackground(frame, gameWidth, gameHeight);
-	DemoCreateBlocks();
-	DemoCreateJumper();
 
 
-	while(1) {
+	/**
+	 * Generate Platforms.
+	 */
 
-		/**
-		 * Overwrite Jumper and Platforms
-		 */
-
-
-		DemoOverwritePlatform(frame);
-		DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 150, 150);
-		DemoMovePlatforms(frame);
-		DemoMoveJumper(frame);
-		for(int j = 0; j < PLATFORM_AMOUNT; j++) {
-					DemoPrintBlock(frame, platform[j], 128);
-		}
-		DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 150, 150);
-		Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
-	}
-}
-
-void DemoOverwritePlatform(u8 *frame) {
-	for(int j = 0; j < PLATFORM_AMOUNT; j++) {
-		DemoPrintBlock(frame, platform[j], 255);
-	}
-}
-
-void DemoMovePlatforms(u8 *frame) {
-	for(int j = 0; j < PLATFORM_AMOUNT; j++) {
-		platformBlock[j].anchor+=PLATFORM_VELOCITY;
-		platformBlock[j].floor+=PLATFORM_VELOCITY;
-		if(platformBlock[j].floor >= DEMO_STRIDE) {
-			platformBlock[j].floor = 0;
-			platformBlock[j].anchor = DEMO_STRIDE*(rand() % 900 + 0);
-		}
-	}
-}
-
-void DemoMoveJumper(u8 *frame) {
-	int counter = 0;
-	switch(jumperVelocity) {
-			case GROUND:
-				counter = 0;
-				jumperBlock.velocity = 24;
-				jumperVelocity = AIR;
-				break;
-			case AIR:
-				if(counter%10==0) {
-					if(jumperBlock.velocity > -24)
-						jumperBlock.velocity-=jumperGRAVITY;
-				}
-				jumperBlock.anchor -= jumperBlock.velocity;
-
-				if(jumperBlock.velocity < 0) {
-
-					for(int k = 0; k < PLATFORM_AMOUNT; k++) {
-
-						if((collisiondetect(jumper, platform[k]))==1) {
-
-							jumperVelocity = GROUND;
-
-						}
-					}
-				}
-				counter++;
-				break;
-			}
-}
-
-void DemoPrintBackground(u8 *frame, int width, int height) {
-	int iPixelAddr;
-	for(int x = 0; x < (width*3); x+=3) {
-		iPixelAddr = x;
-		for(int y = 0; y < height; y++) {
-			frame[iPixelAddr] = 255;
-			frame[iPixelAddr + 1] = 255;
-			frame[iPixelAddr + 2] = 255;
-			iPixelAddr += DEMO_STRIDE;
-		}
-	}
-	Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
-}
-
-void DemoCreateBlocks() {
 	int random_x;
 	int random_y;
+	struct Block platformBlock[PLATFORM_AMOUNT];
+	struct Block *platform[PLATFORM_AMOUNT];
 	for(int i = 0; i < PLATFORM_AMOUNT; i++) {
 		random_x = rand() % 990 + 0;
 		random_y = rand() % DEMO_STRIDE + 0;
@@ -271,13 +213,102 @@ void DemoCreateBlocks() {
 		platformBlock[i].floor = random_y;
 		platform[i] = &platformBlock[i];
 	}
-}
 
-void DemoCreateJumper() {
-	jumperBlock.anchor = 539*DEMO_STRIDE-jumperBlock.width;
+	/*
+	* Generate Sprite.
+	*/
+
+	//Anchor, Width, Height, Distance from Floor and Velocity
+	struct Block jumperBlock = {0, 150, 150, 0, 0};
+	struct Block *jumper = &jumperBlock;
+	enum Velocity jumperVelocity = GROUND;
+	int jumperStart = DEMO_STRIDE*539+DEMO_STRIDE-(jumperBlock.width/2);
+	jumperBlock.anchor = jumperStart;
 	jumperBlock.floor = DEMO_STRIDE - jumperBlock.anchor + jumperBlock.height;
 
 
+
+
+	int counter = 0;
+	while(1) {
+
+		/**
+		 * Overwrite Jumper and Platforms
+		 */
+
+		DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 150, 150);
+
+		for(int j = 0; j < PLATFORM_AMOUNT; j++) {
+			DemoPrintBlock(frame, platform[j], 255);
+			platformBlock[j].anchor+=PLATFORM_VELOCITY;
+			platformBlock[j].floor+=PLATFORM_VELOCITY;
+			if(platformBlock[j].floor >= DEMO_STRIDE) {
+				platformBlock[j].floor = 0;
+				platformBlock[j].anchor = DEMO_STRIDE*(rand() % 900 + 0);
+			}
+
+		}
+		switch(jumperVelocity) {
+		case GROUND:
+			counter = 0;
+			jumperBlock.velocity = 24;
+			jumperVelocity = AIR;
+			break;
+		case AIR:
+			if(counter%10==0) {
+				if(jumperBlock.velocity > -24)
+					jumperBlock.velocity-=jumperGRAVITY;
+			}
+			jumperBlock.anchor -= jumperBlock.velocity;
+
+			if(jumperBlock.velocity < 0) {
+
+				for(int k = 0; k < PLATFORM_AMOUNT; k++) {
+
+					if((collisiondetect(jumper, platform[k]))==1) {
+
+						jumperVelocity = GROUND;
+
+					}
+				}
+			}
+			counter++;
+			break;
+		}
+
+
+
+		//DemoPrintBlock(frame, overWrite, overWriteBlock.anchor, 255);
+		for(int j = 0; j < PLATFORM_AMOUNT; j++) {
+					DemoPrintBlock(frame, platform[j], 128);
+				}
+		//DemoPrintBlock(frame, jumper, jumperBlock.anchor, 0);
+		DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 150, 150);
+		Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
+	}
+}
+
+
+
+void DemoPrintBackground(u8 *frame, int width, int height) {
+	int x, y, iPixelAddr;
+	for(x = 0; x < (width*3); x+=3) {
+
+					iPixelAddr = x;
+
+					for(y = 0; y < height; y++)
+					{
+						frame[iPixelAddr] = 255;
+						frame[iPixelAddr + 1] = 255;
+						frame[iPixelAddr + 2] = 255;
+						/*
+						 * This pattern is printed one vertical line at a time, so the address must be incremented
+						 * by the stride instead of just 1.
+						 */
+						iPixelAddr += DEMO_STRIDE;
+					}
+				}
+	Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
 }
 
 void DemoPrintBlock(u8 *frame, struct Block *block, int color) {
