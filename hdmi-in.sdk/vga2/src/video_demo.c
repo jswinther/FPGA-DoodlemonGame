@@ -61,7 +61,15 @@
 #define UART_BASEADDR XPAR_PS7_UART_1_BASEADDR
 
 
+//Platform
+#define PLATFORM_HEIGHT 160
+#define PLATFORM_WIDTH 24
+#define PLATFORM_SPEED 6
 
+//Jumper
+#define JUMPER_HEIGHT 100
+#define JUMPER_WIDTH 100
+#define JUMPER_GRAVITY 3
 
 
 /* ------------------------------------------------------------ */
@@ -120,74 +128,55 @@ int main(void) {
 void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 	jumperBlock.anchor = jumperStart;
 	jumperBlock.floor = DEMO_STRIDE - jumperBlock.anchor + jumperBlock.height;
-
-	/**
-	 * Print game background.
-	 */
 	DemoPrintBackground(frame, gameWidth, gameHeight);
-	/**
-	 * jumperMovement FSM.
-	 */
-
-
-	/**
-	 * Generate Platforms.
-	 */
-
 	int random_x;
-	int random_y;
-	int hast = 5;
+	int random_y = 0;
 	struct Block platformBlock[PLATFORM_AMOUNT];
 	struct Block *platform[PLATFORM_AMOUNT];
-	int i, j;
-	for(i = 0; i < PLATFORM_AMOUNT; i++) {
+	for(int i = 0; i < PLATFORM_AMOUNT; i++) {
 		random_x = rand() % 990 + 0;
-		random_y = rand() % 5760 + 0;
+		random_y += 576;
 		platformBlock[i].anchor = DEMO_STRIDE*random_x+random_y;
-		platformBlock[i].height = 160;
-		platformBlock[i].width = 24;
+		platformBlock[i].height = PLATFORM_HEIGHT;
+		platformBlock[i].width = PLATFORM_WIDTH;
 		platformBlock[i].floor = random_y;
 		platform[i] = &platformBlock[i];
 	}
 
 
 	int counter = 0;
-	int k=0;
 	while(1) {
+		DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, JUMPER_HEIGHT, JUMPER_WIDTH);
+		//Generate platforms
+		for(int j = 0; j < PLATFORM_AMOUNT; j++) {
+			DemoOverwriteJumper(frame, platformImg, platformBlock[j].anchor, PLATFORM_HEIGHT, PLATFORM_WIDTH);
+			platformBlock[j].anchor+=PLATFORM_SPEED;
+			platformBlock[j].floor+=PLATFORM_SPEED;
+			if(platformBlock[j].floor >= DEMO_STRIDE) {
+				platformBlock[j].floor = 0;
+				platformBlock[j].anchor = DEMO_STRIDE*(rand() % 900 + 0);
+			}
+
+		}
 		//Swap Frame buffer
 		FrameBufferSwap();
 		switch(btn_value) {
 		case 1:
-			jumperBlock.anchor += DEMO_STRIDE*6;
+			jumperBlock.anchor -= DEMO_STRIDE*6;
 			break;
 		case 2:
-			jumperBlock.anchor += DEMO_STRIDE*3;
-			break;
-		case 4:
 			jumperBlock.anchor -= DEMO_STRIDE*3;
 			break;
+		case 4:
+			jumperBlock.anchor += DEMO_STRIDE*3;
+			break;
 		case 8:
-			jumperBlock.anchor -= DEMO_STRIDE*6;
+			jumperBlock.anchor += DEMO_STRIDE*6;
 			break;
 		default:
 			break;
 
 		}
-
-		//Generate platforms
-		for(j = 0; j < PLATFORM_AMOUNT; j++) {
-			GamePrintBlock(frame, platform[j], platform[j]->anchor, 255);
-			platformBlock[j].anchor+=hast;
-			platformBlock[j].floor+=hast;
-			if(platformBlock[j].floor >= DEMO_STRIDE) {
-				platformBlock[j].floor = 0;
-				platformBlock[j].anchor = DEMO_STRIDE*(rand() % 900 + 0);
-			}
-			DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
-		}
-
-
-
 		switch(jumperVelocity) {
 		case GROUND:
 			counter = 0;
@@ -197,18 +186,13 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 		case AIR:
 			if(counter%10==0) {
 				if(jumperBlock.velocity > -24)
-					jumperBlock.velocity-=jumperGRAVITY;
+					jumperBlock.velocity-=JUMPER_GRAVITY;
 			}
 			jumperBlock.anchor -= jumperBlock.velocity;
-
 			if(jumperBlock.velocity < 0) {
-
-				for(k = 0; k < PLATFORM_AMOUNT; k++) {
-
+				for(int k = 0; k < PLATFORM_AMOUNT; k++) {
 					if((collisiondetect(jumper, platform[k]))==1) {
-
 						jumperVelocity = GROUND;
-
 					}
 				}
 			}
@@ -219,8 +203,8 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 
 
 
-		for(j = 0; j < PLATFORM_AMOUNT; j++) {
-					GamePrintBlock(frame, platform[j], platform[j]->anchor, 128);
+		for(int j = 0; j < PLATFORM_AMOUNT; j++) {
+			DemoPrintJumper(frame, platformImg, platformBlock[j].anchor, PLATFORM_HEIGHT, PLATFORM_WIDTH);
 				}
 		//DemoPrintBlock(frame, jumper, jumperBlock.anchor, 0);
 		DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
@@ -235,24 +219,9 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 
 
 void DemoPrintBackground(u8 *frame, int width, int height) {
-	int x, y, iPixelAddr;
-	for(x = 0; x < (width*3); x+=3) {
-
-					iPixelAddr = x;
-
-					for(y = 0; y < height; y++)
-					{
-						frame[iPixelAddr] = 255;
-						frame[iPixelAddr + 1] = 255;
-						frame[iPixelAddr + 2] = 255;
-						/*
-						 * This pattern is printed one vertical line at a time, so the address must be incremented
-						 * by the stride instead of just 1.
-						 */
-						iPixelAddr += DEMO_STRIDE;
-					}
-				}
-	Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
+	for(int i = 0; i < width*height*3; i++) {
+		frame[i] = 255;
+	}
 }
 
 void GamePrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
@@ -275,10 +244,10 @@ void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
 	int arrayCounter = 0;
 	for(int i = 0; i < imgH; i++) {
 		for(int j = 0; j<imgW*3; j+=3) {
-			if (jumperImg[arrayCounter] != 255){
-			frame[cor + j + 1] = jumperImg[arrayCounter + 0];
-			frame[cor + j + 2] = jumperImg[arrayCounter + 1];
-			frame[cor + j + 0] = jumperImg[arrayCounter + 2];
+			if (array[arrayCounter] != 255){
+			frame[cor + j + 1] = array[arrayCounter + 0];
+			frame[cor + j + 2] = array[arrayCounter + 1];
+			frame[cor + j + 0] = array[arrayCounter + 2];
 			arrayCounter += 3;
 			} else {
 				arrayCounter+=3;
@@ -293,23 +262,14 @@ void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
 
 void DemoOverwriteJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
 	int cor = anchor;
-	int arrayCounter = 0;
 	for(int i = 0; i < imgH; i++) {
 		for(int j = 0; j<imgW*3; j+=3) {
-			if (jumperImg[arrayCounter] != 255){
 			frame[cor + j + 0] = 255;
 			frame[cor + j + 1] = 255;
 			frame[cor + j + 2] = 255;
-			arrayCounter += 3;
-			} else {
-				arrayCounter+=3;
-			}
-
-
 		}
 		cor = cor + DEMO_STRIDE;
 	}
-
 }
 
 int collisiondetect (struct Block *jumper, struct Block *platform){
