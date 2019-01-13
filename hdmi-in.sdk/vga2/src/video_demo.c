@@ -59,29 +59,19 @@
 #define VID_GPIO_IRPT_ID XPS_FPGA4_INT_ID
 #define SCU_TIMER_ID XPAR_SCUTIMER_DEVICE_ID
 #define UART_BASEADDR XPAR_PS7_UART_1_BASEADDR
-
-
-
-
-
 /* ------------------------------------------------------------ */
 /*				Global Variables								*/
 /* ------------------------------------------------------------ */
-
 int nextFrame = 0;
-
 DisplayCtrl dispCtrl;
 XAxiVdma vdma;
 VideoCapture videoCapt;
-
-
 char fRefresh; //flag used to trigger a refresh of the Menu on video detect
 /*
  * Framebuffers for video data
  */
 u8 frameBuf[DISPLAY_NUM_FRAMES][DEMO_MAX_FRAME];
 u8 *pFrames[DISPLAY_NUM_FRAMES]; //array of pointers to the frame buffers
-
 /*
  * Interrupt vector table
  */
@@ -89,14 +79,12 @@ const ivt_t ivt[] = {
 	videoGpioIvt(VID_GPIO_IRPT_ID, &videoCapt),
 	videoVtcIvt(VID_VTC_IRPT_ID, &(videoCapt.vtc))
 };
-
 // Counter used in jumping gravity.
 int counter = 0;
 
 /* ------------------------------------------------------------ */
 /*						     Main								*/
 /* ------------------------------------------------------------ */
-
 int main(void) {
 	DemoInitialize();
 	DisplaySetMode(&dispCtrl, &VMODE_1920x1080);
@@ -116,17 +104,13 @@ int main(void) {
 	DemoStartGame(dispCtrl.vMode.width, dispCtrl.vMode.height);
 	return 0;
 }
-
 /* ------------------------------------------------------------ */
 /*						     Game		    					*/
 /* ------------------------------------------------------------ */
 void DemoStartGame(u32 gameWidth, u32 gameHeight) {
-
-
 	DemoPrintBackground(frameBuf[0], gameWidth, gameHeight);
 	int random_x;
 	int random_y = 0;
-
 	for(int i = 0; i < PLATFORM_AMOUNT; i++) {
 		random_x = rand() % 990 + 0;
 		random_y += 576;
@@ -136,8 +120,6 @@ void DemoStartGame(u32 gameWidth, u32 gameHeight) {
 		platformBlock[i].floor = random_y;
 		platform[i] = &platformBlock[i];
 	}
-
-
 	while(1) {
 		Overwrite(frameBuf[0]);
 		Move(frameBuf[0]);
@@ -149,7 +131,6 @@ void DemoStartGame(u32 gameWidth, u32 gameHeight) {
 		DisplayChangeFrame(&dispCtrl, *frameBuf[0]);
 		VideoStop(&videoCapt);
 		*/
-
 	}
 }
 
@@ -165,7 +146,6 @@ void Overwrite(u8 *frame) {
 		}
 	}
 }
-
 
 void Move(u8 *frame) {
 
@@ -210,14 +190,12 @@ void Move(u8 *frame) {
 	}
 }
 
-
 void Print(u8 *frame) {
 	for(int j = 0; j < PLATFORM_AMOUNT; j++) {
 		ImagePrint(frame, platformImg, platformBlock[j].anchor, PLATFORM_HEIGHT, PLATFORM_WIDTH);
 	}
 	ImagePrint(frame, jumperImg, jumperBlock.anchor, JUMPER_HEIGHT, JUMPER_WIDTH);
 }
-
 
 void DemoPrintBackground(u8 *frame, int width, int height) {
 	for(int i = 0; i < width*height*3; i++) {
@@ -288,13 +266,49 @@ int collisiondetect (struct Block *jumper, struct Block *platform){
 
 void FrameBufferSwap (){
 	nextFrame = dispCtrl.curFrame + 1;
-						if (nextFrame >= DISPLAY_NUM_FRAMES)
-						{
-							nextFrame = 0;
-						}
-
+	if (nextFrame >= DISPLAY_NUM_FRAMES){
+		nextFrame = 0;
+	}
+	DisplayChangeFrame(&dispCtrl, nextFrame);
 }
 
+void StreamFrameBuffer() {
+	if (videoCapt.state == VIDEO_STREAMING)
+					VideoStop(&videoCapt);
+				else
+					VideoStart(&videoCapt);
+}
+
+void VideoFrameBufferSwap() {
+	nextFrame = videoCapt.curFrame + 1;
+	if (nextFrame >= DISPLAY_NUM_FRAMES)
+	{
+		nextFrame = 0;
+	}
+	VideoChangeFrame(&videoCapt, nextFrame);
+}
+
+void GrabFrameAndInvert() {
+	nextFrame = videoCapt.curFrame + 1;
+	if (nextFrame >= DISPLAY_NUM_FRAMES){
+		nextFrame = 0;
+	}
+	VideoStop(&videoCapt);
+	DemoInvertFrame(pFrames[videoCapt.curFrame], pFrames[nextFrame], videoCapt.timing.HActiveVideo, videoCapt.timing.VActiveVideo, DEMO_STRIDE);
+	VideoStart(&videoCapt);
+	DisplayChangeFrame(&dispCtrl, nextFrame);
+}
+
+void GrabVideoAndScaleToFrame() {
+	nextFrame = videoCapt.curFrame + 1;
+	if (nextFrame >= DISPLAY_NUM_FRAMES) {
+		nextFrame = 0;
+	}
+	VideoStop(&videoCapt);
+	DemoScaleFrame(pFrames[videoCapt.curFrame], pFrames[nextFrame], videoCapt.timing.HActiveVideo, videoCapt.timing.VActiveVideo, dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE);
+	VideoStart(&videoCapt);
+	DisplayChangeFrame(&dispCtrl, nextFrame);
+}
 
 void DemoInitialize()
 {
@@ -375,53 +389,6 @@ void DemoInitialize()
 	return;
 }
 
-/*
-			2 - Change Display Framebuffer Index
-			nextFrame = dispCtrl.curFrame + 1;
-			if (nextFrame >= DISPLAY_NUM_FRAMES)
-			{
-				nextFrame = 0;
-			}
-			DisplayChangeFrame(&dispCtrl, nextFrame);
-
-			3 - Start/Stop Video stream into Video Framebuffer
-			if (videoCapt.state == VIDEO_STREAMING)
-				VideoStop(&videoCapt);
-			else
-				VideoStart(&videoCapt);
-
-			4 - Change Video Framebuffer Index
-			nextFrame = videoCapt.curFrame + 1;
-			if (nextFrame >= DISPLAY_NUM_FRAMES)
-			{
-				nextFrame = 0;
-			}
-			VideoChangeFrame(&videoCapt, nextFrame);
-
-			5 - Grab Video Frame and invert colors
-			nextFrame = videoCapt.curFrame + 1;
-			if (nextFrame >= DISPLAY_NUM_FRAMES)
-			{
-				nextFrame = 0;
-			}
-			VideoStop(&videoCapt);
-			DemoInvertFrame(pFrames[videoCapt.curFrame], pFrames[nextFrame], videoCapt.timing.HActiveVideo, videoCapt.timing.VActiveVideo, DEMO_STRIDE);
-			VideoStart(&videoCapt);
-			DisplayChangeFrame(&dispCtrl, nextFrame);
-
-			6 - Grab Video Frame and scale to Display resolution
-			nextFrame = videoCapt.curFrame + 1;
-			if (nextFrame >= DISPLAY_NUM_FRAMES)
-			{
-				nextFrame = 0;
-			}
-			VideoStop(&videoCapt);
-			DemoScaleFrame(pFrames[videoCapt.curFrame], pFrames[nextFrame], videoCapt.timing.HActiveVideo, videoCapt.timing.VActiveVideo, dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE);
-			VideoStart(&videoCapt);
-			DisplayChangeFrame(&dispCtrl, nextFrame);
-
- */
-
 void DemoInvertFrame(u8 *srcFrame, u8 *destFrame, u32 width, u32 height, u32 stride)
 {
 	u32 xcoi, ycoi;
@@ -443,9 +410,6 @@ void DemoInvertFrame(u8 *srcFrame, u8 *destFrame, u32 width, u32 height, u32 str
 	Xil_DCacheFlushRange((unsigned int) destFrame, DEMO_MAX_FRAME);
 }
 
-/*
- * Bilinear interpolation algorithm. Assumes both frames have the same stride.
- */
 void DemoScaleFrame(u8 *srcFrame, u8 *destFrame, u32 srcWidth, u32 srcHeight, u32 destWidth, u32 destHeight, u32 stride)
 {
 	float xInc, yInc; // Width/height of a destination frame pixel in the source frame coordinate system
@@ -520,18 +484,3 @@ void DemoISR(void *callBackRef, void *pVideo)
 	char *data = (char *) callBackRef;
 	*data = 1; //set fRefresh to 1
 }
-
-/* ------------------------------------------------------------ */
-/*				Interrupt										*/
-/* ------------------------------------------------------------ */
-
-
-
-
-
-
-
-
-
-
-
