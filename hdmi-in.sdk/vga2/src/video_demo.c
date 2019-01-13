@@ -61,15 +61,7 @@
 #define UART_BASEADDR XPAR_PS7_UART_1_BASEADDR
 
 
-//Platform
-#define PLATFORM_HEIGHT 160
-#define PLATFORM_WIDTH 24
-#define PLATFORM_SPEED 6
 
-//Jumper
-#define JUMPER_HEIGHT 100
-#define JUMPER_WIDTH 100
-#define JUMPER_GRAVITY 3
 
 
 /* ------------------------------------------------------------ */
@@ -98,6 +90,9 @@ const ivt_t ivt[] = {
 	videoVtcIvt(VID_VTC_IRPT_ID, &(videoCapt.vtc))
 };
 
+// Counter used in jumping gravity.
+int counter = 0;
+
 /* ------------------------------------------------------------ */
 /*						     Main								*/
 /* ------------------------------------------------------------ */
@@ -118,21 +113,20 @@ int main(void) {
 	// Initialize interrupt controller
 	status = IntcInitFunction(INTC_DEVICE_ID, &BTNInst);
 	if(status != XST_SUCCESS) return XST_FAILURE;
-	DemoStartGame(dispCtrl.framePtr[nextFrame], dispCtrl.vMode.width, dispCtrl.vMode.height);
+	DemoStartGame(dispCtrl.vMode.width, dispCtrl.vMode.height);
 	return 0;
 }
 
 /* ------------------------------------------------------------ */
 /*						     Game		    					*/
 /* ------------------------------------------------------------ */
-void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
-	jumperBlock.anchor = jumperStart;
-	jumperBlock.floor = DEMO_STRIDE - jumperBlock.anchor + jumperBlock.height;
-	DemoPrintBackground(frame, gameWidth, gameHeight);
+void DemoStartGame(u32 gameWidth, u32 gameHeight) {
+
+
+	DemoPrintBackground(frameBuf[0], gameWidth, gameHeight);
 	int random_x;
 	int random_y = 0;
-	struct Block platformBlock[PLATFORM_AMOUNT];
-	struct Block *platform[PLATFORM_AMOUNT];
+
 	for(int i = 0; i < PLATFORM_AMOUNT; i++) {
 		random_x = rand() % 990 + 0;
 		random_y += 576;
@@ -144,77 +138,84 @@ void DemoStartGame(u8 *frame, u32 gameWidth, u32 gameHeight) {
 	}
 
 
-	int counter = 0;
 	while(1) {
-		DemoOverwriteJumper(frame, jumperImg, jumperBlock.anchor, JUMPER_HEIGHT, JUMPER_WIDTH);
-		//Generate platforms
-		for(int j = 0; j < PLATFORM_AMOUNT; j++) {
-			DemoOverwriteJumper(frame, platformImg, platformBlock[j].anchor, PLATFORM_HEIGHT, PLATFORM_WIDTH);
-			platformBlock[j].anchor+=PLATFORM_SPEED;
-			platformBlock[j].floor+=PLATFORM_SPEED;
-			if(platformBlock[j].floor >= DEMO_STRIDE) {
-				platformBlock[j].floor = 0;
-				platformBlock[j].anchor = DEMO_STRIDE*(rand() % 900 + 0);
-			}
-
-		}
-		//Swap Frame buffer
+		Overwrite(frameBuf[0]);
+		Move(frameBuf[0]);
+		Print(frameBuf[0]);
 		FrameBufferSwap();
-		switch(btn_value) {
-		case 1:
-			jumperBlock.anchor -= DEMO_STRIDE*6;
-			break;
-		case 2:
-			jumperBlock.anchor -= DEMO_STRIDE*3;
-			break;
-		case 4:
-			jumperBlock.anchor += DEMO_STRIDE*3;
-			break;
-		case 8:
-			jumperBlock.anchor += DEMO_STRIDE*6;
-			break;
-		default:
-			break;
-
-		}
-		switch(jumperVelocity) {
-		case GROUND:
-			counter = 0;
-			jumperBlock.velocity = 24;
-			jumperVelocity = AIR;
-			break;
-		case AIR:
-			if(counter%10==0) {
-				if(jumperBlock.velocity > -24)
-					jumperBlock.velocity-=JUMPER_GRAVITY;
-			}
-			jumperBlock.anchor -= jumperBlock.velocity;
-			if(jumperBlock.velocity < 0) {
-				for(int k = 0; k < PLATFORM_AMOUNT; k++) {
-					if((collisiondetect(jumper, platform[k]))==1) {
-						jumperVelocity = GROUND;
-					}
-				}
-			}
-			counter++;
-			break;
-		}
-
-
-
-
-		for(int j = 0; j < PLATFORM_AMOUNT; j++) {
-			DemoPrintJumper(frame, platformImg, platformBlock[j].anchor, PLATFORM_HEIGHT, PLATFORM_WIDTH);
-				}
-		//DemoPrintBlock(frame, jumper, jumperBlock.anchor, 0);
-		DemoPrintJumper(frame, jumperImg, jumperBlock.anchor, 100, 100);
-		Xil_DCacheFlushRange((unsigned int) frame, DEMO_MAX_FRAME);
-
+		Xil_DCacheFlushRange((unsigned int) frameBuf[0], DEMO_MAX_FRAME);
+		/*
 		VideoStart(&videoCapt);
-		DisplayChangeFrame(&dispCtrl, *frame);
+		DisplayChangeFrame(&dispCtrl, *frameBuf[0]);
 		VideoStop(&videoCapt);
+		*/
 
 	}
+}
+
+void Overwrite(u8 *frame) {
+	ImageOverwrite(frameBuf[0], jumperBlock.anchor, JUMPER_HEIGHT, JUMPER_WIDTH);
+	for(int j = 0; j < PLATFORM_AMOUNT; j++) {
+		ImageOverwrite(frame, platformBlock[j].anchor, PLATFORM_HEIGHT, PLATFORM_WIDTH);
+		platformBlock[j].anchor+=PLATFORM_SPEED;
+		platformBlock[j].floor+=PLATFORM_SPEED;
+		if(platformBlock[j].floor >= DEMO_STRIDE) {
+			platformBlock[j].floor = 0;
+			platformBlock[j].anchor = DEMO_STRIDE*(rand() % 900 + 0);
+		}
+	}
+}
+
+
+void Move(u8 *frame) {
+
+	switch(btn_value) {
+	case 1:
+		jumperBlock.anchor -= DEMO_STRIDE*6;
+		break;
+	case 2:
+		jumperBlock.anchor -= DEMO_STRIDE*3;
+		break;
+	case 4:
+		jumperBlock.anchor += DEMO_STRIDE*3;
+		break;
+	case 8:
+		jumperBlock.anchor += DEMO_STRIDE*6;
+		break;
+	default:
+		break;
+
+	}
+	switch(jumperVelocity) {
+	case GROUND:
+		counter = 0;
+		jumperBlock.velocity = 24;
+		jumperVelocity = AIR;
+		break;
+	case AIR:
+		if(counter%10==0) {
+			if(jumperBlock.velocity > -24)
+				jumperBlock.velocity-=JUMPER_GRAVITY;
+		}
+		jumperBlock.anchor -= jumperBlock.velocity;
+		if(jumperBlock.velocity < 0) {
+			for(int k = 0; k < PLATFORM_AMOUNT; k++) {
+				if((collisiondetect(jumper, platform[k]))==1) {
+					jumperVelocity = GROUND;
+				}
+			}
+		}
+		counter++;
+		break;
+	}
+}
+
+
+void Print(u8 *frame) {
+	for(int j = 0; j < PLATFORM_AMOUNT; j++) {
+		ImagePrint(frame, platformImg, platformBlock[j].anchor, PLATFORM_HEIGHT, PLATFORM_WIDTH);
+	}
+	ImagePrint(frame, jumperImg, jumperBlock.anchor, JUMPER_HEIGHT, JUMPER_WIDTH);
 }
 
 
@@ -224,22 +225,7 @@ void DemoPrintBackground(u8 *frame, int width, int height) {
 	}
 }
 
-void GamePrintBlock(u8 *frame, struct Block *block, u32 anchor, int color) {
-	block->anchor = anchor;
-	int i, j, cor;
-	cor = anchor;
-	for(i=0;i<block->height;i++) {
-		for(j=0;j<block->width;j+=3) {
-			frame[cor + j] = color;
-			frame[cor + j + 1] = color;
-			frame[cor + j + 2] = color;
-		}
-		cor = cor + DEMO_STRIDE;
-	}
-
-}
-
-void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+void ImagePrint(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
 	int cor = anchor;
 	int arrayCounter = 0;
 	for(int i = 0; i < imgH; i++) {
@@ -252,15 +238,13 @@ void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
 			} else {
 				arrayCounter+=3;
 			}
-
-
 		}
 		cor = cor + DEMO_STRIDE;
 	}
 
 }
 
-void DemoOverwriteJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW) {
+void ImageOverwrite(u8 *frame, u32 anchor, int imgH, int imgW) {
 	int cor = anchor;
 	for(int i = 0; i < imgH; i++) {
 		for(int j = 0; j<imgW*3; j+=3) {
@@ -388,9 +372,6 @@ void DemoInitialize()
 	 * Set the Video Detect callback to trigger the menu to reset, displaying the new detected resolution
 	 */
 	VideoSetCallback(&videoCapt, DemoISR, &fRefresh);
-
-	DemoPrintBackground(dispCtrl.framePtr[dispCtrl.curFrame], dispCtrl.vMode.width, dispCtrl.vMode.height);
-
 	return;
 }
 

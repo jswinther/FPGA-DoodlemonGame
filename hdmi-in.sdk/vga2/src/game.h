@@ -10,36 +10,52 @@
 
 #include "jumper.h"
 #include "platform.h"
-
+#define DEMO_MAX_FRAME (1920*1080*3)
+#define DEMO_STRIDE (1920*3)
 
 #define jumperGRAVITY 3
+
+//Platform
+#define PLATFORM_HEIGHT 160
+#define PLATFORM_WIDTH 24
+#define PLATFORM_SPEED 6
 #define PLATFORM_AMOUNT 10
+
+//Jumper
+#define JUMPER_HEIGHT 100
+#define JUMPER_WIDTH 100
+#define JUMPER_GRAVITY 3
+#define JUMPER_START (1920*3)*539+(1920*3)-(JUMPER_WIDTH/2)
 struct Block {
 	u32 anchor;
 	u16 width;
 	u16 height;
-	u16 floor;
+	u32 floor;
 	int velocity;
 };
-struct Block jumperBlock = {0, 100, 100, 0, 0};
+
+struct Block jumperBlock = {JUMPER_START, JUMPER_WIDTH, JUMPER_HEIGHT, (DEMO_STRIDE - JUMPER_START + JUMPER_HEIGHT), 0};
 struct Block *jumper = &jumperBlock;
+struct Block platformBlock[PLATFORM_AMOUNT];
+struct Block *platform[PLATFORM_AMOUNT];
 
 enum Velocity {
 	GROUND,
 	AIR
 };
 enum Velocity jumperVelocity = GROUND;
-#define jumperStart (1920*3)*539+(1920*3)-(jumperBlock.width/2);
 
-void GamePrintBlock(u8 *frame, struct Block *block, u32 anchor, int color);
+
 int collisiondetect (struct Block *jumper, struct Block *platform);
-void DemoOverwriteJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW);
-void DemoStartGame(u8 *frame, u32 width, u32 height);
-void DemoPrintJumper(u8 *frame, int *array,  u32 anchor, int imgH, int imgW);
+void ImageOverwrite(u8 *frame,  u32 anchor, int imgH, int imgW);
+void DemoStartGame(u32 width, u32 height);
+void ImagePrint(u8 *frame, int *array,  u32 anchor, int imgH, int imgW);
 void FrameBufferSwap ();
 int GenerateGameImage();
 void DemoPrintBackground(u8 *frame, int width, int height);
-
+void Overwrite(u8 *frame);
+void Move(u8 *frame);
+void Print(u8 *frame);
 
 
 #endif /* SRC_VIDEO_CAPTURE_GAME_H_ */
