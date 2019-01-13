@@ -124,7 +124,7 @@ void DemoStartGame(u32 gameWidth, u32 gameHeight) {
 		Overwrite(frameBuf[0]);
 		Move(frameBuf[0]);
 		Print(frameBuf[0]);
-		FrameBufferSwap();
+		//FrameBufferSwap();
 		Xil_DCacheFlushRange((unsigned int) frameBuf[0], DEMO_MAX_FRAME);
 		/*
 		VideoStart(&videoCapt);
