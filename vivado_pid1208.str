@@ -169,3 +169,4 @@ dismissDialog("Launch SDK"); // aa (cp)
 // Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.sdk -hwspec C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.sdk/hdmi_in_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
 // WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 4711 ms. Increasing delay to 14133 ms.
 // WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 111 ms. Decreasing delay to 2111 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1065 ms. Increasing delay to 3195 ms.
