@@ -195,7 +195,7 @@ void PrintScore(u8 *frame, u32 score) {
 			}
 		}
 	}
-
+	ImagePrint(frame, yourScore, 1000*DEMO_STRIDE, 50, 60, 20);
 }
 
 void Overwrite(u8 *frame) {
@@ -273,7 +273,7 @@ void DemoPrintBackground(u8 *frame, int width, int height) {
 	}
 }
 
-void ImagePrint(u8 *frame, int *array,  u32 x, u32 y, int imgH, int imgW) {
+void ImagePrint(u8 *frame, u8 *array,  u32 x, u32 y, int imgH, int imgW) {
 	int cor = x+y;
 	int arrayCounter = 0;
 	for(int i = 0; i < imgH; i++) {

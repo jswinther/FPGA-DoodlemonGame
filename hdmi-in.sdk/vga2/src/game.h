@@ -48,7 +48,7 @@ enum Velocity jumperVelocity = GROUND;
 int collisiondetect (struct Block *jumper, struct Block *platform);
 void ImageOverwrite(u8 *frame,  u32 x, u32 y, int imgH, int imgW);
 void DemoStartGame(u32 width, u32 height);
-void ImagePrint(u8 *frame, int *array,  u32 x, u32 y, int imgH, int imgW);
+void ImagePrint(u8 *frame, u8 *array,  u32 x, u32 y, int imgH, int imgW);
 void FrameBufferSwap ();
 int GenerateGameImage();
 void DemoPrintBackground(u8 *frame, int width, int height);
