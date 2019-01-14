@@ -58,13 +58,13 @@ void resetScore(){
 		hightens = tens;
 		highhundreds = hundreds;
 		highthousands = thousands;
-			}
+	}
 	else if(ones > highones){
 		highones = ones;
 		hightens = tens;
 		highhundreds = hundreds;
 		highthousands = thousands;
-		}
+	}
 
 	ones = 0;
 	tens = 0;

@@ -49,6 +49,7 @@
 #include "deadLogic.h"
 #include "numberArray.h"
 #include "score.h"
+#include "Framebuffer.h"
 /* ------------------------------------------------------------ */
 /*						   Defines				        		*/
 /* ------------------------------------------------------------ */
@@ -64,7 +65,7 @@
 /* ------------------------------------------------------------ */
 /*				Global Variables								*/
 /* ------------------------------------------------------------ */
-int nextFrame = 0;
+
 u32 platformspeed = 6;
 u8 scoreArray[4] = {0, 0, 0, 0};
 u32 platformhits = 0;
@@ -138,12 +139,12 @@ void DemoStartGame(u32 gameWidth, u32 gameHeight) {
 		platformspeed = 6;
 		while(dead != 1) {
 			//VideoStop(&videoCapt);
-			Overwrite(frameBuf[nextFrame]);
-			Move(frameBuf[nextFrame]);
-			Print(frameBuf[nextFrame]);
-			Xil_DCacheFlushRange((unsigned int) frameBuf[nextFrame], DEMO_MAX_FRAME);
+			Overwrite(frameBuf[frameSelect()]);
+			Move(frameBuf[frameSelect()]);
+			Print(frameBuf[frameSelect()]);
+			Xil_DCacheFlushRange((unsigned int) frameBuf[frameSelect()], DEMO_MAX_FRAME);
 			//VideoStart(&videoCapt);
-			//DisplayChangeFrame(&dispCtrl, *frameBuf[nextFrame]);
+			//DisplayChangeFrame(&dispCtrl, *frameBuf[frameSelect()]);
 			//FrameBufferSwap();
 
 
@@ -315,13 +316,7 @@ int collisiondetect (struct Block *jumper, struct Block *platform){
 	return 0;
 }
 
-void FrameBufferSwap (){
-	nextFrame++;
-	if (nextFrame >= DISPLAY_NUM_FRAMES){
-		nextFrame = 0;
-	}
-	DisplayChangeFrame(&dispCtrl, nextFrame);
-}
+
 
 void StreamFrameBuffer() {
 	if (videoCapt.state == VIDEO_STREAMING)
@@ -535,3 +530,20 @@ void DemoISR(void *callBackRef, void *pVideo)
 	char *data = (char *) callBackRef;
 	*data = 1; //set fRefresh to 1
 }
+
+int frameSelect()
+{
+	int frame;
+	frame = dispCtrl.curFrame +1;
+	if (frame >= DISPLAY_NUM_FRAMES){
+		frame = 0;
+	}
+	return frame;
+}
+
+
+void nextframeselect(){
+	Xil_DCacheFlushRange((unsigned int)pFrames[frameSelect()], DEMO_MAX_FRAME);
+	DisplayChangeFrame(&dispCtrl, frameSelect());
+}
+
