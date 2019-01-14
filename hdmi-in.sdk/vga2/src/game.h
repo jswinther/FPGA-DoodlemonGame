@@ -32,9 +32,11 @@ struct Block {
 	u16 height;
 	u32 floor;
 	int velocity;
+	u32 x;
+	u32 y;
 };
 
-struct Block jumperBlock = {JUMPER_START, JUMPER_WIDTH, JUMPER_HEIGHT, (DEMO_STRIDE - JUMPER_START + JUMPER_HEIGHT), 0};
+struct Block jumperBlock = {JUMPER_START, JUMPER_WIDTH, JUMPER_HEIGHT, (DEMO_STRIDE - JUMPER_START + JUMPER_HEIGHT), 0, 490*DEMO_STRIDE, 2830};
 struct Block *jumper = &jumperBlock;
 struct Block platformBlock[PLATFORM_AMOUNT];
 struct Block *platform[PLATFORM_AMOUNT];
