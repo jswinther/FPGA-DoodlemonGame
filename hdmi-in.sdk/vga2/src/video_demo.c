@@ -169,10 +169,10 @@ void PrintScore(u8 *frame, u8 ones, u8 tens, u8 hundreds, u8 thousands) {
 
 }
 void PrintHighScore(u8 *frame, u8 ones, u8 tens, u8 hundreds, u8 thousands) {
-	ImagePrint(frame, numArray[highthousands], 1000*DEMO_STRIDE, 79, 20, 20);
-	ImagePrint(frame, numArray[highhundreds], 979*DEMO_STRIDE, 79, 20, 20);
-	ImagePrint(frame, numArray[hightens], 958*DEMO_STRIDE, 50, 79, 20);
-	ImagePrint(frame, numArray[highones], 937*DEMO_STRIDE, 50, 79, 20);
+	ImagePrint(frame, numArray[highthousands], 1000*DEMO_STRIDE, 150, 20, 20);
+	ImagePrint(frame, numArray[highhundreds], 979*DEMO_STRIDE, 150, 20, 20);
+	ImagePrint(frame, numArray[hightens], 958*DEMO_STRIDE, 150, 20, 20);
+	ImagePrint(frame, numArray[highones], 937*DEMO_STRIDE, 150, 20, 20);
 
 }
 
