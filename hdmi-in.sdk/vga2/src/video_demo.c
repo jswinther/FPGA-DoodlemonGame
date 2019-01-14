@@ -88,11 +88,16 @@ const ivt_t ivt[] = {
 // Counter used for score.
 int counter = 0;
 
-
+int frame;
 
 /* ------------------------------------------------------------ */
 /*						     Main								*/
 /* ------------------------------------------------------------ */
+
+
+
+
+
 int main(void) {
 	DemoInitialize();
 	DisplaySetMode(&dispCtrl, &VMODE_1920x1080);
@@ -109,57 +114,57 @@ int main(void) {
 	// Initialize interrupt controller
 	status = IntcInitFunction(INTC_DEVICE_ID, &BTNInst);
 	if(status != XST_SUCCESS) return XST_FAILURE;
-	DemoStartGame(dispCtrl.vMode.width, dispCtrl.vMode.height);
+	DemoStartGame();
 	return 0;
 }
 /* ------------------------------------------------------------ */
 /*						     Game		    					*/
 /* ------------------------------------------------------------ */
-void DemoStartGame(u32 gameWidth, u32 gameHeight) {
-
+void DemoStartGame() {
+	ResetGame(frameBuf[0]);
+	Xil_DCacheFlushRange((unsigned int)frameBuf[0], DEMO_MAX_FRAME);
+	DisplayChangeFrame(&dispCtrl, 0);
 	while(1) {
-		DemoPrintBackground(frameBuf[0], gameWidth, gameHeight);
-		int random_x;
-		int random_y = 0;
-		for(int i = 0; i < PLATFORM_AMOUNT; i++) {
-			random_x = rand() % 990 + 0;
-			random_y += 576;
-			platformBlock[i].height = PLATFORM_HEIGHT;
-			platformBlock[i].width = PLATFORM_WIDTH;
-			platformBlock[i].x = random_x*DEMO_STRIDE;
-			platformBlock[i].y = random_y;
-			platformBlock[i].velocity = PLATFORM_SPEED;
-			platform[i] = &platformBlock[i];
+		frame = dispCtrl.curFrame +1;
+		if (frame >= DISPLAY_NUM_FRAMES) {
+			frame = 0;
 		}
-		jumperBlock.x = 540*DEMO_STRIDE;
-		jumperBlock.y = 2830;
-		dead = 0;
-		resetScore();
-		platformhits = 0;
-		platformspeed = 6;
-		while(dead != 1) {
-			//VideoStop(&videoCapt);
-			Overwrite(frameBuf[frameSelect()]);
-			Move(frameBuf[frameSelect()]);
-			Print(frameBuf[frameSelect()]);
-			Xil_DCacheFlushRange((unsigned int) frameBuf[frameSelect()], DEMO_MAX_FRAME);
-			//VideoStart(&videoCapt);
-			//DisplayChangeFrame(&dispCtrl, *frameBuf[frameSelect()]);
-			//FrameBufferSwap();
-
-
-			//FrameBufferSwap();
-			/*
-			VideoStart(&videoCapt);
-			DisplayChangeFrame(&dispCtrl, *frameBuf[0]);
-			VideoStop(&videoCapt);
-			*/
-		}
+		if(dead == 1)
+			ResetGame(frameBuf[frame]);
+		Overwrite(frameBuf[frame]);
+		Move(frameBuf[frame]);
+		Print(frameBuf[frame]);
+		Xil_DCacheFlushRange((unsigned int)frameBuf[frame], DEMO_MAX_FRAME);
+		DisplayChangeFrame(&dispCtrl, frame);
 	}
+}
+int frameSelect()
+{
 
+	return frame;
 }
 
-
+void ResetGame(u8 *frame) {
+	DemoPrintBackground(frame);
+			int random_x;
+			int random_y = 0;
+			for(int i = 0; i < PLATFORM_AMOUNT; i++) {
+				random_x = rand() % 990 + 0;
+				random_y += 576;
+				platformBlock[i].height = PLATFORM_HEIGHT;
+				platformBlock[i].width = PLATFORM_WIDTH;
+				platformBlock[i].x = random_x*DEMO_STRIDE;
+				platformBlock[i].y = random_y;
+				platformBlock[i].velocity = PLATFORM_SPEED;
+				platform[i] = &platformBlock[i];
+			}
+			jumperBlock.x = 540*DEMO_STRIDE;
+			jumperBlock.y = 2830;
+			dead = 0;
+			resetScore();
+			platformhits = 0;
+			platformspeed = 6;
+}
 
 void PrintScore(u8 *frame, u8 ones, u8 tens, u8 hundreds, u8 thousands) {
 	ImagePrint(frame, numArray[thousands], 1000*DEMO_STRIDE, 50, 20, 20);
@@ -249,8 +254,8 @@ void Print(u8 *frame) {
 	ImagePrint(frame, jumperImg, jumperBlock.x, jumperBlock.y , JUMPER_HEIGHT, JUMPER_WIDTH);
 }
 
-void DemoPrintBackground(u8 *frame, int width, int height) {
-	for(int i = 0; i < width*height*3; i++) {
+void DemoPrintBackground(u8 *frame) {
+	for(int i = 0; i < 1920*1080*3; i++) {
 		frame[i] = 255;
 	}
 }
@@ -531,19 +536,5 @@ void DemoISR(void *callBackRef, void *pVideo)
 	*data = 1; //set fRefresh to 1
 }
 
-int frameSelect()
-{
-	int frame;
-	frame = dispCtrl.curFrame +1;
-	if (frame >= DISPLAY_NUM_FRAMES){
-		frame = 0;
-	}
-	return frame;
-}
 
-
-void nextframeselect(){
-	Xil_DCacheFlushRange((unsigned int)pFrames[frameSelect()], DEMO_MAX_FRAME);
-	DisplayChangeFrame(&dispCtrl, frameSelect());
-}
 
