@@ -21,6 +21,7 @@ void isDead(u32 x, u32 y)
 	// Hits Wall.
 	if(x < rightWall || leftWall < x) {
 		dead = 1;
+
 	}
 	// Hits floor or ceiling.
 	if(y < ceiling || floor < y) {
