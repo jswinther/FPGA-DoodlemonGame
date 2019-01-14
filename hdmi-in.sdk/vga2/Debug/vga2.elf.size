@@ -1,2 +1,2 @@
    text	   data	    bss	    dec	    hex	filename
-  69088	 181040	18688432	18938560	120fac0	vga2.elf
+  69088	  56480	18688432	18814000	11f1430	vga2.elf
