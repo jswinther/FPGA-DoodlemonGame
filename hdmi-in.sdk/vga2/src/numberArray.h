@@ -8,11 +8,6 @@
 #ifndef SRC_NUMBERARRAY_H_
 #define SRC_NUMBERARRAY_H_
 
-u8 numArray[][] = {
-{
-
-
-}
-};
+u8 numArray[10][1200];
 
 #endif /* SRC_NUMBERARRAY_H_ */
