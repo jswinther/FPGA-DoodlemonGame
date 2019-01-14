@@ -59,6 +59,5 @@ void Increment();
 int frameSelect();
 void nextframeselect();
 void ResetGame(u8 *frame);
-void blockPrinter(u8 *frame, u32 width, u32 height, u32 stride,u8 *pic,  u32 picWidth, u32 picHeight, struct Block *block);
 
 #endif /* SRC_VIDEO_CAPTURE_GAME_H_ */

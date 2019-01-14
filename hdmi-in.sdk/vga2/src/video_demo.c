@@ -50,7 +50,6 @@
 #include "numberArray.h"
 #include "score.h"
 #include "Framebuffer.h"
-#include "background.h"
 /* ------------------------------------------------------------ */
 /*						   Defines				        		*/
 /* ------------------------------------------------------------ */
@@ -140,19 +139,20 @@ void DemoStartGame() {
 
 		while (btn_value == 1) {
 			while(dead != 1) {
+				/*
+
+				*/
 				Overwrite(frameBuf[frame]);
 				Move(frameBuf[frame]);
 				Print(frameBuf[frame]);
+
 				Xil_DCacheFlushRange((unsigned int)frameBuf[frame], DEMO_MAX_FRAME);
 				DisplayChangeFrame(&dispCtrl, frame);
-				//Overwrite(frameBuf[frame]);
-				/*
-				 frame++;
+				DemoPrintBackground(frameBuf[frame]);
+				frame++;
 				if (frame >= DISPLAY_NUM_FRAMES) {
 					frame = 0;
 				}
-				 */
-
 
 			}
 			resetf = 1;
@@ -273,7 +273,7 @@ void Print(u8 *frame) {
 }
 
 void DemoPrintBackground(u8 *frame) {
-	for(int i = 0; i < 1080*1920*3; i++) {
+	for(int i = 0; i < 1080; i++) {
 		frame[i] = 255;
 	}
 }
