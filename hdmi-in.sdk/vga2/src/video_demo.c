@@ -121,11 +121,17 @@ void DemoStartGame(u32 gameWidth, u32 gameHeight) {
 		platform[i] = &platformBlock[i];
 	}
 	while(1) {
-		Overwrite(frameBuf[0]);
-		Move(frameBuf[0]);
-		Print(frameBuf[0]);
+		VideoStop(&videoCapt);
+		Overwrite(frameBuf[nextFrame]);
+		Move(frameBuf[nextFrame]);
+		Print(frameBuf[nextFrame]);
+		Xil_DCacheFlushRange((unsigned int) frameBuf[nextFrame], DEMO_MAX_FRAME);
+		VideoStart(&videoCapt);
+		DisplayChangeFrame(&dispCtrl, *frameBuf[nextFrame]);
+		FrameBufferSwap();
+
+
 		//FrameBufferSwap();
-		Xil_DCacheFlushRange((unsigned int) frameBuf[0], DEMO_MAX_FRAME);
 		/*
 		VideoStart(&videoCapt);
 		DisplayChangeFrame(&dispCtrl, *frameBuf[0]);
