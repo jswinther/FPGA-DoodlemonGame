@@ -48,6 +48,7 @@
 #include "game.h"
 #include "deadLogic.h"
 #include "numberArray.h"
+#include "score.h"
 /* ------------------------------------------------------------ */
 /*						   Defines				        		*/
 /* ------------------------------------------------------------ */
@@ -85,10 +86,7 @@ const ivt_t ivt[] = {
 };
 // Counter used for score.
 int counter = 0;
-u8 ones = 0;
-u8 tens = 0;
-u8 hundreds = 0;
-u8 thousands = 0;
+
 
 
 
@@ -136,6 +134,7 @@ void DemoStartGame(u32 gameWidth, u32 gameHeight) {
 		jumperBlock.x = 540*DEMO_STRIDE;
 		jumperBlock.y = 2830;
 		dead = 0;
+		resetScore();
 		platformhits = 0;
 		platformspeed = 6;
 		while(dead != 1) {
@@ -160,21 +159,7 @@ void DemoStartGame(u32 gameWidth, u32 gameHeight) {
 
 }
 
-void Increment() {
-	ones++;
-	if(ones == 10) {
-		tens++;
-		ones = 0;
-	}
-	if(tens == 10) {
-		hundreds++;
-		tens = 0;
-	}
-	if(hundreds == 10) {
-		thousands++;
-		hundreds = 0;
-	}
-}
+
 
 void PrintScore(u8 *frame, u8 ones, u8 tens, u8 hundreds, u8 thousands) {
 	ImagePrint(frame, numArray[thousands], 1000*DEMO_STRIDE, 50, 20, 20);
