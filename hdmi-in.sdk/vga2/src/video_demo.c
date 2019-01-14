@@ -65,7 +65,7 @@
 /* ------------------------------------------------------------ */
 int nextFrame = 0;
 u32 platformspeed = 6;
-u8 scoreArray[4];
+u8 scoreArray[4] = {0, 0, 0, 0};
 u32 platformhits = 0;
 DisplayCtrl dispCtrl;
 XAxiVdma vdma;
@@ -83,8 +83,14 @@ const ivt_t ivt[] = {
 	videoGpioIvt(VID_GPIO_IRPT_ID, &videoCapt),
 	videoVtcIvt(VID_VTC_IRPT_ID, &(videoCapt.vtc))
 };
-// Counter used in jumping gravity.
+// Counter used for score.
 int counter = 0;
+u8 ones = 0;
+u8 tens = 0;
+u8 hundreds = 0;
+u8 thousands = 0;
+
+
 
 /* ------------------------------------------------------------ */
 /*						     Main								*/
@@ -154,48 +160,28 @@ void DemoStartGame(u32 gameWidth, u32 gameHeight) {
 
 }
 
-void PrintScore(u8 *frame, u32 score) {
-	if(score < 10) {
-		scoreArray[0] = 0;
-		scoreArray[1] = 0;
-		scoreArray[2] = 0;
-		scoreArray[3] = score;
-	} else if(score < 100) {
-		int count = 0;
-		for(int i = 0; i < score; i+=10) {
-			count++;
-		}
-		scoreArray[0] = 0;
-		scoreArray[1] = 0;
-		scoreArray[2] = count;
-		scoreArray[3] = score%10;
-	} else if(score < 1000) {
-		int countH = 0;
-		for(int i = 0; i < score; i+=100) {
-			countH++;
-		}
-		score-=countH*100;
-		int count = 0;
-		for(int i = 0; i < score; i+=10) {
-			count++;
-		}
-		scoreArray[0] = 0;
-		scoreArray[1] = countH;
-		scoreArray[2] = count;
-		scoreArray[3] = score%10;
+void Increment() {
+	ones++;
+	if(ones == 10) {
+		tens++;
+		ones = 0;
 	}
+	if(tens == 10) {
+		hundreds++;
+		tens = 0;
+	}
+	if(hundreds == 10) {
+		thousands++;
+		hundreds = 0;
+	}
+}
 
-	u8 yourScore[4800];
-	int yourScoreIndex = 0;
-	for(int i = 0; i < 20; i++) {
-		for(int j = 0; j < 4; j++) {
-			for(int k = 0; k < 60; k++) {
-				yourScore[yourScoreIndex] = numArray[scoreArray[j]][(i*60)+k];
-				yourScoreIndex++;
-			}
-		}
-	}
-	ImagePrint(frame, yourScore, 1000*DEMO_STRIDE, 50, 60, 20);
+void PrintScore(u8 *frame, u8 ones, u8 tens, u8 hundreds, u8 thousands) {
+	ImagePrint(frame, numArray[thousands], 1000*DEMO_STRIDE, 50, 20, 20);
+	ImagePrint(frame, numArray[hundreds], 979*DEMO_STRIDE, 50, 20, 20);
+	ImagePrint(frame, numArray[tens], 958*DEMO_STRIDE, 50, 20, 20);
+	ImagePrint(frame, numArray[ones], 937*DEMO_STRIDE, 50, 20, 20);
+
 }
 
 void Overwrite(u8 *frame) {
@@ -208,6 +194,7 @@ void Overwrite(u8 *frame) {
 			platformBlock[j].x = DEMO_STRIDE*(rand() % 900 + 0);
 		}
 	}
+	ImageOverwrite(frame, 937*DEMO_STRIDE, 50, 80, 20);
 }
 
 void Move(u8 *frame) {
@@ -233,6 +220,7 @@ void Move(u8 *frame) {
 	case GROUND:
 		counter = 0;
 		platformhits++;
+		Increment();
 		if(platformhits%10 == 0) {
 			platformspeed+=3;
 		}
@@ -264,6 +252,7 @@ void Print(u8 *frame) {
 	for(int j = 0; j < PLATFORM_AMOUNT; j++) {
 		ImagePrint(frame, platformImg, platformBlock[j].x, platformBlock[j].y, PLATFORM_HEIGHT, PLATFORM_WIDTH);
 	}
+	PrintScore(frame, ones, tens, hundreds, thousands);
 	ImagePrint(frame, jumperImg, jumperBlock.x, jumperBlock.y , JUMPER_HEIGHT, JUMPER_WIDTH);
 }
 

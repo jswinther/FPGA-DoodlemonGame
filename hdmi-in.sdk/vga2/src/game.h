@@ -55,6 +55,6 @@ void DemoPrintBackground(u8 *frame, int width, int height);
 void Overwrite(u8 *frame);
 void Move(u8 *frame);
 void Print(u8 *frame);
-
+void Increment();
 
 #endif /* SRC_VIDEO_CAPTURE_GAME_H_ */
