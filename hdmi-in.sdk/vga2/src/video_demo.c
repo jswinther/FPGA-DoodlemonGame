@@ -88,13 +88,14 @@ const ivt_t ivt[] = {
 // Counter used for score.
 int counter = 0;
 
-int frame;
+int frame = 0;
+int resetf = 1;
 
 /* ------------------------------------------------------------ */
 /*						     Main								*/
 /* ------------------------------------------------------------ */
 
-
+u8 whiteLine[5760];
 
 
 
@@ -121,27 +122,44 @@ int main(void) {
 /*						     Game		    					*/
 /* ------------------------------------------------------------ */
 void DemoStartGame() {
-	ResetGame(frameBuf[0]);
-	Xil_DCacheFlushRange((unsigned int)frameBuf[0], DEMO_MAX_FRAME);
-	DisplayChangeFrame(&dispCtrl, 0);
-	while(1) {
-		frame = dispCtrl.curFrame +1;
-		if (frame >= DISPLAY_NUM_FRAMES) {
-			frame = 0;
-		}
-		if(dead == 1)
-			ResetGame(frameBuf[frame]);
-		Overwrite(frameBuf[frame]);
-		Move(frameBuf[frame]);
-		Print(frameBuf[frame]);
-		Xil_DCacheFlushRange((unsigned int)frameBuf[frame], DEMO_MAX_FRAME);
-		DisplayChangeFrame(&dispCtrl, frame);
+	for(int i = 0; i < 5760; i++) {
+		whiteLine[i] = 255;
 	}
-}
-int frameSelect()
-{
+	while(1) {
+		if(resetf == 1) {
+			btn_flag = 0;
+			ResetGame(frameBuf[frame]);
+			DemoPrintBackground(frameBuf[frame+1]);
+			DemoPrintBackground(frameBuf[frame+2]);
+			Print(frameBuf[frame]);
+			resetf = 0;
+			Xil_DCacheFlushRange((unsigned int)frameBuf[frame], DEMO_MAX_FRAME);
+			DisplayChangeFrame(&dispCtrl, frame);
+		}
 
-	return frame;
+		while (btn_value == 1) {
+			while(dead != 1) {
+				/*
+
+				*/
+				Overwrite(frameBuf[frame]);
+				Move(frameBuf[frame]);
+				Print(frameBuf[frame]);
+
+				Xil_DCacheFlushRange((unsigned int)frameBuf[frame], DEMO_MAX_FRAME);
+				DisplayChangeFrame(&dispCtrl, frame);
+				DemoPrintBackground(frameBuf[frame]);
+				frame++;
+				if (frame >= DISPLAY_NUM_FRAMES) {
+					frame = 0;
+				}
+
+			}
+			resetf = 1;
+		}
+
+	}
+
 }
 
 void ResetGame(u8 *frame) {
@@ -255,8 +273,29 @@ void Print(u8 *frame) {
 }
 
 void DemoPrintBackground(u8 *frame) {
-	for(int i = 0; i < 1920*1080*3; i++) {
+	for(int i = 0; i < 1080; i++) {
 		frame[i] = 255;
+	}
+}
+
+
+void blockPrinter(u8 *frame, u32 width, u32 height, u32 stride,u8 *pic,  u32 picWidth, u32 picHeight, struct Block *block)
+{
+	u32 ycoi;
+	u32 lineStart = 0;
+	u32 lineStartPic = 0;
+	u32 picStride = picWidth;
+	u32 lowestPoint = (1080-96)*1920*3;
+	//	u32 tempPicHeight = picHeight;
+	u32 semiPrintBlock = block->height - ((1920*1080*3-(block->x*DEMO_STRIDE+block->y))-lowestPoint)/stride;
+	if((block->x*DEMO_STRIDE+block->y) < lowestPoint)
+	{
+		for(ycoi = 0; ycoi < picHeight; ycoi++)
+		{
+			memcpy(frame+(block->x*DEMO_STRIDE+block->y) + lineStart, pic+lineStartPic+1, picStride);
+			lineStart += stride;
+			lineStartPic+= picStride;
+		}
 	}
 }
 

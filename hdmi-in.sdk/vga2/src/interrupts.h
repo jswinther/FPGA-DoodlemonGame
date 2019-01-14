@@ -21,7 +21,7 @@ XGpio BTNInst;
 XScuGic INTCInst;
 INTC intc;
 int btn_value;
-
+int btn_flag;
 void BTN_Intr_Handler(void *InstancePtr)
 {
 	// Disable GPIO interrupts
@@ -32,7 +32,7 @@ void BTN_Intr_Handler(void *InstancePtr)
 			return;
 		}
 	btn_value = XGpio_DiscreteRead(&BTNInst, 1);
-
+	btn_flag = 1;
     (void)XGpio_InterruptClear(&BTNInst, BTN_INT);
     // Enable GPIO interrupts
     XGpio_InterruptEnable(&BTNInst, BTN_INT);
