@@ -41,7 +41,7 @@ void Increment() {
 	ones++;
 	if(ones == 10) {
 		tens++;
-		platformspeed+=2;
+		platformspeed+=3;
 		ones = 0;
 	}
 	if(tens == 10) {
