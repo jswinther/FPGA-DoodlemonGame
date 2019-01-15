@@ -8,12 +8,14 @@
 #ifndef SRC_SCORE_H_
 #define SRC_SCORE_H_
 
-u32 platformspeed = 6;
+u32 platformspeed = 15;
 //Currenst score
 u8 ones = 0;
 u8 tens = 0;
 u8 hundreds = 0;
 u8 thousands = 0;
+u16 onesCounter = 0;
+u8 speedCounter = 0;
 
 
 //Highscore
@@ -39,14 +41,31 @@ void findAverageScore(){
 }
 void Increment() {
 	ones++;
+	onesCounter++;
+	if(onesCounter < 30 && onesCounter%5==0) {
+			platformspeed+=3;
+	}
+	if(onesCounter >= 30 && onesCounter < 50){
+		if( onesCounter%10==0) {
+				platformspeed+=3;
+		}}
+	if(onesCounter >= 50 && onesCounter < 100){
+			if( onesCounter%10==0) {
+					platformspeed+=3;
+			}}
+	if(onesCounter >= 100){
+		if( onesCounter%20==0) {
+				platformspeed+=3;
+		}}
+
 	if(ones == 10) {
 		tens++;
-		platformspeed+=3;
 		ones = 0;
 	}
 	if(tens == 10) {
 		hundreds++;
 		tens = 0;
+
 	}
 	if(hundreds == 10) {
 		thousands++;
@@ -56,6 +75,7 @@ void Increment() {
 
 void resetScore(){
 	gamesPlayed++;
+	onesCounter = 0;
 	findAverageScore();
 	if(thousands > highthousands){
 		highones = ones;

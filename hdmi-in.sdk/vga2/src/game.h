@@ -18,7 +18,7 @@
 //Platform
 #define PLATFORM_HEIGHT 140
 #define PLATFORM_WIDTH 48
-#define PLATFORM_SPEED 6
+#define PLATFORM_SPEED 12
 #define PLATFORM_AMOUNT 10
 
 //Jumper
@@ -42,6 +42,14 @@ enum Velocity {
 	GROUND,
 	AIR
 };
+
+enum direction {
+	DL,
+	DR,
+	UL,
+	UR
+};
+enum direction jumperDir = UL;
 enum Velocity jumperVelocity = GROUND;
 
 

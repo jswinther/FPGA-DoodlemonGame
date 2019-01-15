@@ -53,6 +53,7 @@
 #include "whiteLine.h"
 #include "Background.h"
 #include "Header.h"
+#include "Doodlemon.h"
 /* ------------------------------------------------------------ */
 /*						   Defines				        		*/
 /* ------------------------------------------------------------ */
@@ -241,6 +242,7 @@ void Move(u8 *frame) {
 	switch(btn_value) {
 	case 1:
 		jumperBlock.x -= DEMO_STRIDE*21;
+		jumperDir = UR;
 		break;
 	case 2:
 		jumperBlock.x -= DEMO_STRIDE*3;
@@ -250,6 +252,7 @@ void Move(u8 *frame) {
 		break;
 	case 8:
 		jumperBlock.x += DEMO_STRIDE*21;
+		jumperDir = UL;
 		break;
 	default:
 		break;
@@ -268,6 +271,16 @@ void Move(u8 *frame) {
 	switch(jumperVelocity) {
 	case GROUND:
 		counter = 0;
+		switch(jumperDir) {
+		case UR:
+			jumperDir = DR;
+			break;
+		case UL:
+			jumperDir = DL;
+			break;
+		default:
+			break;
+		}
 		jumperBlock.velocity = 72;
 		jumperVelocity = AIR;
 		break;
@@ -303,7 +316,25 @@ void Print(u8 *frame) {
 	initializeScreen(frame, 150, 1080, 5760, HeaderImg);
 	PrintScore(frame, ones, tens, hundreds, thousands);
 	PrintHighScore(frame, highones, hightens, highhundreds, highthousands);
-	ImagePrint(frame, jumperImg, jumperBlock.x, jumperBlock.y , JUMPER_HEIGHT, JUMPER_WIDTH);
+
+	switch(jumperDir) {
+	case UL:
+		ImagePrint(frame, doodlelongleft, jumperBlock.x, jumperBlock.y, 100, 100);
+		break;
+	case UR:
+		ImagePrint(frame, doodlelongright, jumperBlock.x, jumperBlock.y, 100, 100);
+		break;
+	case DL:
+		ImagePrint(frame, doodleshortleft, jumperBlock.x, jumperBlock.y, 100, 100);
+		break;
+	case DR:
+		ImagePrint(frame, doodleshortright, jumperBlock.x, jumperBlock.y, 100, 100);
+		break;
+	default:
+	break;
+	}
+
+
 }
 
 void DemoPrintBackground(u8 *frame) {
