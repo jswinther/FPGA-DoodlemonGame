@@ -29,7 +29,7 @@ u8 totalScore = 0;
 
 
 //Times played
-u8 gamesPlayed = 0;
+u8 gamesPlayed = 1;
 
 
 void findAverageScore(){
@@ -41,7 +41,7 @@ void Increment() {
 	ones++;
 	if(ones == 10) {
 		tens++;
-		platformspeed+=2;
+		platformspeed+=3;
 		ones = 0;
 	}
 	if(tens == 10) {

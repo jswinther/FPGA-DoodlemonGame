@@ -16,7 +16,7 @@
 #define jumperGRAVITY 3
 
 //Platform
-#define PLATFORM_HEIGHT 160
+#define PLATFORM_HEIGHT 140
 #define PLATFORM_WIDTH 48
 #define PLATFORM_SPEED 6
 #define PLATFORM_AMOUNT 10
