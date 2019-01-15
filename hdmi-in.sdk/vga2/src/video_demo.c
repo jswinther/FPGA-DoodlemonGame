@@ -50,6 +50,7 @@
 #include "numberArray.h"
 #include "score.h"
 #include "Framebuffer.h"
+#include "whiteLine.h"
 /* ------------------------------------------------------------ */
 /*						   Defines				        		*/
 /* ------------------------------------------------------------ */
@@ -125,27 +126,25 @@ void DemoStartGame() {
 	Xil_DCacheFlushRange((unsigned int)frameBuf[0], DEMO_MAX_FRAME);
 	DisplayChangeFrame(&dispCtrl, 0);
 	while(1) {
-		//frame = dispCtrl.curFrame +1;
-		//if (frame >= DISPLAY_NUM_FRAMES) {
-		//	frame = 0;
-		//}
+		if (frame >= DISPLAY_NUM_FRAMES) {
+			frame = 0;
+		}
 		if(dead == 1)
 			ResetGame(frameBuf[frame]);
-		Overwrite(frameBuf[frame]);
+		initializeScreen(frameBuf[frame], 1920, 1080, 5760, whiteLine);
 		Move(frameBuf[frame]);
 		Print(frameBuf[frame]);
 		Xil_DCacheFlushRange((unsigned int)frameBuf[frame], DEMO_MAX_FRAME);
 		DisplayChangeFrame(&dispCtrl, frame);
+		frame = dispCtrl.curFrame +1;
 	}
-}
-int frameSelect()
-{
-
-	return frame;
 }
 
 void ResetGame(u8 *frame) {
-	DemoPrintBackground(frame);
+	for(int i = 0; i < 3; i++) {
+		initializeScreen(frameBuf[i], 1920, 1080, 5760, whiteLine);
+	}
+	//ImagePrintMemCpy(frame, whiteLine, 0, 0, 1080, 1920);
 			int random_x;
 			int random_y = 0;
 			for(int i = 0; i < PLATFORM_AMOUNT; i++) {
@@ -166,6 +165,43 @@ void ResetGame(u8 *frame) {
 			platformspeed = 6;
 }
 
+void initializeScreen(u8 *frame, u32 width, u32 height, u32 stride, u8 *pic)
+{
+	u32 lineStart = 0;
+	u32 lineStartPic = 0;
+
+	for(int ycoi = 0; ycoi < 1080; ycoi++)
+	{
+		memcpy(frame + lineStart, pic, stride);
+		lineStart += stride;
+		lineStartPic+= stride;
+	}
+}
+void initializeBlock(u8 *frame, u8 *pic, int x, int y)
+{
+	u32 lineStart = y+(x*DEMO_STRIDE);
+	u32 lineStartPic = 0;
+
+	for(int ycoi = 0; ycoi < 160; ycoi++)
+	{
+		memcpy(frame + lineStart, pic, 48*3);
+		lineStart += DEMO_STRIDE;
+		lineStartPic+= 48*3;
+	}
+}
+
+void MemeCopyOverWrite(u8 *frame, u8 *pic, int x, int y, int imgW, int imgH) {
+	u32 lineStart = x*DEMO_STRIDE+y;
+	u32 lineStartPic = 0;
+
+		for(int ycoi = 0; ycoi < imgH; ycoi++)
+		{
+			memcpy(frame + lineStart, pic, imgW*3);
+			lineStart += DEMO_STRIDE;
+			lineStartPic+= imgW*3;
+		}
+}
+
 void PrintScore(u8 *frame, u8 ones, u8 tens, u8 hundreds, u8 thousands) {
 	ImagePrint(frame, numArray[thousands], 1000*DEMO_STRIDE, 50, 20, 20);
 	ImagePrint(frame, numArray[hundreds], 979*DEMO_STRIDE, 50, 20, 20);
@@ -182,16 +218,17 @@ void PrintHighScore(u8 *frame, u8 ones, u8 tens, u8 hundreds, u8 thousands) {
 }
 
 void Overwrite(u8 *frame) {
-	ImageOverwrite(frame, jumperBlock.x, jumperBlock.y , JUMPER_HEIGHT, JUMPER_WIDTH);
+	MemeCopyOverWrite(frame, whiteLine, jumperBlock.x, jumperBlock.y, JUMPER_WIDTH, JUMPER_HEIGHT);
 	for(int j = 0; j < PLATFORM_AMOUNT; j++) {
-		ImageOverwrite(frame, platformBlock[j].x, platformBlock[j].y , PLATFORM_HEIGHT, PLATFORM_WIDTH);
+		MemeCopyOverWrite(frame, whiteLine, platformBlock[j].x, platformBlock[j].y, PLATFORM_WIDTH, PLATFORM_HEIGHT);
 		platformBlock[j].y+=platformspeed;
 		if(platformBlock[j].y >= DEMO_STRIDE) {
 			platformBlock[j].y = 0;
 			platformBlock[j].x = DEMO_STRIDE*(rand() % 900 + 0);
 		}
 	}
-	ImageOverwrite(frame, 937*DEMO_STRIDE, 50, 80, 20);
+	MemeCopyOverWrite(frame, whiteLine, 937*DEMO_STRIDE, 50, 80, 20);
+	//ImageOverwrite(frame, 937*DEMO_STRIDE, 50, 80, 20);
 }
 
 void Move(u8 *frame) {
@@ -213,6 +250,15 @@ void Move(u8 *frame) {
 		break;
 
 	}
+
+	for(int j = 0; j < PLATFORM_AMOUNT; j++) {
+		platformBlock[j].y+=platformspeed;
+		if(platformBlock[j].y >= DEMO_STRIDE) {
+		platformBlock[j].y = 0;
+		platformBlock[j].x = DEMO_STRIDE*(rand() % 900 + 0);
+		}
+	}
+
 	switch(jumperVelocity) {
 	case GROUND:
 		counter = 0;
@@ -246,8 +292,10 @@ void Move(u8 *frame) {
 
 
 void Print(u8 *frame) {
+
+	//initializeBlock(frame, platformImg, 500, 500);
 	for(int j = 0; j < PLATFORM_AMOUNT; j++) {
-		ImagePrint(frame, platformImg, platformBlock[j].x, platformBlock[j].y, PLATFORM_HEIGHT, PLATFORM_WIDTH);
+		blockPrinter(frame, DEMO_STRIDE, platformImg, 48, 160, platformBlock[j]);
 	}
 	PrintScore(frame, ones, tens, hundreds, thousands);
 	PrintHighScore(frame, highones, hightens, highhundreds, highthousands);
@@ -278,6 +326,18 @@ void ImagePrint(u8 *frame, u8 *array,  u32 x, u32 y, int imgH, int imgW) {
 	}
 
 }
+
+
+void ImagePrintMemCpy(u8 *frame, u8 *array,  u32 x, u32 y, int imgH, int imgW) {
+	u32 line = 0;
+	u32 stride = 0;
+	for(int i = 0; i < imgH; i++){
+		memcpy(frame + (y+x*DEMO_STRIDE) + stride, array + line, sizeof(imgW*3));
+		line += imgW*3;
+		stride += DEMO_STRIDE;
+	}
+}
+
 
 void ImageOverwrite(u8 *frame, u32 x, u32 y, int imgH, int imgW) {
 	int cor = x+y;
@@ -321,7 +381,18 @@ int collisiondetect (struct Block *jumper, struct Block *platform){
 	return 0;
 }
 
-
+void blockPrinter(u8 *frame, u32 stride,u8 *pic,  u32 picWidth, u32 picHeight, struct Block block)
+{
+	u32 lineStart = 0;
+	u32 lineStartPic = 0;
+	u32 picStride = picWidth*3;
+		for(int ycoi = 0; ycoi < picHeight; ycoi++)
+		{
+			memcpy(frame+block.x+block.y + lineStart, pic+lineStartPic, picStride);
+			lineStart += stride;
+			lineStartPic+= picStride;
+		}
+}
 
 void StreamFrameBuffer() {
 	if (videoCapt.state == VIDEO_STREAMING)
