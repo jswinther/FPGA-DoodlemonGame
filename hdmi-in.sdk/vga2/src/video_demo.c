@@ -219,16 +219,16 @@ void PrintHighScore(u8 *frame, u8 ones, u8 tens, u8 hundreds, u8 thousands) {
 }
 
 void Overwrite(u8 *frame) {
-	MemeCopyOverWrite(frame, whiteLine, jumperBlock.x, jumperBlock.y, JUMPER_WIDTH, JUMPER_HEIGHT);
+	MemeCopyOverWrite(frame, Background, jumperBlock.x, jumperBlock.y, JUMPER_WIDTH, JUMPER_HEIGHT);
 	for(int j = 0; j < PLATFORM_AMOUNT; j++) {
-		MemeCopyOverWrite(frame, whiteLine, platformBlock[j].x, platformBlock[j].y, PLATFORM_WIDTH, PLATFORM_HEIGHT);
+		MemeCopyOverWrite(frame, Background, platformBlock[j].x, platformBlock[j].y, PLATFORM_WIDTH, PLATFORM_HEIGHT);
 		platformBlock[j].y+=platformspeed;
 		if(platformBlock[j].y >= DEMO_STRIDE) {
 			platformBlock[j].y = 0;
 			platformBlock[j].x = DEMO_STRIDE*(rand() % 900 + 0);
 		}
 	}
-	MemeCopyOverWrite(frame, whiteLine, 937*DEMO_STRIDE, 50, 80, 20);
+	MemeCopyOverWrite(frame, Background, 937*DEMO_STRIDE, 50, 80, 20);
 	//ImageOverwrite(frame, 937*DEMO_STRIDE, 50, 80, 20);
 }
 
@@ -236,7 +236,7 @@ void Move(u8 *frame) {
 
 	switch(btn_value) {
 	case 1:
-		jumperBlock.x -= DEMO_STRIDE*6;
+		jumperBlock.x -= DEMO_STRIDE*12;
 		break;
 	case 2:
 		jumperBlock.x -= DEMO_STRIDE*3;
@@ -245,7 +245,7 @@ void Move(u8 *frame) {
 		jumperBlock.x += DEMO_STRIDE*3;
 		break;
 	case 8:
-		jumperBlock.x += DEMO_STRIDE*6;
+		jumperBlock.x += DEMO_STRIDE*12;
 		break;
 	default:
 		break;
@@ -268,8 +268,11 @@ void Move(u8 *frame) {
 		jumperVelocity = AIR;
 		break;
 	case AIR:
-		if(counter%10==0) {
-			if(jumperBlock.velocity > -48)
+		if(jumperBlock.velocity < 13 && -13 < jumperBlock.velocity) {
+			if(counter%5==0)
+				jumperBlock.velocity-=JUMPER_GRAVITY;
+		}
+		else if(counter%10==0) {
 				jumperBlock.velocity-=JUMPER_GRAVITY;
 		}
 
