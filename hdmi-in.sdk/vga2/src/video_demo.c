@@ -51,6 +51,7 @@
 #include "score.h"
 #include "Framebuffer.h"
 #include "whiteLine.h"
+#include "Background.h"
 /* ------------------------------------------------------------ */
 /*						   Defines				        		*/
 /* ------------------------------------------------------------ */
@@ -131,7 +132,7 @@ void DemoStartGame() {
 		}
 		if(dead == 1)
 			ResetGame(frameBuf[frame]);
-		initializeScreen(frameBuf[frame], 1920, 1080, 5760, whiteLine);
+		initializeScreen(frameBuf[frame], 1920, 1080, 5760, Background);
 		Move(frameBuf[frame]);
 		Print(frameBuf[frame]);
 		Xil_DCacheFlushRange((unsigned int)frameBuf[frame], DEMO_MAX_FRAME);
@@ -142,7 +143,7 @@ void DemoStartGame() {
 
 void ResetGame(u8 *frame) {
 	for(int i = 0; i < 3; i++) {
-		initializeScreen(frameBuf[i], 1920, 1080, 5760, whiteLine);
+		initializeScreen(frameBuf[i], 1920, 1080, 5760, Background);
 	}
 	//ImagePrintMemCpy(frame, whiteLine, 0, 0, 1080, 1920);
 			int random_x;
@@ -172,7 +173,7 @@ void initializeScreen(u8 *frame, u32 width, u32 height, u32 stride, u8 *pic)
 
 	for(int ycoi = 0; ycoi < 1080; ycoi++)
 	{
-		memcpy(frame + lineStart, pic, stride);
+		memcpy(frame + lineStart, pic+lineStart, stride);
 		lineStart += stride;
 		lineStartPic+= stride;
 	}

@@ -37,7 +37,7 @@ src/video_demo.o src/video_demo.o: ../src/video_demo.c \
  ../../vga2_bsp/ps7_cortexa9_0/include/xtime_l.h ../src/interrupts.h \
  ../src/game.h ../src/jumper.h ../src/platform.h ../src/deadLogic.h \
  ../src/numberArray.h ../src/score.h ../src/Framebuffer.h \
- ../src/whiteLine.h
+ ../src/whiteLine.h ../src/Background.h
 
 ../src/video_demo.h:
 
@@ -134,3 +134,5 @@ src/video_demo.o src/video_demo.o: ../src/video_demo.c \
 ../src/Framebuffer.h:
 
 ../src/whiteLine.h:
+
+../src/Background.h:
