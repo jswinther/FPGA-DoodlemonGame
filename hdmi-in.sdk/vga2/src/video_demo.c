@@ -67,7 +67,7 @@
 /*				Global Variables								*/
 /* ------------------------------------------------------------ */
 
-u32 platformspeed = 6;
+
 u8 scoreArray[4] = {0, 0, 0, 0};
 u32 platformhits = 0;
 DisplayCtrl dispCtrl;
@@ -148,7 +148,7 @@ void ResetGame(u8 *frame) {
 			int random_x;
 			int random_y = 0;
 			for(int i = 0; i < PLATFORM_AMOUNT; i++) {
-				random_x = rand() % 990 + 0;
+				random_x = rand() % 919 + 0;
 				random_y += 576;
 				platformBlock[i].height = PLATFORM_HEIGHT;
 				platformBlock[i].width = PLATFORM_WIDTH;
@@ -254,6 +254,7 @@ void Move(u8 *frame) {
 	for(int j = 0; j < PLATFORM_AMOUNT; j++) {
 		platformBlock[j].y+=platformspeed;
 		if(platformBlock[j].y >= DEMO_STRIDE) {
+		Increment();
 		platformBlock[j].y = 0;
 		platformBlock[j].x = DEMO_STRIDE*(rand() % 900 + 0);
 		}
@@ -262,11 +263,6 @@ void Move(u8 *frame) {
 	switch(jumperVelocity) {
 	case GROUND:
 		counter = 0;
-		platformhits++;
-		Increment();
-		if(platformhits%10 == 0) {
-			platformspeed+=3;
-		}
 		jumperBlock.velocity = 48;
 		jumperVelocity = AIR;
 		break;

@@ -8,9 +8,7 @@
 #ifndef SRC_SCORE_H_
 #define SRC_SCORE_H_
 
-
-
-#endif /* SRC_SCORE_H_ */
+u32 platformspeed = 6;
 //Currenst score
 u8 ones = 0;
 u8 tens = 0;
@@ -28,6 +26,7 @@ void Increment() {
 	ones++;
 	if(ones == 10) {
 		tens++;
+		platformspeed+=2;
 		ones = 0;
 	}
 	if(tens == 10) {
@@ -71,3 +70,5 @@ void resetScore(){
 	hundreds = 0;
 	thousands = 0;
 }
+
+#endif /* SRC_SCORE_H_ */
