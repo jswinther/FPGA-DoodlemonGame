@@ -2,7 +2,7 @@
  * Score.h
  *
  *  Created on: 14. jan. 2019
- *      Author: bruger
+ *      Author: Nicolai
  */
 
 #ifndef SRC_SCORE_H_
@@ -22,6 +22,21 @@ u8 hightens = 0;
 u8 highhundreds = 0;
 u8 highthousands = 0;
 
+
+//Average score
+u8 averageScore = 0;
+u8 totalScore = 0;
+
+
+//Times played
+u8 gamesPlayed = 0;
+
+
+void findAverageScore(){
+	totalScore += (ones+(10*tens)+(100*hundreds)+(1000*thousands));
+	averageScore = totalScore/gamesPlayed;
+	xil_printf("Average score: %d", averageScore);
+}
 void Increment() {
 	ones++;
 	if(ones == 10) {
@@ -40,6 +55,8 @@ void Increment() {
 }
 
 void resetScore(){
+	gamesPlayed++;
+	findAverageScore();
 	if(thousands > highthousands){
 		highones = ones;
 		hightens = tens;
