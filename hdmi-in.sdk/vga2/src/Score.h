@@ -29,7 +29,7 @@ u8 totalScore = 0;
 
 
 //Times played
-u8 gamesPlayed = 0;
+u8 gamesPlayed = 1;
 
 
 void findAverageScore(){
