@@ -125,10 +125,10 @@ void DemoStartGame() {
 	Xil_DCacheFlushRange((unsigned int)frameBuf[0], DEMO_MAX_FRAME);
 	DisplayChangeFrame(&dispCtrl, 0);
 	while(1) {
-		//frame = dispCtrl.curFrame +1;
-		//if (frame >= DISPLAY_NUM_FRAMES) {
-		//	frame = 0;
-		//}
+		frame = dispCtrl.curFrame +1;
+		if (frame >= DISPLAY_NUM_FRAMES) {
+			frame = 0;
+		}
 		if(dead == 1)
 			ResetGame(frameBuf[frame]);
 		Overwrite(frameBuf[frame]);
