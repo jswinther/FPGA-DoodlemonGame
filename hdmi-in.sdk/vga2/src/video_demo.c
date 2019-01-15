@@ -182,11 +182,11 @@ void initializeBlock(u8 *frame, u8 *pic, int x, int y)
 	u32 lineStart = y+(x*DEMO_STRIDE);
 	u32 lineStartPic = 0;
 
-	for(int ycoi = 0; ycoi < PLATFORM_HEIGHT; ycoi++)
+	for(int ycoi = 0; ycoi < 160; ycoi++)
 	{
-		memcpy(frame + lineStart, pic, PLATFORM_WIDTH*3);
+		memcpy(frame + lineStart, pic, 48*3);
 		lineStart += DEMO_STRIDE;
-		lineStartPic+= PLATFORM_WIDTH*3;
+		lineStartPic+= 48*3;
 	}
 }
 
@@ -268,6 +268,7 @@ void Move(u8 *frame) {
 		break;
 	case AIR:
 		if(counter%10==0) {
+			if(jumperBlock.velocity > -48)
 				jumperBlock.velocity-=JUMPER_GRAVITY;
 		}
 
@@ -290,7 +291,7 @@ void Print(u8 *frame) {
 
 	//initializeBlock(frame, platformImg, 500, 500);
 	for(int j = 0; j < PLATFORM_AMOUNT; j++) {
-		blockPrinter(frame, DEMO_STRIDE, platformImg, PLATFORM_WIDTH, PLATFORM_HEIGHT, platformBlock[j]);
+		blockPrinter(frame, DEMO_STRIDE, platformImg, 48, 160, platformBlock[j]);
 	}
 	PrintScore(frame, ones, tens, hundreds, thousands);
 	PrintHighScore(frame, highones, hightens, highhundreds, highthousands);
