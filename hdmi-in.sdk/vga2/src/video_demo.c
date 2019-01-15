@@ -52,6 +52,7 @@
 #include "Framebuffer.h"
 #include "whiteLine.h"
 #include "Background.h"
+#include "Header.h"
 /* ------------------------------------------------------------ */
 /*						   Defines				        		*/
 /* ------------------------------------------------------------ */
@@ -133,8 +134,10 @@ void DemoStartGame() {
 		if(dead == 1)
 			ResetGame(frameBuf[frame]);
 		initializeScreen(frameBuf[frame], 1920, 1080, 5760, Background);
+
 		Move(frameBuf[frame]);
 		Print(frameBuf[frame]);
+
 		Xil_DCacheFlushRange((unsigned int)frameBuf[frame], DEMO_MAX_FRAME);
 		DisplayChangeFrame(&dispCtrl, frame);
 		frame = dispCtrl.curFrame +1;
@@ -144,10 +147,11 @@ void DemoStartGame() {
 void ResetGame(u8 *frame) {
 	for(int i = 0; i < 3; i++) {
 		initializeScreen(frameBuf[i], 1920, 1080, 5760, Background);
+		initializeScreen(frameBuf[i], 150, 1080, 5760, HeaderImg);
 	}
 	//ImagePrintMemCpy(frame, whiteLine, 0, 0, 1080, 1920);
 			int random_x;
-			int random_y = 0;
+			int random_y = 2;
 			for(int i = 0; i < PLATFORM_AMOUNT; i++) {
 				random_x = rand() % 919 + 0;
 				random_y += 576;
@@ -168,14 +172,14 @@ void ResetGame(u8 *frame) {
 
 void initializeScreen(u8 *frame, u32 width, u32 height, u32 stride, u8 *pic)
 {
-	u32 lineStart = 0;
+	u32 lineStart = 2;
 	u32 lineStartPic = 0;
 
-	for(int ycoi = 0; ycoi < 1080; ycoi++)
+	for(int ycoi = 0; ycoi < height; ycoi++)
 	{
-		memcpy(frame + lineStart, pic+lineStart, stride);
+		memcpy(frame + lineStart, pic+lineStartPic, width*3);
 		lineStart += stride;
-		lineStartPic+= stride;
+		lineStartPic+= width*3;
 	}
 }
 void initializeBlock(u8 *frame, u8 *pic, int x, int y)
@@ -204,17 +208,17 @@ void MemeCopyOverWrite(u8 *frame, u8 *pic, int x, int y, int imgW, int imgH) {
 }
 
 void PrintScore(u8 *frame, u8 ones, u8 tens, u8 hundreds, u8 thousands) {
-	ImagePrint(frame, numArray[thousands], 1000*DEMO_STRIDE, 50, 20, 20);
-	ImagePrint(frame, numArray[hundreds], 979*DEMO_STRIDE, 50, 20, 20);
-	ImagePrint(frame, numArray[tens], 958*DEMO_STRIDE, 50, 20, 20);
-	ImagePrint(frame, numArray[ones], 937*DEMO_STRIDE, 50, 20, 20);
+	ImagePrint(frame, numArray[thousands], 1000*DEMO_STRIDE, 472, 20, 20);
+	ImagePrint(frame, numArray[hundreds], 979*DEMO_STRIDE, 472, 20, 20);
+	ImagePrint(frame, numArray[tens], 958*DEMO_STRIDE, 472, 20, 20);
+	ImagePrint(frame, numArray[ones], 937*DEMO_STRIDE, 472, 20, 20);
 
 }
 void PrintHighScore(u8 *frame, u8 ones, u8 tens, u8 hundreds, u8 thousands) {
-	ImagePrint(frame, numArray[highthousands], 1000*DEMO_STRIDE, 150, 20, 20);
-	ImagePrint(frame, numArray[highhundreds], 979*DEMO_STRIDE, 150, 20, 20);
-	ImagePrint(frame, numArray[hightens], 958*DEMO_STRIDE, 150, 20, 20);
-	ImagePrint(frame, numArray[highones], 937*DEMO_STRIDE, 150, 20, 20);
+	ImagePrint(frame, numArray[highthousands], 1000*DEMO_STRIDE, 562, 20, 20);
+	ImagePrint(frame, numArray[highhundreds], 979*DEMO_STRIDE, 562, 20, 20);
+	ImagePrint(frame, numArray[hightens], 958*DEMO_STRIDE, 562, 20, 20);
+	ImagePrint(frame, numArray[highones], 937*DEMO_STRIDE, 562, 20, 20);
 
 }
 
@@ -236,7 +240,7 @@ void Move(u8 *frame) {
 
 	switch(btn_value) {
 	case 1:
-		jumperBlock.x -= DEMO_STRIDE*12;
+		jumperBlock.x -= DEMO_STRIDE*21;
 		break;
 	case 2:
 		jumperBlock.x -= DEMO_STRIDE*3;
@@ -245,7 +249,7 @@ void Move(u8 *frame) {
 		jumperBlock.x += DEMO_STRIDE*3;
 		break;
 	case 8:
-		jumperBlock.x += DEMO_STRIDE*12;
+		jumperBlock.x += DEMO_STRIDE*21;
 		break;
 	default:
 		break;
@@ -256,7 +260,7 @@ void Move(u8 *frame) {
 		platformBlock[j].y+=platformspeed;
 		if(platformBlock[j].y >= DEMO_STRIDE) {
 		Increment();
-		platformBlock[j].y = 0;
+		platformBlock[j].y = 2;
 		platformBlock[j].x = DEMO_STRIDE*(rand() % 900 + 0);
 		}
 	}
@@ -264,15 +268,15 @@ void Move(u8 *frame) {
 	switch(jumperVelocity) {
 	case GROUND:
 		counter = 0;
-		jumperBlock.velocity = 48;
+		jumperBlock.velocity = 72;
 		jumperVelocity = AIR;
 		break;
 	case AIR:
 		if(jumperBlock.velocity < 13 && -13 < jumperBlock.velocity) {
-			if(counter%5==0)
+			if(counter%2==0)
 				jumperBlock.velocity-=JUMPER_GRAVITY;
 		}
-		else if(counter%10==0) {
+		else if(counter%6==0) {
 				jumperBlock.velocity-=JUMPER_GRAVITY;
 		}
 
@@ -293,10 +297,10 @@ void Move(u8 *frame) {
 
 void Print(u8 *frame) {
 
-	//initializeBlock(frame, platformImg, 500, 500);
 	for(int j = 0; j < PLATFORM_AMOUNT; j++) {
 		blockPrinter(frame, DEMO_STRIDE, platformImg, PLATFORM_WIDTH, PLATFORM_HEIGHT, platformBlock[j]);
 	}
+	initializeScreen(frame, 150, 1080, 5760, HeaderImg);
 	PrintScore(frame, ones, tens, hundreds, thousands);
 	PrintHighScore(frame, highones, hightens, highhundreds, highthousands);
 	ImagePrint(frame, jumperImg, jumperBlock.x, jumperBlock.y , JUMPER_HEIGHT, JUMPER_WIDTH);
@@ -361,7 +365,7 @@ int collisiondetect (struct Block *jumper, struct Block *platform){
 
 
 	int platformw = platform->height;
-	int platformh = platform->width;
+	int platformh = platform->width*3;
 	int platforma = platform->x+platform->y;
 	int platformLT = platforma + (platformw*DEMO_STRIDE);
 	int platformRT = platforma;

@@ -24,7 +24,7 @@
 //Jumper
 #define JUMPER_HEIGHT 100
 #define JUMPER_WIDTH 100
-#define JUMPER_GRAVITY 6
+#define JUMPER_GRAVITY 9
 struct Block {
 	u16 width;
 	u16 height;
