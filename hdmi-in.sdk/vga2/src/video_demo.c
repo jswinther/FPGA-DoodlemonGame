@@ -164,6 +164,8 @@ void ResetGame(u8 *frame) {
 	for(int i = 0; i < 3; i++) {
 		PrintBackground(frameBuf[i], 1920, 1080, 5760, Background);
 		PrintBackground(frameBuf[i], 150, 1080, 5760, HeaderImg);
+		PrintGameOver(frameBuf[i], 240, 1080, 5760, Gameover);
+
 	}
 			int random_x;
 			int random_y = 2;
@@ -189,6 +191,18 @@ void ResetGame(u8 *frame) {
 void PrintBackground(u8 *frame, u32 width, u32 height, u32 stride, u8 *pic)
 {
 	u32 lineStart = 2;
+	u32 lineStartPic = 0;
+
+	for(int ycoi = 0; ycoi < height; ycoi++)
+	{
+		memcpy(frame + lineStart, pic+lineStartPic, width*3);
+		lineStart += stride;
+		lineStartPic+= width*3;
+	}
+}
+void PrintGameOver(u8 *frame, u32 width, u32 height, u32 stride, u8 *pic)
+{
+	u32 lineStart = 700;
 	u32 lineStartPic = 0;
 
 	for(int ycoi = 0; ycoi < height; ycoi++)
