@@ -203,18 +203,7 @@ void PrintBackground(u8 *frame, u32 width, u32 height, u32 stride, u8 *pic)
 		lineStartPic+= width*3;
 	}
 }
-void PrintGameOver(u8 *frame, u32 width, u32 height, u32 stride, u8 *pic)
-{
-	u32 lineStart = 700;
-	u32 lineStartPic = 0;
 
-	for(int ycoi = 0; ycoi < height; ycoi++)
-	{
-		memcpy(frame + lineStart, pic+lineStartPic, width*3);
-		lineStart += stride;
-		lineStartPic+= width*3;
-	}
-}
 
 void PrintScore(u8 *frame, u8 ones, u8 tens, u8 hundreds, u8 thousands) {
 	ImagePrint(frame, numArray[thousands], 1000*DEMO_STRIDE, 472, 20, 20);
@@ -323,6 +312,11 @@ void Print(u8 *frame) {
 		blockPrinter(frame, DEMO_STRIDE, platformImg, PLATFORM_WIDTH, PLATFORM_HEIGHT, platformBlock[j]);
 	}
 	PrintBackground(frame, 150, 1080, 5760, HeaderImg);
+	if (dead == 0){
+		ImagePrint(frameBuf[0], Gameover, 0, 2102, 1080, 240);
+		ImagePrint(frameBuf[1], Gameover, 0, 2102, 1080, 240);
+		ImagePrint(frameBuf[2], Gameover, 0, 2102, 1080, 240);
+	}
 	PrintScore(frame, ones, tens, hundreds, thousands);
 	PrintHighScore(frame, highones, hightens, highhundreds, highthousands);
 
