@@ -203,17 +203,17 @@ void PrintBackground(u8 *frame, u32 width, u32 height, u32 stride, u8 *pic)
 
 
 void PrintScore(u8 *frame, u8 ones, u8 tens, u8 hundreds, u8 thousands) {
-	ImagePrint(frame, numArray[thousands], 1000*DEMO_STRIDE, 472, 20, 20);
-	ImagePrint(frame, numArray[hundreds], 979*DEMO_STRIDE, 472, 20, 20);
-	ImagePrint(frame, numArray[tens], 958*DEMO_STRIDE, 472, 20, 20);
-	ImagePrint(frame, numArray[ones], 937*DEMO_STRIDE, 472, 20, 20);
+	ImagePrint(frame, numArray[thousands], 1000*DEMO_STRIDE, 470, 20, 20);
+	ImagePrint(frame, numArray[hundreds], 979*DEMO_STRIDE, 470, 20, 20);
+	ImagePrint(frame, numArray[tens], 958*DEMO_STRIDE, 470, 20, 20);
+	ImagePrint(frame, numArray[ones], 937*DEMO_STRIDE, 470, 20, 20);
 
 }
 void PrintHighScore(u8 *frame, u8 ones, u8 tens, u8 hundreds, u8 thousands) {
-	ImagePrint(frame, numArray[highthousands], 1000*DEMO_STRIDE, 562, 20, 20);
-	ImagePrint(frame, numArray[highhundreds], 979*DEMO_STRIDE, 562, 20, 20);
-	ImagePrint(frame, numArray[hightens], 958*DEMO_STRIDE, 562, 20, 20);
-	ImagePrint(frame, numArray[highones], 937*DEMO_STRIDE, 562, 20, 20);
+	ImagePrint(frame, numArray[highthousands], 1000*DEMO_STRIDE, 560, 20, 20);
+	ImagePrint(frame, numArray[highhundreds], 979*DEMO_STRIDE, 560, 20, 20);
+	ImagePrint(frame, numArray[hightens], 958*DEMO_STRIDE, 560, 20, 20);
+	ImagePrint(frame, numArray[highones], 937*DEMO_STRIDE, 560, 20, 20);
 
 }
 
