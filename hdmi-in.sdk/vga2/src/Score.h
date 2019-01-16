@@ -83,14 +83,23 @@ void resetScore(){
 		hightens = tens;
 		highhundreds = hundreds;
 		highthousands = thousands;
+		gamesPlayed++;
+		onesCounter = 0;
+		findAverageScore();
+		ones = 0;
+		tens = 0;
+		hundreds = 0;
+		thousands = 0;
+	} else {
+		gamesPlayed++;
+		onesCounter = 0;
+		findAverageScore();
+		ones = 0;
+		tens = 0;
+		hundreds = 0;
+		thousands = 0;
 	}
-	gamesPlayed++;
-	onesCounter = 0;
-	findAverageScore();
-	ones = 0;
-	tens = 0;
-	hundreds = 0;
-	thousands = 0;
+
 }
 
 #endif /* SRC_SCORE_H_ */
