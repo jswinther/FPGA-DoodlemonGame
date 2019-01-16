@@ -7,7 +7,7 @@
 
 #ifndef SRC_SCORE_H_
 #define SRC_SCORE_H_
-void averageScore(u16 counter);
+
 u32 platformspeed = 15;
 //Currenst score
 u8 ones = 0;
@@ -28,25 +28,19 @@ u8 highhundreds = 0;
 u8 highthousands = 0;
 
 
-//Average
-u8 avgones = 0;
-u8 avgtens = 0;
-u8 avghundreds = 0;
-u8 avgthousands = 0;
-
 //Average score
-u32 averageScoreCounter = 0;
-u32 totalScore = 0;
+u8 averageScore = 0;
+u8 totalScore = 0;
 
 
 //Times played
-u32 gamesPlayed = 1;
+u8 gamesPlayed = 1;
 
 
 void findAverageScore(){
-	totalScore += onesCounter;
-	averageScoreCounter = totalScore/gamesPlayed;
-	xil_printf("Average score: %d", averageScoreCounter);
+	totalScore += (ones+(10*tens)+(100*hundreds)+(1000*thousands));
+	averageScore = totalScore/gamesPlayed;
+	xil_printf("Average score: %d", averageScore);
 }
 void Increment() {
 	ones++;
@@ -82,51 +76,6 @@ void Increment() {
 	}
 }
 
-
-void currentScore(u16 counter) {
-	for(int i = 0; 1000 <= counter; i++) {
-		counter -= 1000;
-		thousands++;
-
-	}
-	for(int i = 0; 100 <= counter; i++) {
-		counter -= 100;
-		hundreds++;
-	}
-
-	for(int i = 0; 10 <= counter; i++) {
-		counter -= 10;
-		tens++;
-	}
-
-	for(int i = 0; 0 <= counter; i++) {
-		counter -= 1;
-		ones++;
-	}
-}
-
-void averageScore(u16 counter) {
-	for(int i = 0; 1000 <= counter; i++) {
-		counter -= 1000;
-		avgthousands++;
-
-	}
-	for(int i = 0; 100 <= counter; i++) {
-		counter -= 100;
-		avghundreds++;
-	}
-
-	for(int i = 0; 10 <= counter; i++) {
-		counter -= 10;
-		avgtens++;
-	}
-
-	for(int i = 0; 0 <= counter; i++) {
-		counter -= 1;
-		avgones++;
-	}
-}
-
 void resetScore(){
 	if(onesCounter > highscore) {
 		highscore = onesCounter;
@@ -145,7 +94,6 @@ void resetScore(){
 		gamesPlayed++;
 		onesCounter = 0;
 		findAverageScore();
-		averageScore(averageScoreCounter);
 		ones = 0;
 		tens = 0;
 		hundreds = 0;
