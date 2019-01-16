@@ -72,5 +72,5 @@ void PrintBackground(u8 *frame, u32 width, u32 height, u32 stride, u8 *pic);
 void blockPrinter(u8 *frame, u32 stride,u8 *pic,  u32 picWidth, u32 picHeight, struct Block block);
 void initializeBlock(u8 *frame, u8 *pic, int x, int y);
 void MemeCopyOverWrite(u8 *frame, u8 *pic, int x, int y, int imgW, int imgH);
-
+void PrintScore(u8 *frame, u8 ones, u8 tens, u8 hundreds, u8 thousands, u32 x, u32 y);
 #endif /* SRC_VIDEO_CAPTURE_GAME_H_ */

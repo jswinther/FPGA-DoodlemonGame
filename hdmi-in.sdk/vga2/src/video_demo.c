@@ -180,11 +180,13 @@ void ResetGame(u8 *frame) {
 				platformBlock[i].velocity = PLATFORM_SPEED;
 				platform[i] = &platformBlock[i];
 			}
-			jumperBlock.x = 540*DEMO_STRIDE;
-			jumperBlock.y = 2830;
+			jumperBlock.x = (540-(JUMPER_WIDTH/2))*DEMO_STRIDE;
+			jumperBlock.y = 3802;
+			PrintScore(frame, ones, tens, hundreds, thousands, 500, 3500);
 			resetScore();
 			platformhits = 0;
 			platformspeed = 6;
+			jumperVelocity = GROUND;
 			resetf = 0;
 }
 
@@ -202,11 +204,11 @@ void PrintBackground(u8 *frame, u32 width, u32 height, u32 stride, u8 *pic)
 }
 
 
-void PrintScore(u8 *frame, u8 ones, u8 tens, u8 hundreds, u8 thousands, u32 y) {
-	ImagePrint(frame, numArray[thousands], 1000*DEMO_STRIDE, y, 20, 20);
-	ImagePrint(frame, numArray[hundreds], 979*DEMO_STRIDE, y, 20, 20);
-	ImagePrint(frame, numArray[tens], 958*DEMO_STRIDE, y, 20, 20);
-	ImagePrint(frame, numArray[ones], 937*DEMO_STRIDE, y, 20, 20);
+void PrintScore(u8 *frame, u8 ones, u8 tens, u8 hundreds, u8 thousands, u32 x, u32 y) {
+	ImagePrint(frame, numArray[thousands], (x+63)*DEMO_STRIDE, y, 20, 20);
+	ImagePrint(frame, numArray[hundreds], (x+42)*DEMO_STRIDE, y, 20, 20);
+	ImagePrint(frame, numArray[tens], (x+21)*DEMO_STRIDE, y, 20, 20);
+	ImagePrint(frame, numArray[ones], x*DEMO_STRIDE, y, 20, 20);
 }
 
 void Move(u8 *frame) {
@@ -306,9 +308,9 @@ void Print(u8 *frame) {
 		ImagePrint(frameBuf[1], Gameover, 0, 2101, 1080, 240);
 		ImagePrint(frameBuf[2], Gameover, 0, 2101, 1080, 240);
 	}
-	PrintScore(frame, ones, tens, hundreds, thousands, 470);
-	PrintScore(frame, highones, hightens, highhundreds, highthousands, 560);
-	PrintScore(frame, avgones, avgtens, avghundreds, avgthousands, 650);
+	PrintScore(frame, ones, tens, hundreds, thousands, 937, 470);
+	PrintScore(frame, highones, hightens, highhundreds, highthousands, 937, 560);
+	PrintScore(frame, avgones, avgtens, avghundreds, avgthousands, 937, 650);
 
 
 	switch(jumperDir) {
