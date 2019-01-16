@@ -218,7 +218,10 @@ void Move(u8 *frame) {
 	switch(btn_value) {
 	case 1:
 		jumperBlock.x -= DEMO_STRIDE*21;
-		jumperDir = UR;
+		if (jumperBlock.velocity < 0){
+			jumperDir = DR;
+		}else  {
+			jumperDir = UR;}
 		break;
 	case 2:
 		jumperBlock.x -= DEMO_STRIDE*3;
@@ -228,7 +231,10 @@ void Move(u8 *frame) {
 		break;
 	case 8:
 		jumperBlock.x += DEMO_STRIDE*21;
-		jumperDir = UL;
+		if (jumperBlock.velocity < 0){
+					jumperDir = DL;
+				}else  {
+					jumperDir = UL;}
 		break;
 	default:
 		break;
@@ -248,11 +254,11 @@ void Move(u8 *frame) {
 	case GROUND:
 		counter = 0;
 		switch(jumperDir) {
-		case UR:
-			jumperDir = DR;
+		case DR:
+			jumperDir = UR;
 			break;
-		case UL:
-			jumperDir = DL;
+		case DL:
+			jumperDir = UL;
 			break;
 		default:
 			break;
@@ -271,6 +277,16 @@ void Move(u8 *frame) {
 
 		jumperBlock.y -= jumperBlock.velocity;
 		if(jumperBlock.velocity < 0) {
+			switch(jumperDir) {
+			case UR:
+				jumperDir = DR;
+				break;
+			case UL:
+				jumperDir = DL;
+				break;
+			default:
+			break;
+			}
 			for(int k = 0; k < PLATFORM_AMOUNT; k++) {
 				if((collisiondetect(jumper, platform[k]))==1) {
 					jumperVelocity = GROUND;
@@ -295,10 +311,10 @@ void Print(u8 *frame) {
 
 	switch(jumperDir) {
 	case UL:
-		ImagePrint(frame, kirbyFallLeft, jumperBlock.x, jumperBlock.y, 100, 100);
+		ImagePrint(frame, kirbyUpLeft, jumperBlock.x, jumperBlock.y, 100, 100);
 		break;
 	case UR:
-		ImagePrint(frame, kirbyFallRight, jumperBlock.x, jumperBlock.y, 100, 100);
+		ImagePrint(frame, kirbyUpRight, jumperBlock.x, jumperBlock.y, 100, 100);
 		break;
 	case DL:
 		ImagePrint(frame, kirbyFallLeft, jumperBlock.x, jumperBlock.y, 100, 100);
