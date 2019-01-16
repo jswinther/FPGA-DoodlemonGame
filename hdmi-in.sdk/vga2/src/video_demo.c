@@ -143,7 +143,7 @@ void DemoStartGame() {
 			if (frame >= DISPLAY_NUM_FRAMES) {
 						frame = 0;
 					}
-					PrintBackground(frameBuf[frame], 1920, 1080, 5760, Background);
+					PrintBackground(frameBuf[frame], 1920, 1080, 5760, whiteLine);
 					Move(frameBuf[frame]);
 					Print(frameBuf[frame]);
 					Xil_DCacheFlushRange((unsigned int)frameBuf[frame], DEMO_MAX_FRAME);
@@ -163,7 +163,7 @@ void DemoStartGame() {
 
 void ResetGame(u8 *frame) {
 	for(int i = 0; i < 3; i++) {
-		PrintBackground(frameBuf[i], 1920, 1080, 5760, Background);
+		PrintBackground(frameBuf[i], 1920, 1080, 5760, whiteLine);
 		PrintBackground(frameBuf[i], 150, 1080, 5760, HeaderImg);
 
 
@@ -182,9 +182,6 @@ void ResetGame(u8 *frame) {
 			}
 			jumperBlock.x = 540*DEMO_STRIDE;
 			jumperBlock.y = 2830;
-			ImagePrint(frameBuf[0], Gameover, 0, 2102, 1080, 240);
-			ImagePrint(frameBuf[1], Gameover, 0, 2102, 1080, 240);
-			ImagePrint(frameBuf[2], Gameover, 0, 2102, 1080, 240);
 			resetScore();
 			platformhits = 0;
 			platformspeed = 6;
@@ -200,7 +197,7 @@ void PrintBackground(u8 *frame, u32 width, u32 height, u32 stride, u8 *pic)
 	{
 		memcpy(frame + lineStart, pic+lineStartPic, width*3);
 		lineStart += stride;
-		lineStartPic+= width*3;
+		lineStartPic+= 0;//width*3;
 	}
 }
 
@@ -312,10 +309,10 @@ void Print(u8 *frame) {
 		blockPrinter(frame, DEMO_STRIDE, platformImg, PLATFORM_WIDTH, PLATFORM_HEIGHT, platformBlock[j]);
 	}
 	PrintBackground(frame, 150, 1080, 5760, HeaderImg);
-	if (dead == 0){
-		ImagePrint(frameBuf[0], Gameover, 0, 2102, 1080, 240);
-		ImagePrint(frameBuf[1], Gameover, 0, 2102, 1080, 240);
-		ImagePrint(frameBuf[2], Gameover, 0, 2102, 1080, 240);
+	if (dead == 1){
+		ImagePrint(frameBuf[0], Gameover, 0, 2101, 1080, 240);
+		ImagePrint(frameBuf[1], Gameover, 0, 2101, 1080, 240);
+		ImagePrint(frameBuf[2], Gameover, 0, 2101, 1080, 240);
 	}
 	PrintScore(frame, ones, tens, hundreds, thousands);
 	PrintHighScore(frame, highones, hightens, highhundreds, highthousands);
