@@ -171,7 +171,7 @@ void ResetGame(u8 *frame) {
 			int random_x;
 			int random_y = 2;
 			for(int i = 0; i < PLATFORM_AMOUNT; i++) {
-				random_x = rand() % 919 + 0;
+				random_x = rand() % 939 + 0;
 				random_y += 576;
 				platformBlock[i].height = PLATFORM_HEIGHT;
 				platformBlock[i].width = PLATFORM_WIDTH;
@@ -246,6 +246,7 @@ void Move(u8 *frame) {
 		platformBlock[j].x = DEMO_STRIDE*(rand() % 900 + 0);
 		}
 	}
+
 
 	switch(jumperVelocity) {
 	case GROUND:
