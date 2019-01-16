@@ -104,7 +104,7 @@ int frame;
 u8 HighscoreWord[] = {H, I, G, H, S, C, O, R, E};
 u8 YourscoreWord[] = {Y, O, U, R, S, C, O, R, E};
 u8 AveragescoreWord[] = {A, V, E, R, A, G, E, S, C, O ,R ,E};
-u8 alpha[] = {A, B, C, D, E,F,G,H,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z};
+u8 alpha[] = {A, B, C, D, E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z};
 
 int main(void) {
 	DemoInitialize();
@@ -334,13 +334,13 @@ void Print(u8 *frame) {
 		ImagePrint(frameBuf[1], Gameover, 0, 2101, 1080, 240);
 		ImagePrint(frameBuf[2], Gameover, 0, 2101, 1080, 240);
 	}
-	PrintScore(frame, ones, tens, hundreds, thousands, 937, 470);
-	PrintScore(frame, highones, hightens, highhundreds, highthousands, 937, 560);
-	PrintScore(frame, avgones, avgtens, avghundreds, avgthousands, 937, 650);
-	PrintWord(frame, alpha, 900, 961, 25);
-	PrintWord(frame, HighscoreWord, 900, 901, 9);
-	PrintWord(frame, YourscoreWord, 900, 1021, 9);
-	PrintWord(frame, AveragescoreWord, 900, 1081, 12);
+	PrintScore(frame, ones, tens, hundreds, thousands, 700, 470);
+	PrintScore(frame, highones, hightens, highhundreds, highthousands, 700, 560);
+	PrintScore(frame, avgones, avgtens, avghundreds, avgthousands, 700, 650);
+	PrintWord(frame, HighscoreWord, 1050, 470, 9);
+	PrintWord(frame, YourscoreWord, 1050, 560, 9);
+	PrintWord(frame, AveragescoreWord, 1050, 650, 12);
+	PrintWord(frame, alpha, 1050, 740, 26);
 
 	switch(jumperDir) {
 	case UL:
