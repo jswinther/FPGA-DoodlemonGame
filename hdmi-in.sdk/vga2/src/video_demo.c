@@ -57,6 +57,10 @@
 #include "Kirby.h"
 #include "Gameover.h"
 #include "Alphabet.h"
+#include <avr/io.h>	/* Device specific declarations */
+#include "ff.h"		/* Declarations of FatFs API */
+
+
 /* ------------------------------------------------------------ */
 /*						   Defines				        		*/
 /* ------------------------------------------------------------ */
@@ -69,6 +73,7 @@
 #define VID_GPIO_IRPT_ID XPS_FPGA4_INT_ID
 #define SCU_TIMER_ID XPAR_SCUTIMER_DEVICE_ID
 #define UART_BASEADDR XPAR_PS7_UART_1_BASEADDR
+
 /* ------------------------------------------------------------ */
 /*				Global Variables								*/
 /* ------------------------------------------------------------ */
@@ -78,6 +83,8 @@ u8 scoreArray[4] = {0, 0, 0, 0};
 u32 platformhits = 0;
 DisplayCtrl dispCtrl;
 XAxiVdma vdma;
+FATFS FatFs;		/* FatFs work area needed for each volume */
+FIL Fil;			/* File object needed for each open file */
 VideoCapture videoCapt;
 char fRefresh; //flag used to trigger a refresh of the Menu on video detect
 /*
@@ -96,7 +103,7 @@ const ivt_t ivt[] = {
 int counter = 0;
 int resetf = 1;
 int frame;
-
+UINT bw;
 /* ------------------------------------------------------------ */
 /*						     Main								*/
 /* ------------------------------------------------------------ */
@@ -123,6 +130,21 @@ int main(void) {
 	status = IntcInitFunction(INTC_DEVICE_ID, &BTNInst);
 	if(status != XST_SUCCESS) return XST_FAILURE;
 
+
+
+	/*f_mount(&FatFs, "", 0);		/* Give a work area to the default drive */
+
+		/*		if (f_open(&Fil, "newfile.txt", FA_WRITE | FA_CREATE_ALWAYS) == FR_OK) {	/* Create a file */
+		/*
+		/*	f_write(&Fil, "It works!\r\n", 11, &bw);	/* Write data to the file */
+		/*
+		/*	f_close(&Fil);								/* Close the file */
+		/*
+		/*	if (bw == 11) {		/* Lights green LED if data written well */
+		/*		DDRB |= 0x10; PORTB |= 0x10;	/* Set PB4 high */
+		/*	}
+		}
+		*/
 	DemoStartGame();
 	return 0;
 }
