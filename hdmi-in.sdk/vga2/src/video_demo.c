@@ -203,15 +203,23 @@ void PrintScore(u8 *frame, u8 ones, u8 tens, u8 hundreds, u8 thousands) {
 	ImagePrint(frame, numArray[hundreds], 979*DEMO_STRIDE, 472, 20, 20);
 	ImagePrint(frame, numArray[tens], 958*DEMO_STRIDE, 472, 20, 20);
 	ImagePrint(frame, numArray[ones], 937*DEMO_STRIDE, 472, 20, 20);
-
-}
-void PrintHighScore(u8 *frame, u8 ones, u8 tens, u8 hundreds, u8 thousands) {
 	ImagePrint(frame, numArray[highthousands], 1000*DEMO_STRIDE, 562, 20, 20);
 	ImagePrint(frame, numArray[highhundreds], 979*DEMO_STRIDE, 562, 20, 20);
 	ImagePrint(frame, numArray[hightens], 958*DEMO_STRIDE, 562, 20, 20);
 	ImagePrint(frame, numArray[highones], 937*DEMO_STRIDE, 562, 20, 20);
+	ImagePrint(frame, numArray[avgthousands], 1000*DEMO_STRIDE, 652, 20, 20);
+	ImagePrint(frame, numArray[avghundreds], 979*DEMO_STRIDE, 652, 20, 20);
+	ImagePrint(frame, numArray[avgtens], 958*DEMO_STRIDE, 652, 20, 20);
+	ImagePrint(frame, numArray[avgones], 937*DEMO_STRIDE, 652, 20, 20);
 
 }
+void PrintHighScore(u8 *frame, u8 ones, u8 tens, u8 hundreds, u8 thousands) {
+
+
+}
+
+
+
 
 void Move(u8 *frame) {
 	switch(btn_value) {
