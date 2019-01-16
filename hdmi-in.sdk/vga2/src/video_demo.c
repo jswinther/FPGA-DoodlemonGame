@@ -137,7 +137,7 @@ void DemoStartGame() {
 			DisplayChangeFrame(&dispCtrl, 0);
 		}
 
-		if(btn_value == 1 || btn_value == 8)
+		if(btn_value == 2 || btn_value == 4)
 			dead = 0;
 		while(dead != 1) {
 			if (frame >= DISPLAY_NUM_FRAMES) {
@@ -165,7 +165,7 @@ void ResetGame(u8 *frame) {
 	for(int i = 0; i < 3; i++) {
 		PrintBackground(frameBuf[i], 1920, 1080, 5760, Background);
 		PrintBackground(frameBuf[i], 150, 1080, 5760, HeaderImg);
-		ImagePrint(frameBuf[i], Gameover, 0, 2100, 1080, 240);
+
 
 	}
 			int random_x;
@@ -182,7 +182,9 @@ void ResetGame(u8 *frame) {
 			}
 			jumperBlock.x = 540*DEMO_STRIDE;
 			jumperBlock.y = 2830;
-
+			ImagePrint(frameBuf[0], Gameover, 0, 2102, 1080, 240);
+			ImagePrint(frameBuf[1], Gameover, 0, 2102, 1080, 240);
+			ImagePrint(frameBuf[2], Gameover, 0, 2102, 1080, 240);
 			resetScore();
 			platformhits = 0;
 			platformspeed = 6;
