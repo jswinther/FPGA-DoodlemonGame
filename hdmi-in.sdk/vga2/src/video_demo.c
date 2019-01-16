@@ -91,7 +91,7 @@ const ivt_t ivt[] = {
 };
 // Counter used for score.
 int counter = 0;
-
+int resetf = 1;
 int frame;
 
 /* ------------------------------------------------------------ */
@@ -118,6 +118,7 @@ int main(void) {
 	// Initialize interrupt controller
 	status = IntcInitFunction(INTC_DEVICE_ID, &BTNInst);
 	if(status != XST_SUCCESS) return XST_FAILURE;
+
 	DemoStartGame();
 	return 0;
 }
@@ -125,32 +126,44 @@ int main(void) {
 /*						     Game		    					*/
 /* ------------------------------------------------------------ */
 void DemoStartGame() {
-	ResetGame(frameBuf[0]);
-	Xil_DCacheFlushRange((unsigned int)frameBuf[0], DEMO_MAX_FRAME);
-	DisplayChangeFrame(&dispCtrl, 0);
 	while(1) {
-		if (frame >= DISPLAY_NUM_FRAMES) {
-			frame = 0;
+		if(resetf == 1) {
+			ResetGame(frameBuf[0]);
+			Move(frameBuf[0]);
+			Print(frameBuf[0]);
+			Xil_DCacheFlushRange((unsigned int)frameBuf[0], DEMO_MAX_FRAME);
+			DisplayChangeFrame(&dispCtrl, 0);
 		}
-		if(dead == 1)
-			ResetGame(frameBuf[frame]);
-		initializeScreen(frameBuf[frame], 1920, 1080, 5760, Background);
 
-		Move(frameBuf[frame]);
-		Print(frameBuf[frame]);
+		if(btn_value == 1 || btn_value == 8)
+			dead = 0;
+		while(dead != 1) {
+			if (frame >= DISPLAY_NUM_FRAMES) {
+						frame = 0;
+					}
+					PrintBackground(frameBuf[frame], 1920, 1080, 5760, Background);
+					Move(frameBuf[frame]);
+					Print(frameBuf[frame]);
+					Xil_DCacheFlushRange((unsigned int)frameBuf[frame], DEMO_MAX_FRAME);
+					DisplayChangeFrame(&dispCtrl, frame);
+					frame = dispCtrl.curFrame +1;
+					resetf = 1;
+		}
 
-		Xil_DCacheFlushRange((unsigned int)frameBuf[frame], DEMO_MAX_FRAME);
-		DisplayChangeFrame(&dispCtrl, frame);
-		frame = dispCtrl.curFrame +1;
+
+
+
+
 	}
 }
 
+
+
 void ResetGame(u8 *frame) {
 	for(int i = 0; i < 3; i++) {
-		initializeScreen(frameBuf[i], 1920, 1080, 5760, Background);
-		initializeScreen(frameBuf[i], 150, 1080, 5760, HeaderImg);
+		PrintBackground(frameBuf[i], 1920, 1080, 5760, Background);
+		PrintBackground(frameBuf[i], 150, 1080, 5760, HeaderImg);
 	}
-	//ImagePrintMemCpy(frame, whiteLine, 0, 0, 1080, 1920);
 			int random_x;
 			int random_y = 2;
 			for(int i = 0; i < PLATFORM_AMOUNT; i++) {
@@ -165,13 +178,14 @@ void ResetGame(u8 *frame) {
 			}
 			jumperBlock.x = 540*DEMO_STRIDE;
 			jumperBlock.y = 2830;
-			dead = 0;
+
 			resetScore();
 			platformhits = 0;
 			platformspeed = 6;
+			resetf = 0;
 }
 
-void initializeScreen(u8 *frame, u32 width, u32 height, u32 stride, u8 *pic)
+void PrintBackground(u8 *frame, u32 width, u32 height, u32 stride, u8 *pic)
 {
 	u32 lineStart = 2;
 	u32 lineStartPic = 0;
@@ -182,30 +196,6 @@ void initializeScreen(u8 *frame, u32 width, u32 height, u32 stride, u8 *pic)
 		lineStart += stride;
 		lineStartPic+= width*3;
 	}
-}
-void initializeBlock(u8 *frame, u8 *pic, int x, int y)
-{
-	u32 lineStart = y+(x*DEMO_STRIDE);
-	u32 lineStartPic = 0;
-
-	for(int ycoi = 0; ycoi < PLATFORM_HEIGHT; ycoi++)
-	{
-		memcpy(frame + lineStart, pic, PLATFORM_WIDTH*3);
-		lineStart += DEMO_STRIDE;
-		lineStartPic+= PLATFORM_WIDTH*3;
-	}
-}
-
-void MemeCopyOverWrite(u8 *frame, u8 *pic, int x, int y, int imgW, int imgH) {
-	u32 lineStart = x*DEMO_STRIDE+y;
-	u32 lineStartPic = 0;
-
-		for(int ycoi = 0; ycoi < imgH; ycoi++)
-		{
-			memcpy(frame + lineStart, pic, imgW*3);
-			lineStart += DEMO_STRIDE;
-			lineStartPic+= imgW*3;
-		}
 }
 
 void PrintScore(u8 *frame, u8 ones, u8 tens, u8 hundreds, u8 thousands) {
@@ -223,22 +213,7 @@ void PrintHighScore(u8 *frame, u8 ones, u8 tens, u8 hundreds, u8 thousands) {
 
 }
 
-void Overwrite(u8 *frame) {
-	MemeCopyOverWrite(frame, Background, jumperBlock.x, jumperBlock.y, JUMPER_WIDTH, JUMPER_HEIGHT);
-	for(int j = 0; j < PLATFORM_AMOUNT; j++) {
-		MemeCopyOverWrite(frame, Background, platformBlock[j].x, platformBlock[j].y, PLATFORM_WIDTH, PLATFORM_HEIGHT);
-		platformBlock[j].y+=platformspeed;
-		if(platformBlock[j].y >= DEMO_STRIDE) {
-			platformBlock[j].y = 0;
-			platformBlock[j].x = DEMO_STRIDE*(rand() % 900 + 0);
-		}
-	}
-	MemeCopyOverWrite(frame, Background, 937*DEMO_STRIDE, 50, 80, 20);
-	//ImageOverwrite(frame, 937*DEMO_STRIDE, 50, 80, 20);
-}
-
 void Move(u8 *frame) {
-
 	switch(btn_value) {
 	case 1:
 		jumperBlock.x -= DEMO_STRIDE*21;
@@ -313,7 +288,7 @@ void Print(u8 *frame) {
 	for(int j = 0; j < PLATFORM_AMOUNT; j++) {
 		blockPrinter(frame, DEMO_STRIDE, platformImg, PLATFORM_WIDTH, PLATFORM_HEIGHT, platformBlock[j]);
 	}
-	initializeScreen(frame, 150, 1080, 5760, HeaderImg);
+	PrintBackground(frame, 150, 1080, 5760, HeaderImg);
 	PrintScore(frame, ones, tens, hundreds, thousands);
 	PrintHighScore(frame, highones, hightens, highhundreds, highthousands);
 
@@ -332,14 +307,6 @@ void Print(u8 *frame) {
 		break;
 	default:
 	break;
-	}
-
-
-}
-
-void DemoPrintBackground(u8 *frame) {
-	for(int i = 0; i < 1920*1080*3; i++) {
-		frame[i] = 255;
 	}
 }
 
@@ -360,30 +327,6 @@ void ImagePrint(u8 *frame, u8 *array,  u32 x, u32 y, int imgH, int imgW) {
 		cor = cor + DEMO_STRIDE;
 	}
 
-}
-
-
-void ImagePrintMemCpy(u8 *frame, u8 *array,  u32 x, u32 y, int imgH, int imgW) {
-	u32 line = 0;
-	u32 stride = 0;
-	for(int i = 0; i < imgH; i++){
-		memcpy(frame + (y+x*DEMO_STRIDE) + stride, array + line, sizeof(imgW*3));
-		line += imgW*3;
-		stride += DEMO_STRIDE;
-	}
-}
-
-
-void ImageOverwrite(u8 *frame, u32 x, u32 y, int imgH, int imgW) {
-	int cor = x+y;
-	for(int i = 0; i < imgH; i++) {
-		for(int j = 0; j<imgW*3; j+=3) {
-			frame[cor + j + 0] = 255;
-			frame[cor + j + 1] = 255;
-			frame[cor + j + 2] = 255;
-		}
-		cor = cor + DEMO_STRIDE;
-	}
 }
 
 int collisiondetect (struct Block *jumper, struct Block *platform){
@@ -420,51 +363,12 @@ void blockPrinter(u8 *frame, u32 stride,u8 *pic,  u32 picWidth, u32 picHeight, s
 {
 	u32 lineStart = 0;
 	u32 lineStartPic = 0;
-	u32 picStride = picWidth*3;
 		for(int ycoi = 0; ycoi < picHeight; ycoi++)
 		{
-			memcpy(frame+block.x+block.y + lineStart, pic+lineStartPic, picStride);
+			memcpy(frame+block.x+block.y + lineStart, pic+lineStartPic, picWidth*3);
 			lineStart += stride;
-			lineStartPic+= picStride;
+			lineStartPic += picWidth*3;
 		}
-}
-
-void StreamFrameBuffer() {
-	if (videoCapt.state == VIDEO_STREAMING)
-					VideoStop(&videoCapt);
-				else
-					VideoStart(&videoCapt);
-}
-
-void VideoFrameBufferSwap() {
-	nextFrame = videoCapt.curFrame + 1;
-	if (nextFrame >= DISPLAY_NUM_FRAMES)
-	{
-		nextFrame = 0;
-	}
-	VideoChangeFrame(&videoCapt, nextFrame);
-}
-
-void GrabFrameAndInvert() {
-	nextFrame = videoCapt.curFrame + 1;
-	if (nextFrame >= DISPLAY_NUM_FRAMES){
-		nextFrame = 0;
-	}
-	VideoStop(&videoCapt);
-	DemoInvertFrame(pFrames[videoCapt.curFrame], pFrames[nextFrame], videoCapt.timing.HActiveVideo, videoCapt.timing.VActiveVideo, DEMO_STRIDE);
-	VideoStart(&videoCapt);
-	DisplayChangeFrame(&dispCtrl, nextFrame);
-}
-
-void GrabVideoAndScaleToFrame() {
-	nextFrame = videoCapt.curFrame + 1;
-	if (nextFrame >= DISPLAY_NUM_FRAMES) {
-		nextFrame = 0;
-	}
-	VideoStop(&videoCapt);
-	DemoScaleFrame(pFrames[videoCapt.curFrame], pFrames[nextFrame], videoCapt.timing.HActiveVideo, videoCapt.timing.VActiveVideo, dispCtrl.vMode.width, dispCtrl.vMode.height, DEMO_STRIDE);
-	VideoStart(&videoCapt);
-	DisplayChangeFrame(&dispCtrl, nextFrame);
 }
 
 void DemoInitialize()
@@ -543,96 +447,6 @@ void DemoInitialize()
 	 * Set the Video Detect callback to trigger the menu to reset, displaying the new detected resolution
 	 */
 	VideoSetCallback(&videoCapt, DemoISR, &fRefresh);
-	return;
-}
-
-void DemoInvertFrame(u8 *srcFrame, u8 *destFrame, u32 width, u32 height, u32 stride)
-{
-	u32 xcoi, ycoi;
-	u32 lineStart = 0;
-	for(ycoi = 0; ycoi < height; ycoi++)
-	{
-		for(xcoi = 0; xcoi < (width * 3); xcoi+=3)
-		{
-			destFrame[xcoi + lineStart] = ~srcFrame[xcoi + lineStart];         //Red
-			destFrame[xcoi + lineStart + 1] = ~srcFrame[xcoi + lineStart + 1]; //Blue
-			destFrame[xcoi + lineStart + 2] = ~srcFrame[xcoi + lineStart + 2]; //Green
-		}
-		lineStart += stride;
-	}
-	/*
-	 * Flush the framebuffer memory range to ensure changes are written to the
-	 * actual memory, and therefore accessible by the VDMA.
-	 */
-	Xil_DCacheFlushRange((unsigned int) destFrame, DEMO_MAX_FRAME);
-}
-
-void DemoScaleFrame(u8 *srcFrame, u8 *destFrame, u32 srcWidth, u32 srcHeight, u32 destWidth, u32 destHeight, u32 stride)
-{
-	float xInc, yInc; // Width/height of a destination frame pixel in the source frame coordinate system
-	float xcoSrc, ycoSrc; // Location of the destination pixel being operated on in the source frame coordinate system
-	float x1y1, x2y1, x1y2, x2y2; //Used to store the color data of the four nearest source pixels to the destination pixel
-	int ix1y1, ix2y1, ix1y2, ix2y2; //indexes into the source frame for the four nearest source pixels to the destination pixel
-	float xDist, yDist; //distances between destination pixel and x1y1 source pixels in source frame coordinate system
-
-	int xcoDest, ycoDest; // Location of the destination pixel being operated on in the destination coordinate system
-	int iy1; //Used to store the index of the first source pixel in the line with y1
-	int iDest; //index of the pixel data in the destination frame being operated on
-
-	int i;
-
-	xInc = ((float) srcWidth - 1.0) / ((float) destWidth);
-	yInc = ((float) srcHeight - 1.0) / ((float) destHeight);
-
-	ycoSrc = 0.0;
-	for (ycoDest = 0; ycoDest < destHeight; ycoDest++)
-	{
-		iy1 = ((int) ycoSrc) * stride;
-		yDist = ycoSrc - ((float) ((int) ycoSrc));
-
-		/*
-		 * Save some cycles in the loop below by presetting the destination
-		 * index to the first pixel in the current line
-		 */
-		iDest = ycoDest * stride;
-
-		xcoSrc = 0.0;
-		for (xcoDest = 0; xcoDest < destWidth; xcoDest++)
-		{
-			ix1y1 = iy1 + ((int) xcoSrc) * 3;
-			ix2y1 = ix1y1 + 3;
-			ix1y2 = ix1y1 + stride;
-			ix2y2 = ix1y1 + stride + 3;
-
-			xDist = xcoSrc - ((float) ((int) xcoSrc));
-
-			/*
-			 * For loop handles all three colors
-			 */
-			for (i = 0; i < 3; i++)
-			{
-				x1y1 = (float) srcFrame[ix1y1 + i];
-				x2y1 = (float) srcFrame[ix2y1 + i];
-				x1y2 = (float) srcFrame[ix1y2 + i];
-				x2y2 = (float) srcFrame[ix2y2 + i];
-
-				/*
-				 * Bilinear interpolation function
-				 */
-				destFrame[iDest] = (u8) ((1.0-yDist)*((1.0-xDist)*x1y1+xDist*x2y1) + yDist*((1.0-xDist)*x1y2+xDist*x2y2));
-				iDest++;
-			}
-			xcoSrc += xInc;
-		}
-		ycoSrc += yInc;
-	}
-
-	/*
-	 * Flush the framebuffer memory range to ensure changes are written to the
-	 * actual memory, and therefore accessible by the VDMA.
-	 */
-	Xil_DCacheFlushRange((unsigned int) destFrame, DEMO_MAX_FRAME);
-
 	return;
 }
 

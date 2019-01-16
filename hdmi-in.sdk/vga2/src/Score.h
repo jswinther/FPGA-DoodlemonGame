@@ -18,6 +18,9 @@ u16 onesCounter = 0;
 u8 speedCounter = 0;
 
 
+u16 highscore = 0;
+
+
 //Highscore
 u8 highones = 0;
 u8 hightens = 0;
@@ -74,34 +77,16 @@ void Increment() {
 }
 
 void resetScore(){
+	if(onesCounter > highscore) {
+		highscore = onesCounter;
+		highones = ones;
+		hightens = tens;
+		highhundreds = hundreds;
+		highthousands = thousands;
+	}
 	gamesPlayed++;
 	onesCounter = 0;
 	findAverageScore();
-	if(thousands > highthousands){
-		highones = ones;
-		hightens = tens;
-		highhundreds = hundreds;
-		highthousands = thousands;
-	}
-	else if(hundreds > highhundreds){
-		highones = ones;
-		hightens = tens;
-		highhundreds = hundreds;
-		highthousands = thousands;
-	}
-	else if(tens > hightens){
-		highones = ones;
-		hightens = tens;
-		highhundreds = hundreds;
-		highthousands = thousands;
-	}
-	else if(ones > highones){
-		highones = ones;
-		hightens = tens;
-		highhundreds = hundreds;
-		highthousands = thousands;
-	}
-
 	ones = 0;
 	tens = 0;
 	hundreds = 0;

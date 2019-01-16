@@ -68,7 +68,7 @@ int frameSelect();
 void nextframeselect();
 void ResetGame(u8 *frame);
 void ImagePrintMemCpy(u8 *frame, u8 *array,  u32 x, u32 y, int imgH, int imgW);
-void initializeScreen(u8 *frame, u32 width, u32 height, u32 stride, u8 *pic);
+void PrintBackground(u8 *frame, u32 width, u32 height, u32 stride, u8 *pic);
 void blockPrinter(u8 *frame, u32 stride,u8 *pic,  u32 picWidth, u32 picHeight, struct Block block);
 void initializeBlock(u8 *frame, u8 *pic, int x, int y);
 void MemeCopyOverWrite(u8 *frame, u8 *pic, int x, int y, int imgW, int imgH);
