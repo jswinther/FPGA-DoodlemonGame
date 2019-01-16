@@ -56,6 +56,7 @@
 #include "Doodlemon.h"
 #include "Kirby.h"
 #include "Gameover.h"
+#include "Alphabet.h"
 /* ------------------------------------------------------------ */
 /*						   Defines				        		*/
 /* ------------------------------------------------------------ */
@@ -100,9 +101,10 @@ int frame;
 /*						     Main								*/
 /* ------------------------------------------------------------ */
 
-
-
-
+u8 HighscoreWord[] = {H, I, G, H, S, C, O, R, E};
+u8 YourscoreWord[] = {Y, O, U, R, S, C, O, R, E};
+u8 AveragescoreWord[] = {A, V, E, R, A, G, E, S, C, O ,R ,E};
+u8 alpha[] = {A, B, C, D, E,F,G,H,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z};
 
 int main(void) {
 	DemoInitialize();
@@ -203,6 +205,29 @@ void PrintBackground(u8 *frame, u32 width, u32 height, u32 stride, u8 *pic)
 	}
 }
 
+void PrintWord(u8 *frame, u8 *array, u32 x, u32 y, u8 wordLength) {
+	int cor = x*DEMO_STRIDE+y;
+	int arrayCounter = 0;
+	for(int i = 0; i < wordLength; i++) {
+		for(int j = 0; j < 20; j++) {
+			for(int k = 0; k < 60; k+=3) {
+				if(alphabet[array[i]][arrayCounter + 0] < 100 &&
+					alphabet[array[i]][arrayCounter + 1] < 100 &&
+					alphabet[array[i]][arrayCounter + 2] < 100) {
+					frame[cor + k + 1] = alphabet[array[i]][arrayCounter + 0];
+					frame[cor + k + 2] = alphabet[array[i]][arrayCounter + 1];
+					frame[cor + k + 0] = alphabet[array[i]][arrayCounter + 2];
+					arrayCounter+=3;
+				} else {
+					arrayCounter+=3;
+				}
+			}
+			cor = cor + DEMO_STRIDE;
+		}
+		arrayCounter = 0;
+		cor = cor - (40*DEMO_STRIDE);
+	}
+}
 
 void PrintScore(u8 *frame, u8 ones, u8 tens, u8 hundreds, u8 thousands, u32 x, u32 y) {
 	ImagePrint(frame, numArray[thousands], (x+63)*DEMO_STRIDE, y, 20, 20);
@@ -312,7 +337,10 @@ void Print(u8 *frame) {
 	PrintScore(frame, ones, tens, hundreds, thousands, 937, 470);
 	PrintScore(frame, highones, hightens, highhundreds, highthousands, 937, 560);
 	PrintScore(frame, avgones, avgtens, avghundreds, avgthousands, 937, 650);
-
+	PrintWord(frame, alpha, 900, 961, 25);
+	PrintWord(frame, HighscoreWord, 900, 901, 9);
+	PrintWord(frame, YourscoreWord, 900, 1021, 9);
+	PrintWord(frame, AveragescoreWord, 900, 1081, 12);
 
 	switch(jumperDir) {
 	case UL:

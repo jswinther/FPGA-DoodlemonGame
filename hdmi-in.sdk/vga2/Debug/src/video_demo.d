@@ -38,7 +38,7 @@ src/video_demo.o src/video_demo.o: ../src/video_demo.c \
  ../src/game.h ../src/jumper.h ../src/platform.h ../src/deadLogic.h \
  ../src/numberArray.h ../src/score.h ../src/Framebuffer.h \
  ../src/whiteLine.h ../src/Background.h ../src/Header.h \
- ../src/Doodlemon.h ../src/Kirby.h ../src/Gameover.h
+ ../src/Doodlemon.h ../src/Kirby.h ../src/Gameover.h ../src/Alphabet.h
 
 ../src/video_demo.h:
 
@@ -145,3 +145,5 @@ src/video_demo.o src/video_demo.o: ../src/video_demo.c \
 ../src/Kirby.h:
 
 ../src/Gameover.h:
+
+../src/Alphabet.h:
