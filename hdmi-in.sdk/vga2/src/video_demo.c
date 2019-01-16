@@ -55,6 +55,7 @@
 #include "Header.h"
 #include "Doodlemon.h"
 #include "Kirby.h"
+#include "Gameover.h"
 /* ------------------------------------------------------------ */
 /*						   Defines				        		*/
 /* ------------------------------------------------------------ */
@@ -164,7 +165,7 @@ void ResetGame(u8 *frame) {
 	for(int i = 0; i < 3; i++) {
 		PrintBackground(frameBuf[i], 1920, 1080, 5760, Background);
 		PrintBackground(frameBuf[i], 150, 1080, 5760, HeaderImg);
-		PrintGameOver(frameBuf[i], 240, 1080, 5760, Gameover);
+		ImagePrint(frameBuf[i], Gameover, 0, 2100, 1080, 240);
 
 	}
 			int random_x;
