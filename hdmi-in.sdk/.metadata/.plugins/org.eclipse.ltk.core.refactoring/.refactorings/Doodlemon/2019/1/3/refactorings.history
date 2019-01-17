@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Doodlemon/src/video_demo.c&apos; to &apos;RunMe.c&apos;" description="Rename resource &apos;video_demo.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/video_demo.c" name="RunMe.c" stamp="1547743271194" updateReferences="true"/>
+</session>

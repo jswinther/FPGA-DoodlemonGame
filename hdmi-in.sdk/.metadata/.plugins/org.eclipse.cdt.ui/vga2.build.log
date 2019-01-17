@@ -1,8 +1,47 @@
-08:13:35 **** Incremental Build of configuration Debug for project vga2 ****
+17:28:46 **** Auto Build of configuration Debug for project vga2 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-make: Nothing to be done for 'main-build'.
+'Building file: ../src/video_capture/video_capture.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_capture/video_capture.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_capture/video_capture.d" -MT"src/video_capture/video_capture.o" -o "src/video_capture/video_capture.o" "../src/video_capture/video_capture.c"
+'Finished building: ../src/video_capture/video_capture.c'
+' '
+'Building file: ../src/timer_ps/timer_ps.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/timer_ps/timer_ps.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/timer_ps/timer_ps.d" -MT"src/timer_ps/timer_ps.o" -o "src/timer_ps/timer_ps.o" "../src/timer_ps/timer_ps.c"
+'Finished building: ../src/timer_ps/timer_ps.c'
+' '
+'Building file: ../src/intc/intc.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/intc/intc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/intc/intc.d" -MT"src/intc/intc.o" -o "src/intc/intc.o" "../src/intc/intc.c"
+'Finished building: ../src/intc/intc.c'
+' '
+'Building file: ../src/dynclk/dynclk.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dynclk/dynclk.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/dynclk/dynclk.d" -MT"src/dynclk/dynclk.o" -o "src/dynclk/dynclk.o" "../src/dynclk/dynclk.c"
+'Finished building: ../src/dynclk/dynclk.c'
+' '
+'Building file: ../src/display_ctrl/display_ctrl.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/display_ctrl/display_ctrl.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/display_ctrl/display_ctrl.d" -MT"src/display_ctrl/display_ctrl.o" -o "src/display_ctrl/display_ctrl.o" "../src/display_ctrl/display_ctrl.c"
+'Finished building: ../src/display_ctrl/display_ctrl.c'
+' '
+'Building file: ../src/video_demo.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../vga2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_demo.d" -MT"src/video_demo.o" -o "src/video_demo.o" "../src/video_demo.c"
+../src/video_demo.c:84:1: error: unknown type name 'FATFS'
+ FATFS FatFs;  /* FatFs work area needed for each volume */
+ ^~~~~
+../src/video_demo.c:85:1: error: unknown type name 'FIL'; did you mean 'FILE'?
+ FIL Fil;   /* File object needed for each open file */
+ ^~~
+ FILE
+../src/video_demo.c:104:1: error: unknown type name 'UINT'; did you mean 'INTC'?
+ UINT bw;
+ ^~~~
+ INTC
+make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
 
-08:13:35 Build Finished (took 322ms)
+17:28:50 Build Finished (took 4s.233ms)
 
