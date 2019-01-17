@@ -72,45 +72,45 @@
 #define SCU_TIMER_ID XPAR_SCUTIMER_DEVICE_ID
 #define UART_BASEADDR XPAR_PS7_UART_1_BASEADDR
 
+
 /* ------------------------------------------------------------ */
 /*				Global Variables								*/
 /* ------------------------------------------------------------ */
-
-
-u8 scoreArray[4] = {0, 0, 0, 0};
-u32 platformhits = 0;
-DisplayCtrl dispCtrl;
-XAxiVdma vdma;
-FATFS FatFs;		/* FatFs work area needed for each volume */
-FIL Fil;			/* File object needed for each open file */
-VideoCapture videoCapt;
+//Framebuffers for video data
 char fRefresh; //flag used to trigger a refresh of the Menu on video detect
-/*
- * Framebuffers for video data
- */
 u8 frameBuf[DISPLAY_NUM_FRAMES][DEMO_MAX_FRAME];
 u8 *pFrames[DISPLAY_NUM_FRAMES]; //array of pointers to the frame buffers
-/*
- * Interrupt vector table
- */
+DisplayCtrl dispCtrl;
+int resetf = 1;
+int frame;
+
+//Interrupt vector table
+VideoCapture videoCapt;
 const ivt_t ivt[] = {
 	videoGpioIvt(VID_GPIO_IRPT_ID, &videoCapt),
 	videoVtcIvt(VID_VTC_IRPT_ID, &(videoCapt.vtc))
 };
-// Counter used for score.
-int counter = 0;
-int resetf = 1;
-int frame;
-UINT bw;
-/* ------------------------------------------------------------ */
-/*						     Main								*/
-/* ------------------------------------------------------------ */
+XAxiVdma vdma;
 
+//Counters used for score.
+int counter = 0;
+u8 scoreArray[4] = {0, 0, 0, 0};
+u32 platformhits = 0;
+
+//Arrays for printing text on the display
 u8 HighscoreWord[] = {H, I, G, H, S, C, O, R, E};
 u8 YourscoreWord[] = {Y, O, U, R, S, C, O, R, E};
 u8 AveragescoreWord[] = {A, V, E, R, A, G, E, S, C, O ,R ,E};
-u8 alpha[] = {A, B, C, D, E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z};
+u8 alpha[] = {A, B, C, D, E, F, G, H, I, J, K, L ,M ,N ,O ,P ,Q ,R ,S ,T ,U, V, W, X, Y, Z};
 
+//variables for SD card
+//UINT bw;
+//FATFS FatFs;		/* FatFs work area needed for each volume */
+//FIL Fil;
+
+/* ------------------------------------------------------------ */
+/*						     Main		    					*/
+/* ------------------------------------------------------------ */
 int main(void) {
 	DemoInitialize();
 	DisplaySetMode(&dispCtrl, &VMODE_1920x1080);
@@ -130,6 +130,9 @@ int main(void) {
 	DemoStartGame();
 	return 0;
 }
+
+
+
 /* ------------------------------------------------------------ */
 /*						     Game		    					*/
 /* ------------------------------------------------------------ */
@@ -386,24 +389,19 @@ void ImagePrint(u8 *frame, u8 *array,  u32 x, u32 y, int imgH, int imgW) {
 int collisiondetect (struct Block *jumper, struct Block *platform){
 	int jumperw = jumper->width;
 	int jumperh = (jumper->height)*3;
-	int jumpera = jumper->x+jumper->y;
-	int jumperLC = (jumpera + jumperh) + (jumperw*DEMO_STRIDE);
-	int jumperRC = jumpera + jumperh;
-
-
-
+	int jumpera = jumper->x+jumper->y;							//a = anchor
+	int jumperLC = (jumpera + jumperh) + (jumperw*DEMO_STRIDE); //LC = left corner
+	int jumperRC = jumpera + jumperh;							//RC = right corner
 	int platformw = platform->height;
 	int platformh = platform->width*3;
 	int platforma = platform->x+platform->y;
-	int platformLT = platforma + (platformw*DEMO_STRIDE);
-	int platformRT = platforma;
-	int g;
+	int platformLT = platforma + (platformw*DEMO_STRIDE);		//LT = left top - the platform top left corner
+	int platformRT = platforma;									//RT = right top - the platform top right corner
 	int singleStepHeight = 0;
-	for(int j = 0; j < platformh; j++){
 
-	for(g = platformRT + singleStepHeight; g <= platformLT; g+=DEMO_STRIDE) {
-
-			if(g == jumperLC || g == jumperRC) {
+	for(int i = 0; i < platformh; i++){
+		for(int j = platformRT + singleStepHeight; j <= platformLT; j+=DEMO_STRIDE) {
+			if(j == jumperLC || j == jumperRC) {
 				return 1;
 
 			}
