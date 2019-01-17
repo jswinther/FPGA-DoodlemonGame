@@ -12,15 +12,14 @@ source hdmi_in_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.ipdefs/repo_0_0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
-add_files: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 327.367 ; gain = 33.027
 Command: synth_design -top hdmi_in_wrapper -part xc7z010clg400-1 -flatten_hierarchy none -directive RuntimeOptimized -fsm_extraction off
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 3516 
+INFO: Helper process launched with PID 3620 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 439.051 ; gain = 104.797
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 440.414 ; gain = 106.621
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'hdmi_in_wrapper' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/imports/hdl/hdmi_in_wrapper.vhd:58]
 INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:23615' bound to instance 'ddc_scl_iobuf' of component 'IOBUF' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/imports/hdl/hdmi_in_wrapper.vhd:149]
@@ -33,48 +32,48 @@ INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (1#1) [C:/Xilinx/Vivado/20
 INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:23615' bound to instance 'ddc_sda_iobuf' of component 'IOBUF' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/imports/hdl/hdmi_in_wrapper.vhd:156]
 INFO: [Synth 8-3491] module 'hdmi_in' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:4601' bound to instance 'hdmi_in_i' of component 'hdmi_in' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/imports/hdl/hdmi_in_wrapper.vhd:163]
 INFO: [Synth 8-638] synthesizing module 'hdmi_in' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:4659]
-INFO: [Synth 8-3491] module 'hdmi_in_axi_dynclk_0_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_axi_dynclk_0_0_stub.vhdl:5' bound to instance 'axi_dynclk_0' of component 'hdmi_in_axi_dynclk_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:5670]
-INFO: [Synth 8-638] synthesizing module 'hdmi_in_axi_dynclk_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_axi_dynclk_0_0_stub.vhdl:36]
-INFO: [Synth 8-3491] module 'hdmi_in_axi_gpio_btn_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_axi_gpio_btn_0_stub.vhdl:5' bound to instance 'axi_gpio_btn' of component 'hdmi_in_axi_gpio_btn_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:5698]
-INFO: [Synth 8-638] synthesizing module 'hdmi_in_axi_gpio_btn_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_axi_gpio_btn_0_stub.vhdl:32]
-INFO: [Synth 8-3491] module 'hdmi_in_axi_gpio_led_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_axi_gpio_led_0_stub.vhdl:5' bound to instance 'axi_gpio_led' of component 'hdmi_in_axi_gpio_led_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:5722]
-INFO: [Synth 8-638] synthesizing module 'hdmi_in_axi_gpio_led_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_axi_gpio_led_0_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'hdmi_in_axi_gpio_sw_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_axi_gpio_sw_0_stub.vhdl:5' bound to instance 'axi_gpio_sw' of component 'hdmi_in_axi_gpio_sw_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:5747]
-INFO: [Synth 8-638] synthesizing module 'hdmi_in_axi_gpio_sw_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_axi_gpio_sw_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'hdmi_in_axi_gpio_video_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_axi_gpio_video_0_stub.vhdl:5' bound to instance 'axi_gpio_video' of component 'hdmi_in_axi_gpio_video_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:5770]
-INFO: [Synth 8-638] synthesizing module 'hdmi_in_axi_gpio_video_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_axi_gpio_video_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'hdmi_in_axi_dynclk_0_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_axi_dynclk_0_0_stub.vhdl:5' bound to instance 'axi_dynclk_0' of component 'hdmi_in_axi_dynclk_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:5670]
+INFO: [Synth 8-638] synthesizing module 'hdmi_in_axi_dynclk_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_axi_dynclk_0_0_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'hdmi_in_axi_gpio_btn_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_axi_gpio_btn_0_stub.vhdl:5' bound to instance 'axi_gpio_btn' of component 'hdmi_in_axi_gpio_btn_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:5698]
+INFO: [Synth 8-638] synthesizing module 'hdmi_in_axi_gpio_btn_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_axi_gpio_btn_0_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'hdmi_in_axi_gpio_led_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_axi_gpio_led_0_stub.vhdl:5' bound to instance 'axi_gpio_led' of component 'hdmi_in_axi_gpio_led_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:5722]
+INFO: [Synth 8-638] synthesizing module 'hdmi_in_axi_gpio_led_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_axi_gpio_led_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'hdmi_in_axi_gpio_sw_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_axi_gpio_sw_0_stub.vhdl:5' bound to instance 'axi_gpio_sw' of component 'hdmi_in_axi_gpio_sw_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:5747]
+INFO: [Synth 8-638] synthesizing module 'hdmi_in_axi_gpio_sw_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_axi_gpio_sw_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'hdmi_in_axi_gpio_video_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_axi_gpio_video_0_stub.vhdl:5' bound to instance 'axi_gpio_video' of component 'hdmi_in_axi_gpio_video_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:5770]
+INFO: [Synth 8-638] synthesizing module 'hdmi_in_axi_gpio_video_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_axi_gpio_video_0_stub.vhdl:33]
 INFO: [Synth 8-638] synthesizing module 'hdmi_in_axi_mem_intercon_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:2645]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_KM5YEW' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:201]
-INFO: [Synth 8-3491] module 'hdmi_in_auto_pc_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'hdmi_in_auto_pc_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:691]
-INFO: [Synth 8-638] synthesizing module 'hdmi_in_auto_pc_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_auto_pc_0_stub.vhdl:90]
-INFO: [Synth 8-3491] module 'hdmi_in_m00_data_fifo_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_m00_data_fifo_0_stub.vhdl:5' bound to instance 'm00_data_fifo' of component 'hdmi_in_m00_data_fifo_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:773]
-INFO: [Synth 8-638] synthesizing module 'hdmi_in_m00_data_fifo_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_m00_data_fifo_0_stub.vhdl:91]
-INFO: [Synth 8-3491] module 'hdmi_in_m00_regslice_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_m00_regslice_0_stub.vhdl:5' bound to instance 'm00_regslice' of component 'hdmi_in_m00_regslice_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:856]
-INFO: [Synth 8-638] synthesizing module 'hdmi_in_m00_regslice_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_m00_regslice_0_stub.vhdl:89]
+INFO: [Synth 8-3491] module 'hdmi_in_auto_pc_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'hdmi_in_auto_pc_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:691]
+INFO: [Synth 8-638] synthesizing module 'hdmi_in_auto_pc_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_auto_pc_0_stub.vhdl:90]
+INFO: [Synth 8-3491] module 'hdmi_in_m00_data_fifo_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_m00_data_fifo_0_stub.vhdl:5' bound to instance 'm00_data_fifo' of component 'hdmi_in_m00_data_fifo_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:773]
+INFO: [Synth 8-638] synthesizing module 'hdmi_in_m00_data_fifo_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_m00_data_fifo_0_stub.vhdl:91]
+INFO: [Synth 8-3491] module 'hdmi_in_m00_regslice_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_m00_regslice_0_stub.vhdl:5' bound to instance 'm00_regslice' of component 'hdmi_in_m00_regslice_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:856]
+INFO: [Synth 8-638] synthesizing module 'hdmi_in_m00_regslice_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_m00_regslice_0_stub.vhdl:89]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_KM5YEW' (2#1) [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:201]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1L07FMS' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:2013]
-INFO: [Synth 8-3491] module 'hdmi_in_s00_data_fifo_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_s00_data_fifo_0_stub.vhdl:5' bound to instance 's00_data_fifo' of component 'hdmi_in_s00_data_fifo_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:2199]
-INFO: [Synth 8-638] synthesizing module 'hdmi_in_s00_data_fifo_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_s00_data_fifo_0_stub.vhdl:51]
-INFO: [Synth 8-3491] module 'hdmi_in_s00_regslice_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_s00_regslice_0_stub.vhdl:5' bound to instance 's00_regslice' of component 'hdmi_in_s00_regslice_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:2242]
-INFO: [Synth 8-638] synthesizing module 'hdmi_in_s00_regslice_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_s00_regslice_0_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'hdmi_in_s00_data_fifo_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_s00_data_fifo_0_stub.vhdl:5' bound to instance 's00_data_fifo' of component 'hdmi_in_s00_data_fifo_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:2199]
+INFO: [Synth 8-638] synthesizing module 'hdmi_in_s00_data_fifo_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_s00_data_fifo_0_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'hdmi_in_s00_regslice_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_s00_regslice_0_stub.vhdl:5' bound to instance 's00_regslice' of component 'hdmi_in_s00_regslice_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:2242]
+INFO: [Synth 8-638] synthesizing module 'hdmi_in_s00_regslice_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_s00_regslice_0_stub.vhdl:51]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1L07FMS' (3#1) [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:2013]
 INFO: [Synth 8-638] synthesizing module 's01_couplers_imp_KRH6EF' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:2327]
-INFO: [Synth 8-3491] module 'hdmi_in_auto_us_df_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_auto_us_df_0_stub.vhdl:5' bound to instance 'auto_us_df' of component 'hdmi_in_auto_us_df_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:2486]
-INFO: [Synth 8-638] synthesizing module 'hdmi_in_auto_us_df_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_auto_us_df_0_stub.vhdl:45]
-INFO: [Synth 8-3491] module 'hdmi_in_s01_regslice_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_s01_regslice_0_stub.vhdl:5' bound to instance 's01_regslice' of component 'hdmi_in_s01_regslice_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:2523]
-INFO: [Synth 8-638] synthesizing module 'hdmi_in_s01_regslice_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_s01_regslice_0_stub.vhdl:45]
+INFO: [Synth 8-3491] module 'hdmi_in_auto_us_df_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_auto_us_df_0_stub.vhdl:5' bound to instance 'auto_us_df' of component 'hdmi_in_auto_us_df_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:2486]
+INFO: [Synth 8-638] synthesizing module 'hdmi_in_auto_us_df_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_auto_us_df_0_stub.vhdl:45]
+INFO: [Synth 8-3491] module 'hdmi_in_s01_regslice_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_s01_regslice_0_stub.vhdl:5' bound to instance 's01_regslice' of component 'hdmi_in_s01_regslice_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:2523]
+INFO: [Synth 8-638] synthesizing module 'hdmi_in_s01_regslice_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_s01_regslice_0_stub.vhdl:45]
 INFO: [Synth 8-256] done synthesizing module 's01_couplers_imp_KRH6EF' (4#1) [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:2327]
-INFO: [Synth 8-3491] module 'hdmi_in_xbar_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'hdmi_in_xbar_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:3122]
-INFO: [Synth 8-638] synthesizing module 'hdmi_in_xbar_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_xbar_0_stub.vhdl:89]
+INFO: [Synth 8-3491] module 'hdmi_in_xbar_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'hdmi_in_xbar_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:3122]
+INFO: [Synth 8-638] synthesizing module 'hdmi_in_xbar_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_xbar_0_stub.vhdl:89]
 INFO: [Synth 8-256] done synthesizing module 'hdmi_in_axi_mem_intercon_0' (5#1) [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:2645]
-INFO: [Synth 8-3491] module 'hdmi_in_axi_vdma_0_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_axi_vdma_0_0_stub.vhdl:5' bound to instance 'axi_vdma_0' of component 'hdmi_in_axi_vdma_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:5873]
-INFO: [Synth 8-638] synthesizing module 'hdmi_in_axi_vdma_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_axi_vdma_0_0_stub.vhdl:78]
-INFO: [Synth 8-3491] module 'hdmi_in_dvi2rgb_0_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_dvi2rgb_0_0_stub.vhdl:5' bound to instance 'dvi2rgb_0' of component 'hdmi_in_dvi2rgb_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:5943]
-INFO: [Synth 8-638] synthesizing module 'hdmi_in_dvi2rgb_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_dvi2rgb_0_0_stub.vhdl:30]
-INFO: [Synth 8-3491] module 'hdmi_in_proc_sys_reset_0_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_proc_sys_reset_0_0_stub.vhdl:5' bound to instance 'proc_sys_reset_0' of component 'hdmi_in_proc_sys_reset_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:5965]
-INFO: [Synth 8-638] synthesizing module 'hdmi_in_proc_sys_reset_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_proc_sys_reset_0_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'hdmi_in_processing_system7_0_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'hdmi_in_processing_system7_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:5978]
-INFO: [Synth 8-638] synthesizing module 'hdmi_in_processing_system7_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_processing_system7_0_0_stub.vhdl:134]
+INFO: [Synth 8-3491] module 'hdmi_in_axi_vdma_0_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_axi_vdma_0_0_stub.vhdl:5' bound to instance 'axi_vdma_0' of component 'hdmi_in_axi_vdma_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:5873]
+INFO: [Synth 8-638] synthesizing module 'hdmi_in_axi_vdma_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_axi_vdma_0_0_stub.vhdl:78]
+INFO: [Synth 8-3491] module 'hdmi_in_dvi2rgb_0_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_dvi2rgb_0_0_stub.vhdl:5' bound to instance 'dvi2rgb_0' of component 'hdmi_in_dvi2rgb_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:5943]
+INFO: [Synth 8-638] synthesizing module 'hdmi_in_dvi2rgb_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_dvi2rgb_0_0_stub.vhdl:30]
+INFO: [Synth 8-3491] module 'hdmi_in_proc_sys_reset_0_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_proc_sys_reset_0_0_stub.vhdl:5' bound to instance 'proc_sys_reset_0' of component 'hdmi_in_proc_sys_reset_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:5965]
+INFO: [Synth 8-638] synthesizing module 'hdmi_in_proc_sys_reset_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_proc_sys_reset_0_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'hdmi_in_processing_system7_0_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'hdmi_in_processing_system7_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:5978]
+INFO: [Synth 8-638] synthesizing module 'hdmi_in_processing_system7_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_processing_system7_0_0_stub.vhdl:134]
 INFO: [Synth 8-638] synthesizing module 'hdmi_in_processing_system7_0_axi_periph_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:3441]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_CYQ0EC' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:57]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_CYQ0EC' (6#1) [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:57]
@@ -93,28 +92,28 @@ INFO: [Synth 8-256] done synthesizing module 'm06_couplers_imp_125YM4S' (12#1) [
 INFO: [Synth 8-638] synthesizing module 'm07_couplers_imp_3XK05R' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:1596]
 INFO: [Synth 8-256] done synthesizing module 'm07_couplers_imp_3XK05R' (13#1) [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:1596]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1B1CMQG' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:1720]
-INFO: [Synth 8-3491] module 'hdmi_in_auto_pc_1' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_auto_pc_1_stub.vhdl:5' bound to instance 'auto_pc' of component 'hdmi_in_auto_pc_1' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:1903]
-INFO: [Synth 8-638] synthesizing module 'hdmi_in_auto_pc_1' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_auto_pc_1_stub.vhdl:70]
+INFO: [Synth 8-3491] module 'hdmi_in_auto_pc_1' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_auto_pc_1_stub.vhdl:5' bound to instance 'auto_pc' of component 'hdmi_in_auto_pc_1' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:1903]
+INFO: [Synth 8-638] synthesizing module 'hdmi_in_auto_pc_1' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_auto_pc_1_stub.vhdl:70]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1B1CMQG' (14#1) [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:1720]
-INFO: [Synth 8-3491] module 'hdmi_in_xbar_1' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_xbar_1_stub.vhdl:5' bound to instance 'xbar' of component 'hdmi_in_xbar_1' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:4430]
-INFO: [Synth 8-638] synthesizing module 'hdmi_in_xbar_1' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_xbar_1_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'hdmi_in_xbar_1' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_xbar_1_stub.vhdl:5' bound to instance 'xbar' of component 'hdmi_in_xbar_1' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:4430]
+INFO: [Synth 8-638] synthesizing module 'hdmi_in_xbar_1' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_xbar_1_stub.vhdl:51]
 INFO: [Synth 8-256] done synthesizing module 'hdmi_in_processing_system7_0_axi_periph_0' (15#1) [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:3441]
-INFO: [Synth 8-3491] module 'hdmi_in_rgb2vga_0_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_rgb2vga_0_0_stub.vhdl:5' bound to instance 'rgb2vga_0' of component 'hdmi_in_rgb2vga_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:6305]
-INFO: [Synth 8-638] synthesizing module 'hdmi_in_rgb2vga_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_rgb2vga_0_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'hdmi_in_rst_processing_system7_0_100M_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_rst_processing_system7_0_100M_0_stub.vhdl:5' bound to instance 'rst_processing_system7_0_100M' of component 'hdmi_in_rst_processing_system7_0_100M_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:6318]
-INFO: [Synth 8-638] synthesizing module 'hdmi_in_rst_processing_system7_0_100M_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_rst_processing_system7_0_100M_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'hdmi_in_rst_processing_system7_0_150M_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_rst_processing_system7_0_150M_0_stub.vhdl:5' bound to instance 'rst_processing_system7_0_150M' of component 'hdmi_in_rst_processing_system7_0_150M_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:6331]
-INFO: [Synth 8-638] synthesizing module 'hdmi_in_rst_processing_system7_0_150M_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_rst_processing_system7_0_150M_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'hdmi_in_v_axi4s_vid_out_0_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_v_axi4s_vid_out_0_0_stub.vhdl:5' bound to instance 'v_axi4s_vid_out_0' of component 'hdmi_in_v_axi4s_vid_out_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:6344]
-INFO: [Synth 8-638] synthesizing module 'hdmi_in_v_axi4s_vid_out_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_v_axi4s_vid_out_0_0_stub.vhdl:40]
-INFO: [Synth 8-3491] module 'hdmi_in_v_tc_0_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_v_tc_0_0_stub.vhdl:5' bound to instance 'v_tc_0' of component 'hdmi_in_v_tc_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:6376]
-INFO: [Synth 8-638] synthesizing module 'hdmi_in_v_tc_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_v_tc_0_0_stub.vhdl:43]
-INFO: [Synth 8-3491] module 'hdmi_in_v_tc_1_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_v_tc_1_0_stub.vhdl:5' bound to instance 'v_tc_1' of component 'hdmi_in_v_tc_1_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:6411]
-INFO: [Synth 8-638] synthesizing module 'hdmi_in_v_tc_1_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_v_tc_1_0_stub.vhdl:40]
-INFO: [Synth 8-3491] module 'hdmi_in_v_vid_in_axi4s_0_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_v_vid_in_axi4s_0_0_stub.vhdl:5' bound to instance 'v_vid_in_axi4s_0' of component 'hdmi_in_v_vid_in_axi4s_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:6443]
-INFO: [Synth 8-638] synthesizing module 'hdmi_in_v_vid_in_axi4s_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-11552-DESKTOP-SHDFERO/realtime/hdmi_in_v_vid_in_axi4s_0_0_stub.vhdl:39]
-INFO: [Synth 8-3491] module 'hdmi_in_xlconcat_0_0' declared at 'c:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_xlconcat_0_0/synth/hdmi_in_xlconcat_0_0.v:58' bound to instance 'xlconcat_0' of component 'hdmi_in_xlconcat_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:6474]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_in_xlconcat_0_0' [c:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_xlconcat_0_0/synth/hdmi_in_xlconcat_0_0.v:58]
+INFO: [Synth 8-3491] module 'hdmi_in_rgb2vga_0_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_rgb2vga_0_0_stub.vhdl:5' bound to instance 'rgb2vga_0' of component 'hdmi_in_rgb2vga_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:6305]
+INFO: [Synth 8-638] synthesizing module 'hdmi_in_rgb2vga_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_rgb2vga_0_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'hdmi_in_rst_processing_system7_0_100M_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_rst_processing_system7_0_100M_0_stub.vhdl:5' bound to instance 'rst_processing_system7_0_100M' of component 'hdmi_in_rst_processing_system7_0_100M_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:6318]
+INFO: [Synth 8-638] synthesizing module 'hdmi_in_rst_processing_system7_0_100M_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_rst_processing_system7_0_100M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'hdmi_in_rst_processing_system7_0_150M_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_rst_processing_system7_0_150M_0_stub.vhdl:5' bound to instance 'rst_processing_system7_0_150M' of component 'hdmi_in_rst_processing_system7_0_150M_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:6331]
+INFO: [Synth 8-638] synthesizing module 'hdmi_in_rst_processing_system7_0_150M_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_rst_processing_system7_0_150M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'hdmi_in_v_axi4s_vid_out_0_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_v_axi4s_vid_out_0_0_stub.vhdl:5' bound to instance 'v_axi4s_vid_out_0' of component 'hdmi_in_v_axi4s_vid_out_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:6344]
+INFO: [Synth 8-638] synthesizing module 'hdmi_in_v_axi4s_vid_out_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_v_axi4s_vid_out_0_0_stub.vhdl:40]
+INFO: [Synth 8-3491] module 'hdmi_in_v_tc_0_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_v_tc_0_0_stub.vhdl:5' bound to instance 'v_tc_0' of component 'hdmi_in_v_tc_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:6376]
+INFO: [Synth 8-638] synthesizing module 'hdmi_in_v_tc_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_v_tc_0_0_stub.vhdl:43]
+INFO: [Synth 8-3491] module 'hdmi_in_v_tc_1_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_v_tc_1_0_stub.vhdl:5' bound to instance 'v_tc_1' of component 'hdmi_in_v_tc_1_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:6411]
+INFO: [Synth 8-638] synthesizing module 'hdmi_in_v_tc_1_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_v_tc_1_0_stub.vhdl:40]
+INFO: [Synth 8-3491] module 'hdmi_in_v_vid_in_axi4s_0_0' declared at 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_v_vid_in_axi4s_0_0_stub.vhdl:5' bound to instance 'v_vid_in_axi4s_0' of component 'hdmi_in_v_vid_in_axi4s_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:6443]
+INFO: [Synth 8-638] synthesizing module 'hdmi_in_v_vid_in_axi4s_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/.Xil/Vivado-12824-DESKTOP-SHDFERO/realtime/hdmi_in_v_vid_in_axi4s_0_0_stub.vhdl:39]
+INFO: [Synth 8-3491] module 'hdmi_in_xlconcat_0_0' declared at 'c:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_xlconcat_0_0/synth/hdmi_in_xlconcat_0_0.v:57' bound to instance 'xlconcat_0' of component 'hdmi_in_xlconcat_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:6474]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_in_xlconcat_0_0' [c:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_xlconcat_0_0/synth/hdmi_in_xlconcat_0_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_1_xlconcat' [c:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
 	Parameter IN0_WIDTH bound to: 1 - type: integer 
 	Parameter IN1_WIDTH bound to: 1 - type: integer 
@@ -151,7 +150,7 @@ INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_1_xlconcat' [c:/Users/ma
 	Parameter dout_width bound to: 6 - type: integer 
 	Parameter NUM_PORTS bound to: 6 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_1_xlconcat' (16#1) [c:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_in_xlconcat_0_0' (17#1) [c:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_xlconcat_0_0/synth/hdmi_in_xlconcat_0_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_in_xlconcat_0_0' (17#1) [c:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_xlconcat_0_0/synth/hdmi_in_xlconcat_0_0.v:57]
 INFO: [Synth 8-3491] module 'hdmi_in_xlconstant_0_0' declared at 'c:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_xlconstant_0_0/synth/hdmi_in_xlconstant_0_0.v:57' bound to instance 'xlconstant_0' of component 'hdmi_in_xlconstant_0_0' [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/synth/hdmi_in.vhd:6484]
 INFO: [Synth 8-6157] synthesizing module 'hdmi_in_xlconstant_0_0' [c:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_xlconstant_0_0/synth/hdmi_in_xlconstant_0_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_5_xlconstant' [c:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/4649/hdl/xlconstant_v1_1_vl_rfs.v:23]
@@ -240,7 +239,7 @@ WARNING: [Synth 8-3331] design m00_couplers_imp_KM5YEW has unconnected port M_AX
 WARNING: [Synth 8-3331] design m00_couplers_imp_KM5YEW has unconnected port M_AXI_rid[2]
 WARNING: [Synth 8-3331] design m00_couplers_imp_KM5YEW has unconnected port M_AXI_rid[1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 505.148 ; gain = 170.895
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 505.063 ; gain = 171.270
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -253,10 +252,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 505.148 ; gain = 170.895
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 505.063 ; gain = 171.270
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 505.148 ; gain = 170.895
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 505.063 ; gain = 171.270
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -323,16 +322,16 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/hdmi_in_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/dont_touch.xdc]
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 827.027 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 826.535 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 827.027 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 826.535 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 8 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 8 instances
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 827.027 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 827.027 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 826.535 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 826.535 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'hdmi_in_i/axi_vdma_0' at clock pin 'm_axi_mm2s_aclk' is different from the actual clock period '7.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'hdmi_in_i/proc_sys_reset_0' at clock pin 'slowest_sync_clk' is different from the actual clock period '6.060', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'hdmi_in_i/v_axi4s_vid_out_0' at clock pin 'aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
@@ -340,14 +339,14 @@ WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context s
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'hdmi_in_i/v_tc_1' at clock pin 'clk' is different from the actual clock period '6.060', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'hdmi_in_i/v_vid_in_axi4s_0' at clock pin 'vid_io_in_clk' is different from the actual clock period '6.060', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 827.879 ; gain = 493.625
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 826.535 ; gain = 492.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 827.879 ; gain = 493.625
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 826.535 ; gain = 492.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -660,10 +659,10 @@ Applied set_property DONT_TOUCH = true for hdmi_in_i/axi_mem_intercon/m00_couple
 Applied set_property DONT_TOUCH = true for hdmi_in_i/axi_mem_intercon/m00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for hdmi_in_i/processing_system7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 827.879 ; gain = 493.625
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 826.535 ; gain = 492.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 827.879 ; gain = 493.625
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 826.535 ; gain = 492.742
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -699,7 +698,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 827.879 ; gain = 493.625
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 826.535 ; gain = 492.742
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -716,7 +715,7 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'hdmi_in_i/processing_syst
 INFO: [Synth 8-5578] Moved timing constraint from pin 'hdmi_in_i/processing_system7_0/FCLK_CLK2' to pin 'hdmi_in_i/processing_system7_0/bbstub_FCLK_CLK2/O'
 INFO: [Synth 8-5819] Moved 4 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 827.879 ; gain = 493.625
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 826.535 ; gain = 492.742
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -728,7 +727,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 827.879 ; gain = 493.625
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 826.535 ; gain = 492.742
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -746,7 +745,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 827.879 ; gain = 493.625
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 826.535 ; gain = 492.742
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -759,7 +758,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 827.879 ; gain = 493.625
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 826.535 ; gain = 492.742
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -771,7 +770,7 @@ Report RTL Partitions:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 827.879 ; gain = 493.625
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 826.535 ; gain = 492.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -860,17 +859,17 @@ Report Instance Areas:
 |10    |    xlconstant_0                    |hdmi_in_xlconstant_0_0                    |     0|
 +------+------------------------------------+------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 827.879 ; gain = 493.625
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 826.535 ; gain = 492.742
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 827.879 ; gain = 170.895
-Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 827.879 ; gain = 493.625
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 826.535 ; gain = 171.270
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 826.535 ; gain = 492.742
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 834.250 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 834.914 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 8 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 8 instances
@@ -878,10 +877,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 127 Infos, 78 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 834.258 ; gain = 506.891
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 834.258 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 834.914 ; gain = 508.004
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 834.914 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/synth_1/hdmi_in_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file hdmi_in_wrapper_utilization_synth.rpt -pb hdmi_in_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jan 11 14:54:51 2019...
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 17 10:23:54 2019...
