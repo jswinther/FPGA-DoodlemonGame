@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Thu Jan 17 10:27:36 2019
+| Date         : Fri Jan 11 14:58:26 2019
 | Host         : DESKTOP-SHDFERO running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file hdmi_in_wrapper_timing_summary_routed.rpt -pb hdmi_in_wrapper_timing_summary_routed.pb -rpx hdmi_in_wrapper_timing_summary_routed.rpx -warn_on_violation
 | Design       : hdmi_in_wrapper
