@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete 7 resources" deleteContents="false" description="Delete 7 resources" element1="/VGASD/src/display_ctrl" element2="/VGASD/src/dynclk" element3="/VGASD/src/intc" element4="/VGASD/src/timer_ps" element5="/VGASD/src/video_capture" element6="/VGASD/src/deadLogic.h" element7="/VGASD/src/Framebuffer.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="7" stamp="1547718336627"/>
-</session>
