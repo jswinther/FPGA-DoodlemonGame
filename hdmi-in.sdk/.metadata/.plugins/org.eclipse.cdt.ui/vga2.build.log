@@ -1,8 +1,8 @@
-08:13:35 **** Incremental Build of configuration Debug for project vga2 ****
+10:45:01 **** Incremental Build of configuration Debug for project vga2 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for 'main-build'.
 
-08:13:35 Build Finished (took 322ms)
+10:45:01 Build Finished (took 728ms)
 
