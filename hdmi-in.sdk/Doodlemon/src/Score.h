@@ -92,16 +92,11 @@ void resetScore(){
 		gamesPlayed++;
 		currentScoreCounter = 0;
 		findAverageScore();
-		char cones = (char) ones;
-		char ctens = (char) tens;
-		char chundreds = (char) hundreds;
-		char cthousands = (char) thousands;
-		char num[] = {cones, ctens, chundreds, cthousands};
 		ones = 0;
 		tens = 0;
 		hundreds = 0;
 		thousands = 0;
-		SDWrite(num, 4);
+		SDWrite(highthousands, highhundreds, hightens, highones);
 
 	} else {
 		gamesPlayed++;

@@ -184,13 +184,15 @@ int main(void) {
 /*						     Game		    					*/
 /* ------------------------------------------------------------ */
 
-void SDWrite(char *array, uint length) {
+void SDWrite(int num1, int num2, int num3, int num4) {
 	init_platform();
 	result = f_mount(&FS_instance,Path, 1);
 	sprintf(FileName, "FILE.TXT");
 	Log_File = (char *)FileName;
 	result = f_open(&file1, Log_File, FA_CREATE_ALWAYS | FA_WRITE );
-	result = f_write(&file1, (const void*)(char*)array, length, &BytesWr);
+	char array[8];
+	sprintf(array, "%d%d%d%d", num1, num2, num3, num4);
+	result = f_write(&file1, (const void*)(char*)array, sizeof(array), &BytesWr);
 	xil_printf("GPS data = %s\n\r", (char*)array);
 	result = f_close(&file1);
 	cleanup_platform();

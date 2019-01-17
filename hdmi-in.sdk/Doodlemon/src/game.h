@@ -77,5 +77,5 @@ void DemoInvertFrame(u8 *srcFrame, u8 *destFrame, u32 width, u32 height, u32 str
 void DemoPrintTest(u8 *frame, u32 width, u32 height, u32 stride, int pattern);
 void DemoScaleFrame(u8 *srcFrame, u8 *destFrame, u32 srcWidth, u32 srcHeight, u32 destWidth, u32 destHeight, u32 stride);
 void DemoISR(void *callBackRef, void *pVideo);
-void SDWrite(char *array, uint length);
+void SDWrite(int num1, int num2, int num3, int num4);
 #endif /* SRC_VIDEO_CAPTURE_GAME_H_ */
