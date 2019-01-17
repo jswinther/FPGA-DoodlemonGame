@@ -57,7 +57,7 @@
 #include "Kirby.h"
 #include "Gameover.h"
 #include "Alphabet.h"
-#include <avr/io.h>	/* Device specific declarations */
+//#include <avr/io.h>	/* Device specific declarations */
 #include "ff.h"		/* Declarations of FatFs API */
 
 
