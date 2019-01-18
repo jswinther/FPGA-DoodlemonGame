@@ -43,9 +43,8 @@
 #include "xil_printf.h"
 #include "xtime_l.h"
 
+/* Headerfiles that contain game logic */
 #include "game.h"
-#include "deadLogic.h"
-
 #include "score.h"
 
 
@@ -106,7 +105,9 @@
 #define VID_GPIO_IRPT_ID XPS_FPGA4_INT_ID
 #define SCU_TIMER_ID XPAR_SCUTIMER_DEVICE_ID
 #define UART_BASEADDR XPAR_PS7_UART_1_BASEADDR
-
+#define DEMO_MAX_FRAME (1920*1080*3)
+#define DEMO_STRIDE (1920*3)
+#define DEMO_START_ON_DET 1
 
 /* ------------------------------------------------------------ */
 /*				Global Variables								*/
@@ -118,6 +119,11 @@ u8 *pFrames[DISPLAY_NUM_FRAMES]; //array of pointers to the frame buffers
 DisplayCtrl dispCtrl;
 int resetf = 1;
 int frame;
+
+/*
+ * Dead
+ */
+int dead = 0;
 
 //Interrupt vector table
 VideoCapture videoCapt;
@@ -138,7 +144,12 @@ u8 YourscoreWord[] = {Y, O, U, R, S, C, O, R, E};
 u8 AveragescoreWord[] = {A, V, E, R, A, G, E, S, C, O ,R ,E};
 u8 alpha[] = {A, B, C, D, E, F, G, H, I, J, K, L ,M ,N ,O ,P ,Q ,R ,S ,T ,U, V, W, X, Y, Z};
 
-
+struct Block jumperBlock = {JUMPER_WIDTH, JUMPER_HEIGHT, (490*DEMO_STRIDE), 2830, 0};
+struct Block *jumper = &jumperBlock;
+struct Block platformBlock[PLATFORM_AMOUNT];
+struct Block *platform[PLATFORM_AMOUNT];
+enum direction jumperDir = UL;
+enum Velocity jumperVelocity = GROUND;
 /************ SD card parameters ************/
 static FATFS FS_instance;			// File System instance
 static FIL file1;					// File instance
@@ -151,6 +162,12 @@ int j = 0;							// file name index
 uint stringlength = 0;
 /************ SD card parameters ************/
 
+/* ------------------------------------------------------------ */
+/*						 Prototypes		    					*/
+/* ------------------------------------------------------------ */
+
+void DemoInitialize();
+void DemoISR(void *callBackRef, void *pVideo);
 
 /* ------------------------------------------------------------ */
 /*						     Main		    					*/
@@ -180,26 +197,17 @@ int main(void) {
 
 
 
+
+
+
 /* ------------------------------------------------------------ */
-/*						     Game		    					*/
+/*						 Functions		    					*/
 /* ------------------------------------------------------------ */
 
-void SDWrite(int num1, int num2, int num3, int num4) {
-	init_platform();
-	result = f_mount(&FS_instance,Path, 1);
-	sprintf(FileName, "FILE.TXT");
-	Log_File = (char *)FileName;
-	result = f_open(&file1, Log_File, FA_CREATE_ALWAYS | FA_WRITE );
-	char array[8];
-	sprintf(array, "%d%d%d%d", num1, num2, num3, num4);
-	result = f_write(&file1, (const void*)(char*)array, sizeof(array), &BytesWr);
-	xil_printf("GPS data = %s\n\r", (char*)array);
-	result = f_close(&file1);
-	cleanup_platform();
-}
-
-
-
+/*
+ *  Generates platforms, sprite
+ *  then it enters an infinite while loop where the game will play out.
+ */
 void DemoStartGame() {
 	while(1) {
 		if(resetf == 1) {
@@ -209,60 +217,118 @@ void DemoStartGame() {
 			Xil_DCacheFlushRange((unsigned int)frameBuf[0], DEMO_MAX_FRAME);
 			DisplayChangeFrame(&dispCtrl, 0);
 		}
-
 		if(btn_value == 2 || btn_value == 4)
 			dead = 0;
 		while(dead != 1) {
 			if (frame >= DISPLAY_NUM_FRAMES) {
-						frame = 0;
-					}
-					PrintBackground(frameBuf[frame], 1920, 1080, 5760, whiteLine);
-					Move(frameBuf[frame]);
-					Print(frameBuf[frame]);
-					Xil_DCacheFlushRange((unsigned int)frameBuf[frame], DEMO_MAX_FRAME);
-					DisplayChangeFrame(&dispCtrl, frame);
-					frame = dispCtrl.curFrame +1;
-					resetf = 1;
+				frame = 0;
+			}
+			PrintBackground(frameBuf[frame], 1920, 1080, 5760, whiteLine);
+			Move(frameBuf[frame]);
+			Print(frameBuf[frame]);
+			Xil_DCacheFlushRange((unsigned int)frameBuf[frame], DEMO_MAX_FRAME);
+			DisplayChangeFrame(&dispCtrl, frame);
+			frame = dispCtrl.curFrame +1;
+			resetf = 1;
 		}
-
-
-
-
-
 	}
 }
 
-
-
+/*
+ * This function is called in DemoStartGame and it resets the game environment
+ *  and halts until a button is pressed.
+ */
 void ResetGame(u8 *frame) {
 	for(int i = 0; i < 3; i++) {
 		PrintBackground(frameBuf[i], 1920, 1080, 5760, whiteLine);
 		PrintBackground(frameBuf[i], 150, 1080, 5760, HeaderImg);
-
-
 	}
-			int random_x;
-			int random_y = 2;
-			for(int i = 0; i < PLATFORM_AMOUNT; i++) {
-				random_x = rand() % 939 + 0;
-				random_y += 576;
-				platformBlock[i].height = PLATFORM_HEIGHT;
-				platformBlock[i].width = PLATFORM_WIDTH;
-				platformBlock[i].x = random_x*DEMO_STRIDE;
-				platformBlock[i].y = random_y;
-				platformBlock[i].velocity = PLATFORM_SPEED;
-				platform[i] = &platformBlock[i];
-			}
-			jumperBlock.x = (540-(JUMPER_WIDTH/2))*DEMO_STRIDE;
-			jumperBlock.y = 3802;
-			PrintScore(frame, ones, tens, hundreds, thousands, 500, 3500);
-			resetScore();
-			platformhits = 0;
-			platformspeed = 6;
-			jumperVelocity = GROUND;
-			resetf = 0;
+	int random_x;
+	int random_y = 2;
+	for(int i = 0; i < PLATFORM_AMOUNT; i++) {
+		random_x = rand() % 939 + 0;
+		random_y += 576;
+		platformBlock[i].height = PLATFORM_HEIGHT;
+		platformBlock[i].width = PLATFORM_WIDTH;
+		platformBlock[i].x = random_x*DEMO_STRIDE;
+		platformBlock[i].y = random_y;
+		platformBlock[i].velocity = PLATFORM_SPEED;
+		platform[i] = &platformBlock[i];
+	}
+	jumperBlock.x = (540-(JUMPER_WIDTH/2))*DEMO_STRIDE;
+	jumperBlock.y = 3802;
+	PrintScore(frame, ones, tens, hundreds, thousands, 500, 3500);
+	resetScore();
+	platformhits = 0;
+	platformspeed = 6;
+	jumperVelocity = GROUND;
+	resetf = 0;
 }
 
+/*
+ * Prints the entire game when playig ( Background, Platforms, Sprite and Score)
+ */
+void Print(u8 *frame) {
+
+	for(int j = 0; j < PLATFORM_AMOUNT; j++) {
+		blockPrinter(frame, DEMO_STRIDE, platformImg, PLATFORM_WIDTH, PLATFORM_HEIGHT, platformBlock[j]);
+	}
+	PrintBackground(frame, 150, 1080, 5760, HeaderImg);
+	if (dead == 1){
+		ImagePrint(frameBuf[0], Gameover, 0, 2101, 1080, 240);
+		ImagePrint(frameBuf[1], Gameover, 0, 2101, 1080, 240);
+		ImagePrint(frameBuf[2], Gameover, 0, 2101, 1080, 240);
+	}
+	PrintScore(frame, ones, tens, hundreds, thousands, 700, 470);
+	PrintScore(frame, highones, hightens, highhundreds, highthousands, 700, 560);
+	PrintScore(frame, avgones, avgtens, avghundreds, avgthousands, 700, 650);
+	PrintWord(frame, HighscoreWord, 1050, 470, 9);
+	PrintWord(frame, YourscoreWord, 1050, 560, 9);
+	PrintWord(frame, AveragescoreWord, 1050, 650, 12);
+	PrintWord(frame, alpha, 1050, 740, 26);
+
+	switch(jumperDir) {
+	case UL:
+		ImagePrint(frame, kirbyUpLeft, jumperBlock.x, jumperBlock.y, 100, 100);
+		break;
+	case UR:
+		ImagePrint(frame, kirbyUpRight, jumperBlock.x, jumperBlock.y, 100, 100);
+		break;
+	case DL:
+		ImagePrint(frame, kirbyFallLeft, jumperBlock.x, jumperBlock.y, 100, 100);
+		break;
+	case DR:
+		ImagePrint(frame, kirbyFallRight, jumperBlock.x, jumperBlock.y, 100, 100);
+		break;
+	default:
+	break;
+	}
+}
+
+/*
+ * Prints an image without white background
+ */
+void ImagePrint(u8 *frame, u8 *array,  u32 x, u32 y, int imgH, int imgW) {
+	int cor = x+y;
+	int arrayCounter = 0;
+	for(int i = 0; i < imgH; i++) {
+		for(int j = 0; j<imgW*3; j+=3) {
+			if (array[arrayCounter] != 255 && array[arrayCounter+1] != 255 && array[arrayCounter+2] != 255){
+			frame[cor + j + 1] = array[arrayCounter + 0];
+			frame[cor + j + 2] = array[arrayCounter + 1];
+			frame[cor + j + 0] = array[arrayCounter + 2];
+			arrayCounter += 3;
+			} else {
+				arrayCounter+=3;
+			}
+		}
+		cor = cor + DEMO_STRIDE;
+	}
+}
+
+/*
+ * Prints the background of the game, used in master function Print.
+ */
 void PrintBackground(u8 *frame, u32 width, u32 height, u32 stride, u8 *pic)
 {
 	u32 lineStart = 2;
@@ -276,6 +342,10 @@ void PrintBackground(u8 *frame, u32 width, u32 height, u32 stride, u8 *pic)
 	}
 }
 
+/*
+ * Prints a word using a predefined array of letters
+ * that can be found in Images/alphabet.h
+ */
 void PrintWord(u8 *frame, u8 *array, u32 x, u32 y, u8 wordLength) {
 	int cor = x*DEMO_STRIDE+y;
 	int arrayCounter = 0;
@@ -300,12 +370,39 @@ void PrintWord(u8 *frame, u8 *array, u32 x, u32 y, u8 wordLength) {
 	}
 }
 
+/*
+ * Prints a platform given its struct and the image values.
+ */
+void blockPrinter(u8 *frame, u32 stride,u8 *pic,  u32 picWidth, u32 picHeight, struct Block block)
+{
+	u32 lineStart = 0;
+	u32 lineStartPic = 0;
+		for(int ycoi = 0; ycoi < picHeight; ycoi++)
+		{
+			memcpy(frame+block.x+block.y + lineStart, pic+lineStartPic, picWidth*3);
+			lineStart += stride;
+			lineStartPic += picWidth*3;
+		}
+}
+
+/*
+ * Prints 4 numbers, first represents 1000, then 100, then 10, then 1's. Used to print:
+ * Current Score.
+ * Highscore.
+ * Average Score.
+ */
 void PrintScore(u8 *frame, u8 ones, u8 tens, u8 hundreds, u8 thousands, u32 x, u32 y) {
 	ImagePrint(frame, numArray[thousands], (x+63)*DEMO_STRIDE, y, 20, 20);
 	ImagePrint(frame, numArray[hundreds], (x+42)*DEMO_STRIDE, y, 20, 20);
 	ImagePrint(frame, numArray[tens], (x+21)*DEMO_STRIDE, y, 20, 20);
 	ImagePrint(frame, numArray[ones], x*DEMO_STRIDE, y, 20, 20);
 }
+
+
+/*
+ * Jakub implementer her.
+ */
+
 
 void Move(u8 *frame) {
 	switch(btn_value) {
@@ -393,63 +490,9 @@ void Move(u8 *frame) {
 	isDead(jumperBlock.x, jumperBlock.y);
 }
 
-
-void Print(u8 *frame) {
-
-	for(int j = 0; j < PLATFORM_AMOUNT; j++) {
-		blockPrinter(frame, DEMO_STRIDE, platformImg, PLATFORM_WIDTH, PLATFORM_HEIGHT, platformBlock[j]);
-	}
-	PrintBackground(frame, 150, 1080, 5760, HeaderImg);
-	if (dead == 1){
-		ImagePrint(frameBuf[0], Gameover, 0, 2101, 1080, 240);
-		ImagePrint(frameBuf[1], Gameover, 0, 2101, 1080, 240);
-		ImagePrint(frameBuf[2], Gameover, 0, 2101, 1080, 240);
-	}
-	PrintScore(frame, ones, tens, hundreds, thousands, 700, 470);
-	PrintScore(frame, highones, hightens, highhundreds, highthousands, 700, 560);
-	PrintScore(frame, avgones, avgtens, avghundreds, avgthousands, 700, 650);
-	PrintWord(frame, HighscoreWord, 1050, 470, 9);
-	PrintWord(frame, YourscoreWord, 1050, 560, 9);
-	PrintWord(frame, AveragescoreWord, 1050, 650, 12);
-	PrintWord(frame, alpha, 1050, 740, 26);
-
-	switch(jumperDir) {
-	case UL:
-		ImagePrint(frame, kirbyUpLeft, jumperBlock.x, jumperBlock.y, 100, 100);
-		break;
-	case UR:
-		ImagePrint(frame, kirbyUpRight, jumperBlock.x, jumperBlock.y, 100, 100);
-		break;
-	case DL:
-		ImagePrint(frame, kirbyFallLeft, jumperBlock.x, jumperBlock.y, 100, 100);
-		break;
-	case DR:
-		ImagePrint(frame, kirbyFallRight, jumperBlock.x, jumperBlock.y, 100, 100);
-		break;
-	default:
-	break;
-	}
-}
-
-void ImagePrint(u8 *frame, u8 *array,  u32 x, u32 y, int imgH, int imgW) {
-	int cor = x+y;
-	int arrayCounter = 0;
-	for(int i = 0; i < imgH; i++) {
-		for(int j = 0; j<imgW*3; j+=3) {
-			if (array[arrayCounter] != 255 && array[arrayCounter+1] != 255 && array[arrayCounter+2] != 255){
-			frame[cor + j + 1] = array[arrayCounter + 0];
-			frame[cor + j + 2] = array[arrayCounter + 1];
-			frame[cor + j + 0] = array[arrayCounter + 2];
-			arrayCounter += 3;
-			} else {
-				arrayCounter+=3;
-			}
-		}
-		cor = cor + DEMO_STRIDE;
-	}
-
-}
-
+/*
+ * Check if a given platform collides with the sprite.
+ */
 int collisiondetect (struct Block *jumper, struct Block *platform){
 	int jumperw = jumper->width;
 	int jumperh = (jumper->height)*3;
@@ -475,17 +518,41 @@ int collisiondetect (struct Block *jumper, struct Block *platform){
 	return 0;
 }
 
-void blockPrinter(u8 *frame, u32 stride,u8 *pic,  u32 picWidth, u32 picHeight, struct Block block)
+/*
+ * Checks if the sprite hits the floor, ceiling or walls,
+ * if so the player dies and the dead = 1.
+ */
+void isDead(u32 x, u32 y)
 {
-	u32 lineStart = 0;
-	u32 lineStartPic = 0;
-		for(int ycoi = 0; ycoi < picHeight; ycoi++)
-		{
-			memcpy(frame+block.x+block.y + lineStart, pic+lineStartPic, picWidth*3);
-			lineStart += stride;
-			lineStartPic += picWidth*3;
-		}
+	// Hits Wall.
+	if(x < rightWall || leftWall < x) {
+		dead = 1;
+
+	}
+	// Hits floor or ceiling.
+	if(y < ceiling || floor < y) {
+		dead = 1;
+	}
 }
+
+
+/*
+ * Writes four numbers to the SD card.
+ */
+void SDWrite(int num1, int num2, int num3, int num4) {
+	init_platform();
+	result = f_mount(&FS_instance,Path, 1);
+	sprintf(FileName, "FILE.TXT");
+	Log_File = (char *)FileName;
+	result = f_open(&file1, Log_File, FA_CREATE_ALWAYS | FA_WRITE );
+	char array[8];
+	sprintf(array, "%d%d%d%d", num1, num2, num3, num4);
+	result = f_write(&file1, (const void*)(char*)array, sizeof(array), &BytesWr);
+	xil_printf("GPS data = %s\n\r", (char*)array);
+	result = f_close(&file1);
+	cleanup_platform();
+}
+
 
 void DemoInitialize()
 {
