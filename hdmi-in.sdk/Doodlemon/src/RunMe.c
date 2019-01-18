@@ -160,6 +160,10 @@ static const char *Path = "0:/";	//  string pointer to the logical drive number
 unsigned int BytesWr;				// Bytes written
 int j = 0;							// file name index
 uint stringlength = 0;
+
+char c;
+int x = 0;
+char SDArray[4];
 /************ SD card parameters ************/
 
 /* ------------------------------------------------------------ */
@@ -209,6 +213,8 @@ int main(void) {
  *  then it enters an infinite while loop where the game will play out.
  */
 void DemoStartGame() {
+
+	SDRead();
 
 	while(1) {
 		if(resetf == 1) {
@@ -571,18 +577,27 @@ void SDWrite(int num1, int num2, int num3, int num4) {
 void SDRead() {
 	init_platform();
 	result = f_mount(&FS_instance,Path, 1);
+
 	sprintf(FileName, "FILE.TXT");
 	Log_File = (char *)FileName;
 	result = f_open(&file1, Log_File, FA_READ );
-	char array[8];
-	result = f_read(&file1, array, 8, &BytesWr);
+
+	char SDArray[4];
+	result = f_read(&file1, (void*)(char*)SDArray, sizeof(SDArray), &BytesWr);
+
+	xil_printf("readhighscore data = %s\n\r", (char*)SDArray);
 	result = f_close(&file1);
+
 	cleanup_platform();
 
-	highthousands = array[0];
-	highhundreds = array[1];
-	hightens = array[2];
-	highones = array[3];
+	highthousands = (int)SDArray[0]-48; //henter ascii værdi af 0, hvilket er 48.
+
+	highhundreds = (int)SDArray[1]-48;
+
+	hightens = (int)SDArray[2]-48;
+
+	highones = (int)SDArray[3]-48;
+
 }
 
 void DemoInitialize()

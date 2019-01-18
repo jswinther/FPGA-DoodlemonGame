@@ -85,5 +85,7 @@ void isDead(int x, int y);
 void Increment();
 void SDWrite(int num1, int num2, int num3, int num4);
 void SDRead();
+void SDRead();
+int oldHighScore();
 
 #endif /* SRC_VIDEO_CAPTURE_GAME_H_ */

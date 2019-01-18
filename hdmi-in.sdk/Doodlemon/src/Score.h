@@ -26,6 +26,7 @@ int hundreds = 0;
 int thousands = 0;
 
 //Highscore
+int oldHighscore = 0;
 int highones = 0;
 int hightens = 0;
 int highhundreds = 0;
@@ -95,7 +96,7 @@ void Increment() {
 }
 
 void resetScore(){
-	if(currentScoreCounter > highscoreCounter) {
+	if(currentScoreCounter > oldHighScore()) {
 		highscoreCounter = currentScoreCounter;
 		highones = ones;
 		hightens = tens;
@@ -123,6 +124,16 @@ void resetScore(){
 	intervalCount = 0;
 	incrementInterval = 5;
 
+}
+
+int oldHighScore(){
+
+	oldHighscore = 0;
+	oldHighscore += highthousands*1000;
+	oldHighscore += highhundreds*100;
+	oldHighscore += hightens*10;
+	oldHighscore += highones;
+	return oldHighscore;
 }
 
 #endif /* SRC_SCORE_H_ */
