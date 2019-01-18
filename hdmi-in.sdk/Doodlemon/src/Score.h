@@ -41,13 +41,17 @@ int averageScore = 0;
 int totalScore = 0;
 
 //Times played
-int gamesPlayed = 1;
+int gamesPlayed = 0;
 
 
 void findAverageScore(){
 	totalScore += (ones+(10*tens)+(100*hundreds)+(1000*thousands));
 	averageScore = totalScore/gamesPlayed;
 	xil_printf("Average score: %d", averageScore);
+	avgones = 0;
+	avgtens = 0;
+	avghundreds = 0;
+	avgthousands = 0;
 
 	while(averageScore > 1000){
 		avgthousands++;
@@ -64,10 +68,11 @@ void findAverageScore(){
 			averageScore = averageScore - 10;
 	}
 
-	while(averageScore >= 1){
+	while(averageScore > 0){
 			avgones++;
 			averageScore = averageScore - 1;
 	}
+
 
 }
 void Increment() {
