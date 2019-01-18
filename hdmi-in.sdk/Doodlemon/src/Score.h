@@ -101,9 +101,9 @@ void resetScore(){
 		hightens = tens;
 		highhundreds = hundreds;
 		highthousands = thousands;
-		gamesPlayed++;
-		currentScoreCounter = 0;
 		findAverageScore();
+		currentScoreCounter = 0;
+		gamesPlayed++;
 		ones = 0;
 		tens = 0;
 		hundreds = 0;
@@ -111,9 +111,10 @@ void resetScore(){
 		SDWrite(highthousands, highhundreds, hightens, highones);
 
 	} else {
+		findAverageScore();
 		gamesPlayed++;
 		currentScoreCounter = 0;
-		findAverageScore();
+
 		ones = 0;
 		tens = 0;
 		hundreds = 0;
