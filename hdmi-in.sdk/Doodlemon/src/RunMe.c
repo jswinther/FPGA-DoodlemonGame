@@ -323,6 +323,13 @@ void ImagePrint(u8 *frame, u8 *array,  u32 x, u32 y, int imgH, int imgW) {
 				arrayCounter+=3;
 			}
 		}
+
+		if(cor > DEMO_MAX_FRAME) {
+			cor = cor - DEMO_MAX_FRAME;
+		}
+		if(cor < DEMO_STRIDE){
+			cor = cor + DEMO_MAX_FRAME;
+		}
 		cor = cor + DEMO_STRIDE;
 	}
 }
@@ -526,9 +533,12 @@ int collisiondetect (struct Block *jumper, struct Block *platform){
 void isDead(u32 x, u32 y)
 {
 	// Hits Wall.
-	if(x < rightWall || leftWall < x) {
-		dead = 1;
+	if(x < rightWall) {
+		jumperBlock.x = leftWall;
+	}
 
+	if(x > leftWall) {
+		jumperBlock.x = rightWall;
 	}
 	// Hits floor or ceiling.
 	if(y < ceiling || floor < y) {
