@@ -323,14 +323,14 @@ void ImagePrint(u8 *frame, u8 *array,  u32 x, u32 y, int imgH, int imgW) {
 				arrayCounter+=3;
 			}
 		}
-
-		if(cor > DEMO_MAX_FRAME) {
+		cor = cor + DEMO_STRIDE;
+		if(cor > leftWall) {
 			cor = cor - DEMO_MAX_FRAME;
 		}
-		if(cor < DEMO_STRIDE){
+		if(cor < rightWall){
 			cor = cor + DEMO_MAX_FRAME;
 		}
-		cor = cor + DEMO_STRIDE;
+
 	}
 }
 
@@ -415,11 +415,12 @@ void PrintScore(u8 *frame, u8 ones, u8 tens, u8 hundreds, u8 thousands, u32 x, u
 void Move(u8 *frame) {
 	switch(btn_value) {
 	case 1:
-		jumperBlock.x -= DEMO_STRIDE*21;
+		jumperBlock.x = jumperBlock.x - DEMO_STRIDE*21;
 		if (jumperBlock.velocity < 0){
 			jumperDir = DR;
-		}else  {
-			jumperDir = UR;}
+		} else  {
+			jumperDir = UR;
+		}
 		break;
 	case 2:
 		jumperBlock.x -= DEMO_STRIDE*3;
@@ -430,9 +431,10 @@ void Move(u8 *frame) {
 	case 8:
 		jumperBlock.x += DEMO_STRIDE*21;
 		if (jumperBlock.velocity < 0){
-					jumperDir = DL;
-				}else  {
-					jumperDir = UL;}
+			jumperDir = DL;
+		} else  {
+			jumperDir = UL;
+		}
 		break;
 	default:
 		break;
@@ -530,7 +532,7 @@ int collisiondetect (struct Block *jumper, struct Block *platform){
  * Checks if the sprite hits the floor, ceiling or walls,
  * if so the player dies and the dead = 1.
  */
-void isDead(u32 x, u32 y)
+void isDead(int x, int y)
 {
 	// Hits Wall.
 	if(x < rightWall) {

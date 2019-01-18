@@ -27,7 +27,7 @@
  * Death Logic Definitions.
  */
 #define leftWall 1080*(1920*3)
-#define rightWall (1920*3)
+#define rightWall 0
 #define floor 5460
 #define ceiling 0
 
@@ -37,8 +37,8 @@
 struct Block {
 	u16 width;
 	u16 height;
-	u32 x;
-	u32 y;
+	int x;
+	int y;
 	int velocity;
 };
 
@@ -81,7 +81,7 @@ void blockPrinter(u8 *frame, u32 stride,u8 *pic,  u32 picWidth, u32 picHeight, s
 void PrintScore(u8 *frame, u8 ones, u8 tens, u8 hundreds, u8 thousands, u32 x, u32 y);
 void Move(u8 *frame);
 int collisiondetect (struct Block *jumper, struct Block *platform);
-void isDead(u32 x, u32 y);
+void isDead(int x, int y);
 void Increment();
 void SDWrite(int num1, int num2, int num3, int num4);
 void SDRead();
