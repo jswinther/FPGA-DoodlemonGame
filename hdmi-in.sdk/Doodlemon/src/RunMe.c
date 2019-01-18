@@ -123,7 +123,7 @@ int frame;
 /*
  * Dead
  */
-int dead = 0;
+int dead = 1;
 
 //Interrupt vector table
 VideoCapture videoCapt;
