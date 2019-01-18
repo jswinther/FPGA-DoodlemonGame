@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Fri Jan 11 14:56:04 2019
-| Host         : DESKTOP-SHDFERO running 64-bit major release  (build 9200)
+| Date         : Fri Jan 18 14:49:51 2019
+| Host         : NicoLenovo running 64-bit major release  (build 9200)
 | Command      : report_drc -file hdmi_in_wrapper_drc_opted.rpt -pb hdmi_in_wrapper_drc_opted.pb -rpx hdmi_in_wrapper_drc_opted.rpx
 | Design       : hdmi_in_wrapper
 | Device       : xc7z010clg400-1
@@ -24,18 +24,30 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 15
-+-----------+----------+----------------------------+------------+
-| Rule      | Severity | Description                | Violations |
-+-----------+----------+----------------------------+------------+
-| REQP-1839 | Warning  | RAMB36 async control check | 10         |
-| REQP-1840 | Warning  | RAMB18 async control check | 1          |
-| REQP-165  | Advisory | writefirst                 | 3          |
-| REQP-181  | Advisory | writefirst                 | 1          |
-+-----------+----------+----------------------------+------------+
+             Violations found: 17
++-----------+------------------+----------------------------+------------+
+| Rule      | Severity         | Description                | Violations |
++-----------+------------------+----------------------------+------------+
+| NSTD-1    | Critical Warning | Unspecified I/O Standard   | 1          |
+| UCIO-1    | Critical Warning | Unconstrained Logical Port | 1          |
+| REQP-1839 | Warning          | RAMB36 async control check | 10         |
+| REQP-1840 | Warning          | RAMB18 async control check | 1          |
+| REQP-165  | Advisory         | writefirst                 | 3          |
+| REQP-181  | Advisory         | writefirst                 | 1          |
++-----------+------------------+----------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
+NSTD-1#1 Critical Warning
+Unspecified I/O Standard  
+25 out of 187 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: BCLK_0, PBLRCLK_0, PBDATA_0, RECLRCLK_0, RECDAT_0, sws_4bits_tri_i[3:0], leds_4bits_tri_o[3:0], IIC_1_0_scl_io, IIC_1_0_sda_io, IIC_0_scl_io, IIC_0_sda_io, GPIO_0_tri_io[0], FCLK_CLK3_0, btns_4bits_tri_i[3:0], DDC_scl_io (the first 15 of 16 listed).
+Related violations: <none>
+
+UCIO-1#1 Critical Warning
+Unconstrained Logical Port  
+25 out of 187 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: BCLK_0, PBLRCLK_0, PBDATA_0, RECLRCLK_0, RECDAT_0, sws_4bits_tri_i[3:0], leds_4bits_tri_o[3:0], IIC_1_0_scl_io, IIC_1_0_sda_io, IIC_0_scl_io, IIC_0_sda_io, GPIO_0_tri_io[0], FCLK_CLK3_0, btns_4bits_tri_i[3:0], DDC_scl_io (the first 15 of 16 listed).
+Related violations: <none>
+
 REQP-1839#1 Warning
 RAMB36 async control check  
 The RAMB36E1 hdmi_in_i/axi_mem_intercon/m00_couplers/m00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin hdmi_in_i/axi_mem_intercon/m00_couplers/m00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ENBWREN (net: hdmi_in_i/axi_mem_intercon/m00_couplers/m00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/ENA_I_0) which is driven by a register (hdmi_in_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.

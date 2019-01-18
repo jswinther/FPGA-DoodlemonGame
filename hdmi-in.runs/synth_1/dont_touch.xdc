@@ -3,6 +3,8 @@
 
 # XDC: imports/constraints/ZYBO_Master.xdc
 
+# XDC: imports/constraints/adventures_with_ip.xdc
+
 # Block Designs: bd/hdmi_in/hdmi_in.bd
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hdmi_in || ORIG_REF_NAME==hdmi_in} -quiet] -quiet
 
@@ -72,6 +74,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hdmi_in_xbar_0 
 # IP: bd/hdmi_in/ip/hdmi_in_xbar_1/hdmi_in_xbar_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hdmi_in_xbar_1 || ORIG_REF_NAME==hdmi_in_xbar_1} -quiet] -quiet
 
+# IP: bd/hdmi_in/ip/hdmi_in_zybo_audio_ctrl_0_0/hdmi_in_zybo_audio_ctrl_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hdmi_in_zybo_audio_ctrl_0_0 || ORIG_REF_NAME==hdmi_in_zybo_audio_ctrl_0_0} -quiet] -quiet
+
 # IP: bd/hdmi_in/ip/hdmi_in_s00_regslice_0/hdmi_in_s00_regslice_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hdmi_in_s00_regslice_0 || ORIG_REF_NAME==hdmi_in_s00_regslice_0} -quiet] -quiet
 
@@ -95,5 +100,11 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hdmi_in_auto_pc
 
 # IP: bd/hdmi_in/ip/hdmi_in_auto_pc_1/hdmi_in_auto_pc_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hdmi_in_auto_pc_1 || ORIG_REF_NAME==hdmi_in_auto_pc_1} -quiet] -quiet
+
+# IP: bd/hdmi_in/ip/hdmi_in_axi_gpio_0_0/hdmi_in_axi_gpio_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hdmi_in_axi_gpio_0_0 || ORIG_REF_NAME==hdmi_in_axi_gpio_0_0} -quiet] -quiet
+
+# IP: bd/hdmi_in/ip/hdmi_in_axi_gpio_1_1/hdmi_in_axi_gpio_1_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==hdmi_in_axi_gpio_1_1 || ORIG_REF_NAME==hdmi_in_axi_gpio_1_1} -quiet] -quiet
 
 # XDC: bd/hdmi_in/hdmi_in_ooc.xdc

@@ -683,6 +683,12 @@
   I2C0_SCL_I,
   I2C0_SCL_O,
   I2C0_SCL_T,
+  I2C1_SDA_I,
+  I2C1_SDA_O,
+  I2C1_SDA_T,
+  I2C1_SCL_I,
+  I2C1_SCL_O,
+  I2C1_SCL_T,
   SDIO0_WP,
   TTC0_WAVE0_OUT,
   TTC0_WAVE1_OUT,
@@ -778,6 +784,7 @@
   FCLK_CLK0,
   FCLK_CLK1,
   FCLK_CLK2,
+  FCLK_CLK3,
   FCLK_RESET0_N,
   MIO,
   DDR_CAS_n,
@@ -856,7 +863,7 @@
       parameter C_FCLK_CLK0_BUF = "TRUE";
       parameter C_FCLK_CLK1_BUF = "TRUE";
       parameter C_FCLK_CLK2_BUF = "TRUE";
-      parameter C_FCLK_CLK3_BUF = "FALSE";
+      parameter C_FCLK_CLK3_BUF = "TRUE";
       parameter C_PACKAGE_NAME = "clg400";
       parameter C_GP0_EN_MODIFIABLE_TXN = "0";
       parameter C_GP1_EN_MODIFIABLE_TXN = "0";
@@ -869,6 +876,12 @@
       input  I2C0_SCL_I;
       output  I2C0_SCL_O;
       output  I2C0_SCL_T;
+      input  I2C1_SDA_I;
+      output  I2C1_SDA_O;
+      output  I2C1_SDA_T;
+      input  I2C1_SCL_I;
+      output  I2C1_SCL_O;
+      output  I2C1_SCL_T;
       input  SDIO0_WP;
       output  TTC0_WAVE0_OUT;
       output  TTC0_WAVE1_OUT;
@@ -964,6 +977,7 @@
       output  FCLK_CLK0;
       output  FCLK_CLK1;
       output  FCLK_CLK2;
+      output  FCLK_CLK3;
       output  FCLK_RESET0_N;
       inout  [53 : 0] MIO;
       inout  DDR_CAS_n;
@@ -993,6 +1007,10 @@
       reg I2C0_SDA_T;
       reg I2C0_SCL_O;
       reg I2C0_SCL_T;
+      reg I2C1_SDA_O;
+      reg I2C1_SDA_T;
+      reg I2C1_SCL_O;
+      reg I2C1_SCL_T;
       reg TTC0_WAVE0_OUT;
       reg TTC0_WAVE1_OUT;
       reg TTC0_WAVE2_OUT;
@@ -1043,6 +1061,7 @@
       reg FCLK_CLK0;
       reg FCLK_CLK1;
       reg FCLK_CLK2;
+      reg FCLK_CLK3;
       reg FCLK_RESET0_N;
       string ip_name;
       reg disable_port;
@@ -1058,6 +1077,7 @@ import "DPI-C" function void ps7_init_s_axi_hp0(input int S_AXI_HP0_AWID_size,in
 import "DPI-C" function void ps7_simulate_single_cycle_FCLK_CLK0();
 import "DPI-C" function void ps7_simulate_single_cycle_FCLK_CLK1();
 import "DPI-C" function void ps7_simulate_single_cycle_FCLK_CLK2();
+import "DPI-C" function void ps7_simulate_single_cycle_FCLK_CLK3();
 import "DPI-C" function void ps7_simulate_single_cycle_M_AXI_GP0_ACLK();
 import "DPI-C" function void ps7_set_inputs_m_axi_gp0_M_AXI_GP0_ACLK(
 input bit M_AXI_GP0_AWREADY,
@@ -1282,6 +1302,19 @@ output bit S_AXI_HP0_RVALID
   begin
    ps7_set_ip_context(ip_name);
    ps7_simulate_single_cycle_FCLK_CLK2();
+  end
+
+  initial
+  begin
+     FCLK_CLK3 = 1'b0;
+  end
+
+  always #(40.690104166666664) FCLK_CLK3 <= ~FCLK_CLK3;
+
+  always@(posedge FCLK_CLK3)
+  begin
+   ps7_set_ip_context(ip_name);
+   ps7_simulate_single_cycle_FCLK_CLK3();
   end
 
 always@(posedge IRQ_F2P[0])
