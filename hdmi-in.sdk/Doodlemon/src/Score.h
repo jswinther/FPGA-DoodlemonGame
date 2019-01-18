@@ -10,23 +10,13 @@
 #define SRC_SCORE_H_
 
 u32 platformspeed = 15;
-
-
-
-
 u8 speedCounter = 0;
-
-
-
 u16 incrementInterval = 5;
 u8 intervalCount = 0;
-
-
 
 u16 currentScoreCounter = 0;
 u16 highscoreCounter = 0;
 u16 averageScoreCounter = 0;
-
 
 int ones = 0;
 int tens = 0;
@@ -56,6 +46,27 @@ void findAverageScore(){
 	totalScore += (ones+(10*tens)+(100*hundreds)+(1000*thousands));
 	averageScore = totalScore/gamesPlayed;
 	xil_printf("Average score: %d", averageScore);
+
+	while(averageScore > 1000){
+		avgthousands++;
+		averageScore = averageScore - 1000;
+	}
+
+	while(averageScore > 100){
+			avghundreds++;
+			averageScore = averageScore - 100;
+		}
+
+	while(averageScore > 10){
+			avgtens++;
+			averageScore = averageScore - 10;
+		}
+
+	while(averageScore >= 1){
+			avgones++;
+			averageScore = averageScore - 1;
+		}
+
 }
 void Increment() {
 	ones++;
