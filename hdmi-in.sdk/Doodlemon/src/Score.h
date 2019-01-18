@@ -33,15 +33,15 @@ int highhundreds = 0;
 int highthousands = 0;
 
 //Average score
-u8 avgones = 0;
-u8 avgtens = 0;
-u8 avghundreds = 0;
-u8 avgthousands = 0;
-u8 averageScore = 0;
-u8 totalScore = 0;
+int avgones = 0;
+int avgtens = 0;
+int avghundreds = 0;
+int avgthousands = 0;
+int averageScore = 0;
+int totalScore = 0;
 
 //Times played
-u8 gamesPlayed = 1;
+int gamesPlayed = 1;
 
 
 void findAverageScore(){
