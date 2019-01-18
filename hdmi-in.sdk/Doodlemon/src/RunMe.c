@@ -257,7 +257,7 @@ void ResetGame(u8 *frame) {
 	}
 	jumperBlock.x = (540-(JUMPER_WIDTH/2))*DEMO_STRIDE;
 	jumperBlock.y = 3802;
-	PrintScore(frame, ones, tens, hundreds, thousands, 500, 3500);
+	PrintScore(frame, ones, tens, hundreds, thousands, 500, 3299);
 	resetScore();
 	platformhits = 0;
 	platformspeed = 6;
@@ -282,8 +282,8 @@ void Print(u8 *frame) {
 	PrintScore(frame, ones, tens, hundreds, thousands, 700, 470);
 	PrintScore(frame, highones, hightens, highhundreds, highthousands, 700, 560);
 	PrintScore(frame, avgones, avgtens, avghundreds, avgthousands, 700, 650);
-	PrintWord(frame, HighscoreWord, 1050, 470, 9);
-	PrintWord(frame, YourscoreWord, 1050, 560, 9);
+	PrintWord(frame, YourscoreWord, 1050, 470, 9);
+	PrintWord(frame, HighscoreWord, 1050, 560, 9);
 	PrintWord(frame, AveragescoreWord, 1050, 650, 12);
 	PrintWord(frame, alpha, 1050, 740, 26);
 
