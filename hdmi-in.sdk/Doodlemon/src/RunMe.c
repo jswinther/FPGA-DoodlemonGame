@@ -190,7 +190,7 @@ int main(void) {
 	status = IntcInitFunction(INTC_DEVICE_ID, &BTNInst);
 	if(status != XST_SUCCESS) return XST_FAILURE;
 
-
+	//SDRead();
 	DemoStartGame();
 	return 0;
 }
@@ -209,6 +209,7 @@ int main(void) {
  *  then it enters an infinite while loop where the game will play out.
  */
 void DemoStartGame() {
+
 	while(1) {
 		if(resetf == 1) {
 			ResetGame(frameBuf[0]);
@@ -548,11 +549,29 @@ void SDWrite(int num1, int num2, int num3, int num4) {
 	char array[8];
 	sprintf(array, "%d%d%d%d", num1, num2, num3, num4);
 	result = f_write(&file1, (const void*)(char*)array, sizeof(array), &BytesWr);
-	xil_printf("GPS data = %s\n\r", (char*)array);
 	result = f_close(&file1);
 	cleanup_platform();
 }
 
+/*
+ * Reads the highscore from the SD card.
+ */
+void SDRead() {
+	init_platform();
+	result = f_mount(&FS_instance,Path, 1);
+	sprintf(FileName, "FILE.TXT");
+	Log_File = (char *)FileName;
+	result = f_open(&file1, Log_File, FA_READ );
+	char array[8];
+	result = f_read(&file1, array, 8, &BytesWr);
+	result = f_close(&file1);
+	cleanup_platform();
+
+	highthousands = array[0];
+	highhundreds = array[1];
+	hightens = array[2];
+	highones = array[3];
+}
 
 void DemoInitialize()
 {

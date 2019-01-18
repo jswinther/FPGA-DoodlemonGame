@@ -84,5 +84,6 @@ int collisiondetect (struct Block *jumper, struct Block *platform);
 void isDead(u32 x, u32 y);
 void Increment();
 void SDWrite(int num1, int num2, int num3, int num4);
+void SDRead();
 
 #endif /* SRC_VIDEO_CAPTURE_GAME_H_ */
