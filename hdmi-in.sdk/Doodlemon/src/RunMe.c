@@ -115,7 +115,6 @@ XAxiVdma vdma;
 
 int resetf = 1;					//Reset flag, when 1 the game initializes game components and reset positions etc. for new  game.
 int frame;						//Index of the current frame that is being displayed.
-int dead = 1;					//When 1 you're dead and it goes to game over, else you're a alive and continue playing.
 int counter = 0;				//Counter that is used to control the jumping animation, see function "Move" to see more.
 
 /*
@@ -135,12 +134,7 @@ struct Block *jumper = &jumperBlock;
 struct Block platformBlock[PLATFORM_AMOUNT];
 struct Block *platform[PLATFORM_AMOUNT];
 
-/*
- * These enumerations are used to decide which way the sprite faces
- * and jumping pattern. jumperVelocity and jumperDir is described better in game.h
- */
-enum direction jumperDir = UL;
-enum Velocity jumperVelocity = GROUND;
+
 /************ SD card parameters ************/
 static FATFS FS_instance;			// File System instance
 static FIL file1;					// File instance
@@ -222,8 +216,8 @@ void DemoStartGame() {
 			DisplayChangeFrame(&dispCtrl, 0);
 		}
 		if(btn_value == 2 || btn_value == 4)
-			dead = 0;
-		while(dead != 1) {
+			jumperDeathState = ALIVE;
+		while(jumperDeathState == ALIVE) {
 			if (frame >= DISPLAY_NUM_FRAMES) {
 				frame = 0;
 			}
@@ -280,7 +274,7 @@ void Print(u8 *frame) {
 		PrintPlatform(frame, DEMO_STRIDE, platformImg, PLATFORM_WIDTH, PLATFORM_HEIGHT, platformBlock[j]);
 	}
 	PrintBackground(frame, 150, 1080, 5760, HeaderImg);
-	if (dead == 1){
+	if (jumperDeathState == DEAD){
 		ImagePrint(frameBuf[0], Gameover, 0, 2101, 1080, 240);
 		ImagePrint(frameBuf[1], Gameover, 0, 2101, 1080, 240);
 		ImagePrint(frameBuf[2], Gameover, 0, 2101, 1080, 240);
@@ -573,7 +567,7 @@ int ColissionDetection (struct Block *jumper, struct Block *platform){
 
 /*
  * Checks if the sprite hits the GAME_FLOOR, ceiling or walls,
- * if so the player dies and the dead = 1.
+ * if so the player dies.
  */
 void DeathDetection(int x, int y)
 {
@@ -587,7 +581,7 @@ void DeathDetection(int x, int y)
 	}
 	// Hits GAME_FLOOR or ceiling.
 	if(y < ceiling || GAME_FLOOR < y) {
-		dead = 1;
+		jumperDeathState = DEAD;
 	}
 }
 

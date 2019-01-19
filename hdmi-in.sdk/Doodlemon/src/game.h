@@ -43,6 +43,10 @@ struct Block {
 };
 
 /*
+ * These enumerations are used to decide which way the sprite faces
+ * and jumping pattern. jumperVelocity and jumperDir is described better in game.h
+ */
+/*
  * Velocity enum, for the statemachine that controls the jumping of the sprite.
  * GROUND	: When the sprite hits the platforms.
  * AIR		: When the sprite is in the air, the sprite velocity is decreasing at a constant rate.
@@ -50,7 +54,7 @@ struct Block {
 enum Velocity {
 	GROUND,
 	AIR
-};
+} jumperVelocity = GROUND;
 
 /*
  * Direction enum, for the statemachine that decides which way the sprite should face,
@@ -64,9 +68,12 @@ enum direction {
 	DR,
 	UL,
 	UR
-};
+} jumperDir = UL;
 
-
+enum {
+	ALIVE,
+	DEAD
+} jumperDeathState = DEAD;
 
 /*
  * Prototypes.
