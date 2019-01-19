@@ -277,7 +277,7 @@ void ResetGame(u8 *frame) {
 void Print(u8 *frame) {
 
 	for(int j = 0; j < PLATFORM_AMOUNT; j++) {
-		blockPrinter(frame, DEMO_STRIDE, platformImg, PLATFORM_WIDTH, PLATFORM_HEIGHT, platformBlock[j]);
+		PrintPlatform(frame, DEMO_STRIDE, platformImg, PLATFORM_WIDTH, PLATFORM_HEIGHT, platformBlock[j]);
 	}
 	PrintBackground(frame, 150, 1080, 5760, HeaderImg);
 	if (dead == 1){
@@ -385,7 +385,7 @@ void PrintWord(u8 *frame, u8 *array, u32 x, u32 y, u8 wordLength) {
 /*
  * Prints a platform given its struct and the image values.
  */
-void blockPrinter(u8 *frame, u32 stride,u8 *pic,  u32 picWidth, u32 picHeight, struct Block block)
+void PrintPlatform(u8 *frame, u32 stride,u8 *pic,  u32 picWidth, u32 picHeight, struct Block block)
 {
 	u32 lineStart = 0;
 	u32 lineStartPic = 0;
@@ -417,6 +417,18 @@ void PrintScore(u8 *frame, u8 ones, u8 tens, u8 hundreds, u8 thousands, u32 x, u
 
 
 void Move(u8 *frame) {
+	MoveSprite(frame);
+	MovePlatform(frame);
+	DeathDetection(jumperBlock.x, jumperBlock.y);
+}
+
+
+
+void MoveSprite(u8 *frame) {
+	/*----------------------------------------------------*/
+	/* Left and right movement using the btn_value from   */
+	/* the Zybo buttons.								  */
+	/*----------------------------------------------------*/
 	switch(btn_value) {
 	case 1:
 		jumperBlock.x = jumperBlock.x - DEMO_STRIDE*21;
@@ -442,22 +454,23 @@ void Move(u8 *frame) {
 		break;
 	default:
 		break;
-
 	}
-
-	for(int j = 0; j < PLATFORM_AMOUNT; j++) {
-		platformBlock[j].y+=platformspeed;
-		if(platformBlock[j].y >= DEMO_STRIDE) {
-		Increment();
-		platformBlock[j].y = 2;
-		platformBlock[j].x = DEMO_STRIDE*(rand() % 900 + 0);
-		}
-	}
+	/*****************************************************/
+	/********** Left right movement ends here ************/
+	/*****************************************************/
 
 
+
+
+
+	/*----------------------------------------------------*/
+	/* Sprite up and down movement						  */
+	/*----------------------------------------------------*/
 	switch(jumperVelocity) {
+	/* When Sprite hits a platform */
 	case GROUND:
 		counter = 0;
+		/* Which way the Sprite faces */
 		switch(jumperDir) {
 		case DR:
 			jumperDir = UR;
@@ -471,17 +484,25 @@ void Move(u8 *frame) {
 		jumperBlock.velocity = 72;
 		jumperVelocity = AIR;
 		break;
+	/* When Sprite leaves platform and enters air state. */
 	case AIR:
+		/*
+		 * When Sprite is the top part of the jump, this if statement is to reduce time the sprite
+		 * stands still in the air.
+		 */
 		if(jumperBlock.velocity < 13 && -13 < jumperBlock.velocity) {
 			if(counter%2==0)
 				jumperBlock.velocity-=JUMPER_GRAVITY;
 		}
+		/* Global counter that counts to 6 and then reduce upward velocity until it hits another block */
 		else if(counter%6==0) {
 				jumperBlock.velocity-=JUMPER_GRAVITY;
 		}
 
 		jumperBlock.y -= jumperBlock.velocity;
+		/* Falling portion of the jump, checks if the Sprite hits a platform using ColissionDetect */
 		if(jumperBlock.velocity < 0) {
+			/* Which way the Sprite faces */
 			switch(jumperDir) {
 			case UR:
 				jumperDir = DR;
@@ -492,22 +513,40 @@ void Move(u8 *frame) {
 			default:
 			break;
 			}
+			/* Colission Detection */
 			for(int k = 0; k < PLATFORM_AMOUNT; k++) {
-				if((collisiondetect(jumper, platform[k]))==1) {
+				if((ColissionDetection(jumper, platform[k]))==1) {
 					jumperVelocity = GROUND;
 				}
 			}
 		}
+		/* Counter that is used to reduce jumper velocity is incremented every loop */
 		counter++;
 		break;
 	}
-	isDead(jumperBlock.x, jumperBlock.y);
+	/*****************************************************/
+	/************ Up down movement ends here *************/
+	/*****************************************************/
+}
+
+/*
+ * Controls the movement of the platforms.
+ */
+void MovePlatform(u8 *frame) {
+	for(int j = 0; j < PLATFORM_AMOUNT; j++) {
+		platformBlock[j].y+=platformspeed;
+		if(platformBlock[j].y >= DEMO_STRIDE) {
+		Increment();
+		platformBlock[j].y = 2;
+		platformBlock[j].x = DEMO_STRIDE*(rand() % 900 + 0);
+		}
+	}
 }
 
 /*
  * Check if a given platform collides with the sprite.
  */
-int collisiondetect (struct Block *jumper, struct Block *platform){
+int ColissionDetection (struct Block *jumper, struct Block *platform){
 	int jumperw = jumper->width;
 	int jumperh = (jumper->height)*3;
 	int jumpera = jumper->x+jumper->y;							//a = anchor
@@ -536,7 +575,7 @@ int collisiondetect (struct Block *jumper, struct Block *platform){
  * Checks if the sprite hits the GAME_FLOOR, ceiling or walls,
  * if so the player dies and the dead = 1.
  */
-void isDead(int x, int y)
+void DeathDetection(int x, int y)
 {
 	// Hits Wall.
 	if(x < rightWall) {
