@@ -26,9 +26,9 @@
 /*
  * Death Logic Definitions.
  */
-#define leftWall 1080*(1920*3)
+#define GAME_FLOOR 5460
+#define leftWall 1080*1920*3
 #define rightWall 0
-#define floor 5460
 #define ceiling 0
 
 /*

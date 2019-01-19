@@ -24,33 +24,45 @@
 /* ------------------------------------------------------------ */
 /*				Include File Definitions						*/
 /* ------------------------------------------------------------ */
-#include "video_capture/video_capture.h"
-#include "display_ctrl/display_ctrl.h"
+
+/* Standard */
 #include <stdio.h>
-#include "xuartps.h"
-#include "math.h"
-#include <ctype.h>
 #include <stdlib.h>
+#include <ctype.h>
+
+/* Xilinx */
+#include "xparameters.h"
+#include "xuartps.h"
 #include "xil_types.h"
 #include "xil_cache.h"
-#include "timer_ps/timer_ps.h"
-#include "xparameters.h"
 #include "xscugic.h"
-#include "xparameters.h"
 #include "xgpio.h"
-#include "xscugic.h"
 #include "xil_exception.h"
 #include "xil_printf.h"
 #include "xtime_l.h"
+
+/* Video Demo */
+#include "video_capture/video_capture.h"
+#include "display_ctrl/display_ctrl.h"
+#include "timer_ps/timer_ps.h"
 
 /* Headerfiles that contain game logic */
 #include "game.h"
 #include "score.h"
 
+/* SDcard */
+#include "SDcard/platform.h"
+#include "sleep.h"
+#include "xil_io.h"
+#include "xsdps.h"
+#include "SDcard/ff.h"
+
+/* platform.c */
+#include "interrupt/intc.h"
+#include "SDcard/platform_config.h"
 
 /* Files containing the interrupt logic. */
 #include "interrupt/interrupts.h"
-
 
 /* Arrays containing the RGB values for the images used in the game */
 #include "Images/Background.h"
@@ -64,33 +76,7 @@
 #include "Images/numberArray.h"
 #include "Images/whiteLine.h"
 
-//SDcard
-#include <stdio.h>
-#include "stdlib.h"
-#include "SDcard/platform.h"
-#include "sleep.h"
-#include "xparameters.h"
-#include "xil_printf.h"
-#include "xil_cache.h"
-#include "xil_io.h"
-#include "xsdps.h"
-#include "SDcard/ff.h"
-
-#include <stdio.h>
-#include "stdlib.h"
-#include "sleep.h"
-#include "xparameters.h"
-#include "xil_printf.h"
-#include "xil_cache.h"
-#include "xil_io.h"
-#include "xsdps.h"
-
-//platform.c
-#include "xparameters.h"
-#include "xil_cache.h"
-
-#include "interrupt/intc.h"
-#include "SDcard/platform_config.h"
+#include "math.h"
 
 
 /* ------------------------------------------------------------ */
@@ -117,13 +103,6 @@ char fRefresh; //flag used to trigger a refresh of the Menu on video detect
 u8 frameBuf[DISPLAY_NUM_FRAMES][DEMO_MAX_FRAME];
 u8 *pFrames[DISPLAY_NUM_FRAMES]; //array of pointers to the frame buffers
 DisplayCtrl dispCtrl;
-int resetf = 1;
-int frame;
-
-/*
- * Dead
- */
-int dead = 1;
 
 //Interrupt vector table
 VideoCapture videoCapt;
@@ -133,21 +112,33 @@ const ivt_t ivt[] = {
 };
 XAxiVdma vdma;
 
-//Counters used for score.
-int counter = 0;
-u8 scoreArray[4] = {0, 0, 0, 0};
-u32 platformhits = 0;
 
-//Arrays for printing text on the display
-u8 HighscoreWord[] = {H, I, G, H, S, C, O, R, E};
+int resetf = 1;					//Reset flag, when 1 the game initializes game components and reset positions etc. for new  game.
+int frame;						//Index of the current frame that is being displayed.
+int dead = 1;					//When 1 you're dead and it goes to game over, else you're a alive and continue playing.
+int counter = 0;				//Counter that is used to control the jumping animation, see function "Move" to see more.
+
+/*
+ * In the alphabet.h file in folder images. Each letter is enumerated so it corresponds
+ * to a letter of the array. Each letter is an array.
+ */
+u8 HighscoreWord[] = {H, I, G, H, S, C, O, R, E};	//This spells highscore on the screen.
 u8 YourscoreWord[] = {Y, O, U, R, S, C, O, R, E};
 u8 AveragescoreWord[] = {A, V, E, R, A, G, E, S, C, O ,R ,E};
-u8 alpha[] = {A, B, C, D, E, F, G, H, I, J, K, L ,M ,N ,O ,P ,Q ,R ,S ,T ,U, V, W, X, Y, Z};
 
+/*
+ * These structs are used to move the sprite and platforms
+ * and check for collision in the "Move" function.
+ */
 struct Block jumperBlock = {JUMPER_WIDTH, JUMPER_HEIGHT, (490*DEMO_STRIDE), 2830, 0};
 struct Block *jumper = &jumperBlock;
 struct Block platformBlock[PLATFORM_AMOUNT];
 struct Block *platform[PLATFORM_AMOUNT];
+
+/*
+ * These enumerations are used to decide which way the sprite faces
+ * and jumping pattern. jumperVelocity and jumperDir is described better in game.h
+ */
 enum direction jumperDir = UL;
 enum Velocity jumperVelocity = GROUND;
 /************ SD card parameters ************/
@@ -209,8 +200,14 @@ int main(void) {
 /* ------------------------------------------------------------ */
 
 /*
- *  Generates platforms, sprite
- *  then it enters an infinite while loop where the game will play out.
+ * Reads the highscore from the SD Card using SDRead().
+ * If reset flag is set to 1, it resets the game to default.
+ * Default means that the sprite is in the middle of the screen,
+ * Platforms have their speed set to the default speed,
+ * Score is set to default.
+ * Highscore is updated.
+ * Halts and wait until user input.
+ * Game then starts.
  */
 void DemoStartGame() {
 
@@ -243,7 +240,10 @@ void DemoStartGame() {
 
 /*
  * This function is called in DemoStartGame and it resets the game environment
- *  and halts until a button is pressed.
+ * Draws background image.
+ * Generates random x-coordinate for the platforms.
+ * Distance between platforms on the y-axis is 576.
+ * Draws the newly generated platforms and the sprite.
  */
 void ResetGame(u8 *frame) {
 	for(int i = 0; i < 3; i++) {
@@ -266,14 +266,13 @@ void ResetGame(u8 *frame) {
 	jumperBlock.y = 3802;
 	PrintScore(frame, ones, tens, hundreds, thousands, 500, 3299);
 	resetScore();
-	platformhits = 0;
 	platformspeed = 6;
 	jumperVelocity = GROUND;
 	resetf = 0;
 }
 
 /*
- * Prints the entire game when playig ( Background, Platforms, Sprite and Score)
+ * Prints the entire game when playing ( Background, Platforms, Sprite and Score)
  */
 void Print(u8 *frame) {
 
@@ -292,7 +291,6 @@ void Print(u8 *frame) {
 	PrintWord(frame, YourscoreWord, 1050, 470, 9);
 	PrintWord(frame, HighscoreWord, 1050, 560, 9);
 	PrintWord(frame, AveragescoreWord, 1050, 650, 12);
-	PrintWord(frame, alpha, 1050, 740, 26);
 
 	switch(jumperDir) {
 	case UL:
@@ -535,7 +533,7 @@ int collisiondetect (struct Block *jumper, struct Block *platform){
 }
 
 /*
- * Checks if the sprite hits the floor, ceiling or walls,
+ * Checks if the sprite hits the GAME_FLOOR, ceiling or walls,
  * if so the player dies and the dead = 1.
  */
 void isDead(int x, int y)
@@ -548,8 +546,8 @@ void isDead(int x, int y)
 	if(x > leftWall) {
 		jumperBlock.x = rightWall;
 	}
-	// Hits floor or ceiling.
-	if(y < ceiling || floor < y) {
+	// Hits GAME_FLOOR or ceiling.
+	if(y < ceiling || GAME_FLOOR < y) {
 		dead = 1;
 	}
 }
