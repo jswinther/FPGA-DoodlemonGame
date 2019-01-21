@@ -47,6 +47,14 @@ enum {
 	RIGHT
 } platformDirection ;
 
+
+enum {
+	KIRBY,
+	DOODLE,
+	THEORIGINAL,
+} Character;
+
+
 /*
  * These enumerations are used to decide which way the sprite faces
  * and jumping pattern. jumperVelocity and jumperDir is described better in game.h

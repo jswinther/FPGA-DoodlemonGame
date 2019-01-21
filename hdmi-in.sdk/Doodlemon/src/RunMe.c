@@ -284,21 +284,45 @@ void Print(u8 *frame) {
 	PrintWord(frame, HighscoreWord, 1050, 560, 9);
 	PrintWord(frame, AveragescoreWord, 1050, 650, 12);
 
-	switch(jumperDir) {
-	case UL:
-		ImagePrint(frame, kirbyUpLeft, jumperBlock.x, jumperBlock.y, 100, 100);
+	switch(sprite_value) {
+	case KIRBY:
+		switch(jumperDir) {
+		case UL:
+			ImagePrint(frame, kirbyUpLeft, jumperBlock.x, jumperBlock.y, 100, 100);
+			break;
+		case UR:
+			ImagePrint(frame, kirbyUpRight, jumperBlock.x, jumperBlock.y, 100, 100);
+			break;
+		case DL:
+			ImagePrint(frame, kirbyFallLeft, jumperBlock.x, jumperBlock.y, 100, 100);
+			break;
+		case DR:
+			ImagePrint(frame, kirbyFallRight, jumperBlock.x, jumperBlock.y, 100, 100);
+			break;
+		default:
 		break;
-	case UR:
-		ImagePrint(frame, kirbyUpRight, jumperBlock.x, jumperBlock.y, 100, 100);
+	}
 		break;
-	case DL:
-		ImagePrint(frame, kirbyFallLeft, jumperBlock.x, jumperBlock.y, 100, 100);
+		case DOODLE:
+			switch(jumperDir) {
+			case UL:
+				ImagePrint(frame, doodlelongleft, jumperBlock.x, jumperBlock.y, 100, 100);
+				break;
+			case UR:
+				ImagePrint(frame, doodlelongright, jumperBlock.x, jumperBlock.y, 100, 100);
+				break;
+			case DL:
+				ImagePrint(frame, doodleshortleft, jumperBlock.x, jumperBlock.y, 100, 100);
+				break;
+			case DR:
+				ImagePrint(frame, doodleshortright, jumperBlock.x, jumperBlock.y, 100, 100);
+				break;
+			default:
+			break;
+		}
 		break;
-	case DR:
-		ImagePrint(frame, kirbyFallRight, jumperBlock.x, jumperBlock.y, 100, 100);
-		break;
-	default:
-	break;
+		case THEORIGINAL:
+			ImagePrint(frame, jumperImg, jumperBlock.x, jumperBlock.y, 100, 100);
 	}
 }
 
@@ -310,7 +334,7 @@ void ImagePrint(u8 *frame, u8 *array,  u32 x, u32 y, int imgH, int imgW) {
 	int arrayCounter = 0;
 	for(int i = 0; i < imgH; i++) {
 		for(int j = 0; j<imgW*3; j+=3) {
-			if (array[arrayCounter] != 255 && array[arrayCounter+1] != 255 && array[arrayCounter+2] != 255){
+			if (!(array[arrayCounter] == 255 && array[arrayCounter+1] == 255 && array[arrayCounter+2] == 255)){
 			frame[cor + j + 1] = array[arrayCounter + 0];
 			frame[cor + j + 2] = array[arrayCounter + 1];
 			frame[cor + j + 0] = array[arrayCounter + 2];
