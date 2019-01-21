@@ -549,19 +549,21 @@ void MoveSprite(u8 *frame) {
 void MovePlatform(u8 *frame) {
 	for(int j = 0; j < PLATFORM_AMOUNT; j++) {
 		platformBlock[j].y+=platformspeed;
+		if (currentScoreCounter > 50 ){
+			if (platformBlock[j].velocity == LEFT) {
+					platformBlock[j].x += DEMO_STRIDE;
+				} else if (platformBlock[j].velocity == RIGHT) {
+					platformBlock[j].x -= DEMO_STRIDE;
+				}
+				if (platformBlock[j].x+platformBlock[j].y > DEMO_MAX_FRAME-(140*DEMO_STRIDE)) {
+					platformBlock[j].x -= DEMO_STRIDE;
+					platformBlock[j].velocity = RIGHT;
+				} else if (platformBlock[j].x+platformBlock[j].y < 0) {
+					platformBlock[j].x += DEMO_STRIDE;
+					platformBlock[j].velocity = LEFT;
+				}
+		}
 
-		if (platformBlock[j].velocity == LEFT) {
-			platformBlock[j].x += DEMO_STRIDE;
-		} else if (platformBlock[j].velocity == RIGHT) {
-			platformBlock[j].x -= DEMO_STRIDE;
-		}
-		if (platformBlock[j].x+platformBlock[j].y > DEMO_MAX_FRAME-(140*DEMO_STRIDE)) {
-			platformBlock[j].x -= DEMO_STRIDE;
-			platformBlock[j].velocity = RIGHT;
-		} else if (platformBlock[j].x+platformBlock[j].y < 0) {
-			platformBlock[j].x += DEMO_STRIDE;
-			platformBlock[j].velocity = LEFT;
-		}
 
 
 		if(platformBlock[j].y >= DEMO_STRIDE) {
