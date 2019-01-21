@@ -13,7 +13,7 @@
  */
 #define PLATFORM_HEIGHT 140
 #define PLATFORM_WIDTH 48
-#define PLATFORM_SPEED 12
+#define PLATFORM_SPEED 30
 #define PLATFORM_AMOUNT 10
 
 /*
@@ -21,7 +21,7 @@
  */
 #define JUMPER_HEIGHT 100
 #define JUMPER_WIDTH 100
-#define JUMPER_GRAVITY 9
+#define JUMPER_GRAVITY 12
 
 /*
  * Death Logic Definitions.
@@ -41,6 +41,19 @@ struct Block {
 	int y;
 	int velocity;
 };
+
+enum {
+	LEFT,
+	RIGHT
+} platformDirection ;
+
+
+enum {
+	KIRBY,
+	DOODLE,
+	THEORIGINAL,
+} Character;
+
 
 /*
  * These enumerations are used to decide which way the sprite faces

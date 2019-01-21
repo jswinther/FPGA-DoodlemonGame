@@ -178,8 +178,6 @@ int main(void) {
 	// Initialize interrupt controller
 	status = IntcInitFunction(INTC_DEVICE_ID, &BTNInst);
 	if(status != XST_SUCCESS) return XST_FAILURE;
-
-	//SDRead();
 	DemoStartGame();
 	return 0;
 }
@@ -215,13 +213,13 @@ void DemoStartGame() {
 			Xil_DCacheFlushRange((unsigned int)frameBuf[0], DEMO_MAX_FRAME);
 			DisplayChangeFrame(&dispCtrl, 0);
 		}
-		if(btn_value == 2 || btn_value == 4)
+		if(btn_value == 4)
 			jumperDeathState = ALIVE;
 		while(jumperDeathState == ALIVE) {
 			if (frame >= DISPLAY_NUM_FRAMES) {
 				frame = 0;
 			}
-			PrintBackground(frameBuf[frame], 1920, 1080, 5760, whiteLine);
+			PrintBackground(frameBuf[frame], 1920, 1080, 5760, Background);
 			Move(frameBuf[frame]);
 			Print(frameBuf[frame]);
 			Xil_DCacheFlushRange((unsigned int)frameBuf[frame], DEMO_MAX_FRAME);
@@ -241,7 +239,7 @@ void DemoStartGame() {
  */
 void ResetGame(u8 *frame) {
 	for(int i = 0; i < 3; i++) {
-		PrintBackground(frameBuf[i], 1920, 1080, 5760, whiteLine);
+		PrintBackground(frameBuf[i], 1920, 1080, 5760, Background);
 		PrintBackground(frameBuf[i], 150, 1080, 5760, HeaderImg);
 	}
 	int random_x;
@@ -253,7 +251,7 @@ void ResetGame(u8 *frame) {
 		platformBlock[i].width = PLATFORM_WIDTH;
 		platformBlock[i].x = random_x*DEMO_STRIDE;
 		platformBlock[i].y = random_y;
-		platformBlock[i].velocity = PLATFORM_SPEED;
+		platformBlock[i].velocity = LEFT;
 		platform[i] = &platformBlock[i];
 	}
 	jumperBlock.x = (540-(JUMPER_WIDTH/2))*DEMO_STRIDE;
@@ -286,21 +284,45 @@ void Print(u8 *frame) {
 	PrintWord(frame, HighscoreWord, 1050, 560, 9);
 	PrintWord(frame, AveragescoreWord, 1050, 650, 12);
 
-	switch(jumperDir) {
-	case UL:
-		ImagePrint(frame, kirbyUpLeft, jumperBlock.x, jumperBlock.y, 100, 100);
+	switch(sprite_value) {
+	case KIRBY:
+		switch(jumperDir) {
+		case UL:
+			ImagePrint(frame, kirbyUpLeft, jumperBlock.x, jumperBlock.y, 100, 100);
+			break;
+		case UR:
+			ImagePrint(frame, kirbyUpRight, jumperBlock.x, jumperBlock.y, 100, 100);
+			break;
+		case DL:
+			ImagePrint(frame, kirbyFallLeft, jumperBlock.x, jumperBlock.y, 100, 100);
+			break;
+		case DR:
+			ImagePrint(frame, kirbyFallRight, jumperBlock.x, jumperBlock.y, 100, 100);
+			break;
+		default:
 		break;
-	case UR:
-		ImagePrint(frame, kirbyUpRight, jumperBlock.x, jumperBlock.y, 100, 100);
+	}
 		break;
-	case DL:
-		ImagePrint(frame, kirbyFallLeft, jumperBlock.x, jumperBlock.y, 100, 100);
+		case DOODLE:
+			switch(jumperDir) {
+			case UL:
+				ImagePrint(frame, doodlelongleft, jumperBlock.x, jumperBlock.y, 100, 100);
+				break;
+			case UR:
+				ImagePrint(frame, doodlelongright, jumperBlock.x, jumperBlock.y, 100, 100);
+				break;
+			case DL:
+				ImagePrint(frame, doodleshortleft, jumperBlock.x, jumperBlock.y, 100, 100);
+				break;
+			case DR:
+				ImagePrint(frame, doodleshortright, jumperBlock.x, jumperBlock.y, 100, 100);
+				break;
+			default:
+			break;
+		}
 		break;
-	case DR:
-		ImagePrint(frame, kirbyFallRight, jumperBlock.x, jumperBlock.y, 100, 100);
-		break;
-	default:
-	break;
+		case THEORIGINAL:
+			ImagePrint(frame, jumperImg, jumperBlock.x, jumperBlock.y, 100, 100);
 	}
 }
 
@@ -312,7 +334,7 @@ void ImagePrint(u8 *frame, u8 *array,  u32 x, u32 y, int imgH, int imgW) {
 	int arrayCounter = 0;
 	for(int i = 0; i < imgH; i++) {
 		for(int j = 0; j<imgW*3; j+=3) {
-			if (array[arrayCounter] != 255 && array[arrayCounter+1] != 255 && array[arrayCounter+2] != 255){
+			if (!(array[arrayCounter] == 255 && array[arrayCounter+1] == 255 && array[arrayCounter+2] == 255)){
 			frame[cor + j + 1] = array[arrayCounter + 0];
 			frame[cor + j + 2] = array[arrayCounter + 1];
 			frame[cor + j + 0] = array[arrayCounter + 2];
@@ -344,7 +366,7 @@ void PrintBackground(u8 *frame, u32 width, u32 height, u32 stride, u8 *pic)
 	{
 		memcpy(frame + lineStart, pic+lineStartPic, width*3);
 		lineStart += stride;
-		lineStartPic+= 0;//width*3;
+		lineStartPic+= width*3;
 	}
 }
 
@@ -381,8 +403,8 @@ void PrintWord(u8 *frame, u8 *array, u32 x, u32 y, u8 wordLength) {
  */
 void PrintPlatform(u8 *frame, u32 stride,u8 *pic,  u32 picWidth, u32 picHeight, struct Block block)
 {
-	u32 lineStart = 0;
-	u32 lineStartPic = 0;
+	int lineStart = 0;
+	int lineStartPic = 0;
 		for(int ycoi = 0; ycoi < picHeight; ycoi++)
 		{
 			memcpy(frame+block.x+block.y + lineStart, pic+lineStartPic, picWidth*3);
@@ -433,10 +455,8 @@ void MoveSprite(u8 *frame) {
 		}
 		break;
 	case 2:
-		jumperBlock.x -= DEMO_STRIDE*3;
 		break;
 	case 4:
-		jumperBlock.x += DEMO_STRIDE*3;
 		break;
 	case 8:
 		jumperBlock.x += DEMO_STRIDE*21;
@@ -475,7 +495,7 @@ void MoveSprite(u8 *frame) {
 		default:
 			break;
 		}
-		jumperBlock.velocity = 72;
+		jumperBlock.velocity = 84;
 		jumperVelocity = AIR;
 		break;
 	/* When Sprite leaves platform and enters air state. */
@@ -529,6 +549,23 @@ void MoveSprite(u8 *frame) {
 void MovePlatform(u8 *frame) {
 	for(int j = 0; j < PLATFORM_AMOUNT; j++) {
 		platformBlock[j].y+=platformspeed;
+		if (currentScoreCounter > 50 ){
+			if (platformBlock[j].velocity == LEFT) {
+					platformBlock[j].x += DEMO_STRIDE;
+				} else if (platformBlock[j].velocity == RIGHT) {
+					platformBlock[j].x -= DEMO_STRIDE;
+				}
+				if (platformBlock[j].x+platformBlock[j].y > DEMO_MAX_FRAME-(140*DEMO_STRIDE)) {
+					platformBlock[j].x -= DEMO_STRIDE;
+					platformBlock[j].velocity = RIGHT;
+				} else if (platformBlock[j].x+platformBlock[j].y < 0) {
+					platformBlock[j].x += DEMO_STRIDE;
+					platformBlock[j].velocity = LEFT;
+				}
+		}
+
+
+
 		if(platformBlock[j].y >= DEMO_STRIDE) {
 		Increment();
 		platformBlock[j].y = 2;
