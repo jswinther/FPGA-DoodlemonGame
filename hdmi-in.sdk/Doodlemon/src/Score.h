@@ -9,7 +9,7 @@
 #ifndef SRC_SCORE_H_
 #define SRC_SCORE_H_
 
-u32 platformspeed = 15;
+u32 platformspeed = 30;
 u8 speedCounter = 0;
 u16 incrementInterval = 5;
 u8 intervalCount = 0;

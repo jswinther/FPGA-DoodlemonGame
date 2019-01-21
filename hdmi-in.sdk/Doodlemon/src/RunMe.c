@@ -213,13 +213,13 @@ void DemoStartGame() {
 			Xil_DCacheFlushRange((unsigned int)frameBuf[0], DEMO_MAX_FRAME);
 			DisplayChangeFrame(&dispCtrl, 0);
 		}
-		if(btn_value == 2 || btn_value == 4)
+		if(btn_value == 4)
 			jumperDeathState = ALIVE;
 		while(jumperDeathState == ALIVE) {
 			if (frame >= DISPLAY_NUM_FRAMES) {
 				frame = 0;
 			}
-			PrintBackground(frameBuf[frame], 1920, 1080, 5760, whiteLine);
+			PrintBackground(frameBuf[frame], 1920, 1080, 5760, Background);
 			Move(frameBuf[frame]);
 			Print(frameBuf[frame]);
 			Xil_DCacheFlushRange((unsigned int)frameBuf[frame], DEMO_MAX_FRAME);
@@ -239,7 +239,7 @@ void DemoStartGame() {
  */
 void ResetGame(u8 *frame) {
 	for(int i = 0; i < 3; i++) {
-		PrintBackground(frameBuf[i], 1920, 1080, 5760, whiteLine);
+		PrintBackground(frameBuf[i], 1920, 1080, 5760, Background);
 		PrintBackground(frameBuf[i], 150, 1080, 5760, HeaderImg);
 	}
 	int random_x;
@@ -366,7 +366,7 @@ void PrintBackground(u8 *frame, u32 width, u32 height, u32 stride, u8 *pic)
 	{
 		memcpy(frame + lineStart, pic+lineStartPic, width*3);
 		lineStart += stride;
-		lineStartPic+= 0;//width*3;
+		lineStartPic+= width*3;
 	}
 }
 
@@ -455,10 +455,8 @@ void MoveSprite(u8 *frame) {
 		}
 		break;
 	case 2:
-		jumperBlock.x -= DEMO_STRIDE*3;
 		break;
 	case 4:
-		jumperBlock.x += DEMO_STRIDE*3;
 		break;
 	case 8:
 		jumperBlock.x += DEMO_STRIDE*21;
@@ -497,7 +495,7 @@ void MoveSprite(u8 *frame) {
 		default:
 			break;
 		}
-		jumperBlock.velocity = 72;
+		jumperBlock.velocity = 84;
 		jumperVelocity = AIR;
 		break;
 	/* When Sprite leaves platform and enters air state. */
