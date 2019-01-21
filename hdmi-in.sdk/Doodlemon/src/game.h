@@ -42,6 +42,11 @@ struct Block {
 	int velocity;
 };
 
+enum {
+	LEFT,
+	RIGHT
+} platformDirection ;
+
 /*
  * These enumerations are used to decide which way the sprite faces
  * and jumping pattern. jumperVelocity and jumperDir is described better in game.h

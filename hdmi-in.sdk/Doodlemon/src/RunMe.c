@@ -178,8 +178,6 @@ int main(void) {
 	// Initialize interrupt controller
 	status = IntcInitFunction(INTC_DEVICE_ID, &BTNInst);
 	if(status != XST_SUCCESS) return XST_FAILURE;
-
-	//SDRead();
 	DemoStartGame();
 	return 0;
 }
@@ -253,7 +251,7 @@ void ResetGame(u8 *frame) {
 		platformBlock[i].width = PLATFORM_WIDTH;
 		platformBlock[i].x = random_x*DEMO_STRIDE;
 		platformBlock[i].y = random_y;
-		platformBlock[i].velocity = PLATFORM_SPEED;
+		platformBlock[i].velocity = LEFT;
 		platform[i] = &platformBlock[i];
 	}
 	jumperBlock.x = (540-(JUMPER_WIDTH/2))*DEMO_STRIDE;
@@ -381,8 +379,8 @@ void PrintWord(u8 *frame, u8 *array, u32 x, u32 y, u8 wordLength) {
  */
 void PrintPlatform(u8 *frame, u32 stride,u8 *pic,  u32 picWidth, u32 picHeight, struct Block block)
 {
-	u32 lineStart = 0;
-	u32 lineStartPic = 0;
+	int lineStart = 0;
+	int lineStartPic = 0;
 		for(int ycoi = 0; ycoi < picHeight; ycoi++)
 		{
 			memcpy(frame+block.x+block.y + lineStart, pic+lineStartPic, picWidth*3);
@@ -529,6 +527,21 @@ void MoveSprite(u8 *frame) {
 void MovePlatform(u8 *frame) {
 	for(int j = 0; j < PLATFORM_AMOUNT; j++) {
 		platformBlock[j].y+=platformspeed;
+
+		if (platformBlock[j].velocity == LEFT) {
+			platformBlock[j].x += DEMO_STRIDE;
+		} else if (platformBlock[j].velocity == RIGHT) {
+			platformBlock[j].x -= DEMO_STRIDE;
+		}
+		if (platformBlock[j].x+platformBlock[j].y > DEMO_MAX_FRAME-(140*DEMO_STRIDE)) {
+			platformBlock[j].x -= DEMO_STRIDE;
+			platformBlock[j].velocity = RIGHT;
+		} else if (platformBlock[j].x+platformBlock[j].y < 0) {
+			platformBlock[j].x += DEMO_STRIDE;
+			platformBlock[j].velocity = LEFT;
+		}
+
+
 		if(platformBlock[j].y >= DEMO_STRIDE) {
 		Increment();
 		platformBlock[j].y = 2;
