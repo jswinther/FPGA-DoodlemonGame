@@ -2,6 +2,17 @@
 <?scdStore version="2"?><scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
 <instance id="xilinx.gnu.armv7.exe.debug.1443844925;xilinx.gnu.armv7.exe.debug.1443844925.">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="#undef __ARM_FEATURE_NUMERIC_MAXMIN" removed="true"/>
+<includePath path="#undef __ARM_FEATURE_SIMD32" removed="true"/>
+<includePath path="#undef __thumb2__" removed="true"/>
+<includePath path="#undef __THUMBEL__" removed="true"/>
+<includePath path="c:\xilinx\sdk\2018.3\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/7.3.1/include"/>
+<includePath path="c:\xilinx\sdk\2018.3\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/7.3.1/include-fixed"/>
+<includePath path="c:\xilinx\sdk\2018.3\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/include"/>
+<includePath path="#undef __ARM_FEATURE_CMSE" removed="true"/>
+<includePath path="c:\xilinx\sdk\2018.3\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../arm-none-eabi/libc/usr/include"/>
+<includePath path="#undef __thumb__" removed="true"/>
+<includePath path="#undef __ARM_FEATURE_LDREX" removed="true"/>
 <includePath path="#undef __ARM_FEATURE_SAT" removed="true"/>
 <includePath path="#undef __ARM_FEATURE_CRYPTO" removed="true"/>
 <includePath path="c:\xilinx\sdk\sdk\2018.3\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/7.3.1/include"/>
@@ -842,6 +853,23 @@
 </instance>
 <instance id="xilinx.gnu.armv7.exe.debug.1443844925;xilinx.gnu.armv7.exe.debug.1443844925.;xilinx.gnu.armv7.c.toolchain.compiler.debug.241732430;xilinx.gnu.armv7.c.compiler.input.578120173">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="#undef __ARM_FP" removed="true"/>
+<includePath path="#undef __ARM_FEATURE_CMSE" removed="true"/>
+<includePath path="#undef __ARM_FEATURE_SIMD32" removed="true"/>
+<includePath path="c:\xilinx\sdk\2018.3\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/7.3.1/include"/>
+<includePath path="#undef __ARM_FP16_FORMAT_IEEE" removed="true"/>
+<includePath path="#undef __thumb__" removed="true"/>
+<includePath path="#undef __ARM_FEATURE_LDREX" removed="true"/>
+<includePath path="c:\xilinx\sdk\2018.3\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/7.3.1/include-fixed"/>
+<includePath path="#undef __ARM_FP16_FORMAT_ALTERNATIVE" removed="true"/>
+<includePath path="#undef __thumb2__" removed="true"/>
+<includePath path="#undef __ARM_FEATURE_CLZ" removed="true"/>
+<includePath path="c:\xilinx\sdk\2018.3\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/include"/>
+<includePath path="#undef __ARM_FP16_ARGS" removed="true"/>
+<includePath path="#undef __THUMBEL__" removed="true"/>
+<includePath path="#undef __ARM_FEATURE_NUMERIC_MAXMIN" removed="true"/>
+<includePath path="c:\xilinx\sdk\2018.3\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../arm-none-eabi/libc/usr/include"/>
+<includePath path="#undef __ARM_FEATURE_FP16_SCALAR_ARITHMETIC" removed="true"/>
 <includePath path="c:\xilinx\sdk\sdk\2018.3\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/7.3.1/include"/>
 <includePath path="c:\xilinx\sdk\sdk\2018.3\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/7.3.1/include-fixed"/>
 <includePath path="c:\xilinx\sdk\sdk\2018.3\gnu\aarch32\nt\gcc-arm-none-eabi\bin\../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/include"/>

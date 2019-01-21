@@ -445,6 +445,31 @@ void MoveSprite(u8 *frame) {
 	/* Left and right movement using the btn_value from   */
 	/* the Zybo buttons.								  */
 	/*----------------------------------------------------*/
+	u32 nunchuck_value = Xil_In32(XPAR_NUNCHUCK_0_S00_AXI_BASEADDR);
+	xil_printf("%d\n\r", nunchuck_value);
+	if(nunchuck_value < 25)
+		jumperBlock.x += DEMO_STRIDE*21;
+	else if(nunchuck_value > 185)
+		jumperBlock.x -= DEMO_STRIDE*21;
+	else if(nunchuck_value < 50)
+		jumperBlock.x += DEMO_STRIDE*18;
+	else if(nunchuck_value > 160)
+		jumperBlock.x -= DEMO_STRIDE*18;
+	else if(nunchuck_value < 75)
+		jumperBlock.x += DEMO_STRIDE*12;
+	else if(nunchuck_value > 135)
+		jumperBlock.x -= DEMO_STRIDE*12;
+	else if(nunchuck_value < 100)
+		jumperBlock.x += DEMO_STRIDE*6;
+	else if(nunchuck_value > 110)
+		jumperBlock.x -= DEMO_STRIDE*6;
+
+
+
+
+
+
+
 	switch(btn_value) {
 	case 1:
 		jumperBlock.x = jumperBlock.x - DEMO_STRIDE*21;

@@ -262,3 +262,4 @@ file copy -force C:/Users/bruger/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/i
 error copying "C:/Users/bruger/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/impl_1/hdmi_in_wrapper.sysdef" to "C://hdmi_in_wrapper.hdf": permission denied
 file copy -force C:/Users/bruger/Documents/GitHub/3Ugers3Semester/hdmi-in.runs/impl_1/hdmi_in_wrapper.sysdef C:/Users/bruger/Desktop/hdmi_in_wrapper.hdf
 
+INFO: [Vivado 12-4159] Implementation run is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-run implementation and re-generate bitstream before doing hardware export.

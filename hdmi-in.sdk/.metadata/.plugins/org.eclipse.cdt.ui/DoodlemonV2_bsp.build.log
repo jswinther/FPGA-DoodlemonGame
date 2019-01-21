@@ -1,0 +1,6 @@
+15:20:27 **** Auto Build of project DoodlemonV2_bsp ****
+make -k all 
+make: *** No rule to make target 'all'.
+
+15:20:27 Build Finished (took 349ms)
+
