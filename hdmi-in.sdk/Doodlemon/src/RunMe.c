@@ -283,7 +283,7 @@ void Print(u8 *frame) {
 		ImagePrint(frameBuf[1], Gameover, 0, 2101, 1080, 240);
 		ImagePrint(frameBuf[2], Gameover, 0, 2101, 1080, 240);
 	}
-	ImagePrint(frame, WumpaFruitImg, PowerUp.x, PowerUp.y, 60, 60);
+	ImagePrint(frame, powerups[WumpaFruit], PowerUp.x, PowerUp.y, 60, 60);
 	PrintScore(frame, ones, tens, hundreds, thousands, 700, 470);
 	PrintScore(frame, highones, hightens, highhundreds, highthousands, 700, 560);
 	PrintScore(frame, avgones, avgtens, avghundreds, avgthousands, 700, 650);
