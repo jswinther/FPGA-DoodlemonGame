@@ -49,6 +49,7 @@
 /* Headerfiles that contain game logic */
 #include "game.h"
 #include "score.h"
+#include "PowerUps.h"
 
 /* SDcard */
 #include "SDcard/platform.h"
@@ -122,8 +123,9 @@ int counter = 0;				//Counter that is used to control the jumping animation, see
  * to a letter of the array. Each letter is an array.
  */
 u8 HighscoreWord[] = {H, I, G, H, S, C, O, R, E};	//This spells highscore on the screen.
-u8 YourscoreWord[] = {Y, O, U, R, S, C, O, R, E};
-u8 AveragescoreWord[] = {A, V, E, R, A, G, E, S, C, O ,R ,E};
+u8 Score[] = {S, C, O ,R, E};
+u8 Your[] = {Y, O, U, R};
+u8 Average[] = {A, V, E, R, A, G, E};
 
 /*
  * These structs are used to move the sprite and platforms
@@ -254,6 +256,9 @@ void ResetGame(u8 *frame) {
 		platformBlock[i].velocity = LEFT;
 		platform[i] = &platformBlock[i];
 	}
+	PowerUp.x = platformBlock[4].x + 40*DEMO_STRIDE;
+	PowerUp.y = platformBlock[4].y - 60;
+	PowerUp.type = WumpaFruit;
 	jumperBlock.x = (540-(JUMPER_WIDTH/2))*DEMO_STRIDE;
 	jumperBlock.y = 3802;
 	PrintScore(frame, ones, tens, hundreds, thousands, 500, 3299);
@@ -271,18 +276,23 @@ void Print(u8 *frame) {
 	for(int j = 0; j < PLATFORM_AMOUNT; j++) {
 		PrintPlatform(frame, DEMO_STRIDE, platformImg, PLATFORM_WIDTH, PLATFORM_HEIGHT, platformBlock[j]);
 	}
+	ImagePrint(frame, PowerUpImg[PowerUp.type], platformBlock[4].x, platformBlock[4].y, 60, 60);
 	PrintBackground(frame, 150, 1080, 5760, HeaderImg);
 	if (jumperDeathState == DEAD){
 		ImagePrint(frameBuf[0], Gameover, 0, 2101, 1080, 240);
 		ImagePrint(frameBuf[1], Gameover, 0, 2101, 1080, 240);
 		ImagePrint(frameBuf[2], Gameover, 0, 2101, 1080, 240);
 	}
+	ImagePrint(frame, WumpaFruitImg, PowerUp.x, PowerUp.y, 60, 60);
 	PrintScore(frame, ones, tens, hundreds, thousands, 700, 470);
 	PrintScore(frame, highones, hightens, highhundreds, highthousands, 700, 560);
 	PrintScore(frame, avgones, avgtens, avghundreds, avgthousands, 700, 650);
-	PrintWord(frame, YourscoreWord, 1050, 470, 9);
+	PrintWord(frame, Your, 1050, 470, 4);
+	PrintWord(frame, Score, 1150, 470, 5);
 	PrintWord(frame, HighscoreWord, 1050, 560, 9);
-	PrintWord(frame, AveragescoreWord, 1050, 650, 12);
+	PrintWord(frame, Average, 1050, 650, 7);
+	PrintWord(frame, Score, 1150, 650, 5);
+
 
 	switch(sprite_value) {
 	case KIRBY:
@@ -447,22 +457,62 @@ void MoveSprite(u8 *frame) {
 	/*----------------------------------------------------*/
 	u32 nunchuck_value = Xil_In32(XPAR_NUNCHUCK_0_S00_AXI_BASEADDR);
 	xil_printf("%d\n\r", nunchuck_value);
-	if(nunchuck_value < 25)
+	if(nunchuck_value < 25) {
 		jumperBlock.x += DEMO_STRIDE*21;
-	else if(nunchuck_value > 185)
+		if (jumperBlock.velocity < 0)
+			jumperDir = DL;
+		else
+			jumperDir = UL;
+	}
+	else if(nunchuck_value > 185) {
 		jumperBlock.x -= DEMO_STRIDE*21;
-	else if(nunchuck_value < 50)
+		if (jumperBlock.velocity < 0)
+			jumperDir = DR;
+		else
+			jumperDir = UR;
+	}
+	else if(nunchuck_value < 50) {
 		jumperBlock.x += DEMO_STRIDE*18;
-	else if(nunchuck_value > 160)
+		if (jumperBlock.velocity < 0)
+			jumperDir = DL;
+		else
+			jumperDir = UL;
+	}
+	else if(nunchuck_value > 160) {
 		jumperBlock.x -= DEMO_STRIDE*18;
-	else if(nunchuck_value < 75)
+		if (jumperBlock.velocity < 0)
+			jumperDir = DR;
+		else
+			jumperDir = UR;
+	}
+	else if(nunchuck_value < 75) {
 		jumperBlock.x += DEMO_STRIDE*12;
-	else if(nunchuck_value > 135)
+		if (jumperBlock.velocity < 0)
+			jumperDir = DL;
+		else
+			jumperDir = UL;
+	}
+	else if(nunchuck_value > 135) {
 		jumperBlock.x -= DEMO_STRIDE*12;
-	else if(nunchuck_value < 100)
+		if (jumperBlock.velocity < 0)
+			jumperDir = DR;
+		else
+			jumperDir = UR;
+	}
+	else if(nunchuck_value < 100) {
 		jumperBlock.x += DEMO_STRIDE*6;
-	else if(nunchuck_value > 110)
+		if (jumperBlock.velocity < 0)
+			jumperDir = DL;
+		else
+			jumperDir = UL;
+	}
+	else if(nunchuck_value > 110) {
 		jumperBlock.x -= DEMO_STRIDE*6;
+		if (jumperBlock.velocity < 0)
+			jumperDir = DR;
+		else
+			jumperDir = UR;
+	}
 
 
 
@@ -473,11 +523,10 @@ void MoveSprite(u8 *frame) {
 	switch(btn_value) {
 	case 1:
 		jumperBlock.x = jumperBlock.x - DEMO_STRIDE*21;
-		if (jumperBlock.velocity < 0){
+		if (jumperBlock.velocity < 0)
 			jumperDir = DR;
-		} else  {
+		else
 			jumperDir = UR;
-		}
 		break;
 	case 2:
 		break;
@@ -485,11 +534,10 @@ void MoveSprite(u8 *frame) {
 		break;
 	case 8:
 		jumperBlock.x += DEMO_STRIDE*21;
-		if (jumperBlock.velocity < 0){
+		if (jumperBlock.velocity < 0)
 			jumperDir = DL;
-		} else  {
+		else
 			jumperDir = UL;
-		}
 		break;
 	default:
 		break;
@@ -554,7 +602,20 @@ void MoveSprite(u8 *frame) {
 			}
 			/* Colission Detection */
 			for(int k = 0; k < PLATFORM_AMOUNT; k++) {
+
 				if((ColissionDetection(jumper, platform[k]))==1) {
+					if(k == 4) {
+						switch(PowerUp.type) {
+						case Skull:
+							currentScoreCounter -= 10;
+							break;
+						case WumpaFruit:
+							currentScoreCounter += 10;
+							break;
+						case Clock:
+							platformspeed -= 6;
+						}
+					}
 					jumperVelocity = GROUND;
 				}
 			}
