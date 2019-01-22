@@ -1,4 +1,4 @@
-#include "Images/powerups.h"
+#include "Images/PowerUpImg"
 
 struct {
 	int x;
@@ -12,9 +12,9 @@ PowerUp = {510*1920*3, 0, 60, 60, WumpaFruit};
 
 
 enum Types {
-	WumpaFruit,			// Subtracts Points
-	Skull,				// Adds Points
-	Clock				// Slows Down Platforms
+	Skull,			// Subtracts Points
+	WumpaFruit,		// Adds Points
+	Clock			// Slows Down Platforms
 }Type;
 
 
