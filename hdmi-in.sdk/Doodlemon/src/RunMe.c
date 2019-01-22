@@ -49,7 +49,7 @@
 /* Headerfiles that contain game logic */
 #include "game.h"
 #include "score.h"
-#include "PowerUps.h"
+#include "PowerUpLogic.h"
 
 /* SDcard */
 #include "SDcard/platform.h"
@@ -77,7 +77,6 @@
 #include "Images/numberArray.h"
 #include "Images/whiteLine.h"
 #include "Images/powerupsImg.h"
-#include "powerups.h"
 #include "math.h"
 
 
@@ -277,14 +276,13 @@ void Print(u8 *frame) {
 	for(int j = 0; j < PLATFORM_AMOUNT; j++) {
 		PrintPlatform(frame, DEMO_STRIDE, platformImg, PLATFORM_WIDTH, PLATFORM_HEIGHT, platformBlock[j]);
 	}
-	ImagePrint(frame, PowerUpImg[PowerUp.type], platformBlock[4].x, platformBlock[4].y, 60, 60);
+	ImagePrint(frame, powerupsImg[PowerUp.type], platformBlock[4].x, platformBlock[4].y, 60, 60);
 	PrintBackground(frame, 150, 1080, 5760, HeaderImg);
 	if (jumperDeathState == DEAD){
 		ImagePrint(frameBuf[0], Gameover, 0, 2101, 1080, 240);
 		ImagePrint(frameBuf[1], Gameover, 0, 2101, 1080, 240);
 		ImagePrint(frameBuf[2], Gameover, 0, 2101, 1080, 240);
 	}
-	ImagePrint(frame, powerupsImg[PowerUp.type], PowerUp.x, PowerUp.y, 60, 60);
 	PrintScore(frame, ones, tens, hundreds, thousands, 700, 470);
 	PrintScore(frame, highones, hightens, highhundreds, highthousands, 700, 560);
 	PrintScore(frame, avgones, avgtens, avghundreds, avgthousands, 700, 650);
@@ -657,6 +655,7 @@ void MovePlatform(u8 *frame) {
 		Increment();
 		platformBlock[j].y = 2;
 		platformBlock[j].x = DEMO_STRIDE*(rand() % 900 + 0);
+		PowerUp.type = rand() % 2 + 0;
 		}
 	}
 }
