@@ -462,7 +462,7 @@ void MoveSprite(u8 *frame) {
 	/*----------------------------------------------------*/
 
 
-
+/*
 	u32 nunchuck_value = Xil_In32(XPAR_NUNCHUCK_0_S00_AXI_BASEADDR);
 	xil_printf("%d\n\r", nunchuck_value);
 	if(nunchuck_value < 25) {
@@ -522,7 +522,7 @@ void MoveSprite(u8 *frame) {
 			jumperDir = UR;
 	}
 
-
+*/
 
 
 
@@ -677,7 +677,7 @@ void MovePlatform(u8 *frame) {
 		}
 	}
 	PowerUp.x = platformBlock[0].x + 40 * DEMO_STRIDE;
-	PowerUp.y = platformBlock[0].y - 120;
+	PowerUp.y = platformBlock[0].y - 118;
 }
 
 /*
