@@ -9,19 +9,17 @@
 #define SRC_POWERUPLOGIC_H_
 
 enum Types {
-	Skull,			// Subtracts Points
-	WumpaFruit,		// Adds Points
+	WumpaFruit,			// Subtracts Points
+	Skull,		// Adds Points
 	Clock			// Slows Down Platforms
 };
 
-struct PowerStruct {
+struct  {
 	int x;
 	int y;
 	u32 height;
 	u32 width;
 	int type;
-} ;
-
-struct PowerStruct PowerUp  = {510*1920*3, 0, 60, 60, WumpaFruit};
+} PowerUp;
 
 #endif /* SRC_POWERUPLOGIC_H_ */
