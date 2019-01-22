@@ -164,6 +164,11 @@
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/hdmi_in/ip/hdmi_in_xbar_0/sim/hdmi_in_xbar_0.v" \
   "../../../bd/hdmi_in/ip/hdmi_in_xbar_1/sim/hdmi_in_xbar_1.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/hdmi_in/sim/hdmi_in.vhd" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
   "../../../bd/hdmi_in/ip/hdmi_in_s00_regslice_0/sim/hdmi_in_s00_regslice_0.v" \
   "../../../bd/hdmi_in/ip/hdmi_in_s00_data_fifo_0/sim/hdmi_in_s00_data_fifo_0.v" \
   "../../../bd/hdmi_in/ip/hdmi_in_s01_regslice_0/sim/hdmi_in_s01_regslice_0.v" \
@@ -185,7 +190,9 @@
   "../../../bd/hdmi_in/ip/hdmi_in_auto_pc_1/sim/hdmi_in_auto_pc_1.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/hdmi_in/sim/hdmi_in.vhd" \
+  "../../../bd/hdmi_in/ipshared/451c/hdl/Nunchuck_v1_0_S00_AXI.vhd" \
+  "../../../bd/hdmi_in/ipshared/451c/hdl/Nunchuck_v1_0.vhd" \
+  "../../../bd/hdmi_in/ip/hdmi_in_Nunchuck_0_0_1/sim/hdmi_in_Nunchuck_0_0.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   glbl.v

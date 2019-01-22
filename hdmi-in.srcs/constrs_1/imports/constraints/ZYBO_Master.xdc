@@ -402,3 +402,7 @@ set_property IOSTANDARD LVCMOS33 [get_ports vga_hs]
 set_property PACKAGE_PIN R19 [get_ports vga_vs]
 set_property IOSTANDARD LVCMOS33 [get_ports vga_vs]
 
+set_property PACKAGE_PIN R14 [get_ports i2c_SDA_0]
+set_property PACKAGE_PIN P14 [get_ports i2c_SCL_0]
+set_property IOSTANDARD LVCMOS33 [get_ports i2c_SDA_0]
+set_property IOSTANDARD LVCMOS33 [get_ports i2c_SCL_0]

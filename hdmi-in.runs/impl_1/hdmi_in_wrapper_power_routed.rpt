@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Fri Jan 11 14:58:25 2019
-| Host             : DESKTOP-SHDFERO running 64-bit major release  (build 9200)
+| Date             : Tue Jan 22 12:30:57 2019
+| Host             : NicoLenovo running 64-bit major release  (build 9200)
 | Command          : report_power -file hdmi_in_wrapper_power_routed.rpt -pb hdmi_in_wrapper_power_summary_routed.pb -rpx hdmi_in_wrapper_power_routed.rpx
 | Design           : hdmi_in_wrapper
 | Device           : xc7z010clg400-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.071        |
+| Total On-Chip Power (W)  | 2.063        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.938        |
-| Device Static (W)        | 0.134        |
+| Dynamic (W)              | 1.930        |
+| Device Static (W)        | 0.133        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 61.1         |
-| Junction Temperature (C) | 48.9         |
+| Max Ambient (C)          | 61.2         |
+| Junction Temperature (C) | 48.8         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,22 +52,23 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.064 |       12 |       --- |             --- |
-| Slice Logic              |     0.013 |    25700 |       --- |             --- |
-|   LUT as Logic           |     0.010 |     7390 |     17600 |           41.99 |
-|   Register               |     0.001 |    14427 |     35200 |           40.99 |
-|   CARRY4                 |     0.001 |      319 |      4400 |            7.25 |
+| Clocks                   |     0.063 |       12 |       --- |             --- |
+| Slice Logic              |     0.014 |    26520 |       --- |             --- |
+|   LUT as Logic           |     0.011 |     7746 |     17600 |           44.01 |
+|   Register               |     0.001 |    14494 |     35200 |           41.18 |
+|   CARRY4                 |     0.001 |      331 |      4400 |            7.52 |
 |   LUT as Distributed RAM |    <0.001 |      306 |      6000 |            5.10 |
-|   F7/F8 Muxes            |    <0.001 |      277 |     17600 |            1.57 |
+|   F7/F8 Muxes            |    <0.001 |      280 |     17600 |            1.59 |
+|   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
 |   LUT as Shift Register  |    <0.001 |      240 |      6000 |            4.00 |
-|   Others                 |    <0.001 |     1011 |       --- |             --- |
-| Signals                  |     0.021 |    18712 |       --- |             --- |
-| Block RAM                |     0.009 |     19.5 |        60 |           32.50 |
+|   Others                 |    <0.001 |     1015 |       --- |             --- |
+| Signals                  |     0.020 |    19392 |       --- |             --- |
+| Block RAM                |     0.008 |     19.5 |        60 |           32.50 |
 | MMCM                     |     0.226 |        2 |         2 |          100.00 |
-| I/O                      |     0.044 |       44 |       100 |           44.00 |
+| I/O                      |     0.037 |       42 |       100 |           42.00 |
 | PS7                      |     1.562 |        1 |       --- |             --- |
-| Static Power             |     0.134 |          |           |                 |
-| Total                    |     2.071 |          |           |                 |
+| Static Power             |     0.133 |          |           |                 |
+| Total                    |     2.063 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,9 +78,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.121 |       0.112 |      0.009 |
+| Vccint    |       1.000 |     0.121 |       0.111 |      0.009 |
 | Vccaux    |       1.800 |     0.150 |       0.141 |      0.009 |
-| Vcco33    |       3.300 |     0.004 |       0.003 |      0.001 |
+| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -137,20 +138,20 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+------------------------+------------------------------------------------------------------+-----------------+
-| Clock                  | Domain                                                           | Constraint (ns) |
-+------------------------+------------------------------------------------------------------+-----------------+
-| CLKFBIN                | hdmi_in_i/dvi2rgb_0/U0/TMDS_ClockingX/CLKFBIN                    |             8.3 |
-| CLK_OUT_5x_hdmi_clk    | hdmi_in_i/dvi2rgb_0/U0/TMDS_ClockingX/CLK_OUT_5x_hdmi_clk        |             1.7 |
-| I                      | hdmi_in_i/axi_dynclk_0/U0/Inst_mmcme2_drp/I                      |             2.0 |
-| TMDS_clk_p             | TMDS_clk_p                                                       |             8.3 |
-| axi_dynclk_0_PXL_CLK_O | hdmi_in_i/axi_dynclk_0/U0/PXL_CLK_O                              |            10.0 |
-| clk_fpga_0             | hdmi_in_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]       |            10.0 |
-| clk_fpga_1             | hdmi_in_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]       |             7.0 |
-| clk_fpga_2             | hdmi_in_i/processing_system7_0/inst/FCLK_CLK_unbuffered[2]       |             5.0 |
-| dvi2rgb_0_PixelClk     | hdmi_in_i/dvi2rgb_0/U0/TMDS_ClockingX/rMMCM_LckdRisingFlag_reg_0 |             8.3 |
-| mmcm_fbclk_out         | hdmi_in_i/axi_dynclk_0/U0/Inst_mmcme2_drp/mmcm_fbclk_out         |            10.0 |
-+------------------------+------------------------------------------------------------------+-----------------+
++------------------------+-------------------------------------------------------------+-----------------+
+| Clock                  | Domain                                                      | Constraint (ns) |
++------------------------+-------------------------------------------------------------+-----------------+
+| CLKFBIN                | hdmi_in_i/dvi2rgb_0/U0/TMDS_ClockingX/CLKFBIN               |             8.3 |
+| CLK_OUT_5x_hdmi_clk    | hdmi_in_i/dvi2rgb_0/U0/TMDS_ClockingX/CLK_OUT_5x_hdmi_clk   |             1.7 |
+| I                      | hdmi_in_i/axi_dynclk_0/U0/Inst_mmcme2_drp/PXL_CLK           |             2.0 |
+| TMDS_clk_p             | TMDS_clk_p                                                  |             8.3 |
+| axi_dynclk_0_PXL_CLK_O | hdmi_in_i/axi_dynclk_0/U0/PXL_CLK_O                         |            10.0 |
+| clk_fpga_0             | hdmi_in_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]  |            10.0 |
+| clk_fpga_1             | hdmi_in_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1]  |             7.0 |
+| clk_fpga_2             | hdmi_in_i/processing_system7_0/inst/FCLK_CLK_unbuffered[2]  |             5.0 |
+| dvi2rgb_0_PixelClk     | hdmi_in_i/dvi2rgb_0/U0/TMDS_ClockingX/PixelClk              |             8.3 |
+| mmcm_adv_inst_n_0      | hdmi_in_i/axi_dynclk_0/U0/Inst_mmcme2_drp/mmcm_adv_inst_n_0 |            10.0 |
++------------------------+-------------------------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -162,34 +163,34 @@ Table of Contents
 +-------------------------------------+-----------+
 | Name                                | Power (W) |
 +-------------------------------------+-----------+
-| hdmi_in_wrapper                     |     1.938 |
-|   hdmi_in_i                         |     1.927 |
+| hdmi_in_wrapper                     |     1.930 |
+|   hdmi_in_i                         |     1.928 |
+|     Nunchuck_0                      |     0.004 |
+|       U0                            |     0.004 |
 |     axi_dynclk_0                    |     0.110 |
 |       U0                            |     0.110 |
-|     axi_mem_intercon                |     0.023 |
-|       m00_couplers                  |     0.011 |
+|     axi_mem_intercon                |     0.022 |
+|       m00_couplers                  |     0.010 |
 |       s00_couplers                  |     0.003 |
 |       s01_couplers                  |     0.007 |
 |       xbar                          |     0.002 |
-|     axi_vdma_0                      |     0.025 |
-|       U0                            |     0.025 |
-|     dvi2rgb_0                       |     0.161 |
-|       U0                            |     0.161 |
+|     axi_vdma_0                      |     0.026 |
+|       U0                            |     0.026 |
+|     dvi2rgb_0                       |     0.160 |
+|       U0                            |     0.160 |
 |     processing_system7_0            |     1.564 |
 |       inst                          |     1.564 |
-|     processing_system7_0_axi_periph |     0.006 |
+|     processing_system7_0_axi_periph |     0.005 |
 |       s00_couplers                  |     0.004 |
 |       xbar                          |     0.001 |
-|     v_axi4s_vid_out_0               |     0.002 |
-|       inst                          |     0.002 |
+|     v_axi4s_vid_out_0               |     0.001 |
+|       inst                          |     0.001 |
 |     v_tc_0                          |     0.011 |
 |       U0                            |     0.011 |
 |     v_tc_1                          |     0.016 |
 |       U0                            |     0.016 |
-|     v_vid_in_axi4s_0                |     0.007 |
-|       inst                          |     0.007 |
-|   iic_0_scl_iobuf                   |     0.004 |
-|   iic_0_sda_iobuf                   |     0.004 |
+|     v_vid_in_axi4s_0                |     0.006 |
+|       inst                          |     0.006 |
 +-------------------------------------+-----------+
 
 

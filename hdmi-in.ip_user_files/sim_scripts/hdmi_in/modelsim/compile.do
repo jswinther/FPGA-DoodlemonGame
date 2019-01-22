@@ -231,6 +231,11 @@ vlog -work axi_crossbar_v2_1_19 -64 -incr "+incdir+../../../../hdmi-in.srcs/sour
 vlog -work xil_defaultlib -64 -incr "+incdir+../../../../hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/58e2/hdl" "+incdir+../../../../hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl" "+incdir+../../../../hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/70cf/hdl" "+incdir+../../../../hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../bd/hdmi_in/ip/hdmi_in_xbar_0/sim/hdmi_in_xbar_0.v" \
 "../../../bd/hdmi_in/ip/hdmi_in_xbar_1/sim/hdmi_in_xbar_1.v" \
+
+vcom -work xil_defaultlib -64 -93 \
+"../../../bd/hdmi_in/sim/hdmi_in.vhd" \
+
+vlog -work xil_defaultlib -64 -incr "+incdir+../../../../hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/58e2/hdl" "+incdir+../../../../hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/ec67/hdl" "+incdir+../../../../hdmi-in.srcs/sources_1/bd/hdmi_in/ipshared/70cf/hdl" "+incdir+../../../../hdmi-in.srcs/sources_1/bd/hdmi_in/ip/hdmi_in_processing_system7_0_0" "+incdir+C:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../bd/hdmi_in/ip/hdmi_in_s00_regslice_0/sim/hdmi_in_s00_regslice_0.v" \
 "../../../bd/hdmi_in/ip/hdmi_in_s00_data_fifo_0/sim/hdmi_in_s00_data_fifo_0.v" \
 "../../../bd/hdmi_in/ip/hdmi_in_s01_regslice_0/sim/hdmi_in_s01_regslice_0.v" \
@@ -252,7 +257,9 @@ vlog -work xil_defaultlib -64 -incr "+incdir+../../../../hdmi-in.srcs/sources_1/
 "../../../bd/hdmi_in/ip/hdmi_in_auto_pc_1/sim/hdmi_in_auto_pc_1.v" \
 
 vcom -work xil_defaultlib -64 -93 \
-"../../../bd/hdmi_in/sim/hdmi_in.vhd" \
+"../../../bd/hdmi_in/ipshared/451c/hdl/Nunchuck_v1_0_S00_AXI.vhd" \
+"../../../bd/hdmi_in/ipshared/451c/hdl/Nunchuck_v1_0.vhd" \
+"../../../bd/hdmi_in/ip/hdmi_in_Nunchuck_0_0_1/sim/hdmi_in_Nunchuck_0_0.vhd" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

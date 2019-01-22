@@ -501,3 +501,9 @@ con
 ----------------End of Script----------------
 
 16:10:26 INFO  : Disconnected from the channel tcfchan#10.
+12:37:08 INFO  : Registering command handlers for SDK TCF services
+12:37:09 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\bruger\Documents\GitHub\3Ugers3Semester\hdmi-in.sdk\temp_xsdb_launch_script.tcl
+12:37:13 INFO  : XSCT server has started successfully.
+12:37:15 INFO  : Successfully done setting XSCT server connection channel  
+12:37:15 INFO  : Successfully done setting SDK workspace  
+12:37:15 INFO  : Processing command line option -hwspec C:/Users/bruger/Documents/GitHub/3Ugers3Semester/hdmi-in.sdk/hdmi_in_wrapper.hdf.

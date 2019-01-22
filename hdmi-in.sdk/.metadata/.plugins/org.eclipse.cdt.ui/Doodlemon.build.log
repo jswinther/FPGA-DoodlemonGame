@@ -1,8 +1,27 @@
-16:10:00 **** Incremental Build of configuration Debug for project Doodlemon ****
+12:37:02 **** Build of configuration Debug for project Doodlemon ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-make: Nothing to be done for 'main-build'.
+'Building file: ../src/RunMe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/RunMe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/RunMe.d" -MT"src/RunMe.o" -o "src/RunMe.o" "../src/RunMe.c"
+In file included from ../src/RunMe.c:42:0:
+../../standalone_bsp_0/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/RunMe.c'
+' '
+'Building target: Doodlemon.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "Doodlemon.elf"  ./src/xilffs_v4_0/src/diskio.o ./src/xilffs_v4_0/src/ff.o ./src/xilffs_v4_0/src/ffsystem.o ./src/xilffs_v4_0/src/ffunicode.o  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/interrupt/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/SDcard/platform.o  ./src/RunMe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Doodlemon.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Doodlemon.elf  |tee "Doodlemon.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 150776	7838736	18677888	26667400	196e988	Doodlemon.elf
+'Finished building: Doodlemon.elf.size'
+' '
 
-16:10:00 Build Finished (took 411ms)
+12:38:07 Build Finished (took 1m:5s.675ms)
 

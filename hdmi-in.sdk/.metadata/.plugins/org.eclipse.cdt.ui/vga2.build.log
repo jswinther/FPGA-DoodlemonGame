@@ -1,4 +1,4 @@
-15:23:24 **** Build of configuration Debug for project vga2 ****
+12:39:30 **** Auto Build of configuration Debug for project vga2 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -43,5 +43,5 @@ arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_demo.o" -mcp
  INTC
 make: *** [src/subdir.mk:23: src/video_demo.o] Error 1
 
-15:23:29 Build Finished (took 5s.335ms)
+12:39:35 Build Finished (took 4s.853ms)
 
