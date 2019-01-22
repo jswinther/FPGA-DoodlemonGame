@@ -3,7 +3,7 @@
 	<name>Doodlemon</name>
 	<comment></comment>
 	<projects>
-		<project>standalone_bsp_0</project>
+		<project>Doodlemon_bsp</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

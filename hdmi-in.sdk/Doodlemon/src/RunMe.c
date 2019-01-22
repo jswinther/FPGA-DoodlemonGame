@@ -49,7 +49,6 @@
 /* Headerfiles that contain game logic */
 #include "game.h"
 #include "score.h"
-#include "PowerUpLogic.h"
 
 /* SDcard */
 #include "SDcard/platform.h"
@@ -76,7 +75,6 @@
 #include "Images/Header.h"
 #include "Images/numberArray.h"
 #include "Images/whiteLine.h"
-#include "Images/powerupsImg.h"
 #include "math.h"
 
 
@@ -256,9 +254,6 @@ void ResetGame(u8 *frame) {
 		platformBlock[i].velocity = LEFT;
 		platform[i] = &platformBlock[i];
 	}
-	PowerUp.x = platformBlock[4].x + 40*DEMO_STRIDE;
-	PowerUp.y = platformBlock[4].y - 60;
-	PowerUp.type = WumpaFruit;
 	jumperBlock.x = (540-(JUMPER_WIDTH/2))*DEMO_STRIDE;
 	jumperBlock.y = 3802;
 	PrintScore(frame, ones, tens, hundreds, thousands, 500, 3299);
@@ -276,7 +271,6 @@ void Print(u8 *frame) {
 	for(int j = 0; j < PLATFORM_AMOUNT; j++) {
 		PrintPlatform(frame, DEMO_STRIDE, platformImg, PLATFORM_WIDTH, PLATFORM_HEIGHT, platformBlock[j]);
 	}
-	ImagePrint(frame, powerupsImg[PowerUp.type], platformBlock[4].x, platformBlock[4].y, 60, 60);
 	PrintBackground(frame, 150, 1080, 5760, HeaderImg);
 	if (jumperDeathState == DEAD){
 		ImagePrint(frameBuf[0], Gameover, 0, 2101, 1080, 240);
@@ -603,18 +597,6 @@ void MoveSprite(u8 *frame) {
 			for(int k = 0; k < PLATFORM_AMOUNT; k++) {
 
 				if((ColissionDetection(jumper, platform[k]))==1) {
-					if(k == 4) {
-						switch(PowerUp.type) {
-						case Skull:
-							currentScoreCounter -= 10;
-							break;
-						case WumpaFruit:
-							currentScoreCounter += 10;
-							break;
-						case Clock:
-							platformspeed -= 6;
-						}
-					}
 					jumperVelocity = GROUND;
 				}
 			}
@@ -655,7 +637,6 @@ void MovePlatform(u8 *frame) {
 		Increment();
 		platformBlock[j].y = 2;
 		platformBlock[j].x = DEMO_STRIDE*(rand() % 900 + 0);
-		PowerUp.type = rand() % 2 + 0;
 		}
 	}
 }
