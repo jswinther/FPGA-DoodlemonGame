@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date                      : Fri Jan 11 14:57:07 2019
-| Host                      : DESKTOP-SHDFERO running 64-bit major release  (build 9200)
+| Date                      : Mon Jan 21 01:27:18 2019
+| Host                      : DESKTOP-5H56P2B running 64-bit major release  (build 9200)
 | Command                   : report_io -file hdmi_in_wrapper_io_placed.rpt
 | Design                    : hdmi_in_wrapper
 | Device                    : xc7z010
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|           174 |
+|           176 |
 +---------------+
 
 
@@ -308,7 +308,7 @@ Table of Contents
 | P11        |                      |            | GND                     | GND           |                   |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | P12        |                      |            | VCCINT                  | VCCINT        |                   |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | P13        |                      |            | GND                     | GND           |                   |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
-| P14        |                      | High Range | IO_L6P_T0_34            | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| P14        | i2c_SCL_0            | High Range | IO_L6P_T0_34            | BIDIR         | LVCMOS33          |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | P15        | sws_4bits_tri_i[1]   | High Range | IO_L24P_T3_34           | INPUT         | LVCMOS33          |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | P16        | btns_4bits_tri_i[1]  | High Range | IO_L24N_T3_34           | INPUT         | LVCMOS33          |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | P17        |                      |            | GND                     | GND           |                   |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
@@ -328,7 +328,7 @@ Table of Contents
 | R11        |                      | Dedicated  | DONE_0                  | Config        |                   |       0 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | R12        |                      |            | GND                     | GND           |                   |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | R13        |                      |            | VCCINT                  | VCCINT        |                   |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| R14        |                      | High Range | IO_L6N_T0_VREF_34       | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| R14        | i2c_SDA_0            | High Range | IO_L6N_T0_VREF_34       | BIDIR         | LVCMOS33          |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | R15        |                      | High Range | VCCO_34                 | VCCO          |                   |      34 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
 | R16        |                      | High Range | IO_L19P_T3_34           | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | R17        |                      | High Range | IO_L19N_T3_VREF_34      | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |

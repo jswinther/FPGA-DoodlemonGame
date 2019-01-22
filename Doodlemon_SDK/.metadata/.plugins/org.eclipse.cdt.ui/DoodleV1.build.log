@@ -1,0 +1,27 @@
+19:27:55 **** Auto Build of configuration Debug for project DoodleV1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/RunMe.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/RunMe.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../DoodleV1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/RunMe.d" -MT"src/RunMe.o" -o "src/RunMe.o" "../src/RunMe.c"
+In file included from ../src/RunMe.c:42:0:
+../../DoodleV1_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+'Finished building: ../src/RunMe.c'
+' '
+'Building target: DoodleV1.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../DoodleV1_bsp/ps7_cortexa9_0/lib -o "DoodleV1.elf"  ./src/xilffs_v4_0/src/diskio.o ./src/xilffs_v4_0/src/ff.o ./src/xilffs_v4_0/src/ffsystem.o ./src/xilffs_v4_0/src/ffunicode.o  ./src/video_capture/video_capture.o  ./src/timer_ps/timer_ps.o  ./src/interrupt/intc.o  ./src/dynclk/dynclk.o  ./src/display_ctrl/display_ctrl.o  ./src/SDcard/platform.o  ./src/RunMe.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: DoodleV1.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size DoodleV1.elf  |tee "DoodleV1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 152056	7871128	18677888	26701072	1976d10	DoodleV1.elf
+'Finished building: DoodleV1.elf.size'
+' '
+
+19:28:41 Build Finished (took 45s.198ms)
+

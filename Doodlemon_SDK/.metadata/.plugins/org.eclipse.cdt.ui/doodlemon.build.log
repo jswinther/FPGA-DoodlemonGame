@@ -1,0 +1,16 @@
+19:20:23 **** Auto Build of configuration Debug for project doodlemon ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/video_capture/video_capture.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_capture/video_capture.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../doodlemon_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_capture/video_capture.d" -MT"src/video_capture/video_capture.o" -o "src/video_capture/video_capture.o" "../src/video_capture/video_capture.c"
+In file included from ../src/video_capture/video_capture.c:105:0:
+../src/video_capture/video_capture.h:74:10: fatal error: xil_types.h: No such file or directory
+ #include "xil_types.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/video_capture/subdir.mk:20: src/video_capture/video_capture.o] Error 1
+
+19:20:23 Build Finished (took 464ms)
+

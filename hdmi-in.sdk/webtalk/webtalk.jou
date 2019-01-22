@@ -2,11 +2,11 @@
 # Webtalk v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # 
-# Start of session at: Fri Jan 11 15:08:39 2019
-# Process ID: 4996
-# Current directory: C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.sdk/webtalk
+# Start of session at: Tue Jan 22 19:16:59 2019
+# Process ID: 18256
+# Current directory: C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.sdk/webtalk
 # Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
-# Log file: C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.sdk/webtalk/webtalk.log
-# Journal file: C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.sdk/webtalk\webtalk.jou
+# Log file: C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.sdk/webtalk/webtalk.log
+# Journal file: C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.sdk/webtalk\webtalk.jou
 #-----------------------------------------------------------
 source sdk_webtalk.tcl

@@ -51,6 +51,8 @@ entity hdmi_in_wrapper is
     vga_g : out STD_LOGIC_VECTOR ( 5 downto 0 );
     vga_hs : out STD_LOGIC;
     vga_r : out STD_LOGIC_VECTOR ( 4 downto 0 );
+    i2c_SCL_0 : inout STD_LOGIC;
+    i2c_SDA_0 : inout STD_LOGIC;
     vga_vs : out STD_LOGIC
   );
 end hdmi_in_wrapper;
@@ -104,6 +106,8 @@ architecture STRUCTURE of hdmi_in_wrapper is
     vga_b : out STD_LOGIC_VECTOR ( 4 downto 0 );
     vga_g : out STD_LOGIC_VECTOR ( 5 downto 0 );
     vga_hs : out STD_LOGIC;
+    i2c_SCL_0 : inout STD_LOGIC;
+    i2c_SDA_0 : inout STD_LOGIC;
     vga_r : out STD_LOGIC_VECTOR ( 4 downto 0 );
     vga_vs : out STD_LOGIC;
     HDMI_OEN : out STD_LOGIC_VECTOR ( 0 to 0 )
@@ -191,6 +195,8 @@ hdmi_in_i: component hdmi_in
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
       HDMI_OEN(0) => HDMI_OEN(0),
       IIC_0_scl_i => iic_0_scl_i,
+      i2c_SCL_0 => i2c_SCL_0,
+      i2c_SDA_0 => i2c_SDA_0,
       IIC_0_scl_o => iic_0_scl_o,
       IIC_0_scl_t => iic_0_scl_t,
       IIC_0_sda_i => iic_0_sda_i,
