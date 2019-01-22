@@ -50,7 +50,7 @@
 #include "game.h"
 #include "score.h"
 #include "PowerUpLogic.h"
-
+#include "Nunchuck.h"
 
 /* SDcard */
 #include "SDcard/platform.h"
@@ -118,7 +118,7 @@ XAxiVdma vdma;
 int resetf = 1;					//Reset flag, when 1 the game initializes game components and reset positions etc. for new  game.
 int frame;						//Index of the current frame that is being displayed.
 int counter = 0;				//Counter that is used to control the jumping animation, see function "Move" to see more.
-
+int powerupTaken = 0;
 /*
  * In the alphabet.h file in folder images. Each letter is enumerated so it corresponds
  * to a letter of the array. Each letter is an array.
@@ -216,7 +216,7 @@ void DemoStartGame() {
 			Xil_DCacheFlushRange((unsigned int)frameBuf[0], DEMO_MAX_FRAME);
 			DisplayChangeFrame(&dispCtrl, 0);
 		}
-		if(btn_value == 4)
+		if(btn_value == 4 || (Xil_In32(XPAR_NUNCHUCK_0_S00_AXI_BASEADDR + NUNCHUCK_S00_AXI_SLV_REG2_OFFSET)&(u32)1) == 1)
 			jumperDeathState = ALIVE;
 		while(jumperDeathState == ALIVE) {
 			if (frame >= DISPLAY_NUM_FRAMES) {
@@ -259,13 +259,14 @@ void ResetGame(u8 *frame) {
 	}
 	PowerUp.x = platformBlock[0].x + 40 * DEMO_STRIDE;
 	PowerUp.y = platformBlock[0].y - 60;
-	PowerUp.type = WumpaFruit;
+	PowerUp.type = 0;
 	jumperBlock.x = (540-(JUMPER_WIDTH/2))*DEMO_STRIDE;
 	jumperBlock.y = 3802;
 	PrintScore(frame, ones, tens, hundreds, thousands, 500, 3299);
 	resetScore();
 	platformspeed = 6;
 	jumperVelocity = GROUND;
+	powerupTaken = 0;
 	resetf = 0;
 }
 
@@ -277,7 +278,8 @@ void Print(u8 *frame) {
 	for(int j = 0; j < PLATFORM_AMOUNT; j++) {
 		PrintPlatform(frame, DEMO_STRIDE, platformImg, PLATFORM_WIDTH, PLATFORM_HEIGHT, platformBlock[j]);
 	}
-	ImagePrint(frame, powerupsImg[PowerUp.type], PowerUp.x, PowerUp.y, 60, 60);
+	if(powerupTaken == 0 && PowerUp.y > 60)
+		ImagePrint(frame, powerupsImg[PowerUp.type], PowerUp.x, PowerUp.y, 60, 60);
 	PrintBackground(frame, 150, 1080, 5760, HeaderImg);
 	if (jumperDeathState == DEAD){
 		ImagePrint(frameBuf[0], Gameover, 0, 2101, 1080, 240);
@@ -292,7 +294,10 @@ void Print(u8 *frame) {
 	PrintWord(frame, HighscoreWord, 1050, 560, 9);
 	PrintWord(frame, Average, 1050, 650, 7);
 	PrintWord(frame, Score, 1150, 650, 5);
-
+	if((Xil_In32(XPAR_NUNCHUCK_0_S00_AXI_BASEADDR + NUNCHUCK_S00_AXI_SLV_REG2_OFFSET)&(u32)1) == 1)
+		sprite_value++;
+	if(sprite_value > 2)
+		sprite_value = 0;
 
 	switch(sprite_value) {
 	case KIRBY:
@@ -457,7 +462,7 @@ void MoveSprite(u8 *frame) {
 	/*----------------------------------------------------*/
 
 
-	/*
+
 	u32 nunchuck_value = Xil_In32(XPAR_NUNCHUCK_0_S00_AXI_BASEADDR);
 	xil_printf("%d\n\r", nunchuck_value);
 	if(nunchuck_value < 25) {
@@ -517,7 +522,7 @@ void MoveSprite(u8 *frame) {
 			jumperDir = UR;
 	}
 
-*/
+
 
 
 
@@ -605,8 +610,22 @@ void MoveSprite(u8 *frame) {
 			}
 			/* Colission Detection */
 			for(int k = 0; k < PLATFORM_AMOUNT; k++) {
-
 				if((ColissionDetection(jumper, platform[k]))==1) {
+					if(k == 0 && powerupTaken == 0) {
+						switch(PowerUp.type) {
+						case WumpaFruit:
+							tens++;
+							break;
+						case Skull:
+							platformspeed+=3;
+							break;
+						case Clock:
+							if(platformspeed > 7)
+							platformspeed-=6;
+							break;
+						}
+						powerupTaken = 1;
+					}
 					jumperVelocity = GROUND;
 				}
 			}
@@ -645,14 +664,20 @@ void MovePlatform(u8 *frame) {
 
 		if(platformBlock[j].y >= DEMO_STRIDE) {
 		Increment();
+		if(platformBlock[0].y >= DEMO_STRIDE) {
+			powerupTaken = 0;
+			PowerUp.type = rand() % 5 + 0;
+			if(PowerUp.type == 3)
+				PowerUp.type = 0;
+			if(PowerUp.type == 4)
+				PowerUp.type = 1;
+		}
 		platformBlock[j].y = 2;
 		platformBlock[j].x = DEMO_STRIDE*(rand() % 900 + 0);
-		if(platformBlock[0].y >= DEMO_STRIDE)
-			PowerUp.type = rand() % 3 + 0;
 		}
 	}
 	PowerUp.x = platformBlock[0].x + 40 * DEMO_STRIDE;
-	PowerUp.y = platformBlock[0].y - 60;
+	PowerUp.y = platformBlock[0].y - 120;
 }
 
 /*
