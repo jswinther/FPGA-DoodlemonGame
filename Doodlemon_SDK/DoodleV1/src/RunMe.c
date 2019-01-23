@@ -124,6 +124,7 @@ int powerupTaken = 0;
 int clockEnable = 0;
 int clockCounter = 0;
 int platform_amount = PLATFORM_AMOUNT;
+int spriteFlag = 0;
 /*
  * In the alphabet.h file in folder images. Each letter is enumerated so it corresponds
  * to a letter of the array. Each letter is an array.
@@ -305,10 +306,14 @@ void Print(u8 *frame) {
 	PrintWord(frame, HighscoreWord, 1050, 560, 9);
 	PrintWord(frame, Average, 1050, 650, 7);
 	PrintWord(frame, Score, 890, 650, 5);
-	if((Xil_In32(XPAR_NUNCHUCK_0_S00_AXI_BASEADDR + NUNCHUCK_S00_AXI_SLV_REG2_OFFSET)&(u32)1) == 1)
+	if((Xil_In32(XPAR_NUNCHUCK_0_S00_AXI_BASEADDR + NUNCHUCK_S00_AXI_SLV_REG2_OFFSET)&(u32)1) == 1){
+		spriteFlag =1;}
+	if((Xil_In32(XPAR_NUNCHUCK_0_S00_AXI_BASEADDR + NUNCHUCK_S00_AXI_SLV_REG2_OFFSET)&(u32)1) == 0 && spriteFlag ==1) {
+		spriteFlag = 0;
 		sprite_value++;
+	}
 	if(sprite_value > 2)
-		sprite_value = 0;
+			sprite_value = 0;
 
 	switch(sprite_value) {
 	case KIRBY:
@@ -350,6 +355,7 @@ void Print(u8 *frame) {
 		case THEORIGINAL:
 			ImagePrint(frame, jumperImg, jumperBlock.x, jumperBlock.y, 100, 100);
 	}
+
 }
 
 /*
@@ -588,7 +594,12 @@ void MoveSprite(u8 *frame) {
 		default:
 			break;
 		}
-		jumperBlock.velocity = 99;
+		if (jumperBlock.y >= 3840)
+			jumperBlock.velocity = 120;
+		if (jumperBlock.y < 3840 && jumperBlock.y >= 1020)
+					jumperBlock.velocity = 99;
+		if (jumperBlock.y < 1020)
+					jumperBlock.velocity = 81;
 		jumperVelocity = AIR;
 		break;
 	/* When Sprite leaves platform and enters air state. */
