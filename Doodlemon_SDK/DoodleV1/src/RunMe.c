@@ -51,6 +51,7 @@
 #include "score.h"
 #include "PowerUpLogic.h"
 #include "Nunchuck.h"
+#include "Enemy.h"
 
 /* SDcard */
 #include "SDcard/platform.h"
@@ -78,6 +79,7 @@
 #include "Images/numberArray.h"
 #include "Images/whiteLine.h"
 #include "Images/powerupsImg.h"
+#include "Images/bowser.h"
 #include "math.h"
 
 
@@ -119,6 +121,9 @@ int resetf = 1;					//Reset flag, when 1 the game initializes game components an
 int frame;						//Index of the current frame that is being displayed.
 int counter = 0;				//Counter that is used to control the jumping animation, see function "Move" to see more.
 int powerupTaken = 0;
+int clockEnable = 0;
+int clockCounter = 0;
+int platform_amount = PLATFORM_AMOUNT;
 /*
  * In the alphabet.h file in folder images. Each letter is enumerated so it corresponds
  * to a letter of the array. Each letter is an array.
@@ -216,7 +221,7 @@ void DemoStartGame() {
 			Xil_DCacheFlushRange((unsigned int)frameBuf[0], DEMO_MAX_FRAME);
 			DisplayChangeFrame(&dispCtrl, 0);
 		}
-		if(btn_value == 4 || (Xil_In32(XPAR_NUNCHUCK_0_S00_AXI_BASEADDR + NUNCHUCK_S00_AXI_SLV_REG2_OFFSET)&(u32)1) == 1)
+		if(btn_value == 4 || (Xil_In32(XPAR_NUNCHUCK_0_S00_AXI_BASEADDR + NUNCHUCK_S00_AXI_SLV_REG2_OFFSET)&(u32)2) == 2)
 			jumperDeathState = ALIVE;
 		while(jumperDeathState == ALIVE) {
 			if (frame >= DISPLAY_NUM_FRAMES) {
@@ -259,6 +264,8 @@ void ResetGame(u8 *frame) {
 	}
 	PowerUp.x = platformBlock[0].x + 40 * DEMO_STRIDE;
 	PowerUp.y = platformBlock[0].y - 60;
+	Bowser.x = platformBlock[4].x;
+	Bowser.y = platformBlock[4].y - 419;
 	PowerUp.type = 0;
 	jumperBlock.x = (540-(JUMPER_WIDTH/2))*DEMO_STRIDE;
 	jumperBlock.y = 3802;
@@ -268,6 +275,7 @@ void ResetGame(u8 *frame) {
 	jumperVelocity = GROUND;
 	powerupTaken = 0;
 	resetf = 0;
+	platform_amount = 10;
 }
 
 /*
@@ -275,11 +283,14 @@ void ResetGame(u8 *frame) {
  */
 void Print(u8 *frame) {
 
-	for(int j = 0; j < PLATFORM_AMOUNT; j++) {
+	for(int j = 0; j < platform_amount; j++) {
 		PrintPlatform(frame, DEMO_STRIDE, platformImg, PLATFORM_WIDTH, PLATFORM_HEIGHT, platformBlock[j]);
 	}
 	if(powerupTaken == 0 && PowerUp.y > 60)
 		ImagePrint(frame, powerupsImg[PowerUp.type], PowerUp.x, PowerUp.y, 60, 60);
+	if(currentScoreCounter > 50) {
+		ImagePrint(frame, bowserImg, Bowser.x, Bowser.y, 140, 140);
+	}
 	PrintBackground(frame, 150, 1080, 5760, HeaderImg);
 	if (jumperDeathState == DEAD){
 		ImagePrint(frameBuf[0], Gameover, 0, 2101, 1080, 240);
@@ -290,10 +301,10 @@ void Print(u8 *frame) {
 	PrintScore(frame, highones, hightens, highhundreds, highthousands, 700, 560);
 	PrintScore(frame, avgones, avgtens, avghundreds, avgthousands, 700, 650);
 	PrintWord(frame, Your, 1050, 470, 4);
-	PrintWord(frame, Score, 1150, 470, 5);
+	PrintWord(frame, Score, 950, 470, 5);
 	PrintWord(frame, HighscoreWord, 1050, 560, 9);
 	PrintWord(frame, Average, 1050, 650, 7);
-	PrintWord(frame, Score, 1150, 650, 5);
+	PrintWord(frame, Score, 890, 650, 5);
 	if((Xil_In32(XPAR_NUNCHUCK_0_S00_AXI_BASEADDR + NUNCHUCK_S00_AXI_SLV_REG2_OFFSET)&(u32)1) == 1)
 		sprite_value++;
 	if(sprite_value > 2)
@@ -564,6 +575,7 @@ void MoveSprite(u8 *frame) {
 	switch(jumperVelocity) {
 	/* When Sprite hits a platform */
 	case GROUND:
+		Increment();
 		counter = 0;
 		/* Which way the Sprite faces */
 		switch(jumperDir) {
@@ -608,8 +620,19 @@ void MoveSprite(u8 *frame) {
 			default:
 			break;
 			}
+			if(currentScoreCounter > 50) {
+				if(BowserDetection() == 1)
+					jumperDeathState = DEAD;
+			}
+
 			/* Colission Detection */
-			for(int k = 0; k < PLATFORM_AMOUNT; k++) {
+
+			if(currentScoreCounter > 100) {
+				if(platform_amount > 9)
+					platform_amount--;
+			}
+
+			for(int k = 0; k < platform_amount; k++) {
 				if((ColissionDetection(jumper, platform[k]))==1) {
 					if(k == 0 && powerupTaken == 0) {
 						switch(PowerUp.type) {
@@ -617,11 +640,14 @@ void MoveSprite(u8 *frame) {
 							tens++;
 							break;
 						case Skull:
-							platformspeed+=3;
+							platformspeed+=12;
 							break;
 						case Clock:
-							if(platformspeed > 7)
-							platformspeed-=6;
+								if(platformspeed > 13)
+									platformspeed-=12;
+								else if(platformspeed > 7)
+									platformspeed -=6;
+								clockEnable = 1;
 							break;
 						}
 						powerupTaken = 1;
@@ -631,6 +657,15 @@ void MoveSprite(u8 *frame) {
 			}
 		}
 		/* Counter that is used to reduce jumper velocity is incremented every loop */
+		if(clockEnable == 1 && clockCounter <= 150)
+			clockCounter++;
+		if(clockCounter == 150) {
+			clockEnable = 0;
+			platformspeed += 12;
+			clockCounter = 0;
+
+		}
+
 		counter++;
 		break;
 	}
@@ -678,6 +713,8 @@ void MovePlatform(u8 *frame) {
 	}
 	PowerUp.x = platformBlock[0].x + 40 * DEMO_STRIDE;
 	PowerUp.y = platformBlock[0].y - 118;
+	Bowser.x = platformBlock[4].x;
+	Bowser.y = platformBlock[4].y - 358;
 }
 
 /*
@@ -699,6 +736,23 @@ int ColissionDetection (struct Block *jumper, struct Block *platform){
 	for(int i = 0; i < platformh; i++){
 		for(int j = platformRT + singleStepHeight; j <= platformLT; j+=DEMO_STRIDE) {
 			if(j == jumperLC || j == jumperRC) {
+				return 1;
+
+			}
+		}
+	singleStepHeight++;
+	}
+	return 0;
+}
+
+int BowserDetection() {
+	int singleStepHeight = 0;
+	for(int i = 0; i < platformBlock[4].width*3; i++){
+		for(int j = platformBlock[4].x+platformBlock[4].y + singleStepHeight;
+				j <= platformBlock[4].x+platformBlock[4].y+(platformBlock[4].height*DEMO_STRIDE);
+				j+=DEMO_STRIDE) {
+			if(j == jumperBlock.x+jumperBlock.y+jumperBlock.width*DEMO_STRIDE ||
+			   j == jumperBlock.x+jumperBlock.y+jumperBlock.height*3) {
 				return 1;
 
 			}
@@ -773,6 +827,8 @@ void SDRead() {
 	highones = (int)SDArray[3]-48;
 
 }
+
+
 
 void DemoInitialize()
 {

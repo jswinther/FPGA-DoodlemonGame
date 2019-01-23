@@ -40,6 +40,7 @@ struct Block {
 	int x;
 	int y;
 	int velocity;
+
 };
 
 enum {

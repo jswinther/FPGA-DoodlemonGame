@@ -16,7 +16,7 @@ u8 intervalCount = 0;
 
 u16 currentScoreCounter = 0;
 u16 highscoreCounter = 0;
-u16 averageScoreCounter = 37;
+u16 averageScoreCounter = 0;
 
 
 //current score
@@ -38,10 +38,10 @@ int avgtens = 0;
 int avghundreds = 0;
 int avgthousands = 0;
 int averageScore = 0;
-int totalScore = 37*7;
+int totalScore = 0;
 
 //Times played
-int gamesPlayed = 7;
+int gamesPlayed = 0;
 
 
 void findAverageScore(){
