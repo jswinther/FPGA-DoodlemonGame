@@ -21,7 +21,7 @@
  */
 #define JUMPER_HEIGHT 100
 #define JUMPER_WIDTH 100
-#define JUMPER_GRAVITY 12
+#define JUMPER_GRAVITY 18
 
 /*
  * Death Logic Definitions.

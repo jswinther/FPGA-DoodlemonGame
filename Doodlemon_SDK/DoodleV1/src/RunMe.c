@@ -477,42 +477,42 @@ void MoveSprite(u8 *frame) {
 	u32 nunchuck_value = Xil_In32(XPAR_NUNCHUCK_0_S00_AXI_BASEADDR);
 	xil_printf("%d\n\r", nunchuck_value);
 	if(nunchuck_value < 25) {
-		jumperBlock.x += DEMO_STRIDE*21;
+		jumperBlock.x += DEMO_STRIDE*30;
 		if (jumperBlock.velocity < 0)
 			jumperDir = DL;
 		else
 			jumperDir = UL;
 	}
 	else if(nunchuck_value > 185) {
-		jumperBlock.x -= DEMO_STRIDE*21;
+		jumperBlock.x -= DEMO_STRIDE*30;
 		if (jumperBlock.velocity < 0)
 			jumperDir = DR;
 		else
 			jumperDir = UR;
 	}
 	else if(nunchuck_value < 50) {
-		jumperBlock.x += DEMO_STRIDE*18;
+		jumperBlock.x += DEMO_STRIDE*21;
 		if (jumperBlock.velocity < 0)
 			jumperDir = DL;
 		else
 			jumperDir = UL;
 	}
 	else if(nunchuck_value > 160) {
-		jumperBlock.x -= DEMO_STRIDE*18;
+		jumperBlock.x -= DEMO_STRIDE*21;
 		if (jumperBlock.velocity < 0)
 			jumperDir = DR;
 		else
 			jumperDir = UR;
 	}
 	else if(nunchuck_value < 75) {
-		jumperBlock.x += DEMO_STRIDE*12;
+		jumperBlock.x += DEMO_STRIDE*15;
 		if (jumperBlock.velocity < 0)
 			jumperDir = DL;
 		else
 			jumperDir = UL;
 	}
 	else if(nunchuck_value > 135) {
-		jumperBlock.x -= DEMO_STRIDE*12;
+		jumperBlock.x -= DEMO_STRIDE*15;
 		if (jumperBlock.velocity < 0)
 			jumperDir = DR;
 		else
@@ -588,7 +588,7 @@ void MoveSprite(u8 *frame) {
 		default:
 			break;
 		}
-		jumperBlock.velocity = 84;
+		jumperBlock.velocity = 99;
 		jumperVelocity = AIR;
 		break;
 	/* When Sprite leaves platform and enters air state. */
@@ -598,7 +598,7 @@ void MoveSprite(u8 *frame) {
 		 * stands still in the air.
 		 */
 		if(jumperBlock.velocity < 13 && -13 < jumperBlock.velocity) {
-			if(counter%2==0)
+			if(counter%1==0)
 				jumperBlock.velocity-=JUMPER_GRAVITY;
 		}
 		/* Global counter that counts to 6 and then reduce upward velocity until it hits another block */
