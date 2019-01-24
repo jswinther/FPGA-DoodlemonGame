@@ -193,3 +193,12 @@ dismissDialog("Re-customize IP"); // r (aK)
 // HMemoryUtils.trashcanNow. Engine heap size: 1,033 MB. GUI used memory: 87 MB. Current time: 1/24/19, 11:27:09 AM CET
 // HMemoryUtils.trashcanNow. Engine heap size: 1,033 MB. GUI used memory: 86 MB. Current time: 1/24/19, 11:57:10 AM CET
 // HMemoryUtils.trashcanNow. Engine heap size: 1,033 MB. GUI used memory: 86 MB. Current time: 1/24/19, 12:27:12 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,033 MB. GUI used memory: 87 MB. Current time: 1/24/19, 12:57:12 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,033 MB. GUI used memory: 86 MB. Current time: 1/24/19, 1:27:13 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,033 MB. GUI used memory: 86 MB. Current time: 1/24/19, 1:57:13 PM CET
+// WARNING: HEventQueue.dispatchEvent() is taking  844453 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,033 MB. GUI used memory: 87 MB. Current time: 1/24/19, 2:36:14 PM CET
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 844823 ms. Increasing delay to 3000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,033 MB. GUI used memory: 87 MB. Current time: 1/24/19, 3:06:15 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,033 MB. GUI used memory: 86 MB. Current time: 1/24/19, 3:36:15 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,033 MB. GUI used memory: 86 MB. Current time: 1/24/19, 4:06:15 PM CET

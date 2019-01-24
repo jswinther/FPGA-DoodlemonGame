@@ -218,12 +218,17 @@ void DemoStartGame() {
 		if(resetf == 1) {
 			ResetGame(frameBuf[0]);
 			Move(frameBuf[0]);
+			ones = 0;
+			currentScoreCounter = 0;
 			Print(frameBuf[0]);
 			Xil_DCacheFlushRange((unsigned int)frameBuf[0], DEMO_MAX_FRAME);
 			DisplayChangeFrame(&dispCtrl, 0);
 		}
-		if(btn_value == 4 || ((Xil_In32(XPAR_NUNCHUCK_0_S00_AXI_BASEADDR + NUNCHUCK_S00_AXI_SLV_REG2_OFFSET)+0x17)&(u32)2) != 2)
+		if(btn_value == 4 || ((Xil_In32(XPAR_NUNCHUCK_0_S00_AXI_BASEADDR + NUNCHUCK_S00_AXI_SLV_REG2_OFFSET)+0x17)&(u32)2) != 2){
 			jumperDeathState = ALIVE;
+
+		}
+
 		while(jumperDeathState == ALIVE) {
 			if (frame >= DISPLAY_NUM_FRAMES) {
 				frame = 0;
@@ -263,8 +268,8 @@ void ResetGame(u8 *frame) {
 		platformBlock[i].velocity = LEFT;
 		platform[i] = &platformBlock[i];
 	}
-	PowerUp.x = platformBlock[0].x + 40 * DEMO_STRIDE;
-	PowerUp.y = platformBlock[0].y - 60;
+	PowerUp.x = platformBlock[7].x + 40 * DEMO_STRIDE;
+	PowerUp.y = platformBlock[7].y - 60;
 	Bowser.x = platformBlock[4].x;
 	Bowser.y = platformBlock[4].y - 419;
 	PowerUp.type = 0;
@@ -643,7 +648,7 @@ void MoveSprite(u8 *frame) {
 				if((ColissionDetection(jumper, platform[k]))==1) {
 					if(k==4 && currentScoreCounter > 50)
 						jumperDeathState = DEAD;
-					if(k == 0 && powerupTaken == 0) {
+					if(k == 7 && powerupTaken == 0) {
 						switch(PowerUp.type) {
 						case WumpaFruit:
 							tens++;
@@ -709,7 +714,7 @@ void MovePlatform(u8 *frame) {
 
 		if(platformBlock[j].y >= DEMO_STRIDE) {
 		Increment();
-		if(platformBlock[0].y >= DEMO_STRIDE) {
+		if(platformBlock[7].y >= DEMO_STRIDE) {
 			powerupTaken = 0;
 			PowerUp.type = rand() % 5 + 0;
 			if(PowerUp.type == 3)
@@ -721,8 +726,8 @@ void MovePlatform(u8 *frame) {
 		platformBlock[j].x = DEMO_STRIDE*(rand() % 900 + 0);
 		}
 	}
-	PowerUp.x = platformBlock[0].x + 40 * DEMO_STRIDE;
-	PowerUp.y = platformBlock[0].y - 118;
+	PowerUp.x = platformBlock[7].x + 40 * DEMO_STRIDE;
+	PowerUp.y = platformBlock[7].y - 118;
 	Bowser.x = platformBlock[4].x;
 	Bowser.y = platformBlock[4].y - 358;
 }
