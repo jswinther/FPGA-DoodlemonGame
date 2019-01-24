@@ -27,6 +27,7 @@ int thousands = 0;
 
 //Highscore
 int oldHighscore = 0;
+int highscoreValue;
 int highones = 0;
 int hightens = 0;
 int highhundreds = 0;
@@ -105,7 +106,8 @@ void Increment() {
 }
 
 void resetScore(){
-	if(currentScoreCounter > oldHighScore()) {
+highscoreValue = oldHighScore();
+	if(currentScoreCounter >= highscoreValue) {
 		highscoreCounter = currentScoreCounter;
 		highones = ones;
 		hightens = tens;
@@ -119,6 +121,7 @@ void resetScore(){
 		hundreds = 0;
 		thousands = 0;
 		SDWrite(highthousands, highhundreds, hightens, highones);
+
 
 	} else {
 		findAverageScore();

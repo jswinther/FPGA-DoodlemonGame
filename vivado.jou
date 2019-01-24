@@ -2,15 +2,14 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Tue Jan 22 18:53:26 2019
-# Process ID: 19816
-# Current directory: C:/Users/Jonat/Documents/GitHub/3Ugers3Semester
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4456 C:\Users\Jonat\Documents\GitHub\3Ugers3Semester\hdmi-in.xpr
-# Log file: C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/vivado.log
-# Journal file: C:/Users/Jonat/Documents/GitHub/3Ugers3Semester\vivado.jou
+# Start of session at: Thu Jan 24 09:25:47 2019
+# Process ID: 2264
+# Current directory: C:/Users/manniche/Documents/GitHub/3Ugers3Semester
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20736 C:\Users\manniche\Documents\GitHub\3Ugers3Semester\hdmi-in.xpr
+# Log file: C:/Users/manniche/Documents/GitHub/3Ugers3Semester/vivado.log
+# Journal file: C:/Users/manniche/Documents/GitHub/3Ugers3Semester\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.xpr
+open_project C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.xpr
 update_compile_order -fileset sources_1
-launch_sdk -workspace C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/Doodlemon_SDK -hwspec C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.sdk/hdmi_in_wrapper.hdf
-open_bd_design {C:/Users/Jonat/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/hdmi_in.bd}
+open_bd_design {C:/Users/manniche/Documents/GitHub/3Ugers3Semester/hdmi-in.srcs/sources_1/bd/hdmi_in/hdmi_in.bd}

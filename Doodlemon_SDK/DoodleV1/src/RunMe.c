@@ -222,7 +222,7 @@ void DemoStartGame() {
 			Xil_DCacheFlushRange((unsigned int)frameBuf[0], DEMO_MAX_FRAME);
 			DisplayChangeFrame(&dispCtrl, 0);
 		}
-		if(btn_value == 4 || (Xil_In32(XPAR_NUNCHUCK_0_S00_AXI_BASEADDR + NUNCHUCK_S00_AXI_SLV_REG2_OFFSET)&(u32)2) == 2)
+		if(btn_value == 4 || ((Xil_In32(XPAR_NUNCHUCK_0_S00_AXI_BASEADDR + NUNCHUCK_S00_AXI_SLV_REG2_OFFSET)+0x17)&(u32)2) != 2)
 			jumperDeathState = ALIVE;
 		while(jumperDeathState == ALIVE) {
 			if (frame >= DISPLAY_NUM_FRAMES) {
@@ -306,9 +306,9 @@ void Print(u8 *frame) {
 	PrintWord(frame, HighscoreWord, 1050, 560, 9);
 	PrintWord(frame, Average, 1050, 650, 7);
 	PrintWord(frame, Score, 890, 650, 5);
-	if((Xil_In32(XPAR_NUNCHUCK_0_S00_AXI_BASEADDR + NUNCHUCK_S00_AXI_SLV_REG2_OFFSET)&(u32)1) == 1){
+	if(((Xil_In32(XPAR_NUNCHUCK_0_S00_AXI_BASEADDR + NUNCHUCK_S00_AXI_SLV_REG2_OFFSET)+0x17)&(u32)1) != 1){
 		spriteFlag =1;}
-	if((Xil_In32(XPAR_NUNCHUCK_0_S00_AXI_BASEADDR + NUNCHUCK_S00_AXI_SLV_REG2_OFFSET)&(u32)1) == 0 && spriteFlag ==1) {
+	if(((Xil_In32(XPAR_NUNCHUCK_0_S00_AXI_BASEADDR + NUNCHUCK_S00_AXI_SLV_REG2_OFFSET)+0x17)&(u32)1) != 0 && spriteFlag ==1) {
 		spriteFlag = 0;
 		sprite_value++;
 	}
@@ -631,10 +631,6 @@ void MoveSprite(u8 *frame) {
 			default:
 			break;
 			}
-			if(currentScoreCounter > 50) {
-				if(BowserDetection() == 1)
-					jumperDeathState = DEAD;
-			}
 
 			/* Colission Detection */
 
@@ -645,10 +641,13 @@ void MoveSprite(u8 *frame) {
 
 			for(int k = 0; k < platform_amount; k++) {
 				if((ColissionDetection(jumper, platform[k]))==1) {
+					if(k==4 && currentScoreCounter > 50)
+						jumperDeathState = DEAD;
 					if(k == 0 && powerupTaken == 0) {
 						switch(PowerUp.type) {
 						case WumpaFruit:
 							tens++;
+							currentScoreCounter += 10;
 							break;
 						case Skull:
 							platformspeed+=12;
